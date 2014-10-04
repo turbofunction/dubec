@@ -5320,6 +5320,14 @@ type 0309, grid 2.5 mm</description>
 <wire x1="3.25" y1="-1" x2="3" y2="-0.5" width="0.1524" layer="21"/>
 <wire x1="5" y1="-0.5" x2="5" y2="0.5" width="0.1524" layer="21"/>
 </package>
+<package name="0402">
+<smd name="1" x="-0.55" y="0" dx="0.62" dy="0.72" layer="1"/>
+<smd name="2" x="0.55" y="0" dx="0.62" dy="0.72" layer="1"/>
+<text x="-0.889" y="0.535" size="0.254" layer="25">&gt;NAME</text>
+<text x="-0.889" y="-0.789" size="0.254" layer="27">&gt;VALUE</text>
+<wire x1="0.0524" y1="0.25" x2="-0.0524" y2="0.25" width="0.1524" layer="21"/>
+<wire x1="0.0524" y1="-0.25" x2="-0.0524" y2="-0.25" width="0.1524" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="TPI">
@@ -5341,6 +5349,21 @@ type 0309, grid 2.5 mm</description>
 <circle x="5.08" y="0" radius="2.54" width="0.508" layer="94"/>
 <circle x="5.08" y="-7.62" radius="2.54" width="0.508" layer="94"/>
 </symbol>
+<symbol name="SCH_DIODE">
+<wire x1="-1.27" y1="-1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="-1.27" y2="1.27" width="0.254" layer="94"/>
+<wire x1="1.905" y1="1.27" x2="1.27" y2="1.27" width="0.254" layer="94"/>
+<wire x1="1.27" y1="1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="1.27" x2="-1.27" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="1.27" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="1.905" y1="1.27" x2="1.905" y2="1.016" width="0.254" layer="94"/>
+<wire x1="1.27" y1="-1.27" x2="0.635" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="0.635" y1="-1.016" x2="0.635" y2="-1.27" width="0.254" layer="94"/>
+<text x="-2.286" y="1.905" size="1.778" layer="95">&gt;NAME</text>
+<text x="-2.286" y="-3.429" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="A" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
+<pin name="C" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="TPI">
@@ -5355,6 +5378,22 @@ type 0309, grid 2.5 mm</description>
 <connect gate="G$1" pin="GND" pad="5"/>
 <connect gate="G$1" pin="RESET" pad="4"/>
 <connect gate="G$1" pin="VTG" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SCH_DIODE">
+<gates>
+<gate name="G$1" symbol="SCH_DIODE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="SCHOTTKY-0402" package="0402">
+<connects>
+<connect gate="G$1" pin="A" pad="1"/>
+<connect gate="G$1" pin="C" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -5427,10 +5466,12 @@ type 0309, grid 2.5 mm</description>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
 <part name="LED_12V" library="led" deviceset="LED" device="CHIPLED_0603"/>
 <part name="LED_AUX" library="led" deviceset="LED" device="CHIPLED_0603"/>
-<part name="R_LED_AUX" library="resistor" deviceset="R-US_" device="R0402" value="470Ohm"/>
+<part name="R_LED_AUX" library="resistor" deviceset="R-US_" device="R0402" value="324Ohm"/>
 <part name="R_LED_12V" library="jne" deviceset="RES" device="R0402" value="2.2kOhm"/>
 <part name="R_LED_5V" library="jne" deviceset="RES" device="R0402" value="470Ohm"/>
 <part name="U$1" library="dubec" deviceset="TPI" device=""/>
+<part name="D5V_PG" library="dubec" deviceset="SCH_DIODE" device="SCHOTTKY-0402"/>
+<part name="D5V_TPI" library="dubec" deviceset="SCH_DIODE" device="SCHOTTKY-0402"/>
 </parts>
 <sheets>
 <sheet>
@@ -5456,9 +5497,15 @@ type 0309, grid 2.5 mm</description>
 12V_CO = C3216JB1V226M160AC
 12V_RFB = 1-1879213-9
 LED_12V, LED_5V, LED_AUX = LTST-C193TGKT-5A
-R_LED_5V, R_LED_AUX = CRCW0402470RJNEDHP
+R_LED_AUX = CRCW0402324RFKEDHP
+R_LED_5V = CRCW0402470RJNEDHP
 R_LED_12V = CRCW04022K20JNEDHP
+D5V_TPI, D5V_PG = CDBQR0130L
 </text>
+<text x="-83.82" y="20.32" size="1.778" layer="91">NOTE: ATtiny10 output
+high voltage “min. 4.3V”.
+Should be enough for
+relay and LED, though.</text>
 </plain>
 <instances>
 <instance part="5V-4A" gate="G$1" x="68.58" y="25.4"/>
@@ -5508,6 +5555,8 @@ R_LED_12V = CRCW04022K20JNEDHP
 <instance part="R_LED_12V" gate="G$1" x="48.26" y="-45.72" rot="R90"/>
 <instance part="R_LED_5V" gate="G$1" x="106.68" y="35.56" rot="R270"/>
 <instance part="U$1" gate="G$1" x="-40.64" y="88.9"/>
+<instance part="D5V_PG" gate="G$1" x="0" y="53.34" rot="R180"/>
+<instance part="D5V_TPI" gate="G$1" x="0" y="76.2" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -5599,15 +5648,12 @@ R_LED_12V = CRCW04022K20JNEDHP
 <junction x="93.98" y="50.8"/>
 <pinref part="5V_R1" gate="G$1" pin="GND"/>
 <wire x1="93.98" y1="50.8" x2="102.87" y2="53.34" width="0.1524" layer="91"/>
-<pinref part="CPU" gate="G$1" pin="VCC"/>
-<wire x1="86.36" y1="66.04" x2="86.36" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="83.82" x2="-43.18" y2="55.88" width="0.1524" layer="91"/>
 <junction x="86.36" y="66.04"/>
 <pinref part="R_LED_5V" gate="G$1" pin="1"/>
 <wire x1="106.68" y1="40.64" x2="86.36" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="VTG"/>
-<wire x1="-43.18" y1="55.88" x2="-35.56" y2="96.52" width="0.1524" layer="91"/>
-<junction x="-43.18" y="55.88"/>
+<pinref part="D5V_TPI" gate="G$1" pin="A"/>
+<wire x1="2.54" y1="76.2" x2="76.2" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="76.2" x2="86.36" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -5852,14 +5898,19 @@ R_LED_12V = CRCW04022K20JNEDHP
 <pinref part="CPU" gate="G$1" pin="PB3"/>
 <pinref part="U$1" gate="G$1" pin="RESET"/>
 <wire x1="-38.1" y1="55.88" x2="-45.72" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="D5V_PG" gate="G$1" pin="C"/>
+<wire x1="-38.1" y1="55.88" x2="-2.54" y2="53.34" width="0.1524" layer="91"/>
+<junction x="-38.1" y="55.88"/>
+</segment>
+<segment>
 <pinref part="5V-4A" gate="G$1" pin="PG"/>
 <pinref part="LED_5V" gate="G$1" pin="A"/>
 <pinref part="R_LED_5V" gate="G$1" pin="GND"/>
 <wire x1="106.68" y1="30.48" x2="106.68" y2="25.4" width="0.1524" layer="91"/>
 <junction x="106.68" y="30.48"/>
 <wire x1="106.68" y1="30.48" x2="93.98" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="30.48" x2="-38.1" y2="55.88" width="0.1524" layer="91"/>
-<junction x="-38.1" y="55.88"/>
+<pinref part="D5V_PG" gate="G$1" pin="A"/>
+<wire x1="2.54" y1="53.34" x2="106.68" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -5901,6 +5952,16 @@ R_LED_12V = CRCW04022K20JNEDHP
 <pinref part="CPU" gate="G$1" pin="PB2"/>
 <wire x1="-48.26" y1="55.88" x2="-63.5" y2="68.58" width="0.1524" layer="91"/>
 <label x="-60.96" y="68.58" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="5V_TPI" class="0">
+<segment>
+<pinref part="D5V_TPI" gate="G$1" pin="C"/>
+<pinref part="U$1" gate="G$1" pin="VTG"/>
+<pinref part="CPU" gate="G$1" pin="VCC"/>
+<wire x1="-43.18" y1="55.88" x2="-35.56" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="76.2" x2="-43.18" y2="55.88" width="0.1524" layer="91"/>
+<junction x="-43.18" y="55.88"/>
 </segment>
 </net>
 </nets>
