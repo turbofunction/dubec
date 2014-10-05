@@ -5328,6 +5328,13 @@ type 0309, grid 2.5 mm</description>
 <wire x1="0.0524" y1="0.25" x2="-0.0524" y2="0.25" width="0.1524" layer="21"/>
 <wire x1="0.0524" y1="-0.25" x2="-0.0524" y2="-0.25" width="0.1524" layer="21"/>
 </package>
+<package name="3-DFN1006">
+<smd name="B" x="-0.35" y="0.225" dx="0.4" dy="0.25" layer="1"/>
+<smd name="E" x="-0.35" y="-0.225" dx="0.4" dy="0.25" layer="1"/>
+<smd name="C" x="0.35" y="0" dx="0.4" dy="0.7" layer="1"/>
+<text x="-0.65" y="0.55" size="0.4" layer="25">&gt;NAME</text>
+<text x="-0.65" y="-0.95" size="0.4" layer="27">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="TPI">
@@ -5364,6 +5371,24 @@ type 0309, grid 2.5 mm</description>
 <pin name="A" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
 <pin name="C" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
 </symbol>
+<symbol name="NPN">
+<wire x1="2.54" y1="2.54" x2="0.508" y2="1.524" width="0.1524" layer="94"/>
+<wire x1="1.778" y1="-1.524" x2="2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="1.27" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="1.778" y2="-1.524" width="0.1524" layer="94"/>
+<wire x1="1.54" y1="-2.04" x2="0.308" y2="-1.424" width="0.1524" layer="94"/>
+<wire x1="1.524" y1="-2.413" x2="2.286" y2="-2.413" width="0.254" layer="94"/>
+<wire x1="2.286" y1="-2.413" x2="1.778" y2="-1.778" width="0.254" layer="94"/>
+<wire x1="1.778" y1="-1.778" x2="1.524" y2="-2.286" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-2.286" x2="1.905" y2="-2.286" width="0.254" layer="94"/>
+<wire x1="1.905" y1="-2.286" x2="1.778" y2="-2.032" width="0.254" layer="94"/>
+<text x="-10.16" y="7.62" size="1.778" layer="95">&gt;NAME</text>
+<text x="-10.16" y="5.08" size="1.778" layer="96">&gt;VALUE</text>
+<rectangle x1="-0.254" y1="-2.54" x2="0.508" y2="2.54" layer="94"/>
+<pin name="B" x="-2.54" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+<pin name="E" x="2.54" y="-5.08" visible="off" length="short" direction="pas" swaplevel="3" rot="R90"/>
+<pin name="C" x="2.54" y="5.08" visible="off" length="short" direction="pas" swaplevel="2" rot="R270"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="TPI">
@@ -5385,7 +5410,7 @@ type 0309, grid 2.5 mm</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="SCH_DIODE">
+<deviceset name="SCH_DIODE" prefix="D">
 <gates>
 <gate name="G$1" symbol="SCH_DIODE" x="0" y="0"/>
 </gates>
@@ -5394,6 +5419,23 @@ type 0309, grid 2.5 mm</description>
 <connects>
 <connect gate="G$1" pin="A" pad="1"/>
 <connect gate="G$1" pin="C" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TR_NPN">
+<gates>
+<gate name="G$1" symbol="NPN" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="3-DFN1006">
+<connects>
+<connect gate="G$1" pin="B" pad="B"/>
+<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="E" pad="E"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -5472,11 +5514,15 @@ type 0309, grid 2.5 mm</description>
 <part name="U$1" library="dubec" deviceset="TPI" device=""/>
 <part name="D5V_PG" library="dubec" deviceset="SCH_DIODE" device="SCHOTTKY-0402"/>
 <part name="D5V_TPI" library="dubec" deviceset="SCH_DIODE" device="SCHOTTKY-0402"/>
+<part name="TR_RELAY" library="dubec" deviceset="TR_NPN" device=""/>
+<part name="D_RELAY" library="dubec" deviceset="SCH_DIODE" device="SCHOTTKY-0402"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="-49.53" y="-95.25" size="1.778" layer="97">DC_C1, DC_C2, 12V_CO = C2012X5R1V226M125AC
+<text x="-49.53" y="-95.25" size="1.778" layer="97">BOM:
+
+DC_C1, DC_C2, 12V_CO = C2012X5R1V226M125AC
 5V_C2, 5V_CBIAS = C1608JB1V475K080AC
 5V_FB1 = 742792012
 5V_L2 = IHLP2525CZER6R8M01
@@ -5500,7 +5546,8 @@ LED_12V, LED_5V, LED_AUX = LTST-C193TGKT-5A
 R_LED_AUX = CRCW0402324RFKEDHP
 R_LED_5V = CRCW0402470RJNEDHP
 R_LED_12V = CRCW04022K20JNEDHP
-D5V_TPI, D5V_PG = CDBQR0130L
+D5V_TPI, D5V_PG, D_RELAY = CDBQR0130L
+TR_RELAY = 2DC4617QLP-7
 </text>
 <text x="-83.82" y="20.32" size="1.778" layer="91">NOTE: ATtiny10 output
 high voltage “min. 4.3V”.
@@ -5556,7 +5603,9 @@ relay and LED, though.</text>
 <instance part="R_LED_5V" gate="G$1" x="106.68" y="35.56" rot="R270"/>
 <instance part="U$1" gate="G$1" x="-40.64" y="88.9"/>
 <instance part="D5V_PG" gate="G$1" x="0" y="53.34" rot="R180"/>
-<instance part="D5V_TPI" gate="G$1" x="0" y="76.2" rot="R180"/>
+<instance part="D5V_TPI" gate="G$1" x="-25.4" y="66.04" rot="R180"/>
+<instance part="TR_RELAY" gate="G$1" x="-106.68" y="5.08"/>
+<instance part="D_RELAY" gate="G$1" x="-81.28" y="5.08" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -5652,8 +5701,13 @@ relay and LED, though.</text>
 <pinref part="R_LED_5V" gate="G$1" pin="1"/>
 <wire x1="106.68" y1="40.64" x2="86.36" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="D5V_TPI" gate="G$1" pin="A"/>
-<wire x1="2.54" y1="76.2" x2="76.2" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="-22.86" y1="66.04" x2="-17.78" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="66.04" x2="76.2" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="76.2" x2="86.36" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="TR_RELAY" gate="G$1" pin="B"/>
+<wire x1="-17.78" y1="66.04" x2="-25.4" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="-25.4" y1="33.02" x2="-109.22" y2="5.08" width="0.1524" layer="91"/>
+<junction x="-17.78" y="66.04"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -5891,6 +5945,8 @@ relay and LED, though.</text>
 <junction x="-33.02" y="35.56"/>
 <pinref part="U$1" gate="G$1" pin="GND"/>
 <wire x1="-33.02" y1="35.56" x2="-35.56" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="D_RELAY" gate="G$1" pin="A"/>
+<wire x1="-78.74" y1="-5.08" x2="-78.74" y2="5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="5V_PG" class="0">
@@ -5932,12 +5988,6 @@ relay and LED, though.</text>
 <pinref part="CPU" gate="G$1" pin="PB1"/>
 <pinref part="U$1" gate="G$1" pin="CLOCK"/>
 <wire x1="-48.26" y1="35.56" x2="-45.72" y2="88.9" width="0.1524" layer="91"/>
-<pinref part="R_LED_AUX" gate="G$1" pin="2"/>
-<wire x1="-48.26" y1="35.56" x2="-73.66" y2="55.88" width="0.1524" layer="91"/>
-<junction x="-48.26" y="35.56"/>
-<pinref part="RELAY" gate="G$1" pin="VCC"/>
-<wire x1="-73.66" y1="55.88" x2="-104.14" y2="-5.08" width="0.1524" layer="91"/>
-<junction x="-73.66" y="55.88"/>
 </segment>
 </net>
 <net name="PB0" class="0">
@@ -5945,6 +5995,14 @@ relay and LED, though.</text>
 <pinref part="CPU" gate="G$1" pin="PB0"/>
 <pinref part="U$1" gate="G$1" pin="DATA"/>
 <wire x1="-33.02" y1="55.88" x2="-45.72" y2="96.52" width="0.1524" layer="91"/>
+<pinref part="TR_RELAY" gate="G$1" pin="C"/>
+<junction x="-33.02" y="55.88"/>
+<pinref part="R_LED_AUX" gate="G$1" pin="2"/>
+<wire x1="-73.66" y1="55.88" x2="-66.04" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="-66.04" y1="48.26" x2="-38.1" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="-38.1" y1="48.26" x2="-33.02" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="-104.14" y1="10.16" x2="-66.04" y2="48.26" width="0.1524" layer="91"/>
+<junction x="-66.04" y="48.26"/>
 </segment>
 </net>
 <net name="IN_1" class="0">
@@ -5960,8 +6018,18 @@ relay and LED, though.</text>
 <pinref part="U$1" gate="G$1" pin="VTG"/>
 <pinref part="CPU" gate="G$1" pin="VCC"/>
 <wire x1="-43.18" y1="55.88" x2="-35.56" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="-2.54" y1="76.2" x2="-43.18" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="-27.94" y1="66.04" x2="-43.18" y2="55.88" width="0.1524" layer="91"/>
 <junction x="-43.18" y="55.88"/>
+</segment>
+</net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="RELAY" gate="G$1" pin="VCC"/>
+<pinref part="TR_RELAY" gate="G$1" pin="E"/>
+<wire x1="-104.14" y1="0" x2="-104.14" y2="-5.08" width="0.1524" layer="91"/>
+<pinref part="D_RELAY" gate="G$1" pin="C"/>
+<wire x1="-83.82" y1="5.08" x2="-104.14" y2="0" width="0.1524" layer="91"/>
+<junction x="-104.14" y="0"/>
 </segment>
 </net>
 </nets>
