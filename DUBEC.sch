@@ -5704,10 +5704,10 @@ relay and LED, though.</text>
 <wire x1="-22.86" y1="66.04" x2="-17.78" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="-17.78" y1="66.04" x2="76.2" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="76.2" x2="86.36" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="TR_RELAY" gate="G$1" pin="B"/>
 <wire x1="-17.78" y1="66.04" x2="-25.4" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="-25.4" y1="33.02" x2="-109.22" y2="5.08" width="0.1524" layer="91"/>
 <junction x="-17.78" y="66.04"/>
+<pinref part="TR_RELAY" gate="G$1" pin="C"/>
+<wire x1="-104.14" y1="10.16" x2="-25.4" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -5995,13 +5995,14 @@ relay and LED, though.</text>
 <pinref part="CPU" gate="G$1" pin="PB0"/>
 <pinref part="U$1" gate="G$1" pin="DATA"/>
 <wire x1="-33.02" y1="55.88" x2="-45.72" y2="96.52" width="0.1524" layer="91"/>
-<pinref part="TR_RELAY" gate="G$1" pin="C"/>
 <junction x="-33.02" y="55.88"/>
 <pinref part="R_LED_AUX" gate="G$1" pin="2"/>
 <wire x1="-73.66" y1="55.88" x2="-66.04" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="-66.04" y1="48.26" x2="-38.1" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="-38.1" y1="48.26" x2="-33.02" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="-104.14" y1="10.16" x2="-66.04" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="TR_RELAY" gate="G$1" pin="B"/>
+<wire x1="-109.22" y1="5.08" x2="-109.22" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="-109.22" y1="20.32" x2="-66.04" y2="48.26" width="0.1524" layer="91"/>
 <junction x="-66.04" y="48.26"/>
 </segment>
 </net>
