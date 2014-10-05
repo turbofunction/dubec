@@ -5409,6 +5409,35 @@ type 0309, grid 2.5 mm</description>
 <wire x1="-1" y1="0.625" x2="-1" y2="-0.625" width="0.127" layer="49"/>
 <wire x1="1" y1="0.625" x2="1" y2="-0.625" width="0.127" layer="49"/>
 </package>
+<package name="JST-SH_5-SIDE">
+<smd name="3" x="0" y="1.875" dx="0.6" dy="1.55" layer="1"/>
+<smd name="4" x="1" y="1.875" dx="0.6" dy="1.55" layer="1"/>
+<smd name="2" x="-1" y="1.875" dx="0.6" dy="1.55" layer="1"/>
+<smd name="1" x="-2" y="1.875" dx="0.6" dy="1.55" layer="1"/>
+<smd name="5" x="2" y="1.875" dx="0.6" dy="1.55" layer="1"/>
+<text x="-4" y="3.4" size="1.27" layer="25">&gt;NAME</text>
+<text x="-4" y="-4.8" size="1.27" layer="25">&gt;VALUE</text>
+<wire x1="-2.7" y1="-2.7" x2="2.7" y2="-2.7" width="0.127" layer="21"/>
+<wire x1="2.6" y1="1.6" x2="3.5" y2="1.6" width="0.127" layer="21"/>
+<wire x1="3.5" y1="1.6" x2="3.5" y2="-0.8" width="0.127" layer="21"/>
+<wire x1="-2.6" y1="1.6" x2="-3.5" y2="1.6" width="0.127" layer="21"/>
+<wire x1="-3.5" y1="1.6" x2="-3.5" y2="-0.8" width="0.127" layer="21"/>
+<rectangle x1="-4.2" y1="-2.9" x2="-3" y2="-1.1" layer="1"/>
+<rectangle x1="-4.3" y1="-3" x2="-2.9" y2="-1" layer="29"/>
+<rectangle x1="-4.2" y1="-2.9" x2="-3" y2="-1.1" layer="31"/>
+<rectangle x1="3" y1="-2.9" x2="4.2" y2="-1.1" layer="1"/>
+<rectangle x1="2.9" y1="-3" x2="4.3" y2="-1" layer="29"/>
+<rectangle x1="3" y1="-2.9" x2="4.2" y2="-1.1" layer="31"/>
+</package>
+<package name="PINHEAD1.27-5">
+<pad name="3" x="0" y="0" drill="0.5" rot="R90"/>
+<pad name="4" x="1.27" y="0" drill="0.5" rot="R90"/>
+<pad name="5" x="2.54" y="0" drill="0.5" rot="R90"/>
+<pad name="2" x="-1.27" y="0" drill="0.5" rot="R90"/>
+<pad name="1" x="-2.54" y="0" drill="0.5" rot="R90"/>
+<text x="-3" y="1.4" size="0.8" layer="25">&gt;NAME</text>
+<text x="-3" y="-2.2" size="0.8" layer="27">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="TPI">
@@ -5478,7 +5507,31 @@ type 0309, grid 2.5 mm</description>
 <gate name="G$1" symbol="TPI" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="PINHEAD2MM-5">
+<device name="2MM" package="PINHEAD2MM-5">
+<connects>
+<connect gate="G$1" pin="CLOCK" pad="3"/>
+<connect gate="G$1" pin="DATA" pad="1"/>
+<connect gate="G$1" pin="GND" pad="5"/>
+<connect gate="G$1" pin="RESET" pad="4"/>
+<connect gate="G$1" pin="VTG" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="JST-SH" package="JST-SH_5-SIDE">
+<connects>
+<connect gate="G$1" pin="CLOCK" pad="5"/>
+<connect gate="G$1" pin="DATA" pad="3"/>
+<connect gate="G$1" pin="GND" pad="1"/>
+<connect gate="G$1" pin="RESET" pad="2"/>
+<connect gate="G$1" pin="VTG" pad="4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="1.27MM" package="PINHEAD1.27-5">
 <connects>
 <connect gate="G$1" pin="CLOCK" pad="3"/>
 <connect gate="G$1" pin="DATA" pad="1"/>
@@ -5663,7 +5716,7 @@ type 0309, grid 2.5 mm</description>
 <part name="R_LED_AUX" library="resistor" deviceset="R-US_" device="R0402" value="324Ohm"/>
 <part name="R_LED_12V" library="jne" deviceset="RES" device="R0402" value="2.2kOhm"/>
 <part name="R_LED_5V" library="jne" deviceset="RES" device="R0402" value="470Ohm"/>
-<part name="U$1" library="dubec" deviceset="TPI" device=""/>
+<part name="U$1" library="dubec" deviceset="TPI" device="1.27MM" value="TPI1.27MM"/>
 <part name="D5V_PG" library="dubec" deviceset="SCH_DIODE" device="SCHOTTKY-0402"/>
 <part name="D5V_TPI" library="dubec" deviceset="SCH_DIODE" device="SCHOTTKY-0402"/>
 <part name="TR_RELAY" library="dubec" deviceset="TR_NPN" device=""/>
@@ -5673,7 +5726,7 @@ type 0309, grid 2.5 mm</description>
 <sheets>
 <sheet>
 <plain>
-<text x="-49.53" y="-95.25" size="1.778" layer="97">BOM:
+<text x="-67.31" y="-107.95" size="1.778" layer="97">BOM:
 
 DC_C1, DC_C2, 12V_CO = C2012X5R1V226M125AC
 5V_C2, 5V_CBIAS = C1608JB1V475K080AC
@@ -5702,6 +5755,7 @@ R_LED_12V = CRCW04022K20JNEDHP
 D5V_TPI, D5V_PG, D_RELAY = CDBQR0130L
 TR_RELAY = 2DC4617QLP-7
 CAP_5V = PHB-5R0H155-R
+TPI header = 851-87-005-10-001101
 </text>
 <text x="-83.82" y="20.32" size="1.778" layer="91">NOTE: ATtiny10 output
 high voltage “min. 4.3V”.
