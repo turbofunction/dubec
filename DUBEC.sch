@@ -5438,6 +5438,42 @@ type 0309, grid 2.5 mm</description>
 <text x="-3" y="1.4" size="0.8" layer="25">&gt;NAME</text>
 <text x="-3" y="-2.2" size="0.8" layer="27">&gt;VALUE</text>
 </package>
+<package name="2525CZ">
+<smd name="P$1" x="-2.7686" y="0" dx="1.8288" dy="3.429" layer="1"/>
+<smd name="P$2" x="2.7686" y="0" dx="1.8288" dy="3.429" layer="1"/>
+<text x="-3.429" y="3.556" size="0.762" layer="25">&gt;NAME</text>
+<text x="-3.429" y="-4.318" size="0.762" layer="27">&gt;VALUE</text>
+<wire x1="-3.429" y1="3.2385" x2="3.429" y2="3.2385" width="0.127" layer="21"/>
+<wire x1="3.429" y1="3.2385" x2="3.429" y2="1.9685" width="0.127" layer="21"/>
+<wire x1="-3.429" y1="3.175" x2="-3.429" y2="1.9685" width="0.127" layer="21"/>
+<wire x1="-3.429" y1="-3.2385" x2="3.429" y2="-3.2385" width="0.127" layer="21"/>
+<wire x1="3.429" y1="-3.2385" x2="3.429" y2="-1.9685" width="0.127" layer="21"/>
+<wire x1="-3.429" y1="-3.2385" x2="-3.429" y2="-1.9685" width="0.127" layer="21"/>
+</package>
+<package name="2020Z">
+<smd name="1" x="-2.032" y="0" dx="1.9177" dy="2.794" layer="1"/>
+<smd name="2" x="2.032" y="0" dx="1.9177" dy="2.794" layer="1"/>
+<text x="-2.667" y="2.921" size="0.762" layer="25">&gt;NAME</text>
+<text x="-2.667" y="-3.683" size="0.762" layer="27">&gt;VALUE</text>
+<wire x1="-2.7432" y1="2.5908" x2="2.7432" y2="2.5908" width="0.1524" layer="21"/>
+<wire x1="2.7432" y1="2.5908" x2="2.7432" y2="1.6764" width="0.127" layer="21"/>
+<wire x1="-2.7432" y1="2.54" x2="-2.7432" y2="1.6764" width="0.127" layer="21"/>
+<wire x1="-2.7432" y1="-1.6764" x2="-2.7432" y2="-2.5908" width="0.127" layer="21"/>
+<wire x1="-2.7432" y1="-2.5908" x2="2.7432" y2="-2.5908" width="0.1524" layer="21"/>
+<wire x1="2.7432" y1="-2.5908" x2="2.7432" y2="-1.6764" width="0.127" layer="21"/>
+</package>
+<package name="0420CDMCB/DS">
+<wire x1="-2.25" y1="2.05" x2="2.25" y2="2.05" width="0.127" layer="21"/>
+<wire x1="2.25" y1="2.05" x2="2.25" y2="1.6" width="0.127" layer="21"/>
+<smd name="2" x="1.85" y="0" dx="1.5" dy="2.7" layer="1"/>
+<smd name="1" x="-1.85" y="0" dx="1.5" dy="2.7" layer="1"/>
+<wire x1="-2.25" y1="2.05" x2="-2.25" y2="1.6" width="0.127" layer="21"/>
+<wire x1="-2.25" y1="-2.05" x2="2.25" y2="-2.05" width="0.127" layer="21"/>
+<wire x1="2.25" y1="-2.05" x2="2.25" y2="-1.6" width="0.127" layer="21"/>
+<wire x1="-2.25" y1="-2.05" x2="-2.25" y2="-1.6" width="0.127" layer="21"/>
+<text x="-2.3" y="2.35" size="0.508" layer="25">&gt;NAME</text>
+<text x="-2.3" y="-2.85" size="0.508" layer="27">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="TPI">
@@ -5499,6 +5535,16 @@ type 0309, grid 2.5 mm</description>
 <text x="0.508" y="-5.588" size="1.27" layer="96">&gt;VALUE</text>
 <rectangle x1="-2.032" y1="-0.508" x2="2.032" y2="0" layer="94"/>
 <rectangle x1="-2.032" y1="-2.54" x2="2.032" y2="-2.032" layer="94"/>
+</symbol>
+<symbol name="IND">
+<wire x1="-5.08" y1="0" x2="-2.54" y2="0" width="0.254" layer="94" curve="-180"/>
+<wire x1="-2.54" y1="0" x2="0" y2="0" width="0.254" layer="94" curve="-180"/>
+<wire x1="0" y1="0" x2="2.54" y2="0" width="0.254" layer="94" curve="-180"/>
+<wire x1="2.54" y1="0" x2="5.08" y2="0" width="0.254" layer="94" curve="-180"/>
+<pin name="1" x="-7.62" y="0" visible="off" length="short" direction="pas"/>
+<pin name="2" x="7.62" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+<text x="-5.08" y="2.54" size="1.27" layer="95">&gt;NAME</text>
+<text x="-5.08" y="-2.54" size="1.27" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -5648,6 +5694,40 @@ type 0309, grid 2.5 mm</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="IND" prefix="L">
+<gates>
+<gate name="G$1" symbol="IND" x="0" y="0"/>
+</gates>
+<devices>
+<device name="I2525Z" package="2525CZ">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="I2020Z" package="2020Z">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="I0420CDMCB/DS" package="0420CDMCB/DS">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -5676,7 +5756,7 @@ type 0309, grid 2.5 mm</description>
 <part name="12V-1A4" library="jne" deviceset="LTC3115XDHD-1" device=""/>
 <part name="DC_C1" library="jne" deviceset="CAP" device="C0805" value="22uF"/>
 <part name="5V_C2" library="jne" deviceset="CAP" device="C0603" value="4.7uF"/>
-<part name="5V_L2" library="jne" deviceset="IND" device="I2525Z" value="INDI2525Z"/>
+<part name="5V_L2" library="jne" deviceset="IND" device="I2525Z" value="6.8uH"/>
 <part name="5V_FB1" library="jne" deviceset="BEAD" device="B0805"/>
 <part name="5V_C3" library="jne" deviceset="CAP" device="C0805" value="10uF"/>
 <part name="5V_CIN1" library="jne" deviceset="CAP" device="C0402" value="1uF"/>
@@ -5695,7 +5775,7 @@ type 0309, grid 2.5 mm</description>
 <part name="RTOP" library="jne" deviceset="RES" device="R0402" value="1MOhm"/>
 <part name="12V_CO" library="jne" deviceset="CAP" device="C1206" value="22uF"/>
 <part name="12V_CIN" library="jne" deviceset="CAP" device="C0402" value="0.1uF"/>
-<part name="5V_L1" library="jne" deviceset="IND" device="I0420CDMCB/DS" value="2.2uH"/>
+<part name="5V_L1" library="dubec" deviceset="IND" device="I2525Z" value="2.2uH"/>
 <part name="5V_CBST" library="jne" deviceset="CAP" device="C0402" value="0.1uF"/>
 <part name="5V_CVCC" library="jne" deviceset="CAP" device="C0402" value="1uF"/>
 <part name="5V_R2A" library="jne" deviceset="RES" device="R0402" value="RESR0402"/>
@@ -5734,7 +5814,7 @@ DC_C1, DC_C2, 12V_CO = C2012X5R1V226M125AC
 5V_L2 = IHLP2525CZER6R8M01
 5V_C3 = C2012JB1V106K085AC
 5V_CIN1, 5V_CIN2 = C1005JB1V105K050BC
-5V_L1 = 0420CDMCBDS-2R2MC
+5V_L1 = IHLP2525CZER2R2M01 [0420CDMCBDS-2R2MC]
 5V_R2 = 2x TNPW0402121RBEED
 5V_CSS = CGA2B3X7R1V103K050BB
 5V_RT = 5-1879215-9
