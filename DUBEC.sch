@@ -5760,7 +5760,7 @@ relay and LED, though.</text>
 <instance part="D5V_TPI" gate="G$1" x="-25.4" y="66.04" rot="R180"/>
 <instance part="TR_RELAY" gate="G$1" x="-106.68" y="5.08"/>
 <instance part="D_RELAY" gate="G$1" x="-81.28" y="5.08" rot="R180"/>
-<instance part="CAP_5V" gate="G$1" x="99.06" y="83.82"/>
+<instance part="CAP_5V" gate="G$1" x="99.06" y="71.12"/>
 </instances>
 <busses>
 </busses>
@@ -5864,7 +5864,7 @@ relay and LED, though.</text>
 <pinref part="TR_RELAY" gate="G$1" pin="C"/>
 <wire x1="-104.14" y1="10.16" x2="-25.4" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="CAP_5V" gate="G$1" pin="V+"/>
-<wire x1="86.36" y1="66.04" x2="99.06" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="66.04" x2="99.06" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -6105,7 +6105,7 @@ relay and LED, though.</text>
 <pinref part="D_RELAY" gate="G$1" pin="A"/>
 <wire x1="-78.74" y1="-5.08" x2="-78.74" y2="5.08" width="0.1524" layer="91"/>
 <pinref part="CAP_5V" gate="G$1" pin="GND"/>
-<wire x1="99.06" y1="78.74" x2="68.58" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="66.04" x2="68.58" y2="20.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="5V_PG" class="0">
