@@ -6282,22 +6282,12 @@ relay and LED, though.</text>
 </net>
 <net name="5V_PG" class="0">
 <segment>
-<pinref part="CPU" gate="G$1" pin="PB3"/>
-<pinref part="U$1" gate="G$1" pin="RESET"/>
-<wire x1="-38.1" y1="55.88" x2="-45.72" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="D5V_PG" gate="G$1" pin="C"/>
-<wire x1="-38.1" y1="55.88" x2="-2.54" y2="53.34" width="0.1524" layer="91"/>
-<junction x="-38.1" y="55.88"/>
-</segment>
-<segment>
 <pinref part="5V-4A" gate="G$1" pin="PG"/>
 <pinref part="LED_5V" gate="G$1" pin="A"/>
 <pinref part="R_LED_5V" gate="G$1" pin="GND"/>
 <wire x1="106.68" y1="30.48" x2="106.68" y2="25.4" width="0.1524" layer="91"/>
 <junction x="106.68" y="30.48"/>
 <wire x1="106.68" y1="30.48" x2="93.98" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="D5V_PG" gate="G$1" pin="A"/>
-<wire x1="2.54" y1="53.34" x2="106.68" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -6362,6 +6352,13 @@ relay and LED, though.</text>
 <pinref part="D_RELAY" gate="G$1" pin="C"/>
 <wire x1="-104.14" y1="-5.08" x2="-93.98" y2="5.08" width="0.1524" layer="91"/>
 <junction x="-104.14" y="-5.08"/>
+</segment>
+</net>
+<net name="PB3" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="RESET"/>
+<pinref part="CPU" gate="G$1" pin="PB3"/>
+<wire x1="-45.72" y1="81.28" x2="-38.1" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
