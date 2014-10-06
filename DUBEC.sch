@@ -5802,6 +5802,7 @@ type 0309, grid 2.5 mm</description>
 <part name="TR_RELAY" library="dubec" deviceset="TR_NPN" device=""/>
 <part name="D_RELAY" library="dubec" deviceset="SCH_DIODE" device="SCHOTTKY-0402"/>
 <part name="CAP_5V" library="dubec" deviceset="CAP" device="POWERSTOR_1.5F" value="1.5F"/>
+<part name="D12V" library="dubec" deviceset="SCH_DIODE" device="SCHOTTKY-0402"/>
 </parts>
 <sheets>
 <sheet>
@@ -5828,6 +5829,7 @@ DC_C1, DC_C2, 12V_CO = C2012X5R1V226M125AC
 12V_RTOP = CRCW04021M00DHEDP
 12V_CO = C3216JB1V226M160AC
 12V_RFB = 1-1879213-9
+D12V = CDBU0520
 LED_12V, LED_5V, LED_AUX = LTST-C193TGKT-5A
 R_LED_AUX = CRCW0402324RFKEDHP
 R_LED_5V = CRCW0402470RJNEDHP
@@ -5837,7 +5839,7 @@ TR_RELAY = 2DC4617QLP-7
 CAP_5V = PHB-5R0H155-R
 TPI header = 851-87-005-10-001101
 </text>
-<text x="-83.82" y="20.32" size="1.778" layer="91">NOTE: ATtiny10 output
+<text x="-116.84" y="35.56" size="1.778" layer="91">NOTE: ATtiny10 output
 high voltage “min. 4.3V”.
 Should be enough for
 relay and LED, though.</text>
@@ -5848,26 +5850,26 @@ relay and LED, though.</text>
 <instance part="RELAY" gate="G$1" x="-91.44" y="-12.7" rot="R180"/>
 <instance part="12V-1A4" gate="G$1" x="81.28" y="-68.58"/>
 <instance part="DC_C1" gate="G$1" x="-48.26" y="-12.7"/>
-<instance part="5V_C2" gate="G$1" x="17.78" y="27.94"/>
-<instance part="5V_L2" gate="G$1" x="5.08" y="30.48"/>
-<instance part="5V_FB1" gate="G$1" x="-10.16" y="30.48"/>
-<instance part="5V_C3" gate="G$1" x="-5.08" y="27.94"/>
-<instance part="5V_CIN1" gate="G$1" x="43.18" y="48.26"/>
-<instance part="5V_CIN2" gate="G$1" x="43.18" y="2.54" rot="R180"/>
+<instance part="5V_C2" gate="G$1" x="25.4" y="27.94"/>
+<instance part="5V_L2" gate="G$1" x="15.24" y="30.48"/>
+<instance part="5V_FB1" gate="G$1" x="0" y="30.48"/>
+<instance part="5V_C3" gate="G$1" x="5.08" y="27.94"/>
+<instance part="5V_CIN1" gate="G$1" x="43.18" y="43.18"/>
+<instance part="5V_CIN2" gate="G$1" x="43.18" y="7.62" rot="R180"/>
 <instance part="DC_C2" gate="G$1" x="-40.64" y="-12.7"/>
-<instance part="12V_CBST1" gate="G$1" x="104.14" y="-40.64" rot="R180"/>
-<instance part="12V_CBST2" gate="G$1" x="58.42" y="-40.64" rot="R180"/>
+<instance part="12V_CBST1" gate="G$1" x="101.6" y="-40.64" rot="R180"/>
+<instance part="12V_CBST2" gate="G$1" x="63.5" y="-40.64" rot="R180"/>
 <instance part="12V_L1" gate="G$1" x="81.28" y="-35.56"/>
-<instance part="12V_C3" gate="G$1" x="111.76" y="-78.74" rot="R180"/>
-<instance part="12V_RT" gate="G$1" x="58.42" y="-91.44" rot="R270"/>
+<instance part="12V_C3" gate="G$1" x="109.22" y="-78.74" rot="R90"/>
+<instance part="12V_RT" gate="G$1" x="63.5" y="-91.44" rot="R270"/>
 <instance part="12V_RBOT" gate="G$1" x="53.34" y="-68.58" rot="R180"/>
-<instance part="12V_RFF" gate="G$1" x="35.56" y="-76.2" rot="R180"/>
-<instance part="12V_CFF" gate="G$1" x="30.48" y="-63.5"/>
+<instance part="12V_RFF" gate="G$1" x="38.1" y="-68.58" rot="R180"/>
+<instance part="12V_CFF" gate="G$1" x="33.02" y="-58.42"/>
 <instance part="12V_RFB" gate="G$1" x="58.42" y="-76.2" rot="R180"/>
-<instance part="12V_CFB" gate="G$1" x="45.72" y="-76.2"/>
+<instance part="12V_CFB" gate="G$1" x="45.72" y="-73.66"/>
 <instance part="RTOP" gate="G$1" x="45.72" y="-60.96" rot="R270"/>
-<instance part="12V_CO" gate="G$1" x="60.96" y="-58.42" rot="R180"/>
-<instance part="12V_CIN" gate="G$1" x="109.22" y="-60.96" rot="R180"/>
+<instance part="12V_CO" gate="G$1" x="55.88" y="-55.88" rot="R180"/>
+<instance part="12V_CIN" gate="G$1" x="109.22" y="-60.96" rot="R90"/>
 <instance part="5V_L1" gate="G$1" x="78.74" y="66.04"/>
 <instance part="5V_CBST" gate="G$1" x="60.96" y="55.88" rot="R270"/>
 <instance part="5V_CVCC" gate="G$1" x="71.12" y="55.88" rot="R270"/>
@@ -5876,7 +5878,7 @@ relay and LED, though.</text>
 <instance part="5V_CBIAS" gate="G$1" x="93.98" y="48.26"/>
 <instance part="5V_R1" gate="G$1" x="102.87" y="48.26" rot="R90"/>
 <instance part="5V_CSS" gate="G$1" x="81.28" y="-5.08"/>
-<instance part="5V_RT" gate="G$1" x="68.58" y="-7.62"/>
+<instance part="5V_RT" gate="G$1" x="73.66" y="-7.62" rot="R90"/>
 <instance part="GND1" gate="1" x="-114.3" y="-17.78" rot="R270"/>
 <instance part="35V_NO" gate="1" x="-71.12" y="-20.32" rot="R270"/>
 <instance part="35V_NC" gate="1" x="-71.12" y="-15.24" rot="R270"/>
@@ -5885,16 +5887,17 @@ relay and LED, though.</text>
 <instance part="GND2" gate="1" x="-111.76" y="-12.7" rot="R270"/>
 <instance part="GND3" gate="1" x="-111.76" y="-22.86" rot="R270"/>
 <instance part="LED_12V" gate="G$1" x="48.26" y="-35.56" rot="R180"/>
-<instance part="LED_AUX" gate="G$1" x="-86.36" y="53.34"/>
-<instance part="R_LED_AUX" gate="G$1" x="-78.74" y="55.88"/>
-<instance part="R_LED_12V" gate="G$1" x="48.26" y="-45.72" rot="R90"/>
+<instance part="LED_AUX" gate="G$1" x="-73.66" y="33.02"/>
+<instance part="R_LED_AUX" gate="G$1" x="-66.04" y="35.56"/>
+<instance part="R_LED_12V" gate="G$1" x="48.26" y="-45.72" rot="R180"/>
 <instance part="R_LED_5V" gate="G$1" x="106.68" y="35.56" rot="R270"/>
 <instance part="U$1" gate="G$1" x="-40.64" y="88.9"/>
 <instance part="D5V_PG" gate="G$1" x="0" y="53.34" rot="R180"/>
 <instance part="D5V_TPI" gate="G$1" x="-25.4" y="66.04" rot="R180"/>
 <instance part="TR_RELAY" gate="G$1" x="-106.68" y="5.08"/>
-<instance part="D_RELAY" gate="G$1" x="-81.28" y="5.08" rot="R180"/>
-<instance part="CAP_5V" gate="G$1" x="99.06" y="71.12"/>
+<instance part="D_RELAY" gate="G$1" x="-91.44" y="5.08" rot="R180"/>
+<instance part="CAP_5V" gate="G$1" x="96.52" y="68.58"/>
+<instance part="D12V" gate="G$1" x="35.56" y="-45.72" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -5902,30 +5905,29 @@ relay and LED, though.</text>
 <net name="35V" class="0">
 <segment>
 <pinref part="5V_L2" gate="G$1" pin="1"/>
-<wire x1="-5.08" y1="30.48" x2="-2.54" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="30.48" x2="7.62" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="5V_C3" gate="G$1" pin="V+"/>
 <pinref part="5V_FB1" gate="G$1" pin="2"/>
-<wire x1="-7.62" y1="30.48" x2="-5.08" y2="30.48" width="0.1524" layer="91"/>
-<junction x="-5.08" y="30.48"/>
+<wire x1="2.54" y1="30.48" x2="5.08" y2="30.48" width="0.1524" layer="91"/>
+<junction x="5.08" y="30.48"/>
 </segment>
 <segment>
 <pinref part="DC_C1" gate="G$1" pin="V+"/>
 <pinref part="DC_C2" gate="G$1" pin="V+"/>
 <wire x1="-48.26" y1="-10.16" x2="-40.64" y2="-10.16" width="0.1524" layer="91"/>
 <pinref part="5V_FB1" gate="G$1" pin="1"/>
-<wire x1="-40.64" y1="-10.16" x2="-15.24" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="-10.16" x2="-5.08" y2="30.48" width="0.1524" layer="91"/>
 <junction x="-40.64" y="-10.16"/>
-<wire x1="-40.64" y1="-10.16" x2="81.28" y2="-27.94" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="-10.16" x2="81.28" y2="-43.18" width="0.1524" layer="91"/>
 <pinref part="12V-1A4" gate="G$1" pin="PVIN"/>
-<wire x1="81.28" y1="-27.94" x2="96.52" y2="-60.96" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="-43.18" x2="88.9" y2="-58.42" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="-58.42" x2="96.52" y2="-60.96" width="0.1524" layer="91"/>
 <pinref part="12V-1A4" gate="G$1" pin="RUN"/>
-<wire x1="66.04" y1="-50.8" x2="81.28" y2="-27.94" width="0.1524" layer="91"/>
-<junction x="81.28" y="-27.94"/>
+<wire x1="66.04" y1="-50.8" x2="81.28" y2="-43.18" width="0.1524" layer="91"/>
+<junction x="81.28" y="-43.18"/>
 <pinref part="12V_CIN" gate="G$1" pin="V+"/>
 <pinref part="12V-1A4" gate="G$1" pin="VIN"/>
-<wire x1="109.22" y1="-63.5" x2="96.52" y2="-81.28" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="-63.5" x2="96.52" y2="-60.96" width="0.1524" layer="91"/>
-<junction x="109.22" y="-63.5"/>
+<wire x1="106.68" y1="-60.96" x2="96.52" y2="-60.96" width="0.1524" layer="91"/>
 <junction x="96.52" y="-60.96"/>
 <pinref part="RELAY" gate="G$1" pin="CO_2"/>
 <wire x1="-78.74" y1="-17.78" x2="-48.26" y2="-10.16" width="0.1524" layer="91"/>
@@ -5933,6 +5935,8 @@ relay and LED, though.</text>
 <pinref part="35V_NO1" gate="1" pin="V+"/>
 <wire x1="-73.66" y1="-17.78" x2="-78.74" y2="-17.78" width="0.1524" layer="91"/>
 <junction x="-78.74" y="-17.78"/>
+<wire x1="96.52" y1="-81.28" x2="81.28" y2="-71.12" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="-71.12" x2="81.28" y2="-43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$9" class="0">
@@ -5958,7 +5962,7 @@ relay and LED, though.</text>
 <segment>
 <pinref part="5V_RT" gate="G$1" pin="GND"/>
 <pinref part="5V-4A" gate="G$1" pin="RT"/>
-<wire x1="73.66" y1="-7.62" x2="73.66" y2="0" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="-2.54" x2="73.66" y2="0" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$15" class="0">
@@ -5993,12 +5997,12 @@ relay and LED, though.</text>
 <wire x1="-22.86" y1="66.04" x2="-17.78" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="-17.78" y1="66.04" x2="76.2" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="76.2" x2="86.36" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="-17.78" y1="66.04" x2="-25.4" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="66.04" x2="-17.78" y2="33.02" width="0.1524" layer="91"/>
 <junction x="-17.78" y="66.04"/>
 <pinref part="TR_RELAY" gate="G$1" pin="C"/>
-<wire x1="-104.14" y1="10.16" x2="-25.4" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="-104.14" y1="10.16" x2="-17.78" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="CAP_5V" gate="G$1" pin="V+"/>
-<wire x1="86.36" y1="66.04" x2="99.06" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="66.04" x2="96.52" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -6019,20 +6023,20 @@ relay and LED, though.</text>
 <segment>
 <pinref part="12V-1A4" gate="G$1" pin="BST2"/>
 <pinref part="12V_CBST2" gate="G$1" pin="V+"/>
-<wire x1="96.52" y1="-71.12" x2="58.42" y2="-43.18" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="-71.12" x2="63.5" y2="-43.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="12V-1A4" gate="G$1" pin="SW2"/>
 <pinref part="12V_CBST2" gate="G$1" pin="GND"/>
 <pinref part="12V_L1" gate="G$1" pin="1"/>
 <wire x1="73.66" y1="-35.56" x2="66.04" y2="-55.88" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="-35.56" x2="73.66" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="-35.56" x2="73.66" y2="-35.56" width="0.1524" layer="91"/>
 <junction x="73.66" y="-35.56"/>
 </segment>
 <segment>
 <pinref part="12V_CBST1" gate="G$1" pin="GND"/>
 <pinref part="12V_L1" gate="G$1" pin="2"/>
-<wire x1="104.14" y1="-35.56" x2="88.9" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="-35.56" x2="88.9" y2="-35.56" width="0.1524" layer="91"/>
 <pinref part="12V-1A4" gate="G$1" pin="SW1"/>
 <wire x1="96.52" y1="-55.88" x2="88.9" y2="-35.56" width="0.1524" layer="91"/>
 <junction x="88.9" y="-35.56"/>
@@ -6040,29 +6044,31 @@ relay and LED, though.</text>
 <segment>
 <pinref part="12V-1A4" gate="G$1" pin="BST1"/>
 <pinref part="12V_CBST1" gate="G$1" pin="V+"/>
-<wire x1="96.52" y1="-66.04" x2="104.14" y2="-43.18" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="-66.04" x2="101.6" y2="-55.88" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="-55.88" x2="101.6" y2="-43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="12V" class="0">
 <segment>
 <pinref part="12V-1A4" gate="G$1" pin="PVOUT"/>
 <pinref part="12V_CO" gate="G$1" pin="V+"/>
-<wire x1="66.04" y1="-60.96" x2="60.96" y2="-60.96" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="-60.96" x2="55.88" y2="-58.42" width="0.1524" layer="91"/>
 <pinref part="RTOP" gate="G$1" pin="1"/>
-<wire x1="45.72" y1="-55.88" x2="60.96" y2="-60.96" width="0.1524" layer="91"/>
-<junction x="60.96" y="-60.96"/>
+<wire x1="45.72" y1="-55.88" x2="55.88" y2="-58.42" width="0.1524" layer="91"/>
+<junction x="55.88" y="-58.42"/>
 <pinref part="12V_CFF" gate="G$1" pin="V+"/>
-<wire x1="45.72" y1="-55.88" x2="30.48" y2="-60.96" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="-55.88" x2="33.02" y2="-55.88" width="0.1524" layer="91"/>
 <junction x="45.72" y="-55.88"/>
 <pinref part="R_LED_12V" gate="G$1" pin="1"/>
-<wire x1="48.26" y1="-50.8" x2="60.96" y2="-60.96" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="-45.72" x2="63.5" y2="-53.34" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="-53.34" x2="55.88" y2="-58.42" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">
 <segment>
 <pinref part="12V_RFB" gate="G$1" pin="GND"/>
 <pinref part="12V_CFB" gate="G$1" pin="GND"/>
-<wire x1="53.34" y1="-76.2" x2="45.72" y2="-81.28" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="-76.2" x2="45.72" y2="-78.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$12" class="0">
@@ -6078,12 +6084,15 @@ relay and LED, though.</text>
 <pinref part="RTOP" gate="G$1" pin="GND"/>
 <wire x1="45.72" y1="-66.04" x2="45.72" y2="-68.58" width="0.1524" layer="91"/>
 <pinref part="12V_RBOT" gate="G$1" pin="GND"/>
-<wire x1="45.72" y1="-68.58" x2="45.72" y2="-73.66" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="-68.58" x2="45.72" y2="-71.12" width="0.1524" layer="91"/>
 <pinref part="12V-1A4" gate="G$1" pin="FB"/>
 <pinref part="12V_RFF" gate="G$1" pin="1"/>
-<wire x1="40.64" y1="-76.2" x2="45.72" y2="-68.58" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="-68.58" x2="45.72" y2="-68.58" width="0.1524" layer="91"/>
 <junction x="45.72" y="-68.58"/>
-<wire x1="45.72" y1="-68.58" x2="66.04" y2="-81.28" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="-68.58" x2="40.64" y2="-73.66" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="-73.66" x2="40.64" y2="-83.82" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="-83.82" x2="53.34" y2="-83.82" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="-83.82" x2="66.04" y2="-81.28" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="-68.58" x2="48.26" y2="-68.58" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -6091,48 +6100,48 @@ relay and LED, though.</text>
 <segment>
 <pinref part="12V_CFF" gate="G$1" pin="GND"/>
 <pinref part="12V_RFF" gate="G$1" pin="GND"/>
-<wire x1="30.48" y1="-68.58" x2="30.48" y2="-76.2" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="-63.5" x2="33.02" y2="-68.58" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$6" class="0">
 <segment>
 <pinref part="12V_RT" gate="G$1" pin="1"/>
 <pinref part="12V-1A4" gate="G$1" pin="RT"/>
-<wire x1="58.42" y1="-86.36" x2="66.04" y2="-86.36" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="-86.36" x2="66.04" y2="-86.36" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="12VCC" class="0">
 <segment>
 <pinref part="12V_C3" gate="G$1" pin="V+"/>
 <pinref part="12V-1A4" gate="G$1" pin="VCC"/>
-<wire x1="111.76" y1="-81.28" x2="96.52" y2="-86.36" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="-78.74" x2="96.52" y2="-86.36" width="0.1524" layer="91"/>
 <pinref part="12V-1A4" gate="G$1" pin="PVCC"/>
-<wire x1="111.76" y1="-81.28" x2="96.52" y2="-76.2" width="0.1524" layer="91"/>
-<junction x="111.76" y="-81.28"/>
+<wire x1="106.68" y1="-78.74" x2="96.52" y2="-76.2" width="0.1524" layer="91"/>
+<junction x="106.68" y="-78.74"/>
 <pinref part="12V-1A4" gate="G$1" pin="PWM"/>
-<wire x1="111.76" y1="-81.28" x2="96.52" y2="-50.8" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="-78.74" x2="96.52" y2="-50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="35V_F" class="0">
 <segment>
 <pinref part="5V_L2" gate="G$1" pin="2"/>
 <pinref part="5V-4A" gate="G$1" pin="EN/UV"/>
-<wire x1="12.7" y1="30.48" x2="17.78" y2="30.48" width="0.1524" layer="91"/>
-<junction x="17.78" y="30.48"/>
+<wire x1="22.86" y1="30.48" x2="25.4" y2="30.48" width="0.1524" layer="91"/>
+<junction x="25.4" y="30.48"/>
 <pinref part="5V_C2" gate="G$1" pin="V+"/>
 <pinref part="5V_CIN1" gate="G$1" pin="V+"/>
 <pinref part="5V-4A" gate="G$1" pin="VIN1"/>
-<wire x1="43.18" y1="50.8" x2="55.88" y2="50.8" width="0.1524" layer="91"/>
-<junction x="43.18" y="50.8"/>
+<wire x1="43.18" y1="45.72" x2="55.88" y2="50.8" width="0.1524" layer="91"/>
+<junction x="43.18" y="45.72"/>
 <pinref part="5V_CIN2" gate="G$1" pin="V+"/>
 <pinref part="5V-4A" gate="G$1" pin="VIN2"/>
-<wire x1="55.88" y1="0" x2="43.18" y2="0" width="0.1524" layer="91"/>
-<junction x="43.18" y="0"/>
-<wire x1="17.78" y1="30.48" x2="30.48" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="30.48" y1="30.48" x2="43.18" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="0" x2="43.18" y2="5.08" width="0.1524" layer="91"/>
+<junction x="43.18" y="5.08"/>
+<wire x1="25.4" y1="30.48" x2="30.48" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="30.48" x2="43.18" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="30.48" x2="63.5" y2="0" width="0.1524" layer="91"/>
 <junction x="30.48" y="30.48"/>
-<wire x1="30.48" y1="30.48" x2="43.18" y2="0" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="30.48" x2="43.18" y2="5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="35V_NO" class="0">
@@ -6173,73 +6182,102 @@ relay and LED, though.</text>
 <pinref part="DC_C2" gate="G$1" pin="GND"/>
 <pinref part="DC_C1" gate="G$1" pin="GND"/>
 <pinref part="RELAY" gate="G$1" pin="GND"/>
-<wire x1="-78.74" y1="-5.08" x2="-48.26" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="-78.74" y1="-5.08" x2="-73.66" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="-73.66" y1="-7.62" x2="-48.26" y2="-17.78" width="0.1524" layer="91"/>
 <junction x="-48.26" y="-17.78"/>
 <wire x1="-48.26" y1="-17.78" x2="-40.64" y2="-17.78" width="0.1524" layer="91"/>
 <pinref part="5V_C3" gate="G$1" pin="GND"/>
-<wire x1="-40.64" y1="-17.78" x2="-5.08" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="-17.78" x2="5.08" y2="22.86" width="0.1524" layer="91"/>
 <junction x="-40.64" y="-17.78"/>
 <pinref part="5V_C2" gate="G$1" pin="GND"/>
-<wire x1="-5.08" y1="22.86" x2="17.78" y2="22.86" width="0.1524" layer="91"/>
-<junction x="-5.08" y="22.86"/>
-<junction x="17.78" y="22.86"/>
+<wire x1="5.08" y1="22.86" x2="25.4" y2="22.86" width="0.1524" layer="91"/>
+<junction x="5.08" y="22.86"/>
+<junction x="25.4" y="22.86"/>
 <pinref part="5V_CIN1" gate="G$1" pin="GND"/>
 <pinref part="5V_CIN2" gate="G$1" pin="GND"/>
 <pinref part="5V-4A" gate="G$1" pin="GND2"/>
-<wire x1="43.18" y1="7.62" x2="43.18" y2="17.78" width="0.1524" layer="91"/>
-<junction x="43.18" y="7.62"/>
-<wire x1="43.18" y1="43.18" x2="43.18" y2="33.02" width="0.1524" layer="91"/>
-<junction x="43.18" y="43.18"/>
+<wire x1="43.18" y1="12.7" x2="43.18" y2="17.78" width="0.1524" layer="91"/>
+<junction x="43.18" y="12.7"/>
+<wire x1="43.18" y1="38.1" x2="43.18" y2="33.02" width="0.1524" layer="91"/>
+<junction x="43.18" y="38.1"/>
 <pinref part="5V-4A" gate="G$1" pin="SYNC/MODE"/>
 <wire x1="93.98" y1="20.32" x2="93.98" y2="12.7" width="0.1524" layer="91"/>
 <junction x="93.98" y="20.32"/>
-<wire x1="17.78" y1="22.86" x2="68.58" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="20.32" x2="43.18" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="20.32" x2="43.18" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="22.86" x2="68.58" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="20.32" x2="43.18" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="20.32" x2="43.18" y2="12.7" width="0.1524" layer="91"/>
 <junction x="68.58" y="20.32"/>
 <wire x1="68.58" y1="20.32" x2="93.98" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="5V_R2A" gate="G$1" pin="1"/>
 <wire x1="68.58" y1="20.32" x2="39.37" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="5V_RT" gate="G$1" pin="1"/>
-<wire x1="68.58" y1="20.32" x2="63.5" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="20.32" x2="73.66" y2="-12.7" width="0.1524" layer="91"/>
 <pinref part="5V_CSS" gate="G$1" pin="GND"/>
 <wire x1="68.58" y1="20.32" x2="81.28" y2="-10.16" width="0.1524" layer="91"/>
 <pinref part="5V_CVCC" gate="G$1" pin="GND"/>
 <wire x1="68.58" y1="20.32" x2="66.04" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="-40.64" y1="-17.78" x2="81.28" y2="-73.66" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="-17.78" x2="25.4" y2="-45.72" width="0.1524" layer="91"/>
 <pinref part="12V_CO" gate="G$1" pin="GND"/>
-<wire x1="81.28" y1="-73.66" x2="60.96" y2="-53.34" width="0.1524" layer="91"/>
 <pinref part="12V-1A4" gate="G$1" pin="GND"/>
-<wire x1="81.28" y1="-73.66" x2="66.04" y2="-68.58" width="0.1524" layer="91"/>
-<junction x="81.28" y="-73.66"/>
 <pinref part="12V-1A4" gate="G$1" pin="PGND"/>
-<wire x1="81.28" y1="-73.66" x2="81.28" y2="-96.52" width="0.1524" layer="91"/>
 <pinref part="12V_RBOT" gate="G$1" pin="1"/>
-<wire x1="81.28" y1="-73.66" x2="58.42" y2="-68.58" width="0.1524" layer="91"/>
-<pinref part="12V_RT" gate="G$1" pin="GND"/>
-<wire x1="58.42" y1="-96.52" x2="81.28" y2="-73.66" width="0.1524" layer="91"/>
 <pinref part="12V_CIN" gate="G$1" pin="GND"/>
-<wire x1="81.28" y1="-73.66" x2="109.22" y2="-55.88" width="0.1524" layer="91"/>
 <pinref part="12V_C3" gate="G$1" pin="GND"/>
-<wire x1="111.76" y1="-73.66" x2="81.28" y2="-73.66" width="0.1524" layer="91"/>
 <pinref part="CPU" gate="G$1" pin="GND"/>
-<wire x1="-33.02" y1="35.56" x2="-40.64" y2="-17.78" width="0.1524" layer="91"/>
-<wire x1="-104.14" y1="-17.78" x2="-78.74" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="-33.02" y1="35.56" x2="-35.56" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="-35.56" y1="20.32" x2="-40.64" y2="-17.78" width="0.1524" layer="91"/>
 <junction x="-104.14" y="-17.78"/>
 <junction x="-78.74" y="-5.08"/>
 <pinref part="LED_5V" gate="G$1" pin="C"/>
 <wire x1="106.68" y1="17.78" x2="68.58" y2="20.32" width="0.1524" layer="91"/>
-<pinref part="LED_12V" gate="G$1" pin="C"/>
-<wire x1="48.26" y1="-30.48" x2="81.28" y2="-73.66" width="0.1524" layer="91"/>
 <pinref part="LED_AUX" gate="G$1" pin="C"/>
-<wire x1="-33.02" y1="35.56" x2="-86.36" y2="48.26" width="0.1524" layer="91"/>
 <junction x="-33.02" y="35.56"/>
 <pinref part="U$1" gate="G$1" pin="GND"/>
 <wire x1="-33.02" y1="35.56" x2="-35.56" y2="81.28" width="0.1524" layer="91"/>
 <pinref part="D_RELAY" gate="G$1" pin="A"/>
-<wire x1="-78.74" y1="-5.08" x2="-78.74" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="-78.74" y1="-5.08" x2="-88.9" y2="5.08" width="0.1524" layer="91"/>
 <pinref part="CAP_5V" gate="G$1" pin="GND"/>
-<wire x1="99.06" y1="66.04" x2="68.58" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="63.5" x2="68.58" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="-45.72" x2="25.4" y2="-50.8" width="0.1524" layer="91"/>
+<junction x="25.4" y="-45.72"/>
+<wire x1="25.4" y1="-50.8" x2="25.4" y2="-81.28" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="-81.28" x2="63.5" y2="-101.6" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="-101.6" x2="76.2" y2="-101.6" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="-101.6" x2="81.28" y2="-101.6" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="-101.6" x2="101.6" y2="-101.6" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="-101.6" x2="119.38" y2="-83.82" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="-83.82" x2="119.38" y2="-78.74" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="-78.74" x2="119.38" y2="-60.96" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="-60.96" x2="119.38" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="-38.1" x2="96.52" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="-20.32" x2="53.34" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="-20.32" x2="45.72" y2="-27.94" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="-27.94" x2="25.4" y2="-45.72" width="0.1524" layer="91"/>
+<pinref part="12V_RT" gate="G$1" pin="GND"/>
+<wire x1="63.5" y1="-96.52" x2="63.5" y2="-101.6" width="0.1524" layer="91"/>
+<junction x="63.5" y="-101.6"/>
+<wire x1="81.28" y1="-96.52" x2="81.28" y2="-101.6" width="0.1524" layer="91"/>
+<junction x="81.28" y="-101.6"/>
+<wire x1="114.3" y1="-78.74" x2="119.38" y2="-78.74" width="0.1524" layer="91"/>
+<junction x="119.38" y="-78.74"/>
+<wire x1="114.3" y1="-60.96" x2="119.38" y2="-60.96" width="0.1524" layer="91"/>
+<junction x="119.38" y="-60.96"/>
+<pinref part="LED_12V" gate="G$1" pin="C"/>
+<wire x1="48.26" y1="-30.48" x2="45.72" y2="-27.94" width="0.1524" layer="91"/>
+<junction x="45.72" y="-27.94"/>
+<junction x="25.4" y="-50.8"/>
+<wire x1="55.88" y1="-50.8" x2="25.4" y2="-50.8" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="-68.58" x2="58.42" y2="-68.58" width="0.1524" layer="91"/>
+<wire x1="-104.14" y1="-17.78" x2="-73.66" y2="-7.62" width="0.1524" layer="91"/>
+<junction x="-73.66" y="-7.62"/>
+<wire x1="66.04" y1="-68.58" x2="76.2" y2="-78.74" width="0.1524" layer="91"/>
+<junction x="66.04" y="-68.58"/>
+<wire x1="76.2" y1="-78.74" x2="76.2" y2="-101.6" width="0.1524" layer="91"/>
+<junction x="76.2" y="-101.6"/>
+<wire x1="-73.66" y1="27.94" x2="-35.56" y2="20.32" width="0.1524" layer="91"/>
+<junction x="-35.56" y="20.32"/>
+<pinref part="D12V" gate="G$1" pin="A"/>
+<wire x1="25.4" y1="-50.8" x2="35.56" y2="-43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="5V_PG" class="0">
@@ -6266,14 +6304,14 @@ relay and LED, though.</text>
 <segment>
 <pinref part="R_LED_12V" gate="G$1" pin="GND"/>
 <pinref part="LED_12V" gate="G$1" pin="A"/>
-<wire x1="48.26" y1="-40.64" x2="48.26" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="-45.72" x2="48.26" y2="-38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$10" class="0">
 <segment>
 <pinref part="R_LED_AUX" gate="G$1" pin="1"/>
 <pinref part="LED_AUX" gate="G$1" pin="A"/>
-<wire x1="-83.82" y1="55.88" x2="-86.36" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="-71.12" y1="35.56" x2="-73.66" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="PB1" class="0">
@@ -6290,7 +6328,7 @@ relay and LED, though.</text>
 <wire x1="-33.02" y1="55.88" x2="-45.72" y2="96.52" width="0.1524" layer="91"/>
 <junction x="-33.02" y="55.88"/>
 <pinref part="R_LED_AUX" gate="G$1" pin="2"/>
-<wire x1="-73.66" y1="55.88" x2="-66.04" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="-60.96" y1="35.56" x2="-66.04" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="-66.04" y1="48.26" x2="-38.1" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="-38.1" y1="48.26" x2="-33.02" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="TR_RELAY" gate="G$1" pin="B"/>
@@ -6322,8 +6360,8 @@ relay and LED, though.</text>
 <pinref part="TR_RELAY" gate="G$1" pin="E"/>
 <wire x1="-104.14" y1="0" x2="-104.14" y2="-5.08" width="0.1524" layer="91"/>
 <pinref part="D_RELAY" gate="G$1" pin="C"/>
-<wire x1="-83.82" y1="5.08" x2="-104.14" y2="0" width="0.1524" layer="91"/>
-<junction x="-104.14" y="0"/>
+<wire x1="-104.14" y1="-5.08" x2="-93.98" y2="5.08" width="0.1524" layer="91"/>
+<junction x="-104.14" y="-5.08"/>
 </segment>
 </net>
 </nets>
