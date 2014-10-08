@@ -5554,25 +5554,25 @@ type 0309, grid 2.5 mm</description>
 <wire x1="2.2" y1="1.6" x2="1.8" y2="1.6" width="0.1524" layer="41" curve="-323.130102"/>
 <wire x1="-0.2" y1="-1.6" x2="0.2" y2="-1.6" width="0.1524" layer="41" curve="-323.130102"/>
 <wire x1="1.8" y1="-1.6" x2="2.2" y2="-1.6" width="0.1524" layer="41" curve="-323.130102"/>
-<wire x1="-1.8" y1="1.6" x2="-2.2" y2="1.6" width="0.1524" layer="42" curve="-323.130102"/>
-<wire x1="0.2" y1="1.6" x2="-0.2" y2="1.6" width="0.1524" layer="42" curve="-323.130102"/>
-<wire x1="2.2" y1="1.6" x2="1.8" y2="1.6" width="0.1524" layer="42" curve="-323.130102"/>
-<wire x1="-0.2" y1="-1.6" x2="0.2" y2="-1.6" width="0.1524" layer="42" curve="-323.130102"/>
-<wire x1="1.8" y1="-1.6" x2="2.2" y2="-1.6" width="0.1524" layer="42" curve="-323.130102"/>
 <wire x1="-2.2" y1="-1.65" x2="-2.65" y2="-1.65" width="0.1524" layer="41"/>
 <wire x1="-2.65" y1="-1.65" x2="-2.65" y2="-0.35" width="0.1524" layer="41"/>
 <wire x1="-2.65" y1="-0.35" x2="-1.35" y2="-0.35" width="0.1524" layer="41"/>
 <wire x1="-1.35" y1="-0.35" x2="-1.35" y2="-1.65" width="0.1524" layer="41"/>
 <wire x1="-1.35" y1="-1.65" x2="-1.8" y2="-1.65" width="0.1524" layer="41"/>
-<wire x1="-2.2" y1="-1.65" x2="-2.65" y2="-1.65" width="0.1524" layer="42"/>
-<wire x1="-2.65" y1="-1.65" x2="-2.65" y2="-0.35" width="0.1524" layer="42"/>
-<wire x1="-2.65" y1="-0.35" x2="-1.35" y2="-0.35" width="0.1524" layer="42"/>
-<wire x1="-1.35" y1="-0.35" x2="-1.35" y2="-1.65" width="0.1524" layer="42"/>
-<wire x1="-1.35" y1="-1.65" x2="-1.8" y2="-1.65" width="0.1524" layer="42"/>
+<wire x1="-1.75" y1="1.7" x2="-2.26" y2="1.7" width="0.3302" layer="42" curve="-320"/>
+<wire x1="0.25" y1="1.7" x2="-0.26" y2="1.7" width="0.3302" layer="42" curve="-320"/>
+<wire x1="2.25" y1="1.7" x2="1.74" y2="1.7" width="0.3302" layer="42" curve="-320"/>
+<wire x1="1.75" y1="-1.7" x2="2.26" y2="-1.7" width="0.3302" layer="42" curve="-320"/>
+<wire x1="-0.25" y1="-1.7" x2="0.26" y2="-1.7" width="0.3302" layer="42" curve="-320"/>
+<wire x1="-2.28" y1="-1.73" x2="-2.73" y2="-1.73" width="0.3302" layer="42"/>
+<wire x1="-2.73" y1="-1.73" x2="-2.73" y2="-0.27" width="0.3302" layer="42"/>
+<wire x1="-2.73" y1="-0.27" x2="-1.27" y2="-0.27" width="0.3302" layer="42"/>
+<wire x1="-1.27" y1="-0.27" x2="-1.27" y2="-1.73" width="0.3302" layer="42"/>
+<wire x1="-1.27" y1="-1.73" x2="-1.72" y2="-1.73" width="0.3302" layer="42"/>
 </package>
 <package name="D0503">
-<wire x1="-0.106" y1="0.432" x2="0.106" y2="0.432" width="0.1016" layer="21"/>
-<wire x1="-0.106" y1="-0.419" x2="0.106" y2="-0.419" width="0.1016" layer="21"/>
+<wire x1="-0.006" y1="0.432" x2="0.006" y2="0.432" width="0.1016" layer="21"/>
+<wire x1="-0.006" y1="-0.419" x2="0.006" y2="-0.419" width="0.1016" layer="21"/>
 <smd name="A" x="-0.425" y="0" dx="0.55" dy="0.85" layer="1"/>
 <text x="-0.7" y="0.65" size="0.254" layer="25">&gt;NAME</text>
 <text x="-0.7" y="-0.85" size="0.254" layer="27">&gt;VALUE</text>
@@ -7034,17 +7034,11 @@ Source: www.epcos.com .. 01430148.pdf</description>
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="35V" width="0.508" drill="0.3">
-<clearance class="0" value="0.254"/>
+<class number="0" name="35V" width="0.127" drill="0.2032">
 </class>
-<class number="1" name="GND" width="0.508" drill="0.3">
-<clearance class="0" value="0.205"/>
-<clearance class="1" value="0.254"/>
+<class number="1" name="GND" width="0.254" drill="0.2032">
 </class>
-<class number="2" name="12V" width="0.508" drill="0.3">
-<clearance class="0" value="0.205"/>
-<clearance class="1" value="0.205"/>
-<clearance class="2" value="0.254"/>
+<class number="2" name="12V" width="0.127" drill="0.2032">
 </class>
 </classes>
 <parts>
@@ -7105,6 +7099,7 @@ Source: www.epcos.com .. 01430148.pdf</description>
 <part name="5V_COUT" library="dubec" deviceset="CAP" device="1210"/>
 <part name="MCU_C" library="dubec" deviceset="CAP" device="0508"/>
 <part name="R1" library="varistor" deviceset="VARISTOR" device="CN0805"/>
+<part name="D5V" library="dubec" deviceset="SCH_DIODE" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -7136,7 +7131,7 @@ DC_C1, DC_C2, 12V_CO = C2012X5R1V226M125AC
 12V_RTOP = CRCW04021M00DHEDP
 12V_CO = CL31X226KOHN3NE
 12V_RFB = 1-1879213-9
-D12V = CDBU0520
+D12V, D5V = CDBQR40
 LED_12V, LED_5V, LED_AUX = LTST-C193TGKT-5A
 R_LED_AUX = CRCW0402324RFKEDHP
 R_LED_5V = CRCW0402470RJNEDHP
@@ -7212,6 +7207,7 @@ relay and LED, though.</text>
 <instance part="5V_COUT" gate="G$1" x="88.9" y="96.52" rot="R180"/>
 <instance part="MCU_C" gate="G$1" x="-58.42" y="35.56"/>
 <instance part="R1" gate="G$1" x="-66.04" y="-22.86" rot="R90"/>
+<instance part="D5V" gate="G$1" x="96.52" y="96.52" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -7306,7 +7302,8 @@ relay and LED, though.</text>
 <junction x="88.9" y="91.44"/>
 <pinref part="R_LED_5V" gate="G$1" pin="1"/>
 <wire x1="109.22" y1="66.04" x2="109.22" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="81.28" x2="88.9" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="81.28" x2="96.52" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="93.98" x2="88.9" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="D5V_ISP" gate="G$1" pin="A"/>
 <wire x1="-50.8" y1="25.4" x2="-50.8" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="-50.8" y1="20.32" x2="-20.32" y2="38.1" width="0.1524" layer="91"/>
@@ -7319,6 +7316,8 @@ relay and LED, though.</text>
 <wire x1="-104.14" y1="10.16" x2="-50.8" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="5V_COUT" gate="G$1" pin="V+"/>
 <wire x1="88.9" y1="93.98" x2="88.9" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="D5V" gate="G$1" pin="C"/>
+<junction x="96.52" y="93.98"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -7608,7 +7607,7 @@ relay and LED, though.</text>
 <wire x1="41.91" y1="91.44" x2="36.83" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="63.5" x2="36.83" y2="63.5" width="0.1524" layer="91"/>
 <junction x="83.82" y="8.89"/>
-<wire x1="116.84" y1="43.18" x2="116.84" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="43.18" x2="116.84" y2="78.74" width="0.1524" layer="91"/>
 <junction x="116.84" y="43.18"/>
 <wire x1="88.9" y1="106.68" x2="68.58" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="68.58" y1="106.68" x2="43.18" y2="105.41" width="0.1524" layer="91"/>
@@ -7626,7 +7625,8 @@ relay and LED, though.</text>
 <wire x1="-45.72" y1="2.54" x2="-55.88" y2="-27.94" width="0.1524" layer="91"/>
 <pinref part="5V_COUT" gate="G$1" pin="GND"/>
 <wire x1="88.9" y1="101.6" x2="88.9" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="88.9" y1="106.68" x2="116.84" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="106.68" x2="96.52" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="99.06" x2="116.84" y2="78.74" width="0.1524" layer="91"/>
 <junction x="88.9" y="106.68"/>
 <pinref part="MCU_C" gate="G$1" pin="GND"/>
 <wire x1="-58.42" y1="30.48" x2="-43.18" y2="15.24" width="0.1524" layer="91"/>
@@ -7635,6 +7635,8 @@ relay and LED, though.</text>
 <junction x="-20.32" y="-22.86"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 <junction x="-66.04" y="-27.94"/>
+<pinref part="D5V" gate="G$1" pin="A"/>
+<junction x="96.52" y="99.06"/>
 </segment>
 </net>
 <net name="5V_PG" class="0">
