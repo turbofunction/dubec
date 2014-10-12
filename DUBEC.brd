@@ -179,10 +179,6 @@ out</text>
 <wire x1="3.75" y1="9.375" x2="3.75" y2="8.625" width="0.2032" layer="41"/>
 <text x="39.25" y="2.75" size="0.9" layer="22" font="vector" ratio="15" rot="SMR270" align="bottom-center">12V</text>
 <text x="39.25" y="7.25" size="0.9" layer="22" font="vector" ratio="15" rot="SMR270" align="bottom-center">GND</text>
-<rectangle x1="27.17" y1="17" x2="27.47" y2="17.7" layer="31"/>
-<rectangle x1="27.17" y1="17" x2="27.47" y2="17.7" layer="29"/>
-<rectangle x1="24.97" y1="16.3" x2="25.67" y2="16.6" layer="31"/>
-<rectangle x1="24.97" y1="16.3" x2="25.67" y2="16.6" layer="29"/>
 <wire x1="35.75" y1="2.375" x2="35.75" y2="1" width="0.125" layer="41"/>
 <wire x1="35.75" y1="1" x2="37.375" y2="1" width="0.125" layer="41"/>
 <wire x1="38.125" y1="1" x2="39.75" y2="1" width="0.125" layer="41"/>
@@ -199,7 +195,6 @@ out</text>
 <wire x1="39.75" y1="9" x2="38.125" y2="9" width="0.125" layer="41"/>
 <text x="7.25" y="18" size="0.9" layer="22" font="vector" ratio="15" rot="MR90" align="bottom-center">AVR
 ISP</text>
-<rectangle x1="29.72" y1="15.5" x2="29.9" y2="16.4" layer="29"/>
 <wire x1="37.74" y1="14.26" x2="38.49" y2="15.01" width="0.127" layer="41" curve="-59.405455"/>
 <wire x1="38.5" y1="12.99" x2="37.75" y2="13.74" width="0.127" layer="41" curve="-59.405455"/>
 <wire x1="39.75" y1="13.74" x2="39" y2="12.99" width="0.127" layer="41" curve="-59.405455"/>
