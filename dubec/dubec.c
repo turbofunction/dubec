@@ -19,62 +19,74 @@
 #include <util/delay.h>
 */
 
-// abundance of RAM, no need to obfuscate with bit fields
-/*
+// abundance of RAM, no need to obfuscate code with bit fields
 #define TRUE 1
 #define FALSE 0
-*/
 
 // as a benefit from a single output port, using the output array as identifiers
-#define MAIN 0
-#define AUX _BV(PORTB0)
+#define PB_RELAY PORTB0
 
-#define EEPROM_VERSION 1
+#define PIN_RC PINB1
+
+#define EEPROM_VERSION 0b10101010 // hopefully less collisions...
 
 uint8_t EEMEM ee_ver;
 
 typedef struct {
-	uint16_t volt_8s;
+	// 10-bit ADC value for 4.2V equivalent
+	uint16_t volt_1s;
+	// set to TRUE if get low ADC on AUX battery
+	uint8_t aux_fault;
 } eeprom01_t;
 
-eeprom01_t EEMEM ee_calib;
+eeprom01_t EEMEM ee_floppy;
 
-// theoretical division for 10 bit ADC is 35.224V = 5V = 0x3ff, thus 33.6V = 0x3ff * 33.6 / 35.224 = 976
-eeprom01_t calib = { 976 };
+// theoretical division for 10 bit ADC is 35.224V = 5V = 0x3ff = 1024, thus 4.2V = 1024 * 4.2 / 35.224 = 122
+eeprom01_t floppy = { 122, FALSE };
+
+volatile uint8_t eeprom_dirty = FALSE;
 
 typedef struct {
 	// ADC value for when battery is considered empty
 	volatile uint16_t empty_v;
 	// countdown, set on first low voltage
 	volatile uint8_t until_fallback;
+	// skip some ADC samples after relay switch (don't know watchdog timing)
+	volatile uint8_t adc_skips;
 } battery_t;
 
-battery_t batt = { 0, 0 };
+battery_t batt = { 0, 0, 1 };
 
 typedef struct {
-	volatile uint8_t timer_counter;
 	// countdown to relay flip
 	volatile uint8_t until_flip;
 } control_t;
 
-control_t rc = { 0, 0 };
+control_t rc = { 0 };
 
 static void load_eeprom(void);
-// static void save_eeprom(void);
-static uint8_t is_sync_int(void);
+static void save_eeprom(void);
+static uint8_t rc_high_int(void);
 static void start_timer(void);
 static uint8_t is_timer_running(void);
 static void schedule_adc(void);
 static uint8_t is_adc_pending(void);
 static void set_relay(uint8_t port);
+static void aux_fault(uint8_t is_true);
 
 int main(void) {
-	/* 
-	* Port connections:
-	*/
-	// PB0: relay & AUX LED output
-	// PB1: RC signal input
-	// PB4: battery ADC input
+	/*
+	 * Port configuration:
+	 *
+	 * PB0 (MOSI): relay & AUX LED output
+	 * PB1 (PCINT1, INT0, MISO): RC signal digital input (external pull-up)
+	 * PB2 (SCK): floating pull-up input
+	 * PB3 (NC): floating pull-up input
+	 * PB4 (ADC2, PCINT4): battery voltage divider input (external pull-down)
+	 * PB5 (RESET): floating pull-up input
+	 *
+	 * Note: normally floating pins PB2 and PB5 are connected to ISP.
+	 */
 
 	// fuses:
 	// CKSEL = 10 // 9MHz clock (default)
@@ -82,66 +94,89 @@ int main(void) {
 	// CKDIV8 = 0 // start up with clock division of 8 (default)
 	// WDTON = 1 // == unprogrammed
 
-	// note: simulator ignores this if CKDIV8 fuse is set
-	clock_prescale_set(clock_div_1);
-
-	// configure PB0 as the only output
+	// configure relay as the sole output
 	DDRB = _BV(DDB0);
+
+	// active internal pull-ups (but don't high the real outputs, ie. relay)
+	PORTB = _BV(PORTB5) | _BV(PORTB3) | _BV(PORTB2);
+
+	// disable digital input on battery ADC and relay
+	DIDR0 = _BV(ADC2D) | _BV(AIN0D);
+
+	// configure ADC to read PB4
+	ADMUX = _BV(MUX1);
 
 	// disable analog comparator
 	// ACSR = _BV(ACD);
 
-	// disable all digital inputs
-	DIDR0 = 0x3f; // AIN0D | AIN1D | ADC1D | ADC3D | ADC2D | ADC0D;
+	// Switch to 9.6MHz. Note: simulator ignores this if CKDIV8 fuse is set.
+	clock_prescale_set(clock_div_1);
 
 	load_eeprom();
 
-	// configure ADC to read PB4
-	ADMUX |= _BV(MUX1);
+	// Enable INT0 and pin change interrupts. INT0 is triggered
+	// on low by default, which is the correct mode initially (pin
+	// pulled high).
+	GIMSK = _BV(INT0) | _BV(PCIE);
 
-	// enable external interrupt pin
-	GIMSK |= _BV(INT0);
-	// INT0 is triggered on low level by default, which is the correct mode now
+	// Enable pin change interrupt on battery.
+	//
+	// Note A: could use PCINT on RC signal as well, but as decided now
+	// to just idle during lows, can use synchoronous INT0 high.
+	//
+	// Note B: disconnect fallback could be done more reliably in hardware,
+	// but this minor case hardly warrants the extra components. Also,
+	// the interrupt needn't to be configured yet (only after switch to AUX)
+	// but to keep things simple.
+	PCMSK = _BV(PCINT4);
 
-	// enable sleep and go to power down
-	MCUCR |= _BV(SE) | _BV(SM1);
-
-	// set timer mode to Clear Timer on Compare (CTC)
-	// TCCR0A |= _BV(WGM01);
 	// enable timer counter overflow interrupt
-	TIMSK0 |= _BV(TOIE0);
+	TIMSK0 = _BV(TOIE0);
 
-	/*
-	OCR0A = 112; // number to count up to
-	TCCR0A = 0x02; // Clear Timer on Compare Match (CTC) mode
-	TIFR0 |= OCF0A; // clear interrupt flag
-	TIMSK0 = OCIE0A; // TC0 compare match A interrupt enable
-	// TCCR0B = CS0; // clock source CLK/1024, start timer
-	*/
+	// watchdog enable change
+	WDTCR = WDCE;
+	// configure watchdog prescaler to 0.5s
+	WDTCR = WDTO_500MS;
 
-	sei(); // global interrupt enable
-
-	// DEBUG
-	// TCCR0B = _BV(CS02) | _BV(CS00);
+	sei(); // global interrupt enable, SREG |= SREG_I
 
 	for (;;) {
-		sleep_cpu();
+		// configure sleep according to state (also, write fresh eeprom
+		// before first sleep)
 
 		if (is_timer_running()) {
 			// set sleep mode to idle
-			MCUCR = MCUCR & ~(_BV(SM0) | _BV(SM1));
+			MCUCR = _BV(SE) | (MCUCR & ~(_BV(SM0) | _BV(SM1)));
+
 		} else if (is_adc_pending()) {
 			// Set sleep mode to ADC noise reduction; conversion will
 			// start automatically. Note that this will inhibit high signal
-			// tracking on INT0, but the ADC should be quick enough.
-			MCUCR = (MCUCR & ~_BV(SM1)) | _BV(SM0);
-		} else if (is_sync_int()) {
-			// tracking RC signal synchronously (high signal), can't sleep
-			MCUCR = MCUCR & ~(_BV(SM0) | _BV(SM1));
+			// tracking on INT0, but the ADC should be finished well before
+			// next raise.
+			MCUCR = _BV(SE) | (MCUCR & ~_BV(SM1)) | _BV(SM0);
+
+		} else if (eeprom_dirty) {
+			// will miss a few signals, but so not...
+			save_eeprom();
+			// check state again before next sleep
+			MCUCR &= ~_BV(SE);
+
+		} else if (rc_high_int()) {
+			// ~18ms wait period on RC low, sleep or not? If we just idle
+			// for now to avoid risks.. (Thus, configured to use synchronous
+			// INT0 on RC instead of async PCINT for easier interrupt
+			// handling.)
+			MCUCR = _BV(SE) | (MCUCR & ~(_BV(SM0) | _BV(SM1)));
+
 		} else {
-			// set sleep mode to power down, will wake up by a low RC signal
-			MCUCR = (MCUCR & ~_BV(SM0)) | _BV(SM1);
+			// Set sleep mode to power down, will wake up by a low RC signal.
+			// TODO: Won't wake for AUX ADC, handle somehow? Watchdog reset
+			// would switch to main battery.
+			MCUCR = _BV(SE) | (MCUCR & ~_BV(SM0)) | _BV(SM1);
 		}
+
+		// wdt_reset();
+		sleep_cpu();
 	}
 }
 
@@ -149,29 +184,33 @@ void load_eeprom(void) {
 	uint8_t ee_ver = eeprom_read_byte(&ee_ver);
 	switch (ee_ver) {
 		case EEPROM_VERSION:
-			eeprom_read_block(&calib, &ee_calib, sizeof(eeprom01_t));
+			eeprom_read_block(&floppy, &ee_floppy, sizeof(eeprom01_t));
+			eeprom_dirty = FALSE;
+
+		default:
+			eeprom_dirty = TRUE;
 	}
 }
 
 /*
+ * EEPROM programming time is 1.8ms, so latency for 4 bytes is 7.2ms?
+ */
 void save_eeprom(void) {
 	eeprom_write_byte(&ee_ver, EEPROM_VERSION);
-	eeprom_write_block(&calib, &ee_calib, sizeof(eeprom01_t));
+	eeprom_write_block(&floppy, &ee_floppy, sizeof(eeprom01_t));
+	eeprom_dirty = FALSE;
 }
-*/
 
-uint8_t is_sync_int(void) {
+/* Returns true if waiting for high RC signal. */
+uint8_t rc_high_int(void) {
 	return MCUCR & (_BV(ISC01) | _BV(ISC00));
 }
 
 void start_timer(void) {
-	// maximum RC high duration (2250ms) == 19 * 1/8ms (== 8kHz == 8MHz / 1024)
-	// TODO calibrate
-	rc.timer_counter = 20;
-	// interrupt immediately after one clock division
-	TCNT0 = -1;
-	// set timer clock source /1024
-	TCCR0B = _BV(CS02) | _BV(CS00);
+	// zero counter
+	TCNT0 = 0;
+	// set timer clock source 8MHz/256 == 32kHz = 2.2ms/69
+	TCCR0B = _BV(CS02);
 }
 
 /* Function for clarity. */
@@ -181,9 +220,8 @@ uint8_t is_timer_running(void) {
 
 // use watchdog to trigger ADC at 2Hz
 void schedule_adc(void) {
-	// set watchdog interrupt
+	// enable watchdog interrupt
 	WDTCR |= WDTIE;
-	wdt_enable(WDTO_500MS);
 }
 
 /* Function for clarity. */
@@ -191,64 +229,82 @@ uint8_t is_adc_pending(void) {
 	return ADCSRA;
 }
 
-void set_relay(uint8_t port) {
-	PORTB = port;
+void set_relay(uint8_t aux) {
+	if (aux) {
+		PORTB |= PB_RELAY;
+	} else {
+		PORTB &= ~PB_RELAY;
+	}
 	batt.empty_v = 0;
 	batt.until_fallback = 0;
+	batt.adc_skips = 1;
 	rc.until_flip = 0;
-	if (port) { // == AUX
+	if (aux) {
 		schedule_adc();
+	}
+}
+
+void aux_fault(uint8_t is_true) {
+	if (floppy.aux_fault != is_true) {
+		floppy.aux_fault = is_true;
+		eeprom_dirty = TRUE;
 	}
 }
 
 /** RC ("PWM") signal handler */
 ISR (INT0_vect) {
-	if (PORTB & _BV(PORTB1)) {
+	// stop timer in any case
+	TCCR0B = 0;
+
+	if (PINB & _BV(PIN_RC)) {
 		// line is high, next interrupt on low
 		MCUCR &= ~(_BV(ISC01) | _BV(ISC00));
 		// start timer
 		start_timer();
+
 	} else {
-		// line is low, stop timer
-		TCCR0B = 0;
 		// schedule next interrupt on rising edge
 		MCUCR |= _BV(ISC01) | _BV(ISC00);
-		if (!rc.timer_counter) {
-			// invalid signal, exceeded 2250ms
+
+		if (!TCNT0) {
+			// couldn't read a proper signal, ignore
+			// (too long or a state problem)
 			rc.until_flip = 0;
 			return;
 		}
 
-		// if RC high signal over 1750ms, want AUX
+		// if RC signal high for ]56..92[ 37.5kHz == [1512..2484ms], want AUX
 		// TODO calibrate
-		uint8_t want_aux = rc.timer_counter < 8;
-		// reset to 1 so the interrupt handler will stop timer if triggered
-		rc.timer_counter = 1;
+		uint8_t want_aux = TCNT0 > 46 && TCNT0 < 80;
 
-		if ((PORTB & AUX) == want_aux) {
+		if (bit_is_set(PORTB, PB_RELAY) == want_aux) {
 			// relay is consistent with signal
 			rc.until_flip = 0;
+			// Clear fault flag, allow the next switch to AUX.
+			// (There shouldn't be a situation where AUX and
+			// aux_fault are both on; so, the signal must be
+			// main here.)
+			aux_fault(FALSE);
 
-		} else {
-			// else initiate flip
-			if (!rc.until_flip) {
+		} else if (!rc.until_flip) {
+			// else initiate flip (unless there's fault flag)
+			if (!floppy.aux_fault) {
 				rc.until_flip = 5;
-			} else if (!--rc.until_flip) {
-				set_relay(want_aux ? AUX : MAIN);
 			}
+
+		} else if (!--rc.until_flip) {
+			// relay change reached, finally
+			set_relay(want_aux);
 		}
 	}
 }
 
 ISR (TIM0_OVF_vect) {
-	if (!--rc.timer_counter) {
-		// RC high time exceeded, stop timer
-		TCCR0B = 0;
-	} else {
-		// forward counter to next division
-		// TODO where does the division start?
-		TCNT0 = -1;
-	}
+	// phase too long, stop timer
+	TCCR0B = 0;
+	// also reset counter in case it's been incrementing
+	// during this interrupt handler (n00b doesn't know)
+	TCNT0 = 0;
 }
 
 /*
@@ -256,19 +312,27 @@ ISR (TIM0_OVF_vect) {
  */
 ISR(ADC_vect) {
 	// ADCL must be read first
-	uint8_t v = ADCL;
-	v += ADCH << 8;
+	uint16_t v = ADCL;
+	uint16_t vh = ADCH;
+	// "ADCH << 8" without an intermediatery int space just overflows?
+	v += vh << 8;
 	// disable ADC
 	ADCSRA = 0;
-	if (!(PORTB & AUX)) {
+
+	if (bit_is_clear(PORTB, PB_RELAY)) {
 		// ran ADC on main battery, ignore
 		return;
 	}
-	if (v < 50) {
-		// battery unavailable, can't wait for more samples
-		set_relay(MAIN);
+
+	if (v < floppy.volt_1s) {
+		// Battery unavailable, can't wait for more samples.
+		// This block should be unnecessary with the PCINT,
+		// but having it for an extra assurance.
+		set_relay(FALSE);
+		aux_fault(TRUE);
 		return;
 	}
+
 	if (!batt.empty_v) {
 		// TODO calculate
 		batt.empty_v = 1;
@@ -278,14 +342,16 @@ ISR(ADC_vect) {
 			batt.until_fallback = 3;
 		} else if (!--batt.until_fallback) {
 			// fallback to main battery
-			set_relay(MAIN);
+			set_relay(FALSE);
+			aux_fault(TRUE);
 			return;
 		}
 	} else {
 		// reset fallback counter
 		batt.until_fallback = 0;
 	}
-	// repeat infinitely
+
+	// repeat infinitely (if got this far)
 	schedule_adc();
 }
 
@@ -293,12 +359,14 @@ ISR(ADC_vect) {
  * Use watchdog to check AUX battery voltage on regular intervals.
  */
 ISR (WDT_vect) {
-	if (PORTB & AUX) {
+	if (batt.adc_skips--) {
+		return;
+	} if (PORTB & PB_RELAY) {
 		// start a conversion: enable ADC and ADC interrupt, conversion
 		// will start automatically on noise reduction sleep
 		ADCSRA |= _BV(ADEN) | _BV(ADIE);
 	} else {
 		// no need to monitor main battery
-		wdt_disable();
+		WDTCR &= ~WDTIE;
 	}
 }
