@@ -17,15 +17,6 @@
 #include <avr/sleep.h>
 #include <avr/wdt.h>
 
-/*
-#include <inttypes.h>
-#include <avr/common.h>
-#include <avr/lock.h>
-#include <util/delay.h>
-#include <math.h>
-*/
-
-// abundance of RAM, no need to obfuscate code with bit fields
 #define TRUE 1
 #define FALSE 0
 
@@ -55,57 +46,52 @@
 // evaluates to true if ADC is enabled
 #define is_adc_pending() bit_is_set(ADCSRA, ADEN)
 
-#define MAX(a, b) (a > b ? a : b)
-
-uint8_t EEMEM ee_ver;
-
 typedef struct {
+	uint8_t version;
 	/*
-	 * The per-cell difference between an empty
-	 * 8S (3V/cell) and a full 7S (both 29.4V)
-	 * is 0.525V. Thus, border_volt is the ADC value
-	 * for 4.2V - 0.525V == 3.675V.
+	 * Set to TRUE if get low ADC on AUX battery.
 	 *
-	 * ATtiny13 ADC is 10-bit, but 16-bit multiply
-	 * and division resulted in over 100 extra bytes,
-	 * so calculations need to be done in 8 bits.
+	 * Stored to EEPROM because if
+	 * 1) there's a problem with AUX, and
+	 * 2) the capacitor can't provide enough power for
+	 *    a controlled fallback,
+	 * there would be continuous switching between main
+	 * and AUX until the operator notices to take the RC
+	 * signal down.
 	 *
-	 * To err on the over-full side (to avoid unnecessary
-	 * fallbacks), an up-rounding gives 28 == 3.86V as
-	 * an 8-bit ADC value.
-	 *
-	 * A lookup table for how many cells are assumed
-	 * in the battery would look like this:
-	 *
-	 * 30.8V or more = 8S
-	 * 27.0V = 7S
-	 * 23.1V = 6S
-	 * 19.3V = 5S
-	 * 15.4V = 4S
-	 * otherwise = 3S
-	 *
-	 * (So, you'll miss the automatic fallback with a battery
-	 * with under 3.86V per cell avg.)
+	 * Fallback voltage will be resetted, though, but it
+	 * should be ok as there has to be a deliberate cycle
+	 * from AUX to main and back AUX. (That's why I'm not
+	 * eeproming the fallback, which would also require
+	 * additional logic to reset.)
 	 */
-	uint8_t border_volt;
-	// set to TRUE if get low ADC on AUX battery
 	uint8_t aux_fault;
 } eeprom01_t;
 
+// I failed to come up with a better name as I'd like
+// to keep this container generic.
 eeprom01_t EEMEM ee_floppy;
 
-// theoretical division for 10 bit ADC is 35.224V = 5V = 0x3ff = 1024,
-// thus 4.2V = 1024 * 4.2 / 35.224 = 122
-eeprom01_t floppy = { 27, FALSE };
+eeprom01_t floppy = { EEPROM_VERSION, FALSE };
 
-volatile uint8_t eeprom_dirty = FALSE;
+volatile uint8_t eeprom_dirty = TRUE;
 
 // how many watchdog cycles to wait for capacitor to charge
 volatile uint8_t startup_delay = 3;
 
 typedef struct {
-	// ADC value for when battery is considered empty
-	volatile uint16_t empty_v;
+	/*
+	 * Fallback level is set to 75% of measured initial level.
+	 *
+	 * Note: There's a(n incomplete) version in history with
+	 * cell count detection, but it wasn't significantly better.
+	 ' (Better as in avoiding unnecessary fallbacks versus killing
+	 * batteries.) And, to keep in mind, I programmed this to be
+	 * used with my own batteries as well.
+	 *
+	 * Rule: Don't launch with a drained battery!
+	 */
+	uint8_t fallback_voltage;
 	// countdown, set on first low voltage
 	volatile uint8_t until_fallback;
 	// skip some ADC samples after relay switch (don't know watchdog timing)
@@ -152,8 +138,8 @@ int main(void) {
 	// battery disconnect interrupt.
 	DIDR0 = _BV(AIN0D);
 
-	// configure ADC to read PB4
-	ADMUX = _BV(MUX1);
+	// configure ADC result alignment and to read PB4
+	ADMUX = _BV(ADLAR) | _BV(MUX1);
 
 	// Switch to 9.6MHz.
 	// Note: simulator ignores this if CKDIV8 fuse is set.
@@ -234,9 +220,13 @@ int main(void) {
 }
 
 void load_eeprom(void) {
-	switch (eeprom_read_byte(&ee_ver)) {
+	// wasting a bit (or 16) of memory here, but I like to maintain
+	// the initial defaults
+	eeprom01_t tmp;
+	eeprom_read_block(&tmp, &ee_floppy, sizeof(eeprom01_t));
+	switch (tmp.version) {
 		case EEPROM_VERSION:
-			eeprom_read_block(&floppy, &ee_floppy, sizeof(eeprom01_t));
+			floppy = tmp;
 			eeprom_dirty = FALSE;
 
 		default:
@@ -245,10 +235,9 @@ void load_eeprom(void) {
 }
 
 /*
- * EEPROM programming time is 1.8ms, so latency for 4 bytes is 7.2ms?
+ * EEPROM programming time is 1.8ms, so latency for 2 bytes is 3.6ms?
  */
 void save_eeprom(void) {
-	eeprom_write_byte(&ee_ver, EEPROM_VERSION);
 	eeprom_write_block(&floppy, &ee_floppy, sizeof(eeprom01_t));
 	eeprom_dirty = FALSE;
 }
@@ -260,7 +249,7 @@ void set_relay(uint8_t aux) {
 	} else {
 		PORTB &= ~_BV(PB_RELAY);
 	}
-	batt.empty_v = 0;
+	batt.fallback_voltage = 0;
 	batt.until_fallback = 0;
 	batt.adc_skips = 1;
 	rc.until_flip = 0;
@@ -338,12 +327,8 @@ ISR (TIM0_OVF_vect) {
  * Read battery voltage.
  */
 ISR(ADC_vect) {
-	// ADCL must be read first
-	uint16_t v = ADCL;
-	// "ADCH << 8" without an intermediatery int space just overflows?
-	uint16_t vh = ADCH;
-	v += vh << 8;
-	// disable ADC
+	// using just the upper 8 bits
+	uint8_t v = ADCH;
 	ADCSRA = 0;
 
 	if (is_aux()) {
@@ -357,22 +342,12 @@ ISR(ADC_vect) {
 			aux_fault(TRUE);
 
 		} else {
-			if (!batt.empty_v) {
-				// Ok, the next bit would be this simple if there
-				// just was enough space (> 100 bytes) for 16-bit operations:
-				//
-				// batt.empty_v = floppy.border_volt * (v / floppy.border_volt);
-				//
-				// But, as it is, that looks like this now:
-				//
-				/*
-				for (uint8_t cells = 8; batt.empty_v > v; --cells) {
-					batt.empty_v = cells * floppy.border_volt;
-				}
-				*/
+			if (!batt.fallback_voltage) {
+				// Set fallback to 75% of battery voltage.
+				// (Addition didn't save that many bytes with 8 bits.)
+				batt.fallback_voltage = (v >> 2) * 3;
 
-			} else if (v < batt.empty_v) {
-
+			} else if (v < batt.fallback_voltage) {
 				if (!batt.until_fallback) {
 					// initialize fallback countdown
 					batt.until_fallback = 3;
@@ -420,6 +395,7 @@ ISR (WDT_vect) {
 }
 
 ISR (PCINT0_vect) {
+	// TODO this will be low on relay switch
 	// no battery power and relay is AUX -> AUX fault
 	if (bit_is_clear(PINB, PIN_ADC) && is_aux()) {
 		set_relay(FALSE);
