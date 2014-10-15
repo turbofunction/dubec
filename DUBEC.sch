@@ -424,11 +424,11 @@
 </package>
 <package name="D0503">
 <description>Suggested land pattern from Zener diode document: http://www.digikey.fi/product-detail/en/CZRER52C5V1/641-1259-1-ND/1963937</description>
-<smd name="A" x="-0.425" y="0" dx="0.55" dy="0.85" layer="1"/>
-<text x="-0.7" y="0.65" size="0.254" layer="25">&gt;NAME</text>
-<text x="-0.7" y="-0.85" size="0.254" layer="27">&gt;VALUE</text>
-<text x="0.7" y="-0.68" size="0.381" layer="102" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
-<smd name="C" x="0.425" y="0" dx="0.55" dy="0.85" layer="1"/>
+<smd name="A" x="-0.475" y="0" dx="0.65" dy="0.95" layer="1"/>
+<text x="-0.7" y="0.7" size="0.254" layer="25">&gt;NAME</text>
+<text x="-0.7" y="-0.95" size="0.254" layer="27">&gt;VALUE</text>
+<text x="0.8" y="-0.68" size="0.381" layer="102" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
+<smd name="C" x="0.475" y="0" dx="0.65" dy="0.95" layer="1"/>
 <wire x1="-0.675" y1="0.425" x2="0.675" y2="0.425" width="0.05" layer="51"/>
 <wire x1="0.675" y1="0.425" x2="0.675" y2="-0.425" width="0.05" layer="51"/>
 <wire x1="0.675" y1="-0.425" x2="-0.675" y2="-0.425" width="0.05" layer="51"/>
@@ -2734,8 +2734,6 @@ Standard 3-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <junction x="7.62" y="55.88"/>
 </segment>
 <segment>
-<pinref part="RDIV1" gate="G$1" pin="1"/>
-<wire x1="-27.94" y1="-12.7" x2="-27.94" y2="2.54" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="2"/>
 <wire x1="-27.94" y1="-12.7" x2="-15.24" y2="-12.7" width="0.1524" layer="91"/>
 <wire x1="-15.24" y1="-12.7" x2="-10.16" y2="-7.62" width="0.1524" layer="91"/>
@@ -2758,7 +2756,6 @@ Standard 3-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <wire x1="-66.04" y1="-48.26" x2="-60.96" y2="-48.26" width="0.1524" layer="91"/>
 <wire x1="-60.96" y1="-48.26" x2="-27.94" y2="-12.7" width="0.1524" layer="91"/>
 <junction x="-60.96" y="-48.26"/>
-<junction x="-27.94" y="-12.7"/>
 <pinref part="C2" gate="G$1" pin="2"/>
 <junction x="15.24" y="-7.62"/>
 <wire x1="15.24" y1="-7.62" x2="60.96" y2="-7.62" width="0.1524" layer="91"/>
@@ -2938,7 +2935,11 @@ Standard 3-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <segment>
 <pinref part="RELAY" gate="G$1" pin="NO_2"/>
 <pinref part="35V_NO" gate="1" pin="V+"/>
-<wire x1="-73.66" y1="-50.8" x2="-68.58" y2="-50.8" width="0.1524" layer="91"/>
+<wire x1="-73.66" y1="-50.8" x2="-71.12" y2="-50.8" width="0.1524" layer="91"/>
+<pinref part="RDIV1" gate="G$1" pin="1"/>
+<wire x1="-71.12" y1="-50.8" x2="-68.58" y2="-50.8" width="0.1524" layer="91"/>
+<wire x1="-71.12" y1="-50.8" x2="-27.94" y2="2.54" width="0.1524" layer="91"/>
+<junction x="-71.12" y="-50.8"/>
 </segment>
 </net>
 <net name="35V_NC" class="0">
@@ -2953,13 +2954,6 @@ Standard 3-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <pinref part="GND2" gate="1" pin="GND"/>
 <pinref part="RELAY" gate="G$1" pin="NC_1"/>
 <wire x1="-104.14" y1="-43.18" x2="-99.06" y2="-45.72" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="GND_NO" class="0">
-<segment>
-<pinref part="GND3" gate="1" pin="GND"/>
-<pinref part="RELAY" gate="G$1" pin="NO_1"/>
-<wire x1="-104.14" y1="-53.34" x2="-99.06" y2="-50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -3002,10 +2996,18 @@ Standard 3-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <wire x1="-91.44" y1="-58.42" x2="-60.96" y2="-58.42" width="0.1524" layer="91"/>
 <pinref part="RELAY" gate="G$1" pin="CO_1"/>
 <pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="-106.68" y1="-48.26" x2="-99.06" y2="-48.26" width="0.1524" layer="91"/>
+<wire x1="-106.68" y1="-48.26" x2="-101.6" y2="-48.26" width="0.1524" layer="91"/>
 <junction x="-99.06" y="-48.26"/>
+<wire x1="-101.6" y1="-48.26" x2="-99.06" y2="-48.26" width="0.1524" layer="91"/>
 <wire x1="-99.06" y1="-48.26" x2="-91.44" y2="-58.42" width="0.1524" layer="91"/>
 <wire x1="-99.06" y1="-48.26" x2="-73.66" y2="-35.56" width="0.1524" layer="91"/>
+<pinref part="GND3" gate="1" pin="GND"/>
+<pinref part="RELAY" gate="G$1" pin="NO_1"/>
+<wire x1="-104.14" y1="-53.34" x2="-101.6" y2="-50.8" width="0.1524" layer="91"/>
+<wire x1="-101.6" y1="-50.8" x2="-99.06" y2="-50.8" width="0.1524" layer="91"/>
+<wire x1="-101.6" y1="-48.26" x2="-101.6" y2="-50.8" width="0.1524" layer="91"/>
+<junction x="-101.6" y="-48.26"/>
+<junction x="-101.6" y="-50.8"/>
 </segment>
 <segment>
 <pinref part="12V_RT" gate="G$1" pin="1"/>
