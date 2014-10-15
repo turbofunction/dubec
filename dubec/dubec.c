@@ -25,7 +25,7 @@
 
 #define PIN_ADC PINB4
 
-#define MIN_VOLTAGE 60 // ~7.7v as 8-bit ADC
+#define MIN_VOLTAGE 215 // ~7.0v as 10-bit ADC with 33.224V calibration
 
 // evaluates to true if waiting for high RC signal
 #define rc_high_int() (MCUCR & (_BV(ISC01) | _BV(ISC00)))
@@ -42,6 +42,11 @@
 // evaluates to true if ADC is enabled
 #define is_adc_pending() bit_is_set(ADCSRA, ADEN)
 
+// configure watchdog with the given prescaler
+#define sample_ADC(wdtp) ({ ATOMIC_BLOCK(ATOMIC_RESTORESTATE) { WDTCR = _BV(WDCE); WDTCR = wdtp; } WDTCR |= _BV(WDTIE); })
+
+#define PC75(a) (((a << 1) + a) >> 2)
+
 #define MAX(a, b) (a > b ? a : b)
 
 // how long to wait for capacitor to charge
@@ -50,17 +55,21 @@ volatile uint8_t startup_delay = WDTO_1S;
 typedef struct {
 	volatile uint8_t aux_ok;
 	/*
-	 * Fallback level is set to 75% of measured initial level.
+	 * Fallback level is set to 75% of measured initial voltage
+	 * level, ie. 4.2V results in 3.15V and 3.8V makes 2.85V.
+	 * Thus, if you rely on the device to not allow battery to
+	 * discharge down to 2.85V, make sure that the initial charge
+	 * is a lot more than 3.8V.
 	 *
 	 * Note: There's a(n incomplete) version in history with
-	 * cell count detection, but it wasn't significantly better.
-	 ' (Better as in avoiding unnecessary fallbacks versus killing
-	 * batteries.) And, to keep in mind, I programmed this to be
-	 * used with my own batteries as well.
+	 * cell count detection, but it didn't feel to be significantly
+	 * better. (Better as in avoiding unnecessary fallbacks versus
+	 * killing batteries.) And, to keep in mind, I intend to use this
+	 * with my own batteries as well.
 	 *
 	 * Rule: Don't launch with a drained battery!
 	 */
-	volatile uint8_t fallback_voltage;
+	volatile uint16_t fallback_voltage;
 	// counter for taking a few samples before flagging
 	volatile uint8_t until_bad_aux;
 } battery_t;
@@ -76,8 +85,6 @@ control_t rc = { 0 };
 
 static void set_relay(uint8_t port);
 static void aux_bad(void);
-// configures watchdog with the given prescaler
-static void sample_ADC(uint8_t wdtp);
 
 int main(void) {
 	/*
@@ -105,8 +112,8 @@ int main(void) {
 	// battery disconnect interrupt.
 	DIDR0 = _BV(AIN0D);
 
-	// configure ADC result alignment and to read PB4
-	ADMUX = _BV(ADLAR) | _BV(MUX1);
+	// configure ADC to read PB4
+	ADMUX = _BV(MUX1);
 
 	// Enable INT0 and pin change interrupts. INT0 is triggered
 	// on low by default, which is the correct mode initially (pin
@@ -137,8 +144,7 @@ int main(void) {
 	sei();
 
 	for (;;) {
-		// Configure sleep according to state. Also, write fresh eeprom
-		// before first sleep.
+		// configure sleep according to state
 
 		if (is_timer_running()) {
 			// idle only when timing high RC
@@ -153,7 +159,7 @@ int main(void) {
 
 		} else if (rc_high_int()) {
 			// ~18ms wait period on RC low, sleep or not? If we just idle
-			// for now to avoid risks.. (Thus, configured to use synchronous
+			// for now to avoid risks.. (Thus, configured now to use synchronous
 			// INT0 on RC instead of async PCINT; easier interrupt handling.)
 			MCUCR &= ~(_BV(SM0) | _BV(SM1)); // idle
 
@@ -167,21 +173,11 @@ int main(void) {
 	}
 }
 
-void sample_ADC(uint8_t wdtp) {
-	if ((WDTCR & 0b111) != wdtp) {
-		ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
-			WDTCR = _BV(WDCE);
-			WDTCR = wdtp;
-		}
-		WDTCR |= _BV(WDTIE);
-	}
-}
-
 void set_relay(uint8_t aux) {
 	// assert aux != is_aux()
 	// don't allow relay switches before we have bridging power
 	// from capacitor
-	if (!startup_delay) {
+	if (!startup_delay && aux != is_aux()) {
 		if (!aux) {
 			PORTB &= ~_BV(PB_RELAY);
 		} else if (batt.aux_ok) {
@@ -193,7 +189,6 @@ void set_relay(uint8_t aux) {
 
 void aux_bad(void) {
 	batt.aux_ok = FALSE;
-	batt.fallback_voltage = 0;
 	batt.until_bad_aux = 0;
 	if (is_aux()) {
 		// fallback to main AND DO IT NOW
@@ -218,6 +213,7 @@ ISR (INT0_vect) {
 		// schedule next interrupt on rising edge
 		MCUCR |= _BV(ISC01) | _BV(ISC00);
 
+		// copy to register
 		uint8_t counter = TCNT0;
 
 		if (!counter) {
@@ -246,6 +242,9 @@ ISR (INT0_vect) {
 	}
 }
 
+/*
+ * Stop timer on invalid RC signal.
+ */
 ISR (TIM0_OVF_vect) {
 	// phase too long, stop timer
 	TCCR0B = 0;
@@ -255,21 +254,48 @@ ISR (TIM0_OVF_vect) {
 }
 
 /*
- * Read battery voltage.
+ * Process battery voltage.
  */
 ISR(ADC_vect) {
-	// use just the upper 8 bits
-	uint8_t v = ADCH;
+	/*
+	 * Note: Code here is very wasteful (as in byte size),
+	 * but there's still lot of space left so I'm spending
+	 * it on code clarity and accuracy. ("Clarity" in 1k
+	 * context.)
+	 */
+	// doc says that low byte needs to be read first
+	uint8_t vl = ADCL;
+	uint16_t v = ADCH;
+	v <<= 8;
+	v |= vl;
 	// disable ADC
 	ADCSRA = 0;
+
+	if (v < (MIN_VOLTAGE >> 1)) {
+		/*
+		 * This is the ONLY place for resetting the fallback
+		 * voltage level, making sure the code doesn't reach
+		 * the fallback calculation block below unintentionally.
+		 *
+		 * Having the level significantly above zero also
+		 * should make sure to detect battery disconnect, so
+		 * that the level is resetted and a new one calculated
+		 * when a new battery is plugged in.
+		 *
+		 * (I'm also not willing to rely purely on the digital
+		 * low value for detecting battery disconnect; that sounds
+		 * flaky. Digital low does trigger an ADC, though, so that
+		 * we end up here quickly even from power down sleep.)
+		 */
+		batt.fallback_voltage = 0;
+	}
 
 	if (v < MIN_VOLTAGE) {
 		aux_bad();
 
 	} else if (!batt.fallback_voltage) {
-		// Set fallback to 75% of battery voltage.
-		// (Addition didn't save that many bytes with 8 bits.)
-		batt.fallback_voltage = MAX((v >> 2) * 3, MIN_VOLTAGE);
+		// floor the fallback, just for kicks
+		batt.fallback_voltage = MAX(PC75(v), MIN_VOLTAGE);
 		// take another sample before flagging ok
 
 	} else if (v < batt.fallback_voltage) {
@@ -299,7 +325,7 @@ ISR (WDT_vect) {
 		if (startup_delay > wdtp) {
 			startup_delay -= wdtp;
 		} else {
-			// floor to zero
+			// don't rotate...
 			startup_delay = 0;
 		}
 	}
@@ -316,12 +342,16 @@ ISR (WDT_vect) {
 
 ISR (PCINT0_vect) {
 	if (bit_is_clear(PINB, PIN_ADC)) {
-		// AUX disconnected
+		// TODO Too trigger-happy? An ADC confirmation
+		// would take only some 200 microseconds.
 		aux_bad();
 	}
 
 	// Always speed up sampling, it'll get slowed down if
-	// everything is ok. (There must've been something funny
-	// as we've ended up here...)
+	// everything is ok. (There must've been *something*
+	// funny as we've ended up here...)
 	sample_ADC(WDTO_60MS);
+
+	// start an immediate ADC
+	ADCSRA |= _BV(ADEN) | _BV(ADIE);
 }
