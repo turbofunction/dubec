@@ -276,7 +276,7 @@
 <rectangle x1="-0.83" y1="-1.28" x2="0.83" y2="1.28" layer="29"/>
 <text x="-1.5" y="1.8" size="0.6" layer="25">&gt;NAME</text>
 <text x="-1.5" y="-2.4" size="0.6" layer="27">&gt;VALUE</text>
-<circle x="-1.4" y="1.5" radius="0.156521875" width="0.1" layer="21"/>
+<circle x="-1.9" y="1.9" radius="0.2" width="0.1" layer="51"/>
 <rectangle x1="-1.63" y1="0.845" x2="-1.07" y2="1.155" layer="29"/>
 <wire x1="-1.5" y1="1.5" x2="1.5" y2="1.5" width="0.127" layer="51"/>
 <wire x1="1.5" y1="1.5" x2="1.5" y2="-1.5" width="0.127" layer="51"/>
@@ -491,7 +491,7 @@
 <smd name="19" x="2" y="0.25" dx="0.7" dy="0.25" layer="1" stop="no"/>
 <smd name="20" x="2" y="0.75" dx="0.7" dy="0.25" layer="1" stop="no"/>
 <smd name="17" x="2" y="-0.75" dx="0.7" dy="0.25" layer="1" stop="no"/>
-<circle x="2.57" y="2.05" radius="0.1581125" width="0.3" layer="51"/>
+<circle x="2.37" y="1.95" radius="0.2" width="0.1" layer="51"/>
 <text x="-1.905" y="2.032" size="0.508" layer="25">&gt;NAME</text>
 <text x="-1.905" y="-2.54" size="0.508" layer="27">&gt;VALUE</text>
 <wire x1="-2" y1="1.5" x2="2" y2="1.5" width="0.127" layer="51"/>
@@ -535,7 +535,7 @@
 <smd name="13" x="-0.25" y="1.95" dx="0.25" dy="0.7" layer="1" stop="no"/>
 <text x="-2.032" y="2.667" size="0.762" layer="25">&gt;NAME</text>
 <text x="-2.032" y="-3.429" size="0.762" layer="27">&gt;VALUE</text>
-<circle x="-2.893" y="-2.393" radius="0.22360625" width="0.1524" layer="21"/>
+<circle x="-2.9" y="-2.4" radius="0.2" width="0.1" layer="51"/>
 <circle x="-1.8" y="0.7" radius="0.45" width="0.3" layer="29"/>
 <circle x="-1.8" y="-0.7" radius="0.45" width="0.3" layer="29"/>
 <circle x="-1.2" y="0" radius="0.45" width="0.3" layer="29"/>
