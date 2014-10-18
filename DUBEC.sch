@@ -210,14 +210,25 @@
 <wire x1="-0.55" y1="-0.3" x2="-0.55" y2="0.3" width="0.05" layer="51"/>
 <rectangle x1="-0.2" y1="-0.3" x2="0.2" y2="0.3" layer="35"/>
 </package>
+<package name="TUMT3">
+<smd name="B" x="-0.725" y="-0.85" dx="0.8" dy="0.8" layer="1"/>
+<smd name="E" x="0.725" y="-0.85" dx="0.8" dy="0.8" layer="1"/>
+<smd name="C" x="0" y="0.85" dx="0.8" dy="0.8" layer="1"/>
+<wire x1="-0.9" y1="0.8" x2="0.9" y2="0.8" width="0.1" layer="51"/>
+<wire x1="0.9" y1="0.8" x2="0.9" y2="-0.8" width="0.1" layer="51"/>
+<wire x1="0.9" y1="-0.8" x2="-0.9" y2="-0.8" width="0.1" layer="51"/>
+<wire x1="-0.9" y1="-0.8" x2="-0.9" y2="0.8" width="0.1" layer="51"/>
+<text x="-1.1" y="1.6" size="0.5" layer="25">&gt;NAME</text>
+<text x="-1.1" y="-2.1" size="0.5" layer="27">&gt;VALUE</text>
+</package>
 <package name="3-DFN1006">
 <smd name="B" x="-0.35" y="0.225" dx="0.4" dy="0.25" layer="1" stop="no"/>
 <smd name="E" x="-0.35" y="-0.225" dx="0.4" dy="0.25" layer="1" stop="no"/>
 <smd name="C" x="0.35" y="0" dx="0.4" dy="0.7" layer="1"/>
 <text x="-0.65" y="0.55" size="0.3" layer="25">&gt;NAME</text>
 <text x="-0.65" y="-0.85" size="0.3" layer="27">&gt;VALUE</text>
-<rectangle x1="-0.55" y1="0.1" x2="-0.15" y2="0.35" layer="29"/>
-<rectangle x1="-0.55" y1="-0.35" x2="-0.15" y2="-0.1" layer="29"/>
+<rectangle x1="-0.65" y1="0.1" x2="-0.15" y2="0.45" layer="29"/>
+<rectangle x1="-0.65" y1="-0.45" x2="-0.15" y2="-0.1" layer="29"/>
 <wire x1="-0.5" y1="0.3" x2="0.5" y2="0.3" width="0.05" layer="51"/>
 <wire x1="0.5" y1="0.3" x2="0.5" y2="-0.3" width="0.05" layer="51"/>
 <wire x1="0.5" y1="-0.3" x2="-0.5" y2="-0.3" width="0.05" layer="51"/>
@@ -979,7 +990,7 @@
 <gate name="G$1" symbol="NPN" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="3-DFN1006">
+<device name="DFN" package="3-DFN1006">
 <connects>
 <connect gate="G$1" pin="B" pad="B"/>
 <connect gate="G$1" pin="C" pad="C"/>
@@ -992,6 +1003,22 @@
 <attribute name="MFG_PART_#" value="2DC4617QLP-7" constant="no"/>
 <attribute name="TYPE" value="smt" constant="no"/>
 <attribute name="USD" value="0.38" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="3-SMD" package="TUMT3">
+<connects>
+<connect gate="G$1" pin="B" pad="B"/>
+<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="E" pad="E"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="2SD2703TLCT-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Rohm Semiconductor" constant="no"/>
+<attribute name="MFG_PART_#" value="2SD2703TL" constant="no"/>
+<attribute name="TYPE" value="smt" constant="no"/>
+<attribute name="USD" value="0.45" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -2092,7 +2119,7 @@
 <part name="5RLED" library="dubec" deviceset="RES" device="470_8" value="470Ohm"/>
 <part name="AVRISP" library="dubec" deviceset="AVRISP" device="H3X2" value="AVRISPH3X2"/>
 <part name="DISP" library="dubec" deviceset="D_SCH" device="30V_0.2A" value="D_SCH30V_0.2A"/>
-<part name="TRRELAY" library="dubec" deviceset="TR_NPN" device=""/>
+<part name="TRRELAY" library="dubec" deviceset="TR_NPN" device="DFN" value="TR_NPNDFN"/>
 <part name="DFB" library="dubec" deviceset="D_SCH" device="30V_0.2A" value="D_SCH30V_0.2A"/>
 <part name="12D" library="dubec" deviceset="D_SCH" device="30V_0.2A"/>
 <part name="RDIV1" library="dubec" deviceset="RES" device="243K_20" value="243kOhm"/>
