@@ -222,8 +222,8 @@
 <text x="-1.1" y="-2.1" size="0.5" layer="27">&gt;VALUE</text>
 </package>
 <package name="3-DFN1006">
-<smd name="B" x="-0.35" y="0.225" dx="0.4" dy="0.25" layer="1" stop="no"/>
-<smd name="E" x="-0.35" y="-0.225" dx="0.4" dy="0.25" layer="1" stop="no"/>
+<smd name="B" x="-0.35" y="0.25" dx="0.4" dy="0.25" layer="1" stop="no"/>
+<smd name="E" x="-0.35" y="-0.25" dx="0.4" dy="0.25" layer="1" stop="no"/>
 <smd name="C" x="0.35" y="0" dx="0.4" dy="0.7" layer="1"/>
 <text x="-0.65" y="0.55" size="0.3" layer="25">&gt;NAME</text>
 <text x="-0.65" y="-0.85" size="0.3" layer="27">&gt;VALUE</text>
@@ -2071,7 +2071,7 @@
 <clearance class="0" value="0.2032"/>
 </class>
 <class number="1" name="inner" width="0.2032" drill="0">
-<clearance class="1" value="0.2032"/>
+<clearance class="1" value="0.3"/>
 </class>
 <class number="2" name="bottom" width="0.3302" drill="0">
 <clearance class="2" value="0.3302"/>
