@@ -740,9 +740,6 @@
 <rectangle x1="2.794" y1="-0.254" x2="3.302" y2="0.254" layer="51"/>
 <rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
 <rectangle x1="-3.302" y1="-0.254" x2="-2.794" y2="0.254" layer="51"/>
-<circle x="-3.048" y="0" radius="1.481059375" width="0.13" layer="21"/>
-<circle x="0" y="0" radius="1.481059375" width="0.13" layer="21"/>
-<circle x="3.048" y="0" radius="1.481059375" width="0.13" layer="21"/>
 </package>
 <package name="SOD323">
 <smd name="C" x="1.35" y="0" dx="1" dy="0.8" layer="1"/>
@@ -771,7 +768,7 @@
 <wire x1="0.5" y1="-0.3" x2="-0.5" y2="-0.3" width="0.05" layer="51"/>
 <wire x1="-0.5" y1="-0.3" x2="-0.5" y2="0.3" width="0.05" layer="51"/>
 <text x="-0.6" y="0.3" size="0.2" layer="25" align="top-left">&gt;NAME</text>
-<text x="-0.6" y="-0.3" size="0.2" layer="25">&gt;VALUE</text>
+<text x="-0.6" y="-0.3" size="0.2" layer="27">&gt;VALUE</text>
 <rectangle x1="-0.75" y1="-0.35" x2="-0.2" y2="0.35" layer="29"/>
 <rectangle x1="0.05" y1="-0.35" x2="0.75" y2="0.35" layer="29"/>
 </package>
@@ -2024,6 +2021,70 @@
 </technology>
 </technologies>
 </device>
+<device name="48.7K_20" package="0201P">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="P48.7ABCT-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Panasonic Electronic Components" constant="no"/>
+<attribute name="MFG_PART_#" value="ERJ-1GEF48R7C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+<attribute name="TYPE" value="smt" constant="no"/>
+<attribute name="USD" value="0.10" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="6.8K_20" package="0201P">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-6.80KAABCT-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW02016K80FKED" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+<attribute name="TYPE" value="smt" constant="no"/>
+<attribute name="USD" value="0.23" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="26.1K_20" package="0201P">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-26.1KAABCT-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW020126K1FKED" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+<attribute name="TYPE" value="smt" constant="no"/>
+<attribute name="USD" value="0.23" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="4.42K_20" package="0201P">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-4.42KAABCT-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW02014K42FKED" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+<attribute name="TYPE" value="smt" constant="no"/>
+<attribute name="USD" value="0.23" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="D_ZENER">
@@ -2353,7 +2414,7 @@
 <part name="12CB2" library="dubec" deviceset="CAP" device="0.1UF_35V" value="0.1uF"/>
 <part name="12L" library="dubec" deviceset="I" device="WE-HCI_10UH" value="10uH"/>
 <part name="12C1" library="dubec" deviceset="CAP" device="4.7UF_6.3V" value="4.7uF"/>
-<part name="12RT" library="dubec" deviceset="RES" device="35.7K_20" value="35.7kOhm"/>
+<part name="12RT" library="dubec" deviceset="RES" device="48.7K_20" value="RES48.7K_20"/>
 <part name="12RBOT" library="dubec" deviceset="RES" device="90.9K_20" value="90.9kOhm"/>
 <part name="12RFF" library="dubec" deviceset="RES" device="10K_20" value="10kOhm"/>
 <part name="12CFF" library="dubec" deviceset="CAP" device="33PF_25V" value="33pF"/>
@@ -2368,7 +2429,7 @@
 <part name="5CBIAS" library="dubec" deviceset="CAP" device="4.7PF_50V" value="4.7pF"/>
 <part name="5R1" library="dubec" deviceset="RES" device="1M_20" value="1MOhm"/>
 <part name="5CSS" library="dubec" deviceset="CAP" device="10NF_10V" value="10nF"/>
-<part name="5RT" library="dubec" deviceset="RES" device="41.2K_20" value="18.2kOhm"/>
+<part name="5RT" library="dubec" deviceset="RES" device="41.2K_20" value="RES41.2K_20"/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="35V_NO" library="supply1" deviceset="V+" device=""/>
 <part name="35V_NC" library="supply1" deviceset="V+" device=""/>
@@ -2386,8 +2447,8 @@
 <part name="TRRELAY" library="dubec" deviceset="TR_NPN" device="DFN" value="TR_NPNDFN"/>
 <part name="DFB" library="dubec" deviceset="D_SCH" device="30V_0.2A" value="D_SCH30V_0.2A"/>
 <part name="12D" library="dubec" deviceset="D_SCH" device="30V_0.2A"/>
-<part name="RDIV1" library="dubec" deviceset="RES" device="243K_20" value="243kOhm"/>
-<part name="RDIV2" library="dubec" deviceset="RES" device="40.2K_20" value="40.2kOhm"/>
+<part name="RDIV1" library="dubec" deviceset="RES" device="26.1K_20" value="RES26.1K_20"/>
+<part name="RDIV2" library="dubec" deviceset="RES" device="4.42K_20" value="RES4.42K_20"/>
 <part name="DZDIV" library="dubec" deviceset="D_ZENER" device="5.1V" value="5.1V"/>
 <part name="5COUT" library="dubec" deviceset="CAP" device="47UF_6.3V" value="47uF"/>
 <part name="CMCU" library="dubec" deviceset="CAP" device="10UF_6.3V" value="10uF"/>

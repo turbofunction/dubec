@@ -25,7 +25,7 @@
 
 #define PIN_ADC PINB4
 
-#define MIN_VOLTAGE 215 // ~7.0v as 10-bit ADC with 33.224V calibration
+#define MIN_VOLTAGE 208 // ~7.0v as 10-bit ADC with 34.52V calibration
 
 // evaluates to true if waiting for high RC signal
 #define rc_high_int() (MCUCR & (_BV(ISC01) | _BV(ISC00)))
@@ -40,10 +40,16 @@
 #define is_timer_running() (TCCR0B)
 
 // evaluates to true if ADC is enabled
-#define is_adc_pending() bit_is_set(ADCSRA, ADEN)
+#define is_adc_pending() bit_is_set(ADCSRA, ADIE)
 
 // configure watchdog with the given prescaler
 #define sample_ADC(wdtp) ({ ATOMIC_BLOCK(ATOMIC_RESTORESTATE) { WDTCR = _BV(WDCE); WDTCR = wdtp; } WDTCR |= _BV(WDTIE); })
+
+// Enable ADC and ADC interrupt, conversion will
+// start automatically on noise reduction sleep.
+// TODO doc says adsc must be set for on-sleep conversion, verify behaviour
+// | _BV(ADSC)
+#define start_ADC() ({ ADCSRA |= _BV(ADIE); })
 
 #define PC75(a) (((a << 1) + a) >> 2)
 
@@ -134,14 +140,18 @@ int main(void) {
 	// enable timer counter overflow interrupt
 	TIMSK0 = _BV(TOIE0);
 
-	sample_ADC(WDTO_60MS);
-
 	// Switch to 9.6MHz.
 	// Note: simulator ignores this if CKDIV8 fuse is set.
 	clock_prescale_set(clock_div_1);
 
+	// Configure ADC clock to 153.6kHz (9.6MHz / 64).
+	// (Must be 50..200kHz.)
+	ADCSRA = _BV(ADEN) | _BV(ADPS2) | _BV(ADPS1);
+
 	// global interrupt enable, SREG |= SREG_I
 	sei();
+
+	sample_ADC(WDTO_60MS);
 
 	for (;;) {
 		// configure sleep according to state
@@ -268,8 +278,8 @@ ISR(ADC_vect) {
 	uint16_t v = ADCH;
 	v <<= 8;
 	v |= vl;
-	// disable ADC
-	ADCSRA = 0;
+	// disable ADC interrupt
+	ADCSRA &= ~_BV(ADIE);
 
 	if (v < (MIN_VOLTAGE >> 1)) {
 		/*
@@ -335,9 +345,7 @@ ISR (WDT_vect) {
 		sample_ADC(WDTO_1S);
 	}
 
-	// enable ADC and ADC interrupt, conversion will
-	// start automatically on noise reduction sleep
-	ADCSRA |= _BV(ADEN) | _BV(ADIE);
+	start_ADC();
 }
 
 ISR (PCINT0_vect) {
@@ -353,5 +361,5 @@ ISR (PCINT0_vect) {
 	sample_ADC(WDTO_60MS);
 
 	// start an immediate ADC
-	ADCSRA |= _BV(ADEN) | _BV(ADIE);
+	start_ADC();
 }
