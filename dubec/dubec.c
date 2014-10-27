@@ -1,6 +1,8 @@
 /*
- * DUBEC_App.c
+ * dubec.c
  *
+ * PWM relay switch tinyAVR application for DUBEC,
+ * a dual channel voltage regulator.
  *
  * I'm still somewhat undecided whether nested if blocks
  * or surprise return statements are prettier, but I went
@@ -25,25 +27,23 @@
 
 #define PIN_ADC PINB4
 
-#define MIN_VOLTAGE 208 // ~7.0v as 10-bit ADC with 34.52V calibration
+// ~7.0v as a 10-bit ADC value with 34.52V calibration
+#define MIN_VOLTAGE 208
 
-// evaluates to true if waiting for high RC signal
+// evaluates to true if is waiting for high RC signal
 #define rc_high_int() (MCUCR & (_BV(ISC01) | _BV(ISC00)))
 
 // evaluates to true if relay is set to AUX
 #define is_aux() bit_is_set(PORTB, PB_RELAY)
 
-// reset timer counter and set clock source to 8MHz/256 == 32kHz = 2.2ms/69
-#define start_timer() ({TCNT0 = 0; TCCR0B = _BV(CS02);})
-
 // evaluates to true if timer is counting
 #define is_timer_running() (TCCR0B)
 
 // evaluates to true if ADC is enabled
-#define is_adc_pending() bit_is_set(ADCSRA, ADIE)
+#define is_ADC_pending() bit_is_set(ADCSRA, ADIE)
 
 // configure watchdog with the given prescaler
-#define sample_ADC(wdtp) ({ ATOMIC_BLOCK(ATOMIC_RESTORESTATE) { WDTCR = _BV(WDCE); WDTCR = wdtp; } WDTCR |= _BV(WDTIE); })
+#define configure_ADC(wdtp) ({ ATOMIC_BLOCK(ATOMIC_RESTORESTATE) { WDTCR = _BV(WDCE); WDTCR = wdtp; } WDTCR |= _BV(WDTIE); })
 
 // Enable ADC and ADC interrupt, conversion will
 // start automatically on noise reduction sleep.
@@ -51,6 +51,7 @@
 // | _BV(ADSC)
 #define start_ADC() ({ ADCSRA |= _BV(ADIE); })
 
+// returns 75% of the value
 #define PC75(a) (((a << 1) + a) >> 2)
 
 #define MAX(a, b) (a > b ? a : b)
@@ -94,7 +95,7 @@ static void aux_bad(void);
 
 int main(void) {
 	/*
-	 * Port configuration:
+	 * Pin configuration:
 	 *
 	 * PB0 (MOSI): relay & AUX LED output
 	 * PB1 (PCINT1, INT0, MISO): RC signal digital input (external pull-up)
@@ -126,15 +127,17 @@ int main(void) {
 	// pulled high).
 	GIMSK = _BV(INT0) | _BV(PCIE);
 
-	// Enable pin change interrupt on battery.
-	//
-	// Note 1: could use PCINT on RC signal as well, but as decided now
-	// to just idle during lows, can use synchoronous INT0 high.
-	//
-	// Note 2: disconnect fallback could be done more reliably in hardware,
-	// but this minor case hardly warrants the extra components. Also,
-	// the interrupt needn't to be configured yet (only after switch to AUX)
-	// but to keep things simple.
+	/*
+	 * Enable pin change interrupt on battery.
+	 *
+	 * Note 1: could use PCINT on RC signal as well, but as decided now
+	 * to just idle during lows, can use synchoronous INT0 high.
+	 *
+	 * Note 2: disconnect fallback could be done more reliably in hardware,
+	 * but this minor case hardly warrants the extra components. Also,
+	 * the interrupt needn't to be configured yet (only after switch to AUX)
+	 * but to keep things simple.
+	 */
 	PCMSK = _BV(PCINT4);
 
 	// enable timer counter overflow interrupt
@@ -151,16 +154,17 @@ int main(void) {
 	// global interrupt enable, SREG |= SREG_I
 	sei();
 
-	sample_ADC(WDTO_60MS);
+	configure_ADC(WDTO_60MS);
 
 	for (;;) {
 		// configure sleep according to state
 
 		if (is_timer_running()) {
-			// idle only when timing high RC
+			// idle only when timing high RC, to avoid
+			// ADC interrupt disturbances
 			MCUCR &= ~(_BV(SM0) | _BV(SM1)); // idle
 
-		} else if (is_adc_pending()) {
+		} else if (is_ADC_pending()) {
 			// ADC conversion will start automatically with sleep.
 			// Note that this will inhibit high signal tracking
 			// on INT0, but the conversion should be well finished
@@ -198,33 +202,38 @@ void set_relay(uint8_t aux) {
 }
 
 void aux_bad(void) {
-	batt.aux_ok = FALSE;
-	batt.until_bad_aux = 0;
-	if (is_aux()) {
-		// fallback to main AND DO IT NOW
-		PORTB &= ~_BV(PB_RELAY);
-		rc.until_flip = 0;
+	if (batt.aux_ok) {
+		batt.aux_ok = FALSE;
+		batt.until_bad_aux = 0;
+		if (is_aux()) {
+			// fallback to main AND DO IT NOW
+			PORTB &= ~_BV(PB_RELAY);
+			rc.until_flip = 0;
+		}
+		// speed up the ADC sampling rate
+		configure_ADC(WDTO_60MS);
 	}
-	// speed up the ADC sampling rate
-	sample_ADC(WDTO_60MS);
 }
 
-/** RC ("PWM") signal handler */
+/** RC ("PWM") signal handler. */
 ISR (INT0_vect) {
-	// stop timer in any case
-	TCCR0B = 0;
-
 	if (bit_is_set(PINB, PIN_RC)) {
-		// line is high, next interrupt on low
+		// line is high, start timing the high period
+		// reset timer counter
+		TCNT0 = 0;
+		// set timer clock source to 9.6MHz/256 == 37.5kHz = 2.2ms/83
+		TCCR0B = _BV(CS02);
+		// next interrupt on low
 		MCUCR &= ~(_BV(ISC01) | _BV(ISC00));
-		start_timer();
 
 	} else {
+		// copy counter value to a register
+		uint8_t counter = TCNT0;
+		// stop timer (but only after copying the value,
+		// to avoid surprises)
+		TCCR0B = 0;
 		// schedule next interrupt on rising edge
 		MCUCR |= _BV(ISC01) | _BV(ISC00);
-
-		// copy to register
-		uint8_t counter = TCNT0;
 
 		if (!counter) {
 			// couldn't read a proper signal, ignore
@@ -232,9 +241,9 @@ ISR (INT0_vect) {
 			rc.until_flip = 0;
 
 		} else {
-			// if RC signal high for ]56..92[ 37.5kHz == [1512..2484ms], want AUX
+			// if RC signal high for ]57..93[ 37.5kHz == [1520..2400ms], want AUX
 			// TODO calibrate (runtime?)
-			uint8_t want_aux = counter > 46 && counter < 80;
+			uint8_t want_aux = counter >= 57 && counter <= 93;
 
 			if (want_aux == is_aux()) {
 				// relay is consistent with signal, just reset counter
@@ -252,9 +261,7 @@ ISR (INT0_vect) {
 	}
 }
 
-/*
- * Stop timer on invalid RC signal.
- */
+/** Stop timer on invalid RC signal. */
 ISR (TIM0_OVF_vect) {
 	// phase too long, stop timer
 	TCCR0B = 0;
@@ -263,9 +270,7 @@ ISR (TIM0_OVF_vect) {
 	TCNT0 = 0;
 }
 
-/*
- * Process battery voltage.
- */
+/* Process battery voltage. */
 ISR(ADC_vect) {
 	/*
 	 * Note: Code here is very wasteful (as in byte size),
@@ -292,7 +297,7 @@ ISR(ADC_vect) {
 		 * that the level is resetted and a new one calculated
 		 * when a new battery is plugged in.
 		 *
-		 * (I'm also not willing to rely purely on the digital
+		 * (I'm also unwilling to rely purely on the digital
 		 * low value for detecting battery disconnect; that sounds
 		 * flaky. Digital low does trigger an ADC, though, so that
 		 * we end up here quickly even from power down sleep.)
@@ -308,15 +313,18 @@ ISR(ADC_vect) {
 		batt.fallback_voltage = MAX(PC75(v), MIN_VOLTAGE);
 		// take another sample before flagging ok
 
-	} else if (v < batt.fallback_voltage) {
-		if (!batt.until_bad_aux) {
-			// initialize countdown
-			batt.until_bad_aux = 3;
-		} else if (!--batt.until_bad_aux) {
-			aux_bad();
-		}
+	} else if (v <= batt.fallback_voltage) {
+		if (batt.aux_ok) {
+			if (!batt.until_bad_aux) {
+				// initialize countdown
+				batt.until_bad_aux = 3;
+			} else if (!--batt.until_bad_aux) {
+				aux_bad();
+			}
+		} // else no need to do anything
 
-	} else {
+	// 0.1V "hysteresis" on fallback level to prevent oscillation
+	} else if (!batt.aux_ok && v > (batt.fallback_voltage + 2)) {
 		batt.aux_ok = TRUE;
 		// reset countdown
 		batt.until_bad_aux = 0;
@@ -328,6 +336,7 @@ ISR(ADC_vect) {
  */
 ISR (WDT_vect) {
 	if (startup_delay) {
+		// watchdog period configured by three LSBs
 		uint8_t wdtp = WDTCR & 0b111;
 		// This is potentially very inaccurate, but let it suffice...
 		// (If after 900ms a 1s prescaler is changed to 60ms,
@@ -342,7 +351,7 @@ ISR (WDT_vect) {
 
 	if (batt.aux_ok) {
 		// slow down sampling
-		sample_ADC(WDTO_1S);
+		configure_ADC(WDTO_1S);
 	}
 
 	start_ADC();
@@ -351,14 +360,15 @@ ISR (WDT_vect) {
 ISR (PCINT0_vect) {
 	if (bit_is_clear(PINB, PIN_ADC)) {
 		// TODO Too trigger-happy? An ADC confirmation
-		// would take only some 200 microseconds.
+		// would only about 0.1ms.
 		aux_bad();
-	}
 
-	// Always speed up sampling, it'll get slowed down if
-	// everything is ok. (There must've been *something*
-	// funny as we've ended up here...)
-	sample_ADC(WDTO_60MS);
+	} else {
+		// Just speed up sampling, it'll get slowed down if
+		// everything is ok. (There must've been *something*
+		// funny as we've ended up here...)
+		configure_ADC(WDTO_60MS);
+	}
 
 	// start an immediate ADC
 	start_ADC();
