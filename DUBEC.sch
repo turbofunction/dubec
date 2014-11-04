@@ -1199,7 +1199,7 @@
 <gate name="G$1" symbol="NPN" x="0" y="0"/>
 </gates>
 <devices>
-<device name="DFN" package="3-DFN1006">
+<device name="50V_100MA" package="3-DFN1006">
 <connects>
 <connect gate="G$1" pin="B" pad="B"/>
 <connect gate="G$1" pin="C" pad="C"/>
@@ -1228,6 +1228,22 @@
 <attribute name="MFG_PART_#" value="2SD2703TL" constant="no"/>
 <attribute name="TYPE" value="smt" constant="no"/>
 <attribute name="USD" value="0.45" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="45V_100MA" package="3-DFN1006">
+<connects>
+<connect gate="G$1" pin="B" pad="B"/>
+<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="E" pad="E"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="BC847BLP4DICT-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Diodes Incorporated" constant="no"/>
+<attribute name="MFG_PART_#" value="BC847BLP4-7" constant="no"/>
+<attribute name="TYPE" value="smt" constant="no"/>
+<attribute name="USD" value="0.35" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -2468,6 +2484,28 @@
 </technology>
 </technologies>
 </device>
+<device name="5A_4.5V" package="IM_GULLWINGS">
+<connects>
+<connect gate="G$1" pin="CO_1" pad="3"/>
+<connect gate="G$1" pin="CO_2" pad="6"/>
+<connect gate="G$1" pin="GND" pad="8"/>
+<connect gate="G$1" pin="NC_1" pad="2"/>
+<connect gate="G$1" pin="NC_2" pad="7"/>
+<connect gate="G$1" pin="NO_1" pad="4"/>
+<connect gate="G$1" pin="NO_2" pad="5"/>
+<connect gate="G$1" pin="VCC" pad="1"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="PB1171CT-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="TE Connectivity" constant="no"/>
+<attribute name="MFG_PART_#" value="9-1462038-8" constant="no"/>
+<attribute name="TEMP" value="-40°C ~ 85°C" constant="no"/>
+<attribute name="TYPE" value="smt" constant="no"/>
+<attribute name="USD" value="3.33" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="M03">
@@ -2523,7 +2561,7 @@
 <parts>
 <part name="5REG" library="dubec" deviceset="LT8614" device="IUDC" value="LT8614IUDC"/>
 <part name="MCU" library="dubec" deviceset="ATTINY13A" device="10M1"/>
-<part name="RELAY" library="dubec" deviceset="RELAY_DPDT" device="2A_5V" value="RELAY_DPDT2A_5V"/>
+<part name="RELAY" library="dubec" deviceset="RELAY_DPDT" device="5A_4.5V" value="RELAY_DPDT5A_4.5V"/>
 <part name="12REG" library="dubec" deviceset="LTC3115-1" device="IDHD" value="LTC3115-1IDHD"/>
 <part name="C1" library="dubec" deviceset="CAP" device="22UF_35V" value="22uF"/>
 <part name="5CIN1" library="dubec" deviceset="CAP" device="1UF_50V" value="1uF"/>
@@ -2562,7 +2600,7 @@
 <part name="5RLED" library="dubec" deviceset="RES" device="470_5" value="470Ohm"/>
 <part name="AVRISP" library="dubec" deviceset="AVRISP" device="H3X2" value="AVRISPH3X2"/>
 <part name="DISP" library="dubec" deviceset="D_SCH" device="30V_0.1A" value="D_SCH30V_0.1A"/>
-<part name="TRRELAY" library="dubec" deviceset="TR_NPN" device="DFN" value="TR_NPNDFN"/>
+<part name="TRRELAY" library="dubec" deviceset="TR_NPN" device="45V_100MA" value="TR_NPN45V_100MA"/>
 <part name="DFB" library="dubec" deviceset="D_SCH" device="30V_0.1A" value="D_SCH30V_0.1A"/>
 <part name="12D" library="dubec" deviceset="D_SCH" device="30V_0.1A" value="D_SCH30V_0.1A"/>
 <part name="RDIV1" library="dubec" deviceset="RES" device="26.1K_20" value="RES26.1K_20"/>

@@ -143,7 +143,7 @@
 <rectangle x1="34" y1="0.875" x2="38" y2="4.375" layer="29" rot="R180"/>
 <text x="33.375" y="2.375" size="1.27" layer="107" font="vector" ratio="20" rot="SR90" align="bottom-center">12V</text>
 <text x="30.875" y="17.75" size="1.25" layer="107" font="vector" ratio="20" rot="R90" align="bottom-center">5V</text>
-<text x="14.625" y="2.125" size="1.27" layer="107" font="vector" ratio="20" rot="SR270" align="bottom-center">AUX</text>
+<text x="15.125" y="2.125" size="1.27" layer="107" font="vector" ratio="20" rot="SR270" align="bottom-center">AUX</text>
 <text x="33.125" y="1.125" size="1.25" layer="22" font="vector" ratio="20" rot="MR0">Input:  3..8S
 Output: 5V/4A + 12V/1.4A
 
@@ -188,14 +188,14 @@ DUBEC v1</text>
 <wire x1="34" y1="0.875" x2="35.625" y2="0.875" width="0.125" layer="41"/>
 <text x="7.375" y="18.125" size="1.25" layer="22" font="vector" ratio="20" rot="MR90" align="bottom-center">AVR
 ISP</text>
-<wire x1="35.035" y1="13.263" x2="35.935" y2="14.173" width="0.1524" layer="41" curve="-61.045645"/>
-<wire x1="35.945" y1="11.733" x2="35.035" y2="12.633" width="0.1524" layer="41" curve="-61.045645"/>
-<wire x1="37.475" y1="12.653" x2="36.575" y2="11.743" width="0.1524" layer="41" curve="-61.045645"/>
-<wire x1="36.565" y1="14.173" x2="37.475" y2="13.273" width="0.1524" layer="41" curve="-61.045645"/>
-<wire x1="35.03" y1="16.313" x2="35.93" y2="17.223" width="0.1524" layer="41" curve="-61.045645"/>
-<wire x1="35.94" y1="14.783" x2="35.03" y2="15.683" width="0.1524" layer="41" curve="-61.045645"/>
-<wire x1="37.47" y1="15.703" x2="36.57" y2="14.793" width="0.1524" layer="41" curve="-61.045645"/>
-<wire x1="36.56" y1="17.223" x2="37.47" y2="16.323" width="0.1524" layer="41" curve="-61.045645"/>
+<wire x1="35.035" y1="13.138" x2="35.935" y2="14.048" width="0.1524" layer="41" curve="-61.045645"/>
+<wire x1="35.945" y1="11.608" x2="35.035" y2="12.508" width="0.1524" layer="41" curve="-61.045645"/>
+<wire x1="37.475" y1="12.528" x2="36.575" y2="11.618" width="0.1524" layer="41" curve="-61.045645"/>
+<wire x1="36.565" y1="14.048" x2="37.475" y2="13.148" width="0.1524" layer="41" curve="-61.045645"/>
+<wire x1="35.03" y1="16.188" x2="35.93" y2="17.098" width="0.1524" layer="41" curve="-61.045645"/>
+<wire x1="35.94" y1="14.658" x2="35.03" y2="15.558" width="0.1524" layer="41" curve="-61.045645"/>
+<wire x1="37.47" y1="15.578" x2="36.57" y2="14.668" width="0.1524" layer="41" curve="-61.045645"/>
+<wire x1="36.56" y1="17.098" x2="37.47" y2="16.198" width="0.1524" layer="41" curve="-61.045645"/>
 <text x="13" y="9.875" size="1.25" layer="22" font="vector" ratio="20" rot="MR270" align="bottom-center">BAT+
 OUT</text>
 <wire x1="1.25" y1="16.5" x2="2" y2="16.5" width="0.2032" layer="41" curve="-306.869898"/>
@@ -580,18 +580,18 @@ OUT</text>
 <wire x1="1.4" y1="-0.7" x2="-1.4" y2="-0.7" width="0.13" layer="21"/>
 <wire x1="-1.4" y1="-0.7" x2="-1.4" y2="0.7" width="0.13" layer="21"/>
 </package>
-<package name="IM_J-LEAD">
-<smd name="6" x="1.5" y="2.2" dx="1" dy="2.4" layer="1"/>
-<smd name="5" x="3.7" y="2.2" dx="1" dy="2.4" layer="1"/>
-<smd name="3" x="1.5" y="-2.2" dx="1" dy="2.4" layer="1"/>
-<smd name="4" x="3.7" y="-2.2" dx="1" dy="2.4" layer="1"/>
-<smd name="7" x="-0.7" y="2.2" dx="1" dy="2.4" layer="1"/>
-<smd name="2" x="-0.7" y="-2.2" dx="1" dy="2.4" layer="1"/>
-<smd name="8" x="-3.9" y="2.2" dx="1" dy="2.4" layer="1"/>
-<smd name="1" x="-3.9" y="-2.2" dx="1" dy="2.4" layer="1"/>
+<package name="IM_GULLWINGS">
+<smd name="6" x="1.5" y="3" dx="1" dy="2.4" layer="1"/>
+<smd name="5" x="3.7" y="3" dx="1" dy="2.4" layer="1"/>
+<smd name="3" x="1.5" y="-3" dx="1" dy="2.4" layer="1"/>
+<smd name="4" x="3.7" y="-3" dx="1" dy="2.4" layer="1"/>
+<smd name="7" x="-0.7" y="3" dx="1" dy="2.4" layer="1"/>
+<smd name="2" x="-0.7" y="-3" dx="1" dy="2.4" layer="1"/>
+<smd name="8" x="-3.9" y="3" dx="1" dy="2.4" layer="1"/>
+<smd name="1" x="-3.9" y="-3" dx="1" dy="2.4" layer="1"/>
 <text x="-4.5" y="2" size="1.2" layer="25" align="top-left">&gt;NAME</text>
 <text x="-4.5" y="-2" size="1.2" layer="27">&gt;VALUE</text>
-<wire x1="-3.15" y1="3" x2="-1.35" y2="3" width="0.13" layer="21"/>
+<wire x1="-3.15" y1="3" x2="-1.45" y2="3" width="0.13" layer="21"/>
 <wire x1="0.05" y1="3" x2="0.75" y2="3" width="0.13" layer="21"/>
 <wire x1="2.25" y1="3" x2="2.95" y2="3" width="0.13" layer="21"/>
 <wire x1="4.45" y1="3" x2="5" y2="3" width="0.13" layer="21"/>
@@ -846,13 +846,13 @@ Covered vias can be set in Masks (Limit).
 <attribute name="TYPE" value="smt" x="10.25" y="16.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MFG_PART_#" value="ATTINY13A-MMF" x="10.25" y="16.5" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="RELAY" library="dubec" package="IM_J-LEAD" value="RELAY_DPDT2A_5V" x="8" y="7.375" rot="R270">
-<attribute name="DIGIKEY_PART_#" value="PB1100CT-ND" x="8" y="7.375" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MANUFACTURER" value="TE Connectivity" x="8" y="7.375" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="TYPE" value="smt" x="8" y="7.375" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MFG_PART_#" value="IM03JR" x="8" y="7.375" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="USD" value="3.30" x="8" y="7.375" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="TEMP" value="-40°C ~ 85°C" x="8" y="7.375" size="1.778" layer="27" rot="R270" display="off"/>
+<element name="RELAY" library="dubec" package="IM_GULLWINGS" value="RELAY_DPDT5A_4.5V" x="8.25" y="7.375" rot="R270">
+<attribute name="DIGIKEY_PART_#" value="PB1171CT-ND" x="8.25" y="7.375" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MANUFACTURER" value="TE Connectivity" x="8.25" y="7.375" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="TYPE" value="smt" x="8.25" y="7.375" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MFG_PART_#" value="9-1462038-8" x="8.25" y="7.375" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="USD" value="3.33" x="8.25" y="7.375" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="TEMP" value="-40°C ~ 85°C" x="8.25" y="7.375" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="12REG" library="dubec" package="DFN-16" value="LTC3115-1IDHD" x="26.89" y="6.515">
 <attribute name="MANUFACTURER" value="Linear Technology" x="26.89" y="6.515" size="1.778" layer="27" display="off"/>
@@ -861,14 +861,14 @@ Covered vias can be set in Masks (Limit).
 <attribute name="TEMP" value="-40°C ~ 125°C" x="26.89" y="6.515" size="1.778" layer="27" display="off"/>
 <attribute name="DIGIKEY_PART_#" value="LTC3115IDHD-2#PBF-ND" x="26.89" y="6.515" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C1" library="dubec" package="0805" value="22uF" x="15.5" y="6.125" rot="R90">
-<attribute name="DIGIKEY_PART_#" value="445-14428-1-ND" x="15.5" y="6.125" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MANUFACTURER" value="TDK Corporation" x="15.5" y="6.125" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="TYPE" value="smt" x="15.5" y="6.125" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MFG_PART_#" value="C2012X5R1V226M125AC" x="15.5" y="6.125" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="USD" value="1.04" x="15.5" y="6.125" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="TOLERANCE" value="±20%" x="15.5" y="6.125" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="TEMP" value="-55°C ~ 85°C" x="15.5" y="6.125" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="C1" library="dubec" package="0805" value="22uF" x="16.125" y="6.125" rot="R90">
+<attribute name="DIGIKEY_PART_#" value="445-14428-1-ND" x="16.125" y="6.125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MANUFACTURER" value="TDK Corporation" x="16.125" y="6.125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="TYPE" value="smt" x="16.125" y="6.125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MFG_PART_#" value="C2012X5R1V226M125AC" x="16.125" y="6.125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="USD" value="1.04" x="16.125" y="6.125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="TOLERANCE" value="±20%" x="16.125" y="6.125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="TEMP" value="-55°C ~ 85°C" x="16.125" y="6.125" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="5CIN1" library="dubec" package="0603" value="1uF" x="19.95" y="13.75" rot="R180">
 <attribute name="DIGIKEY_PART_#" value="587-3247-1-ND" x="19.95" y="13.75" size="1.778" layer="27" rot="R180" display="off"/>
@@ -879,14 +879,14 @@ Covered vias can be set in Masks (Limit).
 <attribute name="TEMP" value="-55°C ~ 125°C" x="19.95" y="13.75" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="USD" value="0.24" x="19.95" y="13.75" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="5CIN2" library="dubec" package="0603" value="1uF" x="19.95" y="19.15">
-<attribute name="DIGIKEY_PART_#" value="587-3247-1-ND" x="19.95" y="19.15" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER" value="Taiyo Yuden" x="19.95" y="19.15" size="1.778" layer="27" display="off"/>
-<attribute name="TYPE" value="smt" x="19.95" y="19.15" size="1.778" layer="27" display="off"/>
-<attribute name="MFG_PART_#" value="UMK107AB7105KA-T" x="19.95" y="19.15" size="1.778" layer="27" display="off"/>
-<attribute name="TOLERANCE" value="±10%" x="19.95" y="19.15" size="1.778" layer="27" display="off"/>
-<attribute name="TEMP" value="-55°C ~ 125°C" x="19.95" y="19.15" size="1.778" layer="27" display="off"/>
-<attribute name="USD" value="0.24" x="19.95" y="19.15" size="1.778" layer="27" display="off"/>
+<element name="5CIN2" library="dubec" package="0603" value="1uF" x="19.825" y="19.15">
+<attribute name="DIGIKEY_PART_#" value="587-3247-1-ND" x="19.825" y="19.15" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER" value="Taiyo Yuden" x="19.825" y="19.15" size="1.778" layer="27" display="off"/>
+<attribute name="TYPE" value="smt" x="19.825" y="19.15" size="1.778" layer="27" display="off"/>
+<attribute name="MFG_PART_#" value="UMK107AB7105KA-T" x="19.825" y="19.15" size="1.778" layer="27" display="off"/>
+<attribute name="TOLERANCE" value="±10%" x="19.825" y="19.15" size="1.778" layer="27" display="off"/>
+<attribute name="TEMP" value="-55°C ~ 125°C" x="19.825" y="19.15" size="1.778" layer="27" display="off"/>
+<attribute name="USD" value="0.24" x="19.825" y="19.15" size="1.778" layer="27" display="off"/>
 </element>
 <element name="12CB1" library="dubec" package="0402" value="0.1uF" x="27.75" y="11.375">
 <attribute name="DIGIKEY_PART_#" value="587-3498-1-ND" x="27.75" y="11.375" size="1.778" layer="27" display="off"/>
@@ -1049,12 +1049,12 @@ Covered vias can be set in Masks (Limit).
 <attribute name="TYPE" value="smt" x="17.125" y="19.125" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MFG_PART_#" value="ERJ-1GEF4122C" x="17.125" y="19.125" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="5LED" library="dubec" package="D0603" value="LEDGREEN_2.8V_5MA" x="32" y="18" rot="R90">
-<attribute name="DIGIKEY_PART_#" value="160-1832-1-ND" x="32" y="18" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MANUFACTURER" value="Lite-On Inc" x="32" y="18" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="TYPE" value="smt" x="32" y="18" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MFG_PART_#" value="LTST-C193TGKT-5A" x="32" y="18" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="USD" value="0.44" x="32" y="18" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="5LED" library="dubec" package="D0603" value="LEDGREEN_2.8V_5MA" x="32" y="18.125" rot="R90">
+<attribute name="DIGIKEY_PART_#" value="160-1832-1-ND" x="32" y="18.125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MANUFACTURER" value="Lite-On Inc" x="32" y="18.125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="TYPE" value="smt" x="32" y="18.125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MFG_PART_#" value="LTST-C193TGKT-5A" x="32" y="18.125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="USD" value="0.44" x="32" y="18.125" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="12LED" library="dubec" package="D0603" value="LEDGREEN_2.8V_5MA" x="32.75" y="5.625" rot="R90">
 <attribute name="DIGIKEY_PART_#" value="160-1832-1-ND" x="32.75" y="5.625" size="1.778" layer="27" rot="R90" display="off"/>
@@ -1063,20 +1063,20 @@ Covered vias can be set in Masks (Limit).
 <attribute name="MFG_PART_#" value="LTST-C193TGKT-5A" x="32.75" y="5.625" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="USD" value="0.44" x="32.75" y="5.625" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="LEDA" library="dubec" package="D0603" value="LEDGREEN_2.8V_5MA" x="13.375" y="2" rot="R90">
-<attribute name="DIGIKEY_PART_#" value="160-1832-1-ND" x="13.375" y="2" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MANUFACTURER" value="Lite-On Inc" x="13.375" y="2" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="TYPE" value="smt" x="13.375" y="2" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MFG_PART_#" value="LTST-C193TGKT-5A" x="13.375" y="2" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="USD" value="0.44" x="13.375" y="2" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="LEDA" library="dubec" package="D0603" value="LEDGREEN_2.8V_5MA" x="13.875" y="2.125" rot="R90">
+<attribute name="DIGIKEY_PART_#" value="160-1832-1-ND" x="13.875" y="2.125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MANUFACTURER" value="Lite-On Inc" x="13.875" y="2.125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="TYPE" value="smt" x="13.875" y="2.125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MFG_PART_#" value="LTST-C193TGKT-5A" x="13.875" y="2.125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="USD" value="0.44" x="13.875" y="2.125" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="RLEDA" library="dubec" package="0402" value="330Ohm" x="17.25" y="1.75">
-<attribute name="DIGIKEY_PART_#" value="RHM1022CT-ND" x="17.25" y="1.75" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER" value="Rohm Semiconductor" x="17.25" y="1.75" size="1.778" layer="27" display="off"/>
-<attribute name="TYPE" value="smt" x="17.25" y="1.75" size="1.778" layer="27" display="off"/>
-<attribute name="MFG_PART_#" value="ESR01MZPJ331" x="17.25" y="1.75" size="1.778" layer="27" display="off"/>
-<attribute name="USD" value="0.20" x="17.25" y="1.75" size="1.778" layer="27" display="off"/>
-<attribute name="TOLERANCE" value="±5%" x="17.25" y="1.75" size="1.778" layer="27" display="off"/>
+<element name="RLEDA" library="dubec" package="0402" value="330Ohm" x="17.75" y="1.75">
+<attribute name="DIGIKEY_PART_#" value="RHM1022CT-ND" x="17.75" y="1.75" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER" value="Rohm Semiconductor" x="17.75" y="1.75" size="1.778" layer="27" display="off"/>
+<attribute name="TYPE" value="smt" x="17.75" y="1.75" size="1.778" layer="27" display="off"/>
+<attribute name="MFG_PART_#" value="ESR01MZPJ331" x="17.75" y="1.75" size="1.778" layer="27" display="off"/>
+<attribute name="USD" value="0.20" x="17.75" y="1.75" size="1.778" layer="27" display="off"/>
+<attribute name="TOLERANCE" value="±5%" x="17.75" y="1.75" size="1.778" layer="27" display="off"/>
 </element>
 <element name="12RLED" library="dubec" package="0402" value="2.2kOhm" x="31.25" y="5" rot="R270">
 <attribute name="DIGIKEY_PART_#" value="RHM1014CT-ND" x="31.25" y="5" size="1.778" layer="27" rot="R270" display="off"/>
@@ -1110,12 +1110,12 @@ Covered vias can be set in Masks (Limit).
 <attribute name="I_RLEAK" value="500nA @ 10V" x="14.625" y="19" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="V_FWD" value="450mV @ 10mA" x="14.625" y="19" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="TRRELAY" library="dubec" package="3-DFN1006" value="TR_NPNDFN" x="7.75" y="14.5" rot="R270">
-<attribute name="DIGIKEY_PART_#" value="2DC4617QLPDICT-ND" x="7.75" y="14.5" size="1.778" layer="27" rot="R270" display="off"/>
+<element name="TRRELAY" library="dubec" package="3-DFN1006" value="TR_NPN45V_100MA" x="7.75" y="14.5" rot="R270">
+<attribute name="DIGIKEY_PART_#" value="BC847BLP4DICT-ND" x="7.75" y="14.5" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MANUFACTURER" value="Diodes Incorporated" x="7.75" y="14.5" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="TYPE" value="smt" x="7.75" y="14.5" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MFG_PART_#" value="2DC4617QLP-7" x="7.75" y="14.5" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="USD" value="0.38" x="7.75" y="14.5" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MFG_PART_#" value="BC847BLP4-7" x="7.75" y="14.5" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="USD" value="0.35" x="7.75" y="14.5" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="DFB" library="dubec" package="D0402" value="D_SCH30V_0.1A" x="5.25" y="15.25">
 <attribute name="DIGIKEY_PART_#" value="641-1272-1-ND" x="5.25" y="15.25" size="1.778" layer="27" display="off"/>
@@ -1169,13 +1169,13 @@ Covered vias can be set in Masks (Limit).
 <attribute name="TOLERANCE" value="±20%" x="13.375" y="19" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="TEMP" value="-55°C ~ 85°C" x="13.375" y="19" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="VAR1" library="dubec" package="0805" value="39V" x="13.125" y="5.375" rot="R90">
-<attribute name="DIGIKEY_PART_#" value="495-2598-1-ND" x="13.125" y="5.375" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MANUFACTURER" value="EPCOS Inc" x="13.125" y="5.375" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="TYPE" value="smt" x="13.125" y="5.375" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MFG_PART_#" value="CT0805K30G" x="13.125" y="5.375" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="USD" value="0.49" x="13.125" y="5.375" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="TOLERANCE" value="42.3 ~ 51.7V" x="13.125" y="5.375" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="VAR1" library="dubec" package="0805" value="39V" x="13.875" y="5.375" rot="R90">
+<attribute name="DIGIKEY_PART_#" value="495-2598-1-ND" x="13.875" y="5.375" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MANUFACTURER" value="EPCOS Inc" x="13.875" y="5.375" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="TYPE" value="smt" x="13.875" y="5.375" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MFG_PART_#" value="CT0805K30G" x="13.875" y="5.375" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="USD" value="0.49" x="13.875" y="5.375" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="TOLERANCE" value="42.3 ~ 51.7V" x="13.875" y="5.375" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="5D" library="dubec" package="D0402" value="D_SCH30V_0.1A" x="33.75" y="14.375" rot="R90">
 <attribute name="DIGIKEY_PART_#" value="641-1272-1-ND" x="33.75" y="14.375" size="1.778" layer="27" rot="R90" display="off"/>
@@ -1192,9 +1192,9 @@ Covered vias can be set in Masks (Limit).
 <attribute name="TYPE" value="smt" x="9.375" y="19.25" size="1.778" layer="27" display="off"/>
 <attribute name="MFG_PART_#" value="ERJ-1GEF2200C" x="9.375" y="19.25" size="1.778" layer="27" display="off"/>
 </element>
-<element name="JP1" library="dubec" package="1X03_NO_SILK" value="M03" x="36.25" y="16" smashed="yes" rot="R270">
-<attribute name="NAME" x="37.8248" y="19.556" size="0.762" layer="25" ratio="10" rot="R270"/>
-<attribute name="VALUE" x="34.599" y="19.556" size="0.762" layer="27" rot="R270" align="top-left"/>
+<element name="JP1" library="dubec" package="1X03_NO_SILK" value="M03" x="36.25" y="15.875" smashed="yes" rot="R270">
+<attribute name="NAME" x="37.8248" y="19.431" size="0.762" layer="25" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="34.599" y="19.431" size="0.762" layer="27" rot="R270" align="top-left"/>
 </element>
 <element name="RPU1" library="dubec" package="0201P" value="RES1.6K_20" x="11.625" y="19.25" rot="R180">
 <attribute name="DIGIKEY_PART_#" value="541-1.60KAABCT-ND" x="11.625" y="19.25" size="1.778" layer="27" rot="R180" display="off"/>
@@ -1204,23 +1204,23 @@ Covered vias can be set in Masks (Limit).
 <attribute name="USD" value="0.23" x="11.625" y="19.25" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="TOLERANCE" value="±1%" x="11.625" y="19.25" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="C2" library="dubec" package="0805" value="22uF" x="13.125" y="10.5" rot="R270">
-<attribute name="DIGIKEY_PART_#" value="445-14428-1-ND" x="13.125" y="10.5" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MANUFACTURER" value="TDK Corporation" x="13.125" y="10.5" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="TYPE" value="smt" x="13.125" y="10.5" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MFG_PART_#" value="C2012X5R1V226M125AC" x="13.125" y="10.5" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="USD" value="1.04" x="13.125" y="10.5" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="TOLERANCE" value="±20%" x="13.125" y="10.5" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="TEMP" value="-55°C ~ 85°C" x="13.125" y="10.5" size="1.778" layer="27" rot="R270" display="off"/>
+<element name="C2" library="dubec" package="0805" value="22uF" x="13.875" y="10.5" rot="R270">
+<attribute name="DIGIKEY_PART_#" value="445-14428-1-ND" x="13.875" y="10.5" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MANUFACTURER" value="TDK Corporation" x="13.875" y="10.5" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="TYPE" value="smt" x="13.875" y="10.5" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MFG_PART_#" value="C2012X5R1V226M125AC" x="13.875" y="10.5" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="USD" value="1.04" x="13.875" y="10.5" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="TOLERANCE" value="±20%" x="13.875" y="10.5" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="TEMP" value="-55°C ~ 85°C" x="13.875" y="10.5" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="C3" library="dubec" package="0805" value="22uF" x="15.5" y="10.5" rot="R270">
-<attribute name="DIGIKEY_PART_#" value="445-14428-1-ND" x="15.5" y="10.5" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MANUFACTURER" value="TDK Corporation" x="15.5" y="10.5" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="TYPE" value="smt" x="15.5" y="10.5" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MFG_PART_#" value="C2012X5R1V226M125AC" x="15.5" y="10.5" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="USD" value="1.04" x="15.5" y="10.5" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="TOLERANCE" value="±20%" x="15.5" y="10.5" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="TEMP" value="-55°C ~ 85°C" x="15.5" y="10.5" size="1.778" layer="27" rot="R270" display="off"/>
+<element name="C3" library="dubec" package="0805" value="22uF" x="16.125" y="10.5" rot="R270">
+<attribute name="DIGIKEY_PART_#" value="445-14428-1-ND" x="16.125" y="10.5" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MANUFACTURER" value="TDK Corporation" x="16.125" y="10.5" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="TYPE" value="smt" x="16.125" y="10.5" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MFG_PART_#" value="C2012X5R1V226M125AC" x="16.125" y="10.5" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="USD" value="1.04" x="16.125" y="10.5" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="TOLERANCE" value="±20%" x="16.125" y="10.5" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="TEMP" value="-55°C ~ 85°C" x="16.125" y="10.5" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="DUPS" library="dubec" package="POWERDI_123" value="D_SCH100V_1A" x="24.125" y="11.75" rot="R180">
 <attribute name="USD" value="0.51" x="24.125" y="11.75" size="1.778" layer="27" rot="R180" display="off"/>
@@ -1238,28 +1238,28 @@ Covered vias can be set in Masks (Limit).
 <signals>
 <signal name="35V">
 <polygon width="0.1524" layer="1" thermals="no">
-<vertex x="9" y="7.25"/>
-<vertex x="11.75" y="7.25"/>
-<vertex x="11.75" y="10.375"/>
-<vertex x="16.625" y="10.375"/>
-<vertex x="16.625" y="12"/>
+<vertex x="10.125" y="7.25"/>
+<vertex x="12.75" y="7.25"/>
+<vertex x="12.75" y="10.375"/>
+<vertex x="17.25" y="10.375"/>
+<vertex x="17.25" y="12"/>
 <vertex x="18.625" y="13.625"/>
 <vertex x="18.625" y="15"/>
 <vertex x="19.375" y="15"/>
 <vertex x="19.375" y="14.375"/>
-<vertex x="19.625" y="14.375"/>
-<vertex x="19.625" y="12.5"/>
+<vertex x="19.75" y="14.375"/>
+<vertex x="19.75" y="12.5"/>
 <vertex x="26.25" y="12.5"/>
 <vertex x="26.25" y="8.125"/>
 <vertex x="26" y="8.125"/>
 <vertex x="26" y="9.125"/>
 <vertex x="21" y="9.125"/>
-<vertex x="16.375" y="6.25"/>
-<vertex x="14.25" y="6.25"/>
-<vertex x="14.25" y="5.5"/>
-<vertex x="9" y="5.5"/>
+<vertex x="17" y="6.25"/>
+<vertex x="14.875" y="6.25"/>
+<vertex x="14.875" y="5.5"/>
+<vertex x="10.125" y="5.5"/>
 </polygon>
-<via x="21.125" y="11.25" extent="1-16" drill="0.5"/>
+<via x="21.125" y="11.375" extent="1-16" drill="0.5"/>
 <contactref element="12REG" pad="14"/>
 <contactref element="12REG" pad="10"/>
 <contactref element="12REG" pad="1"/>
@@ -1297,12 +1297,11 @@ Covered vias can be set in Masks (Limit).
 </polygon>
 <via x="18" y="19.25" extent="1-16" drill="0.3"/>
 <via x="18.125" y="20.125" extent="1-16" drill="0.3"/>
-<via x="19.75" y="11.25" extent="1-16" drill="0.5"/>
+<via x="19.5" y="11.375" extent="1-16" drill="0.5"/>
 <via x="19.25" y="20.125" extent="1-16" drill="0.3"/>
-<via x="17.25" y="8.625" extent="1-16" drill="0.5"/>
-<via x="17.625" y="10" extent="1-16" drill="0.5"/>
+<via x="18" y="9" extent="1-16" drill="0.5"/>
+<via x="18.25" y="10.375" extent="1-16" drill="0.5"/>
 <contactref element="DUPS" pad="C"/>
-<via x="18.375" y="11.125" extent="1-16" drill="0.5"/>
 <wire x1="29.5" y1="8.5" x2="29" y2="8.5" width="0.508" layer="16"/>
 <wire x1="29" y1="8.5" x2="26.875" y2="10.625" width="0.508" layer="16"/>
 <wire x1="26.875" y1="10.625" x2="22.25" y2="10.625" width="0.508" layer="16"/>
@@ -1393,8 +1392,8 @@ Covered vias can be set in Masks (Limit).
 <vertex x="39" y="0.125"/>
 <vertex x="0" y="0"/>
 </polygon>
-<via x="7.75" y="4" extent="1-16" drill="0.5"/>
-<via x="7.875" y="7.125" extent="1-16" drill="0.5"/>
+<via x="8" y="3.875" extent="1-16" drill="0.5"/>
+<via x="8.875" y="7.25" extent="1-16" drill="0.5"/>
 <via x="19.5" y="15.625" extent="1-16" drill="0.3"/>
 <via x="20.4" y="15.13" extent="1-16" drill="0.3"/>
 <via x="17.6" y="16.06" extent="1-16" drill="0.3"/>
@@ -1406,10 +1405,10 @@ Covered vias can be set in Masks (Limit).
 <vertex x="39" y="0.125"/>
 </polygon>
 <via x="15.875" y="14" extent="1-16" drill="0.3"/>
-<via x="5" y="4.75" extent="1-16" drill="0.3"/>
-<via x="5" y="6.875" extent="1-16" drill="0.3"/>
-<via x="8.125" y="5.625" extent="1-16" drill="0.5"/>
-<via x="6.5" y="6.875" extent="1-16" drill="0.3"/>
+<via x="4.375" y="4.75" extent="1-16" drill="0.3"/>
+<via x="4.375" y="6.875" extent="1-16" drill="0.3"/>
+<via x="9.125" y="5.375" extent="1-16" drill="0.5"/>
+<via x="6.125" y="6.875" extent="1-16" drill="0.3"/>
 <via x="17.25" y="4.875" extent="1-16" drill="0.5"/>
 <via x="17.31" y="16.775" extent="1-16" drill="0.3"/>
 <via x="20.89" y="6.5" extent="1-16" drill="0.5"/>
@@ -1467,17 +1466,17 @@ Covered vias can be set in Masks (Limit).
 </polygon>
 <contactref element="5CSS" pad="2"/>
 <contactref element="RELAY" pad="4"/>
-<via x="6.5" y="4.75" extent="1-16" drill="0.3"/>
+<via x="6.125" y="4.75" extent="1-16" drill="0.3"/>
 <contactref element="C3" pad="1"/>
 <contactref element="C2" pad="1"/>
-<via x="33" y="18.75" extent="1-16" drill="0.3"/>
+<via x="33" y="18.875" extent="1-16" drill="0.3"/>
 <via x="33.25" y="7.875" extent="1-16" drill="0.6"/>
 <via x="36" y="10.375" extent="1-16" drill="0.6"/>
 <via x="21.625" y="20.125" extent="1-16" drill="0.3"/>
 <via x="13.125" y="15.25" extent="1-16" drill="0.5"/>
 <via x="16.75" y="20.125" extent="1-16" drill="0.3"/>
 <via x="24.25" y="14.375" extent="1-16" drill="0.5"/>
-<via x="9.875" y="12.5" extent="1-16" drill="0.5"/>
+<via x="9.375" y="13.625" extent="1-16" drill="0.5"/>
 <via x="14" y="12.75" extent="1-16" drill="0.5"/>
 <polygon width="0.2032" layer="15" spacing="0.254" isolate="0.3302" rank="5">
 <vertex x="0" y="21"/>
@@ -1486,13 +1485,15 @@ Covered vias can be set in Masks (Limit).
 <vertex x="0" y="0"/>
 </polygon>
 <via x="26.25" y="20.125" extent="1-16" drill="0.3"/>
-<via x="33.25" y="12.75" extent="1-16" drill="0.6"/>
+<via x="33.375" y="12.75" extent="1-16" drill="0.6"/>
 <contactref element="U$1" pad="1"/>
-<via x="27.75" y="13.75" extent="1-16" drill="0.5"/>
+<via x="27.75" y="13.625" extent="1-16" drill="0.5"/>
 <via x="24.015" y="6.5" extent="1-16" drill="0.5"/>
-<wire x1="33" y1="18.75" x2="32" y2="18.75" width="0.508" layer="1"/>
+<wire x1="33" y1="18.875" x2="32" y2="18.875" width="0.508" layer="1"/>
 <via x="15.5" y="20.125" extent="1-16" drill="0.3"/>
 <via x="1.625" y="15.875" extent="1-16" drill="0.3"/>
+<via x="7.25" y="8.375" extent="1-16" drill="0.5"/>
+<via x="10.375" y="12.375" extent="1-16" drill="0.3"/>
 </signal>
 <signal name="12V">
 <contactref element="12REG" pad="3"/>
@@ -1517,8 +1518,8 @@ Covered vias can be set in Masks (Limit).
 <signal name="5V">
 <contactref element="5L" pad="P$2"/>
 <polygon width="0.1524" layer="1" thermals="no" rank="4">
-<vertex x="27" y="14.625"/>
-<vertex x="39" y="14.625"/>
+<vertex x="27" y="14.5"/>
+<vertex x="39" y="14.5"/>
 <vertex x="39" y="21.375"/>
 <vertex x="27" y="21.375"/>
 </polygon>
@@ -1558,8 +1559,8 @@ Covered vias can be set in Masks (Limit).
 <polygon width="0.3302" layer="16">
 <vertex x="27.375" y="21"/>
 <vertex x="39" y="21"/>
-<vertex x="39" y="14.5"/>
-<vertex x="34.375" y="14.5"/>
+<vertex x="39" y="14.625"/>
+<vertex x="35" y="14.625"/>
 <vertex x="27.375" y="19.125"/>
 </polygon>
 <via x="28.125" y="19.875" extent="1-16" drill="0.5"/>
@@ -1598,14 +1599,14 @@ Covered vias can be set in Masks (Limit).
 </signal>
 <signal name="35V_NC">
 <polygon width="0.1524" layer="1" thermals="no" rank="2">
-<vertex x="0" y="11.875"/>
-<vertex x="7.25" y="11.875"/>
-<vertex x="7.25" y="9"/>
-<vertex x="9" y="7.625"/>
-<vertex x="11.375" y="7.625"/>
-<vertex x="11.375" y="8.625"/>
-<vertex x="8.75" y="10.75"/>
-<vertex x="8.75" y="13.75"/>
+<vertex x="0" y="12"/>
+<vertex x="6.625" y="12"/>
+<vertex x="6.625" y="10"/>
+<vertex x="10" y="7.625"/>
+<vertex x="12.375" y="7.625"/>
+<vertex x="12.375" y="10.375"/>
+<vertex x="9.875" y="10.375"/>
+<vertex x="7.5" y="13.75"/>
 <vertex x="3.625" y="13.75"/>
 <vertex x="3.625" y="15.125"/>
 <vertex x="0" y="15.125"/>
@@ -1616,10 +1617,10 @@ Covered vias can be set in Masks (Limit).
 <contactref element="RELAY" pad="5"/>
 <polygon width="0.1524" layer="1" thermals="no" rank="2">
 <vertex x="0" y="0"/>
-<vertex x="11.375" y="0"/>
-<vertex x="11.375" y="4.125"/>
-<vertex x="9" y="4.125"/>
-<vertex x="9" y="2.875"/>
+<vertex x="12.375" y="0"/>
+<vertex x="12.375" y="4.125"/>
+<vertex x="10.125" y="4.125"/>
+<vertex x="10.125" y="2.875"/>
 <vertex x="3.625" y="2.875"/>
 <vertex x="3.625" y="4.125"/>
 <vertex x="0" y="4.125"/>
@@ -1636,10 +1637,10 @@ Covered vias can be set in Masks (Limit).
 <contactref element="RELAY" pad="2"/>
 <polygon width="0.1524" layer="1" thermals="no" rank="4">
 <vertex x="0" y="11.625"/>
-<vertex x="4.375" y="11.625"/>
-<vertex x="4.375" y="10.625"/>
-<vertex x="7" y="10.625"/>
-<vertex x="7" y="7.625"/>
+<vertex x="3.875" y="11.625"/>
+<vertex x="3.875" y="10.625"/>
+<vertex x="6.375" y="10.625"/>
+<vertex x="6.375" y="7.625"/>
 <vertex x="4" y="7.625"/>
 <vertex x="4" y="8.125"/>
 <vertex x="0" y="8.125"/>
@@ -1663,15 +1664,16 @@ Covered vias can be set in Masks (Limit).
 <wire x1="20.875" y1="18.5" x2="21.5" y2="17.875" width="0.3302" layer="15"/>
 <wire x1="28.875" y1="17.5" x2="28.5" y2="17.875" width="0.3302" layer="15"/>
 <wire x1="30.875" y1="17.5" x2="31.25" y2="17.875" width="0.3302" layer="15"/>
-<wire x1="32" y1="17.25" x2="32.125" y2="17.125" width="0.508" layer="1"/>
-<wire x1="32.125" y1="17.125" x2="33.75" y2="17.125" width="0.508" layer="1"/>
 <wire x1="33.75" y1="17.875" x2="33.75" y2="17.125" width="0.508" layer="1"/>
+<wire x1="33.75" y1="17.125" x2="33" y2="17.125" width="0.508" layer="1"/>
+<wire x1="33" y1="17.125" x2="32.75" y2="17.375" width="0.508" layer="1"/>
+<wire x1="32.75" y1="17.375" x2="32" y2="17.375" width="0.508" layer="1"/>
 </signal>
 <signal name="LED_5V">
 <contactref element="RLEDA" pad="1"/>
 <contactref element="LEDA" pad="A"/>
-<wire x1="16.75" y1="1.75" x2="16.25" y2="1.25" width="0.508" layer="1"/>
-<wire x1="16.25" y1="1.25" x2="13.375" y2="1.25" width="0.508" layer="1"/>
+<wire x1="17.25" y1="1.75" x2="16.875" y2="1.375" width="0.508" layer="1"/>
+<wire x1="16.875" y1="1.375" x2="13.875" y2="1.375" width="0.508" layer="1"/>
 </signal>
 <signal name="RELAY_CONTROL">
 <contactref element="MCU" pad="6"/>
@@ -1682,7 +1684,7 @@ Covered vias can be set in Masks (Limit).
 <wire x1="3.625" y1="17.25" x2="5.25" y2="15.625" width="0.508" layer="16"/>
 <wire x1="11.25" y1="17.85" x2="11.65" y2="17.85" width="0.254" layer="1"/>
 <wire x1="11.65" y1="17.85" x2="12.875" y2="16.625" width="0.254" layer="1"/>
-<via x="18.75" y="1.125" extent="1-16" drill="0.3"/>
+<via x="19.25" y="1.125" extent="1-16" drill="0.3"/>
 <via x="7.75" y="15.75" extent="1-16" drill="0.3"/>
 <wire x1="8" y1="14.875" x2="8" y2="15.5" width="0.254" layer="1"/>
 <wire x1="8" y1="15.5" x2="7.75" y2="15.75" width="0.254" layer="1"/>
@@ -1692,10 +1694,10 @@ Covered vias can be set in Masks (Limit).
 <wire x1="7.625" y1="15.625" x2="5.25" y2="15.625" width="0.508" layer="16"/>
 <wire x1="12.5" y1="12.875" x2="12" y2="13.375" width="0.3302" layer="15"/>
 <wire x1="12" y1="13.375" x2="12" y2="15.75" width="0.3302" layer="15"/>
-<wire x1="12.5" y1="7.375" x2="12.5" y2="12.875" width="0.3302" layer="15"/>
-<wire x1="18.75" y1="1.125" x2="12.5" y2="7.375" width="0.3302" layer="15"/>
-<wire x1="18.75" y1="1.125" x2="18.375" y2="1.125" width="0.508" layer="1"/>
-<wire x1="18.375" y1="1.125" x2="17.75" y2="1.75" width="0.508" layer="1"/>
+<wire x1="12.5" y1="7.875" x2="12.5" y2="12.875" width="0.3302" layer="15"/>
+<wire x1="19.25" y1="1.125" x2="18.875" y2="1.125" width="0.508" layer="1"/>
+<wire x1="18.875" y1="1.125" x2="18.25" y2="1.75" width="0.508" layer="1"/>
+<wire x1="19.25" y1="1.125" x2="12.5" y2="7.875" width="0.3302" layer="15"/>
 <wire x1="8" y1="14.875" x2="8" y2="14.85" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IN_1">
@@ -1715,9 +1717,9 @@ Covered vias can be set in Masks (Limit).
 <wire x1="21.875" y1="18.625" x2="28.875" y2="18.625" width="0.3302" layer="15"/>
 <wire x1="28.875" y1="18.625" x2="29.25" y2="18.25" width="0.3302" layer="15"/>
 <wire x1="29.25" y1="18.25" x2="30.5" y2="18.25" width="0.3302" layer="15"/>
-<wire x1="30.5" y1="18.25" x2="31.875" y2="19.625" width="0.3302" layer="15"/>
-<wire x1="31.875" y1="19.625" x2="35.673" y2="19.625" width="0.3302" layer="15"/>
-<wire x1="36.25" y1="19.048" x2="35.673" y2="19.625" width="0.3302" layer="15"/>
+<wire x1="30.5" y1="18.25" x2="32" y2="19.75" width="0.3302" layer="15"/>
+<wire x1="32" y1="19.75" x2="35.423" y2="19.75" width="0.3302" layer="15"/>
+<wire x1="36.25" y1="18.923" x2="35.423" y2="19.75" width="0.3302" layer="15"/>
 </signal>
 <signal name="5V_ISP">
 <contactref element="MCU" pad="10"/>
@@ -1745,16 +1747,17 @@ Covered vias can be set in Masks (Limit).
 <contactref element="TRRELAY" pad="E"/>
 <contactref element="RELAY" pad="1"/>
 <contactref element="DFB" pad="C"/>
-<via x="4" y="11.5" extent="1-16" drill="0.3"/>
+<via x="6.375" y="10.25" extent="1-16" drill="0.3"/>
 <via x="5.75" y="14.375" extent="1-16" drill="0.3"/>
 <wire x1="5.75" y1="14.375" x2="5.75" y2="15.25" width="0.254" layer="1"/>
 <wire x1="7.5" y1="14.85" x2="7.275" y2="14.85" width="0.254" layer="1"/>
 <wire x1="7.275" y1="14.85" x2="6.875" y2="15.25" width="0.254" layer="1"/>
 <wire x1="6.875" y1="15.25" x2="5.75" y2="15.25" width="0.254" layer="1"/>
-<wire x1="4" y1="11.5" x2="4.225" y2="11.275" width="0.508" layer="1"/>
-<wire x1="4.225" y1="11.275" x2="5.8" y2="11.275" width="0.508" layer="1"/>
-<wire x1="4" y1="11.5" x2="5.75" y2="13.25" width="0.3302" layer="15"/>
-<wire x1="5.75" y1="13.25" x2="5.75" y2="14.375" width="0.3302" layer="15"/>
+<wire x1="5.75" y1="10.875" x2="5.75" y2="14.375" width="0.3302" layer="15"/>
+<wire x1="6.375" y1="10.25" x2="6.375" y2="10.75" width="0.508" layer="1"/>
+<wire x1="6.375" y1="10.75" x2="5.85" y2="11.275" width="0.508" layer="1"/>
+<wire x1="5.85" y1="11.275" x2="5.25" y2="11.275" width="0.508" layer="1"/>
+<wire x1="6.375" y1="10.25" x2="5.75" y2="10.875" width="0.3302" layer="15"/>
 </signal>
 <signal name="PB5">
 <contactref element="MCU" pad="1"/>
