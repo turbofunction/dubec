@@ -452,18 +452,18 @@
 <pad name="1" x="-2" y="-1" drill="0.8" diameter="1.4" shape="square" stop="no"/>
 <pad name="3" x="0" y="-1" drill="0.8" diameter="1.4" stop="no"/>
 <pad name="5" x="2" y="-1" drill="0.8" diameter="1.4" stop="no"/>
-<circle x="-2" y="1" radius="0.55" width="0.4" layer="29"/>
 <rectangle x1="-2.75" y1="-1.75" x2="-1.25" y2="-0.25" layer="30"/>
-<circle x="0" y="1" radius="0.55" width="0.4" layer="29"/>
-<circle x="2" y="1" radius="0.55" width="0.4" layer="29"/>
-<circle x="2" y="-1" radius="0.55" width="0.4" layer="29"/>
-<circle x="0" y="-1" radius="0.55" width="0.4" layer="30"/>
-<circle x="-2" y="1" radius="0.55" width="0.4" layer="30"/>
-<circle x="0" y="1" radius="0.55" width="0.4" layer="30"/>
-<circle x="2" y="1" radius="0.55" width="0.4" layer="30"/>
-<circle x="2" y="-1" radius="0.55" width="0.4" layer="30"/>
-<circle x="0" y="-1" radius="0.55" width="0.4" layer="29"/>
 <rectangle x1="-2.75" y1="-1.75" x2="-1.25" y2="-0.25" layer="29"/>
+<circle x="-2" y="1" radius="0.364434375" width="0.8" layer="30"/>
+<circle x="0" y="1" radius="0.364434375" width="0.8" layer="30"/>
+<circle x="2" y="1" radius="0.364434375" width="0.8" layer="30"/>
+<circle x="2" y="-1" radius="0.364434375" width="0.8" layer="30"/>
+<circle x="0" y="-1" radius="0.364434375" width="0.8" layer="30"/>
+<circle x="-2" y="1" radius="0.364434375" width="0.8" layer="29"/>
+<circle x="0" y="1" radius="0.364434375" width="0.8" layer="29"/>
+<circle x="2" y="1" radius="0.364434375" width="0.8" layer="29"/>
+<circle x="2" y="-1" radius="0.364434375" width="0.8" layer="29"/>
+<circle x="0" y="-1" radius="0.364434375" width="0.8" layer="29"/>
 </package>
 <package name="0805">
 <description>IPC-SM-782 RES/CAP</description>
@@ -3299,7 +3299,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-27.94" y1="48.26" x2="-20.32" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="5V_RAW" class="0">
+<net name="5V_SW" class="0">
 <segment>
 <pinref part="5REG" gate="G$1" pin="SW"/>
 <wire x1="53.34" y1="58.42" x2="45.72" y2="50.8" width="0.1524" layer="91"/>
