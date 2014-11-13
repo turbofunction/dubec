@@ -14,6 +14,7 @@ janne@savukoski.name
 Solder mask color (top & bot): WHITE
  Silkscreen color (top & bot): BLACK
 
+
 No special instructions.
 
 Functionality includes two DC-DC converters, thus
@@ -31,8 +32,8 @@ DUBEC.cmp  Copper TOP
 DUBEC.stc  Solder stop TOP
 DUBEC.plc  Silkscreen TOP
 DUBEC.crc  Cream TOP
-DUBEC.ly2  Copper top inner (2) layer
-DUBEC.l15  Copper bottom inner (15) layer
+DUBEC.ly2  Copper layer 2
+DUBEC.l15  Copper layer 15
 DUBEC.sol  Copper BOTTOM
 DUBEC.sts  Solder stop BOTTOM
 DUBEC.pls  Silkscreen BOTTOM
