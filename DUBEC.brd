@@ -151,8 +151,8 @@ By TURBOFUNCTION.com/fpv</text>
 <text x="35.25" y="16.125" size="1.25" layer="22" font="vector" ratio="20" rot="SMR270" align="bottom-center">+5V</text>
 <text x="35.25" y="19.173" size="1.25" layer="22" font="vector" ratio="20" rot="SMR270" align="bottom-center">S</text>
 <text x="35.25" y="13.077" size="1.25" layer="22" font="vector" ratio="20" rot="SMR270" align="bottom-center">-</text>
-<text x="32.5" y="20" size="2.54" layer="22" font="vector" ratio="20" rot="MR0" align="top-left">Super
-DUBEC v1</text>
+<text x="32.5" y="20" size="2" layer="22" font="vector" ratio="20" rot="MR0" align="top-left">Super
+DUBEC v1.1</text>
 <polygon width="0.1524" layer="30">
 <vertex x="14.625" y="11.75"/>
 <vertex x="17.375" y="11.75"/>
@@ -197,17 +197,17 @@ OUT</text>
 <circle x="34.875" y="11.25" radius="0.7551875" width="0.2032" layer="41"/>
 <circle x="37" y="16.125" radius="1.25" width="0.2032" layer="41"/>
 <circle x="37" y="13.077" radius="1.25" width="0.2032" layer="41"/>
-<polygon width="0.1524" layer="29">
-<vertex x="29.25" y="2.125"/>
-<vertex x="32.25" y="2.125"/>
-<vertex x="32.25" y="0.75"/>
-<vertex x="29.25" y="0.75"/>
+<polygon width="0.1524" layer="30">
+<vertex x="29.875" y="13.75"/>
+<vertex x="32.875" y="13.75"/>
+<vertex x="32.875" y="12.375"/>
+<vertex x="29.875" y="12.375"/>
 </polygon>
-<polygon width="0.1524" layer="29">
-<vertex x="23.125" y="12.5"/>
-<vertex x="26.125" y="12.5"/>
-<vertex x="26.125" y="11.125"/>
-<vertex x="23.125" y="11.125"/>
+<polygon width="0.1524" layer="30">
+<vertex x="17.875" y="13.75"/>
+<vertex x="20.875" y="13.75"/>
+<vertex x="20.875" y="12.375"/>
+<vertex x="17.875" y="12.375"/>
 </polygon>
 </plain>
 <libraries>
@@ -1240,7 +1240,7 @@ Covered vias can be set in Masks (Limit).
 <vertex x="19.625" y="14.625"/>
 <vertex x="20" y="14.625"/>
 <vertex x="20" y="13"/>
-<vertex x="27" y="13"/>
+<vertex x="27" y="10.875"/>
 <vertex x="27" y="8.375"/>
 <vertex x="26.75" y="8.375"/>
 <vertex x="26.75" y="9.625"/>
@@ -1455,7 +1455,7 @@ Covered vias can be set in Masks (Limit).
 <via x="22.75" y="20.125" extent="1-16" drill="0.5"/>
 <via x="13.375" y="15.5" extent="1-16" drill="0.5"/>
 <via x="16.75" y="20.375" extent="1-16" drill="0.254"/>
-<via x="24.75" y="14.875" extent="1-16" drill="0.5"/>
+<via x="25.375" y="12.625" extent="1-16" drill="0.5"/>
 <via x="14.375" y="13" extent="1-16" drill="0.5"/>
 <polygon width="0.2032" layer="15" spacing="0.254" isolate="0.3302" rank="5">
 <vertex x="0" y="21.75"/>
@@ -1464,7 +1464,7 @@ Covered vias can be set in Masks (Limit).
 <vertex x="0" y="0"/>
 </polygon>
 <via x="26.125" y="20.125" extent="1-16" drill="0.5"/>
-<via x="28.875" y="13.875" extent="1-16" drill="0.5"/>
+<via x="28.875" y="13.625" extent="1-16" drill="0.5"/>
 <via x="24.64" y="6.75" extent="1-16" drill="0.5"/>
 <wire x1="34.5" y1="19.125" x2="33.25" y2="19.125" width="0.508" layer="1"/>
 <via x="1.875" y="16.125" extent="1-16" drill="0.254"/>
@@ -1504,6 +1504,18 @@ Covered vias can be set in Masks (Limit).
 <contactref element="U$3" pad="1"/>
 <wire x1="33.375" y1="4.1875" x2="33.375" y2="2.5625" width="0.381" layer="1"/>
 <wire x1="32.5625" y1="3.375" x2="34.1875" y2="3.375" width="0.381" layer="1"/>
+<polygon width="0.3302" layer="16">
+<vertex x="34.375" y="3.375"/>
+<vertex x="34.375" y="9.5"/>
+<vertex x="32.875" y="12.25"/>
+<vertex x="32.875" y="13.75"/>
+<vertex x="29.875" y="13.75"/>
+<vertex x="29.875" y="12.375"/>
+<vertex x="32.375" y="9.5"/>
+<vertex x="32.375" y="3.375" curve="90"/>
+<vertex x="33.375" y="2.375"/>
+<vertex x="33.5" y="2.375" curve="90"/>
+</polygon>
 <wire x1="33.375" y1="3.375" x2="33.375" y2="4.1875" width="0" layer="19" extent="1-1"/>
 <wire x1="32.5625" y1="3.375" x2="33.375" y2="3.375" width="0" layer="19" extent="1-1"/>
 <wire x1="31.875" y1="3.675" x2="32.5625" y2="3.375" width="0" layer="19" extent="1-1"/>
