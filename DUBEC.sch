@@ -2580,92 +2580,6 @@
 </deviceset>
 </devicesets>
 </library>
-<library name="SparkFun-Passives">
-<description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
-In this library you'll find resistors, capacitors, inductors, test points, jumper pads, etc.&lt;br&gt;&lt;br&gt;
-We've spent an enormous amount of time creating and checking these footprints and parts, but it is the end user's responsibility to ensure correctness and suitablity for a given componet or application. If you enjoy using this library, please buy one of our products at www.sparkfun.com.
-&lt;br&gt;&lt;br&gt;
-&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
-&lt;br&gt;&lt;br&gt;
-You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
-<packages>
-<package name="PAD.02X.02">
-<smd name="P$1" x="0" y="0" dx="0.508" dy="0.508" layer="1"/>
-</package>
-<package name="PAD.03X.03">
-<smd name="P$1" x="0" y="0" dx="0.762" dy="0.762" layer="1" roundness="100" cream="no"/>
-</package>
-<package name="PAD.03X.05">
-<smd name="P$1" x="0" y="0" dx="1.27" dy="1.27" layer="1" roundness="100" cream="no"/>
-</package>
-<package name="PAD.03X.04">
-<smd name="P$1" x="0" y="0" dx="1.016" dy="1.016" layer="1" roundness="100" cream="no"/>
-</package>
-<package name="TP_15TH">
-<pad name="P$1" x="0" y="0" drill="0.381" diameter="0.6096" stop="no"/>
-<circle x="0" y="0" radius="0.381" width="0" layer="30"/>
-</package>
-</packages>
-<symbols>
-<symbol name="TEST-POINT">
-<wire x1="2.54" y1="0" x2="0" y2="0" width="0.1524" layer="94"/>
-<wire x1="3.302" y1="0.762" x2="3.302" y2="-0.762" width="0.1524" layer="94" curve="180"/>
-<text x="-2.54" y="2.54" size="1.778" layer="95">&gt;Name</text>
-<text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;Value</text>
-<pin name="1" x="0" y="0" visible="off" length="point" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="TEST-POINT" prefix="TP">
-<description>Bare copper test points for troubleshooting or ICT</description>
-<gates>
-<gate name="G$1" symbol="TEST-POINT" x="0" y="0"/>
-</gates>
-<devices>
-<device name="2" package="PAD.02X.02">
-<connects>
-<connect gate="G$1" pin="1" pad="P$1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="3" package="PAD.03X.03">
-<connects>
-<connect gate="G$1" pin="1" pad="P$1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="3X5" package="PAD.03X.05">
-<connects>
-<connect gate="G$1" pin="1" pad="P$1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="3X4" package="PAD.03X.04">
-<connects>
-<connect gate="G$1" pin="1" pad="P$1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="TP_15TH_THRU" package="TP_15TH">
-<connects>
-<connect gate="G$1" pin="1" pad="P$1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 </libraries>
 <attributes>
 </attributes>
@@ -2747,7 +2661,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="C3" library="dubec" deviceset="CAP" device="22UF_35V" value="22uF"/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
-<part name="TP2" library="SparkFun-Passives" deviceset="TEST-POINT" device="3X5" value="TEST-POINT3X5"/>
 <part name="U$3" library="dubec" deviceset="H1" device="0.65MM"/>
 <part name="U$4" library="dubec" deviceset="H1" device="0.65MM"/>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
@@ -2805,8 +2718,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="GND2" gate="1" x="-106.68" y="-43.18" rot="R270"/>
 <instance part="GND3" gate="1" x="-106.68" y="-53.34" rot="R270"/>
 <instance part="12LED" gate="G$1" x="2.54" y="-38.1" rot="R180"/>
-<instance part="LEDA" gate="G$1" x="-78.74" y="25.4" rot="R270"/>
-<instance part="RLEDA" gate="G$1" x="-78.74" y="35.56" rot="R90"/>
+<instance part="LEDA" gate="G$1" x="-76.2" y="15.24"/>
+<instance part="RLEDA" gate="G$1" x="-86.36" y="15.24" rot="R180"/>
 <instance part="12RLED" gate="G$1" x="12.7" y="-38.1"/>
 <instance part="5RLED" gate="G$1" x="104.14" y="63.5" rot="R90"/>
 <instance part="AVRISP" gate="G$1" x="-40.64" y="88.9"/>
@@ -2834,7 +2747,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="GND11" gate="1" x="-22.86" y="50.8"/>
 <instance part="C3" gate="G$1" x="20.32" y="-12.7" rot="R90"/>
 <instance part="GND12" gate="1" x="-73.66" y="-40.64"/>
-<instance part="TP2" gate="G$1" x="-27.94" y="30.48" rot="R270"/>
 <instance part="U$3" gate="G$1" x="5.08" y="-58.42" rot="R270"/>
 <instance part="U$4" gate="G$1" x="-2.54" y="-58.42" rot="R270"/>
 <instance part="GND13" gate="1" x="-15.24" y="-55.88"/>
@@ -3111,8 +3023,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="LEDA" gate="G$1" pin="C"/>
 <pinref part="GND4" gate="1" pin="GND"/>
 <pinref part="CMCU" gate="G$1" pin="1"/>
-<wire x1="-78.74" y1="20.32" x2="-78.74" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="-78.74" y1="15.24" x2="-53.34" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="-71.12" y1="15.24" x2="-53.34" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="-53.34" y1="15.24" x2="-35.56" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="-53.34" y1="27.94" x2="-53.34" y2="15.24" width="0.1524" layer="91"/>
 <junction x="-53.34" y="15.24"/>
@@ -3264,23 +3175,23 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <pinref part="RLEDA" gate="G$1" pin="1"/>
 <pinref part="LEDA" gate="G$1" pin="A"/>
-<wire x1="-78.74" y1="30.48" x2="-78.74" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="-81.28" y1="15.24" x2="-78.74" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RELAY_CONTROL" class="0">
 <segment>
-<pinref part="MCU" gate="G$1" pin="PB0"/>
 <pinref part="RLEDA" gate="G$1" pin="2"/>
-<wire x1="-78.74" y1="40.64" x2="-78.74" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="-78.74" y1="48.26" x2="-53.34" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="TRRELAY" gate="G$1" pin="B"/>
 <wire x1="-104.14" y1="-25.4" x2="-106.68" y2="-25.4" width="0.1524" layer="91"/>
-<wire x1="-106.68" y1="-25.4" x2="-106.68" y2="13.97" width="0.1524" layer="91"/>
-<wire x1="-106.68" y1="13.97" x2="-78.74" y2="48.26" width="0.1524" layer="91"/>
-<junction x="-78.74" y="48.26"/>
-<pinref part="AVRISP" gate="G$1" pin="MOSI"/>
-<wire x1="-53.34" y1="53.34" x2="-35.56" y2="88.9" width="0.1524" layer="91"/>
-<junction x="-53.34" y="53.34"/>
+<wire x1="-106.68" y1="-25.4" x2="-106.68" y2="0" width="0.1524" layer="91"/>
+<wire x1="-91.44" y1="15.24" x2="-86.36" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="-86.36" y1="20.32" x2="-35.56" y2="20.32" width="0.1524" layer="91"/>
+<junction x="-91.44" y="15.24"/>
+<pinref part="MCU" gate="G$1" pin="PB3"/>
+<wire x1="-35.56" y1="20.32" x2="-25.4" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="-25.4" y1="30.48" x2="-25.4" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="-25.4" y1="40.64" x2="-27.94" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="-91.44" y1="15.24" x2="-106.68" y2="0" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IN_1" class="0">
@@ -3323,7 +3234,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <junction x="-99.06" y="-35.56"/>
 </segment>
 </net>
-<net name="PB5" class="0">
+<net name="RESET" class="0">
 <segment>
 <pinref part="MCU" gate="G$1" pin="PB5"/>
 <pinref part="AVRISP" gate="G$1" pin="RESET"/>
@@ -3336,13 +3247,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <pinref part="RDIV1" gate="G$1" pin="2"/>
 <pinref part="RDIV2" gate="G$1" pin="2"/>
-<wire x1="-22.86" y1="15.24" x2="-20.32" y2="17.78" width="0.1524" layer="91"/>
-<wire x1="-20.32" y1="17.78" x2="-20.32" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="-22.86" y1="15.24" x2="-22.86" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="-22.86" y1="15.24" x2="-22.86" y2="12.7" width="0.1524" layer="91"/>
 <wire x1="-25.4" y1="15.24" x2="-22.86" y2="15.24" width="0.1524" layer="91"/>
 <junction x="-22.86" y="15.24"/>
 <pinref part="MCU" gate="G$1" pin="PB4"/>
-<wire x1="-27.94" y1="48.26" x2="-20.32" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="-27.94" y1="48.26" x2="-22.86" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="5V_SW" class="0">
@@ -3435,7 +3345,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-58.42" y1="83.82" x2="-45.72" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="PB1" class="0">
+<net name="MISO" class="0">
 <segment>
 <pinref part="RI1" gate="G$1" pin="2"/>
 <wire x1="-66.04" y1="48.26" x2="-66.04" y2="45.72" width="0.1524" layer="91"/>
@@ -3451,13 +3361,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <junction x="-66.04" y="45.72"/>
 </segment>
 </net>
-<net name="N$2" class="0">
+<net name="MOSI" class="0">
 <segment>
-<pinref part="MCU" gate="G$1" pin="PB3"/>
-<wire x1="-27.94" y1="43.18" x2="-25.4" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="-25.4" y1="40.64" x2="-25.4" y2="33.02" width="0.1524" layer="91"/>
-<pinref part="TP2" gate="G$1" pin="1"/>
-<wire x1="-25.4" y1="33.02" x2="-27.94" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="AVRISP" gate="G$1" pin="MOSI"/>
+<pinref part="MCU" gate="G$1" pin="PB0"/>
+<wire x1="-53.34" y1="53.34" x2="-35.56" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
