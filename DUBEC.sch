@@ -187,15 +187,14 @@
 <description>By Janne Savukoski 2014</description>
 <packages>
 <package name="D0402">
-<smd name="A" x="-0.5" y="0" dx="0.6" dy="0.7" layer="1"/>
-<smd name="C" x="0.5" y="0" dx="0.6" dy="0.7" layer="1"/>
+<smd name="A" x="-0.55" y="0" dx="0.5" dy="0.7" layer="1"/>
+<smd name="C" x="0.55" y="0" dx="0.5" dy="0.7" layer="1"/>
 <text x="-0.85" y="0.4" size="0.3" layer="25" align="top-left">&gt;NAME</text>
 <text x="-0.85" y="-0.4" size="0.3" layer="27">&gt;VALUE</text>
 <wire x1="-0.55" y1="0.3" x2="0.55" y2="0.3" width="0.05" layer="51"/>
 <wire x1="0.55" y1="0.3" x2="0.55" y2="-0.3" width="0.05" layer="51"/>
 <wire x1="0.55" y1="-0.3" x2="-0.55" y2="-0.3" width="0.05" layer="51"/>
 <wire x1="-0.55" y1="-0.3" x2="-0.55" y2="0.3" width="0.05" layer="51"/>
-<rectangle x1="-0.2" y1="-0.3" x2="0.2" y2="0.3" layer="35"/>
 <text x="1" y="-0.7" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
 <wire x1="-1" y1="0.55" x2="1" y2="0.55" width="0.13" layer="21"/>
 <wire x1="1" y1="0.55" x2="1" y2="-0.55" width="0.13" layer="21"/>
@@ -204,15 +203,14 @@
 </package>
 <package name="0402">
 <description>IPC-SM-782 RES/CAP; narrowed by 2mm</description>
-<smd name="1" x="-0.5" y="0" dx="0.6" dy="0.7" layer="1"/>
-<smd name="2" x="0.5" y="0" dx="0.6" dy="0.7" layer="1"/>
+<smd name="1" x="-0.55" y="0" dx="0.5" dy="0.7" layer="1"/>
+<smd name="2" x="0.55" y="0" dx="0.5" dy="0.7" layer="1"/>
 <text x="-0.85" y="0.35" size="0.254" layer="25" align="top-left">&gt;NAME</text>
 <text x="-0.85" y="-0.35" size="0.254" layer="27">&gt;VALUE</text>
 <wire x1="-0.55" y1="0.3" x2="0.55" y2="0.3" width="0.05" layer="51"/>
 <wire x1="0.55" y1="0.3" x2="0.55" y2="-0.3" width="0.05" layer="51"/>
 <wire x1="0.55" y1="-0.3" x2="-0.55" y2="-0.3" width="0.05" layer="51"/>
 <wire x1="-0.55" y1="-0.3" x2="-0.55" y2="0.3" width="0.05" layer="51"/>
-<rectangle x1="-0.2" y1="-0.3" x2="0.2" y2="0.3" layer="35"/>
 <wire x1="-1" y1="0.55" x2="1" y2="0.55" width="0.13" layer="21"/>
 <wire x1="1" y1="0.55" x2="1" y2="-0.55" width="0.13" layer="21"/>
 <wire x1="1" y1="-0.55" x2="-1" y2="-0.55" width="0.13" layer="21"/>
@@ -232,11 +230,11 @@
 <package name="3-DFN1006">
 <smd name="B" x="-0.35" y="0.25" dx="0.4" dy="0.25" layer="1" stop="no"/>
 <smd name="E" x="-0.35" y="-0.25" dx="0.4" dy="0.25" layer="1" stop="no"/>
-<smd name="C" x="0.35" y="0" dx="0.4" dy="0.7" layer="1"/>
+<smd name="C" x="0.35" y="0" dx="0.4" dy="0.7" layer="1" stop="no"/>
 <text x="-0.65" y="0.4" size="0.2" layer="25" align="top-left">&gt;NAME</text>
 <text x="-0.65" y="-0.4" size="0.2" layer="27">&gt;VALUE</text>
-<rectangle x1="-0.65" y1="0.1" x2="-0.15" y2="0.45" layer="29"/>
-<rectangle x1="-0.65" y1="-0.45" x2="-0.15" y2="-0.1" layer="29"/>
+<rectangle x1="-0.65" y1="0.12" x2="-0.15" y2="0.45" layer="29"/>
+<rectangle x1="-0.65" y1="-0.45" x2="-0.15" y2="-0.12" layer="29"/>
 <wire x1="-0.5" y1="0.3" x2="0.5" y2="0.3" width="0.05" layer="51"/>
 <wire x1="0.5" y1="0.3" x2="0.5" y2="-0.3" width="0.05" layer="51"/>
 <wire x1="0.5" y1="-0.3" x2="-0.5" y2="-0.3" width="0.05" layer="51"/>
@@ -245,6 +243,7 @@
 <wire x1="0.75" y1="0.55" x2="0.75" y2="-0.55" width="0.13" layer="21"/>
 <wire x1="0.75" y1="-0.55" x2="-0.75" y2="-0.55" width="0.13" layer="21"/>
 <wire x1="-0.75" y1="-0.55" x2="-0.75" y2="0.55" width="0.13" layer="21"/>
+<rectangle x1="0.15" y1="-0.45" x2="0.65" y2="0.45" layer="29"/>
 </package>
 <package name="1210">
 <description>IPC-SM-782 RES/CAP</description>
@@ -283,11 +282,11 @@
 <smd name="P$2" x="2.7686" y="0" dx="1.8288" dy="3.429" layer="1"/>
 <text x="-2.85" y="2.65" size="1" layer="25" align="top-left">&gt;NAME</text>
 <text x="-2.85" y="-2.65" size="1" layer="27">&gt;VALUE</text>
-<wire x1="-3.429" y1="2.0066" x2="-3.429" y2="3.25" width="0.13" layer="21"/>
+<wire x1="-3.429" y1="2.1066" x2="-3.429" y2="3.25" width="0.13" layer="21"/>
 <wire x1="-3.429" y1="3.25" x2="3.429" y2="3.25" width="0.13" layer="21"/>
-<wire x1="3.429" y1="3.25" x2="3.429" y2="2.0066" width="0.13" layer="21"/>
-<wire x1="-3.429" y1="-3.25" x2="-3.429" y2="-2.0066" width="0.13" layer="21"/>
-<wire x1="3.429" y1="-3.25" x2="3.429" y2="-2.0066" width="0.13" layer="21"/>
+<wire x1="3.429" y1="3.25" x2="3.429" y2="2.1066" width="0.13" layer="21"/>
+<wire x1="-3.429" y1="-3.25" x2="-3.429" y2="-2.1066" width="0.13" layer="21"/>
+<wire x1="3.429" y1="-3.25" x2="3.429" y2="-2.1066" width="0.13" layer="21"/>
 <wire x1="-3.429" y1="-3.25" x2="3.429" y2="-3.25" width="0.13" layer="21"/>
 </package>
 <package name="10-MLF">
@@ -316,12 +315,12 @@
 <rectangle x1="1.07" y1="-0.155" x2="1.63" y2="0.155" layer="29"/>
 <rectangle x1="1.07" y1="0.345" x2="1.63" y2="0.655" layer="29"/>
 <rectangle x1="1.07" y1="0.845" x2="1.63" y2="1.155" layer="29"/>
-<wire x1="-1.5" y1="1.3" x2="-1.5" y2="1.5" width="0.13" layer="21"/>
+<wire x1="-1.5" y1="1.4" x2="-1.5" y2="1.5" width="0.13" layer="21"/>
 <wire x1="-1.5" y1="1.5" x2="1.5" y2="1.5" width="0.13" layer="21"/>
-<wire x1="1.5" y1="1.5" x2="1.5" y2="1.3" width="0.13" layer="21"/>
-<wire x1="1.5" y1="-1.3" x2="1.5" y2="-1.5" width="0.13" layer="21"/>
+<wire x1="1.5" y1="1.5" x2="1.5" y2="1.4" width="0.13" layer="21"/>
+<wire x1="1.5" y1="-1.4" x2="1.5" y2="-1.5" width="0.13" layer="21"/>
 <wire x1="1.5" y1="-1.5" x2="-1.5" y2="-1.5" width="0.13" layer="21"/>
-<wire x1="-1.5" y1="-1.5" x2="-1.5" y2="-1.3" width="0.13" layer="21"/>
+<wire x1="-1.5" y1="-1.5" x2="-1.5" y2="-1.4" width="0.13" layer="21"/>
 </package>
 <package name="DF13-6P">
 <pad name="3" x="-0.625" y="0" drill="0.45" shape="long" rot="R90" stop="no"/>
@@ -467,8 +466,8 @@
 </package>
 <package name="0805">
 <description>IPC-SM-782 RES/CAP</description>
-<smd name="1" x="-0.9" y="0" dx="1.2" dy="1.5" layer="1"/>
-<smd name="2" x="0.9" y="0" dx="1.2" dy="1.5" layer="1"/>
+<smd name="1" x="-1" y="0" dx="1" dy="1.5" layer="1"/>
+<smd name="2" x="1" y="0" dx="1" dy="1.5" layer="1"/>
 <text x="-1.5" y="0.7" size="0.5" layer="25" align="top-left">&gt;NAME</text>
 <text x="-1.5" y="-0.7" size="0.5" layer="27">&gt;VALUE</text>
 <wire x1="-1.075" y1="0.7" x2="1.075" y2="0.7" width="0.05" layer="51"/>
@@ -481,15 +480,14 @@
 <wire x1="-1.7" y1="-0.95" x2="-1.7" y2="0.95" width="0.13" layer="21"/>
 </package>
 <package name="0603">
-<smd name="1" x="-0.75" y="0" dx="0.9" dy="1" layer="1"/>
-<smd name="2" x="0.75" y="0" dx="0.9" dy="1" layer="1"/>
+<smd name="1" x="-0.8" y="0" dx="0.8" dy="1" layer="1"/>
+<smd name="2" x="0.8" y="0" dx="0.8" dy="1" layer="1"/>
 <text x="-1.25" y="0.5" size="0.4" layer="25" align="top-left">&gt;NAME</text>
 <text x="-1.25" y="-0.5" size="0.4" layer="27">&gt;VALUE</text>
 <wire x1="-0.85" y1="0.475" x2="0.85" y2="0.475" width="0.05" layer="51"/>
 <wire x1="0.85" y1="0.475" x2="0.85" y2="-0.475" width="0.05" layer="51"/>
 <wire x1="0.85" y1="-0.475" x2="-0.85" y2="-0.475" width="0.05" layer="51"/>
 <wire x1="-0.85" y1="-0.475" x2="-0.85" y2="0.475" width="0.05" layer="51"/>
-<rectangle x1="-0.2" y1="-0.3" x2="0.2" y2="0.3" layer="35"/>
 <wire x1="-1.4" y1="0.7" x2="1.4" y2="0.7" width="0.13" layer="21"/>
 <wire x1="1.4" y1="0.7" x2="1.4" y2="-0.7" width="0.13" layer="21"/>
 <wire x1="1.4" y1="-0.7" x2="-1.4" y2="-0.7" width="0.13" layer="21"/>
@@ -497,8 +495,8 @@
 </package>
 <package name="D0603">
 <description>IPC-SM-782 RES/CAP</description>
-<smd name="A" x="-0.75" y="0" dx="0.9" dy="1" layer="1"/>
-<smd name="C" x="0.75" y="0" dx="0.9" dy="1" layer="1"/>
+<smd name="A" x="-0.8" y="0" dx="0.8" dy="1" layer="1"/>
+<smd name="C" x="0.8" y="0" dx="0.8" dy="1" layer="1"/>
 <text x="-1.2" y="0.5" size="0.4" layer="25" align="top-left">&gt;NAME</text>
 <text x="-1.2" y="-0.5" size="0.4" layer="27">&gt;VALUE</text>
 <text x="1.46" y="-0.85" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
@@ -506,7 +504,6 @@
 <wire x1="0.85" y1="0.475" x2="0.85" y2="-0.475" width="0.05" layer="51"/>
 <wire x1="0.85" y1="-0.475" x2="-0.85" y2="-0.475" width="0.05" layer="51"/>
 <wire x1="-0.85" y1="-0.475" x2="-0.85" y2="0.475" width="0.05" layer="51"/>
-<rectangle x1="-0.2" y1="-0.3" x2="0.2" y2="0.3" layer="35"/>
 <wire x1="-1.4" y1="0.7" x2="1.4" y2="0.7" width="0.13" layer="21"/>
 <wire x1="1.4" y1="0.7" x2="1.4" y2="-0.7" width="0.13" layer="21"/>
 <wire x1="1.4" y1="-0.7" x2="-1.4" y2="-0.7" width="0.13" layer="21"/>
@@ -531,7 +528,7 @@
 <smd name="19" x="2" y="0.25" dx="0.7" dy="0.25" layer="1" stop="no"/>
 <smd name="20" x="2" y="0.75" dx="0.7" dy="0.25" layer="1" stop="no"/>
 <smd name="17" x="2" y="-0.75" dx="0.7" dy="0.25" layer="1" stop="no"/>
-<circle x="2.22" y="1.75" radius="0.15" width="0.13" layer="21"/>
+<circle x="2.3" y="1.8" radius="0.15" width="0.13" layer="21"/>
 <text x="-1.8" y="1.1" size="0.6" layer="25" align="top-left">&gt;NAME</text>
 <text x="-1.8" y="-1.1" size="0.6" layer="27">&gt;VALUE</text>
 <rectangle x1="-1.4" y1="1.025" x2="-1.1" y2="1.775" layer="29"/>
@@ -581,7 +578,7 @@
 <smd name="13" x="-0.25" y="1.95" dx="0.25" dy="0.7" layer="1" stop="no"/>
 <text x="-2.05" y="1.5" size="0.7" layer="25" align="top-left">&gt;NAME</text>
 <text x="-2.05" y="-1.5" size="0.7" layer="27">&gt;VALUE</text>
-<circle x="-2.75" y="-2.25" radius="0.15" width="0.13" layer="21"/>
+<circle x="-2.8" y="-2.3" radius="0.15" width="0.13" layer="21"/>
 <circle x="-1.8" y="0.7" radius="0.45" width="0.3" layer="29"/>
 <circle x="-1.8" y="-0.7" radius="0.45" width="0.3" layer="29"/>
 <circle x="-1.2" y="0" radius="0.45" width="0.3" layer="29"/>
@@ -687,18 +684,18 @@
 <smd name="1" x="-3.9" y="-3" dx="1" dy="2.4" layer="1"/>
 <text x="-4.5" y="2" size="1.2" layer="25" align="top-left">&gt;NAME</text>
 <text x="-4.5" y="-2" size="1.2" layer="27">&gt;VALUE</text>
-<wire x1="-3.15" y1="3" x2="-1.45" y2="3" width="0.13" layer="21"/>
-<wire x1="0.05" y1="3" x2="0.75" y2="3" width="0.13" layer="21"/>
-<wire x1="2.25" y1="3" x2="2.95" y2="3" width="0.13" layer="21"/>
-<wire x1="4.45" y1="3" x2="5" y2="3" width="0.13" layer="21"/>
+<wire x1="-3.05" y1="3" x2="-1.55" y2="3" width="0.13" layer="21"/>
+<wire x1="0.15" y1="3" x2="0.65" y2="3" width="0.13" layer="21"/>
+<wire x1="2.35" y1="3" x2="2.85" y2="3" width="0.13" layer="21"/>
+<wire x1="4.55" y1="3" x2="5" y2="3" width="0.13" layer="21"/>
 <wire x1="5" y1="3" x2="5" y2="-3" width="0.13" layer="21"/>
-<wire x1="5" y1="-3" x2="4.45" y2="-3" width="0.13" layer="21"/>
-<wire x1="-4.65" y1="3" x2="-5" y2="3" width="0.13" layer="21"/>
+<wire x1="5" y1="-3" x2="4.55" y2="-3" width="0.13" layer="21"/>
+<wire x1="-4.75" y1="3" x2="-5" y2="3" width="0.13" layer="21"/>
 <wire x1="-5" y1="3" x2="-5" y2="-3" width="0.13" layer="21"/>
-<wire x1="-5" y1="-3" x2="-4.65" y2="-3" width="0.13" layer="21"/>
-<wire x1="-3.15" y1="-3" x2="-1.45" y2="-3" width="0.13" layer="21"/>
-<wire x1="0.05" y1="-3" x2="0.75" y2="-3" width="0.13" layer="21"/>
-<wire x1="2.25" y1="-3" x2="2.95" y2="-3" width="0.13" layer="21"/>
+<wire x1="-5" y1="-3" x2="-4.75" y2="-3" width="0.13" layer="21"/>
+<wire x1="-3.05" y1="-3" x2="-1.55" y2="-3" width="0.13" layer="21"/>
+<wire x1="0.15" y1="-3" x2="0.65" y2="-3" width="0.13" layer="21"/>
+<wire x1="2.35" y1="-3" x2="2.85" y2="-3" width="0.13" layer="21"/>
 </package>
 <package name="0201P">
 <description>Resistor land pattern from Panasonic product info PDF: http://www.digikey.fi/product-detail/en/ERJ-1GEF2433C/P243KABCT-ND/1467681</description>
@@ -716,14 +713,11 @@
 <wire x1="-0.65" y1="-0.37" x2="-0.65" y2="0.37" width="0.13" layer="21"/>
 </package>
 <package name="1X03_NO_SILK">
-<pad name="1" x="-3.048" y="0" drill="1.3" diameter="2.2" rot="R90"/>
+<pad name="1" x="-3" y="0" drill="1.3" diameter="2.2" rot="R90"/>
 <pad name="2" x="0" y="0" drill="1.3" diameter="2.2" rot="R90"/>
-<pad name="3" x="3.048" y="0" drill="1.3" diameter="2.2" rot="R90"/>
+<pad name="3" x="3" y="0" drill="1.3" diameter="2.2" rot="R90"/>
 <text x="-3.556" y="1.8288" size="0.762" layer="25" ratio="10">&gt;NAME</text>
 <text x="-3.556" y="-1.905" size="0.762" layer="27" align="top-left">&gt;VALUE</text>
-<rectangle x1="2.794" y1="-0.254" x2="3.302" y2="0.254" layer="51"/>
-<rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
-<rectangle x1="-3.302" y1="-0.254" x2="-2.794" y2="0.254" layer="51"/>
 </package>
 <package name="SOD323">
 <smd name="C" x="1.35" y="0" dx="1" dy="0.8" layer="1"/>
@@ -824,12 +818,10 @@
 <pad name="1" x="0" y="0" drill="1" diameter="1.6"/>
 </package>
 <package name="1X02_NO_SILK">
-<pad name="1" x="-1.27" y="0" drill="1.2" diameter="2" rot="R90"/>
-<pad name="2" x="1.27" y="0" drill="1.2" diameter="2" rot="R90"/>
+<pad name="1" x="-1.5" y="0" drill="1.2" diameter="2" rot="R90"/>
+<pad name="2" x="1.5" y="0" drill="1.2" diameter="2" rot="R90"/>
 <text x="-2.6162" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-2.54" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="1.016" y1="-0.254" x2="1.524" y2="0.254" layer="51"/>
-<rectangle x1="-1.524" y1="-0.254" x2="-1.016" y2="0.254" layer="51"/>
 </package>
 </packages>
 <symbols>
@@ -2270,6 +2262,23 @@
 </technology>
 </technologies>
 </device>
+<device name="2K_20" package="0201P">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="P2.00KABCT-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Panasonic Electronic Components" constant="no"/>
+<attribute name="MFG_PART_#" value="ERJ-1GEF2001C" constant="no"/>
+<attribute name="TEMP" value="±200ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+<attribute name="TYPE" value="smt" constant="no"/>
+<attribute name="USD" value="0.11" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="VAR" prefix="Z" uservalue="yes">
@@ -2690,7 +2699,7 @@
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
-<part name="RPU1" library="dubec" deviceset="RES" device="1.6K_20" value="RES1.6K_20"/>
+<part name="RPU1" library="dubec" deviceset="RES" device="2K_20" value="RES2K_20"/>
 <part name="C2" library="dubec" deviceset="CAP" device="22UF_35V" value="22uF"/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
