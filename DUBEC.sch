@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.1.0">
+<eagle version="7.2.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2279,6 +2279,23 @@
 </technology>
 </technologies>
 </device>
+<device name="29.4K_20" package="0201P">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="P29.4KABCT-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Panasonic Electronic Components" constant="no"/>
+<attribute name="MFG_PART_#" value="ERJ-1GEF2942C" constant="no"/>
+<attribute name="TEMP" value="±200ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+<attribute name="TYPE" value="smt" constant="no"/>
+<attribute name="USD" value="0.10" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="VAR" prefix="Z" uservalue="yes">
@@ -2653,7 +2670,7 @@
 <part name="12CB2" library="dubec" deviceset="CAP" device="0.1UF_50V" value="0.1uF"/>
 <part name="12L" library="dubec" deviceset="I" device="WE-HCI_10UH" value="10uH"/>
 <part name="12C1" library="dubec" deviceset="CAP" device="4.7UF_6.3V" value="4.7uF"/>
-<part name="12RT" library="dubec" deviceset="RES" device="48.7K_20" value="RES48.7K_20"/>
+<part name="12RT" library="dubec" deviceset="RES" device="29.4K_20" value="RES29.4K_20"/>
 <part name="12RBOT" library="dubec" deviceset="RES" device="90.9K_20" value="90.9kOhm"/>
 <part name="12RFF" library="dubec" deviceset="RES" device="10K_20" value="10kOhm"/>
 <part name="12CFF" library="dubec" deviceset="CAP" device="33PF_25V" value="33pF"/>
@@ -2668,7 +2685,7 @@
 <part name="5CBIAS" library="dubec" deviceset="CAP" device="4.7PF_50V" value="4.7pF"/>
 <part name="5R1" library="dubec" deviceset="RES" device="1M_20" value="1MOhm"/>
 <part name="5CSS" library="dubec" deviceset="CAP" device="10NF_10V" value="10nF"/>
-<part name="5RT" library="dubec" deviceset="RES" device="41.2K_20" value="RES41.2K_20"/>
+<part name="5RT" library="dubec" deviceset="RES" device="18.2K_20" value="RES18.2K_20"/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="35V_NO" library="supply1" deviceset="V+" device=""/>
 <part name="35V_NC" library="supply1" deviceset="V+" device=""/>

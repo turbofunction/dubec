@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.1.0">
+<eagle version="7.2.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -8,47 +8,47 @@
 </settings>
 <grid distance="0.125" unitdist="mm" unit="mm" style="lines" multiple="8" display="yes" altdistance="0.125" altunitdist="mm" altunit="mm"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="5" fill="1" visible="no" active="yes"/>
 <layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
-<layer number="15" name="Route15" color="14" fill="1" visible="yes" active="yes"/>
+<layer number="15" name="Route15" color="14" fill="1" visible="no" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="yes"/>
-<layer number="21" name="tPlace" color="14" fill="1" visible="no" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="14" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
-<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="yes" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
-<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="yes" active="yes"/>
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
-<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="yes" active="yes"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
-<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
-<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
 <layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
@@ -66,12 +66,12 @@
 <layer number="99" name="SpiceOrder" color="5" fill="1" visible="no" active="no"/>
 <layer number="100" name="Muster" color="7" fill="1" visible="no" active="no"/>
 <layer number="101" name="Patch_Top" color="12" fill="4" visible="no" active="yes"/>
-<layer number="102" name="tPolarity" color="7" fill="1" visible="no" active="yes"/>
+<layer number="102" name="tPolarity" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="103" name="tMap" color="7" fill="1" visible="no" active="yes"/>
 <layer number="104" name="Name" color="16" fill="1" visible="no" active="yes"/>
-<layer number="105" name="tPlate" color="7" fill="1" visible="no" active="yes"/>
+<layer number="105" name="tPlate" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="106" name="bPlate" color="7" fill="1" visible="no" active="yes"/>
-<layer number="107" name="tLabels" color="14" fill="1" visible="no" active="yes"/>
+<layer number="107" name="tLabels" color="14" fill="1" visible="yes" active="yes"/>
 <layer number="108" name="tplace-old" color="10" fill="1" visible="no" active="yes"/>
 <layer number="109" name="ref-old" color="11" fill="1" visible="no" active="yes"/>
 <layer number="110" name="fp0" color="7" fill="1" visible="no" active="yes"/>
@@ -890,13 +890,14 @@ Covered vias can be set in Masks (Limit).
 <attribute name="TOLERANCE" value="±10%" x="31.5" y="10.125" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="TEMP" value="-25°C ~ 85°C" x="31.5" y="10.125" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="12RT" library="dubec" package="0201P" value="RES48.7K_20" x="31" y="6.625" rot="R270">
-<attribute name="DIGIKEY_PART_#" value="P48.7ABCT-ND" x="31" y="6.625" size="1.778" layer="27" rot="R270" display="off"/>
+<element name="12RT" library="dubec" package="0201P" value="RES29.4K_20" x="31" y="6.625" rot="R270">
+<attribute name="DIGIKEY_PART_#" value="P29.4KABCT-ND" x="31" y="6.625" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MANUFACTURER" value="Panasonic Electronic Components" x="31" y="6.625" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="TYPE" value="smt" x="31" y="6.625" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MFG_PART_#" value="ERJ-1GEF48R7C" x="31" y="6.625" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MFG_PART_#" value="ERJ-1GEF2942C" x="31" y="6.625" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="USD" value="0.10" x="31" y="6.625" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="TOLERANCE" value="±1%" x="31" y="6.625" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="TEMP" value="±200ppm/°C" x="31" y="6.625" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="12RBOT" library="dubec" package="0201P" value="90.9kOhm" x="31" y="4.875" rot="R90">
 <attribute name="DIGIKEY_PART_#" value="541-90.9KAABCT-ND" x="31" y="4.875" size="1.778" layer="27" rot="R90" display="off"/>
@@ -1009,11 +1010,11 @@ Covered vias can be set in Masks (Limit).
 <attribute name="TOLERANCE" value="±10%" x="16" y="19.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="TEMP" value="-55°C ~ 125°C" x="16" y="19.5" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="5RT" library="dubec" package="0201P" value="RES41.2K_20" x="17.25" y="19.5" rot="R270">
-<attribute name="DIGIKEY_PART_#" value="P41.2KABCT-ND" x="17.25" y="19.5" size="1.778" layer="27" rot="R270" display="off"/>
+<element name="5RT" library="dubec" package="0201P" value="RES18.2K_20" x="17.25" y="19.5" rot="R270">
+<attribute name="DIGIKEY_PART_#" value="P18.2KABCT-ND" x="17.25" y="19.5" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MANUFACTURER" value="Panasonic Electronic Components" x="17.25" y="19.5" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="TYPE" value="smt" x="17.25" y="19.5" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MFG_PART_#" value="ERJ-1GEF4122C" x="17.25" y="19.5" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MFG_PART_#" value="ERJ-1GEF1822C" x="17.25" y="19.5" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="5LED" library="dubec" package="D0603" value="LEDGREEN_2.8V_5MA" x="32.125" y="19" rot="R90">
 <attribute name="DIGIKEY_PART_#" value="160-1832-1-ND" x="32.125" y="19" size="1.778" layer="27" rot="R90" display="off"/>
