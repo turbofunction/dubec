@@ -290,37 +290,37 @@
 <wire x1="-3.429" y1="-3.25" x2="3.429" y2="-3.25" width="0.13" layer="21"/>
 </package>
 <package name="10-MLF">
-<smd name="8" x="1.35" y="0" dx="0.5" dy="0.25" layer="1" stop="no" thermals="no"/>
-<smd name="9" x="1.35" y="0.5" dx="0.5" dy="0.25" layer="1" stop="no" thermals="no"/>
-<smd name="7" x="1.35" y="-0.5" dx="0.5" dy="0.25" layer="1" stop="no" thermals="no"/>
-<smd name="10" x="1.35" y="1" dx="0.5" dy="0.25" layer="1" stop="no" thermals="no"/>
-<smd name="6" x="1.35" y="-1" dx="0.5" dy="0.25" layer="1" stop="no" thermals="no"/>
-<smd name="3" x="-1.35" y="0" dx="0.5" dy="0.25" layer="1" stop="no" thermals="no"/>
-<smd name="2" x="-1.35" y="0.5" dx="0.5" dy="0.25" layer="1" stop="no" thermals="no"/>
-<smd name="1" x="-1.35" y="1" dx="0.5" dy="0.25" layer="1" stop="no" thermals="no"/>
-<smd name="4" x="-1.35" y="-0.5" dx="0.5" dy="0.25" layer="1" stop="no" thermals="no"/>
-<smd name="5" x="-1.35" y="-1" dx="0.5" dy="0.25" layer="1" stop="no" thermals="no"/>
+<smd name="8" x="1.35" y="0" dx="0.5" dy="0.2" layer="1" stop="no" thermals="no"/>
+<smd name="9" x="1.35" y="0.5" dx="0.5" dy="0.2" layer="1" stop="no" thermals="no"/>
+<smd name="7" x="1.35" y="-0.5" dx="0.5" dy="0.2" layer="1" stop="no" thermals="no"/>
+<smd name="10" x="1.35" y="1" dx="0.5" dy="0.2" layer="1" stop="no" thermals="no"/>
+<smd name="6" x="1.35" y="-1" dx="0.5" dy="0.2" layer="1" stop="no" thermals="no"/>
+<smd name="3" x="-1.35" y="0" dx="0.5" dy="0.2" layer="1" stop="no" thermals="no"/>
+<smd name="2" x="-1.35" y="0.5" dx="0.5" dy="0.2" layer="1" stop="no" thermals="no"/>
+<smd name="1" x="-1.35" y="1" dx="0.5" dy="0.2" layer="1" stop="no" thermals="no"/>
+<smd name="4" x="-1.35" y="-0.5" dx="0.5" dy="0.2" layer="1" stop="no" thermals="no"/>
+<smd name="5" x="-1.35" y="-1" dx="0.5" dy="0.2" layer="1" stop="no" thermals="no"/>
 <smd name="11" x="0" y="0" dx="1.6" dy="2.5" layer="1" stop="no" thermals="no"/>
 <rectangle x1="-0.83" y1="-1.28" x2="0.83" y2="1.28" layer="29"/>
 <text x="-1.3" y="-1.3" size="0.4" layer="25" rot="R90" align="top-left">&gt;NAME</text>
 <text x="1.3" y="-1.3" size="0.4" layer="27" rot="R90">&gt;VALUE</text>
 <circle x="-1.75" y="1.75" radius="0.15" width="0.13" layer="21"/>
-<rectangle x1="-1.63" y1="0.845" x2="-1.07" y2="1.155" layer="29"/>
-<rectangle x1="-1.63" y1="0.345" x2="-1.07" y2="0.655" layer="29"/>
-<rectangle x1="-1.63" y1="-0.155" x2="-1.07" y2="0.155" layer="29"/>
-<rectangle x1="-1.63" y1="-0.655" x2="-1.07" y2="-0.345" layer="29"/>
-<rectangle x1="-1.63" y1="-1.155" x2="-1.07" y2="-0.845" layer="29"/>
-<rectangle x1="1.07" y1="-1.155" x2="1.63" y2="-0.845" layer="29"/>
-<rectangle x1="1.07" y1="-0.655" x2="1.63" y2="-0.345" layer="29"/>
-<rectangle x1="1.07" y1="-0.155" x2="1.63" y2="0.155" layer="29"/>
-<rectangle x1="1.07" y1="0.345" x2="1.63" y2="0.655" layer="29"/>
-<rectangle x1="1.07" y1="0.845" x2="1.63" y2="1.155" layer="29"/>
+<rectangle x1="1.07" y1="0.87" x2="1.63" y2="1.13" layer="29"/>
 <wire x1="-1.5" y1="1.4" x2="-1.5" y2="1.5" width="0.13" layer="21"/>
 <wire x1="-1.5" y1="1.5" x2="1.5" y2="1.5" width="0.13" layer="21"/>
 <wire x1="1.5" y1="1.5" x2="1.5" y2="1.4" width="0.13" layer="21"/>
 <wire x1="1.5" y1="-1.4" x2="1.5" y2="-1.5" width="0.13" layer="21"/>
 <wire x1="1.5" y1="-1.5" x2="-1.5" y2="-1.5" width="0.13" layer="21"/>
 <wire x1="-1.5" y1="-1.5" x2="-1.5" y2="-1.4" width="0.13" layer="21"/>
+<rectangle x1="1.07" y1="0.37" x2="1.63" y2="0.63" layer="29"/>
+<rectangle x1="1.07" y1="-0.13" x2="1.63" y2="0.13" layer="29"/>
+<rectangle x1="1.07" y1="-0.63" x2="1.63" y2="-0.37" layer="29"/>
+<rectangle x1="1.07" y1="-1.13" x2="1.63" y2="-0.87" layer="29"/>
+<rectangle x1="-1.63" y1="-1.13" x2="-1.07" y2="-0.87" layer="29"/>
+<rectangle x1="-1.63" y1="-0.63" x2="-1.07" y2="-0.37" layer="29"/>
+<rectangle x1="-1.63" y1="-0.13" x2="-1.07" y2="0.13" layer="29"/>
+<rectangle x1="-1.63" y1="0.37" x2="-1.07" y2="0.63" layer="29"/>
+<rectangle x1="-1.63" y1="0.87" x2="-1.07" y2="1.13" layer="29"/>
 </package>
 <package name="DF13-6P">
 <pad name="3" x="-0.625" y="0" drill="0.45" shape="long" rot="R90" stop="no"/>
@@ -511,42 +511,31 @@
 </package>
 <package name="QFN-18">
 <smd name="21-22" x="-0.675" y="0" dx="1.15" dy="0.22" layer="1" stop="no"/>
-<smd name="13" x="-0.25" y="-1.4" dx="0.25" dy="0.7" layer="1" stop="no"/>
-<smd name="14" x="0.25" y="-1.4" dx="0.25" dy="0.7" layer="1" stop="no"/>
-<smd name="15" x="0.75" y="-1.4" dx="0.25" dy="0.7" layer="1" stop="no"/>
-<smd name="16" x="1.25" y="-1.4" dx="0.25" dy="0.7" layer="1" stop="no"/>
+<smd name="13" x="-0.25" y="-1.4" dx="0.2" dy="0.7" layer="1" stop="no"/>
+<smd name="14" x="0.25" y="-1.4" dx="0.2" dy="0.7" layer="1" stop="no"/>
+<smd name="15" x="0.75" y="-1.4" dx="0.2" dy="0.7" layer="1" stop="no"/>
+<smd name="16" x="1.25" y="-1.4" dx="0.2" dy="0.7" layer="1" stop="no"/>
 <smd name="11" x="-1.25" y="-1.4" dx="0.25" dy="0.7" layer="1" stop="no"/>
 <smd name="8-9" x="-2" y="0" dx="0.7" dy="0.75" layer="1" stop="no"/>
-<smd name="7" x="-2" y="0.75" dx="0.7" dy="0.25" layer="1" stop="no"/>
-<smd name="10" x="-2" y="-0.75" dx="0.7" dy="0.25" layer="1" stop="no"/>
-<smd name="4" x="-0.25" y="1.4" dx="0.25" dy="0.7" layer="1" stop="no"/>
-<smd name="3" x="0.25" y="1.4" dx="0.25" dy="0.7" layer="1" stop="no"/>
-<smd name="2" x="0.75" y="1.4" dx="0.25" dy="0.7" layer="1" stop="no"/>
-<smd name="1" x="1.25" y="1.4" dx="0.25" dy="0.7" layer="1" stop="no"/>
+<smd name="7" x="-2" y="0.8" dx="0.7" dy="0.25" layer="1" stop="no"/>
+<smd name="10" x="-2" y="-0.8" dx="0.7" dy="0.25" layer="1" stop="no"/>
+<smd name="4" x="-0.25" y="1.4" dx="0.2" dy="0.7" layer="1" stop="no"/>
+<smd name="3" x="0.25" y="1.4" dx="0.2" dy="0.7" layer="1" stop="no"/>
+<smd name="2" x="0.75" y="1.4" dx="0.2" dy="0.7" layer="1" stop="no"/>
+<smd name="1" x="1.25" y="1.4" dx="0.2" dy="0.7" layer="1" stop="no"/>
 <smd name="6" x="-1.25" y="1.4" dx="0.25" dy="0.7" layer="1" stop="no"/>
-<smd name="18" x="2" y="-0.25" dx="0.7" dy="0.25" layer="1" stop="no"/>
-<smd name="19" x="2" y="0.25" dx="0.7" dy="0.25" layer="1" stop="no"/>
-<smd name="20" x="2" y="0.75" dx="0.7" dy="0.25" layer="1" stop="no"/>
-<smd name="17" x="2" y="-0.75" dx="0.7" dy="0.25" layer="1" stop="no"/>
+<smd name="18" x="2" y="-0.25" dx="0.7" dy="0.2" layer="1" stop="no"/>
+<smd name="19" x="2" y="0.25" dx="0.7" dy="0.2" layer="1" stop="no"/>
+<smd name="20" x="2" y="0.75" dx="0.7" dy="0.2" layer="1" stop="no"/>
+<smd name="17" x="2" y="-0.75" dx="0.7" dy="0.2" layer="1" stop="no"/>
 <circle x="2.3" y="1.8" radius="0.15" width="0.13" layer="21"/>
 <text x="-1.8" y="1.1" size="0.6" layer="25" align="top-left">&gt;NAME</text>
 <text x="-1.8" y="-1.1" size="0.6" layer="27">&gt;VALUE</text>
 <rectangle x1="-1.4" y1="1.025" x2="-1.1" y2="1.775" layer="29"/>
-<rectangle x1="-0.4" y1="1.025" x2="-0.1" y2="1.775" layer="29"/>
-<rectangle x1="0.1" y1="1.025" x2="0.4" y2="1.775" layer="29"/>
-<rectangle x1="0.6" y1="1.025" x2="0.9" y2="1.775" layer="29"/>
-<rectangle x1="1.1" y1="1.025" x2="1.4" y2="1.775" layer="29"/>
-<rectangle x1="1.85" y1="0.375" x2="2.15" y2="1.125" layer="29" rot="R90"/>
-<rectangle x1="1.85" y1="-0.125" x2="2.15" y2="0.625" layer="29" rot="R90"/>
-<rectangle x1="1.85" y1="-0.625" x2="2.15" y2="0.125" layer="29" rot="R90"/>
-<rectangle x1="1.85" y1="-1.125" x2="2.15" y2="-0.375" layer="29" rot="R90"/>
-<rectangle x1="1.1" y1="-1.775" x2="1.4" y2="-1.025" layer="29" rot="R180"/>
-<rectangle x1="0.6" y1="-1.775" x2="0.9" y2="-1.025" layer="29" rot="R180"/>
-<rectangle x1="0.1" y1="-1.775" x2="0.4" y2="-1.025" layer="29" rot="R180"/>
-<rectangle x1="-0.4" y1="-1.775" x2="-0.1" y2="-1.025" layer="29" rot="R180"/>
+<rectangle x1="1.125" y1="1.025" x2="1.375" y2="1.775" layer="29"/>
 <rectangle x1="-1.4" y1="-1.775" x2="-1.1" y2="-1.025" layer="29" rot="R180"/>
-<rectangle x1="-2.15" y1="-1.125" x2="-1.85" y2="-0.375" layer="29" rot="R270"/>
-<rectangle x1="-2.15" y1="0.375" x2="-1.85" y2="1.125" layer="29" rot="R270"/>
+<rectangle x1="-2.15" y1="-1.175" x2="-1.85" y2="-0.425" layer="29" rot="R270"/>
+<rectangle x1="-2.15" y1="0.425" x2="-1.85" y2="1.175" layer="29" rot="R270"/>
 <rectangle x1="-2.37" y1="-0.395" x2="-1.63" y2="0.395" layer="29"/>
 <rectangle x1="-1.27" y1="-0.13" x2="-0.08" y2="0.13" layer="29"/>
 <wire x1="-2" y1="1.1" x2="-2" y2="1.5" width="0.13" layer="21"/>
@@ -559,23 +548,34 @@
 <wire x1="-0.9" y1="-1.5" x2="-0.6" y2="-1.5" width="0.13" layer="21"/>
 <wire x1="2" y1="-1.1" x2="2" y2="-1.5" width="0.13" layer="21"/>
 <wire x1="2" y1="-1.5" x2="1.6" y2="-1.5" width="0.13" layer="21"/>
+<rectangle x1="0.625" y1="1.025" x2="0.875" y2="1.775" layer="29"/>
+<rectangle x1="0.125" y1="1.025" x2="0.375" y2="1.775" layer="29"/>
+<rectangle x1="-0.375" y1="1.025" x2="-0.125" y2="1.775" layer="29"/>
+<rectangle x1="-0.375" y1="-1.775" x2="-0.125" y2="-1.025" layer="29"/>
+<rectangle x1="0.125" y1="-1.775" x2="0.375" y2="-1.025" layer="29"/>
+<rectangle x1="0.625" y1="-1.775" x2="0.875" y2="-1.025" layer="29"/>
+<rectangle x1="1.125" y1="-1.775" x2="1.375" y2="-1.025" layer="29"/>
+<rectangle x1="1.875" y1="0.375" x2="2.125" y2="1.125" layer="29" rot="R90"/>
+<rectangle x1="1.875" y1="-0.125" x2="2.125" y2="0.625" layer="29" rot="R90"/>
+<rectangle x1="1.875" y1="-0.625" x2="2.125" y2="0.125" layer="29" rot="R90"/>
+<rectangle x1="1.875" y1="-1.125" x2="2.125" y2="-0.375" layer="29" rot="R90"/>
 </package>
 <package name="DFN-16">
-<smd name="12" x="0.25" y="1.95" dx="0.25" dy="0.7" layer="1" stop="no"/>
-<smd name="11" x="0.75" y="1.95" dx="0.25" dy="0.7" layer="1" stop="no"/>
-<smd name="10" x="1.25" y="1.95" dx="0.25" dy="0.7" layer="1" stop="no"/>
-<smd name="9" x="1.75" y="1.95" dx="0.25" dy="0.7" layer="1" stop="no"/>
-<smd name="6" x="0.75" y="-2" dx="0.25" dy="0.7" layer="1" stop="no"/>
-<smd name="7" x="1.25" y="-2" dx="0.25" dy="0.7" layer="1" stop="no"/>
-<smd name="8" x="1.75" y="-2" dx="0.25" dy="0.7" layer="1" stop="no"/>
-<smd name="1" x="-1.75" y="-2" dx="0.25" dy="0.7" layer="1" stop="no"/>
-<smd name="2" x="-1.25" y="-2" dx="0.25" dy="0.7" layer="1" stop="no"/>
-<smd name="3" x="-0.75" y="-2" dx="0.25" dy="0.7" layer="1" stop="no"/>
+<smd name="12" x="0.25" y="1.95" dx="0.2" dy="0.7" layer="1" stop="no"/>
+<smd name="11" x="0.75" y="1.95" dx="0.2" dy="0.7" layer="1" stop="no"/>
+<smd name="10" x="1.25" y="1.95" dx="0.2" dy="0.7" layer="1" stop="no"/>
+<smd name="9" x="1.75" y="1.95" dx="0.2" dy="0.7" layer="1" stop="no"/>
+<smd name="6" x="0.75" y="-2" dx="0.2" dy="0.7" layer="1" stop="no"/>
+<smd name="7" x="1.25" y="-2" dx="0.2" dy="0.7" layer="1" stop="no"/>
+<smd name="8" x="1.75" y="-2" dx="0.2" dy="0.7" layer="1" stop="no"/>
+<smd name="1" x="-1.75" y="-2" dx="0.2" dy="0.7" layer="1" stop="no"/>
+<smd name="2" x="-1.25" y="-2" dx="0.2" dy="0.7" layer="1" stop="no"/>
+<smd name="3" x="-0.75" y="-2" dx="0.2" dy="0.7" layer="1" stop="no"/>
 <smd name="4-5" x="0" y="-2" dx="0.75" dy="0.7" layer="1" stop="no"/>
-<smd name="16" x="-1.75" y="1.95" dx="0.25" dy="0.7" layer="1" stop="no"/>
-<smd name="15" x="-1.25" y="1.95" dx="0.25" dy="0.7" layer="1" stop="no"/>
-<smd name="14" x="-0.75" y="1.95" dx="0.25" dy="0.7" layer="1" stop="no"/>
-<smd name="13" x="-0.25" y="1.95" dx="0.25" dy="0.7" layer="1" stop="no"/>
+<smd name="16" x="-1.75" y="1.95" dx="0.2" dy="0.7" layer="1" stop="no"/>
+<smd name="15" x="-1.25" y="1.95" dx="0.2" dy="0.7" layer="1" stop="no"/>
+<smd name="14" x="-0.75" y="1.95" dx="0.2" dy="0.7" layer="1" stop="no"/>
+<smd name="13" x="-0.25" y="1.95" dx="0.2" dy="0.7" layer="1" stop="no"/>
 <text x="-2.05" y="1.5" size="0.7" layer="25" align="top-left">&gt;NAME</text>
 <text x="-2.05" y="-1.5" size="0.7" layer="27">&gt;VALUE</text>
 <circle x="-2.8" y="-2.3" radius="0.15" width="0.13" layer="21"/>
@@ -638,21 +638,8 @@
 <circle x="-0.6" y="0" radius="0.14141875" width="0.3" layer="31"/>
 <circle x="0.6" y="0" radius="0.14141875" width="0.3" layer="31"/>
 <smd name="18" x="1.5" y="-0.17" dx="1.3" dy="2.1" layer="1" rot="R180" stop="no" cream="no"/>
-<rectangle x1="-1.91" y1="1.57" x2="-1.59" y2="2.33" layer="29"/>
 <rectangle x1="-0.405" y1="-2.38" x2="0.405" y2="-1.62" layer="29"/>
-<rectangle x1="-1.41" y1="1.57" x2="-1.09" y2="2.33" layer="29"/>
-<rectangle x1="-0.91" y1="1.57" x2="-0.59" y2="2.33" layer="29"/>
-<rectangle x1="-0.41" y1="1.57" x2="-0.09" y2="2.33" layer="29"/>
-<rectangle x1="0.09" y1="1.57" x2="0.41" y2="2.33" layer="29"/>
-<rectangle x1="0.59" y1="1.57" x2="0.91" y2="2.33" layer="29"/>
-<rectangle x1="1.09" y1="1.57" x2="1.41" y2="2.33" layer="29"/>
-<rectangle x1="1.59" y1="1.57" x2="1.91" y2="2.33" layer="29"/>
-<rectangle x1="1.59" y1="-2.38" x2="1.91" y2="-1.62" layer="29"/>
-<rectangle x1="1.09" y1="-2.38" x2="1.41" y2="-1.62" layer="29"/>
-<rectangle x1="0.59" y1="-2.38" x2="0.91" y2="-1.62" layer="29"/>
-<rectangle x1="-0.91" y1="-2.38" x2="-0.59" y2="-1.62" layer="29"/>
-<rectangle x1="-1.41" y1="-2.38" x2="-1.09" y2="-1.62" layer="29"/>
-<rectangle x1="-1.91" y1="-2.38" x2="-1.59" y2="-1.62" layer="29"/>
+<rectangle x1="-1.885" y1="-2.38" x2="-1.615" y2="-1.62" layer="29"/>
 <wire x1="2.1" y1="2" x2="2.5" y2="2" width="0.13" layer="21"/>
 <wire x1="2.5" y1="2" x2="2.5" y2="-2" width="0.13" layer="21"/>
 <wire x1="2.5" y1="-2" x2="2.1" y2="-2" width="0.13" layer="21"/>
@@ -660,6 +647,19 @@
 <wire x1="-2.5" y1="-2" x2="-2.5" y2="2" width="0.13" layer="21"/>
 <wire x1="-2.5" y1="2" x2="-2.1" y2="2" width="0.13" layer="21"/>
 <wire x1="2" y1="-1.1" x2="2" y2="-0.3" width="0.3" layer="29" curve="-233.130102"/>
+<rectangle x1="-1.385" y1="-2.38" x2="-1.115" y2="-1.62" layer="29"/>
+<rectangle x1="-0.885" y1="-2.38" x2="-0.615" y2="-1.62" layer="29"/>
+<rectangle x1="0.615" y1="-2.38" x2="0.885" y2="-1.62" layer="29"/>
+<rectangle x1="1.115" y1="-2.38" x2="1.385" y2="-1.62" layer="29"/>
+<rectangle x1="1.615" y1="-2.38" x2="1.885" y2="-1.62" layer="29"/>
+<rectangle x1="1.615" y1="1.57" x2="1.885" y2="2.33" layer="29"/>
+<rectangle x1="1.115" y1="1.57" x2="1.385" y2="2.33" layer="29"/>
+<rectangle x1="0.615" y1="1.57" x2="0.885" y2="2.33" layer="29"/>
+<rectangle x1="0.115" y1="1.57" x2="0.385" y2="2.33" layer="29"/>
+<rectangle x1="-0.385" y1="1.57" x2="-0.115" y2="2.33" layer="29"/>
+<rectangle x1="-0.885" y1="1.57" x2="-0.615" y2="2.33" layer="29"/>
+<rectangle x1="-1.385" y1="1.57" x2="-1.115" y2="2.33" layer="29"/>
+<rectangle x1="-1.885" y1="1.57" x2="-1.615" y2="2.33" layer="29"/>
 </package>
 <package name="2020Z">
 <smd name="1" x="-2.032" y="0" dx="1.9177" dy="2.794" layer="1"/>
@@ -674,14 +674,14 @@
 <wire x1="2.75" y1="-2.6" x2="2.75" y2="-1.7" width="0.13" layer="21"/>
 </package>
 <package name="IM_GULLWINGS">
-<smd name="6" x="1.5" y="3" dx="1" dy="2.4" layer="1"/>
-<smd name="5" x="3.7" y="3" dx="1" dy="2.4" layer="1"/>
-<smd name="3" x="1.5" y="-3" dx="1" dy="2.4" layer="1"/>
-<smd name="4" x="3.7" y="-3" dx="1" dy="2.4" layer="1"/>
-<smd name="7" x="-0.7" y="3" dx="1" dy="2.4" layer="1"/>
-<smd name="2" x="-0.7" y="-3" dx="1" dy="2.4" layer="1"/>
-<smd name="8" x="-3.9" y="3" dx="1" dy="2.4" layer="1"/>
-<smd name="1" x="-3.9" y="-3" dx="1" dy="2.4" layer="1"/>
+<smd name="6" x="1.5" y="2.9" dx="1" dy="2.2" layer="1"/>
+<smd name="5" x="3.7" y="2.9" dx="1" dy="2.2" layer="1"/>
+<smd name="3" x="1.5" y="-2.9" dx="1" dy="2.2" layer="1"/>
+<smd name="4" x="3.7" y="-2.9" dx="1" dy="2.2" layer="1"/>
+<smd name="7" x="-0.7" y="2.9" dx="1" dy="2.2" layer="1"/>
+<smd name="2" x="-0.7" y="-2.9" dx="1" dy="2.2" layer="1"/>
+<smd name="8" x="-3.9" y="2.9" dx="1" dy="2.2" layer="1"/>
+<smd name="1" x="-3.9" y="-2.9" dx="1" dy="2.2" layer="1"/>
 <text x="-4.5" y="2" size="1.2" layer="25" align="top-left">&gt;NAME</text>
 <text x="-4.5" y="-2" size="1.2" layer="27">&gt;VALUE</text>
 <wire x1="-3.05" y1="3" x2="-1.55" y2="3" width="0.13" layer="21"/>
@@ -699,18 +699,20 @@
 </package>
 <package name="0201P">
 <description>Resistor land pattern from Panasonic product info PDF: http://www.digikey.fi/product-detail/en/ERJ-1GEF2433C/P243KABCT-ND/1467681</description>
-<smd name="1" x="-0.3" y="0" dx="0.3" dy="0.35" layer="1"/>
+<smd name="1" x="-0.3" y="0" dx="0.3" dy="0.35" layer="1" stop="no"/>
 <text x="-0.5" y="0.2" size="0.2" layer="25" ratio="20" align="top-left">&gt;NAME</text>
 <text x="-0.5" y="-0.2" size="0.15" layer="27" ratio="20">&gt;VALUE</text>
 <wire x1="-0.3" y1="0.15" x2="0.3" y2="0.15" width="0.05" layer="51"/>
 <wire x1="0.3" y1="0.15" x2="0.3" y2="-0.15" width="0.05" layer="51"/>
 <wire x1="0.3" y1="-0.15" x2="-0.3" y2="-0.15" width="0.05" layer="51"/>
 <wire x1="-0.3" y1="-0.15" x2="-0.3" y2="0.15" width="0.05" layer="51"/>
-<smd name="2" x="0.3" y="0" dx="0.3" dy="0.35" layer="1"/>
+<smd name="2" x="0.3" y="0" dx="0.3" dy="0.35" layer="1" stop="no"/>
 <wire x1="-0.65" y1="0.37" x2="0.65" y2="0.37" width="0.13" layer="21"/>
 <wire x1="0.65" y1="0.37" x2="0.65" y2="-0.37" width="0.13" layer="21"/>
 <wire x1="0.65" y1="-0.37" x2="-0.65" y2="-0.37" width="0.13" layer="21"/>
 <wire x1="-0.65" y1="-0.37" x2="-0.65" y2="0.37" width="0.13" layer="21"/>
+<rectangle x1="-0.55" y1="-0.25" x2="-0.15" y2="0.25" layer="29"/>
+<rectangle x1="0.15" y1="-0.25" x2="0.55" y2="0.25" layer="29"/>
 </package>
 <package name="1X03_NO_SILK">
 <pad name="1" x="-3" y="0" drill="1.3" diameter="2.2" rot="R90"/>
@@ -779,17 +781,6 @@
 <wire x1="3.5" y1="-1.5" x2="3.5" y2="-3.5" width="0.13" layer="21"/>
 <wire x1="-3.5" y1="3.5" x2="-3.5" y2="1.5" width="0.13" layer="21"/>
 </package>
-<package name="POWERDI_123">
-<smd name="A" x="-1.55" y="0" dx="1.05" dy="1.5" layer="1"/>
-<smd name="C" x="0.85" y="0" dx="2.4" dy="1.5" layer="1"/>
-<text x="-2" y="0.7" size="0.4" layer="25" align="top-left">&gt;NAME</text>
-<text x="-2" y="-0.7" size="0.4" layer="27">&gt;VALUE</text>
-<wire x1="-1.4" y1="0.9" x2="1.4" y2="0.9" width="0.05" layer="49"/>
-<wire x1="1.4" y1="0.9" x2="1.4" y2="-0.9" width="0.05" layer="49"/>
-<wire x1="1.4" y1="-0.9" x2="-1.4" y2="-0.9" width="0.05" layer="49"/>
-<wire x1="-1.4" y1="-0.9" x2="-1.4" y2="0.9" width="0.05" layer="49"/>
-<text x="2" y="-1" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
-</package>
 <package name="IM_J-LEAD">
 <smd name="6" x="1.5" y="2.2" dx="1" dy="2.4" layer="1"/>
 <smd name="5" x="3.7" y="2.2" dx="1" dy="2.4" layer="1"/>
@@ -822,6 +813,17 @@
 <pad name="2" x="1.5" y="0" drill="1.2" diameter="2" rot="R90"/>
 <text x="-2.6162" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-2.54" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="POWERDI_123">
+<smd name="A" x="-1.55" y="0" dx="1.05" dy="1.5" layer="1"/>
+<smd name="C" x="0.85" y="0" dx="2.4" dy="1.5" layer="1"/>
+<text x="-2" y="0.7" size="0.4" layer="25" align="top-left">&gt;NAME</text>
+<text x="-2" y="-0.7" size="0.4" layer="27">&gt;VALUE</text>
+<wire x1="-1.4" y1="0.9" x2="1.4" y2="0.9" width="0.05" layer="51"/>
+<wire x1="1.4" y1="0.9" x2="1.4" y2="-0.9" width="0.05" layer="51"/>
+<wire x1="1.4" y1="-0.9" x2="-1.4" y2="-0.9" width="0.05" layer="51"/>
+<wire x1="-1.4" y1="-0.9" x2="-1.4" y2="0.9" width="0.05" layer="51"/>
+<text x="2" y="-1" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
 </package>
 </packages>
 <symbols>
@@ -1495,10 +1497,9 @@
 <attribute name="DIGIKEY_PART_#" value="720-1209-1-ND" constant="no"/>
 <attribute name="MANUFACTURER" value="Vishay Vitramon" constant="no"/>
 <attribute name="MFG_PART_#" value="VJ0402Y821KNAAJ" constant="no"/>
-<attribute name="TEMP" value="-55°C ~ 125°C" constant="no"/>
+<attribute name="TEMP" value="X7R" constant="no"/>
 <attribute name="TOLERANCE" value="±10%" constant="no"/>
-<attribute name="TYPE" value="smt" constant="no"/>
-<attribute name="USD" value="0.42" constant="no"/>
+<attribute name="USD" value="0.43" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -1519,7 +1520,7 @@
 </technology>
 </technologies>
 </device>
-<device name="1UF_6.3V" package="0201P">
+<device name="1UF_6.3V_02" package="0201P">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -1536,7 +1537,7 @@
 </technology>
 </technologies>
 </device>
-<device name="0.1UF_10V" package="0201P">
+<device name="0.1UF_10V_02" package="0201P">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -1570,7 +1571,7 @@
 </technology>
 </technologies>
 </device>
-<device name="10NF_10V" package="0201P">
+<device name="10NF_10V_02" package="0201P">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -1587,7 +1588,7 @@
 </technology>
 </technologies>
 </device>
-<device name="33PF_25V" package="0201P">
+<device name="33PF_25V_02" package="0201P">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -1688,6 +1689,71 @@
 </technology>
 </technologies>
 </device>
+<device name="10NF_10V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="478-7890-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="AVX Corporation" constant="no"/>
+<attribute name="MFG_PART_#" value="0402ZC103KAT2A" constant="no"/>
+<attribute name="TEMP" value="X7R" constant="no"/>
+<attribute name="TOLERANCE" value="±10%" constant="no"/>
+<attribute name="TYPE" value="smt" constant="no"/>
+<attribute name="USD" value="0.58/100" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="1UF_6.3V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="1276-1513-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Samsung Electro-Mechanics America, Inc" constant="no"/>
+<attribute name="MFG_PART_#" value="CL05B105KQ5NQNC" constant="no"/>
+<attribute name="TEMP" value="X7R" constant="no"/>
+<attribute name="TOLERANCE" value="±10%" constant="no"/>
+<attribute name="USD" value="0.21" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="0.1UF_10V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="587-3769-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Taiyo Yuden" constant="no"/>
+<attribute name="MFG_PART_#" value="LMK105B7104KVHF" constant="no"/>
+<attribute name="TEMP" value="X7R" constant="no"/>
+<attribute name="TOLERANCE" value="±10%" constant="no"/>
+<attribute name="USD" value="1.90/50" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="33PF_25V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="490-6177-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Murata Electronics North America" constant="no"/>
+<attribute name="MFG_PART_#" value="GRM1555C1E330JA01D" constant="no"/>
+<attribute name="TEMP" value="-55°C ~ 125°C" constant="no"/>
+<attribute name="TOLERANCE" value="±5%" constant="no"/>
+<attribute name="USD" value="0.66/50" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="ATTINY13A">
@@ -1748,7 +1814,9 @@
 <attribute name="DIGIKEY_PART_#" value="541-243KLCT-ND" constant="no"/>
 <attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
 <attribute name="MFG_PART_#" value="CRCW0402243KFKED" constant="no"/>
-<attribute name="TYPE" value="smt" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+<attribute name="USD" value="0.78/10" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -1766,7 +1834,7 @@
 </technology>
 </technologies>
 </device>
-<device name="90.9K_16" package="0402">
+<device name="90.9K_16_PREC" package="0402">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -1822,7 +1890,7 @@
 </technology>
 </technologies>
 </device>
-<device name="220_16" package="0402">
+<device name="220_16_PREC" package="0402">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -1832,7 +1900,9 @@
 <attribute name="DIGIKEY_PART_#" value="A102714CT-ND" constant="no"/>
 <attribute name="MANUFACTURER" value="TE Connectivity" constant="no"/>
 <attribute name="MFG_PART_#" value="3-1879208-3" constant="no"/>
-<attribute name="TYPE" value="smt" constant="no"/>
+<attribute name="TEMP" value="±25ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±0.1%" constant="no"/>
+<attribute name="USD" value="0.63" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -2296,6 +2366,135 @@
 </technology>
 </technologies>
 </device>
+<device name="2K_8" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-2.00KYCT-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW04022K00FKEDHP" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+<attribute name="TYPE" value="smt" constant="no"/>
+<attribute name="USD" value="0.16" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="4.22K_16" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-4.22KLCT-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW04024K22FKED" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+<attribute name="USD" value="0.78/10" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="220_16" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-220LCT-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW0402220RFKED" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+<attribute name="USD" value="0.78/10" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="26.1K_16" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-26.1KLCT-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW040226K1FKED" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+<attribute name="USD" value="0.78/10" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="90.9K_16" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-90.9LCT-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW040290R9FKED" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+<attribute name="USD" value="0.78/10" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="29.4K_16" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-29.4KLCT-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW040229K4FKED" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+<attribute name="USD" value="0.78/10" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="10K_8" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-10.0KYCT-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW040210K0FKEDHP" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+<attribute name="USD" value="1.55/10" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="1M_8" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-1.00MYCT-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW04021M00FKEDHP" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+<attribute name="USD" value="1.55/10" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="VAR" prefix="Z" uservalue="yes">
@@ -2670,18 +2869,18 @@
 <part name="12CB2" library="dubec" deviceset="CAP" device="0.1UF_50V" value="0.1uF"/>
 <part name="12L" library="dubec" deviceset="I" device="WE-HCI_10UH" value="10uH"/>
 <part name="12C1" library="dubec" deviceset="CAP" device="4.7UF_6.3V" value="4.7uF"/>
-<part name="12RT" library="dubec" deviceset="RES" device="29.4K_20" value="RES29.4K_20"/>
-<part name="12RBOT" library="dubec" deviceset="RES" device="90.9K_20" value="90.9kOhm"/>
-<part name="12RFF" library="dubec" deviceset="RES" device="10K_20" value="10kOhm"/>
+<part name="12RT" library="dubec" deviceset="RES" device="29.4K_16" value="RES29.4K_16"/>
+<part name="12RBOT" library="dubec" deviceset="RES" device="90.9K_16" value="90.9kOhm"/>
+<part name="12RFF" library="dubec" deviceset="RES" device="10K_8" value="10kOhm"/>
 <part name="12CFF" library="dubec" deviceset="CAP" device="33PF_25V" value="33pF"/>
 <part name="12RFB" library="dubec" deviceset="RES" device="40.2K_20" value="40.2kOhm"/>
-<part name="12CFB" library="dubec" deviceset="CAP" device="820PF_16V" value="820pF"/>
-<part name="12RTOP" library="dubec" deviceset="RES" device="1M_20" value="1MOhm"/>
+<part name="12CFB" library="dubec" deviceset="CAP" device="820PF_50V" value="820pF"/>
+<part name="12RTOP" library="dubec" deviceset="RES" device="1M_8" value="1MOhm"/>
 <part name="12COUT" library="dubec" deviceset="CAP" device="22UF_16V" value="22uF"/>
 <part name="5L" library="dubec" deviceset="I" device="2.2UH" value="2.2uH"/>
 <part name="5CBST" library="dubec" deviceset="CAP" device="0.1UF_10V" value="0.1uF"/>
 <part name="5CVCC" library="dubec" deviceset="CAP" device="1UF_6.3V" value="1uF"/>
-<part name="5R2" library="dubec" deviceset="RES" device="243K_20" value="243kOhm"/>
+<part name="5R2" library="dubec" deviceset="RES" device="243K_16" value="243kOhm"/>
 <part name="5CBIAS" library="dubec" deviceset="CAP" device="4.7PF_50V" value="4.7pF"/>
 <part name="5R1" library="dubec" deviceset="RES" device="1M_20" value="1MOhm"/>
 <part name="5CSS" library="dubec" deviceset="CAP" device="10NF_10V" value="10nF"/>
@@ -2703,20 +2902,20 @@
 <part name="TRRELAY" library="dubec" deviceset="TR_NPN" device="45V_100MA" value="TR_NPN45V_100MA"/>
 <part name="DFB" library="dubec" deviceset="D_SCH" device="30V_0.1A" value="D_SCH30V_0.1A"/>
 <part name="12D" library="dubec" deviceset="D_SCH" device="30V_0.1A" value="D_SCH30V_0.1A"/>
-<part name="RDIV1" library="dubec" deviceset="RES" device="26.1K_20" value="RES26.1K_20"/>
-<part name="RDIV2" library="dubec" deviceset="RES" device="4.42K_20" value="RES4.42K_20"/>
+<part name="RDIV1" library="dubec" deviceset="RES" device="26.1K_16" value="RES26.1K_16"/>
+<part name="RDIV2" library="dubec" deviceset="RES" device="4.22K_16" value="RES4.22K_16"/>
 <part name="5COUT" library="dubec" deviceset="CAP" device="47UF_6.3V-12" value="47uF"/>
 <part name="CMCU" library="dubec" deviceset="CAP" device="10UF_6.3V" value="10uF"/>
 <part name="VAR1" library="dubec" deviceset="VAR" device="39V" value="39V"/>
 <part name="5D" library="dubec" deviceset="D_SCH" device="30V_0.1A" value="D_SCH30V_0.1A"/>
-<part name="RI1" library="dubec" deviceset="RES" device="220_20" value="220"/>
+<part name="RI1" library="dubec" deviceset="RES" device="220_16" value="220"/>
 <part name="JP1" library="dubec" deviceset="M03" device=""/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
-<part name="RPU1" library="dubec" deviceset="RES" device="2K_20" value="RES2K_20"/>
+<part name="RPU1" library="dubec" deviceset="RES" device="2K_8" value="RES2K_8"/>
 <part name="C2" library="dubec" deviceset="CAP" device="22UF_35V" value="22uF"/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
