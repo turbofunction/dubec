@@ -1249,12 +1249,11 @@
 </connects>
 <technologies>
 <technology name="">
-<attribute name="DIGIKEY_PART_#" value="445-14428-1-ND" constant="no"/>
+<attribute name="DIGIKEY_PART_#" value="445-11527-1-ND" constant="no"/>
 <attribute name="MANUFACTURER" value="TDK Corporation" constant="no"/>
-<attribute name="MFG_PART_#" value="C2012X5R1V226M125AC" constant="no"/>
-<attribute name="TEMP" value="-55°C ~ 85°C" constant="no"/>
+<attribute name="MFG_PART_#" value="C2012JB1V226M125AC" constant="no"/>
+<attribute name="TEMP" value="JB" constant="no"/>
 <attribute name="TOLERANCE" value="±20%" constant="no"/>
-<attribute name="TYPE" value="smt" constant="no"/>
 <attribute name="USD" value="1.04" constant="no"/>
 </technology>
 </technologies>
@@ -1420,9 +1419,8 @@
 <attribute name="DIGIKEY_PART_#" value="445-10890-1-ND" constant="no"/>
 <attribute name="MANUFACTURER" value="TDK Corporation" constant="no"/>
 <attribute name="MFG_PART_#" value="C1005JB0J475K050BC" constant="no"/>
-<attribute name="TEMP" value="-25°C ~ 85°C" constant="no"/>
+<attribute name="TEMP" value="JB" constant="no"/>
 <attribute name="TOLERANCE" value="±10%" constant="no"/>
-<attribute name="TYPE" value="smt" constant="no"/>
 <attribute name="USD" value="0.36" constant="no"/>
 </technology>
 </technologies>
@@ -1604,10 +1602,9 @@
 <attribute name="DIGIKEY_PART_#" value="587-3498-1-ND" constant="no"/>
 <attribute name="MANUFACTURER" value="Taiyo Yuden" constant="no"/>
 <attribute name="MFG_PART_#" value="UMK105B7104KV-FR" constant="no"/>
-<attribute name="TEMP" value="-55°C ~ 125°C" constant="no"/>
+<attribute name="TEMP" value="X7R" constant="no"/>
 <attribute name="TOLERANCE" value="±10%" constant="no"/>
-<attribute name="TYPE" value="smt" constant="no"/>
-<attribute name="USD" value="0.34" constant="no"/>
+<attribute name="USD" value="2.29/10" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -1621,9 +1618,9 @@
 <attribute name="DIGIKEY_PART_#" value="587-1779-1-ND" constant="no"/>
 <attribute name="MANUFACTURER" value="Taiyo Yuden" constant="no"/>
 <attribute name="MFG_PART_#" value="JMK212BJ476MG-T" constant="no"/>
+<attribute name="TEMP" value="X5R" constant="no"/>
 <attribute name="TOLERANCE" value="±20%" constant="no"/>
-<attribute name="TYPE" value="smt" constant="no"/>
-<attribute name="USD" value="1.15" constant="no"/>
+<attribute name="USD" value="1.17" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -2486,6 +2483,22 @@
 </technology>
 </technologies>
 </device>
+<device name="26.7K_16" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-26.7KLCT-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW040226K7FKED" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+<attribute name="USD" value="2.11/50" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="VAR" prefix="Z" uservalue="yes">
@@ -2887,7 +2900,7 @@
 <part name="AVRISP" library="dubec" deviceset="AVRISP" device="H3X2" value="AVRISPH3X2"/>
 <part name="DISP" library="dubec" deviceset="D_SCH" device="30V_0.1A" value="D_SCH30V_0.1A"/>
 <part name="12D" library="dubec" deviceset="D_SCH" device="30V_0.1A" value="D_SCH30V_0.1A"/>
-<part name="RDIV1" library="dubec" deviceset="RES" device="26.1K_16" value="RES26.1K_16"/>
+<part name="RDIV1" library="dubec" deviceset="RES" device="26.7K_16" value="RES26.7K_16"/>
 <part name="RDIV2" library="dubec" deviceset="RES" device="4.22K_16" value="RES4.22K_16"/>
 <part name="CMCU" library="dubec" deviceset="CAP" device="10UF_6.3V" value="10uF"/>
 <part name="VAR1" library="dubec" deviceset="VAR" device="39V" value="39V"/>
@@ -2920,9 +2933,10 @@
 <part name="TR_PULLD" library="dubec" deviceset="RES" device="2K_8" value="RES2K_8"/>
 <part name="5REG" library="dubec" deviceset="LM22676" device=""/>
 <part name="5REN" library="dubec" deviceset="RES" device="470K_16"/>
-<part name="5CBOOT" library="dubec" deviceset="CAP" device="10NF_50V"/>
+<part name="5CBOOT" library="dubec" deviceset="CAP" device="10NF_50V" value="10nF"/>
 <part name="5L" library="dubec" deviceset="I" device="WE-HCI_10UH" value="10uH"/>
 <part name="5DSW" library="dubec" deviceset="D_SCH" device="60V_2A"/>
+<part name="5COUT" library="dubec" deviceset="CAP" device="47UF_6.3V-08" value="47uF"/>
 </parts>
 <sheets>
 <sheet>
@@ -2977,7 +2991,7 @@
 <instance part="GND4" gate="1" x="-53.34" y="5.08"/>
 <instance part="GND5" gate="1" x="20.32" y="22.86"/>
 <instance part="GND6" gate="1" x="109.22" y="-45.72"/>
-<instance part="GND9" gate="1" x="71.12" y="50.8"/>
+<instance part="GND9" gate="1" x="83.82" y="50.8"/>
 <instance part="RPU1" gate="G$1" x="-68.58" y="40.64" rot="R90"/>
 <instance part="C2" gate="G$1" x="12.7" y="-12.7" rot="R90"/>
 <instance part="GND8" gate="1" x="-5.08" y="-17.78"/>
@@ -3003,6 +3017,7 @@
 <instance part="5CBOOT" gate="G$1" x="40.64" y="45.72"/>
 <instance part="5L" gate="G$1" x="55.88" y="40.64"/>
 <instance part="5DSW" gate="G$1" x="43.18" y="35.56" rot="R90"/>
+<instance part="5COUT" gate="G$1" x="71.12" y="45.72" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -3087,13 +3102,17 @@
 <label x="73.66" y="43.18" size="1.778" layer="95"/>
 <wire x1="73.66" y1="35.56" x2="73.66" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="40.64" x2="78.74" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="40.64" x2="73.66" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="40.64" x2="71.12" y2="40.64" width="0.1524" layer="91"/>
 <junction x="73.66" y="40.64"/>
+<wire x1="71.12" y1="40.64" x2="73.66" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="55.88" x2="53.34" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="55.88" x2="-15.24" y2="55.88" width="0.1524" layer="91"/>
 <junction x="53.34" y="55.88"/>
 <wire x1="53.34" y1="55.88" x2="53.34" y2="50.8" width="0.1524" layer="91"/>
 <junction x="53.34" y="50.8"/>
+<wire x1="71.12" y1="43.18" x2="71.12" y2="40.64" width="0.1524" layer="91"/>
+<junction x="71.12" y="40.64"/>
+<pinref part="5COUT" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="12V_SW" class="0">
@@ -3346,7 +3365,12 @@
 <pinref part="GND9" gate="1" pin="GND"/>
 <wire x1="63.5" y1="60.96" x2="63.5" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="55.88" x2="71.12" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="71.12" y1="55.88" x2="71.12" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="55.88" x2="83.82" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="55.88" x2="83.82" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="53.34" x2="71.12" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="53.34" x2="71.12" y2="55.88" width="0.1524" layer="91"/>
+<junction x="71.12" y="55.88"/>
+<pinref part="5COUT" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="JP1" gate="G$1" pin="3"/>
