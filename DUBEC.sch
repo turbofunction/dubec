@@ -2499,6 +2499,22 @@
 </technology>
 </technologies>
 </device>
+<device name="1K_8" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-1.00KYCT-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW04021K00FKEDHP" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+<attribute name="USD" value="4.17/50" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="VAR" prefix="Z" uservalue="yes">
@@ -2911,7 +2927,7 @@
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
-<part name="RPU1" library="dubec" deviceset="RES" device="2K_8" value="RES2K_8"/>
+<part name="RPU1" library="dubec" deviceset="RES" device="1K_8" value="RES1K_8"/>
 <part name="C2" library="dubec" deviceset="CAP" device="22UF_35V" value="22uF"/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
@@ -2979,7 +2995,7 @@
 <instance part="12RLED" gate="G$1" x="12.7" y="-38.1"/>
 <instance part="5RLED" gate="G$1" x="60.96" y="30.48"/>
 <instance part="AVRISP" gate="G$1" x="-40.64" y="88.9"/>
-<instance part="DISP" gate="G$1" x="-68.58" y="2.54" rot="R90"/>
+<instance part="DISP" gate="G$1" x="-60.96" y="2.54" rot="R90"/>
 <instance part="12D" gate="G$1" x="10.16" y="-45.72"/>
 <instance part="RDIV1" gate="G$1" x="-22.86" y="5.08" rot="R90"/>
 <instance part="RDIV2" gate="G$1" x="-30.48" y="12.7"/>
@@ -3084,10 +3100,11 @@
 <pinref part="JP1" gate="G$1" pin="2"/>
 <pinref part="DISP" gate="G$1" pin="A"/>
 <wire x1="53.34" y1="50.8" x2="66.04" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="-68.58" y1="0" x2="-68.58" y2="-7.62" width="0.1524" layer="91"/>
-<junction x="-68.58" y="-7.62"/>
+<wire x1="-60.96" y1="0" x2="-60.96" y2="-7.62" width="0.1524" layer="91"/>
+<junction x="-60.96" y="-7.62"/>
 <wire x1="-101.6" y1="-7.62" x2="-68.58" y2="-7.62" width="0.1524" layer="91"/>
-<wire x1="-68.58" y1="-7.62" x2="-17.78" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="-68.58" y1="-7.62" x2="-60.96" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="-60.96" y1="-7.62" x2="-17.78" y2="-7.62" width="0.1524" layer="91"/>
 <wire x1="-17.78" y1="-7.62" x2="-15.24" y2="-5.08" width="0.1524" layer="91"/>
 <wire x1="-15.24" y1="-5.08" x2="-15.24" y2="55.88" width="0.1524" layer="91"/>
 <label x="-60.96" y="-12.7" size="1.778" layer="95"/>
@@ -3113,6 +3130,9 @@
 <wire x1="71.12" y1="43.18" x2="71.12" y2="40.64" width="0.1524" layer="91"/>
 <junction x="71.12" y="40.64"/>
 <pinref part="5COUT" gate="G$1" pin="1"/>
+<pinref part="RPU1" gate="G$1" pin="1"/>
+<wire x1="-68.58" y1="35.56" x2="-68.58" y2="-7.62" width="0.1524" layer="91"/>
+<junction x="-68.58" y="-7.62"/>
 </segment>
 </net>
 <net name="12V_SW" class="0">
@@ -3448,13 +3468,8 @@
 <junction x="-53.34" y="38.1"/>
 <wire x1="-53.34" y1="33.02" x2="-53.34" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="DISP" gate="G$1" pin="C"/>
-<pinref part="RPU1" gate="G$1" pin="1"/>
-<wire x1="-68.58" y1="35.56" x2="-68.58" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="-68.58" y1="33.02" x2="-68.58" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="-68.58" y1="33.02" x2="-58.42" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="-58.42" y1="33.02" x2="-58.42" y2="38.1" width="0.1524" layer="91"/>
-<junction x="-68.58" y="33.02"/>
-<wire x1="-58.42" y1="38.1" x2="-53.34" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="-60.96" y1="38.1" x2="-60.96" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="-60.96" y1="38.1" x2="-53.34" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RESET" class="0">
