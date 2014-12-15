@@ -271,7 +271,7 @@
 <smd name="1" x="-1.35" y="1" dx="0.5" dy="0.2" layer="1" stop="no" thermals="no"/>
 <smd name="4" x="-1.35" y="-0.5" dx="0.5" dy="0.2" layer="1" stop="no" thermals="no"/>
 <smd name="5" x="-1.35" y="-1" dx="0.5" dy="0.2" layer="1" stop="no" thermals="no"/>
-<smd name="11" x="0" y="0" dx="1.6" dy="2.5" layer="1" stop="no" thermals="no"/>
+<smd name="11" x="0" y="0" dx="1.6" dy="2.5" layer="1" stop="no" thermals="no" cream="no"/>
 <rectangle x1="-0.83" y1="-1.28" x2="0.83" y2="1.28" layer="29"/>
 <text x="-1.3" y="-1.3" size="0.4" layer="25" rot="R90" align="top-left">&gt;NAME</text>
 <text x="1.3" y="-1.3" size="0.4" layer="27" rot="R90">&gt;VALUE</text>
@@ -295,6 +295,8 @@
 <vertex x="-1.3" y="1.3"/>
 <vertex x="-1.1" y="1.5"/>
 </polygon>
+<rectangle x1="-0.6" y1="-1.05" x2="0.6" y2="-0.2" layer="31"/>
+<rectangle x1="-0.6" y1="0.2" x2="0.6" y2="1.05" layer="31"/>
 </package>
 <package name="DF13-6P">
 <pad name="3" x="-0.625" y="0" drill="0.45" shape="long" rot="R90" stop="no"/>
@@ -551,14 +553,6 @@
 <vertex x="1.4" y="-1.2"/>
 <vertex x="1" y="-1.2"/>
 </polygon>
-<polygon width="0.2" layer="31">
-<vertex x="-2.1" y="0.2"/>
-<vertex x="-1.7" y="0.2"/>
-<vertex x="-1.7" y="-0.2"/>
-<vertex x="-2.1" y="-0.2"/>
-</polygon>
-<circle x="-0.6" y="0" radius="0.14141875" width="0.3" layer="31"/>
-<circle x="0.6" y="0" radius="0.14141875" width="0.3" layer="31"/>
 <smd name="18" x="1.5" y="-0.17" dx="1.3" dy="2.1" layer="1" rot="R180" stop="no" cream="no"/>
 <rectangle x1="-0.375" y1="-2.35" x2="0.375" y2="-1.65" layer="29"/>
 <rectangle x1="-1.885" y1="-2.38" x2="-1.615" y2="-1.62" layer="29"/>
@@ -767,7 +761,7 @@
 <rectangle x1="0.15" y1="-0.23" x2="0.51" y2="0.23" layer="29"/>
 </package>
 <package name="8-SOIC">
-<smd name="P" x="0" y="0" dx="3.1" dy="2.41" layer="1" stop="no"/>
+<smd name="P" x="0" y="0" dx="3.1" dy="2.41" layer="1" stop="no" cream="no"/>
 <smd name="2" x="-0.635" y="-2.53" dx="0.61" dy="1.4" layer="1"/>
 <smd name="3" x="0.635" y="-2.53" dx="0.61" dy="1.4" layer="1"/>
 <smd name="4" x="1.905" y="-2.53" dx="0.61" dy="1.4" layer="1"/>
@@ -778,7 +772,6 @@
 <smd name="5" x="1.905" y="2.53" dx="0.61" dy="1.4" layer="1"/>
 <text x="-2.032" y="1.27" size="0.762" layer="25" ratio="15" align="top-left">&gt;NAME</text>
 <text x="-2.032" y="-1.27" size="0.762" layer="25" ratio="15">&gt;VALUE</text>
-<rectangle x1="-1.65" y1="-1.3" x2="1.65" y2="1.3" layer="29"/>
 <wire x1="-2.5" y1="2" x2="-2.5" y2="-2" width="0.13" layer="21"/>
 <wire x1="2.5" y1="2" x2="2.5" y2="-2" width="0.13" layer="21"/>
 <wire x1="-0.05" y1="2" x2="0.05" y2="2" width="0.13" layer="21"/>
@@ -788,6 +781,10 @@
 <vertex x="-2.05" y="-1.1"/>
 <vertex x="-2.5" y="-0.65"/>
 </polygon>
+<rectangle x1="-1.4" y1="-1.05" x2="-0.45" y2="1.05" layer="31"/>
+<rectangle x1="-1.65" y1="-1.3" x2="-0.35" y2="1.3" layer="29"/>
+<rectangle x1="0.35" y1="-1.3" x2="1.65" y2="1.3" layer="29"/>
+<rectangle x1="0.45" y1="-1.05" x2="1.4" y2="1.05" layer="31"/>
 </package>
 <package name="SOT1061">
 <smd name="A1" x="-0.65" y="0.85" dx="0.4" dy="0.4" layer="1" stop="no"/>
@@ -3004,7 +3001,7 @@
 <part name="5DSW" library="dubec" deviceset="D_SCH" device="60V_2A"/>
 <part name="5COUT" library="dubec" deviceset="CAP" device="47UF_6.3V-08" value="47uF"/>
 <part name="C4" library="dubec" deviceset="CAP" device="22UF_35V" value="22uF"/>
-<part name="U$6" library="dubec" deviceset="CAP" device="2.2UF_35V"/>
+<part name="5CIN" library="dubec" deviceset="CAP" device="2.2UF_35V"/>
 </parts>
 <sheets>
 <sheet>
@@ -3087,7 +3084,7 @@
 <instance part="5DSW" gate="G$1" x="40.64" y="35.56" rot="R90"/>
 <instance part="5COUT" gate="G$1" x="76.2" y="45.72" rot="R90"/>
 <instance part="C4" gate="G$1" x="27.94" y="-12.7" rot="R90"/>
-<instance part="U$6" gate="G$1" x="-2.54" y="45.72" rot="R90"/>
+<instance part="5CIN" gate="G$1" x="-2.54" y="45.72" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -3133,7 +3130,7 @@
 <junction x="2.54" y="50.8"/>
 <pinref part="C4" gate="G$1" pin="2"/>
 <junction x="27.94" y="-7.62"/>
-<pinref part="U$6" gate="G$1" pin="2"/>
+<pinref part="5CIN" gate="G$1" pin="2"/>
 <junction x="-2.54" y="50.8"/>
 </segment>
 <segment>
@@ -3474,7 +3471,7 @@
 <wire x1="83.82" y1="22.86" x2="91.44" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="83.82" y1="30.48" x2="83.82" y2="22.86" width="0.1524" layer="91"/>
 <junction x="83.82" y="22.86"/>
-<pinref part="U$6" gate="G$1" pin="1"/>
+<pinref part="5CIN" gate="G$1" pin="1"/>
 <wire x1="20.32" y1="22.86" x2="-2.54" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="-2.54" y1="22.86" x2="-2.54" y2="43.18" width="0.1524" layer="91"/>
 <junction x="20.32" y="22.86"/>
