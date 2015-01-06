@@ -21,11 +21,11 @@
 #define TRUE 1
 #define FALSE 0
 
-#define PB_RELAY PORTB0
+#define PIN_RELAY PORTB3
 
-#define PIN_RC PINB1
+#define PIN_RC PORTB1
 
-#define PIN_ADC PINB4
+#define PIN_ADC PORTB4
 
 // ~7.0v as a 10-bit ADC value with 34.52V calibration
 #define MIN_VOLTAGE 208
@@ -34,7 +34,7 @@
 #define rc_high_int() (MCUCR & (_BV(ISC01) | _BV(ISC00)))
 
 // evaluates to true if relay is set to AUX
-#define is_aux() bit_is_set(PORTB, PB_RELAY)
+#define is_aux() bit_is_set(PORTB, PIN_RELAY)
 
 // evaluates to true if timer is counting
 #define is_timer_running() (TCCR0B)
@@ -97,27 +97,27 @@ int main(void) {
 	/*
 	 * Pin configuration:
 	 *
-	 * PB0 (MOSI): relay & AUX LED output
+	 * PB0 (MOSI): floating, pull-up input
 	 * PB1 (PCINT1, INT0, MISO): RC signal digital input (external pull-up)
 	 * PB2 (SCK): floating, pull-up input
-	 * PB3 (NC): floating, pull-up input
+	 * PB3 (ADC3): relay & AUX LED output
 	 * PB4 (ADC2, PCINT4): AUX battery voltage (divider) input (external pull-down)
 	 * PB5 (RESET): floating, pull-up input
 	 *
-	 * Note: normally floating pins PB2 and PB5 are connected to ISP.
+	 * Note: normally floating pins PB0, PB2, and PB5 are connected to ISP.
 	 *
 	 * Default fuses are fine.
 	 */
 
 	// configure relay as the sole output
-	DDRB = _BV(DDB0);
+	DDRB = _BV(PIN_RELAY);
 
 	// active internal pull-ups (but don't high the real outputs, ie. relay)
-	PORTB = _BV(PORTB5) | _BV(PORTB3) | _BV(PORTB2);
+	PORTB = 0b111111 & ~(_BV(PIN_RELAY) | _BV(PIN_RC) | _BV(PIN_ADC));
 
 	// Disable digital input only on relay. Leaving it on for ADC to get
 	// battery disconnect interrupt.
-	DIDR0 = _BV(AIN0D);
+	DIDR0 = _BV(ADC3D);
 
 	// configure ADC to read PB4
 	ADMUX = _BV(MUX1);
@@ -193,9 +193,9 @@ void set_relay(uint8_t aux) {
 	// from capacitor
 	if (!startup_delay && aux != is_aux()) {
 		if (!aux) {
-			PORTB &= ~_BV(PB_RELAY);
+			PORTB &= ~_BV(PIN_RELAY);
 		} else if (batt.aux_ok) {
-			PORTB |= _BV(PB_RELAY);
+			PORTB |= _BV(PIN_RELAY);
 		}
 	}
 	rc.until_flip = 0;
@@ -207,7 +207,7 @@ void aux_bad(void) {
 		batt.until_bad_aux = 0;
 		if (is_aux()) {
 			// fallback to main AND DO IT NOW
-			PORTB &= ~_BV(PB_RELAY);
+			PORTB &= ~_BV(PIN_RELAY);
 			rc.until_flip = 0;
 		}
 		// speed up the ADC sampling rate
@@ -217,7 +217,7 @@ void aux_bad(void) {
 
 /** RC ("PWM") signal handler. */
 ISR (INT0_vect) {
-	if (bit_is_set(PINB, PIN_RC)) {
+	if (bit_is_set(PORTB, PIN_RC)) {
 		// line is high, start timing the high period
 		// reset timer counter
 		TCNT0 = 0;
@@ -358,7 +358,7 @@ ISR (WDT_vect) {
 }
 
 ISR (PCINT0_vect) {
-	if (bit_is_clear(PINB, PIN_ADC)) {
+	if (bit_is_clear(PORTB, PIN_ADC)) {
 		// TODO Too trigger-happy? An ADC confirmation
 		// would only about 0.1ms.
 		aux_bad();
