@@ -729,9 +729,9 @@
 <text x="2" y="-1" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
 </package>
 <package name="SOT-723">
-<smd name="P$1" x="-0.4" y="0.5" dx="0.27" dy="0.52" layer="1" stop="no"/>
-<smd name="P$2" x="0.4" y="0.5" dx="0.27" dy="0.52" layer="1" stop="no"/>
-<smd name="P$3" x="0" y="-0.5" dx="0.36" dy="0.52" layer="1" stop="no"/>
+<smd name="S" x="-0.4" y="0.5" dx="0.27" dy="0.52" layer="1" stop="no"/>
+<smd name="G" x="0.4" y="0.5" dx="0.27" dy="0.52" layer="1" stop="no"/>
+<smd name="D" x="0" y="-0.5" dx="0.36" dy="0.52" layer="1" stop="no"/>
 <wire x1="-0.4" y1="-0.4" x2="-0.6" y2="-0.4" width="0.13" layer="21"/>
 <wire x1="-0.6" y1="-0.4" x2="-0.6" y2="0.05" width="0.13" layer="21"/>
 <wire x1="-0.05" y1="0.4" x2="0.05" y2="0.4" width="0.13" layer="21"/>
@@ -2879,9 +2879,9 @@
 <devices>
 <device name="" package="SOT-723">
 <connects>
-<connect gate="G$1" pin="D" pad="P$3"/>
-<connect gate="G$1" pin="G" pad="P$1"/>
-<connect gate="G$1" pin="S" pad="P$2"/>
+<connect gate="G$1" pin="D" pad="D"/>
+<connect gate="G$1" pin="G" pad="G"/>
+<connect gate="G$1" pin="S" pad="S"/>
 </connects>
 <technologies>
 <technology name="">
