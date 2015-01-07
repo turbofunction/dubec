@@ -45,12 +45,6 @@
 // configure watchdog with the given prescaler
 #define configure_ADC(wdtp) ({ ATOMIC_BLOCK(ATOMIC_RESTORESTATE) { WDTCR = _BV(WDCE); WDTCR = wdtp; } WDTCR |= _BV(WDTIE); })
 
-// Enable ADC and ADC interrupt, conversion will
-// start automatically on noise reduction sleep.
-// TODO doc says adsc must be set for on-sleep conversion, verify behaviour
-// | _BV(ADSC)
-#define start_ADC() ({ ADCSRA |= _BV(ADIE); })
-
 // returns 75% of the value
 #define PC75(a) (((a << 1) + a) >> 2)
 
@@ -98,7 +92,7 @@ int main(void) {
 	 * Pin configuration:
 	 *
 	 * PB0 (MOSI): floating, pull-up input
-	 * PB1 (PCINT1, INT0, MISO): RC signal digital input (external pull-up)
+	 * PB1 (AIN1, PCINT1, INT0, MISO): RC signal digital input (external pull-up)
 	 * PB2 (SCK): floating, pull-up input
 	 * PB3 (ADC3): relay & AUX LED output
 	 * PB4 (ADC2, PCINT4): AUX battery voltage (divider) input (external pull-down)
@@ -112,12 +106,11 @@ int main(void) {
 	// configure relay as the sole output
 	DDRB = _BV(PIN_RELAY);
 
-	// active internal pull-ups (but don't high the real outputs, ie. relay)
+	// active internal pull-ups on floating pins
 	PORTB = 0b111111 & ~(_BV(PIN_RELAY) | _BV(PIN_RC) | _BV(PIN_ADC));
 
-	// Disable digital input only on relay. Leaving it on for ADC to get
-	// battery disconnect interrupt.
-	DIDR0 = _BV(ADC3D);
+	// disable digital inputs
+	DIDR0 = _BV(AIN1D) | _BV(ADC2D) | _BV(ADC3D);
 
 	// configure ADC to read PB4
 	ADMUX = _BV(MUX1);
@@ -125,20 +118,7 @@ int main(void) {
 	// Enable INT0 and pin change interrupts. INT0 is triggered
 	// on low by default, which is the correct mode initially (pin
 	// pulled high).
-	GIMSK = _BV(INT0) | _BV(PCIE);
-
-	/*
-	 * Enable pin change interrupt on battery.
-	 *
-	 * Note 1: could use PCINT on RC signal as well, but as decided now
-	 * to just idle during lows, can use synchoronous INT0 high.
-	 *
-	 * Note 2: disconnect fallback could be done more reliably in hardware,
-	 * but this minor case hardly warrants the extra components. Also,
-	 * the interrupt needn't to be configured yet (only after switch to AUX)
-	 * but to keep things simple.
-	 */
-	PCMSK = _BV(PCINT4);
+	GIMSK = _BV(INT0);
 
 	// enable timer counter overflow interrupt
 	TIMSK0 = _BV(TOIE0);
@@ -217,9 +197,10 @@ void aux_bad(void) {
 
 /** RC ("PWM") signal handler. */
 ISR (INT0_vect) {
-	if (bit_is_set(PORTB, PIN_RC)) {
-		// line is high, start timing the high period
-		// reset timer counter
+	// Digital pin state doesn't work for some reason.
+	if (rc_high_int()) {
+		// Line is high, start timing the high period.
+		// Reset timer counter.
 		TCNT0 = 0;
 		// set timer clock source to 9.6MHz/256 == 37.5kHz = 2.2ms/83
 		TCCR0B = _BV(CS02);
@@ -236,8 +217,8 @@ ISR (INT0_vect) {
 		MCUCR |= _BV(ISC01) | _BV(ISC00);
 
 		if (!counter) {
-			// couldn't read a proper signal, ignore
-			// (invalid signal or a state problem)
+			// Couldn't read a proper signal, ignore.
+			// (Invalid signal or a state problem.)
 			rc.until_flip = 0;
 
 		} else {
@@ -354,22 +335,7 @@ ISR (WDT_vect) {
 		configure_ADC(WDTO_1S);
 	}
 
-	start_ADC();
-}
-
-ISR (PCINT0_vect) {
-	if (bit_is_clear(PORTB, PIN_ADC)) {
-		// TODO Too trigger-happy? An ADC confirmation
-		// would only about 0.1ms.
-		aux_bad();
-
-	} else {
-		// Just speed up sampling, it'll get slowed down if
-		// everything is ok. (There must've been *something*
-		// funny as we've ended up here...)
-		configure_ADC(WDTO_60MS);
-	}
-
-	// start an immediate ADC
-	start_ADC();
+	// Enable ADC and ADC interrupt, conversion will
+	// start automatically on noise reduction sleep.
+	ADCSRA |= _BV(ADIE) | _BV(ADSC);
 }
