@@ -803,6 +803,22 @@
 <text x="-0.85" y="-0.7" size="0.3" layer="27">&gt;VALUE</text>
 <text x="-0.85" y="0.7" size="0.3" layer="25" align="top-left">&gt;NAME</text>
 </package>
+<package name="DO-220AA">
+<smd name="C" x="-0.7" y="0" dx="2.6" dy="2.3" layer="1" stop="no"/>
+<smd name="A" x="1.65" y="0" dx="0.8" dy="1.3" layer="1" stop="no"/>
+<wire x1="-2.2" y1="1.35" x2="1.55" y2="1.35" width="0.13" layer="21"/>
+<wire x1="1.55" y1="1.35" x2="1.55" y2="0.85" width="0.13" layer="21"/>
+<wire x1="1.55" y1="0.85" x2="2.25" y2="0.85" width="0.13" layer="21"/>
+<wire x1="2.25" y1="0.85" x2="2.25" y2="-0.85" width="0.13" layer="21"/>
+<wire x1="2.25" y1="-0.85" x2="1.55" y2="-0.85" width="0.13" layer="21"/>
+<wire x1="1.55" y1="-0.85" x2="1.55" y2="-1.35" width="0.13" layer="21"/>
+<wire x1="1.55" y1="-1.35" x2="-2.2" y2="-1.35" width="0.13" layer="21"/>
+<wire x1="-2.2" y1="-1.35" x2="-2.2" y2="1.35" width="0.13" layer="21"/>
+<text x="-2" y="0.9" size="0.5" layer="25" align="top-left">&gt;NAME</text>
+<text x="-2" y="-0.9" size="0.5" layer="27">&gt;VALUE</text>
+<rectangle x1="-2.05" y1="-1.2" x2="0.65" y2="1.2" layer="29"/>
+<rectangle x1="1.2" y1="-0.7" x2="2.1" y2="0.7" layer="29"/>
+</package>
 </packages>
 <symbols>
 <symbol name="AVRISP">
@@ -1212,6 +1228,20 @@
 <attribute name="MANUFACTURER" value="NXP Semiconductors" constant="no"/>
 <attribute name="MFG_PART_#" value="PMEG6020EPA,115" constant="no"/>
 <attribute name="USD" value="0.48" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="60V_3A" package="DO-220AA">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="SS3P6-M3/84AGICT-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Semiconductor Diodes Division" constant="no"/>
+<attribute name="MFG_PART_#" value="SS3P6-M3/84A" constant="no"/>
+<attribute name="USD" value="1.20" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -3000,7 +3030,7 @@
 <part name="5REN" library="dubec" deviceset="RES" device="470K_16"/>
 <part name="5CBOOT" library="dubec" deviceset="CAP" device="10NF_50V" value="10nF"/>
 <part name="5L" library="dubec" deviceset="I" device="WE-HCI_10UH" value="10uH"/>
-<part name="5DSW" library="dubec" deviceset="D_SCH" device="60V_2A"/>
+<part name="5DSW" library="dubec" deviceset="D_SCH" device="60V_3A" value="D_SCH60V_3A"/>
 <part name="5COUT" library="dubec" deviceset="CAP" device="47UF_6.3V-08" value="47uF"/>
 <part name="C4" library="dubec" deviceset="CAP" device="22UF_35V" value="22uF"/>
 <part name="5CIN" library="dubec" deviceset="CAP" device="2.2UF_35V"/>
