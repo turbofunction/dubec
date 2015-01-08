@@ -293,7 +293,8 @@
 <polygon width="0.13" layer="21">
 <vertex x="-1.5" y="1.5"/>
 <vertex x="-1.3" y="1.3"/>
-<vertex x="-1.1" y="1.5"/>
+<vertex x="-0.9" y="1.3"/>
+<vertex x="-0.7" y="1.5"/>
 </polygon>
 <rectangle x1="-0.6" y1="-1.05" x2="0.6" y2="-0.2" layer="31"/>
 <rectangle x1="-0.6" y1="0.2" x2="0.6" y2="1.05" layer="31"/>
