@@ -272,7 +272,7 @@
 <smd name="4" x="-1.35" y="-0.5" dx="0.5" dy="0.2" layer="1" stop="no" thermals="no"/>
 <smd name="5" x="-1.35" y="-1" dx="0.5" dy="0.2" layer="1" stop="no" thermals="no"/>
 <smd name="11" x="0" y="0" dx="1.6" dy="2.5" layer="1" stop="no" thermals="no" cream="no"/>
-<rectangle x1="-0.83" y1="-1.28" x2="0.83" y2="1.28" layer="29"/>
+<rectangle x1="-0.7" y1="-1.15" x2="0.7" y2="1.15" layer="29"/>
 <text x="-1.3" y="-1.3" size="0.4" layer="25" rot="R90" align="top-left">&gt;NAME</text>
 <text x="1.3" y="-1.3" size="0.4" layer="27" rot="R90">&gt;VALUE</text>
 <rectangle x1="1.07" y1="0.87" x2="1.63" y2="1.13" layer="29"/>
@@ -819,6 +819,42 @@
 <rectangle x1="-2.05" y1="-1.2" x2="0.65" y2="1.2" layer="29"/>
 <rectangle x1="1.2" y1="-0.7" x2="2.1" y2="0.7" layer="29"/>
 </package>
+<package name="H1-0.85MM">
+<pad name="1" x="0" y="0" drill="0.95" diameter="1.5"/>
+</package>
+<package name="D0503">
+<description>Suggested land pattern from Zener diode document: http://www.digikey.fi/product-detail/en/CZRER52C5V1/641-1259-1-ND/1963937</description>
+<smd name="A" x="-0.525" y="0" dx="0.75" dy="0.95" layer="1"/>
+<text x="-0.95" y="0.5" size="0.254" layer="25" align="top-left">&gt;NAME</text>
+<text x="-0.95" y="-0.5" size="0.254" layer="27">&gt;VALUE</text>
+<text x="1.1" y="-0.9" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
+<smd name="C" x="0.525" y="0" dx="0.75" dy="0.95" layer="1"/>
+<wire x1="-0.675" y1="0.425" x2="0.675" y2="0.425" width="0.05" layer="51"/>
+<wire x1="0.675" y1="0.425" x2="0.675" y2="-0.425" width="0.05" layer="51"/>
+<wire x1="0.675" y1="-0.425" x2="-0.675" y2="-0.425" width="0.05" layer="51"/>
+<wire x1="-0.675" y1="-0.425" x2="-0.675" y2="0.425" width="0.05" layer="51"/>
+<wire x1="-1.1" y1="0.7" x2="1.1" y2="0.7" width="0.13" layer="21"/>
+<wire x1="1.1" y1="0.7" x2="1.1" y2="-0.7" width="0.13" layer="21"/>
+<wire x1="1.1" y1="-0.7" x2="-1.1" y2="-0.7" width="0.13" layer="21"/>
+<wire x1="-1.1" y1="-0.7" x2="-1.1" y2="0.7" width="0.13" layer="21"/>
+</package>
+<package name="D2-UFDFN">
+<smd name="A" x="-0.45" y="0" dx="0.6" dy="0.7" layer="1" stop="no"/>
+<smd name="C" x="0.45" y="0" dx="0.6" dy="0.7" layer="1" stop="no"/>
+<wire x1="-0.95" y1="0.55" x2="0.95" y2="0.55" width="0.12" layer="21"/>
+<wire x1="0.95" y1="0.55" x2="0.95" y2="-0.55" width="0.12" layer="21"/>
+<wire x1="0.95" y1="-0.55" x2="-0.95" y2="-0.55" width="0.12" layer="21"/>
+<wire x1="-0.95" y1="-0.55" x2="-0.95" y2="0.55" width="0.12" layer="21"/>
+<text x="-0.6" y="0.35" size="0.2" layer="25" align="top-left">&gt;NAME</text>
+<text x="-0.6" y="-0.35" size="0.2" layer="25">&gt;VALUE</text>
+<rectangle x1="-0.85" y1="-0.45" x2="-0.15" y2="0.45" layer="29"/>
+<rectangle x1="0.15" y1="-0.45" x2="0.85" y2="0.45" layer="29"/>
+<wire x1="-0.5" y1="0.3" x2="0.5" y2="0.3" width="0.05" layer="49"/>
+<wire x1="0.5" y1="0.3" x2="0.5" y2="-0.3" width="0.05" layer="49"/>
+<wire x1="0.5" y1="-0.3" x2="-0.5" y2="-0.3" width="0.05" layer="49"/>
+<wire x1="-0.5" y1="-0.3" x2="-0.5" y2="0.3" width="0.05" layer="49"/>
+<text x="1" y="-0.7" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
+</package>
 </packages>
 <symbols>
 <symbol name="AVRISP">
@@ -840,6 +876,18 @@
 <circle x="5.08" y="0" radius="2.54" width="0.508" layer="94"/>
 <circle x="5.08" y="-7.62" radius="2.54" width="0.508" layer="94"/>
 <pin name="MOSI" x="5.08" y="0" visible="pin" length="middle"/>
+</symbol>
+<symbol name="Z-DIODE">
+<wire x1="-1.27" y1="-1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="-1.27" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="1.27" x2="-1.27" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="1.397" y1="1.27" x2="1.397" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="1.397" y1="-1.27" x2="2.032" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="1.397" y1="1.27" x2="0.762" y2="1.27" width="0.254" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95">&gt;NAME</text>
+<text x="-2.54" y="-2.54" size="1.778" layer="96" align="top-left">&gt;VALUE</text>
+<pin name="A" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
+<pin name="C" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
 </symbol>
 <symbol name="SCH_DIODE">
 <wire x1="-1.27" y1="-1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
@@ -1110,6 +1158,78 @@
 <attribute name="MFG_PART_#" value="A3C-6P-2DSA" constant="no"/>
 <attribute name="RELATED" value="H2002-ND, H9999-ND" constant="no"/>
 <attribute name="TYPE" value="thru-hole" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="D_ZENER">
+<description>Zener diode</description>
+<gates>
+<gate name="G$1" symbol="Z-DIODE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="5.1V" package="D0503">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="641-1259-1-ND" constant="no"/>
+<attribute name="I_RLEAK" value="100nA @ 800mV" constant="no"/>
+<attribute name="MANUFACTURER" value="Comchip Technology" constant="no"/>
+<attribute name="MFG_PART_#" value="CZRER52C5V1" constant="no"/>
+<attribute name="TEMP" value="-55°C ~ 125°C" constant="no"/>
+<attribute name="TOLERANCE" value="±5%" constant="no"/>
+<attribute name="TYPE" value="smt" constant="no"/>
+<attribute name="USD" value="0.40" constant="no"/>
+<attribute name="V_FWD" value="900mV @ 10mA" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="4.3V" package="D2-UFDFN">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="BZT52C4V3LPDICT-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Diodes Incorporated" constant="no"/>
+<attribute name="MFG_PART_#" value="BZT52C4V3LP-7" constant="no"/>
+<attribute name="TEMP" value="-65°C ~ 150°C" constant="no"/>
+<attribute name="TOLERANCE" value="±7%" constant="no"/>
+<attribute name="TYPE" value="smt" constant="no"/>
+<attribute name="USD" value="0.45" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="12V" package="D0402">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="UCLAMP1201PCT-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Semtech" constant="no"/>
+<attribute name="MFG_PART_#" value="UCLAMP1201P.TCT" constant="no"/>
+<attribute name="USD" value="0.35" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="5V" package="D0402">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="641-1295-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Comchip Technology" constant="no"/>
+<attribute name="MFG_PART_#" value="CPDQR5V0U" constant="no"/>
+<attribute name="USD" value="0.40" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -2883,6 +3003,14 @@
 <technology name=""/>
 </technologies>
 </device>
+<device name="0.85MM" package="H1-0.85MM">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="M02">
@@ -2994,12 +3122,12 @@
 <part name="5RLED" library="dubec" deviceset="RES" device="470_8" value="470Ohm"/>
 <part name="AVRISP" library="dubec" deviceset="AVRISP" device="H3X2" value="AVRISPH3X2"/>
 <part name="DISP" library="dubec" deviceset="D_SCH" device="30V_0.1A" value="D_SCH30V_0.1A"/>
-<part name="12D" library="dubec" deviceset="D_SCH" device="30V_0.1A" value="D_SCH30V_0.1A"/>
+<part name="12D" library="dubec" deviceset="D_ZENER" device="12V" value="D_ZENER12V"/>
 <part name="RDIV1" library="dubec" deviceset="RES" device="90.9K_16" value="RES90.9K_16"/>
 <part name="RDIV2" library="dubec" deviceset="RES" device="15.4K_16" value="RES15.4K_16"/>
 <part name="CMCU" library="dubec" deviceset="CAP" device="10UF_6.3V" value="10uF"/>
 <part name="VAR1" library="dubec" deviceset="VAR" device="39V" value="39V"/>
-<part name="5D" library="dubec" deviceset="D_SCH" device="30V_0.1A" value="D_SCH30V_0.1A"/>
+<part name="5D" library="dubec" deviceset="D_ZENER" device="5V" value="D_ZENER5V"/>
 <part name="RI1" library="dubec" deviceset="RES" device="220_16" value="220"/>
 <part name="JP1" library="dubec" deviceset="M03" device=""/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
@@ -3016,8 +3144,8 @@
 <part name="U$3" library="dubec" deviceset="H1" device="0.65MM"/>
 <part name="U$4" library="dubec" deviceset="H1" device="0.65MM"/>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
-<part name="U$1" library="dubec" deviceset="H1" device="0.65MM"/>
-<part name="U$2" library="dubec" deviceset="H1" device="0.65MM"/>
+<part name="U$1" library="dubec" deviceset="H1" device="0.85MM" value="H10.85MM"/>
+<part name="U$2" library="dubec" deviceset="H1" device="0.85MM" value="H10.85MM"/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
 <part name="U$5" library="dubec" deviceset="M02" device=""/>
 <part name="BATT_MAIN" library="dubec" deviceset="M02" device=""/>
