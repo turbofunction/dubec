@@ -3204,6 +3204,7 @@
 <part name="C4" library="dubec" deviceset="CAP" device="22UF_35V" value="22uF"/>
 <part name="5CIN" library="dubec" deviceset="CAP" device="2.2UF_35V"/>
 <part name="12COUT1" library="dubec" deviceset="CAP" device="22UF_16V" value="22uF"/>
+<part name="DI" library="dubec" deviceset="D_ZENER" device="5V" value="D_ZENER5V"/>
 </parts>
 <sheets>
 <sheet>
@@ -3288,6 +3289,7 @@
 <instance part="C4" gate="G$1" x="12.7" y="-12.7" rot="R90"/>
 <instance part="5CIN" gate="G$1" x="-2.54" y="45.72" rot="R90"/>
 <instance part="12COUT1" gate="G$1" x="25.4" y="-20.32" rot="R90"/>
+<instance part="DI" gate="G$1" x="83.82" y="60.96" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -3659,6 +3661,9 @@
 <wire x1="76.2" y1="50.8" x2="76.2" y2="55.88" width="0.1524" layer="91"/>
 <junction x="76.2" y="55.88"/>
 <pinref part="5COUT" gate="G$1" pin="2"/>
+<pinref part="DI" gate="G$1" pin="A"/>
+<wire x1="83.82" y1="55.88" x2="83.82" y2="58.42" width="0.1524" layer="91"/>
+<junction x="83.82" y="55.88"/>
 </segment>
 <segment>
 <pinref part="JP1" gate="G$1" pin="3"/>
@@ -3728,7 +3733,12 @@
 <wire x1="-68.58" y1="66.04" x2="30.48" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="66.04" x2="30.48" y2="78.74" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="78.74" x2="91.44" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="91.44" y1="78.74" x2="91.44" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="78.74" x2="91.44" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="DI" gate="G$1" pin="C"/>
+<wire x1="91.44" y1="66.04" x2="91.44" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="63.5" x2="83.82" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="66.04" x2="91.44" y2="66.04" width="0.1524" layer="91"/>
+<junction x="91.44" y="66.04"/>
 </segment>
 </net>
 <net name="5V_ISP" class="0">
