@@ -6,7 +6,7 @@ janne@savukoski.name
 
                     Part name: DUBEC
                      Revision: 1.1B
-                   Board size: 40mm x 21.375mm
+                   Board size: 38.75mm x 21.375mm
               Board thickness: 1.2mm
                    Board type: FOUR LAYER
        Outer copper thickness: 2 oz.
