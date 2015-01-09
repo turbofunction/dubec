@@ -859,10 +859,10 @@
 <package name="XAL5050">
 <smd name="P$1" x="-1.65" y="0" dx="1.2" dy="4.4" layer="1"/>
 <smd name="P$2" x="1.65" y="0" dx="1.2" dy="4.4" layer="1"/>
-<wire x1="-2.65" y1="2.75" x2="2.65" y2="2.75" width="0.13" layer="21"/>
-<wire x1="2.65" y1="2.75" x2="2.65" y2="-2.75" width="0.13" layer="21"/>
-<wire x1="2.65" y1="-2.75" x2="-2.65" y2="-2.75" width="0.13" layer="21"/>
-<wire x1="-2.65" y1="-2.75" x2="-2.65" y2="2.75" width="0.13" layer="21"/>
+<wire x1="-2.75" y1="2.85" x2="2.75" y2="2.85" width="0.13" layer="21"/>
+<wire x1="2.75" y1="2.85" x2="2.75" y2="-2.85" width="0.13" layer="21"/>
+<wire x1="2.75" y1="-2.85" x2="-2.75" y2="-2.85" width="0.13" layer="21"/>
+<wire x1="-2.75" y1="-2.85" x2="-2.75" y2="2.85" width="0.13" layer="21"/>
 <text x="-2.35" y="-2" size="0.6" layer="27">&gt;VALUE</text>
 <text x="-2.35" y="2" size="0.6" layer="25" align="top-left">&gt;NAME</text>
 </package>
@@ -2848,8 +2848,24 @@
 </connects>
 <technologies>
 <technology name="">
+<attribute name="EURO" value="2.97" constant="no"/>
 <attribute name="MANUFACTURER" value="Coilcraft" constant="no"/>
 <attribute name="MFG_PART_#" value="XAL5050-103MEB" constant="no"/>
+<attribute name="MOUSER_PART_#" value="994-XAL5050-103MEB" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="XAL5050_8.2UH" package="XAL5050">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="EURO" value="2.51" constant="no"/>
+<attribute name="MANUFACTURER" value="Coilcraft" constant="no"/>
+<attribute name="MFG_PART_#" value="XAL5050-822MEB" constant="no"/>
+<attribute name="MOUSER_PART_#" value="994-XAL5050-822MEB" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -3126,7 +3142,7 @@
 <part name="C1" library="dubec" deviceset="CAP" device="22UF_35V" value="22uF"/>
 <part name="12CB1" library="dubec" deviceset="CAP" device="0.1UF_50V" value="0.1uF"/>
 <part name="12CB2" library="dubec" deviceset="CAP" device="0.1UF_50V" value="0.1uF"/>
-<part name="12L" library="dubec" deviceset="I" device="WE-HCI_10UH" value="10uH"/>
+<part name="12L" library="dubec" deviceset="I" device="XAL5050_10UH" value="10uH"/>
 <part name="12C1" library="dubec" deviceset="CAP" device="4.7UF_6.3V" value="4.7uF"/>
 <part name="12RT" library="dubec" deviceset="RES" device="29.4K_16" value="RES29.4K_16"/>
 <part name="12RBOT" library="dubec" deviceset="RES" device="90.9K_16" value="RES90.9K_16"/>
@@ -3182,7 +3198,7 @@
 <part name="5REG" library="dubec" deviceset="LM22676" device=""/>
 <part name="5REN" library="dubec" deviceset="RES" device="470K_16"/>
 <part name="5CBOOT" library="dubec" deviceset="CAP" device="10NF_50V" value="10nF"/>
-<part name="5L" library="dubec" deviceset="I" device="WE-HCI_10UH" value="10uH"/>
+<part name="5L" library="dubec" deviceset="I" device="XAL5050_8.2UH" value="8.2uH"/>
 <part name="5DSW" library="dubec" deviceset="D_SCH" device="60V_3A" value="D_SCH60V_3A"/>
 <part name="5COUT" library="dubec" deviceset="CAP" device="47UF_6.3V-08" value="47uF"/>
 <part name="C4" library="dubec" deviceset="CAP" device="22UF_35V" value="22uF"/>
