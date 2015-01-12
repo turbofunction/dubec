@@ -1438,12 +1438,12 @@
 </connects>
 <technologies>
 <technology name="">
-<attribute name="DIGIKEY_PART_#" value="445-11527-1-ND" constant="no"/>
+<attribute name="DIGIKEY_PART_#" value="445-14428-1-ND" constant="no"/>
 <attribute name="MANUFACTURER" value="TDK Corporation" constant="no"/>
-<attribute name="MFG_PART_#" value="C2012JB1V226M125AC" constant="no"/>
-<attribute name="TEMP" value="JB" constant="no"/>
+<attribute name="MFG_PART_#" value="C2012X5R1V226M125AC" constant="no"/>
+<attribute name="TEMP" value="X5R" constant="no"/>
 <attribute name="TOLERANCE" value="±20%" constant="no"/>
-<attribute name="USD" value="1.04" constant="no"/>
+<attribute name="USD" value="1.09" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -1922,6 +1922,118 @@
 <attribute name="TEMP" value="X5R" constant="no"/>
 <attribute name="TOLERANCE" value="±10%" constant="no"/>
 <attribute name="USD" value="0.28" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="47UF_10V" package="0805">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="445-8239-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="TDK Corporation" constant="no"/>
+<attribute name="MFG_PART_#" value="C2012X5R1A476M125AC" constant="no"/>
+<attribute name="TEMP" value="X5R" constant="no"/>
+<attribute name="TOLERANCE" value="±20%" constant="no"/>
+<attribute name="USD" value="0.93" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="4.7UF_10V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="445-13820-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="TDK Corporation" constant="no"/>
+<attribute name="MFG_PART_#" value="C1005X5R1A475K050BC" constant="no"/>
+<attribute name="TEMP" value="X5R" constant="no"/>
+<attribute name="TOLERANCE" value="±10%" constant="no"/>
+<attribute name="USD" value="0.43" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="0.1UF_100V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="490-10458-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Murata Electronics North America" constant="no"/>
+<attribute name="MFG_PART_#" value="GRM155R62A104KE14D" constant="no"/>
+<attribute name="TEMP" value="X5R" constant="no"/>
+<attribute name="TOLERANCE" value="±10%" constant="no"/>
+<attribute name="USD" value="0.65/10" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="10NF_100V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="445-15935-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="TDK Corporation" constant="no"/>
+<attribute name="MFG_PART_#" value="CGA2B2X8R2A102K050BA" constant="no"/>
+<attribute name="TEMP" value="X8R" constant="no"/>
+<attribute name="TOLERANCE" value="±10%" constant="no"/>
+<attribute name="USD" value="0.26" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="10UF_10V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="1276-1450-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Samsung Electro-Mechanics America, Inc" constant="no"/>
+<attribute name="MFG_PART_#" value="CL05A106MP5NUNC" constant="no"/>
+<attribute name="TEMP" value="X5R" constant="no"/>
+<attribute name="TOLERANCE" value="±20%" constant="no"/>
+<attribute name="USD" value="0.59" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="33PF_100V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="490-7305-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Murata Electronics North America" constant="no"/>
+<attribute name="MFG_PART_#" value="GRM1555C2A330JA01D" constant="no"/>
+<attribute name="TEMP" value="C0G, NP0" constant="no"/>
+<attribute name="TOLERANCE" value="±5%" constant="no"/>
+<attribute name="USD" value="1.50/50" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="820PF_100V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="445-172681-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="TDK Corporation" constant="no"/>
+<attribute name="MFG_PART_#" value="CGA2B1C0G2A821J050BC" constant="no"/>
+<attribute name="TEMP" value="C0G, NP0" constant="no"/>
+<attribute name="TOLERANCE" value="±5%" constant="no"/>
+<attribute name="USD" value="1.27/10" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -3218,18 +3330,18 @@
 <part name="RELAY" library="dubec" deviceset="RELAY_DPDT" device="5A_4.5V" value="RELAY_DPDT5A_4.5V"/>
 <part name="12REG" library="dubec" deviceset="LTC3115-1" device="IDHD" value="LTC3115-1IDHD"/>
 <part name="C1" library="dubec" deviceset="CAP" device="22UF_35V" value="22uF"/>
-<part name="12CB1" library="dubec" deviceset="CAP" device="0.1UF_50V" value="0.1uF"/>
-<part name="12CB2" library="dubec" deviceset="CAP" device="0.1UF_50V" value="0.1uF"/>
+<part name="12CB1" library="dubec" deviceset="CAP" device="0.1UF_100V" value="0.1uF"/>
+<part name="12CB2" library="dubec" deviceset="CAP" device="0.1UF_100V" value="0.1uF"/>
 <part name="12L" library="dubec" deviceset="I" device="XAL5050_10UH" value="10uH"/>
-<part name="12C1" library="dubec" deviceset="CAP" device="4.7UF_6.3V" value="4.7uF"/>
+<part name="12C1" library="dubec" deviceset="CAP" device="4.7UF_10V" value="4.7uF"/>
 <part name="12RT" library="dubec" deviceset="RES" device="29.4K_16" value="RES29.4K_16"/>
 <part name="12RBOT" library="dubec" deviceset="RES" device="90.9K_16" value="RES90.9K_16"/>
 <part name="12RFF" library="dubec" deviceset="RES" device="10K_8" value="RES10K_8"/>
-<part name="12CFF" library="dubec" deviceset="CAP" device="33PF_25V" value="33pF"/>
+<part name="12CFF" library="dubec" deviceset="CAP" device="33PF_100V" value="33pF"/>
 <part name="12RFB" library="dubec" deviceset="RES" device="40.2K_16" value="40.2kOhm"/>
-<part name="12CFB" library="dubec" deviceset="CAP" device="820PF_50V" value="820pF"/>
+<part name="12CFB" library="dubec" deviceset="CAP" device="820PF_100V" value="820pF"/>
 <part name="12RTOP" library="dubec" deviceset="RES" device="1M_16" value="1MOhm"/>
-<part name="12COUT2" library="dubec" deviceset="CAP" device="22UF_16V" value="22uF"/>
+<part name="12COUT2" library="dubec" deviceset="CAP" device="22UF_35V" value="22uF"/>
 <part name="35V_NO" library="supply1" deviceset="V+" device=""/>
 <part name="35V_NC" library="supply1" deviceset="V+" device=""/>
 <part name="5LED" library="dubec" deviceset="LED" device="GREEN_2.8V_5MA"/>
@@ -3244,7 +3356,7 @@
 <part name="12TVS" library="dubec" deviceset="D_ZENER" device="12V" value="D_ZENER12V"/>
 <part name="RDIV1" library="dubec" deviceset="RES" device="90.9K_16" value="RES90.9K_16"/>
 <part name="RDIV2" library="dubec" deviceset="RES" device="15.4K_16" value="RES15.4K_16"/>
-<part name="UC" library="dubec" deviceset="CAP" device="10UF_6.3V" value="10uF"/>
+<part name="UC" library="dubec" deviceset="CAP" device="10UF_10V" value="10uF"/>
 <part name="VAR1" library="dubec" deviceset="VAR" device="39V" value="39V"/>
 <part name="5TVS" library="dubec" deviceset="D_ZENER" device="5V" value="D_ZENER5V"/>
 <part name="SR1" library="dubec" deviceset="RES" device="220_16" value="220"/>
@@ -3273,17 +3385,17 @@
 <part name="TRRPD" library="dubec" deviceset="RES" device="10K_8" value="RES10K_8"/>
 <part name="5REG" library="dubec" deviceset="LM22676" device=""/>
 <part name="5REN" library="dubec" deviceset="RES" device="470K_16"/>
-<part name="5CBOOT" library="dubec" deviceset="CAP" device="10NF_50V" value="10nF"/>
+<part name="5CBOOT" library="dubec" deviceset="CAP" device="10NF_100V" value="10nF"/>
 <part name="5L" library="dubec" deviceset="I" device="XAL5050_8.2UH" value="8.2uH"/>
 <part name="5DSW" library="dubec" deviceset="D_SCH" device="60V_7A" value="D_SCH60V_7A"/>
-<part name="5COUT1" library="dubec" deviceset="CAP" device="47UF_6.3V-08" value="47uF"/>
+<part name="5COUT1" library="dubec" deviceset="CAP" device="47UF_10V" value="47uF"/>
 <part name="C4" library="dubec" deviceset="CAP" device="22UF_35V" value="22uF"/>
 <part name="5CIN" library="dubec" deviceset="CAP" device="2.2UF_35V"/>
-<part name="12COUT1" library="dubec" deviceset="CAP" device="22UF_16V" value="22uF"/>
+<part name="12COUT1" library="dubec" deviceset="CAP" device="22UF_35V" value="22uF"/>
 <part name="STVS" library="dubec" deviceset="D_ZENER" device="5V" value="D_ZENER5V"/>
 <part name="RLR" library="dubec" deviceset="RES" device="1K_16" value="RES1K_16"/>
 <part name="5RRT" library="dubec" deviceset="RES" device="34.8K_16"/>
-<part name="5COUT2" library="dubec" deviceset="CAP" device="47UF_6.3V-08" value="47uF"/>
+<part name="5COUT2" library="dubec" deviceset="CAP" device="47UF_10V" value="47uF"/>
 </parts>
 <sheets>
 <sheet>
@@ -3318,13 +3430,13 @@
 <instance part="12COUT2" gate="G$1" x="20.32" y="-20.32" rot="R90"/>
 <instance part="35V_NO" gate="1" x="-66.04" y="-50.8" rot="R270"/>
 <instance part="35V_NC" gate="1" x="-66.04" y="-45.72" rot="R270"/>
-<instance part="5LED" gate="G$1" x="48.26" y="17.78" rot="R180"/>
+<instance part="5LED" gate="G$1" x="48.26" y="15.24" rot="R180"/>
 <instance part="35V_NO1" gate="1" x="-66.04" y="-48.26" rot="R270"/>
 <instance part="12LED" gate="G$1" x="2.54" y="-38.1" rot="R180"/>
 <instance part="LEDA" gate="G$1" x="-76.2" y="12.7"/>
 <instance part="LEDAR" gate="G$1" x="-86.36" y="12.7" rot="R180"/>
 <instance part="12RLED" gate="G$1" x="12.7" y="-38.1"/>
-<instance part="5RLED" gate="G$1" x="58.42" y="17.78"/>
+<instance part="5RLED" gate="G$1" x="58.42" y="15.24"/>
 <instance part="AVRISP" gate="G$1" x="-40.64" y="88.9"/>
 <instance part="UD" gate="G$1" x="-60.96" y="2.54" rot="R90"/>
 <instance part="12TVS" gate="G$1" x="12.7" y="-45.72"/>
@@ -3332,11 +3444,11 @@
 <instance part="RDIV2" gate="G$1" x="-30.48" y="12.7"/>
 <instance part="UC" gate="G$1" x="-53.34" y="27.94" rot="R90"/>
 <instance part="VAR1" gate="G$1" x="-55.88" y="-55.88" rot="R90"/>
-<instance part="5TVS" gate="G$1" x="58.42" y="25.4"/>
+<instance part="5TVS" gate="G$1" x="58.42" y="20.32"/>
 <instance part="SR1" gate="G$1" x="-68.58" y="55.88" rot="R270"/>
 <instance part="JP1" gate="G$1" x="81.28" y="40.64" rot="R180"/>
 <instance part="GND4" gate="1" x="-53.34" y="5.08"/>
-<instance part="GND5" gate="1" x="25.4" y="7.62"/>
+<instance part="GND5" gate="1" x="25.4" y="5.08"/>
 <instance part="SRPU" gate="G$1" x="-68.58" y="40.64" rot="R90"/>
 <instance part="C2" gate="G$1" x="2.54" y="-12.7" rot="R90"/>
 <instance part="GND8" gate="1" x="-5.08" y="-20.32"/>
@@ -3362,14 +3474,14 @@
 <instance part="5CBOOT" gate="G$1" x="40.64" y="45.72"/>
 <instance part="5L" gate="G$1" x="55.88" y="40.64"/>
 <instance part="5DSW" gate="G$1" x="40.64" y="35.56" rot="R90"/>
-<instance part="5COUT1" gate="G$1" x="50.8" y="30.48" rot="R180"/>
+<instance part="5COUT1" gate="G$1" x="50.8" y="25.4" rot="R180"/>
 <instance part="C4" gate="G$1" x="12.7" y="-12.7" rot="R90"/>
 <instance part="5CIN" gate="G$1" x="-7.62" y="45.72" rot="R90"/>
 <instance part="12COUT1" gate="G$1" x="25.4" y="-20.32" rot="R90"/>
 <instance part="STVS" gate="G$1" x="71.12" y="60.96" rot="R90"/>
 <instance part="RLR" gate="G$1" x="-91.44" y="-25.4"/>
 <instance part="5RRT" gate="G$1" x="5.08" y="30.48" rot="R180"/>
-<instance part="5COUT2" gate="G$1" x="58.42" y="35.56" rot="R180"/>
+<instance part="5COUT2" gate="G$1" x="58.42" y="30.48" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -3430,8 +3542,8 @@
 <pinref part="5RLED" gate="G$1" pin="2"/>
 <junction x="66.04" y="40.64"/>
 <pinref part="5L" gate="G$1" pin="2"/>
-<wire x1="66.04" y1="30.48" x2="66.04" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="35.56" x2="66.04" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="25.4" x2="66.04" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="30.48" x2="66.04" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="40.64" x2="66.04" y2="40.64" width="0.1524" layer="91"/>
 <junction x="66.04" y="40.64"/>
 <wire x1="66.04" y1="50.8" x2="66.04" y2="40.64" width="0.1524" layer="91"/>
@@ -3471,17 +3583,17 @@
 <pinref part="RLR" gate="G$1" pin="1"/>
 <wire x1="-96.52" y1="-25.4" x2="-101.6" y2="-25.4" width="0.1524" layer="91"/>
 <junction x="-101.6" y="-25.4"/>
-<wire x1="60.96" y1="25.4" x2="66.04" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="30.48" x2="53.34" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="20.32" x2="66.04" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="25.4" x2="53.34" y2="25.4" width="0.1524" layer="91"/>
+<junction x="66.04" y="20.32"/>
+<wire x1="63.5" y1="15.24" x2="66.04" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="15.24" x2="66.04" y2="20.32" width="0.1524" layer="91"/>
 <junction x="66.04" y="25.4"/>
-<wire x1="63.5" y1="17.78" x2="66.04" y2="17.78" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="17.78" x2="66.04" y2="25.4" width="0.1524" layer="91"/>
-<junction x="66.04" y="30.48"/>
-<wire x1="66.04" y1="25.4" x2="66.04" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="20.32" x2="66.04" y2="25.4" width="0.1524" layer="91"/>
 <wire x1="-101.6" y1="-27.94" x2="-101.6" y2="-35.56" width="0.1524" layer="91"/>
 <pinref part="5COUT2" gate="G$1" pin="1"/>
-<wire x1="60.96" y1="35.56" x2="66.04" y2="35.56" width="0.1524" layer="91"/>
-<junction x="66.04" y="35.56"/>
+<wire x1="60.96" y1="30.48" x2="66.04" y2="30.48" width="0.1524" layer="91"/>
+<junction x="66.04" y="30.48"/>
 </segment>
 </net>
 <net name="12V_SW" class="0">
@@ -3549,10 +3661,11 @@
 <wire x1="17.78" y1="-38.1" x2="20.32" y2="-38.1" width="0.1524" layer="91"/>
 <junction x="20.32" y="-38.1"/>
 <pinref part="U$5" gate="G$1" pin="2"/>
-<wire x1="27.94" y1="-22.86" x2="40.64" y2="-22.86" width="0.1524" layer="91"/>
 <pinref part="12COUT1" gate="G$1" pin="1"/>
 <junction x="25.4" y="-22.86"/>
 <label x="0" y="-66.04" size="1.778" layer="95"/>
+<wire x1="27.94" y1="-22.86" x2="40.64" y2="-22.86" width="0.1524" layer="91"/>
+<label x="48.26" y="-22.86" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="12V_FB" class="0">
@@ -3751,49 +3864,51 @@
 <pinref part="5TVS" gate="G$1" pin="A"/>
 <pinref part="5LED" gate="G$1" pin="C"/>
 <pinref part="5DSW" gate="G$1" pin="A"/>
-<wire x1="40.64" y1="17.78" x2="43.18" y2="17.78" width="0.1524" layer="91"/>
-<junction x="40.64" y="17.78"/>
+<wire x1="40.64" y1="15.24" x2="43.18" y2="15.24" width="0.1524" layer="91"/>
+<junction x="40.64" y="15.24"/>
 <pinref part="5REG" gate="G$1" pin="GND"/>
-<wire x1="40.64" y1="17.78" x2="40.64" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="33.02" x2="25.4" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="12.7" x2="25.4" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="15.24" x2="40.64" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="33.02" x2="25.4" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="10.16" x2="25.4" y2="7.62" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="38.1" x2="76.2" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="38.1" x2="76.2" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="33.02" x2="71.12" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="71.12" y1="33.02" x2="71.12" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="12.7" x2="71.12" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="33.02" x2="71.12" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="10.16" x2="71.12" y2="10.16" width="0.1524" layer="91"/>
 <pinref part="5CIN" gate="G$1" pin="1"/>
-<wire x1="25.4" y1="12.7" x2="-7.62" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="-7.62" y1="12.7" x2="-7.62" y2="30.48" width="0.1524" layer="91"/>
-<junction x="25.4" y="12.7"/>
+<wire x1="25.4" y1="10.16" x2="-7.62" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="-7.62" y1="10.16" x2="-7.62" y2="30.48" width="0.1524" layer="91"/>
+<junction x="25.4" y="10.16"/>
 <pinref part="5RRT" gate="G$1" pin="2"/>
 <wire x1="-7.62" y1="30.48" x2="-7.62" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="0" y1="30.48" x2="-7.62" y2="30.48" width="0.1524" layer="91"/>
 <junction x="-7.62" y="30.48"/>
-<wire x1="40.64" y1="25.4" x2="55.88" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="45.72" y1="30.48" x2="40.64" y2="30.48" width="0.1524" layer="91"/>
-<junction x="40.64" y="30.48"/>
-<wire x1="40.64" y1="12.7" x2="25.4" y2="12.7" width="0.1524" layer="91"/>
-<junction x="40.64" y="12.7"/>
-<junction x="25.4" y="12.7"/>
+<wire x1="40.64" y1="20.32" x2="55.88" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="25.4" x2="40.64" y2="25.4" width="0.1524" layer="91"/>
+<junction x="40.64" y="25.4"/>
+<wire x1="40.64" y1="10.16" x2="25.4" y2="10.16" width="0.1524" layer="91"/>
+<junction x="40.64" y="10.16"/>
+<junction x="25.4" y="10.16"/>
 <wire x1="71.12" y1="55.88" x2="71.12" y2="33.02" width="0.1524" layer="91"/>
 <junction x="71.12" y="33.02"/>
 <wire x1="71.12" y1="58.42" x2="71.12" y2="55.88" width="0.1524" layer="91"/>
 <junction x="71.12" y="55.88"/>
 <label x="71.12" y="30.48" size="1.778" layer="95"/>
-<wire x1="40.64" y1="30.48" x2="40.64" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="25.4" x2="40.64" y2="17.78" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="30.48" x2="40.64" y2="33.02" width="0.1524" layer="91"/>
-<junction x="40.64" y="25.4"/>
+<wire x1="40.64" y1="25.4" x2="40.64" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="20.32" x2="40.64" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="25.4" x2="40.64" y2="30.48" width="0.1524" layer="91"/>
+<junction x="40.64" y="20.32"/>
 <pinref part="5COUT2" gate="G$1" pin="2"/>
-<wire x1="53.34" y1="35.56" x2="40.64" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="30.48" x2="40.64" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="30.48" x2="53.34" y2="30.48" width="0.1524" layer="91"/>
+<junction x="40.64" y="30.48"/>
 </segment>
 </net>
 <net name="5V_PG" class="0">
 <segment>
 <pinref part="5LED" gate="G$1" pin="A"/>
 <pinref part="5RLED" gate="G$1" pin="1"/>
-<wire x1="53.34" y1="17.78" x2="50.8" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="15.24" x2="50.8" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="LED_5V" class="0">

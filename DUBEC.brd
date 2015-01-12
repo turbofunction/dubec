@@ -8,48 +8,48 @@
 </settings>
 <grid distance="0.125" unitdist="mm" unit="mm" style="lines" multiple="8" display="yes" altdistance="0.125" altunitdist="mm" altunit="mm"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="5" fill="1" visible="no" active="yes"/>
 <layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
 <layer number="15" name="Route15" color="14" fill="1" visible="no" active="yes"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="21" name="tPlace" color="14" fill="1" visible="no" active="yes"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="14" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
-<layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
-<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
-<layer number="32" name="bCream" color="7" fill="5" visible="yes" active="yes"/>
-<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
-<layer number="34" name="bFinish" color="6" fill="6" visible="yes" active="yes"/>
-<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
-<layer number="36" name="bGlue" color="7" fill="5" visible="yes" active="yes"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
-<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
-<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
-<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="yes" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="yes" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="yes" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
@@ -66,12 +66,12 @@
 <layer number="99" name="SpiceOrder" color="5" fill="1" visible="no" active="no"/>
 <layer number="100" name="Muster" color="7" fill="1" visible="no" active="no"/>
 <layer number="101" name="Patch_Top" color="12" fill="4" visible="no" active="yes"/>
-<layer number="102" name="tPolarity" color="7" fill="1" visible="no" active="yes"/>
+<layer number="102" name="tPolarity" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="103" name="tMap" color="7" fill="1" visible="no" active="yes"/>
 <layer number="104" name="Name" color="16" fill="1" visible="no" active="yes"/>
-<layer number="105" name="tPlate" color="7" fill="1" visible="no" active="yes"/>
+<layer number="105" name="tPlate" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="106" name="bPlate" color="7" fill="1" visible="no" active="yes"/>
-<layer number="107" name="tLabels" color="14" fill="1" visible="no" active="yes"/>
+<layer number="107" name="tLabels" color="14" fill="1" visible="yes" active="yes"/>
 <layer number="108" name="tplace-old" color="10" fill="1" visible="no" active="yes"/>
 <layer number="109" name="ref-old" color="11" fill="1" visible="no" active="yes"/>
 <layer number="110" name="fp0" color="7" fill="1" visible="no" active="yes"/>
@@ -755,28 +755,28 @@ Covered vias can be set in Masks (Limit).
 <attribute name="DIGIKEY_PART_#" value="LTC3115IDHD-2#PBF-ND" x="26.39" y="6.765" size="1.778" layer="27" display="off"/>
 </element>
 <element name="C1" library="dubec" package="0805" value="22uF" x="26.5" y="13.375" rot="R180">
-<attribute name="DIGIKEY_PART_#" value="445-11527-1-ND" x="26.5" y="13.375" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="DIGIKEY_PART_#" value="445-14428-1-ND" x="26.5" y="13.375" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MANUFACTURER" value="TDK Corporation" x="26.5" y="13.375" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MFG_PART_#" value="C2012JB1V226M125AC" x="26.5" y="13.375" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="USD" value="1.04" x="26.5" y="13.375" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MFG_PART_#" value="C2012X5R1V226M125AC" x="26.5" y="13.375" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="USD" value="1.09" x="26.5" y="13.375" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="TOLERANCE" value="±20%" x="26.5" y="13.375" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="TEMP" value="JB" x="26.5" y="13.375" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="TEMP" value="X5R" x="26.5" y="13.375" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="12CB1" library="dubec" package="0402" value="0.1uF" x="27.125" y="11.625">
-<attribute name="DIGIKEY_PART_#" value="587-3498-1-ND" x="27.125" y="11.625" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER" value="Taiyo Yuden" x="27.125" y="11.625" size="1.778" layer="27" display="off"/>
-<attribute name="MFG_PART_#" value="UMK105B7104KV-FR" x="27.125" y="11.625" size="1.778" layer="27" display="off"/>
-<attribute name="USD" value="2.29/10" x="27.125" y="11.625" size="1.778" layer="27" display="off"/>
+<attribute name="DIGIKEY_PART_#" value="490-10458-1-ND" x="27.125" y="11.625" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER" value="Murata Electronics North America" x="27.125" y="11.625" size="1.778" layer="27" display="off"/>
+<attribute name="MFG_PART_#" value="GRM155R62A104KE14D" x="27.125" y="11.625" size="1.778" layer="27" display="off"/>
+<attribute name="USD" value="0.65/10" x="27.125" y="11.625" size="1.778" layer="27" display="off"/>
 <attribute name="TOLERANCE" value="±10%" x="27.125" y="11.625" size="1.778" layer="27" display="off"/>
-<attribute name="TEMP" value="X7R" x="27.125" y="11.625" size="1.778" layer="27" display="off"/>
+<attribute name="TEMP" value="X5R" x="27.125" y="11.625" size="1.778" layer="27" display="off"/>
 </element>
 <element name="12CB2" library="dubec" package="0402" value="0.1uF" x="27.5" y="10.25" rot="R180">
-<attribute name="DIGIKEY_PART_#" value="587-3498-1-ND" x="27.5" y="10.25" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MANUFACTURER" value="Taiyo Yuden" x="27.5" y="10.25" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MFG_PART_#" value="UMK105B7104KV-FR" x="27.5" y="10.25" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="USD" value="2.29/10" x="27.5" y="10.25" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="DIGIKEY_PART_#" value="490-10458-1-ND" x="27.5" y="10.25" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MANUFACTURER" value="Murata Electronics North America" x="27.5" y="10.25" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MFG_PART_#" value="GRM155R62A104KE14D" x="27.5" y="10.25" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="USD" value="0.65/10" x="27.5" y="10.25" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="TOLERANCE" value="±10%" x="27.5" y="10.25" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="TEMP" value="X7R" x="27.5" y="10.25" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="TEMP" value="X5R" x="27.5" y="10.25" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="12L" library="dubec" package="XAL5050" value="10uH" x="20.64" y="6.765" rot="R90">
 <attribute name="MANUFACTURER" value="Coilcraft" x="20.64" y="6.765" size="1.778" layer="27" rot="R90" display="off"/>
@@ -785,12 +785,12 @@ Covered vias can be set in Masks (Limit).
 <attribute name="EURO" value="2.97" x="20.64" y="6.765" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="12C1" library="dubec" package="0402" value="4.7uF" x="29.875" y="10.875" rot="R90">
-<attribute name="DIGIKEY_PART_#" value="445-10890-1-ND" x="29.875" y="10.875" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DIGIKEY_PART_#" value="445-13820-1-ND" x="29.875" y="10.875" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MANUFACTURER" value="TDK Corporation" x="29.875" y="10.875" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MFG_PART_#" value="C1005JB0J475K050BC" x="29.875" y="10.875" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="USD" value="0.36" x="29.875" y="10.875" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MFG_PART_#" value="C1005X5R1A475K050BC" x="29.875" y="10.875" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="USD" value="0.43" x="29.875" y="10.875" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="TOLERANCE" value="±10%" x="29.875" y="10.875" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="TEMP" value="JB" x="29.875" y="10.875" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="TEMP" value="X5R" x="29.875" y="10.875" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="12RT" library="dubec" package="0402" value="RES29.4K_16" x="30" y="7.875" rot="R270">
 <attribute name="DIGIKEY_PART_#" value="541-29.4KLCT-ND" x="30" y="7.875" size="1.778" layer="27" rot="R270" display="off"/>
@@ -817,10 +817,10 @@ Covered vias can be set in Masks (Limit).
 <attribute name="TEMP" value="±100ppm/°C" x="29.9375" y="3.75" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="12CFF" library="dubec" package="0402" value="33pF" x="30.625" y="1.875" rot="R270">
-<attribute name="DIGIKEY_PART_#" value="399-11122-1-ND" x="30.625" y="1.875" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MANUFACTURER" value="Kemet" x="30.625" y="1.875" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MFG_PART_#" value="C0402C330J3GACTU" x="30.625" y="1.875" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="USD" value="0.30" x="30.625" y="1.875" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="DIGIKEY_PART_#" value="490-7305-1-ND" x="30.625" y="1.875" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MANUFACTURER" value="Murata Electronics North America" x="30.625" y="1.875" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MFG_PART_#" value="GRM1555C2A330JA01D" x="30.625" y="1.875" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="USD" value="1.50/50" x="30.625" y="1.875" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="TOLERANCE" value="±5%" x="30.625" y="1.875" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="TEMP" value="C0G, NP0" x="30.625" y="1.875" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
@@ -833,12 +833,12 @@ Covered vias can be set in Masks (Limit).
 <attribute name="TEMP" value="±100ppm/°C" x="26.5" y="3" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="12CFB" library="dubec" package="0402" value="820pF" x="27.875" y="3" rot="R90">
-<attribute name="DIGIKEY_PART_#" value="720-1209-1-ND" x="27.875" y="3" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MANUFACTURER" value="Vishay Vitramon" x="27.875" y="3" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MFG_PART_#" value="VJ0402Y821KNAAJ" x="27.875" y="3" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="USD" value="0.43" x="27.875" y="3" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="TOLERANCE" value="±10%" x="27.875" y="3" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="TEMP" value="X7R" x="27.875" y="3" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DIGIKEY_PART_#" value="445-172681-1-ND" x="27.875" y="3" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MANUFACTURER" value="TDK Corporation" x="27.875" y="3" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MFG_PART_#" value="CGA2B1C0G2A821J050BC" x="27.875" y="3" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="USD" value="1.27/10" x="27.875" y="3" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="TOLERANCE" value="±5%" x="27.875" y="3" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="TEMP" value="C0G, NP0" x="27.875" y="3" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="12RTOP" library="dubec" package="0402" value="1MOhm" x="29.25" y="1.875" rot="R270">
 <attribute name="DIGIKEY_PART_#" value="541-1.00MLCT-ND" x="29.25" y="1.875" size="1.778" layer="27" rot="R270" display="off"/>
@@ -849,11 +849,11 @@ Covered vias can be set in Masks (Limit).
 <attribute name="TEMP" value="±100ppm/°C" x="29.25" y="1.875" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="12COUT2" library="dubec" package="0805" value="22uF" x="32.75" y="3.625" rot="R90">
-<attribute name="DIGIKEY_PART_#" value="445-6797-1-ND" x="32.75" y="3.625" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DIGIKEY_PART_#" value="445-14428-1-ND" x="32.75" y="3.625" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MANUFACTURER" value="TDK Corporation" x="32.75" y="3.625" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MFG_PART_#" value="C2012X5R1C226K125AC" x="32.75" y="3.625" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="USD" value="0.67" x="32.75" y="3.625" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="TOLERANCE" value="±10%" x="32.75" y="3.625" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MFG_PART_#" value="C2012X5R1V226M125AC" x="32.75" y="3.625" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="USD" value="1.09" x="32.75" y="3.625" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="TOLERANCE" value="±20%" x="32.75" y="3.625" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="TEMP" value="X5R" x="32.75" y="3.625" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="5LED" library="dubec" package="D0603" value="LEDGREEN_2.8V_5MA" x="33.375" y="9.5" rot="R270">
@@ -940,10 +940,10 @@ Covered vias can be set in Masks (Limit).
 <attribute name="TEMP" value="±100ppm/°C" x="13.125" y="15.375" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="UC" library="dubec" package="0402" value="10uF" x="8" y="17.125" rot="R90">
-<attribute name="DIGIKEY_PART_#" value="1276-1451-1-ND" x="8" y="17.125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DIGIKEY_PART_#" value="1276-1450-1-ND" x="8" y="17.125" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MANUFACTURER" value="Samsung Electro-Mechanics America, Inc" x="8" y="17.125" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MFG_PART_#" value="CL05A106MQ5NUNC" x="8" y="17.125" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="USD" value="0.53" x="8" y="17.125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MFG_PART_#" value="CL05A106MP5NUNC" x="8" y="17.125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="USD" value="0.59" x="8" y="17.125" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="TOLERANCE" value="±20%" x="8" y="17.125" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="TEMP" value="X5R" x="8" y="17.125" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
@@ -982,20 +982,20 @@ Covered vias can be set in Masks (Limit).
 <attribute name="TEMP" value="±200ppm/°C" x="11.125" y="19.375" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="C2" library="dubec" package="0805" value="22uF" x="16.375" y="6.375" rot="R90">
-<attribute name="DIGIKEY_PART_#" value="445-11527-1-ND" x="16.375" y="6.375" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DIGIKEY_PART_#" value="445-14428-1-ND" x="16.375" y="6.375" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MANUFACTURER" value="TDK Corporation" x="16.375" y="6.375" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MFG_PART_#" value="C2012JB1V226M125AC" x="16.375" y="6.375" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="USD" value="1.04" x="16.375" y="6.375" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MFG_PART_#" value="C2012X5R1V226M125AC" x="16.375" y="6.375" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="USD" value="1.09" x="16.375" y="6.375" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="TOLERANCE" value="±20%" x="16.375" y="6.375" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="TEMP" value="JB" x="16.375" y="6.375" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="TEMP" value="X5R" x="16.375" y="6.375" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="C3" library="dubec" package="0805" value="22uF" x="16.375" y="10.25" rot="R270">
-<attribute name="DIGIKEY_PART_#" value="445-11527-1-ND" x="16.375" y="10.25" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="DIGIKEY_PART_#" value="445-14428-1-ND" x="16.375" y="10.25" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MANUFACTURER" value="TDK Corporation" x="16.375" y="10.25" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MFG_PART_#" value="C2012JB1V226M125AC" x="16.375" y="10.25" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="USD" value="1.04" x="16.375" y="10.25" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MFG_PART_#" value="C2012X5R1V226M125AC" x="16.375" y="10.25" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="USD" value="1.09" x="16.375" y="10.25" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="TOLERANCE" value="±20%" x="16.375" y="10.25" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="TEMP" value="JB" x="16.375" y="10.25" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="TEMP" value="X5R" x="16.375" y="10.25" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="U$3" library="dubec" package="H1-0.65MM" value="H10.65MM" x="35.25" y="1.875"/>
 <element name="U$4" library="dubec" package="H1-0.65MM" value="H10.65MM" x="35.375" y="6.375"/>
@@ -1043,12 +1043,12 @@ Covered vias can be set in Masks (Limit).
 <attribute name="MFG_PART_#" value="CRCW0402470KFKED" x="15" y="12.875" size="1.778" layer="27" display="off"/>
 </element>
 <element name="5CBOOT" library="dubec" package="0402" value="10nF" x="21.25" y="20">
-<attribute name="USD" value="0.34" x="21.25" y="20" size="1.778" layer="27" display="off"/>
-<attribute name="TOLERANCE" value="±5%" x="21.25" y="20" size="1.778" layer="27" display="off"/>
-<attribute name="TEMP" value="X7R" x="21.25" y="20" size="1.778" layer="27" display="off"/>
-<attribute name="DIGIKEY_PART_#" value="399-7758-1-ND" x="21.25" y="20" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER" value="Kemet" x="21.25" y="20" size="1.778" layer="27" display="off"/>
-<attribute name="MFG_PART_#" value="C0402C103J5RACTU" x="21.25" y="20" size="1.778" layer="27" display="off"/>
+<attribute name="USD" value="0.26" x="21.25" y="20" size="1.778" layer="27" display="off"/>
+<attribute name="TOLERANCE" value="±10%" x="21.25" y="20" size="1.778" layer="27" display="off"/>
+<attribute name="TEMP" value="X8R" x="21.25" y="20" size="1.778" layer="27" display="off"/>
+<attribute name="DIGIKEY_PART_#" value="445-15935-1-ND" x="21.25" y="20" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER" value="TDK Corporation" x="21.25" y="20" size="1.778" layer="27" display="off"/>
+<attribute name="MFG_PART_#" value="CGA2B2X8R2A102K050BA" x="21.25" y="20" size="1.778" layer="27" display="off"/>
 </element>
 <element name="5L" library="dubec" package="XAL5050" value="8.2uH" x="28.25" y="17.625">
 <attribute name="MANUFACTURER" value="Coilcraft" x="28.25" y="17.625" size="1.778" layer="27" display="off"/>
@@ -1063,20 +1063,20 @@ Covered vias can be set in Masks (Limit).
 <attribute name="MFG_PART_#" value="PDS760-13" x="22.5" y="15.375" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="5COUT1" library="dubec" package="0805" value="47uF" x="32.5" y="14.8125" rot="R270">
-<attribute name="USD" value="1.17" x="32.5" y="14.8125" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="USD" value="0.93" x="32.5" y="14.8125" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="TOLERANCE" value="±20%" x="32.5" y="14.8125" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="DIGIKEY_PART_#" value="587-1779-1-ND" x="32.5" y="14.8125" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MANUFACTURER" value="Taiyo Yuden" x="32.5" y="14.8125" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MFG_PART_#" value="JMK212BJ476MG-T" x="32.5" y="14.8125" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="DIGIKEY_PART_#" value="445-8239-1-ND" x="32.5" y="14.8125" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MANUFACTURER" value="TDK Corporation" x="32.5" y="14.8125" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MFG_PART_#" value="C2012X5R1A476M125AC" x="32.5" y="14.8125" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="TEMP" value="X5R" x="32.5" y="14.8125" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="C4" library="dubec" package="0805" value="22uF" x="14.125" y="10.25" rot="R270">
-<attribute name="USD" value="1.04" x="14.125" y="10.25" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="USD" value="1.09" x="14.125" y="10.25" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="TOLERANCE" value="±20%" x="14.125" y="10.25" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="TEMP" value="JB" x="14.125" y="10.25" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="DIGIKEY_PART_#" value="445-11527-1-ND" x="14.125" y="10.25" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="TEMP" value="X5R" x="14.125" y="10.25" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="DIGIKEY_PART_#" value="445-14428-1-ND" x="14.125" y="10.25" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MANUFACTURER" value="TDK Corporation" x="14.125" y="10.25" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MFG_PART_#" value="C2012JB1V226M125AC" x="14.125" y="10.25" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MFG_PART_#" value="C2012X5R1V226M125AC" x="14.125" y="10.25" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="5CIN" library="dubec" package="0402" value="" x="17.25" y="12.875">
 <attribute name="USD" value="0.28" x="17.25" y="12.875" size="1.778" layer="27" display="off"/>
@@ -1087,12 +1087,12 @@ Covered vias can be set in Masks (Limit).
 <attribute name="MFG_PART_#" value="C1005X5R1V225K050BC" x="17.25" y="12.875" size="1.778" layer="27" display="off"/>
 </element>
 <element name="12COUT1" library="dubec" package="0805" value="22uF" x="23.875" y="1.875" rot="R180">
-<attribute name="USD" value="0.67" x="23.875" y="1.875" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="TOLERANCE" value="±10%" x="23.875" y="1.875" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="USD" value="1.09" x="23.875" y="1.875" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="TOLERANCE" value="±20%" x="23.875" y="1.875" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="TEMP" value="X5R" x="23.875" y="1.875" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="DIGIKEY_PART_#" value="445-6797-1-ND" x="23.875" y="1.875" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="DIGIKEY_PART_#" value="445-14428-1-ND" x="23.875" y="1.875" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MANUFACTURER" value="TDK Corporation" x="23.875" y="1.875" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MFG_PART_#" value="C2012X5R1C226K125AC" x="23.875" y="1.875" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MFG_PART_#" value="C2012X5R1V226M125AC" x="23.875" y="1.875" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="STVS" library="dubec" package="D0402" value="D_ZENER5V" x="35.125" y="19.5">
 <attribute name="USD" value="0.40" x="35.125" y="19.5" size="1.778" layer="27" display="off"/>
@@ -1117,12 +1117,12 @@ Covered vias can be set in Masks (Limit).
 <attribute name="MFG_PART_#" value="CRCW040234K8FKED" x="23.625" y="20" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="5COUT2" library="dubec" package="0805" value="47uF" x="32.5" y="18.75" rot="R90">
-<attribute name="USD" value="1.17" x="32.5" y="18.75" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="USD" value="0.93" x="32.5" y="18.75" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="TOLERANCE" value="±20%" x="32.5" y="18.75" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="TEMP" value="X5R" x="32.5" y="18.75" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="DIGIKEY_PART_#" value="587-1779-1-ND" x="32.5" y="18.75" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MANUFACTURER" value="Taiyo Yuden" x="32.5" y="18.75" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MFG_PART_#" value="JMK212BJ476MG-T" x="32.5" y="18.75" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DIGIKEY_PART_#" value="445-8239-1-ND" x="32.5" y="18.75" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MANUFACTURER" value="TDK Corporation" x="32.5" y="18.75" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MFG_PART_#" value="C2012X5R1A476M125AC" x="32.5" y="18.75" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 </elements>
 <signals>
