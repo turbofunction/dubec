@@ -197,8 +197,7 @@ void aux_bad(void) {
 
 /** RC ("PWM") signal handler. */
 ISR (INT0_vect) {
-	// Digital pin state doesn't work for some reason.
-	if (rc_high_int()) {
+	if (rc_high_int()) { // Maybe more reliable than PINB value...
 		// Line is high, start timing the high period.
 		// Reset timer counter.
 		TCNT0 = 0;
