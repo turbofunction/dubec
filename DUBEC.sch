@@ -3596,34 +3596,7 @@
 <junction x="66.04" y="30.48"/>
 </segment>
 </net>
-<net name="12V_SW" class="0">
-<segment>
-<pinref part="12REG" gate="G$1" pin="BST2"/>
-<pinref part="12CB2" gate="G$1" pin="1"/>
-<wire x1="91.44" y1="-35.56" x2="81.28" y2="-30.48" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="-30.48" x2="81.28" y2="-5.08" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="-5.08" x2="58.42" y2="-5.08" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="12REG" gate="G$1" pin="SW2"/>
-<pinref part="12CB2" gate="G$1" pin="2"/>
-<pinref part="12L" gate="G$1" pin="1"/>
-<wire x1="58.42" y1="2.54" x2="63.5" y2="2.54" width="0.1524" layer="91"/>
-<wire x1="63.5" y1="2.54" x2="68.58" y2="2.54" width="0.1524" layer="91"/>
-<wire x1="63.5" y1="2.54" x2="63.5" y2="-17.78" width="0.1524" layer="91"/>
-<wire x1="63.5" y1="-17.78" x2="60.96" y2="-20.32" width="0.1524" layer="91"/>
-<junction x="63.5" y="2.54"/>
-</segment>
-<segment>
-<pinref part="12CB1" gate="G$1" pin="2"/>
-<pinref part="12L" gate="G$1" pin="2"/>
-<wire x1="93.98" y1="2.54" x2="88.9" y2="2.54" width="0.1524" layer="91"/>
-<pinref part="12REG" gate="G$1" pin="SW1"/>
-<wire x1="88.9" y1="2.54" x2="83.82" y2="2.54" width="0.1524" layer="91"/>
-<wire x1="88.9" y1="2.54" x2="88.9" y2="-17.78" width="0.1524" layer="91"/>
-<wire x1="88.9" y1="-17.78" x2="91.44" y2="-20.32" width="0.1524" layer="91"/>
-<junction x="88.9" y="2.54"/>
-</segment>
+<net name="12V_BST1" class="0">
 <segment>
 <pinref part="12REG" gate="G$1" pin="BST1"/>
 <pinref part="12CB1" gate="G$1" pin="1"/>
@@ -4084,7 +4057,7 @@
 <wire x1="17.78" y1="22.86" x2="17.78" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="BOOT" class="0">
+<net name="5BOOT" class="0">
 <segment>
 <pinref part="5REG" gate="G$1" pin="BOOT"/>
 <pinref part="5CBOOT" gate="G$1" pin="1"/>
@@ -4111,6 +4084,39 @@
 <pinref part="5REG" gate="G$1" pin="RT/SYNC"/>
 <wire x1="10.16" y1="33.02" x2="10.16" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="5RRT" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="12V_SW1" class="0">
+<segment>
+<pinref part="12CB1" gate="G$1" pin="2"/>
+<pinref part="12L" gate="G$1" pin="2"/>
+<wire x1="93.98" y1="2.54" x2="88.9" y2="2.54" width="0.1524" layer="91"/>
+<pinref part="12REG" gate="G$1" pin="SW1"/>
+<wire x1="88.9" y1="2.54" x2="83.82" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="2.54" x2="88.9" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="-17.78" x2="91.44" y2="-20.32" width="0.1524" layer="91"/>
+<junction x="88.9" y="2.54"/>
+</segment>
+</net>
+<net name="12V_SW2" class="0">
+<segment>
+<pinref part="12REG" gate="G$1" pin="SW2"/>
+<pinref part="12CB2" gate="G$1" pin="2"/>
+<pinref part="12L" gate="G$1" pin="1"/>
+<wire x1="58.42" y1="2.54" x2="63.5" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="2.54" x2="68.58" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="2.54" x2="63.5" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="-17.78" x2="60.96" y2="-20.32" width="0.1524" layer="91"/>
+<junction x="63.5" y="2.54"/>
+</segment>
+</net>
+<net name="12V_BST2" class="0">
+<segment>
+<pinref part="12REG" gate="G$1" pin="BST2"/>
+<pinref part="12CB2" gate="G$1" pin="1"/>
+<wire x1="91.44" y1="-35.56" x2="81.28" y2="-30.48" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="-30.48" x2="81.28" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="-5.08" x2="58.42" y2="-5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
