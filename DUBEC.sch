@@ -882,6 +882,23 @@
 <rectangle x1="-3.6" y1="-1.75" x2="1.4" y2="1.75" layer="29"/>
 <rectangle x1="-3.15" y1="-1.35" x2="0.9" y2="1.35" layer="31"/>
 </package>
+<package name="TO-277">
+<smd name="C" x="-1.06" y="0" dx="4.8" dy="4.72" layer="1" rot="R90" stop="no" thermals="no" cream="no"/>
+<smd name="A1" x="2.745" y="-1.04" dx="1.4" dy="1.27" layer="1" rot="R90" stop="no" thermals="no" cream="no"/>
+<smd name="A2" x="2.745" y="1.04" dx="1.4" dy="1.27" layer="1" rot="R90" stop="no" thermals="no" cream="no"/>
+<wire x1="-3.7" y1="2.6" x2="3.6" y2="2.6" width="0.13" layer="21"/>
+<wire x1="3.6" y1="2.6" x2="3.6" y2="-2.6" width="0.13" layer="21"/>
+<wire x1="3.6" y1="-2.6" x2="-3.7" y2="-2.6" width="0.13" layer="21"/>
+<wire x1="-3.7" y1="-2.6" x2="-3.7" y2="2.6" width="0.13" layer="21"/>
+<rectangle x1="-3.5" y1="-2.45" x2="1.35" y2="2.45" layer="29"/>
+<rectangle x1="2.05" y1="0.25" x2="3.45" y2="1.8" layer="29"/>
+<rectangle x1="2.05" y1="-1.8" x2="3.45" y2="-0.25" layer="29"/>
+<rectangle x1="-3" y1="-2" x2="0.85" y2="2" layer="31"/>
+<rectangle x1="2.2" y1="0.45" x2="3.3" y2="1.65" layer="31"/>
+<rectangle x1="2.2" y1="-1.65" x2="3.3" y2="-0.45" layer="31"/>
+<text x="-3.45" y="-2" size="0.8" layer="27">&gt;VALUE</text>
+<text x="-3.45" y="2" size="0.8" layer="25" align="top-left">&gt;NAME</text>
+</package>
 </packages>
 <symbols>
 <symbol name="AVRISP">
@@ -1404,6 +1421,20 @@
 <attribute name="MANUFACTURER" value="Diodes Incorporated" constant="no"/>
 <attribute name="MFG_PART_#" value="PDS760-13" constant="no"/>
 <attribute name="USD" value="1.47" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="60V_7A_SS" package="TO-277">
+<connects>
+<connect gate="G$1" pin="A" pad="A1 A2"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="SS10P6-M3/86AGICT-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Semiconductor Diodes Division" constant="no"/>
+<attribute name="MFG_PART_#" value="SS10P6-M3/86A" constant="no"/>
+<attribute name="USD" value="1.18" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -3387,7 +3418,7 @@
 <part name="5REN" library="dubec" deviceset="RES" device="470K_16"/>
 <part name="5CBOOT" library="dubec" deviceset="CAP" device="10NF_100V" value="10nF"/>
 <part name="5L" library="dubec" deviceset="I" device="XAL5050_8.2UH" value="8.2uH"/>
-<part name="5DSW" library="dubec" deviceset="D_SCH" device="60V_7A" value="D_SCH60V_7A"/>
+<part name="5DSW" library="dubec" deviceset="D_SCH" device="60V_7A_SS" value="D_SCH60V_7A_SS"/>
 <part name="5COUT1" library="dubec" deviceset="CAP" device="47UF_10V" value="47uF"/>
 <part name="C4" library="dubec" deviceset="CAP" device="22UF_35V" value="22uF"/>
 <part name="5CIN" library="dubec" deviceset="CAP" device="2.2UF_35V"/>
