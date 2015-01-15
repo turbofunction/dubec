@@ -2295,10 +2295,10 @@
 </connects>
 <technologies>
 <technology name="">
-<attribute name="DIGIKEY_PART_#" value="541-2121-1-ND" constant="no"/>
 <attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
-<attribute name="MFG_PART_#" value="TNPW040235K7BEED" constant="no"/>
-<attribute name="TYPE" value="smt" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW040235K7FKED" constant="no"/>
+<attribute name="TEMP" value="100 PPM / K" constant="no"/>
+<attribute name="TOLERANCE" value="1 %" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -3137,6 +3137,22 @@
 </technology>
 </technologies>
 </device>
+<device name="13.7K_16" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-13.7KLCT-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW040213K7FKED" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+<attribute name="USD" value="2.01/50" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="VAR" prefix="Z" uservalue="yes">
@@ -3687,8 +3703,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="12CB1" library="dubec" deviceset="CAP" device="0.1UF_100V"/>
 <part name="12CB2" library="dubec" deviceset="CAP" device="0.1UF_100V"/>
 <part name="12L" library="dubec" deviceset="I" device="10UH_4.9A" value="10uH"/>
-<part name="12C1" library="dubec" deviceset="CAP" device="4.7UF_10V" value="4.7uF"/>
-<part name="12RT" library="dubec" deviceset="RES" device="29.4K_16" value="RES29.4K_16"/>
+<part name="12CVCC" library="dubec" deviceset="CAP" device="10UF_10V"/>
+<part name="12RT" library="dubec" deviceset="RES" device="35.7K_16" value="RES35.7K_16"/>
 <part name="12RBOT" library="dubec" deviceset="RES" device="90.9K_16" value="RES90.9K_16"/>
 <part name="12RFF" library="dubec" deviceset="RES" device="10K_8" value="RES10K_8"/>
 <part name="12CFF" library="dubec" deviceset="CAP" device="33PF_100V" value="33pF"/>
@@ -3709,7 +3725,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="UD" library="dubec" deviceset="D_SCH" device="30V_0.1A" value="D_SCH30V_0.1A"/>
 <part name="12TVS" library="dubec" deviceset="D_ZENER" device="12V_SPHV" value="D_ZENER12V_SPHV"/>
 <part name="RDIV1" library="dubec" deviceset="RES" device="90.9K_16" value="RES90.9K_16"/>
-<part name="RDIV2" library="dubec" deviceset="RES" device="15.4K_16" value="RES15.4K_16"/>
+<part name="RDIV2" library="dubec" deviceset="RES" device="13.7K_16" value="RES13.7K_16"/>
 <part name="UC" library="dubec" deviceset="CAP" device="1UF_10V"/>
 <part name="VAR1" library="dubec" deviceset="VAR" device="42V"/>
 <part name="5TVS" library="dubec" deviceset="D_ZENER" device="5V" value="D_ZENER5V"/>
@@ -3778,7 +3794,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="12CB1" gate="G$1" x="93.98" y="-2.54" rot="R90"/>
 <instance part="12CB2" gate="G$1" x="58.42" y="-2.54" rot="R90"/>
 <instance part="12L" gate="G$1" x="76.2" y="2.54"/>
-<instance part="12C1" gate="G$1" x="96.52" y="-55.88" rot="R270"/>
+<instance part="12CVCC" gate="G$1" x="96.52" y="-55.88" rot="R270"/>
 <instance part="12RT" gate="G$1" x="58.42" y="-55.88" rot="R90"/>
 <instance part="12RBOT" gate="G$1" x="35.56" y="-45.72" rot="R270"/>
 <instance part="12RFF" gate="G$1" x="33.02" y="-35.56"/>
@@ -4038,7 +4054,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </net>
 <net name="12VCC" class="0">
 <segment>
-<pinref part="12C1" gate="G$1" pin="1"/>
+<pinref part="12CVCC" gate="G$1" pin="1"/>
 <pinref part="12REG" gate="G$1" pin="VCC"/>
 <wire x1="96.52" y1="-53.34" x2="96.52" y2="-50.8" width="0.1524" layer="91"/>
 <wire x1="96.52" y1="-50.8" x2="91.44" y2="-50.8" width="0.1524" layer="91"/>
@@ -4136,7 +4152,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="68.58" y1="-60.96" x2="58.42" y2="-60.96" width="0.1524" layer="91"/>
 <wire x1="58.42" y1="-60.96" x2="35.56" y2="-60.96" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="-60.96" x2="35.56" y2="-50.8" width="0.1524" layer="91"/>
-<pinref part="12C1" gate="G$1" pin="2"/>
+<pinref part="12CVCC" gate="G$1" pin="2"/>
 <wire x1="76.2" y1="-60.96" x2="96.52" y2="-60.96" width="0.1524" layer="91"/>
 <junction x="76.2" y="-60.96"/>
 <wire x1="76.2" y1="-60.96" x2="76.2" y2="-63.5" width="0.1524" layer="91"/>
