@@ -203,6 +203,7 @@ ISP</text>
 <text x="14.25" y="13.125" size="1.25" layer="22" font="vector" ratio="20" rot="MR0" align="top-center">5V
 PG</text>
 <wire x1="35.25" y1="3.625" x2="35.25" y2="4" width="0.254" layer="22"/>
+<text x="9.875" y="13.125" size="1.25" layer="22" font="vector" ratio="20" rot="MR0" align="bottom-center">AUX</text>
 </plain>
 <libraries>
 <library name="dubec">
@@ -873,7 +874,7 @@ Covered vias can be set in Masks (Limit).
 <attribute name="TOLERANCE" value="±5%" x="30.625" y="1.875" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="TEMP" value="C0G, NP0" x="30.625" y="1.875" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="12RFB" library="dubec" package="0402" value="40.2kOhm" x="26.5" y="3" rot="R90">
+<element name="12RFB" library="dubec" package="0402" value="RES40.2K_16" x="26.5" y="3" rot="R90">
 <attribute name="DIGIKEY_PART_#" value="541-40.2KLCT-ND" x="26.5" y="3" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MANUFACTURER" value="Vishay Dale" x="26.5" y="3" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MFG_PART_#" value="CRCW040240K2FKED" x="26.5" y="3" size="1.778" layer="27" rot="R90" display="off"/>
@@ -972,7 +973,7 @@ Covered vias can be set in Masks (Limit).
 <attribute name="MFG_PART_#" value="SPHV12-01ETG" x="35.125" y="3.875" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="USD" value="0.44" x="35.125" y="3.875" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="RDIV1" library="dubec" package="0402" value="RES90.9K_16" x="12.75" y="13.5">
+<element name="RAUXTOP" library="dubec" package="0402" value="RES90.9K_16" x="12.75" y="13.5">
 <attribute name="DIGIKEY_PART_#" value="541-90.9KLCT-ND" x="12.75" y="13.5" size="1.778" layer="27" display="off"/>
 <attribute name="MANUFACTURER" value="Vishay Dale" x="12.75" y="13.5" size="1.778" layer="27" display="off"/>
 <attribute name="MFG_PART_#" value="CRCW040290K9FKED" x="12.75" y="13.5" size="1.778" layer="27" display="off"/>
@@ -980,7 +981,7 @@ Covered vias can be set in Masks (Limit).
 <attribute name="TOLERANCE" value="±1%" x="12.75" y="13.5" size="1.778" layer="27" display="off"/>
 <attribute name="TEMP" value="±100ppm/°C" x="12.75" y="13.5" size="1.778" layer="27" display="off"/>
 </element>
-<element name="RDIV2" library="dubec" package="0402" value="RES13.7K_16" x="13.25" y="15.375" rot="R270">
+<element name="RAUXBOT" library="dubec" package="0402" value="RES13.7K_16" x="13.25" y="15.375" rot="R270">
 <attribute name="DIGIKEY_PART_#" value="541-13.7KLCT-ND" x="13.25" y="15.375" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MANUFACTURER" value="Vishay Dale" x="13.25" y="15.375" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MFG_PART_#" value="CRCW040213K7FKED" x="13.25" y="15.375" size="1.778" layer="27" rot="R270" display="off"/>
@@ -1051,11 +1052,9 @@ Covered vias can be set in Masks (Limit).
 <element name="12V_OUT" library="dubec" package="1X02_NO_SILK" value="M02" x="37.875" y="3.75" rot="R270"/>
 <element name="BATT_MAIN" library="dubec" package="1X02_NO_SILK" value="M02" x="1.75" y="10.25" rot="R90"/>
 <element name="BATT_AUX" library="dubec" package="1X02_NO_SILK" value="M02" x="1.75" y="4" rot="R270"/>
-<element name="TR" library="dubec" package="SOT-723" value="NTK3043N" x="4" y="13.75" rot="R90">
-<attribute name="USD" value="0.36" x="4" y="13.75" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="DIGIKEY_PART_#" value="NTK3043NT1GOSCT-ND" x="4" y="13.75" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="TR" library="dubec" package="SOT-723" value="MOSFET-N6V_0.9A" x="4" y="13.75" rot="R90">
 <attribute name="MANUFACTURER" value="ON Semiconductor" x="4" y="13.75" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MFG_PART_#" value="NTK3043NT1G" x="4" y="13.75" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MFG_PART_#" value="NTK3134NT1G" x="4" y="13.75" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="RLD" library="dubec" package="D0402" value="D_SCH30V_0.1A" x="8.375" y="13.625" rot="R180">
 <attribute name="USD" value="0.43" x="8.375" y="13.625" size="1.778" layer="27" rot="R180" display="off"/>
@@ -1188,15 +1187,16 @@ Covered vias can be set in Masks (Limit).
 <attribute name="MANUFACTURER" value="Murata Electronics North America" x="18.25" y="12.875" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MFG_PART_#" value="GRM155R61A105KE15D" x="18.25" y="12.875" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="5RRT" library="dubec" package="0402" value="RES41.2K_16" x="19" y="19.25">
-<attribute name="USD" value="2.01/50" x="19" y="19.25" size="1.778" layer="27" display="off"/>
+<element name="5RRT" library="dubec" package="0402" value="RES40.2K_16" x="19" y="19.25">
+<attribute name="USD" value="2.11/50" x="19" y="19.25" size="1.778" layer="27" display="off"/>
 <attribute name="TOLERANCE" value="±1%" x="19" y="19.25" size="1.778" layer="27" display="off"/>
 <attribute name="TEMP" value="±100ppm/°C" x="19" y="19.25" size="1.778" layer="27" display="off"/>
-<attribute name="DIGIKEY_PART_#" value="541-41.2KLCT-ND" x="19" y="19.25" size="1.778" layer="27" display="off"/>
+<attribute name="DIGIKEY_PART_#" value="541-40.2KLCT-ND" x="19" y="19.25" size="1.778" layer="27" display="off"/>
 <attribute name="MANUFACTURER" value="Vishay Dale" x="19" y="19.25" size="1.778" layer="27" display="off"/>
-<attribute name="MFG_PART_#" value="CRCW040241K2FKED" x="19" y="19.25" size="1.778" layer="27" display="off"/>
+<attribute name="MFG_PART_#" value="CRCW040240K2FKED" x="19" y="19.25" size="1.778" layer="27" display="off"/>
 </element>
 <element name="5V_PG" library="SparkFun-Passives" package="PAD.03X.04" value="TEST-POINT3X4" x="14.25" y="14.375" rot="MR0"/>
+<element name="AUX_OUT" library="SparkFun-Passives" package="PAD.03X.04" value="TEST-POINT3X4" x="9.875" y="11.875" rot="MR0"/>
 </elements>
 <signals>
 <signal name="35V">
@@ -1347,7 +1347,7 @@ Covered vias can be set in Masks (Limit).
 <contactref element="MCU" pad="11"/>
 <contactref element="MCU" pad="5"/>
 <contactref element="LEDA" pad="C"/>
-<contactref element="RDIV2" pad="1"/>
+<contactref element="RAUXBOT" pad="1"/>
 <contactref element="VAR1" pad="1"/>
 <contactref element="12REG" pad="4-5"/>
 <contactref element="12TVS" pad="A"/>
@@ -1606,7 +1606,7 @@ Covered vias can be set in Masks (Limit).
 </signal>
 <signal name="35V_NO">
 <contactref element="RELAY" pad="5"/>
-<contactref element="RDIV1" pad="1"/>
+<contactref element="RAUXTOP" pad="1"/>
 <via x="11.375" y="13.125" extent="1-16" drill="0.3"/>
 <via x="8.625" y="3" extent="1-16" drill="0.3"/>
 <wire x1="10.375" y1="3.5" x2="10.375" y2="12.125" width="0.3302" layer="15"/>
@@ -1640,6 +1640,8 @@ Covered vias can be set in Masks (Limit).
 <contactref element="LEDAR" pad="1"/>
 <contactref element="LEDA" pad="A"/>
 <wire x1="13.05" y1="1.625" x2="14.45" y2="1.625" width="0.508" layer="1"/>
+<contactref element="AUX_OUT" pad="P$1"/>
+<wire x1="13.05" y1="1.625" x2="9.875" y2="11.875" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="PB3">
 <contactref element="LEDAR" pad="2"/>
@@ -1667,6 +1669,7 @@ Covered vias can be set in Masks (Limit).
 <wire x1="12.5" y1="12.625" x2="11.125" y2="11.25" width="0.3302" layer="15"/>
 <wire x1="11.125" y1="11.25" x2="11.125" y2="1.625" width="0.3302" layer="15"/>
 <wire x1="10.125" y1="14.375" x2="10.125" y2="14.625" width="0.2032" layer="1"/>
+<wire x1="10.125" y1="14.375" x2="9.875" y2="14.125" width="0.3302" layer="16"/>
 </signal>
 <signal name="IN_1">
 <via x="7.625" y="19.375" extent="1-16" drill="0.3"/>
@@ -1717,8 +1720,8 @@ Covered vias can be set in Masks (Limit).
 <wire x1="9.625" y1="15.375" x2="9.625" y2="15.275" width="0.2032" layer="1"/>
 </signal>
 <signal name="ADC2">
-<contactref element="RDIV1" pad="2"/>
-<contactref element="RDIV2" pad="2"/>
+<contactref element="RAUXTOP" pad="2"/>
+<contactref element="RAUXBOT" pad="2"/>
 <contactref element="MCU" pad="4"/>
 <wire x1="11.125" y1="15.275" x2="11.125" y2="14.875" width="0.2032" layer="1"/>
 <wire x1="11.125" y1="14.875" x2="11.375" y2="14.625" width="0.2032" layer="1"/>
