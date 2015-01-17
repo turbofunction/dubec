@@ -5,7 +5,7 @@ janne@savukoski.name
 
 
                     Part name: DUBEC
-                     Revision: 1.1C
+                     Revision: 1.2
                    Board size: 40mm x 21.375mm
               Board thickness: 1.2mm
                    Board type: FOUR LAYER
@@ -19,8 +19,8 @@ No special instructions.
 
 Board includes an amount of thermal vias due to
 dual DC-DC converters. Also for this reason the
-2 oz. copper is highly preferred (for elecrical
-and thermal conductivity).
+2 oz. copper is highly preferred; for elecrical
+and thermal conductivity.
 
 
 Layer order:
