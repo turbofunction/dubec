@@ -1,7 +1,7 @@
 /*
  * dubec.c
  *
- * PWM relay switch tinyAVR application for DUBEC,
+ * RC relay switch tinyAVR application for DUBEC,
  * a dual channel voltage regulator.
  *
  * I'm still somewhat undecided whether nested if blocks
@@ -27,10 +27,12 @@
 
 #define PIN_ADC PORTB4
 
-// ~7.0v as a 10-bit ADC value with 34.52V calibration
-#define MIN_VOLTAGE 208
+// ~7.0v as a 10-bit ADC value for 0.917V (90.9k/13.7k divider):
+// 1024 * (0.917 / 4.55)
+// Reference voltage 5V - 450mV diode drop
+#define MIN_VOLTAGE 206
 
-// evaluates to true if is waiting for high RC signal
+// evaluates to true if waiting for high RC signal
 #define rc_high_int() (MCUCR & (_BV(ISC01) | _BV(ISC00)))
 
 // evaluates to true if relay is set to AUX
@@ -50,8 +52,8 @@
 
 #define MAX(a, b) (a > b ? a : b)
 
-// how long to wait for capacitor to charge
-volatile uint8_t startup_delay = WDTO_1S;
+// how long to wait for capacitors to charge
+volatile uint8_t startup_delay = WDTO_500MS;
 
 typedef struct {
 	volatile uint8_t aux_ok;
@@ -117,7 +119,7 @@ int main(void) {
 
 	// Enable INT0 and pin change interrupts. INT0 is triggered
 	// on low by default, which is the correct mode initially (pin
-	// pulled high).
+	// pulled high externally).
 	GIMSK = _BV(INT0);
 
 	// enable timer counter overflow interrupt
@@ -158,8 +160,7 @@ int main(void) {
 			MCUCR &= ~(_BV(SM0) | _BV(SM1)); // idle
 
 		} else {
-			// Set sleep mode to power down, low RC signal and watchdog
-			// interrupt will wake up.
+			// Set sleep mode to power down, watchdog interrupt will wake up.
 			MCUCR = (MCUCR & ~_BV(SM0)) | _BV(SM1); // power down
 		}
 
@@ -199,7 +200,8 @@ void aux_bad(void) {
 ISR (INT0_vect) {
 	if (rc_high_int()) { // Maybe more reliable than PINB value...
 		// Line is high, start timing the high period.
-		// Reset timer counter.
+
+		// reset timer counter
 		TCNT0 = 0;
 		// set timer clock source to 9.6MHz/256 == 37.5kHz = 2.2ms/83
 		TCCR0B = _BV(CS02);
@@ -222,7 +224,6 @@ ISR (INT0_vect) {
 
 		} else {
 			// if RC signal high for ]57..93[ 37.5kHz == [1520..2400ms], want AUX
-			// TODO calibrate (runtime?)
 			uint8_t want_aux = counter >= 57 && counter <= 93;
 
 			if (want_aux == is_aux()) {
@@ -331,7 +332,7 @@ ISR (WDT_vect) {
 
 	if (batt.aux_ok) {
 		// slow down sampling
-		configure_ADC(WDTO_1S);
+		configure_ADC(WDTO_500MS);
 	}
 
 	// Enable ADC and ADC interrupt, conversion will
