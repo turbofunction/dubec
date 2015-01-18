@@ -9,37 +9,37 @@
 <grid distance="0.125" unitdist="mm" unit="mm" style="lines" multiple="8" display="yes" altdistance="0.125" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
-<layer number="2" name="Route2" color="5" fill="1" visible="yes" active="yes"/>
+<layer number="2" name="Route2" color="5" fill="1" visible="no" active="yes"/>
 <layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
-<layer number="15" name="Route15" color="14" fill="1" visible="yes" active="yes"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="15" name="Route15" color="14" fill="1" visible="no" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="21" name="tPlace" color="14" fill="1" visible="no" active="yes"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="14" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
-<layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="yes" active="yes"/>
-<layer number="32" name="bCream" color="7" fill="5" visible="yes" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
 <layer number="33" name="tFinish" color="6" fill="3" visible="yes" active="yes"/>
-<layer number="34" name="bFinish" color="6" fill="6" visible="yes" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="yes" active="yes"/>
-<layer number="36" name="bGlue" color="7" fill="5" visible="yes" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
 <layer number="37" name="tTest" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
-<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
-<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
@@ -48,7 +48,7 @@
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
@@ -958,14 +958,10 @@ Covered vias can be set in Masks (Limit).
 <attribute name="MFG_PART_#" value="A3C-6P-2DSA" x="3.875" y="18.5" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="RELATED" value="H2002-ND, H9999-ND" x="3.875" y="18.5" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="UD" library="dubec" package="D0402" value="D_SCH30V_0.1A" x="13.375" y="19.375">
-<attribute name="DIGIKEY_PART_#" value="641-1272-1-ND" x="13.375" y="19.375" size="1.778" layer="27" display="off"/>
+<element name="UD" library="dubec" package="D0402" value="D_SCH30V_0.2A" x="13.375" y="19.375">
 <attribute name="MANUFACTURER" value="Comchip Technology" x="13.375" y="19.375" size="1.778" layer="27" display="off"/>
-<attribute name="TYPE" value="smt" x="13.375" y="19.375" size="1.778" layer="27" display="off"/>
-<attribute name="MFG_PART_#" value="CDBQR0130R" x="13.375" y="19.375" size="1.778" layer="27" display="off"/>
-<attribute name="USD" value="0.43" x="13.375" y="19.375" size="1.778" layer="27" display="off"/>
-<attribute name="I_RLEAK" value="500nA @ 10V" x="13.375" y="19.375" size="1.778" layer="27" display="off"/>
-<attribute name="V_FWD" value="450mV @ 10mA" x="13.375" y="19.375" size="1.778" layer="27" display="off"/>
+<attribute name="MFG_PART_#" value="CDBQR40" x="13.375" y="19.375" size="1.778" layer="27" display="off"/>
+<attribute name="TEMP" value="125°C (Max)" x="13.375" y="19.375" size="1.778" layer="27" display="off"/>
 </element>
 <element name="12TVS" library="dubec" package="D0402" value="D_ZENER12V_SPHV" x="35.125" y="3.875" rot="R180">
 <attribute name="DIGIKEY_PART_#" value="F6506CT-ND" x="35.125" y="3.875" size="1.778" layer="27" rot="R180" display="off"/>
@@ -1056,14 +1052,10 @@ Covered vias can be set in Masks (Limit).
 <attribute name="MANUFACTURER" value="ON Semiconductor" x="4" y="13.75" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MFG_PART_#" value="NTK3134NT1G" x="4" y="13.75" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="RLD" library="dubec" package="D0402" value="D_SCH30V_0.1A" x="8.375" y="13.625" rot="R180">
-<attribute name="USD" value="0.43" x="8.375" y="13.625" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="DIGIKEY_PART_#" value="641-1272-1-ND" x="8.375" y="13.625" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="RLD" library="dubec" package="D0402" value="D_SCH30V_0.2A" x="8.375" y="13.625" rot="R180">
 <attribute name="MANUFACTURER" value="Comchip Technology" x="8.375" y="13.625" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="I_RLEAK" value="500nA @ 10V" x="8.375" y="13.625" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="V_FWD" value="450mV @ 10mA" x="8.375" y="13.625" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="TYPE" value="smt" x="8.375" y="13.625" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MFG_PART_#" value="CDBQR0130R" x="8.375" y="13.625" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MFG_PART_#" value="CDBQR40" x="8.375" y="13.625" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="TEMP" value="125°C (Max)" x="8.375" y="13.625" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="TRRPD" library="dubec" package="0402" value="RES10K_8" x="4" y="15.5">
 <attribute name="USD" value="1.55/10" x="4" y="15.5" size="1.778" layer="27" display="off"/>

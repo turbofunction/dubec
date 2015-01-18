@@ -1355,12 +1355,9 @@
 </connects>
 <technologies>
 <technology name="">
-<attribute name="DIGIKEY_PART_#" value="641-1275-1-ND" constant="no"/>
 <attribute name="MANUFACTURER" value="Comchip Technology" constant="no"/>
-<attribute name="MFG_PART_#" value="CDBQR0230L" constant="no"/>
+<attribute name="MFG_PART_#" value="CDBQR40" constant="no"/>
 <attribute name="TEMP" value="125°C (Max)" constant="no"/>
-<attribute name="TYPE" value="smt" constant="no"/>
-<attribute name="USD" value="0.42" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -3735,7 +3732,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="12RLED" library="dubec" deviceset="RES" device="2.2K_8" value="RES2.2K_8"/>
 <part name="5RLED" library="dubec" deviceset="RES" device="470_8" value="470Ohm"/>
 <part name="AVRISP" library="dubec" deviceset="AVRISP" device="H3X2" value="AVRISPH3X2"/>
-<part name="UD" library="dubec" deviceset="D_SCH" device="30V_0.1A" value="D_SCH30V_0.1A"/>
+<part name="UD" library="dubec" deviceset="D_SCH" device="30V_0.2A" value="D_SCH30V_0.2A"/>
 <part name="12TVS" library="dubec" deviceset="D_ZENER" device="12V_SPHV" value="D_ZENER12V_SPHV"/>
 <part name="RAUXTOP" library="dubec" deviceset="RES" device="90.9K_16" value="RES90.9K_16"/>
 <part name="RAUXBOT" library="dubec" deviceset="RES" device="13.7K_16" value="RES13.7K_16"/>
@@ -3763,7 +3760,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="BATT_MAIN" library="dubec" deviceset="M02" device=""/>
 <part name="BATT_AUX" library="dubec" deviceset="M02" device=""/>
 <part name="TR" library="dubec" deviceset="MOSFET-N" device="6V_0.9A"/>
-<part name="RLD" library="dubec" deviceset="D_SCH" device="30V_0.1A" value="D_SCH30V_0.1A"/>
+<part name="RLD" library="dubec" deviceset="D_SCH" device="30V_0.2A" value="D_SCH30V_0.2A"/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="TRRPD" library="dubec" deviceset="RES" device="10K_8" value="RES10K_8"/>
 <part name="5L" library="dubec" deviceset="I" device="8.2UH_6.1A"/>
