@@ -3150,6 +3150,22 @@
 </technology>
 </technologies>
 </device>
+<device name="1.2K_16" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-1.20KLCT-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW04021K20FKED" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+<attribute name="USD" value="2.10/50" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="VAR" prefix="Z" uservalue="yes">
@@ -3460,7 +3476,7 @@
 <technology name="">
 <attribute name="DIGIKEY_PART_#" value="PB1171CT-ND" constant="no"/>
 <attribute name="MANUFACTURER" value="TE Connectivity" constant="no"/>
-<attribute name="MFG_PART_#" value="9-1462038-8" constant="no"/>
+<attribute name="MFG_PART_#" value="IM02DGR" constant="no"/>
 <attribute name="TEMP" value="-40°C ~ 85°C" constant="no"/>
 <attribute name="TYPE" value="smt" constant="no"/>
 <attribute name="USD" value="3.33" constant="no"/>
@@ -3734,9 +3750,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="AVRISP" library="dubec" deviceset="AVRISP" device="H3X2" value="AVRISPH3X2"/>
 <part name="UD" library="dubec" deviceset="D_SCH" device="30V_0.2A" value="D_SCH30V_0.2A"/>
 <part name="12TVS" library="dubec" deviceset="D_ZENER" device="12V_SPHV" value="D_ZENER12V_SPHV"/>
-<part name="RAUXTOP" library="dubec" deviceset="RES" device="90.9K_16" value="RES90.9K_16"/>
-<part name="RAUXBOT" library="dubec" deviceset="RES" device="13.7K_16" value="RES13.7K_16"/>
-<part name="UC" library="dubec" deviceset="CAP" device="1UF_10V"/>
+<part name="RAUXTOP" library="dubec" deviceset="RES" device="35.7K_16" value="RES35.7K_16"/>
+<part name="RAUXBOT" library="dubec" deviceset="RES" device="1.2K_16" value="RES1.2K_16"/>
+<part name="UC" library="dubec" deviceset="CAP" device="4.7UF_10V"/>
 <part name="VAR1" library="dubec" deviceset="VAR" device="42V"/>
 <part name="5TVS" library="dubec" deviceset="D_ZENER" device="5V" value="D_ZENER5V"/>
 <part name="SR1" library="dubec" deviceset="RES" device="220_16" value="220"/>
@@ -3778,7 +3794,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="5RBOT" library="dubec" deviceset="RES" device="2.37K_16" value="RES2.37K_16"/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
 <part name="5CTR" library="dubec" deviceset="CAP" device="1.5NF_50V"/>
-<part name="5CVCC" library="dubec" deviceset="CAP" device="1UF_10V"/>
+<part name="5CVCC" library="dubec" deviceset="CAP" device="4.7UF_10V"/>
 <part name="5RRT" library="dubec" deviceset="RES" device="40.2K_16" value="RES40.2K_16"/>
 <part name="5V_PG" library="SparkFun-Passives" deviceset="TEST-POINT" device="3X4" value="TEST-POINT3X4"/>
 <part name="AUX_OUT" library="SparkFun-Passives" deviceset="TEST-POINT" device="3X4" value="TEST-POINT3X4"/>
@@ -3837,7 +3853,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="GND5" gate="1" x="25.4" y="7.62"/>
 <instance part="SRPU" gate="G$1" x="-68.58" y="40.64" rot="R90"/>
 <instance part="C2" gate="G$1" x="-33.02" y="-27.94" rot="R90"/>
-<instance part="GND8" gate="1" x="-22.86" y="-38.1"/>
+<instance part="GND8" gate="1" x="-38.1" y="-38.1"/>
 <instance part="GND10" gate="1" x="76.2" y="-68.58"/>
 <instance part="GND11" gate="1" x="-22.86" y="53.34"/>
 <instance part="C3" gate="G$1" x="-27.94" y="-27.94" rot="R90"/>
@@ -4186,8 +4202,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-33.02" y1="-30.48" x2="-27.94" y2="-30.48" width="0.1524" layer="91"/>
 <wire x1="-27.94" y1="-30.48" x2="-22.86" y2="-30.48" width="0.1524" layer="91"/>
 <pinref part="C4" gate="G$1" pin="1"/>
-<wire x1="-22.86" y1="-30.48" x2="-22.86" y2="-35.56" width="0.1524" layer="91"/>
-<junction x="-22.86" y="-30.48"/>
+<wire x1="-38.1" y1="-30.48" x2="-38.1" y2="-35.56" width="0.1524" layer="91"/>
+<junction x="-38.1" y="-30.48"/>
 </segment>
 <segment>
 <pinref part="12LED" gate="G$1" pin="C"/>
