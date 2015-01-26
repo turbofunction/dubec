@@ -19,8 +19,8 @@ No special instructions.
 
 Board includes an amount of thermal vias due to
 dual DC-DC converters. Also for this reason the
-2 oz. copper is highly preferred; for elecrical
-and thermal conductivity.
+2 oz. copper is highly preferred. (For elecrical
+and thermal conductivity.)
 
 
 Layer order:
