@@ -415,28 +415,28 @@
 <rectangle x1="1.8" y1="0.8" x2="2.2" y2="1.2" layer="51"/>
 <rectangle x1="-0.2" y1="0.8" x2="0.2" y2="1.2" layer="51"/>
 <rectangle x1="-2.2" y1="0.8" x2="-1.8" y2="1.2" layer="51"/>
-<wire x1="-3" y1="2" x2="3" y2="2" width="0.127" layer="21"/>
-<wire x1="3" y1="2" x2="3" y2="-2" width="0.127" layer="21"/>
-<wire x1="3" y1="-2" x2="-3" y2="-2" width="0.127" layer="21"/>
-<wire x1="-3" y1="-2" x2="-3" y2="2" width="0.127" layer="21"/>
-<pad name="2" x="-2" y="1" drill="0.8" diameter="1.4" stop="no"/>
-<pad name="4" x="0" y="1" drill="0.8" diameter="1.4" stop="no"/>
-<pad name="6" x="2" y="1" drill="0.8" diameter="1.4" stop="no"/>
-<pad name="1" x="-2" y="-1" drill="0.8" diameter="1.4" shape="square" stop="no"/>
-<pad name="3" x="0" y="-1" drill="0.8" diameter="1.4" stop="no"/>
-<pad name="5" x="2" y="-1" drill="0.8" diameter="1.4" stop="no"/>
-<rectangle x1="-2.75" y1="-1.75" x2="-1.25" y2="-0.25" layer="30"/>
-<rectangle x1="-2.75" y1="-1.75" x2="-1.25" y2="-0.25" layer="29"/>
-<circle x="-2" y="1" radius="0.364434375" width="0.8" layer="30"/>
-<circle x="0" y="1" radius="0.364434375" width="0.8" layer="30"/>
-<circle x="2" y="1" radius="0.364434375" width="0.8" layer="30"/>
-<circle x="2" y="-1" radius="0.364434375" width="0.8" layer="30"/>
-<circle x="0" y="-1" radius="0.364434375" width="0.8" layer="30"/>
-<circle x="-2" y="1" radius="0.364434375" width="0.8" layer="29"/>
-<circle x="0" y="1" radius="0.364434375" width="0.8" layer="29"/>
-<circle x="2" y="1" radius="0.364434375" width="0.8" layer="29"/>
-<circle x="2" y="-1" radius="0.364434375" width="0.8" layer="29"/>
-<circle x="0" y="-1" radius="0.364434375" width="0.8" layer="29"/>
+<wire x1="-3" y1="2" x2="3" y2="2" width="0.13" layer="21"/>
+<wire x1="3" y1="2" x2="3" y2="-2" width="0.13" layer="21"/>
+<wire x1="3" y1="-2" x2="-3" y2="-2" width="0.13" layer="21"/>
+<wire x1="-3" y1="-2" x2="-3" y2="2" width="0.13" layer="21"/>
+<pad name="2" x="-2" y="1" drill="0.8" diameter="1.3" stop="no"/>
+<pad name="4" x="0" y="1" drill="0.8" diameter="1.3" stop="no"/>
+<pad name="6" x="2" y="1" drill="0.8" diameter="1.3" stop="no"/>
+<pad name="1" x="-2" y="-1" drill="0.8" diameter="1.3" shape="square" stop="no"/>
+<pad name="3" x="0" y="-1" drill="0.8" diameter="1.3" stop="no"/>
+<pad name="5" x="2" y="-1" drill="0.8" diameter="1.3" stop="no"/>
+<rectangle x1="-2.7" y1="-1.7" x2="-1.3" y2="-0.3" layer="29"/>
+<circle x="0" y="1" radius="0.35" width="0.7" layer="29"/>
+<circle x="2" y="1" radius="0.35" width="0.7" layer="29"/>
+<circle x="2" y="-1" radius="0.35" width="0.7" layer="29"/>
+<circle x="0" y="-1" radius="0.35" width="0.7" layer="29"/>
+<circle x="-2" y="1" radius="0.35" width="0.7" layer="30"/>
+<circle x="-2" y="1" radius="0.35" width="0.7" layer="29"/>
+<circle x="0" y="1" radius="0.35" width="0.7" layer="30"/>
+<circle x="2" y="1" radius="0.35" width="0.7" layer="30"/>
+<circle x="0" y="-1" radius="0.35" width="0.7" layer="30"/>
+<circle x="2" y="-1" radius="0.35" width="0.7" layer="30"/>
+<rectangle x1="-2.7" y1="-1.7" x2="-1.3" y2="-0.3" layer="30"/>
 </package>
 <package name="0805">
 <description>IPC-SM-782 RES/CAP</description>
@@ -939,6 +939,24 @@
 <rectangle x1="-2.5" y1="-2.45" x2="-1.55" y2="2.45" layer="31"/>
 <rectangle x1="1.55" y1="-2.45" x2="2.5" y2="2.45" layer="31"/>
 </package>
+<package name="H1.27MM-3X2">
+<pad name="P$2" x="-1.27" y="0.635" drill="0.6" diameter="1" stop="no"/>
+<circle x="-1.27" y="0.635" radius="0.25" width="0.6" layer="29"/>
+<pad name="P$4" x="0" y="0.635" drill="0.6" diameter="1" stop="no"/>
+<circle x="0" y="0.635" radius="0.25" width="0.6" layer="29"/>
+<pad name="P$6" x="1.27" y="0.635" drill="0.6" diameter="1" stop="no"/>
+<circle x="1.27" y="0.635" radius="0.25" width="0.6" layer="29"/>
+<pad name="P$3" x="0" y="-0.635" drill="0.6" diameter="1" stop="no"/>
+<circle x="0" y="-0.635" radius="0.25" width="0.6" layer="29"/>
+<pad name="P$5" x="1.27" y="-0.635" drill="0.6" diameter="1" stop="no"/>
+<circle x="1.27" y="-0.635" radius="0.25" width="0.6" layer="29"/>
+<pad name="P$1" x="-1.27" y="-0.635" drill="0.6" diameter="1" shape="square" stop="no" first="yes"/>
+<rectangle x1="-1.82" y1="-1.185" x2="-0.72" y2="-0.085" layer="29"/>
+<wire x1="-2" y1="1.715" x2="2" y2="1.715" width="0.13" layer="21"/>
+<wire x1="2" y1="1.715" x2="2" y2="-1.715" width="0.13" layer="21"/>
+<wire x1="2" y1="-1.715" x2="-2" y2="-1.715" width="0.13" layer="21"/>
+<wire x1="-2" y1="-1.715" x2="-2" y2="1.715" width="0.13" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="AVRISP">
@@ -1205,6 +1223,7 @@
 </symbols>
 <devicesets>
 <deviceset name="AVRISP">
+<description>AVR ISP header</description>
 <gates>
 <gate name="G$1" symbol="AVRISP" x="0" y="0"/>
 </gates>
@@ -1251,6 +1270,23 @@
 <attribute name="MFG_PART_#" value="A3C-6P-2DSA" constant="no"/>
 <attribute name="RELATED" value="H2002-ND, H9999-ND" constant="no"/>
 <attribute name="TYPE" value="thru-hole" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="1.27MM" package="H1.27MM-3X2">
+<connects>
+<connect gate="G$1" pin="GND" pad="P$6"/>
+<connect gate="G$1" pin="MISO" pad="P$1"/>
+<connect gate="G$1" pin="MOSI" pad="P$4"/>
+<connect gate="G$1" pin="RESET" pad="P$5"/>
+<connect gate="G$1" pin="SCK" pad="P$3"/>
+<connect gate="G$1" pin="VCC" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="609-3710-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="FCI" constant="no"/>
+<attribute name="MFG_PART_#" value="20021111-00006T4LF" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -3736,7 +3772,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="12CFF" library="dubec" deviceset="CAP" device="33PF_100V" value="33pF"/>
 <part name="12RFB" library="dubec" deviceset="RES" device="40.2K_16" value="RES40.2K_16"/>
 <part name="12CFB" library="dubec" deviceset="CAP" device="820PF_100V" value="820pF"/>
-<part name="12RTOP" library="dubec" deviceset="RES" device="1M_16" value="1MOhm"/>
+<part name="12RTOP" library="dubec" deviceset="RES" device="1M_16" value="RES1M_16"/>
 <part name="12COUT2" library="dubec" deviceset="CAP" device="22UF_35V" value="22uF"/>
 <part name="35V_NO" library="supply1" deviceset="V+" device=""/>
 <part name="35V_NC" library="supply1" deviceset="V+" device=""/>
@@ -3744,9 +3780,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="35V_NO1" library="supply1" deviceset="V+" device=""/>
 <part name="12LED" library="dubec" deviceset="LED" device="GREEN_2.8V_5MA"/>
 <part name="LEDA" library="dubec" deviceset="LED" device="GREEN_2.8V_5MA"/>
-<part name="LEDAR" library="dubec" deviceset="RES" device="470_8" value="470Ohm"/>
+<part name="LEDAR" library="dubec" deviceset="RES" device="470_8" value="RES470_8"/>
 <part name="12RLED" library="dubec" deviceset="RES" device="2.2K_8" value="RES2.2K_8"/>
-<part name="5RLED" library="dubec" deviceset="RES" device="470_8" value="470Ohm"/>
+<part name="5RLED" library="dubec" deviceset="RES" device="470_8" value="RES470_8"/>
 <part name="AVRISP" library="dubec" deviceset="AVRISP" device="H3X2" value="AVRISPH3X2"/>
 <part name="UD" library="dubec" deviceset="D_SCH" device="30V_0.2A" value="D_SCH30V_0.2A"/>
 <part name="12TVS" library="dubec" deviceset="D_ZENER" device="12V_SPHV" value="D_ZENER12V_SPHV"/>
@@ -3755,7 +3791,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="UC" library="dubec" deviceset="CAP" device="4.7UF_10V"/>
 <part name="VAR1" library="dubec" deviceset="VAR" device="42V"/>
 <part name="5TVS" library="dubec" deviceset="D_ZENER" device="5V" value="D_ZENER5V"/>
-<part name="SR1" library="dubec" deviceset="RES" device="220_16" value="220"/>
+<part name="SR1" library="dubec" deviceset="RES" device="220_16" value="RES220_16"/>
 <part name="5V_OUT" library="dubec" deviceset="M03" device=""/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
@@ -3780,12 +3816,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="TRRPD" library="dubec" deviceset="RES" device="10K_8" value="RES10K_8"/>
 <part name="5L" library="dubec" deviceset="I" device="8.2UH_6.1A"/>
-<part name="5COUT1" library="dubec" deviceset="CAP" device="47UF_10V" value="47uF"/>
+<part name="5COUT1" library="dubec" deviceset="CAP" device="47UF_10V" value="CAP47UF_10V"/>
 <part name="C4" library="dubec" deviceset="CAP" device="22UF_35V" value="22uF"/>
 <part name="12COUT1" library="dubec" deviceset="CAP" device="22UF_35V" value="22uF"/>
 <part name="STVS" library="dubec" deviceset="D_ZENER" device="5V" value="D_ZENER5V"/>
 <part name="RLR" library="dubec" deviceset="RES" device="1K_16" value="RES1K_16"/>
-<part name="5COUT2" library="dubec" deviceset="CAP" device="47UF_10V" value="47uF"/>
+<part name="5COUT2" library="dubec" deviceset="CAP" device="47UF_10V" value="CAP47UF_10V"/>
 <part name="5REG" library="dubec" deviceset="LT8614" device="IUDC"/>
 <part name="5C1" library="dubec" deviceset="CAP" device="1UF_50V"/>
 <part name="5C2" library="dubec" deviceset="CAP" device="1UF_50V"/>
