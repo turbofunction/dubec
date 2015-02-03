@@ -3756,6 +3756,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <class number="1" name="ground" width="0.2032" drill="0">
 <clearance class="1" value="0.2032"/>
 </class>
+<class number="2" name="HV" width="0" drill="0">
+<clearance class="2" value="0.3048"/>
+</class>
 </classes>
 <parts>
 <part name="MCU" library="dubec" deviceset="ATTINY13A" device="10M1"/>
@@ -4137,7 +4140,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <junction x="96.52" y="-50.8"/>
 </segment>
 </net>
-<net name="35V_NO" class="0">
+<net name="35V_NO" class="2">
 <segment>
 <pinref part="RELAY" gate="G$1" pin="NO_2"/>
 <pinref part="35V_NO" gate="1" pin="V+"/>
@@ -4158,7 +4161,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <junction x="-71.12" y="-58.42"/>
 </segment>
 </net>
-<net name="35V_NC" class="0">
+<net name="35V_NC" class="2">
 <segment>
 <pinref part="RELAY" gate="G$1" pin="NC_2"/>
 <pinref part="35V_NC" gate="1" pin="V+"/>
