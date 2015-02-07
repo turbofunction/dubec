@@ -615,11 +615,17 @@
 <wire x1="2.35" y1="-3" x2="2.85" y2="-3" width="0.13" layer="21"/>
 </package>
 <package name="1X03_NO_SILK">
-<pad name="1" x="-3" y="0" drill="1.3" diameter="2.2" rot="R90"/>
-<pad name="2" x="0" y="0" drill="1.3" diameter="2.2" rot="R90"/>
-<pad name="3" x="3" y="0" drill="1.3" diameter="2.2" rot="R90"/>
+<pad name="1" x="-3" y="0" drill="1.3" diameter="2.2" rot="R90" stop="no"/>
+<pad name="2" x="0" y="0" drill="1.3" diameter="2.2" rot="R90" stop="no"/>
+<pad name="3" x="3" y="0" drill="1.3" diameter="2.2" rot="R90" stop="no"/>
 <text x="-3.556" y="1.8288" size="0.762" layer="25" ratio="10">&gt;NAME</text>
 <text x="-3.556" y="-1.905" size="0.762" layer="27" align="top-left">&gt;VALUE</text>
+<circle x="-3" y="0" radius="0.54083125" width="1.3" layer="30"/>
+<circle x="0" y="0" radius="0.54083125" width="1.3" layer="30"/>
+<circle x="3" y="0" radius="0.54083125" width="1.3" layer="30"/>
+<circle x="-3" y="0" radius="0.54083125" width="1.3" layer="29"/>
+<circle x="0" y="0" radius="0.54083125" width="1.3" layer="29"/>
+<circle x="3" y="0" radius="0.54083125" width="1.3" layer="29"/>
 </package>
 <package name="SOD323">
 <smd name="C" x="1.35" y="0" dx="1" dy="0.8" layer="1"/>
@@ -709,10 +715,14 @@
 <pad name="1" x="0" y="0" drill="1" diameter="1.6"/>
 </package>
 <package name="1X02_NO_SILK">
-<pad name="1" x="-1.5" y="0" drill="1.2" diameter="2" rot="R90"/>
-<pad name="2" x="1.5" y="0" drill="1.2" diameter="2" rot="R90"/>
+<pad name="1" x="-1.5" y="0" drill="1.2" diameter="2" rot="R90" stop="no"/>
+<pad name="2" x="1.5" y="0" drill="1.2" diameter="2" rot="R90" stop="no"/>
 <text x="-2.6162" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-2.54" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
+<circle x="-1.5" y="0" radius="0.559015625" width="1.1" layer="30"/>
+<circle x="-1.5" y="0" radius="0.559015625" width="1.1" layer="29"/>
+<circle x="1.5" y="0" radius="0.559015625" width="1.1" layer="30"/>
+<circle x="1.5" y="0" radius="0.559015625" width="1.1" layer="29"/>
 </package>
 <package name="POWERDI_123">
 <smd name="A" x="-1.55" y="0" dx="1.05" dy="1.5" layer="1"/>
