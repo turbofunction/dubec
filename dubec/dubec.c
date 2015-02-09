@@ -27,10 +27,10 @@
 
 #define PIN_ADC PORTB4
 
-// ~7.0v as a 10-bit ADC value for 0.917V (90.9k/13.7k divider):
-// 1024 * (0.917 / 4.55)
+// ~7.0v as a 10-bit ADC value for 0.228V (35.7k/1.2k divider):
+// 1024 * (0.228 / 1.1)
 // Reference voltage 5V - 450mV diode drop
-#define MIN_VOLTAGE 206
+#define MIN_VOLTAGE 212
 
 // evaluates to true if waiting for high RC signal
 #define rc_high_int() (MCUCR & (_BV(ISC01) | _BV(ISC00)))
@@ -114,8 +114,8 @@ int main(void) {
 	// disable digital inputs
 	DIDR0 = _BV(AIN1D) | _BV(ADC2D) | _BV(ADC3D);
 
-	// configure ADC to read PB4
-	ADMUX = _BV(MUX1);
+	// configure ADC for internal reference and to read PB4
+	ADMUX = _BV(REFS0) | _BV(MUX1);
 
 	// Enable INT0 and pin change interrupts. INT0 is triggered
 	// on low by default, which is the correct mode initially (pin
