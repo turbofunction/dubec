@@ -186,6 +186,23 @@
 <library name="dubec">
 <description>By Janne Savukoski 2014</description>
 <packages>
+<package name="0402+">
+<smd name="A" x="-0.55" y="0" dx="0.5" dy="0.7" layer="1" stop="no"/>
+<smd name="C" x="0.55" y="0" dx="0.5" dy="0.7" layer="1" stop="no"/>
+<text x="-0.85" y="0.4" size="0.3" layer="25" align="top-left">&gt;NAME</text>
+<text x="-0.85" y="-0.4" size="0.3" layer="27">&gt;VALUE</text>
+<wire x1="-0.55" y1="0.3" x2="0.55" y2="0.3" width="0.05" layer="51"/>
+<wire x1="0.55" y1="0.3" x2="0.55" y2="-0.3" width="0.05" layer="51"/>
+<wire x1="0.55" y1="-0.3" x2="-0.55" y2="-0.3" width="0.05" layer="51"/>
+<wire x1="-0.55" y1="-0.3" x2="-0.55" y2="0.3" width="0.05" layer="51"/>
+<text x="1" y="-0.7" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
+<wire x1="-1" y1="0.55" x2="1" y2="0.55" width="0.13" layer="21"/>
+<wire x1="1" y1="0.55" x2="1" y2="-0.55" width="0.13" layer="21"/>
+<wire x1="1" y1="-0.55" x2="-1" y2="-0.55" width="0.13" layer="21"/>
+<wire x1="-1" y1="-0.55" x2="-1" y2="0.55" width="0.13" layer="21"/>
+<rectangle x1="-0.85" y1="-0.4" x2="-0.25" y2="0.4" layer="29"/>
+<rectangle x1="0.25" y1="-0.4" x2="0.85" y2="0.4" layer="29"/>
+</package>
 <package name="D0402">
 <smd name="A" x="-0.55" y="0" dx="0.5" dy="0.7" layer="1" stop="no"/>
 <smd name="C" x="0.55" y="0" dx="0.5" dy="0.7" layer="1" stop="no"/>
@@ -823,22 +840,6 @@
 <circle x="0" y="0" radius="0.360553125" width="0.9" layer="30"/>
 <circle x="0" y="0" radius="0.360553125" width="0.9" layer="29"/>
 </package>
-<package name="D0503">
-<description>Suggested land pattern from Zener diode document: http://www.digikey.fi/product-detail/en/CZRER52C5V1/641-1259-1-ND/1963937</description>
-<smd name="A" x="-0.525" y="0" dx="0.75" dy="0.95" layer="1"/>
-<text x="-0.95" y="0.5" size="0.254" layer="25" align="top-left">&gt;NAME</text>
-<text x="-0.95" y="-0.5" size="0.254" layer="27">&gt;VALUE</text>
-<text x="1.1" y="-0.9" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
-<smd name="C" x="0.525" y="0" dx="0.75" dy="0.95" layer="1"/>
-<wire x1="-0.675" y1="0.425" x2="0.675" y2="0.425" width="0.05" layer="51"/>
-<wire x1="0.675" y1="0.425" x2="0.675" y2="-0.425" width="0.05" layer="51"/>
-<wire x1="0.675" y1="-0.425" x2="-0.675" y2="-0.425" width="0.05" layer="51"/>
-<wire x1="-0.675" y1="-0.425" x2="-0.675" y2="0.425" width="0.05" layer="51"/>
-<wire x1="-1.1" y1="0.7" x2="1.1" y2="0.7" width="0.13" layer="21"/>
-<wire x1="1.1" y1="0.7" x2="1.1" y2="-0.7" width="0.13" layer="21"/>
-<wire x1="1.1" y1="-0.7" x2="-1.1" y2="-0.7" width="0.13" layer="21"/>
-<wire x1="-1.1" y1="-0.7" x2="-1.1" y2="0.7" width="0.13" layer="21"/>
-</package>
 <package name="D2-UFDFN">
 <smd name="A" x="-0.45" y="0" dx="0.6" dy="0.7" layer="1" stop="no"/>
 <smd name="C" x="0.45" y="0" dx="0.6" dy="0.7" layer="1" stop="no"/>
@@ -987,7 +988,7 @@
 <wire x1="2" y1="-1.715" x2="-2" y2="-1.715" width="0.13" layer="21"/>
 <wire x1="-2" y1="-1.715" x2="-2" y2="1.715" width="0.13" layer="21"/>
 </package>
-<package name="DO-214AA">
+<package name="DO-214AA+">
 <smd name="A" x="-2" y="0" dx="2.16" dy="2.26" layer="1" stop="no" thermals="no" cream="no"/>
 <smd name="C" x="2" y="0" dx="2.16" dy="2.26" layer="1" stop="no" thermals="no" cream="no"/>
 <wire x1="-2.3" y1="2" x2="2.3" y2="2" width="0.13" layer="21"/>
@@ -1013,6 +1014,68 @@
 <wire x1="0.55" y1="0.3" x2="0.55" y2="-0.3" width="0.05" layer="51"/>
 <wire x1="0.55" y1="-0.3" x2="-0.55" y2="-0.3" width="0.05" layer="51"/>
 <wire x1="-0.55" y1="-0.3" x2="-0.55" y2="0.3" width="0.05" layer="51"/>
+</package>
+<package name="DO-214AA">
+<smd name="P$1" x="-2" y="0" dx="2.16" dy="2.26" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="P$2" x="2" y="0" dx="2.16" dy="2.26" layer="1" stop="no" thermals="no" cream="no"/>
+<wire x1="-2.3" y1="2" x2="2.3" y2="2" width="0.13" layer="21"/>
+<wire x1="2.3" y1="2" x2="2.3" y2="1.5" width="0.13" layer="21"/>
+<wire x1="2.3" y1="-1.5" x2="2.3" y2="-2" width="0.13" layer="21"/>
+<wire x1="2.3" y1="-2" x2="-2.3" y2="-2" width="0.13" layer="21"/>
+<wire x1="-2.3" y1="-2" x2="-2.3" y2="-1.5" width="0.13" layer="21"/>
+<wire x1="-2.3" y1="2" x2="-2.3" y2="1.5" width="0.13" layer="21"/>
+<text x="-2" y="-1.2" size="0.7" layer="27">&gt;VALUE</text>
+<text x="-2" y="1.2" size="0.7" layer="25" align="top-left">&gt;NAME</text>
+<rectangle x1="-3.15" y1="-1.2" x2="-0.85" y2="1.2" layer="29"/>
+<rectangle x1="0.85" y1="-1.2" x2="3.15" y2="1.2" layer="29"/>
+<rectangle x1="-2.9" y1="-1" x2="-1.1" y2="1" layer="31"/>
+<rectangle x1="1.1" y1="-1" x2="2.9" y2="1" layer="31"/>
+</package>
+<package name="0503+">
+<description>Suggested land pattern from Zener diode document: http://www.digikey.fi/product-detail/en/CZRER52C5V1/641-1259-1-ND/1963937</description>
+<smd name="A" x="-0.525" y="0" dx="0.75" dy="0.95" layer="1"/>
+<text x="-0.95" y="0.5" size="0.254" layer="25" align="top-left">&gt;NAME</text>
+<text x="-0.95" y="-0.5" size="0.254" layer="27">&gt;VALUE</text>
+<text x="1.1" y="-0.9" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
+<smd name="C" x="0.525" y="0" dx="0.75" dy="0.95" layer="1"/>
+<wire x1="-0.675" y1="0.425" x2="0.675" y2="0.425" width="0.05" layer="51"/>
+<wire x1="0.675" y1="0.425" x2="0.675" y2="-0.425" width="0.05" layer="51"/>
+<wire x1="0.675" y1="-0.425" x2="-0.675" y2="-0.425" width="0.05" layer="51"/>
+<wire x1="-0.675" y1="-0.425" x2="-0.675" y2="0.425" width="0.05" layer="51"/>
+<wire x1="-1.1" y1="0.7" x2="1.1" y2="0.7" width="0.13" layer="21"/>
+<wire x1="1.1" y1="0.7" x2="1.1" y2="-0.7" width="0.13" layer="21"/>
+<wire x1="1.1" y1="-0.7" x2="-1.1" y2="-0.7" width="0.13" layer="21"/>
+<wire x1="-1.1" y1="-0.7" x2="-1.1" y2="0.7" width="0.13" layer="21"/>
+</package>
+<package name="SOD123F+">
+<smd name="A" x="-1.4" y="0" dx="1.34" dy="1.8" layer="1" stop="no"/>
+<smd name="C" x="1.4" y="0" dx="1.34" dy="1.8" layer="1" stop="no"/>
+<rectangle x1="-2.12" y1="-0.95" x2="-0.68" y2="0.95" layer="29"/>
+<rectangle x1="0.68" y1="-0.95" x2="2.12" y2="0.95" layer="29"/>
+<wire x1="-2.3" y1="1.1" x2="2.3" y2="1.1" width="0.13" layer="21"/>
+<wire x1="2.3" y1="1.1" x2="2.3" y2="-1.1" width="0.13" layer="21"/>
+<wire x1="2.3" y1="-1.1" x2="-2.3" y2="-1.1" width="0.13" layer="21"/>
+<wire x1="-2.3" y1="-1.1" x2="-2.3" y2="1.1" width="0.13" layer="21"/>
+<text x="-2.05" y="-0.85" size="0.6" layer="27">&gt;VALUE</text>
+<text x="-2.05" y="0.85" size="0.6" layer="25" align="top-left">&gt;NAME</text>
+<wire x1="-1.4" y1="0.95" x2="1.4" y2="0.95" width="0.05" layer="20"/>
+<wire x1="1.4" y1="0.95" x2="1.4" y2="-0.95" width="0.05" layer="20"/>
+<wire x1="1.4" y1="-0.95" x2="-1.4" y2="-0.95" width="0.05" layer="20"/>
+<wire x1="-1.4" y1="-0.95" x2="-1.4" y2="0.95" width="0.05" layer="20"/>
+<text x="2.23" y="-1.33" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
+</package>
+<package name="SOD523+">
+<smd name="A" x="-0.7" y="0" dx="0.6" dy="0.7" layer="1" stop="no"/>
+<smd name="C" x="0.7" y="0" dx="0.6" dy="0.7" layer="1" stop="no"/>
+<wire x1="-1.2" y1="0.6" x2="1.2" y2="0.6" width="0.13" layer="21"/>
+<wire x1="1.2" y1="0.6" x2="1.2" y2="-0.6" width="0.13" layer="21"/>
+<wire x1="1.2" y1="-0.6" x2="-1.2" y2="-0.6" width="0.13" layer="21"/>
+<wire x1="-1.2" y1="-0.6" x2="-1.2" y2="0.6" width="0.13" layer="21"/>
+<text x="-1.05" y="-0.45" size="0.4" layer="27">&gt;VALUE</text>
+<text x="-1.05" y="0.45" size="0.4" layer="25" align="top-left">&gt;NAME</text>
+<text x="1.23" y="-0.73" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
+<rectangle x1="-1.05" y1="-0.4" x2="-0.35" y2="0.4" layer="29"/>
+<rectangle x1="0.35" y1="-0.4" x2="1.05" y2="0.4" layer="29"/>
 </package>
 </packages>
 <symbols>
@@ -1264,6 +1327,23 @@
 <text x="-7.62" y="-27.94" size="1.778" layer="95">&gt;NAME</text>
 <text x="-7.62" y="-30.48" size="1.778" layer="95">&gt;VALUE</text>
 </symbol>
+<symbol name="THYRISTOR">
+<wire x1="-2.54" y1="2.54" x2="-2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="0" y2="1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="1.27" x2="-2.54" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-2.54" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-1.27" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="1.27" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-2.54" y2="-1.27" width="0.254" layer="94"/>
+<pin name="P$1" x="-5.08" y="0" visible="off" length="short" direction="pas"/>
+<pin name="P$2" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+<wire x1="-2.54" y1="-1.27" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="3.048" x2="-1.27" y2="-3.048" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="-3.048" x2="-0.762" y2="-3.556" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="3.048" x2="-1.778" y2="3.556" width="0.254" layer="94"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="AVRISP">
@@ -1342,7 +1422,7 @@
 <gate name="G$1" symbol="Z-DIODE" x="0" y="0"/>
 </gates>
 <devices>
-<device name="5.1V" package="D0503">
+<device name="5.1V" package="0503+">
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="C" pad="C"/>
@@ -1378,7 +1458,7 @@
 </technology>
 </technologies>
 </device>
-<device name="12V_UCLAMP" package="D0402">
+<device name="12V_0402" package="0402+">
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="C" pad="C"/>
@@ -1392,7 +1472,7 @@
 </technology>
 </technologies>
 </device>
-<device name="5V" package="D0402">
+<device name="5V_0402" package="0402+">
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="C" pad="C"/>
@@ -1406,7 +1486,7 @@
 </technology>
 </technologies>
 </device>
-<device name="12V_SPHV" package="D0402">
+<device name="12V_SPHV" package="0402+">
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="C" pad="C"/>
@@ -1420,7 +1500,7 @@
 </technology>
 </technologies>
 </device>
-<device name="33.3V" package="DO-214AA">
+<device name="33.3V" package="DO-214AA+">
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="C" pad="C"/>
@@ -1431,6 +1511,61 @@
 <attribute name="EURO" value="0.20/100" constant="no"/>
 <attribute name="MANUFACTURER" value="Littelfuse Inc" constant="no"/>
 <attribute name="MFG_PART_#" value="P6SMB39A" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="6V_123F" package="SOD123F+">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="F5749CT-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Littelfuse Inc" constant="no"/>
+<attribute name="MFG_PART_#" value="SMF6.0A" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="12V" package="SOD523+">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="UCLAMP1201HCT-ND" constant="no"/>
+<attribute name="EURO" value="6.22/25" constant="no"/>
+<attribute name="MANUFACTURER" value="Semtech Corporation" constant="no"/>
+<attribute name="MFG_PART_#" value="UCLAMP1201H.TCT" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="5V" package="SOD523+">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="VESD05A1-02V-G-08CT-ND" constant="no"/>
+<attribute name="EURO" value="3.00/10" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Semiconductor Diodes Division" constant="no"/>
+<attribute name="MFG_PART_#" value="VESD05A1-02V-G-08" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="6V" package="SOD523+">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="568-7365-1-ND" constant="no"/>
+<attribute name="EURO" value="3.44/10" constant="no"/>
+<attribute name="MANUFACTURER" value="NXP Semiconductors" constant="no"/>
+<attribute name="MFG_PART_#" value="PESD5Z6.0,115" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -3685,6 +3820,28 @@
 </device>
 </devices>
 </deviceset>
+<deviceset name="THYR">
+<description>TVS thyristor</description>
+<gates>
+<gate name="G$1" symbol="THYRISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="35V" package="DO-214AA">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="497-4093-1-ND" constant="no"/>
+<attribute name="EURO" value="7/10" constant="no"/>
+<attribute name="MANUFACTURER" value="STMicroelectronics" constant="no"/>
+<attribute name="MFG_PART_#" value="SMP100LC-35" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 <library name="SparkFun-Passives">
@@ -3815,11 +3972,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="5RLED" library="dubec" deviceset="RES" device="470_8" value="RES470_8"/>
 <part name="AVRISP" library="dubec" deviceset="AVRISP" device="H3X2" value="AVRISPH3X2"/>
 <part name="UD" library="dubec" deviceset="D_SCH" device="30V_0.2A" value="D_SCH30V_0.2A"/>
-<part name="12TVS" library="dubec" deviceset="D_ZENER" device="12V_SPHV" value="D_ZENER12V_SPHV"/>
+<part name="12TVS" library="dubec" deviceset="D_ZENER" device="12V" value="D_ZENER12V"/>
 <part name="RAUXTOP" library="dubec" deviceset="RES" device="35.7K_16" value="RES35.7K_16"/>
 <part name="RAUXBOT" library="dubec" deviceset="RES" device="1.2K_16" value="RES1.2K_16"/>
 <part name="UC" library="dubec" deviceset="CAP" device="4.7UF_10V"/>
-<part name="5TVS" library="dubec" deviceset="D_ZENER" device="5V" value="D_ZENER5V"/>
+<part name="5TVS" library="dubec" deviceset="D_ZENER" device="6V" value="D_ZENER6V"/>
 <part name="SR1" library="dubec" deviceset="RES" device="220_16" value="RES220_16"/>
 <part name="5V_OUT" library="dubec" deviceset="M03" device=""/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
@@ -3861,9 +4018,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="5RRT" library="dubec" deviceset="RES" device="40.2K_16" value="RES40.2K_16"/>
 <part name="5V_PG" library="SparkFun-Passives" deviceset="TEST-POINT" device="3X4" value="TEST-POINT3X4"/>
 <part name="AUX_OUT" library="SparkFun-Passives" deviceset="TEST-POINT" device="3X4" value="TEST-POINT3X4"/>
-<part name="DTVS" library="dubec" deviceset="D_ZENER" device="33.3V"/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="R1" library="dubec" deviceset="RES" device="35.7K_16" value="RES35.7K_16"/>
+<part name="TVS1" library="dubec" deviceset="THYR" device="35V"/>
 </parts>
 <sheets>
 <sheet>
@@ -3951,9 +4108,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="5RRT" gate="G$1" x="10.16" y="20.32" rot="R90"/>
 <instance part="5V_PG" gate="G$1" x="7.62" y="45.72" rot="R180"/>
 <instance part="AUX_OUT" gate="G$1" x="-81.28" y="7.62" rot="R270"/>
-<instance part="DTVS" gate="G$1" x="-53.34" y="-53.34" rot="R90"/>
-<instance part="GND2" gate="1" x="-53.34" y="-60.96"/>
+<instance part="GND2" gate="1" x="-50.8" y="-63.5"/>
 <instance part="R1" gate="G$1" x="-111.76" y="-30.48"/>
+<instance part="TVS1" gate="G$1" x="-50.8" y="-53.34" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -3991,7 +4148,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="60.96" y1="-15.24" x2="60.96" y2="-7.62" width="0.1524" layer="91"/>
 <junction x="60.96" y="-7.62"/>
 <label x="-25.4" y="-27.94" size="1.778" layer="95"/>
-<wire x1="-53.34" y1="-50.8" x2="-53.34" y2="-48.26" width="0.1524" layer="91"/>
 <pinref part="5REG" gate="G$1" pin="VIN1"/>
 <pinref part="5C1" gate="G$1" pin="2"/>
 <wire x1="12.7" y1="55.88" x2="12.7" y2="58.42" width="0.1524" layer="91"/>
@@ -4013,7 +4169,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="-5.08" y="68.58" size="1.778" layer="95"/>
 <wire x1="-7.62" y1="66.04" x2="-7.62" y2="-7.62" width="0.1524" layer="91"/>
 <junction x="-7.62" y="-7.62"/>
-<pinref part="DTVS" gate="G$1" pin="C"/>
 <pinref part="S1" gate="G$1" pin="CO_1"/>
 <wire x1="-99.06" y1="-48.26" x2="-101.6" y2="-48.26" width="0.1524" layer="91"/>
 <wire x1="-101.6" y1="-48.26" x2="-101.6" y2="-43.18" width="0.1524" layer="91"/>
@@ -4021,9 +4176,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <junction x="-66.04" y="-48.26"/>
 <wire x1="-68.58" y1="-43.18" x2="-68.58" y2="-48.26" width="0.1524" layer="91"/>
 <junction x="-68.58" y="-48.26"/>
-<wire x1="-66.04" y1="-48.26" x2="-53.34" y2="-48.26" width="0.1524" layer="91"/>
-<junction x="-53.34" y="-48.26"/>
-<wire x1="-53.34" y1="-48.26" x2="-45.72" y2="-48.26" width="0.1524" layer="91"/>
+<wire x1="-66.04" y1="-48.26" x2="-50.8" y2="-48.26" width="0.1524" layer="91"/>
+<pinref part="TVS1" gate="G$1" pin="P$2"/>
+<wire x1="-50.8" y1="-48.26" x2="-45.72" y2="-48.26" width="0.1524" layer="91"/>
+<wire x1="-50.8" y1="-50.8" x2="-50.8" y2="-48.26" width="0.1524" layer="91"/>
+<junction x="-50.8" y="-48.26"/>
 </segment>
 </net>
 <net name="5V" class="0">
@@ -4302,11 +4459,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="R1" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="DTVS" gate="G$1" pin="A"/>
-<pinref part="GND2" gate="1" pin="GND"/>
-<wire x1="-53.34" y1="-58.42" x2="-53.34" y2="-55.88" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="GND3" gate="1" pin="GND"/>
 <pinref part="STVS" gate="G$1" pin="A"/>
 <wire x1="71.12" y1="63.5" x2="71.12" y2="60.96" width="0.1524" layer="91"/>
@@ -4388,6 +4540,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="GND1" gate="1" pin="GND"/>
 <wire x1="-106.68" y1="-53.34" x2="-106.68" y2="-60.96" width="0.1524" layer="91"/>
 <junction x="-106.68" y="-53.34"/>
+</segment>
+<segment>
+<pinref part="TVS1" gate="G$1" pin="P$1"/>
+<pinref part="GND2" gate="1" pin="GND"/>
+<wire x1="-50.8" y1="-58.42" x2="-50.8" y2="-60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="5V_PG" class="0">
