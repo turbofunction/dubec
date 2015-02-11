@@ -275,8 +275,8 @@
 <smd name="1" x="-1.35" y="1" dx="0.5" dy="0.2032" layer="1" stop="no" thermals="no"/>
 <smd name="4" x="-1.35" y="-0.5" dx="0.5" dy="0.2032" layer="1" stop="no" thermals="no"/>
 <smd name="5" x="-1.35" y="-1" dx="0.5" dy="0.2032" layer="1" stop="no" thermals="no"/>
-<smd name="11" x="0" y="0" dx="1.6" dy="2.5" layer="1" stop="no" thermals="no" cream="no"/>
-<rectangle x1="-0.7" y1="-1.15" x2="0.7" y2="1.15" layer="29"/>
+<smd name="11" x="0" y="0" dx="1.2" dy="2.3" layer="1" stop="no" thermals="no" cream="no"/>
+<rectangle x1="-0.6" y1="-1.15" x2="0.6" y2="1.15" layer="29"/>
 <text x="-1.3" y="-1.3" size="0.4" layer="25" rot="R90" align="top-left">&gt;NAME</text>
 <text x="1.3" y="-1.3" size="0.4" layer="27" rot="R90">&gt;VALUE</text>
 <wire x1="-1.5" y1="1.5" x2="-1.3" y2="1.5" width="0.13" layer="21"/>
@@ -286,7 +286,7 @@
 <wire x1="1.5" y1="-1.4" x2="1.5" y2="-1.5" width="0.13" layer="21"/>
 <wire x1="1.5" y1="-1.5" x2="-1.5" y2="-1.5" width="0.13" layer="21"/>
 <wire x1="-1.5" y1="-1.5" x2="-1.5" y2="-1.4" width="0.13" layer="21"/>
-<rectangle x1="-0.5" y1="-1" x2="0.5" y2="1" layer="31"/>
+<rectangle x1="-0.4" y1="-1" x2="0.4" y2="1" layer="31"/>
 <wire x1="-1.3" y1="1.5" x2="-0.9" y2="1.5" width="0.4" layer="21" curve="-180" cap="flat"/>
 <wire x1="-1.5" y1="1.5" x2="-1.5" y2="1.4" width="0.13" layer="21"/>
 <rectangle x1="-1.6" y1="0.898" x2="-1.1" y2="1.1012" layer="29"/>
@@ -509,56 +509,20 @@
 <smd name="13" x="-0.25" y="1.95" dx="0.2032" dy="0.7" layer="1" stop="no"/>
 <text x="-2.05" y="1.5" size="0.7" layer="25" align="top-left">&gt;NAME</text>
 <text x="-2.05" y="-1.5" size="0.7" layer="27">&gt;VALUE</text>
-<circle x="-1.8" y="0.7" radius="0.45" width="0.3" layer="29"/>
-<circle x="-1.8" y="-0.7" radius="0.45" width="0.3" layer="29"/>
 <circle x="-1.2" y="0" radius="0.45" width="0.3" layer="29"/>
-<circle x="-0.6" y="0.7" radius="0.45" width="0.3" layer="29"/>
-<circle x="-0.6" y="-0.7" radius="0.45" width="0.3" layer="29"/>
-<circle x="0.6" y="-0.7" radius="0.45" width="0.3" layer="29"/>
 <circle x="0" y="0" radius="0.45" width="0.3" layer="29"/>
-<circle x="0.6" y="0.7" radius="0.45" width="0.3" layer="29"/>
 <circle x="1.2" y="0" radius="0.45" width="0.3" layer="29"/>
 <polygon width="0.3" layer="29">
-<vertex x="1.2" y="0.8"/>
-<vertex x="2.1" y="0.8"/>
-<vertex x="2.1" y="-0.3"/>
+<vertex x="1.2" y="0.7"/>
+<vertex x="2" y="0.7"/>
+<vertex x="2" y="-0.3"/>
 </polygon>
 <polygon width="0.3" layer="31">
-<vertex x="1.2" y="0.8"/>
-<vertex x="2.1" y="0.8"/>
-<vertex x="2.1" y="-0.3"/>
+<vertex x="1.2" y="0.7"/>
+<vertex x="2" y="0.7"/>
+<vertex x="2" y="-0.3"/>
 </polygon>
 <smd name="17" x="-0.7" y="0" dx="3.1" dy="2.44" layer="1" stop="no" cream="no"/>
-<polygon width="0.2" layer="31">
-<vertex x="-1.4" y="1.15"/>
-<vertex x="-1" y="1.15"/>
-<vertex x="-1" y="0.4"/>
-<vertex x="-1.4" y="0.4"/>
-</polygon>
-<polygon width="0.2" layer="31">
-<vertex x="-0.2" y="1.15"/>
-<vertex x="0.2" y="1.15"/>
-<vertex x="0.2" y="0.4"/>
-<vertex x="-0.2" y="0.4"/>
-</polygon>
-<polygon width="0.2" layer="31">
-<vertex x="-0.2" y="-0.4"/>
-<vertex x="0.2" y="-0.4"/>
-<vertex x="0.2" y="-1.15"/>
-<vertex x="-0.2" y="-1.15"/>
-</polygon>
-<polygon width="0.2" layer="31">
-<vertex x="-1.4" y="-0.4"/>
-<vertex x="-1" y="-0.4"/>
-<vertex x="-1" y="-1.15"/>
-<vertex x="-1.4" y="-1.15"/>
-</polygon>
-<polygon width="0.2" layer="31">
-<vertex x="1" y="-0.4"/>
-<vertex x="1.4" y="-0.4"/>
-<vertex x="1.4" y="-1.15"/>
-<vertex x="1" y="-1.15"/>
-</polygon>
 <smd name="18" x="1.5" y="-0.17" dx="1.3" dy="2.1" layer="1" rot="R180" stop="no" cream="no"/>
 <rectangle x1="-0.35" y1="-2.35" x2="0.35" y2="-1.65" layer="29"/>
 <wire x1="2.1" y1="2" x2="2.5" y2="2" width="0.13" layer="21"/>
@@ -568,7 +532,6 @@
 <wire x1="-2.5" y1="-1.8" x2="-2.5" y2="-1.4" width="0.13" layer="21"/>
 <wire x1="-2.5" y1="-1.4" x2="-2.5" y2="2" width="0.13" layer="21"/>
 <wire x1="-2.5" y1="2" x2="-2.1" y2="2" width="0.13" layer="21"/>
-<wire x1="2" y1="-1.1" x2="2" y2="-0.3" width="0.3" layer="29" curve="-233.130102"/>
 <wire x1="-2.5" y1="-1.8" x2="-2.5" y2="-1.4" width="0.3" layer="21" curve="-180" cap="flat"/>
 <wire x1="-2.5" y1="-2" x2="-2.1" y2="-2" width="0.13" layer="21"/>
 <rectangle x1="-1.8512" y1="1.6" x2="-1.648" y2="2.3" layer="29"/>
@@ -585,6 +548,21 @@
 <rectangle x1="-0.8512" y1="-2.35" x2="-0.648" y2="-1.65" layer="29"/>
 <rectangle x1="-1.3512" y1="-2.35" x2="-1.148" y2="-1.65" layer="29"/>
 <rectangle x1="-1.8512" y1="-2.35" x2="-1.648" y2="-1.65" layer="29"/>
+<circle x="-0.6" y="0" radius="0.14141875" width="0.3" layer="31"/>
+<circle x="0.6" y="0" radius="0.14141875" width="0.3" layer="31"/>
+<circle x="0" y="-0.6" radius="0.14141875" width="0.3" layer="31"/>
+<circle x="-1.2" y="-0.6" radius="0.14141875" width="0.3" layer="31"/>
+<circle x="-1.2" y="0.6" radius="0.14141875" width="0.3" layer="31"/>
+<circle x="-1.8" y="0" radius="0.14141875" width="0.3" layer="31"/>
+<circle x="0" y="0.6" radius="0.14141875" width="0.3" layer="31"/>
+<circle x="1.2" y="-0.6" radius="0.14141875" width="0.3" layer="31"/>
+<wire x1="-2.1" y1="-0.35" x2="-1.5" y2="-1.05" width="0.3" layer="29" curve="-180"/>
+<wire x1="-1.5" y1="1.05" x2="-2.1" y2="0.35" width="0.3" layer="29" curve="-180"/>
+<wire x1="-0.9" y1="-1.05" x2="-0.3" y2="-1.05" width="0.3" layer="29" curve="-278.797411"/>
+<wire x1="0.3" y1="-1.05" x2="0.9" y2="-1.05" width="0.3" layer="29" curve="-278.797411"/>
+<wire x1="-0.3" y1="1.05" x2="-0.9" y2="1.05" width="0.3" layer="29" curve="-278.797411"/>
+<wire x1="2" y1="-0.3" x2="1.5" y2="-1.05" width="0.3" layer="29" curve="165.963757"/>
+<wire x1="0.3" y1="1.05" x2="1.05" y2="0.75" width="0.3" layer="29" curve="235.738897"/>
 </package>
 <package name="2020Z">
 <smd name="1" x="-2.032" y="0" dx="1.9177" dy="2.794" layer="1"/>
@@ -841,16 +819,18 @@
 <text x="1" y="-0.7" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
 </package>
 <package name="XAL5050">
-<smd name="P$1" x="-1.65" y="0" dx="1.2" dy="4.4" layer="1" thermals="no" cream="no"/>
-<smd name="P$2" x="1.65" y="0" dx="1.2" dy="4.4" layer="1" thermals="no" cream="no"/>
+<smd name="P$1" x="-1.65" y="0" dx="1.2" dy="4.4" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="P$2" x="1.65" y="0" dx="1.2" dy="4.4" layer="1" stop="no" thermals="no" cream="no"/>
 <wire x1="-2.75" y1="2.85" x2="2.75" y2="2.85" width="0.13" layer="21"/>
 <wire x1="2.75" y1="2.85" x2="2.75" y2="-2.85" width="0.13" layer="21"/>
 <wire x1="2.75" y1="-2.85" x2="-2.75" y2="-2.85" width="0.13" layer="21"/>
 <wire x1="-2.75" y1="-2.85" x2="-2.75" y2="2.85" width="0.13" layer="21"/>
 <text x="-2.35" y="-2" size="0.6" layer="27">&gt;VALUE</text>
 <text x="-2.35" y="2" size="0.6" layer="25" align="top-left">&gt;NAME</text>
-<rectangle x1="-2.1" y1="-2.05" x2="-1.2" y2="2.05" layer="31"/>
-<rectangle x1="1.2" y1="-2.05" x2="2.1" y2="2.05" layer="31"/>
+<rectangle x1="-2.15" y1="-2.1" x2="-1.15" y2="2.1" layer="31"/>
+<rectangle x1="1.15" y1="-2.1" x2="2.15" y2="2.1" layer="31"/>
+<rectangle x1="-2.3" y1="-2.25" x2="-1" y2="2.25" layer="29"/>
+<rectangle x1="1" y1="-2.25" x2="2.3" y2="2.25" layer="29"/>
 </package>
 <package name="POWERDI_5">
 <smd name="A2" x="2.872" y="-0.92" dx="1.39" dy="1.4" layer="1" rot="R90" stop="no" thermals="no"/>
