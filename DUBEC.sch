@@ -518,9 +518,9 @@
 <vertex x="2" y="-0.3"/>
 </polygon>
 <polygon width="0.3" layer="31">
-<vertex x="1.2" y="0.7"/>
-<vertex x="2" y="0.7"/>
-<vertex x="2" y="-0.3"/>
+<vertex x="1.4" y="0.6"/>
+<vertex x="1.9" y="0.6"/>
+<vertex x="1.9" y="-0.1"/>
 </polygon>
 <smd name="17" x="-0.7" y="0" dx="3.1" dy="2.44" layer="1" stop="no" cream="no"/>
 <smd name="18" x="1.5" y="-0.17" dx="1.3" dy="2.1" layer="1" rot="R180" stop="no" cream="no"/>
