@@ -1544,6 +1544,33 @@
 </technology>
 </technologies>
 </device>
+<device name="15V" package="SOD523+">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="497-10767-1-ND" constant="no"/>
+<attribute name="EURO" value="4.06/10" constant="no"/>
+<attribute name="MANUFACTURER" value="STMicroelectronics" constant="no"/>
+<attribute name="MFG_PART_#" value="ESDA18-1K" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="5.6V" package="SOD523+">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="BZT585B5V6T-7DICT-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Diodes Incorporated" constant="no"/>
+<attribute name="MFG_PART_#" value="BZT585B5V6T-7" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="D_SCH" prefix="D">
@@ -3961,7 +3988,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="5RLED" library="dubec" deviceset="RES" device="470_8" value="RES470_8"/>
 <part name="AVRISP" library="dubec" deviceset="AVRISP" device="H3X2" value="AVRISPH3X2"/>
 <part name="UD" library="dubec" deviceset="D_SCH" device="40V_0.2A" value="D_SCH40V_0.2A"/>
-<part name="12TVS" library="dubec" deviceset="D_ZENER" device="12V" value="D_ZENER12V"/>
+<part name="12TVS" library="dubec" deviceset="D_ZENER" device="15V" value="D_ZENER15V"/>
 <part name="RAUXTOP" library="dubec" deviceset="RES" device="35.7K_16" value="RES35.7K_16"/>
 <part name="RAUXBOT" library="dubec" deviceset="RES" device="1.2K_16" value="RES1.2K_16"/>
 <part name="UC" library="dubec" deviceset="CAP" device="4.7UF_10V"/>
@@ -3992,7 +4019,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="5L" library="dubec" deviceset="I" device="8.2UH_6.1A"/>
 <part name="5COUT1" library="dubec" deviceset="CAP" device="47UF_10V" value="CAP47UF_10V"/>
 <part name="12COUT1" library="dubec" deviceset="CAP" device="22UF_35V" value="22uF"/>
-<part name="STVS" library="dubec" deviceset="D_ZENER" device="5V" value="D_ZENER5V"/>
+<part name="STVS" library="dubec" deviceset="D_ZENER" device="5.6V" value="D_ZENER5.6V"/>
 <part name="S1R" library="dubec" deviceset="RES" device="1.2K_16" value="RES1.2K_16"/>
 <part name="5COUT2" library="dubec" deviceset="CAP" device="47UF_10V" value="CAP47UF_10V"/>
 <part name="5REG" library="dubec" deviceset="LT8614" device="IUDC"/>
