@@ -29,7 +29,6 @@
 
 // ~7.0v as a 10-bit ADC value for 0.228V (35.7k/1.2k divider):
 // 1024 * (0.228 / 1.1)
-// Reference voltage 5V - 450mV diode drop
 #define MIN_VOLTAGE 212
 
 // evaluates to true if waiting for high RC signal
