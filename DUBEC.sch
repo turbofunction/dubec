@@ -3420,6 +3420,38 @@
 <technology name=""/>
 </technologies>
 </device>
+<device name="5.9K_16" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-5.90KLCT-ND" constant="no"/>
+<attribute name="EURO" value="2.10/50" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW04025K90FKED" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="33_16" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-33.0LCT-ND" constant="no"/>
+<attribute name="EURO" value="2.10/50" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW040233R0FKED" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="I" uservalue="yes">
@@ -3691,11 +3723,29 @@
 <technologies>
 <technology name="">
 <attribute name="DIGIKEY_PART_#" value="PB1171CT-ND" constant="no"/>
+<attribute name="EURO" value="3.80" constant="no"/>
 <attribute name="MANUFACTURER" value="TE Connectivity" constant="no"/>
 <attribute name="MFG_PART_#" value="IM02DGR" constant="no"/>
 <attribute name="TEMP" value="-40°C ~ 85°C" constant="no"/>
-<attribute name="TYPE" value="smt" constant="no"/>
-<attribute name="USD" value="3.33" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="2A_12V" package="IM_J-LEAD">
+<connects>
+<connect gate="G$1" pin="CO_1" pad="3"/>
+<connect gate="G$1" pin="CO_2" pad="6"/>
+<connect gate="G$1" pin="GND" pad="8"/>
+<connect gate="G$1" pin="NC_1" pad="2"/>
+<connect gate="G$1" pin="NC_2" pad="7"/>
+<connect gate="G$1" pin="NO_1" pad="4"/>
+<connect gate="G$1" pin="NO_2" pad="5"/>
+<connect gate="G$1" pin="VCC" pad="1"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="PB1065CT-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="TE Connectivity" constant="no"/>
+<attribute name="MFG_PART_#" value="IM06JR" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -4020,7 +4070,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="5COUT1" library="dubec" deviceset="CAP" device="47UF_10V" value="CAP47UF_10V"/>
 <part name="12COUT1" library="dubec" deviceset="CAP" device="22UF_35V" value="22uF"/>
 <part name="STVS" library="dubec" deviceset="D_ZENER" device="5.6V" value="D_ZENER5.6V"/>
-<part name="S1R" library="dubec" deviceset="RES" device="1.2K_16" value="RES1.2K_16"/>
+<part name="S1R" library="dubec" deviceset="RES" device="33_16" value="RES33_16"/>
 <part name="5COUT2" library="dubec" deviceset="CAP" device="47UF_10V" value="CAP47UF_10V"/>
 <part name="5REG" library="dubec" deviceset="LT8614" device="IUDC"/>
 <part name="5C1" library="dubec" deviceset="CAP" device="1UF_50V"/>
@@ -4103,14 +4153,14 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="BATT_MAIN" gate="G$1" x="-111.76" y="-40.64" rot="MR180"/>
 <instance part="BATT_AUX" gate="G$1" x="-111.76" y="-55.88"/>
 <instance part="Q1" gate="G$1" x="-86.36" y="-17.78" rot="R270"/>
-<instance part="S1D" gate="G$1" x="-78.74" y="-27.94" rot="R180"/>
+<instance part="S1D" gate="G$1" x="-86.36" y="-30.48" rot="R180"/>
 <instance part="GND1" gate="1" x="-106.68" y="-63.5"/>
 <instance part="Q1RPD" gate="G$1" x="-101.6" y="0"/>
 <instance part="5L" gate="G$1" x="60.96" y="40.64"/>
 <instance part="5COUT1" gate="G$1" x="58.42" y="53.34" rot="R90"/>
 <instance part="12COUT1" gate="G$1" x="17.78" y="-22.86" rot="R180"/>
 <instance part="STVS" gate="G$1" x="71.12" y="66.04" rot="R90"/>
-<instance part="S1R" gate="G$1" x="-91.44" y="-25.4"/>
+<instance part="S1R" gate="G$1" x="-99.06" y="-25.4" rot="R270"/>
 <instance part="5COUT2" gate="G$1" x="63.5" y="53.34" rot="R90"/>
 <instance part="5REG" gate="G$1" x="25.4" y="45.72"/>
 <instance part="5C1" gate="G$1" x="7.62" y="53.34" rot="R90"/>
@@ -4209,20 +4259,14 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="UD" gate="G$1" pin="A"/>
 <wire x1="-60.96" y1="0" x2="-60.96" y2="-7.62" width="0.1524" layer="91"/>
 <junction x="-60.96" y="-7.62"/>
-<wire x1="-101.6" y1="-7.62" x2="-68.58" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="-99.06" y1="-7.62" x2="-68.58" y2="-7.62" width="0.1524" layer="91"/>
 <wire x1="-68.58" y1="-7.62" x2="-60.96" y2="-7.62" width="0.1524" layer="91"/>
 <wire x1="-60.96" y1="-7.62" x2="-17.78" y2="-7.62" width="0.1524" layer="91"/>
 <wire x1="-17.78" y1="-7.62" x2="-15.24" y2="-5.08" width="0.1524" layer="91"/>
 <wire x1="-15.24" y1="-5.08" x2="-15.24" y2="73.66" width="0.1524" layer="91"/>
 <label x="-60.96" y="-12.7" size="1.778" layer="95"/>
 <pinref part="5UPS+" gate="G$1" pin="1"/>
-<pinref part="S1" gate="G$1" pin="VCC"/>
-<wire x1="-99.06" y1="-35.56" x2="-101.6" y2="-35.56" width="0.1524" layer="91"/>
-<pinref part="S1D" gate="G$1" pin="C"/>
-<wire x1="-101.6" y1="-27.94" x2="-101.6" y2="-25.4" width="0.1524" layer="91"/>
-<wire x1="-101.6" y1="-25.4" x2="-101.6" y2="-7.62" width="0.1524" layer="91"/>
-<wire x1="-101.6" y1="-27.94" x2="-81.28" y2="-27.94" width="0.1524" layer="91"/>
-<junction x="-101.6" y="-27.94"/>
+<wire x1="-99.06" y1="-20.32" x2="-99.06" y2="-7.62" width="0.1524" layer="91"/>
 <label x="66.04" y="45.72" size="1.778" layer="95"/>
 <wire x1="71.12" y1="40.64" x2="78.74" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="73.66" x2="50.8" y2="81.28" width="0.1524" layer="91"/>
@@ -4232,9 +4276,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-68.58" y1="35.56" x2="-68.58" y2="-7.62" width="0.1524" layer="91"/>
 <junction x="-68.58" y="-7.62"/>
 <pinref part="S1R" gate="G$1" pin="1"/>
-<wire x1="-96.52" y1="-25.4" x2="-101.6" y2="-25.4" width="0.1524" layer="91"/>
-<junction x="-101.6" y="-25.4"/>
-<wire x1="-101.6" y1="-27.94" x2="-101.6" y2="-35.56" width="0.1524" layer="91"/>
 <pinref part="5COUT2" gate="G$1" pin="1"/>
 <wire x1="-15.24" y1="73.66" x2="50.8" y2="73.66" width="0.1524" layer="91"/>
 <pinref part="5REG" gate="G$1" pin="BIAS"/>
@@ -4734,15 +4775,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="Q1" gate="G$1" pin="D"/>
 <wire x1="-73.66" y1="-35.56" x2="-71.12" y2="-35.56" width="0.1524" layer="91"/>
 <pinref part="S1D" gate="G$1" pin="A"/>
-<wire x1="-71.12" y1="-27.94" x2="-71.12" y2="-25.4" width="0.1524" layer="91"/>
-<wire x1="-71.12" y1="-25.4" x2="-71.12" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="-71.12" y1="-30.48" x2="-71.12" y2="-17.78" width="0.1524" layer="91"/>
 <wire x1="-71.12" y1="-17.78" x2="-78.74" y2="-17.78" width="0.1524" layer="91"/>
-<wire x1="-76.2" y1="-27.94" x2="-71.12" y2="-27.94" width="0.1524" layer="91"/>
-<junction x="-71.12" y="-27.94"/>
-<pinref part="S1R" gate="G$1" pin="2"/>
-<wire x1="-86.36" y1="-25.4" x2="-71.12" y2="-25.4" width="0.1524" layer="91"/>
-<wire x1="-71.12" y1="-27.94" x2="-71.12" y2="-35.56" width="0.1524" layer="91"/>
-<junction x="-71.12" y="-25.4"/>
+<wire x1="-83.82" y1="-30.48" x2="-71.12" y2="-30.48" width="0.1524" layer="91"/>
+<junction x="-71.12" y="-30.48"/>
+<wire x1="-71.12" y1="-30.48" x2="-71.12" y2="-35.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="5V_SW" class="0">
@@ -4836,6 +4873,16 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <pinref part="5D" gate="G$1" pin="A"/>
 <pinref part="5RLED" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="S1D" gate="G$1" pin="C"/>
+<pinref part="S1" gate="G$1" pin="VCC"/>
+<pinref part="S1R" gate="G$1" pin="2"/>
+<wire x1="-88.9" y1="-30.48" x2="-99.06" y2="-30.48" width="0.1524" layer="91"/>
+<wire x1="-99.06" y1="-30.48" x2="-99.06" y2="-35.56" width="0.1524" layer="91"/>
+<junction x="-99.06" y="-30.48"/>
 </segment>
 </net>
 </nets>
