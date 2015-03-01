@@ -871,11 +871,13 @@ Covered vias can be set in Masks (Limit).
 <attribute name="TOLERANCE" value="±20%" x="29.875" y="10.875" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="TEMP" value="X5R" x="29.875" y="10.875" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="12RT" library="dubec" package="0402" value="RES35.7K_16" x="30.125" y="7.875" rot="R270">
+<element name="12RT" library="dubec" package="0402" value="RES40.2K_16" x="30.125" y="7.875" rot="R270">
 <attribute name="MANUFACTURER" value="Vishay Dale" x="30.125" y="7.875" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MFG_PART_#" value="CRCW040235K7FKED" x="30.125" y="7.875" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="TOLERANCE" value="1 %" x="30.125" y="7.875" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="TEMP" value="100 PPM / K" x="30.125" y="7.875" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MFG_PART_#" value="CRCW040240K2FKED" x="30.125" y="7.875" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="TOLERANCE" value="±1%" x="30.125" y="7.875" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="TEMP" value="±100ppm/°C" x="30.125" y="7.875" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="USD" value="2.11/50" x="30.125" y="7.875" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="DIGIKEY_PART_#" value="541-40.2KLCT-ND" x="30.125" y="7.875" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="12RBOT" library="dubec" package="0402" value="RES90.9K_16" x="30.125" y="5.625" rot="R90">
 <attribute name="DIGIKEY_PART_#" value="541-90.9KLCT-ND" x="30.125" y="5.625" size="1.778" layer="27" rot="R90" display="off"/>
@@ -997,19 +999,21 @@ Covered vias can be set in Masks (Limit).
 <attribute name="MFG_PART_#" value="ESDA18-1K" x="35.125" y="3.75" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="EURO" value="4.06/10" x="35.125" y="3.75" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="RAUXTOP" library="dubec" package="0402" value="RES35.7K_16" x="13.75" y="14.125" rot="R90">
+<element name="RAUXTOP" library="dubec" package="0402" value="RES90.9K_16" x="13.75" y="14.125" rot="R90">
 <attribute name="MANUFACTURER" value="Vishay Dale" x="13.75" y="14.125" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MFG_PART_#" value="CRCW040235K7FKED" x="13.75" y="14.125" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="TOLERANCE" value="1 %" x="13.75" y="14.125" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="TEMP" value="100 PPM / K" x="13.75" y="14.125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MFG_PART_#" value="CRCW040290K9FKED" x="13.75" y="14.125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="TOLERANCE" value="±1%" x="13.75" y="14.125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="TEMP" value="±100ppm/°C" x="13.75" y="14.125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="USD" value="0.78/10" x="13.75" y="14.125" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DIGIKEY_PART_#" value="541-90.9KLCT-ND" x="13.75" y="14.125" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="RAUXBOT" library="dubec" package="0402" value="RES1.2K_16" x="13.75" y="16.375" rot="R270">
-<attribute name="DIGIKEY_PART_#" value="541-1.20KLCT-ND" x="13.75" y="16.375" size="1.778" layer="27" rot="R270" display="off"/>
+<element name="RAUXBOT" library="dubec" package="0402" value="RES3K_16" x="13.75" y="16.375" rot="R270">
+<attribute name="DIGIKEY_PART_#" value="541-3.00KLCT-ND" x="13.75" y="16.375" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MANUFACTURER" value="Vishay Dale" x="13.75" y="16.375" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MFG_PART_#" value="CRCW04021K20FKED" x="13.75" y="16.375" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="USD" value="2.10/50" x="13.75" y="16.375" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MFG_PART_#" value="CRCW04023K00FKED" x="13.75" y="16.375" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="TOLERANCE" value="±1%" x="13.75" y="16.375" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="TEMP" value="±100ppm/°C" x="13.75" y="16.375" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="EURO" value="2.10/50" x="13.75" y="16.375" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="UC" library="dubec" package="0402" value="" x="8.125" y="17.125" rot="R90">
 <attribute name="DIGIKEY_PART_#" value="445-13820-1-ND" x="8.125" y="17.125" size="1.778" layer="27" rot="R90" display="off"/>
@@ -1037,13 +1041,13 @@ Covered vias can be set in Masks (Limit).
 <attribute name="NAME" x="39.4498" y="19.681" size="0.762" layer="25" ratio="10" rot="R270"/>
 <attribute name="VALUE" x="36.224" y="19.681" size="0.762" layer="27" rot="R270" align="top-left"/>
 </element>
-<element name="SRPU" library="dubec" package="0402" value="RES2.2K_8" x="11.125" y="19.375" rot="R180">
-<attribute name="DIGIKEY_PART_#" value="541-2.2KYACT-ND" x="11.125" y="19.375" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="SRPU" library="dubec" package="0402" value="RES2.37K_16" x="11.125" y="19.375" rot="R180">
+<attribute name="DIGIKEY_PART_#" value="541-2.37KLCT-ND" x="11.125" y="19.375" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MANUFACTURER" value="Vishay Dale" x="11.125" y="19.375" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MFG_PART_#" value="CRCW04022K20JNEDHP" x="11.125" y="19.375" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="USD" value="1.44/10" x="11.125" y="19.375" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="TOLERANCE" value="±5%" x="11.125" y="19.375" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="TEMP" value="±200ppm/°C" x="11.125" y="19.375" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MFG_PART_#" value="CRCW04022K37FKED" x="11.125" y="19.375" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="USD" value="2.01/50" x="11.125" y="19.375" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="TOLERANCE" value="±1%" x="11.125" y="19.375" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="TEMP" value="±100ppm/°C" x="11.125" y="19.375" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="C2" library="dubec" package="0805" value="22uF" x="14.25" y="11" rot="R270">
 <attribute name="DIGIKEY_PART_#" value="445-14428-1-ND" x="14.25" y="11" size="1.778" layer="27" rot="R270" display="off"/>
@@ -1201,11 +1205,13 @@ Covered vias can be set in Masks (Limit).
 </element>
 <element name="5V_PG" library="SparkFun-Passives" package="PAD.03X.04" value="TEST-POINT3X4" x="15.125" y="15" rot="MR0"/>
 <element name="AUX_OUT" library="SparkFun-Passives" package="PAD.03X.04" value="TEST-POINT3X4" x="10" y="13.125" rot="MR0"/>
-<element name="R1" library="dubec" package="0402" value="RES35.7K_16" x="4" y="9.875" rot="R180">
-<attribute name="TOLERANCE" value="1 %" x="4" y="9.875" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="TEMP" value="100 PPM / K" x="4" y="9.875" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="R1" library="dubec" package="0402" value="RES40.2K_16" x="4" y="9.875" rot="R180">
+<attribute name="TOLERANCE" value="±1%" x="4" y="9.875" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="TEMP" value="±100ppm/°C" x="4" y="9.875" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MANUFACTURER" value="Vishay Dale" x="4" y="9.875" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MFG_PART_#" value="CRCW040235K7FKED" x="4" y="9.875" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MFG_PART_#" value="CRCW040240K2FKED" x="4" y="9.875" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="USD" value="2.11/50" x="4" y="9.875" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="DIGIKEY_PART_#" value="541-40.2KLCT-ND" x="4" y="9.875" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="TVS1" library="dubec" package="DO-214AA" value="THYR35V" x="15.25" y="5.75" rot="R90">
 <attribute name="DIGIKEY_PART_#" value="497-4093-1-ND" x="15.25" y="5.75" size="1.778" layer="27" rot="R90" display="off"/>

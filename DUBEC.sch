@@ -3452,6 +3452,22 @@
 </technology>
 </technologies>
 </device>
+<device name="3K_16" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-3.00KLCT-ND" constant="no"/>
+<attribute name="EURO" value="2.10/50" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW04023K00FKED" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="I" uservalue="yes">
@@ -4021,7 +4037,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="12CB2" library="dubec" deviceset="CAP" device="0.1UF_100V"/>
 <part name="12L" library="dubec" deviceset="I" device="10UH_4.9A" value="10uH"/>
 <part name="12CVCC" library="dubec" deviceset="CAP" device="10UF_10V"/>
-<part name="12RT" library="dubec" deviceset="RES" device="35.7K_16" value="RES35.7K_16"/>
+<part name="12RT" library="dubec" deviceset="RES" device="40.2K_16" value="RES40.2K_16"/>
 <part name="12RBOT" library="dubec" deviceset="RES" device="90.9K_16" value="RES90.9K_16"/>
 <part name="12RFF" library="dubec" deviceset="RES" device="10K_8" value="RES10K_8"/>
 <part name="12CFF" library="dubec" deviceset="CAP" device="33PF_100V" value="33pF"/>
@@ -4039,15 +4055,15 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="AVRISP" library="dubec" deviceset="AVRISP" device="H3X2" value="AVRISPH3X2"/>
 <part name="UD" library="dubec" deviceset="D_SCH" device="40V_0.2A" value="D_SCH40V_0.2A"/>
 <part name="12TVS" library="dubec" deviceset="D_ZENER" device="15V" value="D_ZENER15V"/>
-<part name="RAUXTOP" library="dubec" deviceset="RES" device="35.7K_16" value="RES35.7K_16"/>
-<part name="RAUXBOT" library="dubec" deviceset="RES" device="1.2K_16" value="RES1.2K_16"/>
+<part name="RAUXTOP" library="dubec" deviceset="RES" device="90.9K_16" value="RES90.9K_16"/>
+<part name="RAUXBOT" library="dubec" deviceset="RES" device="3K_16" value="RES3K_16"/>
 <part name="UC" library="dubec" deviceset="CAP" device="4.7UF_10V"/>
 <part name="5TVS" library="dubec" deviceset="D_ZENER" device="6V" value="D_ZENER6V"/>
 <part name="SR1" library="dubec" deviceset="RES" device="470_8" value="RES470_8"/>
 <part name="5V_OUT" library="dubec" deviceset="M03" device=""/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
-<part name="SRPU" library="dubec" deviceset="RES" device="2.2K_8" value="RES2.2K_8"/>
+<part name="SRPU" library="dubec" deviceset="RES" device="2.37K_16" value="RES2.37K_16"/>
 <part name="C2" library="dubec" deviceset="CAP" device="22UF_35V" value="22uF"/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
@@ -4085,7 +4101,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="5V_PG" library="SparkFun-Passives" deviceset="TEST-POINT" device="3X4" value="TEST-POINT3X4"/>
 <part name="AUX_OUT" library="SparkFun-Passives" deviceset="TEST-POINT" device="3X4" value="TEST-POINT3X4"/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
-<part name="R1" library="dubec" deviceset="RES" device="35.7K_16" value="RES35.7K_16"/>
+<part name="R1" library="dubec" deviceset="RES" device="40.2K_16" value="RES40.2K_16"/>
 <part name="TVS1" library="dubec" deviceset="THYR" device="35V"/>
 <part name="R2" library="dubec" deviceset="RES" device="470_8" value="RES470_8"/>
 </parts>
