@@ -2590,10 +2590,12 @@
 </connects>
 <technologies>
 <technology name="">
-<attribute name="DIGIKEY_PART_#" value="TNP10.0KDACT-ND" constant="no"/>
+<attribute name="DIGIKEY_PART_#" value="541-10.0KLCT-ND" constant="no"/>
+<attribute name="EURO" value="2.10/50" constant="no"/>
 <attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
-<attribute name="MFG_PART_#" value="TNPW040210K0BEED" constant="no"/>
-<attribute name="TYPE" value="smt" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW040210K0FKED" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -3101,12 +3103,11 @@
 <technologies>
 <technology name="">
 <attribute name="DIGIKEY_PART_#" value="541-2.00KYCT-ND" constant="no"/>
+<attribute name="EURO" value="4.49/50" constant="no"/>
 <attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
 <attribute name="MFG_PART_#" value="CRCW04022K00FKEDHP" constant="no"/>
 <attribute name="TEMP" value="±100ppm/°C" constant="no"/>
 <attribute name="TOLERANCE" value="±1%" constant="no"/>
-<attribute name="TYPE" value="smt" constant="no"/>
-<attribute name="USD" value="0.16" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -3562,6 +3563,54 @@
 <attribute name="EURO" value="2.10/50" constant="no"/>
 <attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
 <attribute name="MFG_PART_#" value="CRCW0402232RFKED" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="442_16" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-442LCT-ND" constant="no"/>
+<attribute name="EURO" value="2.10/50" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW0402442RFKED" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="13.3K_16" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-13.3KLCT-ND" constant="no"/>
+<attribute name="EURO" value="2.10/50" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW040213K3FKED" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="33.2_8" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-33.2YCT-ND" constant="no"/>
+<attribute name="EURO" value="4.49/50" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW040233R2FKEDHP" constant="no"/>
 <attribute name="TEMP" value="±100ppm/°C" constant="no"/>
 <attribute name="TOLERANCE" value="±1%" constant="no"/>
 </technology>
@@ -4161,7 +4210,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="12CVCC" library="dubec" deviceset="CAP" device="10UF_10V"/>
 <part name="12RT" library="dubec" deviceset="RES" device="40.2K_16" value="RES40.2K_16"/>
 <part name="12RBOT" library="dubec" deviceset="RES" device="90.9K_16" value="RES90.9K_16"/>
-<part name="12RFF" library="dubec" deviceset="RES" device="10K_8" value="RES10K_8"/>
+<part name="12RFF" library="dubec" deviceset="RES" device="10K_16" value="RES10K_16"/>
 <part name="12CFF" library="dubec" deviceset="CAP" device="33PF_100V" value="33pF"/>
 <part name="12RFB" library="dubec" deviceset="RES" device="40.2K_16" value="RES40.2K_16"/>
 <part name="12CFB" library="dubec" deviceset="CAP" device="820PF_100V" value="820pF"/>
@@ -4171,8 +4220,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="35V_NO1" library="supply1" deviceset="V+" device=""/>
 <part name="12D" library="dubec" deviceset="LED" device="GREEN_2.8V_5MA"/>
 <part name="DAUXR" library="dubec" deviceset="RES" device="165_16" value="RES165_16"/>
-<part name="12RLED" library="dubec" deviceset="RES" device="2.2K_8" value="RES2.2K_8"/>
-<part name="5RLED" library="dubec" deviceset="RES" device="470_8" value="RES470_8"/>
+<part name="12RLED" library="dubec" deviceset="RES" device="2K_8" value="RES2K_8"/>
+<part name="5RLED" library="dubec" deviceset="RES" device="442_16" value="RES442_16"/>
 <part name="AVRISP" library="dubec" deviceset="AVRISP" device="H3X2" value="AVRISPH3X2"/>
 <part name="UD" library="dubec" deviceset="D_SCH" device="40V_0.2A" value="D_SCH40V_0.2A"/>
 <part name="12TVS" library="dubec" deviceset="D_ZENER" device="15V" value="D_ZENER15V"/>
@@ -4180,11 +4229,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="RAUXBOT" library="dubec" deviceset="RES" device="3K_16" value="RES3K_16"/>
 <part name="UC" library="dubec" deviceset="CAP" device="4.7UF_10V"/>
 <part name="5TVS" library="dubec" deviceset="D_ZENER" device="6V" value="D_ZENER6V"/>
-<part name="SR1" library="dubec" deviceset="RES" device="470_8" value="RES470_8"/>
+<part name="SR1" library="dubec" deviceset="RES" device="442_16" value="RES442_16"/>
 <part name="5V_OUT" library="dubec" deviceset="M03" device=""/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
-<part name="SRPU" library="dubec" deviceset="RES" device="2.37K_16" value="RES2.37K_16"/>
+<part name="SRPU" library="dubec" deviceset="RES" device="3K_16" value="RES3K_16"/>
 <part name="C2" library="dubec" deviceset="CAP" device="22UF_35V" value="22uF"/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
@@ -4202,19 +4251,19 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="Q1" library="dubec" deviceset="MOSFET-N" device="6V_0.9A"/>
 <part name="S1D" library="dubec" deviceset="D_SCH" device="40V_0.2A" value="D_SCH40V_0.2A"/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
-<part name="Q1RPD" library="dubec" deviceset="RES" device="10K_8" value="RES10K_8"/>
+<part name="Q1RPD" library="dubec" deviceset="RES" device="10K_16" value="RES10K_16"/>
 <part name="5L" library="dubec" deviceset="I" device="8.2UH_6.1A"/>
 <part name="5COUT1" library="dubec" deviceset="CAP" device="47UF_10V" value="CAP47UF_10V"/>
 <part name="12COUT1" library="dubec" deviceset="CAP" device="22UF_35V" value="22uF"/>
 <part name="STVS" library="dubec" deviceset="D_ZENER" device="5.6V" value="D_ZENER5.6V"/>
-<part name="S1R" library="dubec" deviceset="RES" device="33_16" value="RES33_16"/>
+<part name="S1R" library="dubec" deviceset="RES" device="33.2_8" value="RES33.2_8"/>
 <part name="5COUT2" library="dubec" deviceset="CAP" device="47UF_10V" value="CAP47UF_10V"/>
 <part name="5REG" library="dubec" deviceset="LT8614" device="IUDC"/>
 <part name="5C1" library="dubec" deviceset="CAP" device="1UF_50V"/>
 <part name="5C2" library="dubec" deviceset="CAP" device="1UF_50V"/>
 <part name="5CBST" library="dubec" deviceset="CAP" device="0.1UF_100V"/>
-<part name="5RTOP" library="dubec" deviceset="RES" device="10K_8" value="RES10K_8"/>
-<part name="5RBOT" library="dubec" deviceset="RES" device="2.37K_16" value="RES2.37K_16"/>
+<part name="5RTOP" library="dubec" deviceset="RES" device="13.3K_16" value="RES13.3K_16"/>
+<part name="5RBOT" library="dubec" deviceset="RES" device="3K_16" value="RES3K_16"/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
 <part name="5CTR" library="dubec" deviceset="CAP" device="1.5NF_50V"/>
 <part name="5CVCC" library="dubec" deviceset="CAP" device="4.7UF_10V"/>
@@ -4224,7 +4273,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="R1" library="dubec" deviceset="RES" device="40.2K_16" value="RES40.2K_16"/>
 <part name="TVS1" library="dubec" deviceset="THYR" device="35V"/>
-<part name="R2" library="dubec" deviceset="RES" device="470_8" value="RES470_8"/>
+<part name="R2" library="dubec" deviceset="RES" device="442_16" value="RES442_16"/>
 <part name="DAUX" library="dubec" deviceset="LED_DUAL" device="RG"/>
 <part name="R3" library="dubec" deviceset="RES" device="232_16"/>
 </parts>
