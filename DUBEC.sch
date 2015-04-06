@@ -481,17 +481,17 @@
 <smd name="C" x="0.8" y="0" dx="0.8" dy="1" layer="1" stop="no"/>
 <text x="-1.2" y="0.5" size="0.4" layer="25" align="top-left">&gt;NAME</text>
 <text x="-1.2" y="-0.5" size="0.4" layer="27">&gt;VALUE</text>
-<text x="1.46" y="-0.85" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
+<text x="1.41" y="-0.85" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
 <wire x1="-0.85" y1="0.475" x2="0.85" y2="0.475" width="0.05" layer="51"/>
 <wire x1="0.85" y1="0.475" x2="0.85" y2="-0.475" width="0.05" layer="51"/>
 <wire x1="0.85" y1="-0.475" x2="-0.85" y2="-0.475" width="0.05" layer="51"/>
 <wire x1="-0.85" y1="-0.475" x2="-0.85" y2="0.475" width="0.05" layer="51"/>
-<wire x1="-1.4" y1="0.7" x2="1.4" y2="0.7" width="0.13" layer="21"/>
-<wire x1="1.4" y1="0.7" x2="1.4" y2="-0.7" width="0.13" layer="21"/>
-<wire x1="1.4" y1="-0.7" x2="-1.4" y2="-0.7" width="0.13" layer="21"/>
-<wire x1="-1.4" y1="-0.7" x2="-1.4" y2="0.7" width="0.13" layer="21"/>
 <rectangle x1="-1.25" y1="-0.55" x2="-0.35" y2="0.55" layer="29"/>
 <rectangle x1="0.35" y1="-0.55" x2="1.25" y2="0.55" layer="29"/>
+<wire x1="-1.35" y1="0.65" x2="1.35" y2="0.65" width="0.13" layer="49"/>
+<wire x1="1.35" y1="0.65" x2="1.35" y2="-0.65" width="0.13" layer="49"/>
+<wire x1="1.35" y1="-0.65" x2="-1.35" y2="-0.65" width="0.13" layer="49"/>
+<wire x1="-1.35" y1="-0.65" x2="-1.35" y2="0.65" width="0.13" layer="49"/>
 </package>
 <package name="DFN-16">
 <smd name="12" x="0.25" y="1.95" dx="0.2032" dy="0.7" layer="1" stop="no"/>
@@ -1046,10 +1046,6 @@
 <wire x1="0.8" y1="0.4" x2="0.8" y2="-0.4" width="0.05" layer="51"/>
 <wire x1="0.8" y1="-0.4" x2="-0.8" y2="-0.4" width="0.05" layer="51"/>
 <wire x1="-0.8" y1="-0.4" x2="-0.8" y2="0.4" width="0.05" layer="51"/>
-<wire x1="-1" y1="0.75" x2="1" y2="0.75" width="0.13" layer="21"/>
-<wire x1="1" y1="0.75" x2="1" y2="-0.75" width="0.13" layer="21"/>
-<wire x1="1" y1="-0.75" x2="-1" y2="-0.75" width="0.13" layer="21"/>
-<wire x1="-1" y1="-0.75" x2="-1" y2="0.75" width="0.13" layer="21"/>
 <smd name="3" x="0.6" y="0.4" dx="0.5" dy="0.4" layer="1" stop="no"/>
 <smd name="1" x="0.6" y="-0.4" dx="0.5" dy="0.4" layer="1" stop="no"/>
 <smd name="2" x="-0.6" y="-0.4" dx="0.5" dy="0.4" layer="1" stop="no"/>
@@ -1058,6 +1054,10 @@
 <rectangle x1="-0.9" y1="-0.65" x2="-0.3" y2="-0.15" layer="29"/>
 <rectangle x1="0.3" y1="-0.65" x2="0.9" y2="-0.15" layer="29"/>
 <rectangle x1="0.3" y1="0.15" x2="0.9" y2="0.65" layer="29"/>
+<wire x1="-1" y1="0.75" x2="1" y2="0.75" width="0.13" layer="49"/>
+<wire x1="1" y1="0.75" x2="1" y2="-0.75" width="0.13" layer="49"/>
+<wire x1="1" y1="-0.75" x2="-1" y2="-0.75" width="0.13" layer="49"/>
+<wire x1="-1" y1="-0.75" x2="-1" y2="0.75" width="0.13" layer="49"/>
 </package>
 <package name="2-UQFN">
 <smd name="C" x="0" y="0" dx="1.7" dy="1.05" layer="1" stop="no" thermals="no" cream="no"/>
