@@ -286,7 +286,6 @@
 <wire x1="1.5" y1="-1.3" x2="1.5" y2="-1.5" width="0.13" layer="21"/>
 <wire x1="1.5" y1="-1.5" x2="-1.5" y2="-1.5" width="0.13" layer="21"/>
 <wire x1="-1.5" y1="-1.5" x2="-1.5" y2="-1.3" width="0.13" layer="21"/>
-<rectangle x1="-0.4" y1="-1" x2="0.4" y2="1" layer="31"/>
 <wire x1="-1.3" y1="1.5" x2="-0.9" y2="1.5" width="0.4" layer="21" curve="-180" cap="flat"/>
 <wire x1="-1.5" y1="1.5" x2="-1.5" y2="1.3" width="0.13" layer="21"/>
 <rectangle x1="-1.6" y1="0.8984" x2="-1.1" y2="1.1016" layer="29"/>
@@ -299,6 +298,8 @@
 <rectangle x1="1.1" y1="-0.1016" x2="1.6" y2="0.1016" layer="29"/>
 <rectangle x1="1.1" y1="0.3984" x2="1.6" y2="0.6016" layer="29"/>
 <rectangle x1="1.1" y1="0.8984" x2="1.6" y2="1.1016" layer="29"/>
+<rectangle x1="-0.45" y1="-1.025" x2="0.45" y2="-0.3" layer="31"/>
+<rectangle x1="-0.45" y1="0.275" x2="0.45" y2="1" layer="31"/>
 </package>
 <package name="DF13-6P">
 <pad name="3" x="-0.625" y="0" drill="0.45" shape="long" rot="R90" stop="no"/>
@@ -444,8 +445,8 @@
 </package>
 <package name="0805">
 <description>IPC-SM-782 RES/CAP</description>
-<smd name="1" x="-0.9" y="0" dx="0.8" dy="1.5" layer="1" stop="no"/>
-<smd name="2" x="0.9" y="0" dx="0.8" dy="1.5" layer="1" stop="no"/>
+<smd name="1" x="-0.9" y="0" dx="0.8" dy="1.5" layer="1" stop="no" cream="no"/>
+<smd name="2" x="0.9" y="0" dx="0.8" dy="1.5" layer="1" stop="no" cream="no"/>
 <text x="-1.3" y="0.7" size="0.5" layer="25" align="top-left">&gt;NAME</text>
 <text x="-1.3" y="-0.7" size="0.5" layer="27">&gt;VALUE</text>
 <wire x1="-1.075" y1="0.7" x2="1.075" y2="0.7" width="0.05" layer="51"/>
@@ -458,6 +459,8 @@
 <wire x1="-1.5" y1="-0.95" x2="-1.5" y2="0.95" width="0.13" layer="21"/>
 <rectangle x1="-1.35" y1="-0.8" x2="-0.45" y2="0.8" layer="29"/>
 <rectangle x1="0.45" y1="-0.8" x2="1.35" y2="0.8" layer="29"/>
+<rectangle x1="-1.175" y1="-0.65" x2="-0.5" y2="0.65" layer="31"/>
+<rectangle x1="0.5" y1="-0.65" x2="1.175" y2="0.65" layer="31"/>
 </package>
 <package name="0603">
 <smd name="1" x="-0.75" y="0" dx="0.7" dy="1" layer="1" stop="no"/>
@@ -504,7 +507,7 @@
 <smd name="1" x="-1.8008" y="-2" dx="0.3048" dy="0.7" layer="1" stop="no"/>
 <smd name="2" x="-1.25" y="-2" dx="0.2032" dy="0.7" layer="1" stop="no"/>
 <smd name="3" x="-0.75" y="-2" dx="0.254" dy="0.7" layer="1" stop="no"/>
-<smd name="4-5" x="0" y="-2" dx="0.7" dy="0.7" layer="1" stop="no"/>
+<smd name="4-5" x="0" y="-2" dx="0.7" dy="0.7" layer="1" stop="no" cream="no"/>
 <smd name="16" x="-1.8008" y="1.95" dx="0.3048" dy="0.7" layer="1" stop="no"/>
 <smd name="15" x="-1.25" y="1.95" dx="0.2032" dy="0.7" layer="1" stop="no"/>
 <smd name="14" x="-0.75" y="1.95" dx="0.254" dy="0.7" layer="1" stop="no"/>
@@ -518,11 +521,6 @@
 <vertex x="1.2" y="0.7"/>
 <vertex x="2" y="0.7"/>
 <vertex x="2" y="-0.3"/>
-</polygon>
-<polygon width="0.3" layer="31">
-<vertex x="1.4" y="0.6"/>
-<vertex x="1.9" y="0.6"/>
-<vertex x="1.9" y="-0.1"/>
 </polygon>
 <smd name="17" x="-0.7" y="0" dx="3.1" dy="2.44" layer="1" stop="no" cream="no"/>
 <smd name="18" x="1.5" y="-0.17" dx="1.3" dy="2.1" layer="1" rot="R180" stop="no" cream="no"/>
@@ -565,6 +563,10 @@
 <rectangle x1="1.1484" y1="-2.35" x2="1.3516" y2="-1.65" layer="29"/>
 <rectangle x1="1.6484" y1="-2.35" x2="1.8516" y2="-1.65" layer="29"/>
 <rectangle x1="-0.877" y1="1.6" x2="-0.623" y2="2.3" layer="29"/>
+<circle x="1.8" y="0" radius="0.14141875" width="0.3" layer="31"/>
+<circle x="1.2" y="0.6" radius="0.14141875" width="0.3" layer="31"/>
+<rectangle x1="-0.35" y1="-2.35" x2="-0.1" y2="-1.65" layer="31"/>
+<rectangle x1="0.1" y1="-2.35" x2="0.35" y2="-1.65" layer="31"/>
 </package>
 <package name="2020Z">
 <smd name="1" x="-2.032" y="0" dx="1.9177" dy="2.794" layer="1"/>
@@ -829,10 +831,12 @@
 <wire x1="-2.75" y1="-2.85" x2="-2.75" y2="2.85" width="0.13" layer="21"/>
 <text x="-2.35" y="-2" size="0.6" layer="27">&gt;VALUE</text>
 <text x="-2.35" y="2" size="0.6" layer="25" align="top-left">&gt;NAME</text>
-<rectangle x1="-2.15" y1="-2.1" x2="-1.15" y2="2.1" layer="31"/>
-<rectangle x1="1.15" y1="-2.1" x2="2.15" y2="2.1" layer="31"/>
 <rectangle x1="-2.3" y1="-2.25" x2="-1" y2="2.25" layer="29"/>
 <rectangle x1="1" y1="-2.25" x2="2.3" y2="2.25" layer="29"/>
+<rectangle x1="-2.15" y1="0.3" x2="-1.15" y2="2" layer="31"/>
+<rectangle x1="-2.15" y1="-2" x2="-1.15" y2="-0.3" layer="31"/>
+<rectangle x1="1.15" y1="0.3" x2="2.15" y2="2" layer="31"/>
+<rectangle x1="1.15" y1="-2" x2="2.15" y2="-0.3" layer="31"/>
 </package>
 <package name="POWERDI_5">
 <smd name="A2" x="2.872" y="-0.92" dx="1.39" dy="1.4" layer="1" rot="R90" stop="no" thermals="no"/>
@@ -873,7 +877,7 @@
 <smd name="15" x="0.75" y="-1.4" dx="0.2032" dy="0.7" layer="1" stop="no"/>
 <smd name="16" x="1.25" y="-1.4" dx="0.2032" dy="0.7" layer="1" stop="no"/>
 <smd name="11" x="-1.25" y="-1.4" dx="0.3048" dy="0.7" layer="1" stop="no"/>
-<smd name="8-9" x="-2" y="0" dx="0.7" dy="0.75" layer="1" stop="no"/>
+<smd name="8-9" x="-2" y="0" dx="0.7" dy="0.75" layer="1" stop="no" cream="no"/>
 <smd name="7" x="-2" y="0.8508" dx="0.7" dy="0.3048" layer="1" stop="no"/>
 <smd name="10" x="-2" y="-0.8508" dx="0.7" dy="0.3048" layer="1" stop="no"/>
 <smd name="4" x="-0.3008" y="1.4" dx="0.3048" dy="0.7" layer="1" stop="no"/>
@@ -920,6 +924,8 @@
 <rectangle x1="-1.4032" y1="1.05" x2="-1.0984" y2="1.75" layer="29"/>
 <rectangle x1="-1.4032" y1="-1.75" x2="-1.0984" y2="-1.05" layer="29"/>
 <rectangle x1="-2.1524" y1="-1.2008" x2="-1.8476" y2="-0.5008" layer="29" rot="R90"/>
+<rectangle x1="-2.325" y1="0.075" x2="-1.675" y2="0.35" layer="31"/>
+<rectangle x1="-2.325" y1="-0.35" x2="-1.675" y2="-0.075" layer="31"/>
 </package>
 <package name="XAL6060">
 <smd name="P$1" x="-2.02" y="0" dx="1.43" dy="5.33" layer="1" stop="no" thermals="no" cream="no"/>
@@ -3628,6 +3634,22 @@
 </technology>
 </technologies>
 </device>
+<device name="100_8" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-100YACT-ND" constant="no"/>
+<attribute name="EURO" value="1.68/10" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW0402100RJNEDHP" constant="no"/>
+<attribute name="TEMP" value="±200ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±5%" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="I" uservalue="yes">
@@ -4268,7 +4290,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="5COUT1" library="dubec" deviceset="CAP" device="47UF_10V" value="CAP47UF_10V"/>
 <part name="12COUT1" library="dubec" deviceset="CAP" device="22UF_35V" value="22uF"/>
 <part name="STVS" library="dubec" deviceset="D_ZENER" device="5.6V" value="D_ZENER5.6V"/>
-<part name="S1R" library="dubec" deviceset="RES" device="33.2_8" value="RES33.2_8"/>
+<part name="S1R" library="dubec" deviceset="RES" device="100_8" value="RES100_8"/>
 <part name="5COUT2" library="dubec" deviceset="CAP" device="47UF_10V" value="CAP47UF_10V"/>
 <part name="5REG" library="dubec" deviceset="LT8614" device="IUDC"/>
 <part name="5C1" library="dubec" deviceset="CAP" device="1UF_50V"/>
@@ -4349,7 +4371,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="C2" gate="G$1" x="-33.02" y="-27.94" rot="R90"/>
 <instance part="GND8" gate="1" x="-38.1" y="-35.56"/>
 <instance part="GND10" gate="1" x="76.2" y="-68.58"/>
-<instance part="GND11" gate="1" x="-22.86" y="53.34"/>
+<instance part="GND11" gate="1" x="-22.86" y="58.42"/>
 <instance part="GND12" gate="1" x="-109.22" y="-22.86"/>
 <instance part="12UPS+" gate="G$1" x="-10.16" y="-68.58" rot="R180"/>
 <instance part="12UPS-" gate="G$1" x="-10.16" y="-58.42" rot="R180"/>
@@ -4462,6 +4484,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="CSNUB+" gate="G$1" pin="1"/>
 <wire x1="-10.16" y1="-22.86" x2="-10.16" y2="-30.48" width="0.1524" layer="91"/>
 <junction x="-10.16" y="-22.86"/>
+<label x="-53.34" y="-45.72" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="5V" class="0">
@@ -4648,7 +4671,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-27.94" y1="60.96" x2="-35.56" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="-27.94" y1="60.96" x2="-22.86" y2="60.96" width="0.1524" layer="91"/>
 <junction x="-27.94" y="60.96"/>
-<wire x1="-22.86" y1="60.96" x2="-22.86" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="RAUXBOT" gate="G$1" pin="1"/>
