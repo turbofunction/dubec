@@ -4283,7 +4283,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="BATT_MAIN" library="dubec" deviceset="M02" device=""/>
 <part name="BATT_AUX" library="dubec" deviceset="M02" device=""/>
 <part name="Q1" library="dubec" deviceset="MOSFET-N" device="6V_0.9A"/>
-<part name="S1D" library="dubec" deviceset="D_SCH" device="40V_0.2A" value="D_SCH40V_0.2A"/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="Q1RPD" library="dubec" deviceset="RES" device="10K_16" value="RES10K_16"/>
 <part name="5L" library="dubec" deviceset="I" device="8.2UH_6.1A"/>
@@ -4382,7 +4381,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="BATT_MAIN" gate="G$1" x="-111.76" y="-40.64" rot="MR180"/>
 <instance part="BATT_AUX" gate="G$1" x="-111.76" y="-55.88"/>
 <instance part="Q1" gate="G$1" x="-86.36" y="-17.78" rot="R270"/>
-<instance part="S1D" gate="G$1" x="-86.36" y="-30.48" rot="R180"/>
 <instance part="GND1" gate="1" x="-106.68" y="-63.5"/>
 <instance part="Q1RPD" gate="G$1" x="-104.14" y="0"/>
 <instance part="5L" gate="G$1" x="60.96" y="40.64"/>
@@ -5009,12 +5007,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="S1" gate="G$1" pin="GND"/>
 <pinref part="Q1" gate="G$1" pin="D"/>
 <wire x1="-73.66" y1="-35.56" x2="-71.12" y2="-35.56" width="0.1524" layer="91"/>
-<pinref part="S1D" gate="G$1" pin="A"/>
-<wire x1="-71.12" y1="-30.48" x2="-71.12" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="-71.12" y1="-35.56" x2="-71.12" y2="-17.78" width="0.1524" layer="91"/>
 <wire x1="-71.12" y1="-17.78" x2="-78.74" y2="-17.78" width="0.1524" layer="91"/>
-<wire x1="-83.82" y1="-30.48" x2="-71.12" y2="-30.48" width="0.1524" layer="91"/>
-<junction x="-71.12" y="-30.48"/>
-<wire x1="-71.12" y1="-30.48" x2="-71.12" y2="-35.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="5V_SW" class="0">
@@ -5112,12 +5106,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </net>
 <net name="5V_RELAY" class="0">
 <segment>
-<pinref part="S1D" gate="G$1" pin="C"/>
 <pinref part="S1" gate="G$1" pin="VCC"/>
 <pinref part="S1R" gate="G$1" pin="2"/>
-<wire x1="-88.9" y1="-30.48" x2="-99.06" y2="-30.48" width="0.1524" layer="91"/>
 <wire x1="-99.06" y1="-30.48" x2="-99.06" y2="-35.56" width="0.1524" layer="91"/>
-<junction x="-99.06" y="-30.48"/>
 </segment>
 </net>
 <net name="TP_AUX" class="0">
