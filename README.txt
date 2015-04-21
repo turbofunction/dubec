@@ -5,9 +5,9 @@ janne@savukoski.name
 
 
                     Part name: DUBEC
-                     Revision: 1.2B
+                     Revision: 1.3
                    Board size: 40mm x 21.375mm
-              Board thickness: 1.2mm
+              Board thickness: 1.6mm
                    Board type: Four layer
        Outer copper thickness:
        Inner copper thickness:
@@ -20,21 +20,22 @@ No special instructions.
 
 Layer order:
 
-TOP:    DUBEC.cmp
-        DUBEC.ly2
-        DUBEC.l15
-BOTTOM: DUBEC.sol
+TOP:    DUBEC.GTL
+        DUBEC.GL2
+        DUBEC.GL5
+BOTTOM: DUBEC.GBL
 
 
 Other files:
 
-DUBEC.stc  Solder mask TOP
-DUBEC.sts  Solder mask BOTTOM
-DUBEC.plc  Silkscreen TOP
-DUBEC.pls  Silkscreen BOTTOM
+DUBEC.GML  Outline
+DUBEC.GTS  Solder mask TOP
+DUBEC.GBS  Solder mask BOTTOM
+DUBEC.GTO  Silkscreen TOP
+DUBEC.GBO  Silkscreen BOTTOM
 DUBEC.drd  Excellon drill
 DUBEC.drl  Drill rack
-DUBEC.crc  Solder stencil (TOP)
+DUBEC.GTP  Solder stencil (TOP)
 
 
 Thank you!
