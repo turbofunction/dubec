@@ -1,6 +1,6 @@
 #!/bin/sh
 
-zip_file="DUBEC-1_3.zip"
+zip_file="DUBEC-1_3B.zip"
 
 rm -f $zip_file
 
