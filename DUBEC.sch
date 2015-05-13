@@ -1136,6 +1136,22 @@
 <pad name="POS" x="-1.75" y="0" drill="0.7" diameter="1.2"/>
 <pad name="NEG" x="1.75" y="0" drill="0.7" diameter="1.2" shape="square"/>
 </package>
+<package name="JUMPER-PAD-ROUND">
+<smd name="1" x="-0.3" y="0" dx="0.4" dy="0.3" layer="1" roundness="20" rot="R270" stop="no" thermals="no" cream="no"/>
+<smd name="2" x="0.3" y="0" dx="0.4" dy="0.3" layer="1" roundness="20" rot="R90" stop="no" thermals="no" cream="no"/>
+<text x="-1.1575" y="2.0225" size="0.5" layer="25" ratio="10">&gt;NAME</text>
+<text x="-1.175" y="1.3075" size="0.5" layer="27">&gt;VALUE</text>
+<polygon width="0.2032" layer="1">
+<vertex x="-0.225" y="0.6" curve="140"/>
+<vertex x="-0.225" y="-0.6"/>
+</polygon>
+<polygon width="0.2032" layer="1">
+<vertex x="0.225" y="-0.6" curve="140"/>
+<vertex x="0.225" y="0.6"/>
+</polygon>
+<circle x="0" y="0" radius="0.360553125" width="1" layer="29"/>
+<circle x="0" y="0" radius="1.1" width="0.254" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="AVRISP">
@@ -1497,6 +1513,16 @@
 <rectangle x1="-1.872" y1="0.287" x2="-1.745" y2="1.176" layer="94"/>
 <pin name="+" x="0" y="2.54" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
 <pin name="-" x="0" y="-5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
+</symbol>
+<symbol name="JUMPER-PAD">
+<wire x1="0.381" y1="0.635" x2="0.381" y2="-0.635" width="1.27" layer="94" curve="-180" cap="flat"/>
+<wire x1="-0.381" y1="-0.635" x2="-0.381" y2="0.635" width="1.27" layer="94" curve="-180" cap="flat"/>
+<wire x1="2.54" y1="0" x2="1.651" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-1.651" y2="0" width="0.1524" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95">&gt;NAME</text>
+<text x="-2.54" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -4425,6 +4451,22 @@
 </device>
 </devices>
 </deviceset>
+<deviceset name="JUMPER-PAD">
+<gates>
+<gate name="G$1" symbol="JUMPER-PAD" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="JUMPER-PAD-ROUND">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 <library name="SparkFun-Passives">
@@ -4610,6 +4652,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="R12VPU" library="dubec" deviceset="RES" device="3K_16" value="RES3K_16"/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
+<part name="SJ1" library="dubec" deviceset="JUMPER-PAD" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -4723,6 +4766,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="GND8" gate="1" x="-15.24" y="-91.44"/>
 <instance part="R12VPU" gate="G$1" x="-76.2" y="45.72"/>
 <instance part="GND9" gate="1" x="-124.46" y="50.8"/>
+<instance part="SJ1" gate="G$1" x="-58.42" y="60.96"/>
 </instances>
 <busses>
 </busses>
@@ -5162,7 +5206,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-53.34" y1="55.88" x2="-50.8" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="-53.34" y1="50.8" x2="-53.34" y2="55.88" width="0.1524" layer="91"/>
 <junction x="-53.34" y="55.88"/>
-<label x="-58.42" y="55.88" size="1.778" layer="95"/>
+<label x="-53.34" y="55.88" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="AVRISP" gate="G$1" pin="VCC"/>
@@ -5220,23 +5264,16 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="20.32" y1="-63.5" x2="20.32" y2="-60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="SCK" class="0">
+<net name="12V_RUN" class="0">
 <segment>
-<pinref part="MCU" gate="G$1" pin="PB2"/>
-<wire x1="-50.8" y1="60.96" x2="-66.04" y2="60.96" width="0.1524" layer="91"/>
 <label x="-99.06" y="60.96" size="1.778" layer="95" rot="R180" xref="yes"/>
 <pinref part="R12VPU" gate="G$1" pin="2"/>
 <wire x1="-66.04" y1="60.96" x2="-99.06" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="-71.12" y1="45.72" x2="-66.04" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="-66.04" y1="45.72" x2="-66.04" y2="60.96" width="0.1524" layer="91"/>
 <junction x="-66.04" y="60.96"/>
-<label x="-58.42" y="60.96" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="AVRISP" gate="G$1" pin="SCK"/>
-<wire x1="-144.78" y1="73.66" x2="-139.7" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="-139.7" y1="73.66" x2="-134.62" y2="76.2" width="0.1524" layer="91"/>
-<label x="-144.78" y="73.66" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="SJ1" gate="G$1" pin="1"/>
+<wire x1="-63.5" y1="60.96" x2="-66.04" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="12REG" gate="G$1" pin="RUN"/>
@@ -5254,7 +5291,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="MCU" gate="G$1" pin="PB1"/>
 <wire x1="-68.58" y1="66.04" x2="-50.8" y2="66.04" width="0.1524" layer="91"/>
 <junction x="-68.58" y="66.04"/>
-<label x="-58.42" y="66.04" size="1.778" layer="95"/>
+<label x="-53.34" y="66.04" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="AVRISP" gate="G$1" pin="MISO"/>
@@ -5270,7 +5307,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-88.9" y1="71.12" x2="-88.9" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="-88.9" y1="30.48" x2="-81.28" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="1"/>
-<label x="-58.42" y="71.12" size="1.778" layer="95"/>
+<label x="-53.34" y="71.12" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="AVRISP" gate="G$1" pin="MOSI"/>
@@ -5551,6 +5588,20 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-55.88" y1="-5.08" x2="-53.34" y2="-5.08" width="0.1524" layer="91"/>
 <wire x1="-53.34" y1="-5.08" x2="-53.34" y2="-17.78" width="0.1524" layer="91"/>
 <label x="-55.88" y="-5.08" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="SCK" class="0">
+<segment>
+<pinref part="SJ1" gate="G$1" pin="2"/>
+<pinref part="MCU" gate="G$1" pin="PB2"/>
+<wire x1="-53.34" y1="60.96" x2="-50.8" y2="60.96" width="0.1524" layer="91"/>
+<label x="-53.34" y="60.96" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="AVRISP" gate="G$1" pin="SCK"/>
+<wire x1="-134.62" y1="76.2" x2="-139.7" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="-139.7" y1="73.66" x2="-144.78" y2="73.66" width="0.1524" layer="91"/>
+<label x="-144.78" y="73.66" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
