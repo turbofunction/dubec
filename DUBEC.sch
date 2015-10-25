@@ -1186,6 +1186,17 @@
 <wire x1="-1.7" y1="-0.95" x2="-1.7" y2="0.95" width="0.13" layer="21"/>
 <text x="1.53" y="-1.13" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
 </package>
+<package name="AVX9258-6P">
+<text x="-3" y="-1" size="0.5" layer="25" ratio="10" align="top-left">&gt;NAME</text>
+<text x="-3" y="-2.3" size="0.5" layer="27">&gt;VALUE</text>
+<smd name="1" x="-2.5" y="0" dx="0.6" dy="1" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="2" x="-1.5" y="0" dx="0.6" dy="1" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="3" x="-0.5" y="0" dx="0.6" dy="1" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="4" x="0.5" y="0" dx="0.6" dy="1" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="5" x="1.5" y="0" dx="0.6" dy="1" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="6" x="2.5" y="0" dx="0.6" dy="1" layer="1" stop="no" thermals="no" cream="no"/>
+<rectangle x1="-3" y1="-0.7" x2="3" y2="0.7" layer="29"/>
+</package>
 </packages>
 <symbols>
 <symbol name="AVRISP">
@@ -1637,6 +1648,23 @@
 <attribute name="DIGIKEY_PART_#" value="609-3710-ND" constant="no"/>
 <attribute name="MANUFACTURER" value="FCI" constant="no"/>
 <attribute name="MFG_PART_#" value="20021111-00006T4LF" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="AVX" package="AVX9258-6P">
+<connects>
+<connect gate="G$1" pin="GND" pad="6"/>
+<connect gate="G$1" pin="MISO" pad="1"/>
+<connect gate="G$1" pin="MOSI" pad="4"/>
+<connect gate="G$1" pin="RESET" pad="5"/>
+<connect gate="G$1" pin="SCK" pad="3"/>
+<connect gate="G$1" pin="VCC" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="478-5495-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="AVX Corporation" constant="no"/>
+<attribute name="MFG_PART_#" value="009258008004063" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -4724,7 +4752,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="DAUXR" library="dubec" deviceset="RES" device="165_16" value="RES165_16"/>
 <part name="12RLED" library="dubec" deviceset="RES" device="2.32K_16" value="RES2.32K_16"/>
 <part name="5RLED" library="dubec" deviceset="RES" device="590_16" value="RES590_16"/>
-<part name="AVRISP" library="dubec" deviceset="AVRISP" device="H3X2" value="AVRISPH3X2"/>
+<part name="AVRISP" library="dubec" deviceset="AVRISP" device="AVX" value="AVRISPAVX"/>
 <part name="UD" library="dubec" deviceset="D_SCH" device="40V_0.25MA" value="D_SCH40V_0.25MA"/>
 <part name="12TVS" library="dubec" deviceset="D_ZENER" device="15V" value="D_ZENER15V"/>
 <part name="RAUXTOP" library="dubec" deviceset="RES" device="90.9K_16" value="RES90.9K_16"/>
