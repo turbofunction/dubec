@@ -1202,27 +1202,84 @@
 <rectangle x1="1.2" y1="-0.5" x2="1.8" y2="0.5" layer="29"/>
 <rectangle x1="2.2" y1="-0.5" x2="2.8" y2="0.5" layer="29"/>
 </package>
+<package name="AVX9258-8P">
+<text x="-5" y="5" size="0.6" layer="25" ratio="10">&gt;NAME</text>
+<text x="-5" y="4" size="0.6" layer="27">&gt;VALUE</text>
+<smd name="4" x="0.5" y="-2.85" dx="0.7" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="5" x="-0.5" y="-2.85" dx="0.7" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="6" x="-1.5" y="-2.85" dx="0.7" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="7" x="-2.5" y="-2.85" dx="0.7" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="8" x="-3.5" y="-2.85" dx="0.7" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="3" x="1.5" y="-2.85" dx="0.7" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="2" x="2.5" y="-2.85" dx="0.7" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="1" x="3.5" y="-2.85" dx="0.7" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
+<hole x="-4.675" y="0" drill="1.2"/>
+<hole x="4.675" y="0" drill="1.2"/>
+<rectangle x1="-3.85" y1="-3.2" x2="-3.15" y2="-2.5" layer="29"/>
+<rectangle x1="-2.85" y1="-3.2" x2="-2.15" y2="-2.5" layer="29"/>
+<rectangle x1="-1.85" y1="-3.2" x2="-1.15" y2="-2.5" layer="29"/>
+<rectangle x1="-0.85" y1="-3.2" x2="-0.15" y2="-2.5" layer="29"/>
+<rectangle x1="0.15" y1="-3.2" x2="0.85" y2="-2.5" layer="29"/>
+<rectangle x1="1.15" y1="-3.2" x2="1.85" y2="-2.5" layer="29"/>
+<rectangle x1="2.15" y1="-3.2" x2="2.85" y2="-2.5" layer="29"/>
+<rectangle x1="3.15" y1="-3.2" x2="3.85" y2="-2.5" layer="29"/>
+<rectangle x1="-3.75" y1="-3.1" x2="-3.25" y2="-2.6" layer="31"/>
+<rectangle x1="-2.75" y1="-3.1" x2="-2.25" y2="-2.6" layer="31"/>
+<rectangle x1="-1.75" y1="-3.1" x2="-1.25" y2="-2.6" layer="31"/>
+<rectangle x1="-0.75" y1="-3.1" x2="-0.25" y2="-2.6" layer="31"/>
+<rectangle x1="0.25" y1="-3.1" x2="0.75" y2="-2.6" layer="31"/>
+<rectangle x1="1.25" y1="-3.1" x2="1.75" y2="-2.6" layer="31"/>
+<rectangle x1="2.25" y1="-3.1" x2="2.75" y2="-2.6" layer="31"/>
+<rectangle x1="3.25" y1="-3.1" x2="3.75" y2="-2.6" layer="31"/>
+<rectangle x1="-3.75" y1="2.6" x2="-3.25" y2="3.1" layer="31"/>
+<rectangle x1="-3.85" y1="2.5" x2="-3.15" y2="3.2" layer="29"/>
+<rectangle x1="-2.75" y1="2.6" x2="-2.25" y2="3.1" layer="31"/>
+<rectangle x1="-2.85" y1="2.5" x2="-2.15" y2="3.2" layer="29"/>
+<rectangle x1="-1.75" y1="2.6" x2="-1.25" y2="3.1" layer="31"/>
+<rectangle x1="-1.85" y1="2.5" x2="-1.15" y2="3.2" layer="29"/>
+<rectangle x1="-0.75" y1="2.6" x2="-0.25" y2="3.1" layer="31"/>
+<rectangle x1="-0.85" y1="2.5" x2="-0.15" y2="3.2" layer="29"/>
+<rectangle x1="0.25" y1="2.6" x2="0.75" y2="3.1" layer="31"/>
+<rectangle x1="0.15" y1="2.5" x2="0.85" y2="3.2" layer="29"/>
+<rectangle x1="1.25" y1="2.6" x2="1.75" y2="3.1" layer="31"/>
+<rectangle x1="1.15" y1="2.5" x2="1.85" y2="3.2" layer="29"/>
+<rectangle x1="2.25" y1="2.6" x2="2.75" y2="3.1" layer="31"/>
+<rectangle x1="2.15" y1="2.5" x2="2.85" y2="3.2" layer="29"/>
+<rectangle x1="3.25" y1="2.6" x2="3.75" y2="3.1" layer="31"/>
+<rectangle x1="3.15" y1="2.5" x2="3.85" y2="3.2" layer="29"/>
+<wire x1="-5.175" y1="2.75" x2="-4.125" y2="2.75" width="0.2032" layer="21"/>
+<wire x1="4.125" y1="2.75" x2="5.175" y2="2.75" width="0.2032" layer="21"/>
+<wire x1="-5.175" y1="-2.75" x2="-4.125" y2="-2.75" width="0.2032" layer="21"/>
+<wire x1="4.125" y1="-2.75" x2="5.175" y2="-2.75" width="0.2032" layer="21"/>
+<wire x1="5.175" y1="-1.05" x2="5.175" y2="-2.75" width="0.2032" layer="21"/>
+<wire x1="5.175" y1="2.75" x2="5.175" y2="1.05" width="0.2032" layer="21"/>
+<wire x1="-5.175" y1="-2.75" x2="-5.175" y2="-1.05" width="0.2032" layer="21"/>
+<wire x1="-5.175" y1="1.05" x2="-5.175" y2="2.75" width="0.2032" layer="21"/>
+<text x="0" y="0" size="0.8128" layer="21" font="vector" ratio="15" align="center">00925
+80080
+04063</text>
+</package>
 </packages>
 <symbols>
 <symbol name="AVRISP">
-<pin name="SCK" x="-5.08" y="0" visible="pin" length="middle" direction="in" rot="R180"/>
-<pin name="MISO" x="-5.08" y="7.62" visible="pin" length="middle" rot="R180"/>
-<pin name="RESET" x="-5.08" y="-7.62" visible="pin" length="middle" direction="in" rot="R180"/>
-<pin name="VCC" x="5.08" y="7.62" visible="pin" length="middle" direction="pwr"/>
-<pin name="GND" x="5.08" y="-7.62" visible="pin" length="middle" direction="pwr"/>
+<pin name="SCK" x="-12.7" y="0" visible="pin" length="middle" direction="in"/>
+<pin name="MISO" x="-12.7" y="7.62" visible="pin" length="middle"/>
+<pin name="RESET" x="-12.7" y="-7.62" visible="pin" length="middle" direction="in"/>
+<pin name="VCC" x="12.7" y="7.62" visible="pin" length="middle" direction="pwr" rot="R180"/>
+<pin name="GND" x="12.7" y="-7.62" visible="pin" length="middle" direction="pwr" rot="R180"/>
 <wire x1="-10.16" y1="12.7" x2="10.16" y2="12.7" width="0.508" layer="94"/>
 <wire x1="10.16" y1="12.7" x2="10.16" y2="-12.7" width="0.508" layer="94"/>
 <wire x1="10.16" y1="-12.7" x2="-10.16" y2="-12.7" width="0.508" layer="94"/>
 <wire x1="-10.16" y1="-12.7" x2="-10.16" y2="12.7" width="0.508" layer="94"/>
 <text x="-10.16" y="15.24" size="3.81" layer="95">&gt;NAME</text>
 <text x="-10.16" y="-19.05" size="3.81" layer="96">&gt;VALUE</text>
-<circle x="-5.08" y="7.62" radius="2.54" width="0.508" layer="94"/>
 <circle x="-5.08" y="0" radius="2.54" width="0.508" layer="94"/>
 <circle x="-5.08" y="-7.62" radius="2.54" width="0.508" layer="94"/>
 <circle x="5.08" y="7.62" radius="2.54" width="0.508" layer="94"/>
 <circle x="5.08" y="0" radius="2.54" width="0.508" layer="94"/>
 <circle x="5.08" y="-7.62" radius="2.54" width="0.508" layer="94"/>
-<pin name="MOSI" x="5.08" y="0" visible="pin" length="middle"/>
+<pin name="MOSI" x="12.7" y="0" visible="pin" length="middle" rot="R180"/>
+<circle x="-5.08" y="7.62" radius="2.54" width="0.508" layer="94"/>
 </symbol>
 <symbol name="Z-DIODE">
 <wire x1="-1.27" y1="-1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
@@ -1671,6 +1728,19 @@
 <attribute name="MANUFACTURER" value="AVX Corporation" constant="no"/>
 <attribute name="MFG_PART_#" value="009258008004063" constant="no"/>
 </technology>
+</technologies>
+</device>
+<device name="AVXC" package="AVX9258-8P">
+<connects>
+<connect gate="G$1" pin="GND" pad="6"/>
+<connect gate="G$1" pin="MISO" pad="1"/>
+<connect gate="G$1" pin="MOSI" pad="4"/>
+<connect gate="G$1" pin="RESET" pad="5"/>
+<connect gate="G$1" pin="SCK" pad="3"/>
+<connect gate="G$1" pin="VCC" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -4957,7 +5027,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="GND7" gate="1" x="58.42" y="-93.98"/>
 <instance part="GND8" gate="1" x="-15.24" y="-91.44"/>
 <instance part="R12VPU" gate="G$1" x="-76.2" y="45.72"/>
-<instance part="GND9" gate="1" x="-111.76" y="63.5"/>
+<instance part="GND9" gate="1" x="-114.3" y="63.5"/>
 <instance part="SJ1" gate="G$1" x="-58.42" y="60.96"/>
 <instance part="5COUT1" gate="G$1" x="93.98" y="38.1" rot="R180"/>
 <instance part="12COUT1" gate="G$1" x="30.48" y="-78.74" rot="R180"/>
@@ -5163,8 +5233,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <pinref part="AVRISP" gate="G$1" pin="GND"/>
 <pinref part="GND9" gate="1" pin="GND"/>
-<wire x1="-124.46" y1="68.58" x2="-119.38" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="-119.38" y1="66.04" x2="-111.76" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="-116.84" y1="68.58" x2="-114.3" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="-114.3" y1="68.58" x2="-114.3" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="RAUXBOT" gate="G$1" pin="1"/>
@@ -5404,9 +5474,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </segment>
 <segment>
 <pinref part="AVRISP" gate="G$1" pin="VCC"/>
-<wire x1="-124.46" y1="83.82" x2="-119.38" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="-119.38" y1="81.28" x2="-111.76" y2="81.28" width="0.1524" layer="91"/>
-<label x="-111.76" y="81.28" size="1.778" layer="95" xref="yes"/>
+<wire x1="-116.84" y1="83.82" x2="-114.3" y2="83.82" width="0.1524" layer="91"/>
+<label x="-114.3" y="83.82" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="ADC2" class="0">
@@ -5491,9 +5560,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </segment>
 <segment>
 <pinref part="AVRISP" gate="G$1" pin="MISO"/>
-<wire x1="-147.32" y1="81.28" x2="-139.7" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="-139.7" y1="81.28" x2="-134.62" y2="83.82" width="0.1524" layer="91"/>
-<label x="-147.32" y="81.28" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="-144.78" y1="83.82" x2="-142.24" y2="83.82" width="0.1524" layer="91"/>
+<label x="-144.78" y="83.82" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="MOSI" class="0">
@@ -5507,9 +5575,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </segment>
 <segment>
 <pinref part="AVRISP" gate="G$1" pin="MOSI"/>
-<wire x1="-124.46" y1="76.2" x2="-119.38" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="-119.38" y1="73.66" x2="-111.76" y2="73.66" width="0.1524" layer="91"/>
-<label x="-111.76" y="73.66" size="1.778" layer="95" xref="yes"/>
+<wire x1="-116.84" y1="76.2" x2="-114.3" y2="76.2" width="0.1524" layer="91"/>
+<label x="-114.3" y="76.2" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="5V_SW" class="0">
@@ -5620,9 +5687,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </segment>
 <segment>
 <pinref part="AVRISP" gate="G$1" pin="RESET"/>
-<wire x1="-134.62" y1="68.58" x2="-139.7" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="-139.7" y1="66.04" x2="-147.32" y2="66.04" width="0.1524" layer="91"/>
-<label x="-147.32" y="66.04" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="-142.24" y1="68.58" x2="-144.78" y2="68.58" width="0.1524" layer="91"/>
+<label x="-144.78" y="68.58" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="GATE_MAIN" class="2">
@@ -5796,9 +5862,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </segment>
 <segment>
 <pinref part="AVRISP" gate="G$1" pin="SCK"/>
-<wire x1="-134.62" y1="76.2" x2="-139.7" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="-139.7" y1="73.66" x2="-147.32" y2="73.66" width="0.1524" layer="91"/>
-<label x="-147.32" y="73.66" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="-142.24" y1="76.2" x2="-144.78" y2="76.2" width="0.1524" layer="91"/>
+<label x="-144.78" y="76.2" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
@@ -5806,4 +5871,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </sheets>
 </schematic>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
