@@ -31,10 +31,8 @@ ISPAdapter.GML  Outline
 ISPAdapter.GTS  Solder mask TOP
 ISPAdapter.GBS  Solder mask BOTTOM
 ISPAdapter.GTO  Silkscreen TOP
-ISPAdapter.GBO  Silkscreen BOTTOM
 ISPAdapter.drd  Excellon drill
 ISPAdapter.drl  Drill rack
-ISPAdapter.GTP  Solder stencil (TOP)
 
 
 Thank you!
