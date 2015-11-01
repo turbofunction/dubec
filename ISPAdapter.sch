@@ -134,8 +134,8 @@
 <description>By Janne Savukoski 2014</description>
 <packages>
 <package name="AVX9258-8P">
-<text x="-4" y="1.47" size="1" layer="25" ratio="10" align="top-left">&gt;NAME</text>
-<text x="-4" y="-1.53" size="1" layer="27">&gt;VALUE</text>
+<text x="-5" y="5" size="0.6" layer="25" ratio="10">&gt;NAME</text>
+<text x="-5" y="4" size="0.6" layer="27">&gt;VALUE</text>
 <smd name="4" x="0.5" y="-2.85" dx="0.7" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
 <smd name="5" x="-0.5" y="-2.85" dx="0.7" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
 <smd name="6" x="-1.5" y="-2.85" dx="0.7" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
@@ -178,14 +178,17 @@
 <rectangle x1="2.15" y1="2.5" x2="2.85" y2="3.2" layer="29"/>
 <rectangle x1="3.25" y1="2.6" x2="3.75" y2="3.1" layer="31"/>
 <rectangle x1="3.15" y1="2.5" x2="3.85" y2="3.2" layer="29"/>
-<wire x1="-5.175" y1="2.75" x2="-4.125" y2="2.75" width="0.127" layer="21"/>
-<wire x1="4.125" y1="2.75" x2="5.175" y2="2.75" width="0.127" layer="21"/>
-<wire x1="-5.175" y1="-2.75" x2="-4.125" y2="-2.75" width="0.127" layer="21"/>
-<wire x1="4.125" y1="-2.75" x2="5.175" y2="-2.75" width="0.127" layer="21"/>
-<wire x1="5.175" y1="-1.05" x2="5.175" y2="-2.75" width="0.127" layer="21"/>
-<wire x1="5.175" y1="2.75" x2="5.175" y2="1.05" width="0.127" layer="21"/>
-<wire x1="-5.175" y1="-2.75" x2="-5.175" y2="-1.05" width="0.127" layer="21"/>
-<wire x1="-5.175" y1="1.05" x2="-5.175" y2="2.75" width="0.127" layer="21"/>
+<wire x1="-5.175" y1="2.75" x2="-4.125" y2="2.75" width="0.2032" layer="21"/>
+<wire x1="4.125" y1="2.75" x2="5.175" y2="2.75" width="0.2032" layer="21"/>
+<wire x1="-5.175" y1="-2.75" x2="-4.125" y2="-2.75" width="0.2032" layer="21"/>
+<wire x1="4.125" y1="-2.75" x2="5.175" y2="-2.75" width="0.2032" layer="21"/>
+<wire x1="5.175" y1="-1.05" x2="5.175" y2="-2.75" width="0.2032" layer="21"/>
+<wire x1="5.175" y1="2.75" x2="5.175" y2="1.05" width="0.2032" layer="21"/>
+<wire x1="-5.175" y1="-2.75" x2="-5.175" y2="-1.05" width="0.2032" layer="21"/>
+<wire x1="-5.175" y1="1.05" x2="-5.175" y2="2.75" width="0.2032" layer="21"/>
+<text x="0" y="0" size="0.8128" layer="21" font="vector" ratio="15" align="center">00925
+80080
+04063</text>
 </package>
 </packages>
 <symbols>
@@ -872,13 +875,15 @@ Keying posts into board</description>
 <pad name="5" x="1.27" y="2.54" drill="1.1" shape="offset"/>
 <pad name="2" x="-1.27" y="-2.54" drill="1.1" shape="offset" rot="R180"/>
 <pad name="1" x="1.27" y="-2.54" drill="1.1" shape="offset"/>
-<wire x1="-4.55" y1="7.64" x2="4.55" y2="7.64" width="0.127" layer="21"/>
-<wire x1="4.55" y1="-7.64" x2="-4.55" y2="-7.64" width="0.127" layer="21"/>
-<wire x1="-4.55" y1="-7.64" x2="-4.55" y2="7.64" width="0.127" layer="21"/>
-<wire x1="4.55" y1="7.64" x2="4.55" y2="2.25" width="0.127" layer="21"/>
-<wire x1="4.55" y1="-2.25" x2="4.55" y2="-7.64" width="0.127" layer="21"/>
-<text x="-4" y="6" size="0.7" layer="25">&gt;NAME</text>
-<text x="-4" y="5" size="0.7" layer="27">&gt;VALUE</text>
+<wire x1="-4.55" y1="7.64" x2="4.55" y2="7.64" width="0.2032" layer="21"/>
+<wire x1="4.55" y1="-7.64" x2="-4.55" y2="-7.64" width="0.2032" layer="21"/>
+<wire x1="-4.55" y1="-7.64" x2="-4.55" y2="7.64" width="0.2032" layer="21"/>
+<wire x1="4.55" y1="7.64" x2="4.55" y2="2.25" width="0.2032" layer="21"/>
+<wire x1="4.55" y1="-2.25" x2="4.55" y2="-7.64" width="0.2032" layer="21"/>
+<text x="-4" y="-6" size="0.7" layer="25">&gt;NAME</text>
+<text x="-4" y="-7" size="0.7" layer="27">&gt;VALUE</text>
+<text x="-4" y="6" size="0.8128" layer="21" font="vector" ratio="15">61200621621</text>
+<circle x="3.3" y="-4.4" radius="0.25" width="0.5" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -1431,4 +1436,10 @@ Pogo pins- HW-11044</description>
 </sheets>
 </schematic>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
