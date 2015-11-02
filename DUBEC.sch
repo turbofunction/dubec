@@ -4921,7 +4921,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="12COUT1" library="dubec" deviceset="TCAP" device="47UF_16V"/>
 <part name="12COUT2" library="dubec" deviceset="CAP" device="22UF_35V"/>
 <part name="5COUT2" library="dubec" deviceset="CAP" device="47UF_10V"/>
-<part name="RBLEED" library="dubec" deviceset="RES" device="40.2K_16" value="RES40.2K_16"/>
 </parts>
 <sheets>
 <sheet>
@@ -5034,7 +5033,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="12COUT1" gate="G$1" x="30.48" y="-78.74" rot="R180"/>
 <instance part="12COUT2" gate="G$1" x="30.48" y="-83.82"/>
 <instance part="5COUT2" gate="G$1" x="93.98" y="45.72"/>
-<instance part="RBLEED" gate="G$1" x="-15.24" y="-60.96" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -5075,13 +5073,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <junction x="-25.4" y="-53.34"/>
 <wire x1="-30.48" y1="-53.34" x2="-30.48" y2="-55.88" width="0.1524" layer="91"/>
 <junction x="-30.48" y="-53.34"/>
-<wire x1="-20.32" y1="-53.34" x2="-15.24" y2="-53.34" width="0.1524" layer="91"/>
 <junction x="-20.32" y="-53.34"/>
 <label x="-7.62" y="-53.34" size="1.778" layer="95" xref="yes"/>
-<pinref part="RBLEED" gate="G$1" pin="2"/>
-<wire x1="-15.24" y1="-53.34" x2="-7.62" y2="-53.34" width="0.1524" layer="91"/>
-<wire x1="-15.24" y1="-55.88" x2="-15.24" y2="-53.34" width="0.1524" layer="91"/>
-<junction x="-15.24" y="-53.34"/>
+<wire x1="-20.32" y1="-53.34" x2="-7.62" y2="-53.34" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="5REG" gate="G$1" pin="EN/UV"/>
@@ -5438,9 +5432,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-50.8" y1="-88.9" x2="-50.8" y2="-81.28" width="0.1524" layer="91"/>
 <wire x1="-50.8" y1="-81.28" x2="-55.88" y2="-81.28" width="0.1524" layer="91"/>
 <junction x="-55.88" y="-81.28"/>
-<pinref part="RBLEED" gate="G$1" pin="1"/>
-<wire x1="-15.24" y1="-66.04" x2="-20.32" y2="-66.04" width="0.1524" layer="91"/>
-<junction x="-20.32" y="-66.04"/>
 </segment>
 </net>
 <net name="5V_PG" class="0">
