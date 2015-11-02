@@ -1589,6 +1589,9 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <sheets>
 <sheet>
 <plain>
+<text x="53.34" y="45.72" size="1.016" layer="97" align="top-left">Pins 7 and 8 are unconnected
+to avoid shorts, as the contacts
+may contact whatever..</text>
 </plain>
 <instances>
 <instance part="GND2" gate="1" x="91.44" y="53.34"/>
@@ -1596,7 +1599,7 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <instance part="JP1" gate="G$1" x="58.42" y="91.44" rot="R270"/>
 <instance part="GND3" gate="1" x="55.88" y="78.74"/>
 <instance part="U$1" gate="G$1" x="40.64" y="60.96"/>
-<instance part="GND4" gate="1" x="50.8" y="45.72"/>
+<instance part="GND4" gate="1" x="53.34" y="50.8"/>
 <instance part="JP2" gate="G$1" x="78.74" y="91.44" rot="R270"/>
 <instance part="GND1" gate="1" x="78.74" y="78.74"/>
 </instances>
@@ -1645,23 +1648,15 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <pinref part="GND3" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="8"/>
-<pinref part="GND4" gate="1" pin="GND"/>
-<pinref part="U$1" gate="G$1" pin="6"/>
-<wire x1="48.26" y1="55.88" x2="50.8" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="7"/>
-<wire x1="48.26" y1="53.34" x2="50.8" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="55.88" x2="50.8" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="53.34" x2="50.8" y2="50.8" width="0.1524" layer="91"/>
-<junction x="50.8" y="53.34"/>
-<wire x1="50.8" y1="50.8" x2="50.8" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="50.8" x2="50.8" y2="50.8" width="0.1524" layer="91"/>
-<junction x="50.8" y="50.8"/>
-</segment>
-<segment>
 <pinref part="JP2" gate="G$1" pin="1"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 <wire x1="78.74" y1="83.82" x2="78.74" y2="81.28" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="6"/>
+<wire x1="48.26" y1="55.88" x2="53.34" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="GND4" gate="1" pin="GND"/>
+<wire x1="53.34" y1="55.88" x2="53.34" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="MISO" class="0">
