@@ -5794,7 +5794,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="-73.66" y="27.94" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$6" class="0">
+<net name="SRC_MAIN" class="0">
 <segment>
 <pinref part="DA1" gate="G$1" pin="C"/>
 <pinref part="QR" gate="G$1" pin="S"/>
@@ -5809,7 +5809,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <junction x="-99.06" y="-40.64"/>
 </segment>
 </net>
-<net name="N$8" class="0">
+<net name="SRC_AUX" class="0">
 <segment>
 <pinref part="DB1" gate="G$1" pin="C"/>
 <pinref part="QR" gate="G$2" pin="S"/>
