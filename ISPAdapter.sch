@@ -1635,7 +1635,7 @@ may contact whatever..</text>
 <label x="50.8" y="60.96" size="1.016" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="GND" class="0">
+<net name="DGND" class="0">
 <segment>
 <pinref part="J1" gate="G$1" pin="6"/>
 <wire x1="88.9" y1="58.42" x2="91.44" y2="58.42" width="0.1524" layer="91"/>
@@ -1646,11 +1646,6 @@ may contact whatever..</text>
 <pinref part="JP1" gate="G$1" pin="1"/>
 <wire x1="58.42" y1="83.82" x2="55.88" y2="81.28" width="0.1524" layer="91"/>
 <pinref part="GND3" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="JP2" gate="G$1" pin="1"/>
-<pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="78.74" y1="83.82" x2="78.74" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="6"/>
@@ -1693,6 +1688,13 @@ may contact whatever..</text>
 <pinref part="U$1" gate="G$1" pin="5"/>
 <wire x1="48.26" y1="58.42" x2="50.8" y2="58.42" width="0.1524" layer="91"/>
 <label x="50.8" y="58.42" size="1.016" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="GND" class="0">
+<segment>
+<pinref part="JP2" gate="G$1" pin="1"/>
+<wire x1="78.74" y1="83.82" x2="78.74" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="GND1" gate="1" pin="GND"/>
 </segment>
 </net>
 </nets>
