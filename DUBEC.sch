@@ -4082,6 +4082,22 @@
 </technology>
 </technologies>
 </device>
+<device name="2M_16" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-2.00MLCT-ND" constant="no"/>
+<attribute name="EURO" value="2.01/50" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW04022M00FKED" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="I" uservalue="yes">
@@ -4898,17 +4914,17 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="DTVS" library="dubec" deviceset="TVS-SPT" device="36V"/>
 <part name="QR" library="dubec" deviceset="2PMOS" device="40V_8A" value="2PMOS40V_8A"/>
 <part name="D2" library="dubec" deviceset="2ZD" device="18V_0.2W" value="2ZD18V_0.2W"/>
-<part name="RA2" library="dubec" deviceset="RES" device="10K_16" value="RES10K_16"/>
-<part name="RB2" library="dubec" deviceset="RES" device="10K_16" value="RES10K_16"/>
+<part name="RA2" library="dubec" deviceset="RES" device="40.2K_16" value="RES40.2K_16"/>
+<part name="RB2" library="dubec" deviceset="RES" device="40.2K_16" value="RES40.2K_16"/>
 <part name="QA1" library="dubec" deviceset="2NMOS" device="60V_0.2A"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="DA1" library="dubec" deviceset="DIODE" device="40V_3A"/>
 <part name="DB1" library="dubec" deviceset="DIODE" device="40V_3A"/>
 <part name="GND_MAIN" library="dubec" deviceset="M01" device=""/>
 <part name="GND_AUX" library="dubec" deviceset="M01" device=""/>
-<part name="RA1" library="dubec" deviceset="RES" device="40.2K_16" value="RES40.2K_16"/>
-<part name="RB1" library="dubec" deviceset="RES" device="40.2K_16" value="RES40.2K_16"/>
-<part name="RA3" library="dubec" deviceset="RES" device="1M_16" value="RES1M_16"/>
+<part name="RA1" library="dubec" deviceset="RES" device="90.9K_16" value="RES90.9K_16"/>
+<part name="RB1" library="dubec" deviceset="RES" device="90.9K_16" value="RES90.9K_16"/>
+<part name="RA3" library="dubec" deviceset="RES" device="2M_16" value="RES2M_16"/>
 <part name="QA2" library="dubec" deviceset="2NMOS" device="60V_0.2A"/>
 <part name="D3" library="dubec" deviceset="D_ZENER" device="15V_0.2W_A"/>
 <part name="CSNUB" library="dubec" deviceset="ECAP" device="100UF_50V"/>
