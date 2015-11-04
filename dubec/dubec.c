@@ -33,6 +33,12 @@
 // AUX battery voltage divider net
 #define PIN_ADC PORTB4
 
+// see batt.aux_status
+#define AUX_UNKNOWN 0
+#define AUX_BAD 1
+#define AUX_WARN 2
+#define AUX_OK 3
+
 // ~6.0v as a 10-bit ADC value for 0.198V (2.94k/90.9k divider):
 // (2.94/90.9 * 6V) * (1024 / 1.1V)
 #define MIN_VOLTAGE 180
@@ -58,11 +64,12 @@
 // returns greater of arguments
 #define MAX(a, b) (a > b ? a : b)
 
-// how long to wait for capacitors to charge
-volatile uint8_t startup_delay = WDTO_500MS;
-
 typedef struct {
-	volatile uint8_t aux_ok;
+	volatile uint8_t aux_status;
+	// when to start flashing warning LED
+	volatile uint16_t warn_voltage;
+	// counter for taking a few samples before flagging
+	volatile uint8_t until_bad_aux;
 	/*
 	 * Fallback level is set to 75% of measured initial voltage
 	 * level, ie. 4.2V results in 3.15V and 3.8V makes 2.85V.
@@ -79,23 +86,41 @@ typedef struct {
 	 * Rule: Don't launch with a drained battery!
 	 */
 	volatile uint16_t fallback_voltage;
-	// counter for taking a few samples before flagging
-	volatile uint8_t until_bad_aux;
-	// true to imply battery warning TODO implement blink
-	volatile uint8_t warn;
+	volatile uint8_t until_blink;
 } battery_t;
 
-battery_t batt = { FALSE, 0, 0, FALSE };
+battery_t batt = { AUX_UNKNOWN, 0, 0, 0, 0 };
+
+// evaluates to true if switch is set to AUX
+#define aux_ok() ( batt.aux_status == AUX_OK )
 
 typedef struct {
-	// countdown to relay flip
+	// countdown to battery switch
 	volatile uint8_t until_flip;
 } control_t;
 
 control_t rc = { 0 };
 
+static uint8_t wdt_time(uint8_t wdto);
 static void set_switch(uint8_t port);
 static void aux_bad(void);
+
+uint8_t wdt_time(uint8_t wdto) {
+	switch (wdto) {
+		case WDTO_15MS:
+			return 1;
+		case WDTO_30MS:
+			return 2;
+		case WDTO_60MS:
+			return 4;
+		case WDTO_120MS:
+			return 8;
+		case WDTO_250MS:
+			return 16;
+		default: // 500ms and up
+			return 32;
+	}
+}
 
 int main(void) {
 	/*
@@ -183,12 +208,10 @@ int main(void) {
 
 void set_switch(uint8_t aux) {
 	// assert aux != is_aux()
-	// don't allow relay switches before we have bridging power
-	// from capacitor
-	if (!startup_delay && aux != is_aux()) {
+	if (aux != is_aux()) {
 		if (!aux) {
 			PORTB &= ~_BV(PIN_SWITCH);
-		} else if (batt.aux_ok) {
+		} else if (aux_ok()) {
 			PORTB |= _BV(PIN_SWITCH);
 		}
 	}
@@ -196,8 +219,8 @@ void set_switch(uint8_t aux) {
 }
 
 void aux_bad(void) {
-	if (batt.aux_ok) {
-		batt.aux_ok = FALSE;
+	if (batt.aux_status != AUX_BAD) {
+		batt.aux_status = AUX_BAD;
 		batt.until_bad_aux = 0;
 		if (is_aux()) {
 			// fallback to main AND DO IT NOW
@@ -309,7 +332,8 @@ ISR(ADC_vect) {
 		// take another sample before flagging ok
 
 	} else if (v <= batt.fallback_voltage) {
-		if (batt.aux_ok) {
+		if (batt.aux_status != AUX_BAD) {
+			batt.aux_status = AUX_WARN;
 			if (!batt.until_bad_aux) {
 				// initialize countdown
 				batt.until_bad_aux = 3;
@@ -318,34 +342,41 @@ ISR(ADC_vect) {
 			}
 		} // else no need to do anything
 
+	} else if (v <= batt.warn_voltage) {
+		if (batt.aux_status != AUX_WARN) {
+			batt.aux_status = AUX_WARN;
+			batt.until_blink = wdt_time(WDTO_500MS);
+			PORTB |= _BV(PIN_FAULT);
+		}
+
 	// 0.1V "hysteresis" on fallback level to prevent oscillation
-	} else if (!batt.aux_ok && v > (batt.fallback_voltage + 2)) {
-		batt.aux_ok = TRUE;
+	} else if (!aux_ok() && v > (batt.warn_voltage + 2)) {
+		batt.aux_status = AUX_OK;
 		// reset countdown
 		batt.until_bad_aux = 0;
+		batt.until_blink = 0;
 		PORTB &= ~_BV(PIN_FAULT);
 	}
 }
 
 /*
  * Use watchdog to initiate AUX battery voltage check on regular intervals.
+ * Handles also startup delay and voltage warning.
  */
 ISR (WDT_vect) {
-	if (startup_delay) {
+	// Blink the fault LED at 1Hz as warning
+	if (batt.aux_status == AUX_WARN) {
 		// watchdog period configured by three LSBs
-		uint8_t wdtp = WDTCR & 0b111;
-		// This is potentially very inaccurate, but let it suffice...
-		// (If after 900ms a 1s prescaler is changed to 60ms,
-		// the "lost" ~840ms won't be deducted from startup_delay.)
-		if (startup_delay > wdtp) {
-			startup_delay -= wdtp;
+		uint8_t wdt_t = wdt_time(WDTCR & 0b111);
+		if (batt.until_blink > wdt_t) {
+			batt.until_blink -= wdt_t;
 		} else {
-			// don't rotate...
-			startup_delay = 0;
+			PORTB ^= _BV(PIN_FAULT);
+			batt.until_blink = wdt_time(WDTO_500MS);
 		}
 	}
 
-	if (batt.aux_ok) {
+	if (batt.aux_status != AUX_BAD) {
 		// slow down sampling
 		configure_ADC(WDTO_500MS);
 	}
