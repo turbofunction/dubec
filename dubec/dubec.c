@@ -1,12 +1,13 @@
 /*
  * dubec.c
  *
- * RC relay switch tinyAVR application for DUBEC,
+ * RC battery switch application for DUBEC,
  * a dual channel voltage regulator.
  *
- * I'm still somewhat undecided whether nested if blocks
- * or surprise return statements are prettier, but I went
- * with the labyrinthine if blocks for now.
+ * Note about code structure: I'm still somewhat undecided
+ * whether nested if blocks or surprise return statements
+ * are prettier, but I went with the labyrinthine if blocks
+ * for now.
  *
  * Created: 10/3/2014 2:16:55 AM
  * Author: janne@turbofunction.com
@@ -21,21 +22,26 @@
 #define TRUE 1
 #define FALSE 0
 
-#define PIN_RELAY PORTB3
-
+// red LED
+#define PIN_FAULT PORTB0
+// RC signal input
 #define PIN_RC PORTB1
-
+// 12V regulator on/off
+#define PIN_12V PORTB2
+// FET gate net (and green LED)
+#define PIN_SWITCH PORTB3
+// AUX battery voltage divider net
 #define PIN_ADC PORTB4
 
-// ~7.0v as a 10-bit ADC value for 0.228V (35.7k/1.2k divider):
-// 1024 * (0.228 / 1.1)
-#define MIN_VOLTAGE 212
+// ~6.0v as a 10-bit ADC value for 0.198V (2.94k/90.9k divider):
+// (2.94/90.9 * 6V) * (1024 / 1.1V)
+#define MIN_VOLTAGE 180
 
 // evaluates to true if waiting for high RC signal
 #define rc_high_int() (MCUCR & (_BV(ISC01) | _BV(ISC00)))
 
-// evaluates to true if relay is set to AUX
-#define is_aux() bit_is_set(PORTB, PIN_RELAY)
+// evaluates to true if switch is set to AUX
+#define is_aux() bit_is_set(PORTB, PIN_SWITCH)
 
 // evaluates to true if timer is counting
 #define is_timer_running() (TCCR0B)
@@ -49,6 +55,7 @@
 // returns 75% of the value
 #define PC75(a) (((a << 1) + a) >> 2)
 
+// returns greater of arguments
 #define MAX(a, b) (a > b ? a : b)
 
 // how long to wait for capacitors to charge
@@ -74,9 +81,11 @@ typedef struct {
 	volatile uint16_t fallback_voltage;
 	// counter for taking a few samples before flagging
 	volatile uint8_t until_bad_aux;
+	// true to imply battery warning TODO implement blink
+	volatile uint8_t warn;
 } battery_t;
 
-battery_t batt = { FALSE, 0, 0 };
+battery_t batt = { FALSE, 0, 0, FALSE };
 
 typedef struct {
 	// countdown to relay flip
@@ -85,30 +94,35 @@ typedef struct {
 
 control_t rc = { 0 };
 
-static void set_relay(uint8_t port);
+static void set_switch(uint8_t port);
 static void aux_bad(void);
 
 int main(void) {
 	/*
 	 * Pin configuration:
 	 *
-	 * PB0 (MOSI): floating, pull-up input
-	 * PB1 (AIN1, PCINT1, INT0, MISO): RC signal digital input (external pull-up)
-	 * PB2 (SCK): floating, pull-up input
-	 * PB3 (ADC3): relay & AUX LED output
-	 * PB4 (ADC2, PCINT4): AUX battery voltage (divider) input (external pull-down)
-	 * PB5 (RESET): floating, pull-up input
+	 * PB0 (MOSI):
+	 *   red LED (fault) output
+	 * PB1 (AIN1, PCINT1, INT0, MISO):
+	 *   RC signal digital input, external pull-up
+	 * PB2 (SCK):
+	 *   12V run output, external pull-up
+	 * PB3 (ADC3):
+	 *   switch & AUX LED output, external pull-down
+	 * PB4 (ADC2, PCINT4):
+	 *   AUX battery voltage (divider) input, pulled down naturally if no battery
+	 * PB5 (RESET):
+	 *   floating, pull-up input
 	 *
-	 * Note: normally floating pins PB0, PB2, and PB5 are connected to ISP.
-	 *
-	 * Default fuses are fine.
+	 * Fuses:
+	 *   CKSEL = b01 // 4.8MHz nominal clock
 	 */
 
-	// configure relay as the sole output
-	DDRB = _BV(PIN_RELAY);
+	// configure fault LED and switch as output
+	DDRB = _BV(PIN_FAULT) | _BV(PIN_SWITCH);
 
-	// active internal pull-ups on floating pins
-	PORTB = 0b111111 & ~(_BV(PIN_RELAY) | _BV(PIN_RC) | _BV(PIN_ADC));
+	// active internal pull-ups on floating pins (just reset ATM)
+	PORTB = _BV(PORTB5);
 
 	// disable digital inputs
 	DIDR0 = _BV(AIN1D) | _BV(ADC2D) | _BV(ADC3D);
@@ -124,13 +138,13 @@ int main(void) {
 	// enable timer counter overflow interrupt
 	TIMSK0 = _BV(TOIE0);
 
-	// Switch to 9.6MHz.
+	// Switch to 1.2MHz.
 	// Note: simulator ignores this if CKDIV8 fuse is set.
-	clock_prescale_set(clock_div_1);
+	clock_prescale_set(clock_div_4);
 
-	// Configure ADC clock to 153.6kHz (9.6MHz / 64).
+	// Configure ADC clock to 75kHz (1.2MHz / 16).
 	// (Must be 50..200kHz.)
-	ADCSRA = _BV(ADEN) | _BV(ADPS2) | _BV(ADPS1);
+	ADCSRA = _BV(ADEN) | _BV(ADPS2);
 
 	// global interrupt enable, SREG |= SREG_I
 	sei();
@@ -167,15 +181,15 @@ int main(void) {
 	}
 }
 
-void set_relay(uint8_t aux) {
+void set_switch(uint8_t aux) {
 	// assert aux != is_aux()
 	// don't allow relay switches before we have bridging power
 	// from capacitor
 	if (!startup_delay && aux != is_aux()) {
 		if (!aux) {
-			PORTB &= ~_BV(PIN_RELAY);
+			PORTB &= ~_BV(PIN_SWITCH);
 		} else if (batt.aux_ok) {
-			PORTB |= _BV(PIN_RELAY);
+			PORTB |= _BV(PIN_SWITCH);
 		}
 	}
 	rc.until_flip = 0;
@@ -187,11 +201,12 @@ void aux_bad(void) {
 		batt.until_bad_aux = 0;
 		if (is_aux()) {
 			// fallback to main AND DO IT NOW
-			PORTB &= ~_BV(PIN_RELAY);
+			PORTB &= ~_BV(PIN_SWITCH);
 			rc.until_flip = 0;
 		}
 		// speed up the ADC sampling rate
 		configure_ADC(WDTO_60MS);
+		PORTB |= _BV(PIN_FAULT);
 	}
 }
 
@@ -202,16 +217,16 @@ ISR (INT0_vect) {
 
 		// reset timer counter
 		TCNT0 = 0;
-		// set timer clock source to 9.6MHz/256 == 37.5kHz = 2.2ms/83
-		TCCR0B = _BV(CS02);
+		// set timer clock source to 1.2MHz/64 == 18.75kHz,
+		// 2.2ms / 18.75Hz == 41.25
+		TCCR0B = _BV(CS01) | _BV(CS00);
 		// next interrupt on low
 		MCUCR &= ~(_BV(ISC01) | _BV(ISC00));
 
 	} else {
 		// copy counter value to a register
 		uint8_t counter = TCNT0;
-		// stop timer (but only after copying the value,
-		// to avoid surprises)
+		// stop timer (but only after copying the value, to avoid surprises)
 		TCCR0B = 0;
 		// schedule next interrupt on rising edge
 		MCUCR |= _BV(ISC01) | _BV(ISC00);
@@ -222,11 +237,11 @@ ISR (INT0_vect) {
 			rc.until_flip = 0;
 
 		} else {
-			// if RC signal high for ]57..93[ 37.5kHz == [1520..2400ms], want AUX
-			uint8_t want_aux = counter >= 57 && counter <= 93;
+			// if RC signal high for [1493..2240ms] == [28..42] @ 18.75kHz, want AUX
+			uint8_t want_aux = counter >= 28 && counter <= 42;
 
 			if (want_aux == is_aux()) {
-				// relay is consistent with signal, just reset counter
+				// switch is consistent with signal, just reset counter
 				rc.until_flip = 0;
 
 			} else if (!rc.until_flip) {
@@ -234,8 +249,8 @@ ISR (INT0_vect) {
 				rc.until_flip = 5;
 
 			} else if (!--rc.until_flip) {
-				// relay change reached, finally
-				set_relay(want_aux);
+				// switch change reached, finally
+				set_switch(want_aux);
 			}
 		}
 	}
@@ -308,6 +323,7 @@ ISR(ADC_vect) {
 		batt.aux_ok = TRUE;
 		// reset countdown
 		batt.until_bad_aux = 0;
+		PORTB &= ~_BV(PIN_FAULT);
 	}
 }
 
