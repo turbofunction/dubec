@@ -58,9 +58,6 @@
 // configure watchdog with the given prescaler
 #define configure_ADC(wdtp) ({ ATOMIC_BLOCK(ATOMIC_RESTORESTATE) { WDTCR = _BV(WDCE); WDTCR = wdtp; } WDTCR |= _BV(WDTIE); })
 
-// returns 75% of the value
-#define PC75(a) (((a << 1) + a) >> 2)
-
 // returns greater of arguments
 #define MAX(a, b) (a > b ? a : b)
 
@@ -90,9 +87,6 @@ typedef struct {
 } battery_t;
 
 battery_t batt = { AUX_UNKNOWN, 0, 0, 0, 0 };
-
-// evaluates to true if switch is set to AUX
-#define aux_ok() ( batt.aux_status == AUX_OK )
 
 typedef struct {
 	// countdown to battery switch
@@ -211,7 +205,7 @@ void set_switch(uint8_t aux) {
 	if (aux != is_aux()) {
 		if (!aux) {
 			PORTB &= ~_BV(PIN_SWITCH);
-		} else if (aux_ok()) {
+		} else if (batt.aux_status >= AUX_WARN) {
 			PORTB |= _BV(PIN_SWITCH);
 		}
 	}
@@ -328,7 +322,9 @@ ISR(ADC_vect) {
 
 	} else if (!batt.fallback_voltage) {
 		// floor the fallback, just for kicks
-		batt.fallback_voltage = MAX(PC75(v), MIN_VOLTAGE);
+		batt.fallback_voltage = MAX(v - (v >> 2) /* 75% */, MIN_VOLTAGE);
+		// warning at 80%; this division takes up 92 bytes, TODO optimize
+		batt.warn_voltage = (v << 4) / 5;
 		// take another sample before flagging ok
 
 	} else if (v <= batt.fallback_voltage) {
@@ -340,21 +336,16 @@ ISR(ADC_vect) {
 			} else if (!--batt.until_bad_aux) {
 				aux_bad();
 			}
-		} // else no need to do anything
-
-	} else if (v <= batt.warn_voltage) {
-		if (batt.aux_status != AUX_WARN) {
-			batt.aux_status = AUX_WARN;
-			batt.until_blink = wdt_time(WDTO_500MS);
-			PORTB |= _BV(PIN_FAULT);
 		}
 
+	} else if (v <= batt.warn_voltage) {
+		batt.aux_status = AUX_WARN;
+
 	// 0.1V "hysteresis" on fallback level to prevent oscillation
-	} else if (!aux_ok() && v > (batt.warn_voltage + 2)) {
+	} else if (batt.aux_status != AUX_OK && v > (batt.warn_voltage + 2)) {
 		batt.aux_status = AUX_OK;
 		// reset countdown
 		batt.until_bad_aux = 0;
-		batt.until_blink = 0;
 		PORTB &= ~_BV(PIN_FAULT);
 	}
 }
@@ -374,6 +365,8 @@ ISR (WDT_vect) {
 			PORTB ^= _BV(PIN_FAULT);
 			batt.until_blink = wdt_time(WDTO_500MS);
 		}
+	} else {
+		batt.until_blink = 0;
 	}
 
 	if (batt.aux_status != AUX_BAD) {
