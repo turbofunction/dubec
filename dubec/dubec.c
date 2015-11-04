@@ -33,12 +33,6 @@
 // AUX battery voltage divider net
 #define PIN_ADC PORTB4
 
-// see batt.aux_status
-#define AUX_UNKNOWN 0
-#define AUX_BAD 1
-#define AUX_WARN 2
-#define AUX_OK 3
-
 // ~6.0v as a 10-bit ADC value for 0.198V (2.94k/90.9k divider):
 // (2.94/90.9 * 6V) * (1024 / 1.1V)
 #define MIN_VOLTAGE 180
@@ -46,28 +40,28 @@
 // evaluates to true if waiting for high RC signal
 #define rc_high_int() (MCUCR & (_BV(ISC01) | _BV(ISC00)))
 
-// evaluates to true if switch is set to AUX
-#define is_aux() bit_is_set(PORTB, PIN_SWITCH)
-
 // evaluates to true if timer is counting
 #define is_timer_running() (TCCR0B)
 
-// evaluates to true if ADC is enabled
-#define is_ADC_pending() bit_is_set(ADCSRA, ADIE)
-
 // configure watchdog with the given prescaler
-#define configure_ADC(wdtp) ({ ATOMIC_BLOCK(ATOMIC_RESTORESTATE) { WDTCR = _BV(WDCE); WDTCR = wdtp; } WDTCR |= _BV(WDTIE); })
+#define watchdog(wdtp) ({ ATOMIC_BLOCK(ATOMIC_RESTORESTATE) { WDTCR = _BV(WDCE); WDTCR = wdtp; } WDTCR |= _BV(WDTIE); })
 
-/**
- * Enable ADC and ADC interrupt, conversion will
- * start automatically on noise reduction sleep.
- */
-#define start_ADC() ({ ADCSRA |= _BV(ADIE) | _BV(ADSC); })
+// Enable ADC and ADC interrupt, conversion will
+// start automatically on noise reduction sleep.
+#define start_ADC() { ADCSRA |= _BV(ADIE) | _BV(ADSC); }
 
 // returns greater of arguments
 #define MAX(a, b) (a > b ? a : b)
 
+// AUX is depleted
+#define AUX_BAD 1
+// AUX is low
+#define AUX_WARN 2
+// self-explanatory
+#define AUX_OK 3
+
 typedef struct {
+	// see AUX_*
 	volatile uint8_t aux_status;
 	// when to start flashing warning LED
 	volatile uint16_t warn_voltage;
@@ -89,39 +83,27 @@ typedef struct {
 	 * Rule: Don't launch with a drained battery!
 	 */
 	volatile uint16_t fallback_voltage;
-	volatile uint8_t until_blink;
 } battery_t;
 
-battery_t batt = { AUX_UNKNOWN, 0, 0, 0, 0 };
+battery_t batt = { 0, 0, 0, 0 };
+
+// sourcing from main battery
+#define RC_MAIN 1
+// sourcing from AUX battery
+#define RC_AUX 2
+// crash boom bang. also switch to main battery.
+#define RC_12V_DISABLE 3
 
 typedef struct {
-	// countdown to battery switch
+	// see RC_*
+	volatile uint8_t status;
+	// countdown to applying status change
 	volatile uint8_t until_flip;
 } control_t;
 
-control_t rc = { 0 };
+control_t rc = { 0, 0 };
 
-static uint8_t wdt_time(uint8_t wdto);
-static void set_switch(uint8_t port);
 static void aux_bad(void);
-
-/** Translates WDTO_* constants into linear values. */
-uint8_t wdt_time(uint8_t wdto) {
-	switch (wdto) {
-		case WDTO_15MS:
-			return 1;
-		case WDTO_30MS:
-			return 2;
-		case WDTO_60MS:
-			return 4;
-		case WDTO_120MS:
-			return 8;
-		case WDTO_250MS:
-			return 16;
-		default: // 500ms and up
-			return 32;
-	}
-}
 
 int main(void) {
 	/**
@@ -150,7 +132,7 @@ int main(void) {
 	// configure outputs
 	DDRB = _BV(PIN_SWITCH) | _BV(PIN_FAULT) | _BV(PIN_12V);
 
-	// disable digital inputs except on RC and aux voltage
+	// disable digital inputs except on RC and AUX voltage
 	DIDR0 = 0b111111 ^ (_BV(ADC2D) | _BV(AIN1D));
 
 	// configure ADC for internal reference and to read PB4
@@ -161,7 +143,7 @@ int main(void) {
 	// pulled high externally).
 	GIMSK = _BV(INT0);
 
-	// enable pin change interrupt on aux voltage
+	// enable pin change interrupt on AUX voltage
 	PCMSK = _BV(PCINT4);
 
 	// enable timer counter overflow interrupt
@@ -178,7 +160,9 @@ int main(void) {
 	// global interrupt enable, SREG |= SREG_I
 	sei();
 
-	configure_ADC(WDTO_60MS);
+	watchdog(WDTO_500MS);
+
+	start_ADC();
 
 	for (;;) {
 		// configure sleep according to state
@@ -187,11 +171,10 @@ int main(void) {
 			// only idle when timing high RC to keep IO clock running (for timer)
 			MCUCR &= ~(_BV(SM0) | _BV(SM1)); // idle
 
-		} else if (is_ADC_pending()) {
-			// ADC conversion will start automatically with sleep.
-			// Note that this will inhibit high signal tracking
-			// on INT0, but the conversion should be well finished
-			// before the next rise.
+		} else if (bit_is_set(ADCSRA, ADIE)) {
+			// ADC is pending, conversion will start automatically with sleep.
+			// Note that this will inhibit high signal tracking on INT0,
+			// but the conversion should be finished well before the next rise.
 			MCUCR = (MCUCR & ~_BV(SM1)) | _BV(SM0); // ADC noise reduction
 
 		} else if (rc_high_int()) {
@@ -210,31 +193,33 @@ int main(void) {
 	}
 }
 
-void set_switch(uint8_t aux) {
-	// assert aux != is_aux()
-	if (aux != is_aux()) {
-		if (!aux) {
-			PORTB &= ~_BV(PIN_SWITCH);
-		} else if (batt.aux_status >= AUX_WARN) {
-			PORTB |= _BV(PIN_SWITCH);
-		}
+void apply_rc() {
+	switch (rc.status) {
+		case RC_12V_DISABLE:
+			// source from main, disable 12V
+			PORTB &= ~(_BV(PIN_SWITCH) | _BV(PIN_12V));
+			break;
+
+		case RC_AUX:
+			if (batt.aux_status >= AUX_WARN) {
+				// source from AUX, 12V enabled
+				PORTB |= _BV(PIN_SWITCH) | _BV(PIN_12V);
+				break;
+			}
+			// else fall through
+
+		default:
+			// source from main battery, 12V enabled
+			PORTB = (PORTB | _BV(PIN_12V)) & ~_BV(PIN_SWITCH);
+			break;
 	}
-	rc.until_flip = 0;
 }
 
 void aux_bad(void) {
-	if (batt.aux_status != AUX_BAD) {
-		batt.aux_status = AUX_BAD;
-		batt.until_bad_aux = 0;
-		if (is_aux()) {
-			// fallback to main AND DO IT NOW
-			PORTB &= ~_BV(PIN_SWITCH);
-			rc.until_flip = 0;
-		}
-		// speed up the ADC sampling rate
-		configure_ADC(WDTO_60MS);
-		PORTB |= _BV(PIN_FAULT);
-	}
+	batt.aux_status = AUX_BAD;
+	batt.until_bad_aux = 0;
+	// TODO think whether output control could be centralized better
+	PORTB = (PORTB | _BV(PIN_FAULT)) & ~_BV(PIN_SWITCH);
 }
 
 /** RC ("PWM") signal handler. */
@@ -249,37 +234,44 @@ ISR (INT0_vect) {
 		TCCR0B = _BV(CS01) | _BV(CS00);
 		// next interrupt on low
 		MCUCR &= ~(_BV(ISC01) | _BV(ISC00));
+		return;
+	}
 
-	} else {
-		// copy counter value to a register
-		uint8_t counter = TCNT0;
-		// stop timer (but only after copying the value, to avoid surprises)
-		TCCR0B = 0;
-		// schedule next interrupt on rising edge
-		MCUCR |= _BV(ISC01) | _BV(ISC00);
+	// copy counter value to a register
+	uint8_t pwm = TCNT0;
+	// stop timer (but only after copying the value, to avoid surprises)
+	TCCR0B = 0;
+	// schedule next interrupt on rising edge
+	MCUCR |= _BV(ISC01) | _BV(ISC00);
 
-		if (!counter) {
-			// Couldn't read a proper signal, ignore.
-			// (Invalid signal or a state problem.)
-			rc.until_flip = 0;
-
-		} else {
-			// if RC signal high for [1493..2240ms] == [28..42] @ 18.75kHz, want AUX
-			uint8_t want_aux = counter >= 28 && counter <= 42;
-
-			if (want_aux == is_aux()) {
-				// switch is consistent with signal, just reset counter
-				rc.until_flip = 0;
-
-			} else if (!rc.until_flip) {
-				// else initiate flip
-				rc.until_flip = 5;
-
-			} else if (!--rc.until_flip) {
-				// switch change reached, finally
-				set_switch(want_aux);
-			}
+	// supported range [800..2240ms] == [15..42] @ 18.75kHz
+	if (pwm < 15 || pwm > 42) {
+		// invalid signal, reset counter
+		if (rc.until_flip) {
+			rc.until_flip = 5;
 		}
+		return;
+	}
+
+	uint8_t want = RC_MAIN;
+	if (pwm > 32) {
+		// ]1653..2240ms]: disable 12V
+		want = RC_12V_DISABLE;
+	} else if (pwm >= 25) {
+		// [1333..1653ms]: switch to AUX
+		want = RC_AUX;
+	}
+	// else [800..1333ms[: switch to main
+
+	if (want == rc.status) {
+		if (rc.until_flip) {
+			if (!--rc.until_flip) {
+				apply_rc();
+			}
+		} // else the change is already applied
+	} else {
+		rc.status = want;
+		rc.until_flip = 5;
 	}
 }
 
@@ -306,27 +298,28 @@ ISR(ADC_vect) {
 	// disable ADC interrupt
 	ADCSRA &= ~_BV(ADIE);
 
-	if (v < (MIN_VOLTAGE >> 1)) {
-		/**
-		 * This is the ONLY place for resetting the fallback
-		 * voltage level, making sure the code doesn't reach
-		 * the fallback calculation block below unintentionally.
-		 *
-		 * Having the level significantly above zero also
-		 * should make sure to detect battery disconnect, so
-		 * that the level is resetted and a new one calculated
-		 * when a new battery is plugged in.
-		 *
-		 * (I'm also unwilling to rely purely on the digital
-		 * low value for detecting battery disconnect; that sounds
-		 * flaky. Digital low does trigger an ADC, though, so that
-		 * we end up here quickly even from power down sleep.)
-		 */
-		batt.fallback_voltage = 0;
-	}
-
 	if (v < MIN_VOLTAGE) {
 		aux_bad();
+
+		if (v < (MIN_VOLTAGE >> 1)) {
+			/**
+			 * This is the ONLY place for resetting the fallback
+			 * voltage level, making sure the code doesn't reach
+			 * the fallback calculation block below unintentionally.
+			 *
+			 * Having the level significantly above zero also
+			 * should make sure to detect battery disconnect, so
+			 * that the level is resetted and a new one calculated
+			 * when a new battery is plugged in.
+			 *
+			 * (I'm also unwilling to rely purely on the digital
+			 * low value for detecting battery disconnect; that sounds
+			 * flaky. Digital low does trigger an ADC, though, so that
+			 * we end up here quickly even from power down sleep.)
+			 */
+			batt.fallback_voltage = 0;
+			batt.warn_voltage = 0;
+		}
 
 	} else if (!batt.fallback_voltage) {
 		// floor the fallback, just for kicks
@@ -370,23 +363,9 @@ ISR (PCINT0_vect) {
  * Handles also startup delay and voltage warning.
  */
 ISR (WDT_vect) {
-	// Blink the fault LED at 1Hz as warning
 	if (batt.aux_status == AUX_WARN) {
-		// watchdog period configured by three LSBs
-		uint8_t wdt_t = wdt_time(WDTCR & 0b111);
-		if (batt.until_blink > wdt_t) {
-			batt.until_blink -= wdt_t;
-		} else {
-			PORTB ^= _BV(PIN_FAULT);
-			batt.until_blink = wdt_time(WDTO_500MS);
-		}
-	} else {
-		batt.until_blink = 0;
-	}
-
-	if (batt.aux_status != AUX_BAD) {
-		// slow down sampling
-		configure_ADC(WDTO_500MS);
+		// Blink the fault LED at 1Hz as warning
+		PORTB ^= _BV(PIN_FAULT);
 	}
 
 	start_ADC();
