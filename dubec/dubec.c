@@ -1,4 +1,4 @@
-/*
+/**
  * dubec.c
  *
  * RC battery switch application for DUBEC,
@@ -58,6 +58,12 @@
 // configure watchdog with the given prescaler
 #define configure_ADC(wdtp) ({ ATOMIC_BLOCK(ATOMIC_RESTORESTATE) { WDTCR = _BV(WDCE); WDTCR = wdtp; } WDTCR |= _BV(WDTIE); })
 
+/**
+ * Enable ADC and ADC interrupt, conversion will
+ * start automatically on noise reduction sleep.
+ */
+#define start_ADC() ({ ADCSRA |= _BV(ADIE) | _BV(ADSC); })
+
 // returns greater of arguments
 #define MAX(a, b) (a > b ? a : b)
 
@@ -67,7 +73,7 @@ typedef struct {
 	volatile uint16_t warn_voltage;
 	// counter for taking a few samples before flagging
 	volatile uint8_t until_bad_aux;
-	/*
+	/**
 	 * Fallback level is set to 75% of measured initial voltage
 	 * level, ie. 4.2V results in 3.15V and 3.8V makes 2.85V.
 	 * Thus, if you rely on the device to not allow battery to
@@ -99,6 +105,7 @@ static uint8_t wdt_time(uint8_t wdto);
 static void set_switch(uint8_t port);
 static void aux_bad(void);
 
+/** Translates WDTO_* constants into linear values. */
 uint8_t wdt_time(uint8_t wdto) {
 	switch (wdto) {
 		case WDTO_15MS:
@@ -117,7 +124,7 @@ uint8_t wdt_time(uint8_t wdto) {
 }
 
 int main(void) {
-	/*
+	/**
 	 * Pin configuration:
 	 *
 	 * PB0 (MOSI):
@@ -137,14 +144,14 @@ int main(void) {
 	 *   CKSEL = b01 // 4.8MHz nominal clock
 	 */
 
-	// configure fault LED and switch as output
-	DDRB = _BV(PIN_FAULT) | _BV(PIN_SWITCH);
+	// pull-up reset and 12V
+	PORTB = _BV(PORTB5) | _BV(PIN_12V);
 
-	// active internal pull-ups on floating pins (just reset ATM)
-	PORTB = _BV(PORTB5);
+	// configure outputs
+	DDRB = _BV(PIN_SWITCH) | _BV(PIN_FAULT) | _BV(PIN_12V);
 
-	// disable digital inputs
-	DIDR0 = _BV(AIN1D) | _BV(ADC2D) | _BV(ADC3D);
+	// disable digital inputs except on RC and aux voltage
+	DIDR0 = 0b111111 ^ (_BV(ADC2D) | _BV(AIN1D));
 
 	// configure ADC for internal reference and to read PB4
 	ADMUX = _BV(REFS0) | _BV(MUX1);
@@ -153,6 +160,9 @@ int main(void) {
 	// on low by default, which is the correct mode initially (pin
 	// pulled high externally).
 	GIMSK = _BV(INT0);
+
+	// enable pin change interrupt on aux voltage
+	PCMSK = _BV(PCINT4);
 
 	// enable timer counter overflow interrupt
 	TIMSK0 = _BV(TOIE0);
@@ -174,8 +184,7 @@ int main(void) {
 		// configure sleep according to state
 
 		if (is_timer_running()) {
-			// idle only when timing high RC, to avoid
-			// ADC interrupt disturbances
+			// only idle when timing high RC to keep IO clock running (for timer)
 			MCUCR &= ~(_BV(SM0) | _BV(SM1)); // idle
 
 		} else if (is_ADC_pending()) {
@@ -192,7 +201,8 @@ int main(void) {
 			MCUCR &= ~(_BV(SM0) | _BV(SM1)); // idle
 
 		} else {
-			// Set sleep mode to power down, watchdog interrupt will wake up.
+			// Set sleep mode to power down, watchdog or pin change
+			// interrupt will wake up.
 			MCUCR = (MCUCR & ~_BV(SM0)) | _BV(SM1); // power down
 		}
 
@@ -282,24 +292,22 @@ ISR (TIM0_OVF_vect) {
 	TCNT0 = 0;
 }
 
-/* Process battery voltage. */
+/** Process battery voltage. */
 ISR(ADC_vect) {
-	/*
+	/**
 	 * Note: Code here is very wasteful (as in byte size),
 	 * but there's still lot of space left so I'm spending
 	 * it on code clarity and accuracy. ("Clarity" in 1k
 	 * context.)
 	 */
 	// doc says that low byte needs to be read first
-	uint8_t vl = ADCL;
-	uint16_t v = ADCH;
-	v <<= 8;
-	v |= vl;
+	uint16_t v = ADCL;
+	v |= ADCH << 8;
 	// disable ADC interrupt
 	ADCSRA &= ~_BV(ADIE);
 
 	if (v < (MIN_VOLTAGE >> 1)) {
-		/*
+		/**
 		 * This is the ONLY place for resetting the fallback
 		 * voltage level, making sure the code doesn't reach
 		 * the fallback calculation block below unintentionally.
@@ -350,7 +358,14 @@ ISR(ADC_vect) {
 	}
 }
 
-/*
+/** Detect battery disconnect. */
+ISR (PCINT0_vect) {
+	if (bit_is_clear(PINB, PIN_ADC)) {
+		aux_bad();
+	}
+}
+
+/**
  * Use watchdog to initiate AUX battery voltage check on regular intervals.
  * Handles also startup delay and voltage warning.
  */
@@ -374,7 +389,5 @@ ISR (WDT_vect) {
 		configure_ADC(WDTO_500MS);
 	}
 
-	// Enable ADC and ADC interrupt, conversion will
-	// start automatically on noise reduction sleep.
-	ADCSRA |= _BV(ADIE) | _BV(ADSC);
+	start_ADC();
 }
