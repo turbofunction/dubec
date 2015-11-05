@@ -4130,6 +4130,22 @@
 </technology>
 </technologies>
 </device>
+<device name="4.7K_16" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-4.70KLCT-ND" constant="no"/>
+<attribute name="EURO" value="2.01/50" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW04024K70FKED" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="I" uservalue="yes">
@@ -4968,6 +4984,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="12COUT1" library="dubec" deviceset="TCAP" device="47UF_16V"/>
 <part name="12COUT2" library="dubec" deviceset="CAP" device="22UF_35V"/>
 <part name="5COUT2" library="dubec" deviceset="CAP" device="47UF_10V"/>
+<part name="RRSPU" library="dubec" deviceset="RES" device="4.7K_16" value="RES4.7K_16"/>
 </parts>
 <sheets>
 <sheet>
@@ -5072,13 +5089,14 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="CSNUB" gate="G$1" x="-20.32" y="-58.42"/>
 <instance part="GND7" gate="1" x="58.42" y="-93.98"/>
 <instance part="GND8" gate="1" x="-15.24" y="-91.44"/>
-<instance part="R12VPU" gate="G$1" x="-76.2" y="45.72"/>
+<instance part="R12VPU" gate="G$1" x="-76.2" y="48.26"/>
 <instance part="GND9" gate="1" x="-114.3" y="63.5"/>
 <instance part="SJ1" gate="G$1" x="-58.42" y="60.96"/>
 <instance part="5COUT1" gate="G$1" x="93.98" y="38.1" rot="R180"/>
 <instance part="12COUT1" gate="G$1" x="30.48" y="-78.74" rot="R180"/>
 <instance part="12COUT2" gate="G$1" x="30.48" y="-83.82"/>
 <instance part="5COUT2" gate="G$1" x="93.98" y="45.72"/>
+<instance part="RRSPU" gate="G$1" x="-76.2" y="45.72"/>
 </instances>
 <busses>
 </busses>
@@ -5183,8 +5201,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <junction x="-83.82" y="55.88"/>
 <label x="-99.06" y="55.88" size="1.778" layer="95" rot="R180" xref="yes"/>
 <pinref part="R12VPU" gate="G$1" pin="1"/>
-<wire x1="-81.28" y1="45.72" x2="-83.82" y2="45.72" width="0.1524" layer="91"/>
-<wire x1="-83.82" y1="45.72" x2="-83.82" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="-81.28" y1="48.26" x2="-83.82" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="48.26" x2="-83.82" y2="50.8" width="0.1524" layer="91"/>
 <junction x="-83.82" y="50.8"/>
 </segment>
 </net>
@@ -5507,6 +5525,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-53.34" y1="50.8" x2="-53.34" y2="55.88" width="0.1524" layer="91"/>
 <junction x="-53.34" y="55.88"/>
 <label x="-53.34" y="55.88" size="1.778" layer="95"/>
+<pinref part="RRSPU" gate="G$1" pin="2"/>
+<wire x1="-71.12" y1="45.72" x2="-63.5" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="-63.5" y1="45.72" x2="-53.34" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="AVRISP" gate="G$1" pin="VCC"/>
@@ -5570,8 +5591,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="-99.06" y="60.96" size="1.778" layer="95" rot="R180" xref="yes"/>
 <pinref part="R12VPU" gate="G$1" pin="2"/>
 <wire x1="-66.04" y1="60.96" x2="-99.06" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="-71.12" y1="45.72" x2="-66.04" y2="45.72" width="0.1524" layer="91"/>
-<wire x1="-66.04" y1="45.72" x2="-66.04" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="-71.12" y1="48.26" x2="-66.04" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="-66.04" y1="48.26" x2="-66.04" y2="60.96" width="0.1524" layer="91"/>
 <junction x="-66.04" y="60.96"/>
 <pinref part="SJ1" gate="G$1" pin="1"/>
 <wire x1="-63.5" y1="60.96" x2="-66.04" y2="60.96" width="0.1524" layer="91"/>
@@ -5722,8 +5743,13 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="-25.4" y="55.88" size="1.778" layer="95"/>
 <wire x1="-22.86" y1="53.34" x2="-22.86" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="-22.86" y1="43.18" x2="-25.4" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="-25.4" y1="40.64" x2="-99.06" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="-25.4" y1="40.64" x2="-83.82" y2="40.64" width="0.1524" layer="91"/>
 <label x="-99.06" y="40.64" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="RRSPU" gate="G$1" pin="1"/>
+<wire x1="-83.82" y1="40.64" x2="-99.06" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="-81.28" y1="45.72" x2="-83.82" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="45.72" x2="-83.82" y2="40.64" width="0.1524" layer="91"/>
+<junction x="-83.82" y="40.64"/>
 </segment>
 <segment>
 <pinref part="AVRISP" gate="G$1" pin="RESET"/>
