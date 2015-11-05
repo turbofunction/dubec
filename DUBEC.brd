@@ -1067,18 +1067,18 @@ Covered vias can be set in Masks (Limit).
 <attribute name="MFG_PART_#" value="ESDA18-1K" x="31.6875" y="3.6875" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="EURO" value="4.06/10" x="31.6875" y="3.6875" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="RAUXTOP" library="dubec" package="0402" value="RES90.9K_16" x="13.5" y="16.125" rot="R180">
+<element name="RAUXTOP" library="dubec" package="0402" value="RES1M_16" x="13.5" y="16.125" rot="R180">
 <attribute name="MANUFACTURER" value="Vishay Dale" x="13.5" y="16.125" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MFG_PART_#" value="CRCW040290K9FKED" x="13.5" y="16.125" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MFG_PART_#" value="CRCW04021M00FKED" x="13.5" y="16.125" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="TOLERANCE" value="±1%" x="13.5" y="16.125" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="TEMP" value="±100ppm/°C" x="13.5" y="16.125" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="USD" value="0.78/10" x="13.5" y="16.125" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="DIGIKEY_PART_#" value="541-90.9KLCT-ND" x="13.5" y="16.125" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="USD" value="2.11/50" x="13.5" y="16.125" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="DIGIKEY_PART_#" value="541-1.00MLCT-ND" x="13.5" y="16.125" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="RAUXBOT" library="dubec" package="0402" value="RES2.94K_16" x="13.5" y="15" rot="R180">
-<attribute name="DIGIKEY_PART_#" value="541-2.94KLCT-ND" x="13.5" y="15" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="RAUXBOT" library="dubec" package="0402" value="RES162K_16" x="13.5" y="15" rot="R180">
+<attribute name="DIGIKEY_PART_#" value="541-162KLCT-ND" x="13.5" y="15" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MANUFACTURER" value="Vishay Dale" x="13.5" y="15" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MFG_PART_#" value="CRCW04022K94FKED" x="13.5" y="15" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MFG_PART_#" value="CRCW0402162KFKED" x="13.5" y="15" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="TOLERANCE" value="±1%" x="13.5" y="15" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="TEMP" value="±100ppm/°C" x="13.5" y="15" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="EURO" value="2.01/50" x="13.5" y="15" size="1.778" layer="27" rot="R180" display="off"/>

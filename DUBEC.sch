@@ -4114,6 +4114,22 @@
 </technology>
 </technologies>
 </device>
+<device name="162K_16" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-162KLCT-ND" constant="no"/>
+<attribute name="EURO" value="2.01/50" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW0402162KFKED" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="I" uservalue="yes">
@@ -4896,8 +4912,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="AVRISP" library="dubec" deviceset="AVRISP" device="AVX" value="AVRISPAVX"/>
 <part name="UD" library="dubec" deviceset="D_SCH" device="40V_0.25MA" value="D_SCH40V_0.25MA"/>
 <part name="12TVS" library="dubec" deviceset="D_ZENER" device="15V" value="D_ZENER15V"/>
-<part name="RAUXTOP" library="dubec" deviceset="RES" device="90.9K_16" value="RES90.9K_16"/>
-<part name="RAUXBOT" library="dubec" deviceset="RES" device="2.94K_16" value="RES2.94K_16"/>
+<part name="RAUXTOP" library="dubec" deviceset="RES" device="1M_16" value="RES1M_16"/>
+<part name="RAUXBOT" library="dubec" deviceset="RES" device="162K_16" value="RES162K_16"/>
 <part name="CMCU" library="dubec" deviceset="CAP" device="4.7UF_10V"/>
 <part name="5TVS" library="dubec" deviceset="D_ZENER" device="6V" value="D_ZENER6V"/>
 <part name="SR1" library="dubec" deviceset="RES" device="232_16" value="RES232_16"/>
