@@ -33,12 +33,12 @@
 // AUX battery voltage divider net
 #define PIN_ADC PORTB4
 
-// ~6.0v as a 10-bit ADC value for 0.198V (2.94k/90.9k divider):
-// (2.94/90.9 * 6V) * (1024 / 1.1V)
-#define MIN_VOLTAGE 180
+// ~6.0V as a 10-bit ADC value for 0.97V (1M/162K divider):
+// (162k / 1000k * 6V) * (1024 / 4.684V)
+#define MIN_VOLTAGE 212
 
 // evaluates to true if waiting for high RC signal
-#define rc_high_int() (MCUCR & (_BV(ISC01) | _BV(ISC00)))
+#define is_trigger_high() (MCUCR & (_BV(ISC01) | _BV(ISC00)))
 
 // evaluates to true if timer is counting
 #define is_timer_running() (TCCR0B)
@@ -177,7 +177,7 @@ int main(void) {
 			// but the conversion should be finished well before the next rise.
 			MCUCR = (MCUCR & ~_BV(SM1)) | _BV(SM0); // ADC noise reduction
 
-		} else if (rc_high_int()) {
+		} else if (is_trigger_high()) {
 			// ~18ms wait period on RC low, sleep or not? If we just idle
 			// for now to avoid risks.. (Thus, configured now to use synchronous
 			// INT0 on RC instead of async PCINT; easier interrupt handling.)
@@ -224,7 +224,7 @@ void aux_bad(void) {
 
 /** RC ("PWM") signal handler. */
 ISR (INT0_vect) {
-	if (rc_high_int()) { // Maybe more reliable than PINB value...
+	if (is_trigger_high()) { // Maybe more reliable than PINB value...
 		// Line is high, start timing the high period.
 
 		// reset timer counter
@@ -342,8 +342,8 @@ ISR(ADC_vect) {
 	} else if (v <= batt.warn_voltage) {
 		batt.aux_status = AUX_WARN;
 
-	// 0.1V "hysteresis" on fallback level to prevent oscillation
-	} else if (batt.aux_status != AUX_OK && v > (batt.warn_voltage + 2)) {
+	// 18mV "hysteresis" on fallback level to prevent oscillation
+	} else if (batt.aux_status != AUX_OK && v > (batt.warn_voltage + 4)) {
 		batt.aux_status = AUX_OK;
 		// reset countdown
 		batt.until_bad_aux = 0;
