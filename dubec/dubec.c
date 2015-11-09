@@ -132,16 +132,16 @@ int main(void) {
 	// configure outputs
 	DDRB = _BV(PIN_SWITCH) | _BV(PIN_FAULT) | _BV(PIN_12V);
 
-	// disable digital inputs except on RC and AUX voltage
-	DIDR0 = 0b111111 ^ (_BV(ADC2D) | _BV(AIN1D));
+	// disable digital inputs except on AUX voltage
+	DIDR0 = 0b111111 ^ _BV(ADC2D);
 
-	// configure ADC for internal reference and to read PB4
-	ADMUX = _BV(REFS0) | _BV(MUX1);
+	// configure ADC to read PB4
+	ADMUX = _BV(MUX1);
 
 	// Enable INT0 and pin change interrupts. INT0 is triggered
 	// on low by default, which is the correct mode initially (pin
 	// pulled high externally).
-	GIMSK = _BV(INT0);
+	GIMSK = _BV(INT0) | _BV(PCIE);
 
 	// enable pin change interrupt on AUX voltage
 	PCMSK = _BV(PCINT4);
@@ -224,7 +224,9 @@ void aux_bad(void) {
 
 /** RC ("PWM") signal handler. */
 ISR (INT0_vect) {
-	if (is_trigger_high()) { // Maybe more reliable than PINB value...
+	// Act based on trigger conf as PINB might already have flipped back. (And
+	// the digital input is disabled anyways, due to this.)
+	if (is_trigger_high()) {
 		// Line is high, start timing the high period.
 
 		// reset timer counter
@@ -322,10 +324,10 @@ ISR(ADC_vect) {
 		}
 
 	} else if (!batt.fallback_voltage) {
-		// floor the fallback, just for kicks
-		batt.fallback_voltage = MAX(v - (v >> 2) /* 75% */, MIN_VOLTAGE);
-		// warning at 80%; this division takes up 92 bytes, TODO optimize
-		batt.warn_voltage = (v << 4) / 5;
+		// fallback at 75%; floor the range, just for kicks
+		batt.fallback_voltage = MAX(v - (v >> 2), MIN_VOLTAGE);
+		// warning at 80%; the division takes up 92 bytes, TODO optimize
+		batt.warn_voltage = (v / 5) << 2;
 		// take another sample before flagging ok
 
 	} else if (v <= batt.fallback_voltage) {
@@ -347,7 +349,6 @@ ISR(ADC_vect) {
 		batt.aux_status = AUX_OK;
 		// reset countdown
 		batt.until_bad_aux = 0;
-		PORTB &= ~_BV(PIN_FAULT);
 	}
 }
 
@@ -363,9 +364,17 @@ ISR (PCINT0_vect) {
  * Handles also startup delay and voltage warning.
  */
 ISR (WDT_vect) {
-	if (batt.aux_status == AUX_WARN) {
-		// Blink the fault LED at 1Hz as warning
-		PORTB ^= _BV(PIN_FAULT);
+	switch (batt.aux_status) {
+		case AUX_WARN:
+			// Blink the fault LED at 1Hz as warning
+			PORTB ^= _BV(PIN_FAULT);
+			break;
+		case AUX_BAD:
+			PORTB |= _BV(PIN_FAULT);
+			break;
+		default:
+			PORTB &= ~_BV(PIN_FAULT);
+			break;
 	}
 
 	start_ADC();
