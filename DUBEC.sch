@@ -5029,18 +5029,18 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="DAUXR" gate="G$1" x="-76.2" y="25.4" rot="R180"/>
 <instance part="12RLED" gate="G$1" x="25.4" y="-55.88" rot="R90"/>
 <instance part="5RLED" gate="G$1" x="86.36" y="38.1" rot="R90"/>
-<instance part="AVRISP" gate="G$1" x="-129.54" y="76.2"/>
+<instance part="AVRISP" gate="G$1" x="-137.16" y="76.2"/>
 <instance part="UD" gate="G$1" x="-60.96" y="55.88"/>
 <instance part="12TVS" gate="G$1" x="30.48" y="-73.66" rot="R180"/>
 <instance part="RAUXTOP" gate="G$1" x="-17.78" y="20.32" rot="R90"/>
-<instance part="RAUXBOT" gate="G$1" x="-27.94" y="30.48"/>
+<instance part="RAUXBOT" gate="G$1" x="-25.4" y="27.94"/>
 <instance part="CMCU" gate="G$1" x="-53.34" y="45.72" rot="R90"/>
 <instance part="5TVS" gate="G$1" x="78.74" y="35.56" rot="R90"/>
-<instance part="SR1" gate="G$1" x="-76.2" y="66.04"/>
+<instance part="SR1" gate="G$1" x="-76.2" y="76.2"/>
 <instance part="5V_OUT" gate="G$1" x="114.3" y="50.8" rot="R180"/>
 <instance part="GND4" gate="1" x="-53.34" y="15.24"/>
 <instance part="GND5" gate="1" x="106.68" y="17.78"/>
-<instance part="RIN1PU" gate="G$1" x="-76.2" y="50.8"/>
+<instance part="RIN1PU" gate="G$1" x="-76.2" y="71.12"/>
 <instance part="C2" gate="G$1" x="-25.4" y="-60.96" rot="R90"/>
 <instance part="GND11" gate="1" x="-17.78" y="66.04"/>
 <instance part="12V_OUT" gate="G$1" x="20.32" y="-106.68" rot="MR90"/>
@@ -5058,10 +5058,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="5CVCC" gate="G$1" x="25.4" y="40.64"/>
 <instance part="5RRT" gate="G$1" x="30.48" y="30.48" rot="R90"/>
 <instance part="5V_PG" gate="G$1" x="27.94" y="55.88" rot="R180"/>
-<instance part="AUX_OUT" gate="G$1" x="-68.58" y="20.32"/>
-<instance part="R2" gate="G$1" x="-76.2" y="20.32"/>
-<instance part="DAUX" gate="G$1" x="-66.04" y="27.94" rot="MR180"/>
-<instance part="R3" gate="G$1" x="-76.2" y="30.48"/>
+<instance part="AUX_OUT" gate="G$1" x="-66.04" y="30.48"/>
+<instance part="R2" gate="G$1" x="-76.2" y="30.48"/>
+<instance part="DAUX" gate="G$1" x="-66.04" y="22.86"/>
+<instance part="R3" gate="G$1" x="-76.2" y="20.32"/>
 <instance part="DTVS" gate="G$1" x="-43.18" y="-60.96"/>
 <instance part="QR" gate="G$1" x="-86.36" y="-53.34" rot="R270"/>
 <instance part="QR" gate="G$2" x="-86.36" y="-68.58" rot="MR90"/>
@@ -5085,14 +5085,14 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="CSNUB" gate="G$1" x="-20.32" y="-58.42"/>
 <instance part="GND7" gate="1" x="58.42" y="-93.98"/>
 <instance part="GND8" gate="1" x="-15.24" y="-91.44"/>
-<instance part="R12VPU" gate="G$1" x="-76.2" y="48.26"/>
-<instance part="GND9" gate="1" x="-114.3" y="63.5"/>
+<instance part="R12VPU" gate="G$1" x="-76.2" y="60.96"/>
+<instance part="GND9" gate="1" x="-121.92" y="63.5"/>
 <instance part="SJ1" gate="G$1" x="-58.42" y="60.96"/>
 <instance part="5COUT1" gate="G$1" x="93.98" y="38.1" rot="R180"/>
 <instance part="12COUT1" gate="G$1" x="30.48" y="-78.74" rot="R180"/>
 <instance part="12COUT2" gate="G$1" x="30.48" y="-83.82"/>
 <instance part="5COUT2" gate="G$1" x="93.98" y="45.72"/>
-<instance part="RRSPU" gate="G$1" x="-76.2" y="45.72"/>
+<instance part="RRSPU" gate="G$1" x="-66.04" y="45.72"/>
 </instances>
 <busses>
 </busses>
@@ -5190,16 +5190,16 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <pinref part="UD" gate="G$1" pin="A"/>
 <pinref part="RIN1PU" gate="G$1" pin="1"/>
-<wire x1="-81.28" y1="50.8" x2="-83.82" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="-83.82" y1="50.8" x2="-83.82" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="-81.28" y1="71.12" x2="-83.82" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="71.12" x2="-83.82" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="60.96" x2="-83.82" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="-83.82" y1="55.88" x2="-63.5" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="-83.82" y1="55.88" x2="-99.06" y2="55.88" width="0.1524" layer="91"/>
 <junction x="-83.82" y="55.88"/>
 <label x="-99.06" y="55.88" size="1.778" layer="95" rot="R180" xref="yes"/>
 <pinref part="R12VPU" gate="G$1" pin="1"/>
-<wire x1="-81.28" y1="48.26" x2="-83.82" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="-83.82" y1="48.26" x2="-83.82" y2="50.8" width="0.1524" layer="91"/>
-<junction x="-83.82" y="50.8"/>
+<wire x1="-81.28" y1="60.96" x2="-83.82" y2="60.96" width="0.1524" layer="91"/>
+<junction x="-83.82" y="60.96"/>
 </segment>
 </net>
 <net name="12V_BST1" class="0">
@@ -5290,24 +5290,26 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <pinref part="AVRISP" gate="G$1" pin="GND"/>
 <pinref part="GND9" gate="1" pin="GND"/>
-<wire x1="-116.84" y1="68.58" x2="-114.3" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="-114.3" y1="68.58" x2="-114.3" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="-124.46" y1="68.58" x2="-121.92" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="-121.92" y1="68.58" x2="-121.92" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="RAUXBOT" gate="G$1" pin="1"/>
 <pinref part="GND4" gate="1" pin="GND"/>
 <pinref part="CMCU" gate="G$1" pin="1"/>
-<wire x1="-53.34" y1="30.48" x2="-33.02" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="-53.34" y1="43.18" x2="-53.34" y2="30.48" width="0.1524" layer="91"/>
-<junction x="-53.34" y="30.48"/>
-<wire x1="-53.34" y1="17.78" x2="-53.34" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="-53.34" y1="25.4" x2="-35.56" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="-35.56" y1="25.4" x2="-33.02" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="-33.02" y1="27.94" x2="-30.48" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="-53.34" y1="43.18" x2="-53.34" y2="25.4" width="0.1524" layer="91"/>
+<junction x="-53.34" y="25.4"/>
+<wire x1="-53.34" y1="17.78" x2="-53.34" y2="25.4" width="0.1524" layer="91"/>
 <pinref part="DAUX" gate="G$1" pin="C2"/>
-<wire x1="-60.96" y1="30.48" x2="-58.42" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="-60.96" y1="20.32" x2="-58.42" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="-58.42" y1="20.32" x2="-58.42" y2="25.4" width="0.1524" layer="91"/>
 <pinref part="DAUX" gate="G$1" pin="C1"/>
-<wire x1="-58.42" y1="30.48" x2="-53.34" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="-58.42" y1="25.4" x2="-53.34" y2="25.4" width="0.1524" layer="91"/>
 <wire x1="-60.96" y1="25.4" x2="-58.42" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="-58.42" y1="25.4" x2="-58.42" y2="30.48" width="0.1524" layer="91"/>
-<junction x="-58.42" y="30.48"/>
+<junction x="-58.42" y="25.4"/>
 </segment>
 <segment>
 <pinref part="12D" gate="G$1" pin="C"/>
@@ -5507,8 +5509,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </segment>
 <segment>
 <pinref part="SR1" gate="G$1" pin="1"/>
-<wire x1="-81.28" y1="66.04" x2="-99.06" y2="66.04" width="0.1524" layer="91"/>
-<label x="-99.06" y="66.04" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="-81.28" y1="76.2" x2="-99.06" y2="76.2" width="0.1524" layer="91"/>
+<label x="-99.06" y="76.2" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="5V_MCU" class="0">
@@ -5522,23 +5524,24 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <junction x="-53.34" y="55.88"/>
 <label x="-53.34" y="55.88" size="1.778" layer="95"/>
 <pinref part="RRSPU" gate="G$1" pin="2"/>
-<wire x1="-71.12" y1="45.72" x2="-63.5" y2="45.72" width="0.1524" layer="91"/>
-<wire x1="-63.5" y1="45.72" x2="-53.34" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="-60.96" y1="45.72" x2="-58.42" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="-58.42" y1="45.72" x2="-58.42" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="-58.42" y1="50.8" x2="-53.34" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="AVRISP" gate="G$1" pin="VCC"/>
-<wire x1="-116.84" y1="83.82" x2="-114.3" y2="83.82" width="0.1524" layer="91"/>
-<label x="-114.3" y="83.82" size="1.778" layer="95" xref="yes"/>
+<wire x1="-124.46" y1="83.82" x2="-121.92" y2="83.82" width="0.1524" layer="91"/>
+<label x="-121.92" y="83.82" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="ADC2" class="0">
 <segment>
 <pinref part="RAUXTOP" gate="G$1" pin="2"/>
 <pinref part="RAUXBOT" gate="G$1" pin="2"/>
-<wire x1="-17.78" y1="30.48" x2="-17.78" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="-17.78" y1="30.48" x2="-17.78" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="-22.86" y1="30.48" x2="-17.78" y2="30.48" width="0.1524" layer="91"/>
-<junction x="-17.78" y="30.48"/>
+<wire x1="-17.78" y1="27.94" x2="-17.78" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="27.94" x2="-17.78" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="-20.32" y1="27.94" x2="-17.78" y2="27.94" width="0.1524" layer="91"/>
+<junction x="-17.78" y="27.94"/>
 <pinref part="MCU" gate="G$1" pin="PB4"/>
 <wire x1="-25.4" y1="66.04" x2="-17.78" y2="58.42" width="0.1524" layer="91"/>
 <label x="-25.4" y="66.04" size="1.778" layer="95"/>
@@ -5584,11 +5587,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </net>
 <net name="12V_RUN" class="0">
 <segment>
-<label x="-99.06" y="60.96" size="1.778" layer="95" rot="R180" xref="yes"/>
+<label x="-99.06" y="66.04" size="1.778" layer="95" rot="R180" xref="yes"/>
 <pinref part="R12VPU" gate="G$1" pin="2"/>
-<wire x1="-66.04" y1="60.96" x2="-99.06" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="-71.12" y1="48.26" x2="-66.04" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="-66.04" y1="48.26" x2="-66.04" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="-66.04" y1="60.96" x2="-71.12" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="-71.12" y1="66.04" x2="-99.06" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="-71.12" y1="60.96" x2="-66.04" y2="60.96" width="0.1524" layer="91"/>
 <junction x="-66.04" y="60.96"/>
 <pinref part="SJ1" gate="G$1" pin="1"/>
 <wire x1="-63.5" y1="60.96" x2="-66.04" y2="60.96" width="0.1524" layer="91"/>
@@ -5602,34 +5605,35 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <net name="MISO" class="0">
 <segment>
 <pinref part="SR1" gate="G$1" pin="2"/>
-<wire x1="-71.12" y1="66.04" x2="-68.58" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="-71.12" y1="76.2" x2="-66.04" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="RIN1PU" gate="G$1" pin="2"/>
-<wire x1="-71.12" y1="50.8" x2="-68.58" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="-68.58" y1="50.8" x2="-68.58" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="-71.12" y1="71.12" x2="-66.04" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="MCU" gate="G$1" pin="PB1"/>
-<wire x1="-68.58" y1="66.04" x2="-50.8" y2="66.04" width="0.1524" layer="91"/>
-<junction x="-68.58" y="66.04"/>
+<wire x1="-66.04" y1="71.12" x2="-60.96" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="-60.96" y1="66.04" x2="-50.8" y2="66.04" width="0.1524" layer="91"/>
+<junction x="-66.04" y="71.12"/>
 <label x="-53.34" y="66.04" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="AVRISP" gate="G$1" pin="MISO"/>
-<wire x1="-144.78" y1="83.82" x2="-142.24" y2="83.82" width="0.1524" layer="91"/>
-<label x="-144.78" y="83.82" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="-152.4" y1="83.82" x2="-149.86" y2="83.82" width="0.1524" layer="91"/>
+<label x="-152.4" y="83.82" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="MOSI" class="0">
 <segment>
 <pinref part="MCU" gate="G$1" pin="PB0"/>
-<wire x1="-50.8" y1="71.12" x2="-88.9" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="-88.9" y1="71.12" x2="-88.9" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="-88.9" y1="30.48" x2="-81.28" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="-50.8" y1="71.12" x2="-60.96" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="-60.96" y1="81.28" x2="-88.9" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="-88.9" y1="81.28" x2="-88.9" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="-88.9" y1="20.32" x2="-81.28" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="1"/>
 <label x="-53.34" y="71.12" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="AVRISP" gate="G$1" pin="MOSI"/>
-<wire x1="-116.84" y1="76.2" x2="-114.3" y2="76.2" width="0.1524" layer="91"/>
-<label x="-114.3" y="76.2" size="1.778" layer="95" xref="yes"/>
+<wire x1="-124.46" y1="76.2" x2="-121.92" y2="76.2" width="0.1524" layer="91"/>
+<label x="-121.92" y="76.2" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="5V_SW" class="0">
@@ -5728,7 +5732,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <net name="TP_AUX" class="0">
 <segment>
 <pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="-68.58" y1="20.32" x2="-71.12" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="-66.04" y1="30.48" x2="-71.12" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="AUX_OUT" gate="G$1" pin="1"/>
 </segment>
 </net>
@@ -5739,18 +5743,18 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="-25.4" y="55.88" size="1.778" layer="95"/>
 <wire x1="-22.86" y1="53.34" x2="-22.86" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="-22.86" y1="43.18" x2="-25.4" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="-25.4" y1="40.64" x2="-83.82" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="-25.4" y1="40.64" x2="-73.66" y2="40.64" width="0.1524" layer="91"/>
 <label x="-99.06" y="40.64" size="1.778" layer="95" rot="R180" xref="yes"/>
 <pinref part="RRSPU" gate="G$1" pin="1"/>
-<wire x1="-83.82" y1="40.64" x2="-99.06" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="-81.28" y1="45.72" x2="-83.82" y2="45.72" width="0.1524" layer="91"/>
-<wire x1="-83.82" y1="45.72" x2="-83.82" y2="40.64" width="0.1524" layer="91"/>
-<junction x="-83.82" y="40.64"/>
+<wire x1="-73.66" y1="40.64" x2="-99.06" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="-71.12" y1="45.72" x2="-73.66" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="-73.66" y1="45.72" x2="-73.66" y2="40.64" width="0.1524" layer="91"/>
+<junction x="-73.66" y="40.64"/>
 </segment>
 <segment>
 <pinref part="AVRISP" gate="G$1" pin="RESET"/>
-<wire x1="-142.24" y1="68.58" x2="-144.78" y2="68.58" width="0.1524" layer="91"/>
-<label x="-144.78" y="68.58" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="-149.86" y1="68.58" x2="-152.4" y2="68.58" width="0.1524" layer="91"/>
+<label x="-152.4" y="68.58" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="GATE_MAIN" class="2">
@@ -5828,7 +5832,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <pinref part="R3" gate="G$1" pin="2"/>
 <pinref part="DAUX" gate="G$1" pin="A2"/>
-<wire x1="-71.12" y1="30.48" x2="-68.58" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="-71.12" y1="20.32" x2="-68.58" y2="20.32" width="0.1524" layer="91"/>
 <label x="-73.66" y="33.02" size="1.778" layer="95"/>
 </segment>
 </net>
@@ -5879,24 +5883,22 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </net>
 <net name="AUX" class="0">
 <segment>
-<wire x1="-83.82" y1="38.1" x2="-22.86" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="35.56" x2="-25.4" y2="35.56" width="0.1524" layer="91"/>
 <pinref part="MCU" gate="G$1" pin="PB3"/>
-<wire x1="-22.86" y1="38.1" x2="-20.32" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="-25.4" y1="35.56" x2="-20.32" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="-20.32" y1="40.64" x2="-20.32" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="-20.32" y1="55.88" x2="-25.4" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="-83.82" y1="38.1" x2="-83.82" y2="25.4" width="0.1524" layer="91"/>
-<junction x="-83.82" y="25.4"/>
-<wire x1="-83.82" y1="25.4" x2="-83.82" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="35.56" x2="-83.82" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="30.48" x2="-83.82" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="25.4" x2="-81.28" y2="25.4" width="0.1524" layer="91"/>
 <pinref part="DAUXR" gate="G$1" pin="2"/>
-<wire x1="-81.28" y1="25.4" x2="-83.82" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="-81.28" y1="20.32" x2="-83.82" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="-83.82" y1="38.1" x2="-91.44" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="-91.44" y1="38.1" x2="-93.98" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="-93.98" y1="35.56" x2="-99.06" y2="35.56" width="0.1524" layer="91"/>
-<junction x="-83.82" y="38.1"/>
+<wire x1="-83.82" y1="35.56" x2="-99.06" y2="35.56" width="0.1524" layer="91"/>
+<junction x="-83.82" y="35.56"/>
 <label x="-99.06" y="35.56" size="1.778" layer="95" rot="R180" xref="yes"/>
 <label x="-25.4" y="60.96" size="1.778" layer="95"/>
+<wire x1="-81.28" y1="30.48" x2="-83.82" y2="30.48" width="0.1524" layer="91"/>
+<junction x="-83.82" y="30.48"/>
 </segment>
 <segment>
 <wire x1="-66.04" y1="-88.9" x2="-66.04" y2="-101.6" width="0.1524" layer="91"/>
@@ -5924,8 +5926,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </segment>
 <segment>
 <pinref part="AVRISP" gate="G$1" pin="SCK"/>
-<wire x1="-142.24" y1="76.2" x2="-144.78" y2="76.2" width="0.1524" layer="91"/>
-<label x="-144.78" y="76.2" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="-149.86" y1="76.2" x2="-152.4" y2="76.2" width="0.1524" layer="91"/>
+<label x="-152.4" y="76.2" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
