@@ -4142,6 +4142,22 @@
 </technology>
 </technologies>
 </device>
+<device name="470_16" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-470LCT-ND" constant="no"/>
+<attribute name="EURO" value="2.01/50" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW0402470RFKED" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="I" uservalue="yes">
@@ -4924,20 +4940,20 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="AVRISP" library="dubec" deviceset="AVRISP" device="AVX" value="AVRISPAVX"/>
 <part name="UD" library="dubec" deviceset="D_SCH" device="40V_0.25MA" value="D_SCH40V_0.25MA"/>
 <part name="12TVS" library="dubec" deviceset="D_ZENER" device="15V" value="D_ZENER15V"/>
-<part name="RAUXTOP" library="dubec" deviceset="RES" device="1M_16" value="RES1M_16"/>
-<part name="RAUXBOT" library="dubec" deviceset="RES" device="162K_16" value="RES162K_16"/>
+<part name="RAUXTOP" library="dubec" deviceset="RES" device="10K_16" value="RES10K_16"/>
+<part name="RAUXBOT" library="dubec" deviceset="RES" device="1.6K_16" value="RES1.6K_16"/>
 <part name="CMCU" library="dubec" deviceset="CAP" device="4.7UF_10V"/>
 <part name="5TVS" library="dubec" deviceset="D_ZENER" device="6V" value="D_ZENER6V"/>
-<part name="SR1" library="dubec" deviceset="RES" device="232_16" value="RES232_16"/>
+<part name="SR1" library="dubec" deviceset="RES" device="442_16" value="RES442_16"/>
 <part name="5V_OUT" library="dubec" deviceset="M03" device=""/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
-<part name="RIN1PU" library="dubec" deviceset="RES" device="10K_16" value="RES10K_16"/>
+<part name="RIN1PU" library="dubec" deviceset="RES" device="4.7K_16" value="RES4.7K_16"/>
 <part name="C2" library="dubec" deviceset="CAP" device="22UF_35V" value="22uF"/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="12V_OUT" library="dubec" deviceset="M02" device=""/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
-<part name="RPD" library="dubec" deviceset="RES" device="10K_16" value="RES10K_16"/>
+<part name="RPD" library="dubec" deviceset="RES" device="4.7K_16" value="RES4.7K_16"/>
 <part name="5L" library="dubec" deviceset="I" device="8.2UH_6.1A"/>
 <part name="STVS" library="dubec" deviceset="D_ZENER" device="5.6V" value="D_ZENER5.6V"/>
 <part name="5REG" library="dubec" deviceset="LT8614" device="IUDC"/>
@@ -4973,7 +4989,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="CSNUB" library="dubec" deviceset="ECAP" device="100UF_50V"/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
-<part name="R12VPU" library="dubec" deviceset="RES" device="10K_16" value="RES10K_16"/>
+<part name="R12VPU" library="dubec" deviceset="RES" device="4.7K_16" value="RES4.7K_16"/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="SJ1" library="dubec" deviceset="JUMPER-PAD" device=""/>
 <part name="5COUT1" library="dubec" deviceset="TCAP" device="330UF_6.3V" value="TCAP330UF_6.3V"/>
@@ -5036,7 +5052,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="RAUXBOT" gate="G$1" x="-25.4" y="27.94"/>
 <instance part="CMCU" gate="G$1" x="-53.34" y="45.72" rot="R90"/>
 <instance part="5TVS" gate="G$1" x="78.74" y="35.56" rot="R90"/>
-<instance part="SR1" gate="G$1" x="-76.2" y="76.2"/>
+<instance part="SR1" gate="G$1" x="-58.42" y="66.04"/>
 <instance part="5V_OUT" gate="G$1" x="114.3" y="50.8" rot="R180"/>
 <instance part="GND4" gate="1" x="-53.34" y="15.24"/>
 <instance part="GND5" gate="1" x="106.68" y="17.78"/>
@@ -5509,8 +5525,13 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </segment>
 <segment>
 <pinref part="SR1" gate="G$1" pin="1"/>
-<wire x1="-81.28" y1="76.2" x2="-99.06" y2="76.2" width="0.1524" layer="91"/>
 <label x="-99.06" y="76.2" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="RIN1PU" gate="G$1" pin="2"/>
+<wire x1="-71.12" y1="71.12" x2="-66.04" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="-66.04" y1="66.04" x2="-63.5" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="-71.12" y1="71.12" x2="-71.12" y2="76.2" width="0.1524" layer="91"/>
+<junction x="-71.12" y="71.12"/>
+<wire x1="-71.12" y1="76.2" x2="-99.06" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="5V_MCU" class="0">
@@ -5605,13 +5626,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <net name="MISO" class="0">
 <segment>
 <pinref part="SR1" gate="G$1" pin="2"/>
-<wire x1="-71.12" y1="76.2" x2="-66.04" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="RIN1PU" gate="G$1" pin="2"/>
-<wire x1="-71.12" y1="71.12" x2="-66.04" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="MCU" gate="G$1" pin="PB1"/>
-<wire x1="-66.04" y1="71.12" x2="-60.96" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="-60.96" y1="66.04" x2="-50.8" y2="66.04" width="0.1524" layer="91"/>
-<junction x="-66.04" y="71.12"/>
+<wire x1="-53.34" y1="66.04" x2="-50.8" y2="66.04" width="0.1524" layer="91"/>
 <label x="-53.34" y="66.04" size="1.778" layer="95"/>
 </segment>
 <segment>
