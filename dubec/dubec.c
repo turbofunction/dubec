@@ -120,14 +120,18 @@ int main(void) {
 	 * PB4 (ADC2, PCINT4):
 	 *   AUX battery voltage (divider) input, pulled down naturally if no battery
 	 * PB5 (RESET):
-	 *   floating, pull-up input
+	 *   input with external pull-up, connected only to ISP
 	 *
 	 * Fuses:
 	 *   CKSEL = b01 // 4.8MHz nominal clock
 	 */
 
-	// pull-up reset and 12V
-	PORTB = _BV(PORTB5) | _BV(PIN_12V);
+	// 12V to high (before changing to output).
+	// Note: could also leave to hi-z, but would need to
+	// configure to output when switching off.. I don't
+	// immediately like the idea. Now the MCU is sinking
+	// a bit of current, though, I suppose.
+	PORTB = _BV(PIN_12V);
 
 	// configure outputs
 	DDRB = _BV(PIN_SWITCH) | _BV(PIN_FAULT) | _BV(PIN_12V);
@@ -193,7 +197,7 @@ int main(void) {
 	}
 }
 
-void apply_rc() {
+void apply_rc(void) {
 	switch (rc.status) {
 		case RC_12V_DISABLE:
 			// source from main, disable 12V
@@ -223,7 +227,7 @@ void aux_bad(void) {
 }
 
 /** RC ("PWM") signal handler. */
-ISR (INT0_vect) {
+ISR(INT0_vect) {
 	// Act based on trigger conf as PINB might already have flipped back. (And
 	// the digital input is disabled anyways, due to this.)
 	if (is_trigger_high()) {
@@ -278,7 +282,7 @@ ISR (INT0_vect) {
 }
 
 /** Stop timer on invalid RC signal. */
-ISR (TIM0_OVF_vect) {
+ISR(TIM0_OVF_vect) {
 	// phase too long, stop timer
 	TCCR0B = 0;
 	// also reset counter in case it's been incrementing
@@ -296,6 +300,7 @@ ISR(ADC_vect) {
 	 */
 	// doc says that low byte needs to be read first
 	uint16_t v = ADCL;
+	// splitting to a separate line to "ensure" proper ordering
 	v |= ADCH << 8;
 	// disable ADC interrupt
 	ADCSRA &= ~_BV(ADIE);
@@ -352,18 +357,20 @@ ISR(ADC_vect) {
 	}
 }
 
-/** Detect battery disconnect. */
-ISR (PCINT0_vect) {
+/** Detect battery dis/connect. */
+ISR(PCINT0_vect) {
 	if (bit_is_clear(PINB, PIN_ADC)) {
 		aux_bad();
 	}
+
+	start_ADC();
 }
 
 /**
  * Use watchdog to initiate AUX battery voltage check on regular intervals.
- * Handles also startup delay and voltage warning.
+ * Handles also fault LED blinking.
  */
-ISR (WDT_vect) {
+ISR(WDT_vect) {
 	switch (batt.aux_status) {
 		case AUX_WARN:
 			// Blink the fault LED at 1Hz as warning
