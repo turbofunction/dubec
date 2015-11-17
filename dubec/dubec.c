@@ -166,7 +166,10 @@ int main(void) {
 
 	watchdog(WDTO_500MS);
 
-	start_ADC();
+	// Trigger first ADC only after the first watchdog timeout
+	// to allow initializations. (Unsure whether the CPU power down
+	// cancels all that, though.)
+	//start_ADC();
 
 	for (;;) {
 		// configure sleep according to state
