@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.4.0">
+<eagle version="7.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -4221,6 +4221,37 @@
 </technology>
 </technologies>
 </device>
+<device name="17.8K_16" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-17.8KLCT-ND" constant="no"/>
+<attribute name="EURO" value="2.01/50" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW040217K8FKED" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="2.74K_16" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-2.74KLCT-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW04022K74FKED" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="I" uservalue="yes">
@@ -5000,8 +5031,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="AVRISP" library="dubec" deviceset="AVRISP" device="AVX" value="AVRISPAVX"/>
 <part name="UD" library="dubec" deviceset="D_SCH" device="40V_0.25MA" value="D_SCH40V_0.25MA"/>
 <part name="12TVS" library="dubec" deviceset="D_ZENER" device="15V" value="D_ZENER15V"/>
-<part name="RAUXTOP" library="dubec" deviceset="RES" device="20K_16" value="RES20K_16"/>
-<part name="RAUXBOT" library="dubec" deviceset="RES" device="3.16K_16" value="RES3.16K_16"/>
+<part name="RAUXTOP" library="dubec" deviceset="RES" device="17.8K_16" value="RES17.8K_16"/>
+<part name="RAUXBOT" library="dubec" deviceset="RES" device="2.74K_16" value="RES2.74K_16"/>
 <part name="CMCU" library="dubec" deviceset="CAP" device="4.7UF_10V"/>
 <part name="5TVS" library="dubec" deviceset="D_ZENER" device="6V" value="D_ZENER6V"/>
 <part name="SR1" library="dubec" deviceset="RES" device="442_16" value="RES442_16"/>
