@@ -53,7 +53,7 @@
 // returns greater of arguments
 #define MAX(a, b) (a > b ? a : b)
 
-// AUX is depleted
+// AUX battery is depleted
 #define AUX_BAD 1
 // AUX is low
 #define AUX_WARN 2
@@ -62,11 +62,11 @@
 
 typedef struct {
 	// see AUX_*
-	volatile uint8_t aux_status;
+	uint8_t aux_status;
 	// when to start flashing warning LED
-	volatile uint16_t warn_voltage;
+	uint16_t warn_voltage;
 	// counter for taking a few samples before flagging
-	volatile uint8_t until_bad_aux;
+	uint8_t until_bad_aux;
 	/**
 	 * Fallback level is set to 75% of measured initial voltage
 	 * level, ie. 4.2V results in 3.15V and 3.8V makes 2.85V.
@@ -82,10 +82,11 @@ typedef struct {
 	 *
 	 * Rule: Don't launch with a drained battery!
 	 */
-	volatile uint16_t fallback_voltage;
+	uint16_t fallback_voltage;
 } battery_t;
 
-battery_t batt = { 0, 0, 0, 0 };
+// http://embeddedgurus.com/barr-code/2012/11/how-to-combine-volatile-with-struct/
+battery_t volatile batt = { 0, 0, 0, 0 };
 
 // sourcing from main battery
 #define RC_MAIN 1
@@ -96,14 +97,16 @@ battery_t batt = { 0, 0, 0, 0 };
 
 typedef struct {
 	// see RC_*
-	volatile uint8_t status;
+	uint8_t status;
 	// countdown to applying status change
-	volatile uint8_t until_flip;
+	uint8_t until_flip;
 } control_t;
 
-control_t rc = { 0, 0 };
+control_t volatile rc = { 0, 0 };
 
-static void aux_bad(void);
+static void apply_rc(void);
+
+static void set_aux(uint8_t aux_status);
 
 int main(void) {
 	/**
@@ -126,7 +129,7 @@ int main(void) {
 	 *   CKSEL = b01 // 4.8MHz nominal clock
 	 */
 
-	// 12V to high (before changing to output).
+	// 12V to high before configuring it to output.
 	// Note: could also leave to hi-z, but would need to
 	// configure to output when switching off.. I don't
 	// immediately like the idea. Now the MCU is sinking
@@ -215,18 +218,29 @@ void apply_rc(void) {
 			}
 			// else fall through
 
-		default:
+		default: // RC_MAIN
 			// source from main battery, 12V enabled
 			PORTB = (PORTB | _BV(PIN_12V)) & ~_BV(PIN_SWITCH);
 			break;
 	}
 }
 
-void aux_bad(void) {
-	batt.aux_status = AUX_BAD;
-	batt.until_bad_aux = 0;
-	// TODO think whether output control could be centralized better
-	PORTB = (PORTB | _BV(PIN_FAULT)) & ~_BV(PIN_SWITCH);
+void set_aux(uint8_t aux_status) {
+	switch (batt.aux_status = aux_status) {
+		case AUX_BAD:
+			// switch to main battery, and light the LED
+			PORTB = (PORTB | _BV(PIN_FAULT)) & ~_BV(PIN_SWITCH);
+			break;
+
+		case AUX_OK:
+			// LED off immediately
+			PORTB &= ~_BV(PIN_FAULT);
+			// and fall through to counter reset
+
+		default: // AUX_WARN
+			batt.until_bad_aux = 0;
+			break;
+	}
 }
 
 /** RC ("PWM") signal handler. */
@@ -309,7 +323,8 @@ ISR(ADC_vect) {
 	ADCSRA &= ~_BV(ADIE);
 
 	if (v < MIN_VOLTAGE) {
-		aux_bad();
+		// TODO countdown also this?
+		set_aux(AUX_BAD);
 
 		if (v < (MIN_VOLTAGE >> 1)) {
 			/**
@@ -335,35 +350,38 @@ ISR(ADC_vect) {
 		// fallback at 75%; floor the range, just for kicks
 		batt.fallback_voltage = MAX(v - (v >> 2), MIN_VOLTAGE);
 		// warning at 80%; the division takes up 92 bytes, TODO optimize
-		batt.warn_voltage = (v / 5) << 2;
+		// (12-bit value in word; can be shifted first before division)
+		batt.warn_voltage = (v << 2) / 5;
 		// take another sample before flagging ok
+		// TODO average the levels from multiple samples?
 
 	} else if (v <= batt.fallback_voltage) {
 		if (batt.aux_status != AUX_BAD) {
-			batt.aux_status = AUX_WARN;
+			set_aux(AUX_WARN);
 			if (!batt.until_bad_aux) {
 				// initialize countdown
-				batt.until_bad_aux = 3;
+				batt.until_bad_aux = 4;
 			} else if (!--batt.until_bad_aux) {
-				aux_bad();
+				set_aux(AUX_BAD);
 			}
 		}
 
-	} else if (v <= batt.warn_voltage) {
-		batt.aux_status = AUX_WARN;
+	// 18mV "hysteresis" to prevent oscillation
+	} else if (v > (batt.warn_voltage + 4)
+	           || (!batt.aux_status && v > batt.warn_voltage)) {
+		if (batt.aux_status != AUX_OK) {
+			set_aux(AUX_OK);
+		}
 
-	// 18mV "hysteresis" on fallback level to prevent oscillation
-	} else if (batt.aux_status != AUX_OK && v > (batt.warn_voltage + 4)) {
-		batt.aux_status = AUX_OK;
-		// reset countdown
-		batt.until_bad_aux = 0;
+	} else if (batt.aux_status != AUX_WARN) {
+		set_aux(AUX_WARN);
 	}
 }
 
 /** Detect battery dis/connect. */
 ISR(PCINT0_vect) {
 	if (bit_is_clear(PINB, PIN_ADC)) {
-		aux_bad();
+		set_aux(AUX_BAD);
 	}
 
 	start_ADC();
@@ -382,7 +400,7 @@ ISR(WDT_vect) {
 		case AUX_BAD:
 			PORTB |= _BV(PIN_FAULT);
 			break;
-		default:
+		default: // AUX_OK
 			PORTB &= ~_BV(PIN_FAULT);
 			break;
 	}
