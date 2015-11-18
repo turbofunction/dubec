@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.4.0">
+<eagle version="7.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -181,7 +181,7 @@
 <text x="10" y="36" size="1" layer="107" font="vector" ratio="20" align="top-left">AVR ISP adapter board
 for Super DUBEC.
 Rev. 1</text>
-<text x="4" y="3.5" size="1" layer="107" font="vector" ratio="20" align="top-left">http://TURBOFUNCTION.com/fpv</text>
+<text x="5.5" y="4" size="1" layer="107" font="vector" ratio="20" align="center-left">http://TURBOFUNCTION.com/fpv</text>
 <text x="18" y="18" size="1" layer="107" font="vector" ratio="20">ISP connector pins:</text>
 <hole x="36" y="6.9" drill="2"/>
 <circle x="50" y="30.4" radius="1.7" width="0.5" layer="107"/>
@@ -190,6 +190,7 @@ Rev. 1</text>
 <circle x="36" y="6.9" radius="1.7" width="0.5" layer="107"/>
 <circle x="15" y="21" radius="1.7" width="0.5" layer="107"/>
 <text x="33.4" y="34" size="1" layer="107" font="vector" ratio="20" rot="SR270" align="center-left">GND</text>
+<text x="5.5" y="2.4" size="0.8128" layer="107" font="vector" ratio="20" align="center-left">201x-xx-xx</text>
 </plain>
 <libraries>
 <library name="dubec">
@@ -251,6 +252,36 @@ Rev. 1</text>
 <text x="0" y="0" size="0.8128" layer="21" font="vector" ratio="15" align="center">00925
 80080
 04063</text>
+</package>
+<package name="TF-EMBLEM">
+<polygon width="0.381" layer="29">
+<vertex x="-0.425" y="1.025"/>
+<vertex x="0.45" y="1.025" curve="-90"/>
+<vertex x="0.825" y="0.65"/>
+<vertex x="0.825" y="-0.725" curve="-90"/>
+<vertex x="0.45" y="-1.1"/>
+<vertex x="-0.425" y="-1.1" curve="-90"/>
+<vertex x="-0.8" y="-0.725"/>
+<vertex x="-0.8" y="0.65" curve="-90"/>
+</polygon>
+<polygon width="0.381" layer="41">
+<vertex x="-0.55" y="1.15"/>
+<vertex x="0.575" y="1.15" curve="-90"/>
+<vertex x="0.95" y="0.775"/>
+<vertex x="0.95" y="-0.85" curve="-90"/>
+<vertex x="0.575" y="-1.225"/>
+<vertex x="-0.55" y="-1.225" curve="-90"/>
+<vertex x="-0.925" y="-0.85"/>
+<vertex x="-0.925" y="0.775" curve="-90"/>
+</polygon>
+<wire x1="0.325" y1="-0.475" x2="0.575" y2="-0.475" width="0.3302" layer="1"/>
+<wire x1="0.325" y1="-0.475" x2="0.325" y2="-0.85" width="0.3302" layer="1"/>
+<wire x1="-0.55" y1="0.525" x2="-0.3" y2="0.775" width="0.3302" layer="1" curve="-90"/>
+<wire x1="-0.3" y1="0.775" x2="-0.05" y2="0.775" width="0.3302" layer="1"/>
+<wire x1="-0.55" y1="0.525" x2="-0.55" y2="0.15" width="0.3302" layer="1"/>
+<wire x1="-0.55" y1="0.15" x2="-0.55" y2="-0.6" width="0.3302" layer="1"/>
+<wire x1="-0.55" y1="0.15" x2="-0.175" y2="0.15" width="0.3302" layer="1"/>
+<wire x1="0.075" y1="-0.475" x2="0.325" y2="-0.475" width="0.3302" layer="1"/>
 </package>
 </packages>
 </library>
@@ -521,6 +552,7 @@ design rules under a new name.</description>
 <attribute name="DIGIKEY_PART_#" value="478-5495-1-ND" x="19" y="27" size="1.778" layer="27" display="off"/>
 </element>
 <element name="JP2" library="SparkFun-Connectors" package="1X01" value="M01PTH" x="33.38" y="36"/>
+<element name="U$2" library="dubec" package="TF-EMBLEM" value="" x="3.1" y="3.3"/>
 </elements>
 <signals>
 <signal name="VCC">
