@@ -25,7 +25,7 @@
 // red LED
 #define PIN_FAULT PORTB0
 // RC signal input
-#define PIN_RC PORTB1
+#define PIN_SIG PORTB1
 // 12V regulator on/off
 #define PIN_12V PORTB2
 // FET gate net (and green LED)
@@ -33,9 +33,10 @@
 // AUX battery voltage divider net
 #define PIN_ADC PORTB4
 
-// ~6.0V as a 10-bit ADC value for 0.97V (1M/162K divider):
-// (162k / 1000k * 6V) * (1024 / 4.684V)
-#define MIN_VOLTAGE 212
+// Range with 17.8k/2.74k divider: [6..33.6V] -> [0.8..4.482V]
+// With 4.7V VCC: 0.8V / 4.7V * 1024 = 174
+// We get 178 as ADC value for 6V.
+#define MIN_VOLTAGE 174
 
 // evaluates to true if waiting for high RC signal
 #define is_trigger_high() (MCUCR & (_BV(ISC01) | _BV(ISC00)))
@@ -63,10 +64,6 @@
 typedef struct {
 	// see AUX_*
 	uint8_t aux_status;
-	// when to start flashing warning LED
-	uint16_t warn_voltage;
-	// counter for taking a few samples before flagging
-	uint8_t until_bad_aux;
 	/**
 	 * Fallback level is set to 75% of measured initial voltage
 	 * level, ie. 4.2V results in 3.15V and 3.8V makes 2.85V.
@@ -83,28 +80,32 @@ typedef struct {
 	 * Rule: Don't launch with a drained battery!
 	 */
 	uint16_t fallback_voltage;
+	// when to start flashing warning LED
+	uint16_t warn_voltage;
+	// counter for taking a few samples before flagging
+	uint8_t until_bad_aux;
 } battery_t;
 
 // http://embeddedgurus.com/barr-code/2012/11/how-to-combine-volatile-with-struct/
 battery_t volatile batt = { 0, 0, 0, 0 };
 
 // sourcing from main battery
-#define RC_MAIN 1
+#define SIG_MAIN 1
 // sourcing from AUX battery
-#define RC_AUX 2
+#define SIG_AUX 2
 // crash boom bang. also switch to main battery.
-#define RC_12V_DISABLE 3
+#define SIG_12V_DISABLE 3
 
 typedef struct {
-	// see RC_*
+	// see SIG_*
 	uint8_t status;
 	// countdown to applying status change
 	uint8_t until_flip;
-} control_t;
+} rc_signal_t;
 
-control_t volatile rc = { 0, 0 };
+rc_signal_t volatile signal = { 0, 0 };
 
-static void apply_rc(void);
+static void apply_signal(void);
 
 static void set_aux(uint8_t aux_status);
 
@@ -178,7 +179,7 @@ int main(void) {
 		// configure sleep according to state
 
 		if (is_timer_running()) {
-			// only idle when timing high RC to keep IO clock running (for timer)
+			// only idle when timing high signal to keep IO clock running (for timer)
 			MCUCR &= ~(_BV(SM0) | _BV(SM1)); // idle
 
 		} else if (bit_is_set(ADCSRA, ADIE)) {
@@ -188,9 +189,9 @@ int main(void) {
 			MCUCR = (MCUCR & ~_BV(SM1)) | _BV(SM0); // ADC noise reduction
 
 		} else if (is_trigger_high()) {
-			// ~18ms wait period on RC low, sleep or not? If we just idle
+			// ~18ms wait period on low signal, sleep or not? If we just idle
 			// for now to avoid risks.. (Thus, configured now to use synchronous
-			// INT0 on RC instead of async PCINT; easier interrupt handling.)
+			// INT0 on signal instead of async PCINT; easier interrupt handling.)
 			MCUCR &= ~(_BV(SM0) | _BV(SM1)); // idle
 
 		} else {
@@ -203,14 +204,14 @@ int main(void) {
 	}
 }
 
-void apply_rc(void) {
-	switch (rc.status) {
-		case RC_12V_DISABLE:
-			// source from main, disable 12V
+void apply_signal(void) {
+	switch (signal.status) {
+		case SIG_12V_DISABLE:
+			// disable 12V and source from main (crashboombang)
 			PORTB &= ~(_BV(PIN_SWITCH) | _BV(PIN_12V));
 			break;
 
-		case RC_AUX:
+		case SIG_AUX:
 			if (batt.aux_status >= AUX_WARN) {
 				// source from AUX, 12V enabled
 				PORTB |= _BV(PIN_SWITCH) | _BV(PIN_12V);
@@ -218,7 +219,7 @@ void apply_rc(void) {
 			}
 			// else fall through
 
-		default: // RC_MAIN
+		default: // SIG_MAIN
 			// source from main battery, 12V enabled
 			PORTB = (PORTB | _BV(PIN_12V)) & ~_BV(PIN_SWITCH);
 			break;
@@ -243,7 +244,7 @@ void set_aux(uint8_t aux_status) {
 	}
 }
 
-/** RC ("PWM") signal handler. */
+/** RC signal handler. */
 ISR(INT0_vect) {
 	// Act based on trigger conf as PINB might already have flipped back. (And
 	// the digital input is disabled anyways, due to this.)
@@ -262,7 +263,7 @@ ISR(INT0_vect) {
 
 	// copy counter value to a register
 	uint8_t pwm = TCNT0;
-	// stop timer (but only after copying the value, to avoid surprises)
+	// stop timer (after copying the value, to avoid surprises)
 	TCCR0B = 0;
 	// schedule next interrupt on rising edge
 	MCUCR |= _BV(ISC01) | _BV(ISC00);
@@ -270,31 +271,31 @@ ISR(INT0_vect) {
 	// supported range [800..2240ms] == [15..42] @ 18.75kHz
 	if (pwm < 15 || pwm > 42) {
 		// invalid signal, reset counter
-		if (rc.until_flip) {
-			rc.until_flip = 5;
+		if (signal.until_flip) {
+			signal.until_flip = 5;
 		}
 		return;
 	}
 
-	uint8_t want = RC_MAIN;
+	uint8_t want = SIG_MAIN;
 	if (pwm > 32) {
 		// ]1653..2240ms]: disable 12V
-		want = RC_12V_DISABLE;
+		want = SIG_12V_DISABLE;
 	} else if (pwm >= 25) {
 		// [1333..1653ms]: switch to AUX
-		want = RC_AUX;
+		want = SIG_AUX;
 	}
 	// else [800..1333ms[: switch to main
 
-	if (want == rc.status) {
-		if (rc.until_flip) {
-			if (!--rc.until_flip) {
-				apply_rc();
+	if (want == signal.status) {
+		if (signal.until_flip) {
+			if (!--signal.until_flip) {
+				apply_signal();
 			}
 		} // else the change is already applied
 	} else {
-		rc.status = want;
-		rc.until_flip = 5;
+		signal.status = want;
+		signal.until_flip = 5;
 	}
 }
 
