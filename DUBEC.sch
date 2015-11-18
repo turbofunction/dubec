@@ -1185,18 +1185,18 @@
 <package name="AVX9258-6P">
 <text x="-3" y="-1" size="0.5" layer="25" ratio="10" align="top-left">&gt;NAME</text>
 <text x="-3" y="-2.3" size="0.5" layer="27">&gt;VALUE</text>
-<smd name="1" x="-2.5" y="-0.1" dx="0.7" dy="1.3" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="2" x="-1.5" y="0" dx="0.7" dy="1.1" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="1" x="-2.5" y="0" dx="0.7" dy="1.1" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="2" x="-1.5" y="0.1" dx="0.7" dy="1.3" layer="1" stop="no" thermals="no" cream="no"/>
 <smd name="3" x="-0.5" y="0" dx="0.7" dy="1.1" layer="1" stop="no" thermals="no" cream="no"/>
 <smd name="4" x="0.5" y="0" dx="0.7" dy="1.1" layer="1" stop="no" thermals="no" cream="no"/>
 <smd name="5" x="1.5" y="0" dx="0.7" dy="1.1" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="6" x="2.5" y="0" dx="0.7" dy="1.1" layer="1" stop="no" thermals="no" cream="no"/>
-<rectangle x1="-2.8" y1="-0.7" x2="-2.2" y2="0.5" layer="29"/>
-<rectangle x1="-1.8" y1="-0.5" x2="-1.2" y2="0.5" layer="29"/>
+<smd name="6" x="2.5" y="0.1" dx="0.7" dy="1.3" layer="1" stop="no" thermals="no" cream="no"/>
+<rectangle x1="-1.8" y1="-0.5" x2="-1.2" y2="0.7" layer="29"/>
 <rectangle x1="-0.8" y1="-0.5" x2="-0.2" y2="0.5" layer="29"/>
 <rectangle x1="0.2" y1="-0.5" x2="0.8" y2="0.5" layer="29"/>
 <rectangle x1="1.2" y1="-0.5" x2="1.8" y2="0.5" layer="29"/>
-<rectangle x1="2.2" y1="-0.5" x2="2.8" y2="0.5" layer="29"/>
+<rectangle x1="2.2" y1="-0.5" x2="2.8" y2="0.7" layer="29"/>
+<rectangle x1="-2.8" y1="-0.5" x2="-2.2" y2="0.5" layer="29"/>
 </package>
 <package name="AVX9258-8P">
 <text x="-5" y="5" size="0.6" layer="25" ratio="10">&gt;NAME</text>
