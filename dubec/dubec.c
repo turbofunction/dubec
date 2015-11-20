@@ -33,9 +33,11 @@
 // AUX battery voltage divider net
 #define PIN_ADC PORTB4
 
-// Range with 17.8k/2.74k divider: [6..33.6V] -> [0.8..4.482V]
-// With 4.7V VCC: 0.8V / 4.7V * 1024 = 174
-// We get 178 as ADC value for 6V.
+/**
+ * Range with 17.8k/2.74k divider: [6..33.6V] -> [0.8..4.482V]
+ * With 4.7V VCC: 0.8V / 4.7V * 1024 = 174
+ * Where 174 is the ADC value for 6V.
+ */
 #define MIN_VOLTAGE 174
 
 // evaluates to true if waiting for high RC signal
