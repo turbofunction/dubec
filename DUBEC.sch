@@ -5011,7 +5011,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <parts>
 <part name="MCU" library="dubec" deviceset="ATTINY13A" device="10M1"/>
 <part name="12REG" library="dubec" deviceset="LTC3115-1" device="IDHD" value="LTC3115-1IDHD"/>
-<part name="C1" library="dubec" deviceset="CAP" device="22UF_35V" value="22uF"/>
+<part name="C1" library="dubec" deviceset="CAP" device="22UF_35V"/>
 <part name="12CB1" library="dubec" deviceset="CAP" device="0.1UF_100V"/>
 <part name="12CB2" library="dubec" deviceset="CAP" device="0.1UF_100V"/>
 <part name="12L" library="dubec" deviceset="I" device="10UH_4.9A" value="10uH"/>
@@ -5040,7 +5040,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="RIN1PU" library="dubec" deviceset="RES" device="10K_16" value="RES10K_16"/>
-<part name="C2" library="dubec" deviceset="CAP" device="22UF_35V" value="22uF"/>
+<part name="C2" library="dubec" deviceset="CAP" device="22UF_35V"/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="12V_OUT" library="dubec" deviceset="M02" device=""/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
