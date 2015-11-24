@@ -8,47 +8,47 @@
 </settings>
 <grid distance="0.125" unitdist="mm" unit="mm" style="lines" multiple="8" display="yes" altdistance="0.0625" altunitdist="mm" altunit="mm"/>
 <layers>
-<layer number="1" name="Top" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="1" name="Top" color="2" fill="1" visible="no" active="yes"/>
 <layer number="2" name="Route2" color="9" fill="1" visible="no" active="yes"/>
 <layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
-<layer number="15" name="Route15" color="14" fill="1" visible="no" active="yes"/>
+<layer number="15" name="Route15" color="14" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="5" fill="1" visible="no" active="yes"/>
 <layer number="17" name="Pads" color="10" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="21" name="tPlace" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="yes"/>
+<layer number="21" name="tPlace" color="15" fill="1" visible="no" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
-<layer number="29" name="tStop" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="4" fill="1" visible="no" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
-<layer number="33" name="tFinish" color="6" fill="3" visible="yes" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
-<layer number="35" name="tGlue" color="7" fill="4" visible="yes" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
-<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
-<layer number="41" name="tRestrict" color="14" fill="10" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="14" fill="10" visible="no" active="yes"/>
 <layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
@@ -66,12 +66,12 @@
 <layer number="99" name="SpiceOrder" color="5" fill="1" visible="no" active="no"/>
 <layer number="100" name="Muster" color="7" fill="1" visible="no" active="no"/>
 <layer number="101" name="Patch_Top" color="12" fill="4" visible="no" active="yes"/>
-<layer number="102" name="tPolarity" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="102" name="tPolarity" color="7" fill="1" visible="no" active="yes"/>
 <layer number="103" name="tMap" color="7" fill="1" visible="no" active="yes"/>
 <layer number="104" name="Name" color="16" fill="1" visible="no" active="yes"/>
-<layer number="105" name="tPlate" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="105" name="tPlate" color="7" fill="1" visible="no" active="yes"/>
 <layer number="106" name="bPlate" color="7" fill="1" visible="no" active="yes"/>
-<layer number="107" name="tLabels" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="107" name="tLabels" color="15" fill="1" visible="no" active="yes"/>
 <layer number="108" name="tplace-old" color="10" fill="1" visible="no" active="yes"/>
 <layer number="109" name="ref-old" color="11" fill="1" visible="no" active="yes"/>
 <layer number="110" name="fp0" color="7" fill="1" visible="no" active="yes"/>
@@ -1531,8 +1531,8 @@ Covered vias can be set in Masks (Limit).
 <wire x1="27.8125" y1="8.0625" x2="28.6875" y2="8.0625" width="0.2032" layer="1"/>
 <wire x1="28.6875" y1="8.0625" x2="29" y2="8.375" width="0.2032" layer="1"/>
 <wire x1="28" y1="12.625" x2="29.5" y2="12.625" width="0.6" layer="16"/>
-<wire x1="29.5" y1="12.625" x2="31.125" y2="12.625" width="0.6" layer="16"/>
-<wire x1="31.125" y1="12.625" x2="31.875" y2="12.875" width="0.6" layer="16"/>
+<wire x1="29.5" y1="12.625" x2="31.625" y2="12.625" width="0.6" layer="16"/>
+<wire x1="31.625" y1="12.625" x2="31.875" y2="12.875" width="0.6" layer="16"/>
 <wire x1="29" y1="8.375" x2="29.5" y2="8.375" width="0.3302" layer="16"/>
 <wire x1="29.5" y1="8.375" x2="30.125" y2="9" width="0.3302" layer="16"/>
 <wire x1="30.125" y1="9" x2="30.125" y2="9.875" width="0.3302" layer="16"/>
@@ -1627,8 +1627,8 @@ Covered vias can be set in Masks (Limit).
 <via x="22.3125" y="14.9375" extent="1-16" drill="0.3"/>
 <via x="22.3125" y="17.8125" extent="1-16" drill="0.3"/>
 <via x="23" y="20.25" extent="1-16" drill="0.3"/>
-<via x="22.75" y="12.625" extent="1-16" drill="0.5"/>
-<via x="23.5" y="13.5625" extent="1-16" drill="0.5"/>
+<via x="22.75" y="12.375" extent="1-16" drill="0.5"/>
+<via x="23.5" y="13.0625" extent="1-16" drill="0.5"/>
 <via x="16.875" y="20.375" extent="1-16" drill="0.3"/>
 <contactref element="5REG" pad="17"/>
 <via x="18.5" y="17.625" extent="1-16" drill="0.3"/>
@@ -1638,8 +1638,8 @@ Covered vias can be set in Masks (Limit).
 <via x="23.0625" y="17.8125" extent="1-16" drill="0.3"/>
 <wire x1="22.3125" y1="17.8125" x2="23.0625" y2="17.8125" width="0.8" layer="16"/>
 <via x="26.25" y="20.25" extent="1-16" drill="0.3"/>
-<via x="26.1875" y="12.75" extent="1-16" drill="0.3"/>
-<wire x1="23.0625" y1="14.9375" x2="23.5" y2="13.5625" width="1" layer="16"/>
+<via x="26.0625" y="12.5" extent="1-16" drill="0.3"/>
+<wire x1="23.0625" y1="14.9375" x2="23.5" y2="13.0625" width="1" layer="16"/>
 <contactref element="QA1" pad="1"/>
 <contactref element="DTVS" pad="A2"/>
 <contactref element="DTVS" pad="A1"/>
@@ -1665,7 +1665,7 @@ Covered vias can be set in Masks (Limit).
 <wire x1="18.375" y1="9.75" x2="18.375" y2="10.5" width="0.75" layer="16"/>
 <contactref element="12COUT1" pad="C"/>
 <via x="11.6875" y="20.375" extent="1-16" drill="0.3"/>
-<via x="14.5625" y="17.125" extent="1-16" drill="0.3"/>
+<via x="13.3125" y="17.125" extent="1-16" drill="0.3"/>
 <via x="24.75" y="1" extent="1-16" drill="0.3"/>
 <via x="13.75" y="1" extent="1-16" drill="0.3"/>
 <via x="3.25" y="1" extent="1-16" drill="0.3"/>
@@ -2394,7 +2394,7 @@ Covered vias can be set in Masks (Limit).
 <contactref element="MCU" pad="5"/>
 <contactref element="CMCU" pad="1"/>
 <contactref element="RAUXBOT" pad="1"/>
-<via x="9" y="16.3125" extent="1-16" drill="0.3"/>
+<via x="9" y="16.1875" extent="1-16" drill="0.3"/>
 <via x="14.75" y="14.75" extent="1-16" drill="0.3"/>
 <contactref element="5RBOT" pad="1"/>
 <contactref element="5CVCC" pad="1"/>
@@ -2410,23 +2410,30 @@ Covered vias can be set in Masks (Limit).
 <vertex x="17.25" y="13.5"/>
 <vertex x="13.625" y="13.5"/>
 </polygon>
-<wire x1="14.75" y1="14.75" x2="9.375" y2="14.75" width="0.3302" layer="2"/>
-<wire x1="9.375" y1="14.75" x2="9" y2="15.125" width="0.3302" layer="2"/>
-<wire x1="9" y1="15.125" x2="8.125" y2="14.25" width="0.6" layer="2"/>
-<wire x1="8.125" y1="14.25" x2="6.625" y2="14.25" width="0.6" layer="2"/>
-<wire x1="6.625" y1="14.25" x2="4.875" y2="12.5" width="0.6" layer="2"/>
-<wire x1="4.875" y1="12.5" x2="3.125" y2="12.5" width="0.6" layer="2"/>
-<wire x1="3.125" y1="12.5" x2="2.625" y2="13" width="0.3302" layer="2"/>
-<wire x1="9" y1="16.3125" x2="9" y2="15.125" width="0.6" layer="2"/>
 <via x="30.625" y="7.625" extent="1-16" drill="0.3"/>
 <via x="30.125" y="11.125" extent="1-16" drill="0.3"/>
 <wire x1="29.375" y1="11.125" x2="30.125" y2="11.125" width="0.4" layer="1"/>
 <wire x1="30.625" y1="7.625" x2="30.625" y2="6.875" width="0.4" layer="1"/>
-<wire x1="30.125" y1="11.125" x2="30.625" y2="10.625" width="0.3302" layer="15"/>
-<wire x1="30.625" y1="10.625" x2="30.625" y2="9.375" width="0.3302" layer="15"/>
-<wire x1="30.625" y1="9.375" x2="30.625" y2="7.625" width="0.3302" layer="15"/>
-<wire x1="31.375" y1="9.375" x2="30.625" y2="9.375" width="0.3302" layer="15"/>
-<wire x1="16.875" y1="13.875" x2="29.375" y2="11.125" width="0" layer="19" extent="1-1"/>
+<wire x1="30.125" y1="11.125" x2="30.125" y2="8.125" width="0.3302" layer="15"/>
+<wire x1="30.125" y1="8.125" x2="30.625" y2="7.625" width="0.3302" layer="15"/>
+<wire x1="14.75" y1="14.75" x2="15.5" y2="14.75" width="0.3302" layer="15"/>
+<wire x1="15.5" y1="14.75" x2="15.5" y2="13.5" width="0.3302" layer="15"/>
+<wire x1="15.5" y1="13.5" x2="16.875" y2="12.125" width="0.3302" layer="15"/>
+<wire x1="16.875" y1="12.125" x2="19" y2="12.125" width="0.3302" layer="15"/>
+<wire x1="19" y1="12.125" x2="20.9375" y2="14.0625" width="0.3302" layer="15"/>
+<wire x1="20.9375" y1="14.0625" x2="25.1875" y2="14.0625" width="0.3302" layer="15"/>
+<wire x1="25.1875" y1="14.0625" x2="25.875" y2="13.375" width="0.3302" layer="15"/>
+<wire x1="25.875" y1="13.375" x2="27.875" y2="13.375" width="0.3302" layer="15"/>
+<wire x1="27.875" y1="13.375" x2="30.125" y2="11.125" width="0.3302" layer="15"/>
+<wire x1="9" y1="16.1875" x2="8.875" y2="16.3125" width="0.5" layer="15"/>
+<wire x1="8.875" y1="16.3125" x2="4.6875" y2="16.3125" width="0.5" layer="15"/>
+<wire x1="4.6875" y1="16.3125" x2="2.75" y2="14.375" width="0.5" layer="15"/>
+<wire x1="15.5" y1="14.75" x2="15.5" y2="16.25" width="0.3302" layer="15"/>
+<wire x1="15.5" y1="16.25" x2="15" y2="16.75" width="0.3302" layer="15"/>
+<wire x1="15" y1="16.75" x2="14.25" y2="16.75" width="0.3302" layer="15"/>
+<wire x1="14.25" y1="16.75" x2="13.1875" y2="15.6875" width="0.3302" layer="15"/>
+<wire x1="13.1875" y1="15.6875" x2="9.5" y2="15.6875" width="0.3302" layer="15"/>
+<wire x1="9.5" y1="15.6875" x2="9" y2="16.1875" width="0.3302" layer="15"/>
 </signal>
 </signals>
 <errors>
@@ -2693,31 +2700,13 @@ Covered vias can be set in Masks (Limit).
 <approved hash="5,16,8236f10c8b6b9259"/>
 <approved hash="5,16,35846eb22ec11fff"/>
 <approved hash="5,16,0f83cdb6c4814d38"/>
-<approved hash="5,16,4f4dd6950a190a4d"/>
 <approved hash="6,1,b42784a8866ec445"/>
 <approved hash="6,1,a19dbfb9bfb3a197"/>
 <approved hash="6,1,1b2a552a1999253d"/>
 <approved hash="6,1,6db820b877101a6e"/>
 <approved hash="6,1,60b72600acc5ca0c"/>
-<approved hash="19,2,6e9d4372d681dd84"/>
-<approved hash="5,2,72be8804892d03a0"/>
-<approved hash="5,15,ca1f43ed156c99a4"/>
-<approved hash="5,15,dc1257beeb178e22"/>
-<approved hash="5,15,5e7bb7cc4d2db860"/>
-<approved hash="5,15,3076bb94eb175666"/>
-<approved hash="5,15,b2561baf66ed482d"/>
-<approved hash="5,15,26ae0c2947961b75"/>
 <approved hash="19,15,94a91412b5da6986"/>
-<approved hash="5,16,1060212468627a16"/>
-<approved hash="5,16,65c70945bc141299"/>
-<approved hash="5,16,21c74d5e860f2899"/>
-<approved hash="5,16,39180ca47cd1084e"/>
-<approved hash="5,16,006021246875e216"/>
 <approved hash="5,16,e32cc5b563e5dcf0"/>
-<approved hash="5,16,bf1dfb29805c2216"/>
-<approved hash="5,16,b5b45ce05df245e9"/>
-<approved hash="5,16,c83a83055b5a3843"/>
-<approved hash="5,16,986eaf6d78e3acd0"/>
 <approved hash="5,1,9ea9dc9da838fc01"/>
 <approved hash="5,1,fe4b2a735f639d56"/>
 <approved hash="6,1,96d40158015196dd"/>
@@ -2739,6 +2728,28 @@ Covered vias can be set in Masks (Limit).
 <approved hash="6,1,bb245ff4f31a45d0"/>
 <approved hash="19,1,78ac074836a71469"/>
 <approved hash="5,1,483f54a02a4e3a9f"/>
+<approved hash="19,15,cd048ca0054e1e3d"/>
+<approved hash="19,2,6e9d4372d681dd84"/>
+<approved hash="5,2,72be8804892d03a0"/>
+<approved hash="19,2,5ada2a484d7dcfe8"/>
+<approved hash="5,2,e7adec959c90b848"/>
+<approved hash="19,15,c8e326a07ae4bd7b"/>
+<approved hash="5,15,ca1f43ed156c99a4"/>
+<approved hash="5,15,dc1257beeb178e22"/>
+<approved hash="5,15,5e7bb7cc4d2db860"/>
+<approved hash="5,15,3076bb94eb175666"/>
+<approved hash="5,15,b2561baf66ed482d"/>
+<approved hash="5,15,26ae0c2947961b75"/>
+<approved hash="5,16,1060212468627a16"/>
+<approved hash="5,16,65c70945bc141299"/>
+<approved hash="5,16,21c74d5e860f2899"/>
+<approved hash="5,16,39180ca47cd1084e"/>
+<approved hash="5,16,006021246875e216"/>
+<approved hash="5,16,4f4dd6950a190a4d"/>
+<approved hash="5,16,b5b45ce05df245e9"/>
+<approved hash="5,16,c83a83055b5a3843"/>
+<approved hash="5,16,bf1dfb29805c2216"/>
+<approved hash="5,16,986eaf6d78e3acd0"/>
 <approved hash="6,1,9f5493f1f3a0e905"/>
 <approved hash="6,1,8672ad0f4e9673eb"/>
 <approved hash="6,1,06e4eae843872f65"/>
@@ -2772,14 +2783,14 @@ Covered vias can be set in Masks (Limit).
 <approved hash="5,1,8237d31e5fcd5824"/>
 <approved hash="5,1,e437d0d45dac248d"/>
 <approved hash="5,1,018454d6545b0399"/>
-<approved hash="5,1,48ec6210dda70bb2"/>
-<approved hash="5,1,5806c5cb9876985a"/>
 <approved hash="5,1,78d7708c58c5db3b"/>
 <approved hash="5,1,4edd1e9082e5ae17"/>
-<approved hash="5,1,6a6c40956c62ba72"/>
+<approved hash="5,1,48ec6210dda70bb2"/>
+<approved hash="5,1,5806c5cb9876985a"/>
 <approved hash="5,1,189f98756baab8e7"/>
-<approved hash="5,1,5ba2634206b19bb2"/>
+<approved hash="5,1,6a6c40956c62ba72"/>
 <approved hash="5,1,894d65e0d34b90ba"/>
+<approved hash="5,1,5ba2634206b19bb2"/>
 <approved hash="5,1,c28fd75ed0c9c099"/>
 <approved hash="6,1,4971f0ae7053c98c"/>
 <approved hash="5,1,6f2c577cce8872c7"/>
@@ -2812,9 +2823,7 @@ Covered vias can be set in Masks (Limit).
 <approved hash="6,1,121a10880288001a"/>
 <approved hash="6,1,da26dd4cc04cc726"/>
 <approved hash="6,1,3060300718071860"/>
-<approved hash="19,2,5ada2a484d7dcfe8"/>
-<approved hash="5,2,e7adec959c90b848"/>
-<approved hash="19,15,cd048ca0054e1e3d"/>
+<approved hash="19,15,e8ac9f5caac1b825"/>
 <approved hash="5,16,7db1dd88b6ab5d1e"/>
 </errors>
 </board>
