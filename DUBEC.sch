@@ -525,8 +525,9 @@
 <rectangle x1="0.1" y1="-2.35" x2="0.35" y2="-1.65" layer="31"/>
 <rectangle x1="-1.9024" y1="1.6" x2="-1.6992" y2="2.3" layer="31"/>
 <rectangle x1="-1.9024" y1="-2.35" x2="-1.6992" y2="-1.65" layer="31"/>
-<rectangle x1="-2.05" y1="1.6" x2="1.95" y2="2.3" layer="29"/>
 <rectangle x1="-2.05" y1="-2.35" x2="1.95" y2="-1.65" layer="29"/>
+<rectangle x1="-2.05" y1="1.6" x2="1.45" y2="2.3" layer="29"/>
+<rectangle x1="1.45" y1="1.7" x2="1.95" y2="2.3" layer="29"/>
 </package>
 <package name="2020Z">
 <smd name="1" x="-2.032" y="0" dx="1.9177" dy="2.794" layer="1"/>
@@ -721,7 +722,7 @@
 <smd name="15" x="0.75" y="-1.4" dx="0.2032" dy="0.7" layer="1" stop="no"/>
 <smd name="16" x="1.25" y="-1.4" dx="0.2032" dy="0.7" layer="1" stop="no"/>
 <smd name="11" x="-1.25" y="-1.4" dx="0.3048" dy="0.7" layer="1" stop="no"/>
-<smd name="8-9" x="-2" y="0" dx="0.7" dy="0.75" layer="1" stop="no" cream="no"/>
+<smd name="8-9" x="-2" y="0" dx="0.7" dy="0.7" layer="1" stop="no" cream="no"/>
 <smd name="7" x="-2" y="0.8508" dx="0.7" dy="0.3048" layer="1" stop="no"/>
 <smd name="10" x="-2" y="-0.8508" dx="0.7" dy="0.3048" layer="1" stop="no"/>
 <smd name="4" x="-0.3008" y="1.4" dx="0.3048" dy="0.7" layer="1" stop="no"/>
@@ -748,17 +749,19 @@
 <wire x1="2" y1="-1.1" x2="2" y2="-1.5" width="0.13" layer="21"/>
 <wire x1="2" y1="-1.5" x2="1.6" y2="-1.5" width="0.13" layer="21"/>
 <smd name="22" x="-0.305" y="0" dx="0.406" dy="0.27" layer="1" stop="no" thermals="no"/>
-<rectangle x1="-1.33" y1="-0.16" x2="-0.82" y2="0.16" layer="29"/>
-<rectangle x1="-0.54" y1="-0.16" x2="-0.07" y2="0.16" layer="29"/>
 <wire x1="1.9" y1="1.5" x2="2" y2="1.4" width="0.5" layer="21" curve="-270" cap="flat"/>
-<rectangle x1="-2.325" y1="0.075" x2="-1.675" y2="0.35" layer="31"/>
-<rectangle x1="-2.325" y1="-0.35" x2="-1.675" y2="-0.075" layer="31"/>
-<rectangle x1="-2.35" y1="-1.1" x2="-1.65" y2="1.1" layer="29"/>
+<rectangle x1="-2.325" y1="0.075" x2="-1.675" y2="0.325" layer="31"/>
+<rectangle x1="-2.325" y1="-0.325" x2="-1.675" y2="-0.075" layer="31"/>
 <rectangle x1="-0.55" y1="1.05" x2="1.45" y2="1.75" layer="29"/>
 <rectangle x1="-0.55" y1="-1.75" x2="1.45" y2="-1.05" layer="29"/>
 <rectangle x1="1.65" y1="-0.95" x2="2.35" y2="0.95" layer="29"/>
-<rectangle x1="-1.5" y1="1.05" x2="-1" y2="1.75" layer="29"/>
-<rectangle x1="-1.5" y1="-1.75" x2="-1" y2="-1.05" layer="29"/>
+<rectangle x1="-2.35" y1="0.7" x2="-1.65" y2="1.05" layer="29"/>
+<rectangle x1="-2.35" y1="-1.05" x2="-1.65" y2="-0.7" layer="29"/>
+<rectangle x1="-2.35" y1="-0.35" x2="-1.65" y2="0.35" layer="29"/>
+<rectangle x1="-1.45" y1="1.05" x2="-1.05" y2="1.75" layer="29"/>
+<rectangle x1="-1.45" y1="-1.75" x2="-1.05" y2="-1.05" layer="29"/>
+<rectangle x1="-1.35" y1="-0.2" x2="-0.8" y2="0.2" layer="29"/>
+<rectangle x1="-0.55" y1="-0.2" x2="-0.05" y2="0.2" layer="29"/>
 </package>
 <package name="XAL6060">
 <smd name="P$1" x="-2.02" y="0" dx="1.43" dy="5.33" layer="1" stop="no" thermals="no" cream="no"/>
@@ -899,7 +902,7 @@
 <wire x1="-1" y1="-0.75" x2="-1" y2="0.75" width="0.13" layer="49"/>
 </package>
 <package name="2-UQFN">
-<smd name="C" x="0" y="0" dx="1.7" dy="1.05" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="C" x="0" y="0" dx="1.4" dy="1.05" layer="1" stop="no" thermals="no" cream="no"/>
 <smd name="A2" x="1.5" y="0" dx="0.5" dy="1.05" layer="1" stop="no" thermals="no" cream="no"/>
 <smd name="A1" x="-1.5" y="0" dx="0.5" dy="1.07" layer="1" stop="no" thermals="no" cream="no"/>
 <rectangle x1="-1.75" y1="-0.55" x2="-1.25" y2="0.55" layer="29"/>
