@@ -5198,7 +5198,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="5CVCC" gate="G$1" x="25.4" y="40.64"/>
 <instance part="5RRT" gate="G$1" x="30.48" y="30.48" rot="R90"/>
 <instance part="5V_PG" gate="G$1" x="27.94" y="55.88" rot="R180"/>
-<instance part="AUX_OUT" gate="G$1" x="-66.04" y="30.48"/>
+<instance part="AUX_OUT" gate="G$1" x="-68.58" y="30.48"/>
 <instance part="R2" gate="G$1" x="-76.2" y="30.48"/>
 <instance part="DAUX" gate="G$1" x="-66.04" y="22.86"/>
 <instance part="R3" gate="G$1" x="-76.2" y="20.32"/>
@@ -5234,7 +5234,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="5COUT2" gate="G$1" x="93.98" y="45.72"/>
 <instance part="RRSPU" gate="G$1" x="-66.04" y="45.72"/>
 <instance part="U$2" gate="G$1" x="106.68" y="-93.98"/>
-<instance part="U$3" gate="G$1" x="-53.34" y="22.86"/>
+<instance part="U$3" gate="G$1" x="-43.18" y="15.24"/>
 <instance part="U$4" gate="G$1" x="-17.78" y="66.04"/>
 <instance part="U$5" gate="G$1" x="15.24" y="12.7"/>
 <instance part="GND2" gate="1" x="-58.42" y="15.24"/>
@@ -5838,7 +5838,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <net name="TP_AUX" class="0">
 <segment>
 <pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="-66.04" y1="30.48" x2="-71.12" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="-68.58" y1="30.48" x2="-71.12" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="AUX_OUT" gate="G$1" pin="1"/>
 </segment>
 </net>
@@ -6060,10 +6060,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <pinref part="RAUXBOT" gate="G$1" pin="1"/>
 <pinref part="CMCU" gate="G$1" pin="1"/>
-<wire x1="-53.34" y1="27.94" x2="-30.48" y2="27.94" width="0.1524" layer="91"/>
-<wire x1="-53.34" y1="43.18" x2="-53.34" y2="27.94" width="0.1524" layer="91"/>
-<junction x="-53.34" y="27.94"/>
-<wire x1="-53.34" y1="25.4" x2="-53.34" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="-43.18" y1="27.94" x2="-30.48" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="-53.34" y1="43.18" x2="-53.34" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="-53.34" y1="38.1" x2="-43.18" y2="27.94" width="0.1524" layer="91"/>
+<junction x="-43.18" y="27.94"/>
+<wire x1="-43.18" y1="17.78" x2="-43.18" y2="27.94" width="0.1524" layer="91"/>
 <pinref part="U$3" gate="G$1" pin="AGND"/>
 </segment>
 <segment>
