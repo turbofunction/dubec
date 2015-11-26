@@ -4272,6 +4272,70 @@
 </technology>
 </technologies>
 </device>
+<device name="140_16" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-140LCT-ND" constant="no"/>
+<attribute name="EURO" value="2.01/50" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW0402140RFKED" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="301_8" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-301YCT-ND" constant="no"/>
+<attribute name="EURO" value="3.69/50" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW0402301RFKEDHP" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="620_4" package="0603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="P620BYCT-ND" constant="no"/>
+<attribute name="EURO" value="3.41/50" constant="no"/>
+<attribute name="MANUFACTURER" value="Panasonic Electronic Components" constant="no"/>
+<attribute name="MFG_PART_#" value="ERJ-PA3F6200V" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="100_16" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-100LCT-ND" constant="no"/>
+<attribute name="EURO" value="2.01/50" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW0402100RFKED" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="I" uservalue="yes">
@@ -5077,9 +5141,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="12RTOP" library="dubec" deviceset="RES" device="1M_16" value="RES1M_16"/>
 <part name="5D" library="dubec" deviceset="LED" device="GREEN_2.8V_5MA"/>
 <part name="12D" library="dubec" deviceset="LED" device="GREEN_2.8V_5MA"/>
-<part name="DAUXR" library="dubec" deviceset="RES" device="165_16" value="RES165_16"/>
-<part name="12RLED" library="dubec" deviceset="RES" device="2.32K_16" value="RES2.32K_16"/>
-<part name="5RLED" library="dubec" deviceset="RES" device="590_16" value="RES590_16"/>
+<part name="DAUXR" library="dubec" deviceset="RES" device="100_16" value="RES100_16"/>
+<part name="12RLED" library="dubec" deviceset="RES" device="620_4" value="RES620_4"/>
+<part name="5RLED" library="dubec" deviceset="RES" device="140_16" value="RES140_16"/>
 <part name="AVRISP" library="dubec" deviceset="AVRISP" device="AVX" value="AVRISPAVX"/>
 <part name="UD" library="dubec" deviceset="D_SCH" device="40V_0.25MA" value="D_SCH40V_0.25MA"/>
 <part name="12TVS" library="dubec" deviceset="D_ZENER" device="15V" value="D_ZENER15V"/>
@@ -5962,7 +6026,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="-73.66" y="33.02" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="LED_AUX" class="0">
+<net name="LED_GREEN" class="0">
 <segment>
 <pinref part="DAUXR" gate="G$1" pin="1"/>
 <pinref part="DAUX" gate="G$1" pin="A1"/>
