@@ -274,16 +274,16 @@ DUBEC</text>
 <rectangle x1="-0.2" y1="-0.35" x2="0.2" y2="0.35" layer="29"/>
 <rectangle x1="-1.6" y1="-1.2" x2="-1.1" y2="1.2" layer="29"/>
 <rectangle x1="1.1" y1="-1.2" x2="1.6" y2="1.2" layer="29"/>
-<rectangle x1="-1.55" y1="0.9" x2="-1.15" y2="1.1" layer="31"/>
-<rectangle x1="-1.55" y1="0.4" x2="-1.15" y2="0.6" layer="31"/>
-<rectangle x1="-1.55" y1="-0.1" x2="-1.15" y2="0.1" layer="31"/>
-<rectangle x1="-1.55" y1="-0.6" x2="-1.15" y2="-0.4" layer="31"/>
-<rectangle x1="-1.55" y1="-1.1" x2="-1.15" y2="-0.9" layer="31"/>
-<rectangle x1="1.15" y1="-1.1" x2="1.55" y2="-0.9" layer="31"/>
-<rectangle x1="1.15" y1="-0.6" x2="1.55" y2="-0.4" layer="31"/>
-<rectangle x1="1.15" y1="-0.1" x2="1.55" y2="0.1" layer="31"/>
-<rectangle x1="1.15" y1="0.4" x2="1.55" y2="0.6" layer="31"/>
-<rectangle x1="1.15" y1="0.9" x2="1.55" y2="1.1" layer="31"/>
+<rectangle x1="-1.575" y1="0.9" x2="-1.275" y2="1.1" layer="31"/>
+<rectangle x1="-1.575" y1="0.4" x2="-1.275" y2="0.6" layer="31"/>
+<rectangle x1="-1.575" y1="-0.1" x2="-1.275" y2="0.1" layer="31"/>
+<rectangle x1="-1.575" y1="-0.6" x2="-1.275" y2="-0.4" layer="31"/>
+<rectangle x1="-1.575" y1="-1.1" x2="-1.275" y2="-0.9" layer="31"/>
+<rectangle x1="1.275" y1="0.9" x2="1.575" y2="1.1" layer="31"/>
+<rectangle x1="1.275" y1="0.4" x2="1.575" y2="0.6" layer="31"/>
+<rectangle x1="1.275" y1="-0.1" x2="1.575" y2="0.1" layer="31"/>
+<rectangle x1="1.275" y1="-0.6" x2="1.575" y2="-0.4" layer="31"/>
+<rectangle x1="1.275" y1="-1.1" x2="1.575" y2="-0.9" layer="31"/>
 </package>
 <package name="0805">
 <description>IPC-SM-782 RES/CAP</description>
@@ -361,22 +361,22 @@ DUBEC</text>
 <rectangle x1="-2" y1="-2.35" x2="2" y2="-1.65" layer="29"/>
 <rectangle x1="-2" y1="1.6" x2="1.45" y2="2.3" layer="29"/>
 <rectangle x1="1.45" y1="1.7" x2="2" y2="2.3" layer="29"/>
-<rectangle x1="-1.85" y1="1.65" x2="-1.65" y2="2.25" layer="31"/>
-<rectangle x1="-1.35" y1="1.65" x2="-1.15" y2="2.25" layer="31"/>
-<rectangle x1="-0.85" y1="1.65" x2="-0.65" y2="2.25" layer="31"/>
-<rectangle x1="-0.35" y1="1.65" x2="-0.15" y2="2.25" layer="31"/>
-<rectangle x1="0.15" y1="1.65" x2="0.35" y2="2.25" layer="31"/>
-<rectangle x1="0.65" y1="1.65" x2="0.85" y2="2.25" layer="31"/>
-<rectangle x1="1.15" y1="1.65" x2="1.35" y2="2.25" layer="31"/>
-<rectangle x1="-1.85" y1="-2.3" x2="-1.65" y2="-1.7" layer="31"/>
-<rectangle x1="-1.35" y1="-2.3" x2="-1.15" y2="-1.7" layer="31"/>
-<rectangle x1="-0.85" y1="-2.3" x2="-0.65" y2="-1.7" layer="31"/>
-<rectangle x1="0.65" y1="-2.3" x2="0.85" y2="-1.7" layer="31"/>
-<rectangle x1="1.15" y1="-2.3" x2="1.35" y2="-1.7" layer="31"/>
-<rectangle x1="1.65" y1="-2.3" x2="1.85" y2="-1.7" layer="31"/>
-<rectangle x1="-0.35" y1="-2.3" x2="-0.15" y2="-1.7" layer="31"/>
-<rectangle x1="0.15" y1="-2.3" x2="0.35" y2="-1.7" layer="31"/>
-<rectangle x1="1.65" y1="1.75" x2="1.85" y2="2.25" layer="31"/>
+<rectangle x1="-1.85" y1="1.875" x2="-1.65" y2="2.275" layer="31"/>
+<rectangle x1="-1.35" y1="1.875" x2="-1.15" y2="2.275" layer="31"/>
+<rectangle x1="-0.85" y1="1.875" x2="-0.65" y2="2.275" layer="31"/>
+<rectangle x1="-0.35" y1="1.875" x2="-0.15" y2="2.275" layer="31"/>
+<rectangle x1="0.15" y1="1.875" x2="0.35" y2="2.275" layer="31"/>
+<rectangle x1="0.65" y1="1.875" x2="0.85" y2="2.275" layer="31"/>
+<rectangle x1="1.15" y1="1.875" x2="1.35" y2="2.275" layer="31"/>
+<rectangle x1="1.65" y1="1.875" x2="1.85" y2="2.275" layer="31"/>
+<rectangle x1="-1.85" y1="-2.325" x2="-1.65" y2="-1.925" layer="31"/>
+<rectangle x1="-1.35" y1="-2.325" x2="-1.15" y2="-1.925" layer="31"/>
+<rectangle x1="-0.85" y1="-2.325" x2="-0.65" y2="-1.925" layer="31"/>
+<rectangle x1="-0.35" y1="-2.325" x2="-0.15" y2="-1.925" layer="31"/>
+<rectangle x1="0.15" y1="-2.325" x2="0.35" y2="-1.925" layer="31"/>
+<rectangle x1="0.65" y1="-2.325" x2="0.85" y2="-1.925" layer="31"/>
+<rectangle x1="1.15" y1="-2.325" x2="1.35" y2="-1.925" layer="31"/>
+<rectangle x1="1.65" y1="-2.325" x2="1.85" y2="-1.925" layer="31"/>
 </package>
 <package name="XAL5050">
 <smd name="P$1" x="-1.65" y="0" dx="1.2" dy="4.4" layer="1" stop="no" thermals="no" cream="no"/>
@@ -480,26 +480,26 @@ DUBEC</text>
 <rectangle x1="-1.35" y1="-0.2" x2="-0.8" y2="0.2" layer="29"/>
 <rectangle x1="-0.55" y1="-0.2" x2="-0.05" y2="0.2" layer="29"/>
 <rectangle x1="-2.35" y1="0.675" x2="-1.65" y2="1" layer="29"/>
-<rectangle x1="-2.3" y1="0.05" x2="-1.7" y2="0.3" layer="31"/>
-<rectangle x1="-2.3" y1="-0.3" x2="-1.7" y2="-0.05" layer="31"/>
-<rectangle x1="-0.35" y1="1.1" x2="-0.15" y2="1.7" layer="31"/>
-<rectangle x1="0.15" y1="1.1" x2="0.35" y2="1.7" layer="31"/>
-<rectangle x1="0.65" y1="1.1" x2="0.85" y2="1.7" layer="31"/>
-<rectangle x1="1.15" y1="1.1" x2="1.35" y2="1.7" layer="31"/>
-<rectangle x1="-1.35" y1="1.1" x2="-1.15" y2="1.7" layer="31"/>
-<rectangle x1="-1.35" y1="-1.7" x2="-1.15" y2="-1.1" layer="31"/>
-<rectangle x1="-0.35" y1="-1.7" x2="-0.15" y2="-1.1" layer="31"/>
-<rectangle x1="0.15" y1="-1.7" x2="0.35" y2="-1.1" layer="31"/>
-<rectangle x1="0.65" y1="-1.7" x2="0.85" y2="-1.1" layer="31"/>
-<rectangle x1="1.15" y1="-1.7" x2="1.35" y2="-1.1" layer="31"/>
-<rectangle x1="1.9" y1="0.45" x2="2.1" y2="1.05" layer="31" rot="R90"/>
-<rectangle x1="1.9" y1="-0.05" x2="2.1" y2="0.55" layer="31" rot="R90"/>
-<rectangle x1="1.9" y1="-0.55" x2="2.1" y2="0.05" layer="31" rot="R90"/>
-<rectangle x1="1.9" y1="-1.05" x2="2.1" y2="-0.45" layer="31" rot="R90"/>
-<rectangle x1="-2.1" y1="0.5" x2="-1.9" y2="1.1" layer="31" rot="R90"/>
-<rectangle x1="-2.1" y1="-1.1" x2="-1.9" y2="-0.5" layer="31" rot="R90"/>
 <rectangle x1="-1.25" y1="-0.1" x2="-0.9" y2="0.1" layer="31"/>
 <rectangle x1="-0.45" y1="-0.1" x2="-0.15" y2="0.1" layer="31"/>
+<rectangle x1="-1.35" y1="1.325" x2="-1.15" y2="1.725" layer="31"/>
+<rectangle x1="-0.35" y1="1.325" x2="-0.15" y2="1.725" layer="31"/>
+<rectangle x1="0.15" y1="1.325" x2="0.35" y2="1.725" layer="31"/>
+<rectangle x1="0.65" y1="1.325" x2="0.85" y2="1.725" layer="31"/>
+<rectangle x1="1.15" y1="1.325" x2="1.35" y2="1.725" layer="31"/>
+<rectangle x1="1.15" y1="-1.725" x2="1.35" y2="-1.325" layer="31" rot="R180"/>
+<rectangle x1="0.65" y1="-1.725" x2="0.85" y2="-1.325" layer="31" rot="R180"/>
+<rectangle x1="0.15" y1="-1.725" x2="0.35" y2="-1.325" layer="31" rot="R180"/>
+<rectangle x1="-0.35" y1="-1.725" x2="-0.15" y2="-1.325" layer="31" rot="R180"/>
+<rectangle x1="-1.35" y1="-1.725" x2="-1.15" y2="-1.325" layer="31" rot="R180"/>
+<rectangle x1="2.025" y1="0.55" x2="2.225" y2="0.95" layer="31" rot="R270"/>
+<rectangle x1="2.025" y1="0.05" x2="2.225" y2="0.45" layer="31" rot="R270"/>
+<rectangle x1="2.025" y1="-0.45" x2="2.225" y2="-0.05" layer="31" rot="R270"/>
+<rectangle x1="2.025" y1="-0.95" x2="2.225" y2="-0.55" layer="31" rot="R270"/>
+<rectangle x1="-2.225" y1="-0.45" x2="-2.025" y2="-0.05" layer="31" rot="R90"/>
+<rectangle x1="-2.225" y1="0.05" x2="-2.025" y2="0.45" layer="31" rot="R90"/>
+<rectangle x1="-2.225" y1="0.6" x2="-2.025" y2="1" layer="31" rot="R90"/>
+<rectangle x1="-2.225" y1="-1" x2="-2.025" y2="-0.6" layer="31" rot="R90"/>
 </package>
 <package name="0603">
 <smd name="1" x="-0.75" y="0" dx="0.7" dy="1" layer="1" stop="no"/>
@@ -1046,12 +1046,14 @@ Covered vias can be set in Masks (Limit).
 <attribute name="MANUFACTURER" value="Lite-On Inc" x="33.9375" y="12" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MFG_PART_#" value="LTST-C193TGKT-5A" x="33.9375" y="12" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="USD" value="0.44" x="33.9375" y="12" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="V_FWD" value="3V (15mA)" x="33.9375" y="12" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="12D" library="dubec" package="0603+" value="LEDGREEN_2.8V_5MA" x="33.9375" y="8.5" rot="R90">
 <attribute name="DIGIKEY_PART_#" value="160-1832-1-ND" x="33.9375" y="8.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MANUFACTURER" value="Lite-On Inc" x="33.9375" y="8.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MFG_PART_#" value="LTST-C193TGKT-5A" x="33.9375" y="8.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="USD" value="0.44" x="33.9375" y="8.5" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="V_FWD" value="3V (15mA)" x="33.9375" y="8.5" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="RDAUX" library="dubec" package="0402" value="RES100_16" x="6.125" y="15.25">
 <attribute name="DIGIKEY_PART_#" value="541-100LCT-ND" x="6.125" y="15.25" size="1.778" layer="27" display="off"/>
@@ -1256,6 +1258,7 @@ Covered vias can be set in Masks (Limit).
 <attribute name="MANUFACTURER" value="Kingbright" x="3.75" y="18" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="EURO" value="15.39/25" x="3.75" y="18" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MFG_PART_#" value="APHB1608ZGSURKC" x="3.75" y="18" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="V_FWD" value="green 3.4V, red 1.95V (15mA)" x="3.75" y="18" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="RDERR" library="dubec" package="0402" value="RES210_16" x="6.125" y="16.375" rot="R180">
 <attribute name="TOLERANCE" value="±1%" x="6.125" y="16.375" size="1.778" layer="27" rot="R180" display="off"/>
@@ -1845,8 +1848,9 @@ Covered vias can be set in Masks (Limit).
 <wire x1="4.125" y1="16.5" x2="4.15" y2="16.525" width="0.4" layer="1"/>
 <wire x1="4.15" y1="16.525" x2="4.15" y2="17.4" width="0.4" layer="1"/>
 <wire x1="8.625" y1="18.875" x2="7.875" y2="18.125" width="0.3302" layer="15"/>
-<wire x1="7.875" y1="18.125" x2="5.75" y2="18.125" width="0.3302" layer="15"/>
-<wire x1="5.75" y1="18.125" x2="4.125" y2="16.5" width="0.3302" layer="15"/>
+<wire x1="7.875" y1="18.125" x2="6" y2="18.125" width="0.3302" layer="15"/>
+<wire x1="6" y1="18.125" x2="4.375" y2="16.5" width="0.3302" layer="15"/>
+<wire x1="4.375" y1="16.5" x2="4.125" y2="16.5" width="0.3302" layer="15"/>
 </signal>
 <signal name="12V_FB">
 <contactref element="12REG" pad="7"/>

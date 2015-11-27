@@ -270,16 +270,16 @@
 <rectangle x1="-0.2" y1="-0.35" x2="0.2" y2="0.35" layer="29"/>
 <rectangle x1="-1.6" y1="-1.2" x2="-1.1" y2="1.2" layer="29"/>
 <rectangle x1="1.1" y1="-1.2" x2="1.6" y2="1.2" layer="29"/>
-<rectangle x1="-1.55" y1="0.9" x2="-1.15" y2="1.1" layer="31"/>
-<rectangle x1="-1.55" y1="0.4" x2="-1.15" y2="0.6" layer="31"/>
-<rectangle x1="-1.55" y1="-0.1" x2="-1.15" y2="0.1" layer="31"/>
-<rectangle x1="-1.55" y1="-0.6" x2="-1.15" y2="-0.4" layer="31"/>
-<rectangle x1="-1.55" y1="-1.1" x2="-1.15" y2="-0.9" layer="31"/>
-<rectangle x1="1.15" y1="-1.1" x2="1.55" y2="-0.9" layer="31"/>
-<rectangle x1="1.15" y1="-0.6" x2="1.55" y2="-0.4" layer="31"/>
-<rectangle x1="1.15" y1="-0.1" x2="1.55" y2="0.1" layer="31"/>
-<rectangle x1="1.15" y1="0.4" x2="1.55" y2="0.6" layer="31"/>
-<rectangle x1="1.15" y1="0.9" x2="1.55" y2="1.1" layer="31"/>
+<rectangle x1="-1.575" y1="0.9" x2="-1.275" y2="1.1" layer="31"/>
+<rectangle x1="-1.575" y1="0.4" x2="-1.275" y2="0.6" layer="31"/>
+<rectangle x1="-1.575" y1="-0.1" x2="-1.275" y2="0.1" layer="31"/>
+<rectangle x1="-1.575" y1="-0.6" x2="-1.275" y2="-0.4" layer="31"/>
+<rectangle x1="-1.575" y1="-1.1" x2="-1.275" y2="-0.9" layer="31"/>
+<rectangle x1="1.275" y1="0.9" x2="1.575" y2="1.1" layer="31"/>
+<rectangle x1="1.275" y1="0.4" x2="1.575" y2="0.6" layer="31"/>
+<rectangle x1="1.275" y1="-0.1" x2="1.575" y2="0.1" layer="31"/>
+<rectangle x1="1.275" y1="-0.6" x2="1.575" y2="-0.4" layer="31"/>
+<rectangle x1="1.275" y1="-1.1" x2="1.575" y2="-0.9" layer="31"/>
 </package>
 <package name="DF13-6P">
 <pad name="3" x="-0.625" y="0" drill="0.45" shape="long" rot="R90" stop="no"/>
@@ -533,22 +533,22 @@
 <rectangle x1="-2" y1="-2.35" x2="2" y2="-1.65" layer="29"/>
 <rectangle x1="-2" y1="1.6" x2="1.45" y2="2.3" layer="29"/>
 <rectangle x1="1.45" y1="1.7" x2="2" y2="2.3" layer="29"/>
-<rectangle x1="-1.85" y1="1.65" x2="-1.65" y2="2.25" layer="31"/>
-<rectangle x1="-1.35" y1="1.65" x2="-1.15" y2="2.25" layer="31"/>
-<rectangle x1="-0.85" y1="1.65" x2="-0.65" y2="2.25" layer="31"/>
-<rectangle x1="-0.35" y1="1.65" x2="-0.15" y2="2.25" layer="31"/>
-<rectangle x1="0.15" y1="1.65" x2="0.35" y2="2.25" layer="31"/>
-<rectangle x1="0.65" y1="1.65" x2="0.85" y2="2.25" layer="31"/>
-<rectangle x1="1.15" y1="1.65" x2="1.35" y2="2.25" layer="31"/>
-<rectangle x1="-1.85" y1="-2.3" x2="-1.65" y2="-1.7" layer="31"/>
-<rectangle x1="-1.35" y1="-2.3" x2="-1.15" y2="-1.7" layer="31"/>
-<rectangle x1="-0.85" y1="-2.3" x2="-0.65" y2="-1.7" layer="31"/>
-<rectangle x1="0.65" y1="-2.3" x2="0.85" y2="-1.7" layer="31"/>
-<rectangle x1="1.15" y1="-2.3" x2="1.35" y2="-1.7" layer="31"/>
-<rectangle x1="1.65" y1="-2.3" x2="1.85" y2="-1.7" layer="31"/>
-<rectangle x1="-0.35" y1="-2.3" x2="-0.15" y2="-1.7" layer="31"/>
-<rectangle x1="0.15" y1="-2.3" x2="0.35" y2="-1.7" layer="31"/>
-<rectangle x1="1.65" y1="1.75" x2="1.85" y2="2.25" layer="31"/>
+<rectangle x1="-1.85" y1="1.875" x2="-1.65" y2="2.275" layer="31"/>
+<rectangle x1="-1.35" y1="1.875" x2="-1.15" y2="2.275" layer="31"/>
+<rectangle x1="-0.85" y1="1.875" x2="-0.65" y2="2.275" layer="31"/>
+<rectangle x1="-0.35" y1="1.875" x2="-0.15" y2="2.275" layer="31"/>
+<rectangle x1="0.15" y1="1.875" x2="0.35" y2="2.275" layer="31"/>
+<rectangle x1="0.65" y1="1.875" x2="0.85" y2="2.275" layer="31"/>
+<rectangle x1="1.15" y1="1.875" x2="1.35" y2="2.275" layer="31"/>
+<rectangle x1="1.65" y1="1.875" x2="1.85" y2="2.275" layer="31"/>
+<rectangle x1="-1.85" y1="-2.325" x2="-1.65" y2="-1.925" layer="31"/>
+<rectangle x1="-1.35" y1="-2.325" x2="-1.15" y2="-1.925" layer="31"/>
+<rectangle x1="-0.85" y1="-2.325" x2="-0.65" y2="-1.925" layer="31"/>
+<rectangle x1="-0.35" y1="-2.325" x2="-0.15" y2="-1.925" layer="31"/>
+<rectangle x1="0.15" y1="-2.325" x2="0.35" y2="-1.925" layer="31"/>
+<rectangle x1="0.65" y1="-2.325" x2="0.85" y2="-1.925" layer="31"/>
+<rectangle x1="1.15" y1="-2.325" x2="1.35" y2="-1.925" layer="31"/>
+<rectangle x1="1.65" y1="-2.325" x2="1.85" y2="-1.925" layer="31"/>
 </package>
 <package name="2020Z">
 <smd name="1" x="-2.032" y="0" dx="1.9177" dy="2.794" layer="1"/>
@@ -781,26 +781,26 @@
 <rectangle x1="-1.35" y1="-0.2" x2="-0.8" y2="0.2" layer="29"/>
 <rectangle x1="-0.55" y1="-0.2" x2="-0.05" y2="0.2" layer="29"/>
 <rectangle x1="-2.35" y1="0.675" x2="-1.65" y2="1" layer="29"/>
-<rectangle x1="-2.3" y1="0.05" x2="-1.7" y2="0.3" layer="31"/>
-<rectangle x1="-2.3" y1="-0.3" x2="-1.7" y2="-0.05" layer="31"/>
-<rectangle x1="-0.35" y1="1.1" x2="-0.15" y2="1.7" layer="31"/>
-<rectangle x1="0.15" y1="1.1" x2="0.35" y2="1.7" layer="31"/>
-<rectangle x1="0.65" y1="1.1" x2="0.85" y2="1.7" layer="31"/>
-<rectangle x1="1.15" y1="1.1" x2="1.35" y2="1.7" layer="31"/>
-<rectangle x1="-1.35" y1="1.1" x2="-1.15" y2="1.7" layer="31"/>
-<rectangle x1="-1.35" y1="-1.7" x2="-1.15" y2="-1.1" layer="31"/>
-<rectangle x1="-0.35" y1="-1.7" x2="-0.15" y2="-1.1" layer="31"/>
-<rectangle x1="0.15" y1="-1.7" x2="0.35" y2="-1.1" layer="31"/>
-<rectangle x1="0.65" y1="-1.7" x2="0.85" y2="-1.1" layer="31"/>
-<rectangle x1="1.15" y1="-1.7" x2="1.35" y2="-1.1" layer="31"/>
-<rectangle x1="1.9" y1="0.45" x2="2.1" y2="1.05" layer="31" rot="R90"/>
-<rectangle x1="1.9" y1="-0.05" x2="2.1" y2="0.55" layer="31" rot="R90"/>
-<rectangle x1="1.9" y1="-0.55" x2="2.1" y2="0.05" layer="31" rot="R90"/>
-<rectangle x1="1.9" y1="-1.05" x2="2.1" y2="-0.45" layer="31" rot="R90"/>
-<rectangle x1="-2.1" y1="0.5" x2="-1.9" y2="1.1" layer="31" rot="R90"/>
-<rectangle x1="-2.1" y1="-1.1" x2="-1.9" y2="-0.5" layer="31" rot="R90"/>
 <rectangle x1="-1.25" y1="-0.1" x2="-0.9" y2="0.1" layer="31"/>
 <rectangle x1="-0.45" y1="-0.1" x2="-0.15" y2="0.1" layer="31"/>
+<rectangle x1="-1.35" y1="1.325" x2="-1.15" y2="1.725" layer="31"/>
+<rectangle x1="-0.35" y1="1.325" x2="-0.15" y2="1.725" layer="31"/>
+<rectangle x1="0.15" y1="1.325" x2="0.35" y2="1.725" layer="31"/>
+<rectangle x1="0.65" y1="1.325" x2="0.85" y2="1.725" layer="31"/>
+<rectangle x1="1.15" y1="1.325" x2="1.35" y2="1.725" layer="31"/>
+<rectangle x1="1.15" y1="-1.725" x2="1.35" y2="-1.325" layer="31" rot="R180"/>
+<rectangle x1="0.65" y1="-1.725" x2="0.85" y2="-1.325" layer="31" rot="R180"/>
+<rectangle x1="0.15" y1="-1.725" x2="0.35" y2="-1.325" layer="31" rot="R180"/>
+<rectangle x1="-0.35" y1="-1.725" x2="-0.15" y2="-1.325" layer="31" rot="R180"/>
+<rectangle x1="-1.35" y1="-1.725" x2="-1.15" y2="-1.325" layer="31" rot="R180"/>
+<rectangle x1="2.025" y1="0.55" x2="2.225" y2="0.95" layer="31" rot="R270"/>
+<rectangle x1="2.025" y1="0.05" x2="2.225" y2="0.45" layer="31" rot="R270"/>
+<rectangle x1="2.025" y1="-0.45" x2="2.225" y2="-0.05" layer="31" rot="R270"/>
+<rectangle x1="2.025" y1="-0.95" x2="2.225" y2="-0.55" layer="31" rot="R270"/>
+<rectangle x1="-2.225" y1="-0.45" x2="-2.025" y2="-0.05" layer="31" rot="R90"/>
+<rectangle x1="-2.225" y1="0.05" x2="-2.025" y2="0.45" layer="31" rot="R90"/>
+<rectangle x1="-2.225" y1="0.6" x2="-2.025" y2="1" layer="31" rot="R90"/>
+<rectangle x1="-2.225" y1="-1" x2="-2.025" y2="-0.6" layer="31" rot="R90"/>
 </package>
 <package name="XAL6060">
 <smd name="P$1" x="-2.02" y="0" dx="1.43" dy="5.33" layer="1" stop="no" thermals="no" cream="no"/>
@@ -4552,6 +4552,7 @@
 <attribute name="MANUFACTURER" value="Lite-On Inc" constant="no"/>
 <attribute name="MFG_PART_#" value="LTST-C193TGKT-5A" constant="no"/>
 <attribute name="USD" value="0.44" constant="no"/>
+<attribute name="V_FWD" value="3V (15mA)" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -4642,6 +4643,7 @@
 <attribute name="EURO" value="15.39/25" constant="no"/>
 <attribute name="MANUFACTURER" value="Kingbright" constant="no"/>
 <attribute name="MFG_PART_#" value="APHB1608ZGSURKC" constant="no"/>
+<attribute name="V_FWD" value="green 3.4V, red 1.95V (15mA)" constant="no"/>
 </technology>
 </technologies>
 </device>
