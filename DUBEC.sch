@@ -5172,7 +5172,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="RS1" library="dubec" deviceset="RES" device="442_16" value="RES442_16"/>
 <part name="5V_OUT" library="dubec" deviceset="M03" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
-<part name="RIN1PU" library="dubec" deviceset="RES" device="10K_16" value="RES10K_16"/>
+<part name="RIN1PU" library="dubec" deviceset="RES" device="40.2K_16" value="RES40.2K_16"/>
 <part name="C2" library="dubec" deviceset="CAP" device="22UF_35V"/>
 <part name="12V_OUT" library="dubec" deviceset="M02" device=""/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>

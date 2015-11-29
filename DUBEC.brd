@@ -1138,13 +1138,13 @@ Covered vias can be set in Masks (Limit).
 <attribute name="NAME" x="39.4498" y="19.681" size="0.762" layer="25" ratio="10" rot="R270"/>
 <attribute name="VALUE" x="36.224" y="19.681" size="0.762" layer="27" rot="R270" align="top-left"/>
 </element>
-<element name="RIN1PU" library="dubec" package="0402" value="RES10K_16" x="12" y="19.375" rot="R180">
-<attribute name="DIGIKEY_PART_#" value="541-10.0KLCT-ND" x="12" y="19.375" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="RIN1PU" library="dubec" package="0402" value="RES40.2K_16" x="12" y="19.375" rot="R180">
+<attribute name="DIGIKEY_PART_#" value="541-40.2KLCT-ND" x="12" y="19.375" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MANUFACTURER" value="Vishay Dale" x="12" y="19.375" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MFG_PART_#" value="CRCW040210K0FKED" x="12" y="19.375" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MFG_PART_#" value="CRCW040240K2FKED" x="12" y="19.375" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="TOLERANCE" value="±1%" x="12" y="19.375" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="TEMP" value="±100ppm/°C" x="12" y="19.375" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="EURO" value="2.10/50" x="12" y="19.375" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="USD" value="2.11/50" x="12" y="19.375" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="C2" library="dubec" package="0805" value="" x="19" y="11.75">
 <attribute name="DIGIKEY_PART_#" value="445-14428-1-ND" x="19" y="11.75" size="1.778" layer="27" display="off"/>
