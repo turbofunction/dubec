@@ -45,7 +45,7 @@
 #define batt_aux() { PORTB |= _BV(PIN_BATT_SWITCH); }
 
 // hi-z the line to allow it to get pulled high
-#define enable_12V() { DDRB &= ~_BV(PIN_12V);}
+#define enable_12V() { DDRB &= ~_BV(PIN_12V); }
 // pull line low by enabling output
 #define disable_12V() { DDRB |= _BV(PIN_12V); }
 
@@ -79,7 +79,7 @@
 
 typedef struct {
 	// see AUX_*
-	uint8_t aux_status;
+	volatile uint8_t aux_status;
 	/**
 	 * Fallback level is set to 75% of measured initial voltage
 	 * level, ie. 4.2V results in 3.15V and 3.8V makes 2.85V.
@@ -99,11 +99,11 @@ typedef struct {
 	// when to start flashing warning LED
 	uint16_t warn_voltage;
 	// counter for taking a few samples before flagging
-	uint8_t until_bad_aux;
+	uint16_t aux_history[3];
 } battery_t;
 
 // http://embeddedgurus.com/barr-code/2012/11/how-to-combine-volatile-with-struct/
-battery_t volatile batt = { 0, 0, 0, 0 };
+battery_t batt = { 0, 0, 0, { 0 } };
 
 // sourcing from main battery
 #define SIG_MAIN 1
@@ -248,10 +248,9 @@ static void set_aux(uint8_t aux_status) {
 
 		case AUX_OK:
 			bad_AUX_led_off();
-			// fall through to counter reset
+			break;
 
-		default: // AUX_WARN
-			batt.until_bad_aux = 0;
+		default: // AUX_WARN or unknown
 			break;
 	}
 }
@@ -335,14 +334,26 @@ ISR(ADC_vect) {
 	uint16_t v = ADCL;
 	// splitting to a separate line to "ensure" proper ordering
 	v |= ADCH << 8;
+
 	// disable ADC interrupt
 	ADCSRA &= ~_BV(ADIE);
 
-	if (v < MIN_VOLTAGE) {
-		// TODO countdown also this?
+	uint16_t v_avg = 0,
+	         *h = batt.aux_history;
+
+	if (h[0] && h[1] && h[2]) {
+		// calculate average
+		v_avg = (v + h[0] + h[1] + h[2]) >> 2;
+	} // else process as zero
+
+	h[2] = h[1];
+	h[1] = h[0];
+	h[0] = v;
+
+	if (v_avg < MIN_VOLTAGE) {
 		set_aux(AUX_BAD);
 
-		if (v < (MIN_VOLTAGE >> 1)) {
+		if (v_avg < (MIN_VOLTAGE >> 1)) {
 			/**
 			 * This is the ONLY place for resetting the fallback
 			 * voltage level, making sure the code doesn't reach
@@ -364,32 +375,30 @@ ISR(ADC_vect) {
 
 	} else if (!batt.fallback_voltage) {
 		// fallback at 75%; floor the range, just for kicks
-		batt.fallback_voltage = MAX(v - (v >> 2), MIN_VOLTAGE);
+		batt.fallback_voltage = MAX(v_avg - (v_avg >> 2), MIN_VOLTAGE);
 		// warning at 80%; the division takes up 92 bytes, TODO optimize
 		// (12-bit value in word; can be shifted first before division)
-		batt.warn_voltage = (v << 2) / 5;
-		// take another sample before flagging ok
-		// TODO average the levels from multiple samples?
+		batt.warn_voltage = (v_avg << 2) / 5;
+		// record the status in the next run
 
-	} else if (v <= batt.fallback_voltage) {
+	} else if (v_avg <= batt.fallback_voltage) {
 		if (batt.aux_status != AUX_BAD) {
-			set_aux(AUX_WARN);
-			if (!batt.until_bad_aux) {
-				// initialize countdown
-				batt.until_bad_aux = 4;
-			} else if (!--batt.until_bad_aux) {
-				set_aux(AUX_BAD);
-			}
+			set_aux(AUX_BAD);
 		}
 
-	// 18mV "hysteresis" to prevent oscillation
-	} else if (v > (batt.warn_voltage + 4)
-	           || (!batt.aux_status && v > batt.warn_voltage)) {
+	} else if (v_avg <= batt.warn_voltage) {
+		if (batt.aux_status != AUX_WARN) {
+			set_aux(AUX_WARN);
+		}
+
+	// 50mV hysteresis to prevent oscillation
+	} else if (v_avg > (batt.warn_voltage + 11)) {
 		if (batt.aux_status != AUX_OK) {
 			set_aux(AUX_OK);
 		}
 
-	} else if (batt.aux_status != AUX_WARN) {
+	// don't get stuck on initial bad status
+	} else if (batt.aux_status == AUX_BAD) {
 		set_aux(AUX_WARN);
 	}
 }
@@ -399,6 +408,8 @@ ISR(ADC_vect) {
 ISR(PCINT0_vect) {
 	if (bit_is_clear(PINB, PIN_ADC)) {
 		set_aux(AUX_BAD);
+		// prevent ADC handler from averaging to AUX ok
+		batt.aux_history[0] = batt.aux_history[1] = batt.aux_history[2] = 0;
 	}
 
 	start_ADC();
