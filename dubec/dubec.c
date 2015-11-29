@@ -23,22 +23,36 @@
 #define FALSE 0
 
 // red LED
-#define PIN_FAULT PORTB0
+#define PIN_AUX_NOT_BAD PORTB0
 // RC signal input
 #define PIN_SIG PORTB1
 // 12V regulator on/off
 #define PIN_12V PORTB2
 // FET gate net (and green LED)
-#define PIN_SWITCH PORTB3
+#define PIN_BATT_SWITCH PORTB3
 // AUX battery voltage divider net
 #define PIN_ADC PORTB4
 
 /**
  * Range with 17.8k/2.74k divider: [6..33.6V] -> [0.8..4.482V]
- * With 4.7V VCC: 0.8V / 4.7V * 1024 = 174
- * Where 174 is the ADC value for 6V.
+ * With 4.8V VCC: 0.8V / 4.8V * 1024 = 171
+ * Where 171 is the ADC value for 6V.
  */
-#define MIN_VOLTAGE 174
+#define MIN_VOLTAGE 171
+
+// switch between main and AUX battery
+#define batt_main() { PORTB &= ~_BV(PIN_BATT_SWITCH); }
+#define batt_aux() { PORTB |= _BV(PIN_BATT_SWITCH); }
+
+// hi-z the line to allow it to get pulled high
+#define enable_12V() { DDRB &= ~_BV(PIN_12V);}
+// pull line low by enabling output
+#define disable_12V() { DDRB |= _BV(PIN_12V); }
+
+// toggle red LED by enabling/disabling low output
+#define bad_AUX_led_on() { DDRB |= _BV(PIN_AUX_NOT_BAD); }
+#define bad_AUX_led_off() { DDRB &= ~_BV(PIN_AUX_NOT_BAD); }
+#define bad_AUX_led_toggle() { DDRB ^= _BV(PIN_AUX_NOT_BAD); }
 
 // evaluates to true if waiting for high RC signal
 #define is_trigger_high() (MCUCR & (_BV(ISC01) | _BV(ISC00)))
@@ -111,12 +125,13 @@ static void apply_signal(void);
 
 static void set_aux(uint8_t aux_status);
 
+
 int main(void) {
 	/**
 	 * Pin configuration:
 	 *
 	 * PB0 (MOSI):
-	 *   red LED (fault) output
+	 *   red LED (bad AUX voltage) output
 	 * PB1 (AIN1, PCINT1, INT0, MISO):
 	 *   RC signal digital input, external pull-up
 	 * PB2 (SCK):
@@ -132,15 +147,8 @@ int main(void) {
 	 *   CKSEL = b01 // 4.8MHz nominal clock
 	 */
 
-	// 12V to high before configuring it to output.
-	// Note: could also leave to hi-z, but would need to
-	// configure to output when switching off.. I don't
-	// immediately like the idea. Now the MCU is sinking
-	// a bit of current, though, I suppose.
-	PORTB = _BV(PIN_12V);
-
 	// configure outputs
-	DDRB = _BV(PIN_SWITCH) | _BV(PIN_FAULT) | _BV(PIN_12V);
+	DDRB = _BV(PIN_BATT_SWITCH);
 
 	// disable digital inputs except on AUX voltage
 	DIDR0 = 0b111111 ^ _BV(ADC2D);
@@ -206,45 +214,48 @@ int main(void) {
 	}
 }
 
-void apply_signal(void) {
+
+static void apply_signal(void) {
 	switch (signal.status) {
 		case SIG_12V_DISABLE:
-			// disable 12V and source from main (crashboombang)
-			PORTB &= ~(_BV(PIN_SWITCH) | _BV(PIN_12V));
+			// crashboombang-mode
+			batt_main();
+			disable_12V();
 			break;
 
 		case SIG_AUX:
 			if (batt.aux_status >= AUX_WARN) {
-				// source from AUX, 12V enabled
-				PORTB |= _BV(PIN_SWITCH) | _BV(PIN_12V);
+				batt_aux();
+				enable_12V();
 				break;
 			}
 			// else fall through
 
 		default: // SIG_MAIN
-			// source from main battery, 12V enabled
-			PORTB = (PORTB | _BV(PIN_12V)) & ~_BV(PIN_SWITCH);
+			batt_main();
+			enable_12V();
 			break;
 	}
 }
 
-void set_aux(uint8_t aux_status) {
+
+static void set_aux(uint8_t aux_status) {
 	switch (batt.aux_status = aux_status) {
 		case AUX_BAD:
-			// switch to main battery, and light the LED
-			PORTB = (PORTB | _BV(PIN_FAULT)) & ~_BV(PIN_SWITCH);
+			batt_main();
+			bad_AUX_led_on();
 			break;
 
 		case AUX_OK:
-			// LED off immediately
-			PORTB &= ~_BV(PIN_FAULT);
-			// and fall through to counter reset
+			bad_AUX_led_off();
+			// fall through to counter reset
 
 		default: // AUX_WARN
 			batt.until_bad_aux = 0;
 			break;
 	}
 }
+
 
 /** RC signal handler. */
 ISR(INT0_vect) {
@@ -301,6 +312,7 @@ ISR(INT0_vect) {
 	}
 }
 
+
 /** Stop timer on invalid RC signal. */
 ISR(TIM0_OVF_vect) {
 	// phase too long, stop timer
@@ -309,6 +321,7 @@ ISR(TIM0_OVF_vect) {
 	// during this interrupt handler (n00b doesn't know)
 	TCNT0 = 0;
 }
+
 
 /** Process battery voltage. */
 ISR(ADC_vect) {
@@ -381,6 +394,7 @@ ISR(ADC_vect) {
 	}
 }
 
+
 /** Detect battery dis/connect. */
 ISR(PCINT0_vect) {
 	if (bit_is_clear(PINB, PIN_ADC)) {
@@ -390,21 +404,24 @@ ISR(PCINT0_vect) {
 	start_ADC();
 }
 
+
 /**
  * Use watchdog to initiate AUX battery voltage check on regular intervals.
- * Handles also fault LED blinking.
+ * Handles also bad AUX voltage LED blinking.
  */
 ISR(WDT_vect) {
 	switch (batt.aux_status) {
+		case AUX_OK:
+			bad_AUX_led_off();
+			break;
+
 		case AUX_WARN:
-			// Blink the fault LED at 1Hz as warning
-			PORTB ^= _BV(PIN_FAULT);
+			// blink the red LED at 1Hz as warning
+			bad_AUX_led_toggle();
 			break;
-		case AUX_BAD:
-			PORTB |= _BV(PIN_FAULT);
-			break;
-		default: // AUX_OK
-			PORTB &= ~_BV(PIN_FAULT);
+
+		default: // AUX_BAD or unknown
+			bad_AUX_led_on();
 			break;
 	}
 
