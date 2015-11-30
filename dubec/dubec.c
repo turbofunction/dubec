@@ -38,7 +38,8 @@
  * With 4.8V VCC: 0.8V / 4.8V * 1024 = 171
  * Where 171 is the ADC value for 6V.
  */
-#define MIN_VOLTAGE 171
+//#define MIN_VOLTAGE 171 <- 10-bit
+#define MIN_VOLTAGE 42 // <- 8-bit
 
 // switch between main and AUX battery
 #define batt_main() { PORTB &= ~_BV(PIN_BATT_SWITCH); }
@@ -67,8 +68,8 @@
 // start automatically on noise reduction sleep.
 #define start_ADC() { ADCSRA |= _BV(ADIE) | _BV(ADSC); }
 
-// returns greater of arguments
-#define MAX(a, b) (a > b ? a : b)
+#define MIN(a, b) (a < b ? a : b)
+#define MAX(a, b) (a < b ? b : a)
 
 // AUX battery is depleted
 #define AUX_BAD 1
@@ -87,7 +88,10 @@ typedef struct {
 	 * discharge down to 2.85V, make sure that the initial charge
 	 * is a lot more than 3.8V.
 	 *
-	 * Note: There's a(n incomplete) version in history with
+	 * Note 1: 10-bit ADC value is cropped down to 8-bit value
+	 * to save program space. 20mV resolution should be enough...
+	 *
+	 * Note 2: There's a(n incomplete) version in history with
 	 * cell count detection, but it didn't feel to be significantly
 	 * better. (Better as in avoiding unnecessary fallbacks versus
 	 * killing batteries.) And, to keep in mind, I intend to use this
@@ -95,15 +99,18 @@ typedef struct {
 	 *
 	 * Rule: Don't launch with a drained battery!
 	 */
-	uint16_t fallback_voltage;
+	uint8_t fallback_voltage;
 	// when to start flashing warning LED
-	uint16_t warn_voltage;
-	// counter for taking a few samples before flagging
-	uint16_t aux_history[3];
+	uint8_t warn_voltage;
+	// battery voltage sample memory
+	uint8_t aux_history[2];
 } battery_t;
 
 // http://embeddedgurus.com/barr-code/2012/11/how-to-combine-volatile-with-struct/
 battery_t batt = { 0, 0, 0, { 0 } };
+
+// alias; this is a bit too long a string to write out every time...
+#define BH batt.aux_history
 
 // sourcing from main battery
 #define SIG_MAIN 1
@@ -330,25 +337,37 @@ ISR(ADC_vect) {
 	 * it on code clarity and accuracy. ("Clarity" in 1k
 	 * context.)
 	 */
-	// doc says that low byte needs to be read first
-	uint16_t v = ADCL;
-	// splitting to a separate line to "ensure" proper ordering
-	v |= ADCH << 8;
+	// Documentation states that the low byte needs to be read first.
+	// Cropping directly to byte. (I suppose there may be a bit 
+	// ordering option for the 8 bit resolution, but, I'm letting
+	// it be like this now...)
+	uint8_t v = ADCL >> 2;
+	// split into a separate line to "ensure" proper ordering
+	v |= ADCH << 6;
 
 	// disable ADC interrupt
 	ADCSRA &= ~_BV(ADIE);
 
-	uint16_t v_avg = 0,
-	         *h = batt.aux_history;
+	// need more bits for the calculations
+	uint16_t v_avg = 0;
 
-	if (h[0] && h[1] && h[2]) {
-		// calculate average
-		v_avg = (v + h[0] + h[1] + h[2]) >> 2;
+	if (BH[0] && BH[1]) {
+		// check that the voltage is somewhat stable
+		uint8_t v_diff =
+			MAX(v, MAX(BH[0], BH[1]))
+			- MIN(v, MIN(BH[0], BH[1]));
+		// require measurements to be within 40mV
+		if (v_diff < 3) {
+			// on separate lines to hint about the word size...
+			v_avg = v;
+			v_avg += BH[0];
+			v_avg += BH[1];
+			v_avg /= 3;
+		}
 	} // else process as zero
 
-	h[2] = h[1];
-	h[1] = h[0];
-	h[0] = v;
+	BH[1] = BH[0];
+	BH[0] = v;
 
 	if (v_avg < MIN_VOLTAGE) {
 		set_aux(AUX_BAD);
@@ -376,8 +395,7 @@ ISR(ADC_vect) {
 	} else if (!batt.fallback_voltage) {
 		// fallback at 75%; floor the range, just for kicks
 		batt.fallback_voltage = MAX(v_avg - (v_avg >> 2), MIN_VOLTAGE);
-		// warning at 80%; the division takes up 92 bytes, TODO optimize
-		// (12-bit value in word; can be shifted first before division)
+		// Warning at 80%. The division takes up serious space, TODO optimize.
 		batt.warn_voltage = (v_avg << 2) / 5;
 		// record the status in the next run
 
@@ -409,7 +427,7 @@ ISR(PCINT0_vect) {
 	if (bit_is_clear(PINB, PIN_ADC)) {
 		set_aux(AUX_BAD);
 		// prevent ADC handler from averaging to AUX ok
-		batt.aux_history[0] = batt.aux_history[1] = batt.aux_history[2] = 0;
+		batt.aux_history[0] = batt.aux_history[1] = 0;
 	}
 
 	start_ADC();
