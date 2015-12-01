@@ -103,10 +103,12 @@ typedef struct {
 	// when to start flashing warning LED
 	uint8_t warn_voltage;
 	// battery voltage sample memory
-	uint8_t samples[2];
+	uint8_t samples[3];
 } battery_t;
 
 // http://embeddedgurus.com/barr-code/2012/11/how-to-combine-volatile-with-struct/
+// also: initializing to zero, just to avoid thinking
+// that "this variable can't have an unknown value"
 battery_t volatile batt = { 0, 0, 0, { 0 } };
 
 // sourcing from main battery
@@ -119,13 +121,18 @@ battery_t volatile batt = { 0, 0, 0, { 0 } };
 typedef struct {
 	// see SIG_*
 	uint8_t status;
+	// user is switching into a different mode,
+	// to be applied after counter
+	uint8_t pending;
 	// countdown to applying status change
 	uint8_t until_flip;
 } rc_signal_t;
 
-rc_signal_t volatile signal = { 0, 0 };
+rc_signal_t volatile signal = { 0, 0, 0 };
 
-static void apply_signal(void);
+static void process_voltage(void);
+
+static void apply_state(void);
 
 static void set_aux(uint8_t aux_status);
 
@@ -190,6 +197,11 @@ int main(void) {
 	//start_ADC();
 
 	for (;;) {
+		// zero sample value signifies that the memory is processed
+		if (batt.samples[0]) {
+			process_voltage();
+		}
+
 		// configure sleep according to state
 
 		if (is_timer_running()) {
@@ -219,7 +231,81 @@ int main(void) {
 }
 
 
-static void apply_signal(void) {
+static void process_voltage(void) {
+	// take a local copy
+	uint8_t samples[3] = { batt.samples[0], batt.samples[1], batt.samples[2] };
+
+	// rotate the sample memory and flag processed
+	batt.samples[2] = samples[1];
+	batt.samples[1] = samples[0];
+	batt.samples[0] = 0;
+
+	// Calculate the average. (Need more bits for the calculation.)
+	// Split into separate lines to hint about the precision.
+	uint16_t v_avg = samples[0];
+	v_avg += samples[1];
+	v_avg += samples[2];
+	v_avg /= 3;
+
+	uint8_t v_max = MAX(samples[0], MAX(samples[1], samples[2]));
+
+	if (v_max < (MIN_VOLTAGE >> 1)) {
+		set_aux(AUX_BAD);
+		/**
+		 * Need to be very careful when resetting the
+		 * fallback voltage, so that it won't get reseted
+		 * when there's eg. some sudden voltage ripple/sag
+		 * due to a transient load.
+		 *
+		 * This is ensured now by checking that all the
+		 * ADC samples are low.
+		 */
+		batt.fallback_voltage = 0;
+		batt.warn_voltage = 0;
+		return;
+	}
+
+	// All samples are now checked to be significantly non-zero,
+	// next step is to check that they're somewhat stable.
+	// (All within 40mV.)
+	uint8_t v_diff = v_max - MIN(samples[0], MIN(samples[1], samples[2]));
+	if (v_diff > 2) {
+		// defer any action if voltage is unstable
+		return;
+	}
+
+	if (v_avg < MIN_VOLTAGE) {
+		set_aux(AUX_BAD);
+
+	} else if (!batt.fallback_voltage) {
+		// fallback at 75%; floor the range, just for kicks
+		batt.fallback_voltage = MAX(v_avg - (v_avg >> 2), MIN_VOLTAGE);
+		// Warning at 80%. The division takes up serious space, TODO optimize.
+		batt.warn_voltage = (v_avg << 2) / 5;
+		// wait for at least one more round until considering ok
+
+	} else if (v_avg <= batt.fallback_voltage) {
+		set_aux(AUX_BAD);
+
+	} else if (v_avg <= batt.warn_voltage) {
+		set_aux(AUX_WARN);
+
+	// 40mV hysteresis to prevent oscillation
+	} else if (v_avg > (batt.warn_voltage + 1)) {
+		set_aux(AUX_OK);
+
+	// Don't get stuck on initial bad status. Could combine with
+	// above, but more clear this way. Also, setting to OK instead
+	// of warning -- even if it's just by a hair -- to respect
+	// the calculated warning voltage level.
+	} else if (!batt.aux_status || batt.aux_status == AUX_BAD) {
+		set_aux(AUX_OK);
+	}
+}
+
+
+static void apply_state(void) {
+	// apply signal status first
 	switch (signal.status) {
 		case SIG_12V_DISABLE:
 			// crashboombang-mode
@@ -240,24 +326,29 @@ static void apply_signal(void) {
 			enable_12V();
 			break;
 	}
+
+	// then set also the LED state
+	switch (batt.aux_status) {
+		case AUX_OK:
+			warn_off();
+			break;
+
+		case AUX_WARN:
+			// let the watchdog loop blink at its own rate
+			break;
+
+		case AUX_BAD:
+		default:
+			warn_on();
+			break;
+	}
 }
 
 
 static void set_aux(uint8_t aux_status) {
 	if (batt.aux_status != aux_status) {
-		switch (batt.aux_status = aux_status) {
-			case AUX_BAD:
-				batt_main();
-				warn_on();
-				break;
-
-			case AUX_OK:
-				warn_off();
-				break;
-
-			default: // AUX_WARN or unknown
-				break;
-		}
+		batt.aux_status = aux_status;
+		apply_state();
 	}
 }
 
@@ -305,14 +396,15 @@ ISR(INT0_vect) {
 	}
 	// else [800..1333ms[: switch to main
 
-	if (want == signal.status) {
+	if (want == signal.pending) {
 		if (signal.until_flip) {
 			if (!--signal.until_flip) {
-				apply_signal();
+				signal.status = signal.pending;
+				apply_state();
 			}
 		} // else the change is already applied
 	} else {
-		signal.status = want;
+		signal.pending = want;
 		signal.until_flip = 5;
 	}
 }
@@ -338,78 +430,11 @@ ISR(ADC_vect) {
 	// read the high byte on a separate line to "ensure" proper ordering
 	v |= ADCH << 6;
 
+	// at least 1 to flag the memory as unprocessed
+	batt.samples[0] = MAX(1, v);
+
 	// disable ADC interrupt
 	ADCSRA &= ~_BV(ADIE);
-
-	// alias, and cast away the volatile
-	uint8_t *samples = (uint8_t *) batt.samples;
-
-	// Calculate the average. (Need more bits for the calculation.)
-	// This needs to be done early, as also need to rotate the
-	// samples in any case; even if aborted in the couple places
-	// hereafter. Split into separate lines to hint about the precision.
-	uint16_t v_avg = v;
-	v_avg += samples[0];
-	v_avg += samples[1];
-	v_avg /= 3;
-
-	uint8_t v_max = MAX(v, MAX(samples[0], samples[1]));
-
-	// rotate sample memory
-	samples[1] = samples[0];
-	samples[0] = v;
-
-	if (v_max < (MIN_VOLTAGE >> 1)) {
-		set_aux(AUX_BAD);
-		/**
-		 * Need to be very careful when resetting the
-		 * fallback voltage, so that it won't get reseted
-		 * when there's eg. some sudden voltage ripple/sag
-		 * due to a transient load.
-		 *
-		 * This is ensured now by checking that all the
-		 * ADC samples are low.
-		 */
-		batt.fallback_voltage = 0;
-		batt.warn_voltage = 0;
-		return;
-	}
-
-	// All samples are significantly non-zero, next step is to
-	// check that they're somewhat stable. (All within 40mV.)
-	uint8_t v_diff = v_max - MIN(v, MIN(samples[0], samples[1]));
-	if (v_diff > 2) {
-		// defer any action if voltage is unstable
-		return;
-	}
-
-	if (v_avg < MIN_VOLTAGE) {
-		set_aux(AUX_BAD);
-
-	} else if (!batt.fallback_voltage) {
-		// fallback at 75%; floor the range, just for kicks
-		batt.fallback_voltage = MAX(v_avg - (v_avg >> 2), MIN_VOLTAGE);
-		// Warning at 80%. The division takes up serious space, TODO optimize.
-		batt.warn_voltage = (v_avg << 2) / 5;
-		// wait for at least one more round until considering ok
-
-	} else if (v_avg <= batt.fallback_voltage) {
-		set_aux(AUX_BAD);
-
-	} else if (v_avg <= batt.warn_voltage) {
-		set_aux(AUX_WARN);
-
-	// 40mV hysteresis to prevent oscillation
-	} else if (v_avg > (batt.warn_voltage + 1)) {
-		set_aux(AUX_OK);
-
-	// Don't get stuck on initial bad status. Could combine with
-	// above, but more clear this way. Also, setting to OK instead
-	// of warning -- even if it's just by a hair -- to respect
-	// the calculated warning voltage level.
-	} else if (!batt.aux_status || batt.aux_status == AUX_BAD) {
-		set_aux(AUX_OK);
-	}
 }
 
 
@@ -417,8 +442,6 @@ ISR(ADC_vect) {
 ISR(PCINT0_vect) {
 	if (bit_is_clear(PINB, PIN_ADC)) {
 		set_aux(AUX_BAD);
-		// flush the sample memory, to prevent any funny business
-		batt.samples[0] = batt.samples[1] = 0;
 	}
 
 	start_ADC();
@@ -430,19 +453,9 @@ ISR(PCINT0_vect) {
  * Handles also bad AUX voltage LED blinking.
  */
 ISR(WDT_vect) {
-	switch (batt.aux_status) {
-		case AUX_OK:
-			warn_off();
-			break;
-
-		case AUX_WARN:
-			// blink the red LED at 1Hz as warning
-			warn_toggle();
-			break;
-
-		default: // AUX_BAD or unknown
-			warn_on();
-			break;
+	if (batt.aux_status == AUX_WARN) {
+		// blink the red LED at 1Hz as warning
+		warn_toggle();
 	}
 
 	start_ADC();
