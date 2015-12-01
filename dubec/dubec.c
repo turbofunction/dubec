@@ -38,8 +38,7 @@
  * With 4.8V VCC: 0.8V / 4.8V * 1024 = 171
  * Where 171 is the ADC value for 6V.
  */
-//#define MIN_VOLTAGE 171 <- 10-bit
-#define MIN_VOLTAGE 42 // <- 8-bit
+#define MIN_VOLTAGE 171
 
 // switch between main and AUX battery
 #define batt_main() { PORTB &= ~_BV(PIN_BATT_SWITCH); }
@@ -86,12 +85,9 @@ typedef struct {
 	 * level, ie. 4.2V results in 3.15V and 3.8V makes 2.85V.
 	 * Thus, if you rely on the device to not allow battery to
 	 * discharge down to 2.85V, make sure that the initial charge
-	 * is a lot more than 3.8V.
+	 * is a lot more than 3.8V (per cell).
 	 *
-	 * Note 1: 10-bit ADC value is cropped down to 8-bit value
-	 * to save program space. 20mV resolution should be enough...
-	 *
-	 * Note 2: There's a(n incomplete) version in history with
+	 * Note: There's a(n incomplete) version in history with
 	 * cell count detection, but it didn't feel to be significantly
 	 * better. (Better as in avoiding unnecessary fallbacks versus
 	 * killing batteries.) And, to keep in mind, I intend to use this
@@ -99,11 +95,11 @@ typedef struct {
 	 *
 	 * Rule: Don't launch with a drained battery!
 	 */
-	uint8_t fallback_voltage;
+	uint16_t fallback_voltage;
 	// when to start flashing warning LED
-	uint8_t warn_voltage;
+	uint16_t warn_voltage;
 	// battery voltage sample memory
-	uint8_t samples[3];
+	uint16_t samples[3];
 } battery_t;
 
 // http://embeddedgurus.com/barr-code/2012/11/how-to-combine-volatile-with-struct/
@@ -233,21 +229,16 @@ int main(void) {
 
 static void process_voltage(void) {
 	// take a local copy
-	uint8_t samples[3] = { batt.samples[0], batt.samples[1], batt.samples[2] };
+	uint16_t samples[3] = { batt.samples[0], batt.samples[1], batt.samples[2] };
 
 	// rotate the sample memory and flag processed
 	batt.samples[2] = samples[1];
 	batt.samples[1] = samples[0];
 	batt.samples[0] = 0;
 
-	// Calculate the average. (Need more bits for the calculation.)
-	// Split into separate lines to hint about the precision.
-	uint16_t v_avg = samples[0];
-	v_avg += samples[1];
-	v_avg += samples[2];
-	v_avg /= 3;
-
-	uint8_t v_max = MAX(samples[0], MAX(samples[1], samples[2]));
+	// calculate the average
+	uint16_t v_avg = (samples[0] + samples[1] + samples[2]) / 3,
+	         v_max = MAX(samples[0], MAX(samples[1], samples[2]));
 
 	if (v_max < (MIN_VOLTAGE >> 1)) {
 		set_aux(AUX_BAD);
@@ -267,7 +258,7 @@ static void process_voltage(void) {
 
 	// All samples are now checked to be significantly non-zero,
 	// next step is to check that they're somewhat stable.
-	// (All within 40mV.)
+	// (All within 66mV.)
 	uint8_t v_diff = v_max - MIN(samples[0], MIN(samples[1], samples[2]));
 	if (v_diff > 2) {
 		// defer any action if voltage is unstable
@@ -290,7 +281,7 @@ static void process_voltage(void) {
 	} else if (v_avg <= batt.warn_voltage) {
 		set_aux(AUX_WARN);
 
-	// 40mV hysteresis to prevent oscillation
+	// 66mV hysteresis to prevent oscillation
 	} else if (v_avg > (batt.warn_voltage + 1)) {
 		set_aux(AUX_OK);
 
@@ -422,13 +413,10 @@ ISR(TIM0_OVF_vect) {
 
 /** Process battery voltage. */
 ISR(ADC_vect) {
-	// Documentation states that the low byte needs to be read first.
-	// Cropping directly to byte. (IIRC there's a bit ordering option
-	// for the 8 bit resolution, but let it be just in default
-	// configuration for now...)
-	uint8_t v = ADCL >> 2;
+	// documentation states that the low byte needs to be read first
+	uint8_t v = ADCL;
 	// read the high byte on a separate line to "ensure" proper ordering
-	v |= ADCH << 6;
+	v |= ADCH << 8;
 
 	// at least 1 to flag the memory as unprocessed
 	batt.samples[0] = MAX(1, v);
