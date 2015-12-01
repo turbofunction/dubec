@@ -51,9 +51,9 @@
 #define disable_12V() { DDRB |= _BV(PIN_12V); }
 
 // toggle red LED by enabling/disabling low output
-#define bad_AUX_led_on() { DDRB |= _BV(PIN_AUX_NOT_BAD); }
-#define bad_AUX_led_off() { DDRB &= ~_BV(PIN_AUX_NOT_BAD); }
-#define bad_AUX_led_toggle() { DDRB ^= _BV(PIN_AUX_NOT_BAD); }
+#define warn_on() { DDRB |= _BV(PIN_AUX_NOT_BAD); }
+#define warn_off() { DDRB &= ~_BV(PIN_AUX_NOT_BAD); }
+#define warn_toggle() { DDRB ^= _BV(PIN_AUX_NOT_BAD); }
 
 // evaluates to true if waiting for high RC signal
 #define is_trigger_high() (MCUCR & (_BV(ISC01) | _BV(ISC00)))
@@ -80,7 +80,7 @@
 
 typedef struct {
 	// see AUX_*
-	volatile uint8_t aux_status;
+	uint8_t aux_status;
 	/**
 	 * Fallback level is set to 75% of measured initial voltage
 	 * level, ie. 4.2V results in 3.15V and 3.8V makes 2.85V.
@@ -103,14 +103,11 @@ typedef struct {
 	// when to start flashing warning LED
 	uint8_t warn_voltage;
 	// battery voltage sample memory
-	uint8_t aux_history[2];
+	uint8_t samples[2];
 } battery_t;
 
 // http://embeddedgurus.com/barr-code/2012/11/how-to-combine-volatile-with-struct/
-battery_t batt = { 0, 0, 0, { 0 } };
-
-// alias; this is a bit too long a string to write out every time...
-#define BH batt.aux_history
+battery_t volatile batt = { 0, 0, 0, { 0 } };
 
 // sourcing from main battery
 #define SIG_MAIN 1
@@ -138,13 +135,13 @@ int main(void) {
 	 * Pin configuration:
 	 *
 	 * PB0 (MOSI):
-	 *   red LED (bad AUX voltage) output
+	 *   red LED (bad AUX voltage) output; low-side, inverted
 	 * PB1 (AIN1, PCINT1, INT0, MISO):
 	 *   RC signal digital input, external pull-up
 	 * PB2 (SCK):
 	 *   12V run output, external pull-up
 	 * PB3 (ADC3):
-	 *   switch & AUX LED output, external pull-down
+	 *   battery switch & AUX LED output, external pull-down
 	 * PB4 (ADC2, PCINT4):
 	 *   AUX battery voltage (divider) input, pulled down naturally if no battery
 	 * PB5 (RESET):
@@ -247,18 +244,20 @@ static void apply_signal(void) {
 
 
 static void set_aux(uint8_t aux_status) {
-	switch (batt.aux_status = aux_status) {
-		case AUX_BAD:
-			batt_main();
-			bad_AUX_led_on();
-			break;
+	if (batt.aux_status != aux_status) {
+		switch (batt.aux_status = aux_status) {
+			case AUX_BAD:
+				batt_main();
+				warn_on();
+				break;
 
-		case AUX_OK:
-			bad_AUX_led_off();
-			break;
+			case AUX_OK:
+				warn_off();
+				break;
 
-		default: // AUX_WARN or unknown
-			break;
+			default: // AUX_WARN or unknown
+				break;
+		}
 	}
 }
 
@@ -287,7 +286,7 @@ ISR(INT0_vect) {
 	// schedule next interrupt on rising edge
 	MCUCR |= _BV(ISC01) | _BV(ISC00);
 
-	// supported range [800..2240ms] == [15..42] @ 18.75kHz
+	// accepted range [800..2240ms] == [15..42] @ 18.75kHz
 	if (pwm < 15 || pwm > 42) {
 		// invalid signal, reset counter
 		if (signal.until_flip) {
@@ -331,93 +330,85 @@ ISR(TIM0_OVF_vect) {
 
 /** Process battery voltage. */
 ISR(ADC_vect) {
-	/**
-	 * Note: Code here is very wasteful (as in byte size),
-	 * but there's still lot of space left so I'm spending
-	 * it on code clarity and accuracy. ("Clarity" in 1k
-	 * context.)
-	 */
 	// Documentation states that the low byte needs to be read first.
-	// Cropping directly to byte. (I suppose there may be a bit 
-	// ordering option for the 8 bit resolution, but, I'm letting
-	// it be like this now...)
+	// Cropping directly to byte. (IIRC there's a bit ordering option
+	// for the 8 bit resolution, but let it be just in default
+	// configuration for now...)
 	uint8_t v = ADCL >> 2;
-	// split into a separate line to "ensure" proper ordering
+	// read the high byte on a separate line to "ensure" proper ordering
 	v |= ADCH << 6;
 
 	// disable ADC interrupt
 	ADCSRA &= ~_BV(ADIE);
 
-	// need more bits for the calculations
-	uint16_t v_avg = 0;
+	// alias, and cast away the volatile
+	uint8_t *samples = (uint8_t *) batt.samples;
 
-	if (BH[0] && BH[1]) {
-		// check that the voltage is somewhat stable
-		uint8_t v_diff =
-			MAX(v, MAX(BH[0], BH[1]))
-			- MIN(v, MIN(BH[0], BH[1]));
-		// require measurements to be within 40mV
-		if (v_diff < 3) {
-			// on separate lines to hint about the word size...
-			v_avg = v;
-			v_avg += BH[0];
-			v_avg += BH[1];
-			v_avg /= 3;
-		}
-	} // else process as zero
+	// Calculate the average. (Need more bits for the calculation.)
+	// This needs to be done early, as also need to rotate the
+	// samples in any case; even if aborted in the couple places
+	// hereafter. Split into separate lines to hint about the precision.
+	uint16_t v_avg = v;
+	v_avg += samples[0];
+	v_avg += samples[1];
+	v_avg /= 3;
 
-	BH[1] = BH[0];
-	BH[0] = v;
+	uint8_t v_max = MAX(v, MAX(samples[0], samples[1]));
+
+	// rotate sample memory
+	samples[1] = samples[0];
+	samples[0] = v;
+
+	if (v_max < (MIN_VOLTAGE >> 1)) {
+		set_aux(AUX_BAD);
+		/**
+		 * Need to be very careful when resetting the
+		 * fallback voltage, so that it won't get reseted
+		 * when there's eg. some sudden voltage ripple/sag
+		 * due to a transient load.
+		 *
+		 * This is ensured now by checking that all the
+		 * ADC samples are low.
+		 */
+		batt.fallback_voltage = 0;
+		batt.warn_voltage = 0;
+		return;
+	}
+
+	// All samples are significantly non-zero, next step is to
+	// check that they're somewhat stable. (All within 40mV.)
+	uint8_t v_diff = v_max - MIN(v, MIN(samples[0], samples[1]));
+	if (v_diff > 2) {
+		// defer any action if voltage is unstable
+		return;
+	}
 
 	if (v_avg < MIN_VOLTAGE) {
 		set_aux(AUX_BAD);
-
-		if (v_avg < (MIN_VOLTAGE >> 1)) {
-			/**
-			 * This is the ONLY place for resetting the fallback
-			 * voltage level, making sure the code doesn't reach
-			 * the fallback calculation block below unintentionally.
-			 *
-			 * Having the level significantly above zero also
-			 * should make sure to detect battery disconnect, so
-			 * that the level is resetted and a new one calculated
-			 * when a new battery is plugged in.
-			 *
-			 * (I'm also unwilling to rely purely on the digital
-			 * low value for detecting battery disconnect; that sounds
-			 * flaky. Digital low does trigger an ADC, though, so that
-			 * we end up here quickly even from power down sleep.)
-			 */
-			batt.fallback_voltage = 0;
-			batt.warn_voltage = 0;
-		}
 
 	} else if (!batt.fallback_voltage) {
 		// fallback at 75%; floor the range, just for kicks
 		batt.fallback_voltage = MAX(v_avg - (v_avg >> 2), MIN_VOLTAGE);
 		// Warning at 80%. The division takes up serious space, TODO optimize.
 		batt.warn_voltage = (v_avg << 2) / 5;
-		// record the status in the next run
+		// wait for at least one more round until considering ok
 
 	} else if (v_avg <= batt.fallback_voltage) {
-		if (batt.aux_status != AUX_BAD) {
-			set_aux(AUX_BAD);
-		}
+		set_aux(AUX_BAD);
 
 	} else if (v_avg <= batt.warn_voltage) {
-		if (batt.aux_status != AUX_WARN) {
-			set_aux(AUX_WARN);
-		}
-
-	// 50mV hysteresis to prevent oscillation
-	} else if (v_avg > (batt.warn_voltage + 11)) {
-		if (batt.aux_status != AUX_OK) {
-			set_aux(AUX_OK);
-		}
-
-	// don't get stuck on initial bad status
-	} else if (batt.aux_status == AUX_BAD) {
 		set_aux(AUX_WARN);
+
+	// 40mV hysteresis to prevent oscillation
+	} else if (v_avg > (batt.warn_voltage + 1)) {
+		set_aux(AUX_OK);
+
+	// Don't get stuck on initial bad status. Could combine with
+	// above, but more clear this way. Also, setting to OK instead
+	// of warning -- even if it's just by a hair -- to respect
+	// the calculated warning voltage level.
+	} else if (!batt.aux_status || batt.aux_status == AUX_BAD) {
+		set_aux(AUX_OK);
 	}
 }
 
@@ -426,8 +417,8 @@ ISR(ADC_vect) {
 ISR(PCINT0_vect) {
 	if (bit_is_clear(PINB, PIN_ADC)) {
 		set_aux(AUX_BAD);
-		// prevent ADC handler from averaging to AUX ok
-		batt.aux_history[0] = batt.aux_history[1] = 0;
+		// flush the sample memory, to prevent any funny business
+		batt.samples[0] = batt.samples[1] = 0;
 	}
 
 	start_ADC();
@@ -441,16 +432,16 @@ ISR(PCINT0_vect) {
 ISR(WDT_vect) {
 	switch (batt.aux_status) {
 		case AUX_OK:
-			bad_AUX_led_off();
+			warn_off();
 			break;
 
 		case AUX_WARN:
 			// blink the red LED at 1Hz as warning
-			bad_AUX_led_toggle();
+			warn_toggle();
 			break;
 
 		default: // AUX_BAD or unknown
-			bad_AUX_led_on();
+			warn_on();
 			break;
 	}
 
