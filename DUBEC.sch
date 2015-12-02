@@ -4840,6 +4840,21 @@
 </technology>
 </technologies>
 </device>
+<device name="45V_12A" package="DO-201AD">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="SBR12A45SD1-TDICT-ND" constant="no"/>
+<attribute name="EURO" value="7.74/10" constant="no"/>
+<attribute name="MANUFACTURER" value="Diodes Incorporated" constant="no"/>
+<attribute name="MFG_PART_#" value="SBR12A45SD1-T" constant="no"/>
+<attribute name="V_FWD" value="480mV @ 110A" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="M01">
@@ -5200,8 +5215,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="RB2" library="dubec" deviceset="RES" device="3K_16" value="RES3K_16"/>
 <part name="QA1" library="dubec" deviceset="2NMOS" device="60V_0.2A"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
-<part name="DA1" library="dubec" deviceset="DIODE" device="40V_3A"/>
-<part name="DB1" library="dubec" deviceset="DIODE" device="40V_3A"/>
+<part name="DA1" library="dubec" deviceset="DIODE" device="45V_12A" value="DIODE45V_12A"/>
+<part name="DB1" library="dubec" deviceset="DIODE" device="45V_12A" value="DIODE45V_12A"/>
 <part name="GND_MAIN" library="dubec" deviceset="M01" device=""/>
 <part name="GND_AUX" library="dubec" deviceset="M01" device=""/>
 <part name="RA1" library="dubec" deviceset="RES" device="90.9K_16" value="RES90.9K_16"/>
