@@ -115,6 +115,8 @@ battery_t volatile batt = { 0, 0, 0, { 0 } };
 #define SIG_12V_DISABLE 3
 
 typedef struct {
+	// the raw timing value from interrupt handler
+	uint8_t pwm;
 	// see SIG_*
 	uint8_t status;
 	// user is switching into a different mode,
@@ -124,7 +126,9 @@ typedef struct {
 	uint8_t until_flip;
 } rc_signal_t;
 
-rc_signal_t volatile signal = { 0, 0, 0 };
+rc_signal_t volatile signal = { 0, 0, 0, 0 };
+
+static void process_signal(void);
 
 static void process_voltage(void);
 
@@ -193,10 +197,8 @@ int main(void) {
 	//start_ADC();
 
 	for (;;) {
-		// zero sample value signifies that the memory is processed
-		if (batt.samples[0]) {
-			process_voltage();
-		}
+		process_signal();
+		process_voltage();
 
 		// configure sleep according to state
 
@@ -227,9 +229,58 @@ int main(void) {
 }
 
 
+static void process_signal(void) {
+	// take a local (non-voltile) copy
+	uint8_t pwm = signal.pwm;
+
+	// branching only after copying the memory value,
+	// because concurrency
+	if (!pwm) {
+		return;
+	}
+
+	signal.pwm = 0;
+
+	// accepted range [800..2240ms] == [15..42] @ 18.75kHz
+	if (pwm < 15 || pwm > 42) {
+		// invalid signal, reset counter
+		if (signal.until_flip) {
+			signal.until_flip = 5;
+		}
+		return;
+	}
+
+	uint8_t want = SIG_MAIN;
+	if (pwm > 32) {
+		// ]1653..2240ms]: disable 12V
+		want = SIG_12V_DISABLE;
+	} else if (pwm >= 25) {
+		// [1333..1653ms]: switch to AUX
+		want = SIG_AUX;
+	}
+	// else [800..1333ms[: switch to main
+
+	if (want == signal.pending) {
+		if (signal.until_flip) {
+			if (!--signal.until_flip) {
+				signal.status = signal.pending;
+				apply_state();
+			}
+		} // else the change is already applied
+	} else {
+		signal.pending = want;
+		signal.until_flip = 5;
+	}
+}
+
+
 static void process_voltage(void) {
-	// take a local copy
+	// take a local (non-voltile) copy
 	uint16_t samples[3] = { batt.samples[0], batt.samples[1], batt.samples[2] };
+
+	if (!samples[0]) {
+		return;
+	}
 
 	// rotate the sample memory and flag processed
 	batt.samples[2] = samples[1];
@@ -356,47 +407,16 @@ ISR(INT0_vect) {
 		// set timer clock source to 1.2MHz/64 == 18.75kHz,
 		// 2.2ms / 18.75Hz == 41.25
 		TCCR0B = _BV(CS01) | _BV(CS00);
-		// next interrupt on low
+		// configure next interrupt on low
 		MCUCR &= ~(_BV(ISC01) | _BV(ISC00));
-		return;
-	}
 
-	// copy counter value to a register
-	uint8_t pwm = TCNT0;
-	// stop timer (after copying the value, to avoid surprises)
-	TCCR0B = 0;
-	// schedule next interrupt on rising edge
-	MCUCR |= _BV(ISC01) | _BV(ISC00);
-
-	// accepted range [800..2240ms] == [15..42] @ 18.75kHz
-	if (pwm < 15 || pwm > 42) {
-		// invalid signal, reset counter
-		if (signal.until_flip) {
-			signal.until_flip = 5;
-		}
-		return;
-	}
-
-	uint8_t want = SIG_MAIN;
-	if (pwm > 32) {
-		// ]1653..2240ms]: disable 12V
-		want = SIG_12V_DISABLE;
-	} else if (pwm >= 25) {
-		// [1333..1653ms]: switch to AUX
-		want = SIG_AUX;
-	}
-	// else [800..1333ms[: switch to main
-
-	if (want == signal.pending) {
-		if (signal.until_flip) {
-			if (!--signal.until_flip) {
-				signal.status = signal.pending;
-				apply_state();
-			}
-		} // else the change is already applied
 	} else {
-		signal.pending = want;
-		signal.until_flip = 5;
+		// store counter value
+		signal.pwm = TCNT0;
+		// stop timer (after copying the value, to avoid surprises)
+		TCCR0B = 0;
+		// next interrupt on rising edge
+		MCUCR |= _BV(ISC01) | _BV(ISC00);
 	}
 }
 
@@ -429,6 +449,8 @@ ISR(ADC_vect) {
 /** Detect battery dis/connect. */
 ISR(PCINT0_vect) {
 	if (bit_is_clear(PINB, PIN_ADC)) {
+		// Note: I don't know how bad form it is to do this relatively
+		// lengthy procedure here, in interrupt handler.
 		set_aux(AUX_BAD);
 	}
 
