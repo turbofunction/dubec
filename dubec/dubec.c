@@ -35,10 +35,14 @@
 
 /**
  * Range with 17.8k/2.74k divider: [6..33.6V] -> [0.8..4.482V]
- * With 4.8V VCC: 0.8V / 4.8V * 1024 = 171
- * Where 171 is the ADC value for 6V.
+ * (Ie., 0.8V below corresponds to 6V.)
+ * "6V / 33.6V" doesn't quite cut it as the VCC (ie. the ADC
+ * reference) is around 5.1V - diode drop (0.2V).
+ *
+ * TODO measure the VCC and adjust both the divider resistor
+ *      ratio and the denominator below.
  */
-#define MIN_VOLTAGE 171
+#define MIN_VOLTAGE ((uint16_t) (0.8 / 4.9 * 1024))
 
 // switch between main and AUX battery
 #define batt_main() { PORTB &= ~_BV(PIN_BATT_SWITCH); }
@@ -441,7 +445,7 @@ ISR(ADC_vect) {
 	// documentation states that the low byte needs to be read first
 	uint16_t v = ADCL;
 	// read the high byte on a separate line to "ensure" proper ordering
-	v += ADCH << 8;
+	v |= ADCH << 8;
 
 	// at least 1 to flag the memory as unprocessed
 	batt.samples[0] = MAX(v, 1);
