@@ -114,6 +114,11 @@ battery_t volatile batt = { 0, 0, 0, { 0 } };
 // crash boom bang. also switch to main battery.
 #define SIG_12V_DISABLE 3
 
+// mapping from signal level to state
+#define SIG_LOW SIG_MAIN
+#define SIG_MID SIG_AUX
+#define SIG_HIGH SIG_12V_DISABLE
+
 typedef struct {
 	// the raw timing value from interrupt handler
 	uint8_t pwm;
@@ -230,7 +235,7 @@ int main(void) {
 
 
 static void process_signal(void) {
-	// take a local (non-voltile) copy
+	// take a local (non-volatile) copy
 	uint8_t pwm = signal.pwm;
 
 	// branching only after copying the memory value,
@@ -250,15 +255,15 @@ static void process_signal(void) {
 		return;
 	}
 
-	uint8_t want = SIG_MAIN;
+	// [800..1333ms[
+	uint8_t want = SIG_LOW;
 	if (pwm > 32) {
-		// ]1653..2240ms]: disable 12V
-		want = SIG_12V_DISABLE;
+		// ]1653..2240ms]
+		want = SIG_HIGH;
 	} else if (pwm >= 25) {
-		// [1333..1653ms]: switch to AUX
-		want = SIG_AUX;
+		// [1333..1653ms]
+		want = SIG_MID;
 	}
-	// else [800..1333ms[: switch to main
 
 	if (want == signal.pending) {
 		if (signal.until_flip) {
@@ -332,7 +337,7 @@ static void process_voltage(void) {
 	} else if (v_avg <= batt.warn_voltage) {
 		set_aux(AUX_WARN);
 
-	// 66mV hysteresis to prevent oscillation
+	// some hysteresis to prevent oscillation
 	} else if (v_avg > (batt.warn_voltage + 1)) {
 		set_aux(AUX_OK);
 
@@ -434,12 +439,12 @@ ISR(TIM0_OVF_vect) {
 /** Process battery voltage. */
 ISR(ADC_vect) {
 	// documentation states that the low byte needs to be read first
-	uint8_t v = ADCL;
+	uint16_t v = ADCL;
 	// read the high byte on a separate line to "ensure" proper ordering
-	v |= ADCH << 8;
+	v += ADCH << 8;
 
 	// at least 1 to flag the memory as unprocessed
-	batt.samples[0] = MAX(1, v);
+	batt.samples[0] = MAX(v, 1);
 
 	// disable ADC interrupt
 	ADCSRA &= ~_BV(ADIE);
