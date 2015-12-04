@@ -284,7 +284,7 @@ static void process_signal(void) {
 
 
 static void process_voltage(void) {
-	// take a local (non-voltile) copy
+	// take a local (non-volatile) copy
 	uint16_t samples[3] = { batt.samples[0], batt.samples[1], batt.samples[2] };
 
 	if (!samples[0]) {
