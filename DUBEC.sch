@@ -1153,8 +1153,8 @@
 <smd name="2" x="0.65" y="-0.95" dx="0.5" dy="0.5" layer="1" thermals="no"/>
 </package>
 <package name="H2_0.7_3.5MM">
-<pad name="POS" x="-1.75" y="0" drill="0.7" diameter="1.2"/>
-<pad name="NEG" x="1.75" y="0" drill="0.7" diameter="1.2" shape="square"/>
+<pad name="POS" x="-1.75" y="0" drill="0.7" diameter="1.4"/>
+<pad name="NEG" x="1.75" y="0" drill="0.7" diameter="1.4" shape="square"/>
 </package>
 <package name="JUMPER-PAD-ROUND">
 <smd name="1" x="-0.3" y="0" dx="0.4" dy="0.3" layer="1" roundness="20" rot="R270" stop="no" thermals="no" cream="no"/>

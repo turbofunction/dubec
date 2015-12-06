@@ -18,8 +18,8 @@
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="21" name="tPlace" color="15" fill="1" visible="no" active="yes"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="21" name="tPlace" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
@@ -169,7 +169,7 @@ DUBEC</text>
 <text x="29.75" y="10.375" size="1.6" layer="22" font="vector" ratio="20" rot="MR0">v1.5</text>
 <text x="32.375" y="2.25" size="1.25" layer="22" font="vector" ratio="20" rot="MR0">Inputs: 6..34V
 (2..8S LiPo)</text>
-<rectangle x1="31" y1="8.5" x2="32.75" y2="10.25" layer="41"/>
+<rectangle x1="31.125" y1="8.5" x2="32.875" y2="10.25" layer="41"/>
 <rectangle x1="9.75" y1="16" x2="11.5" y2="16.875" layer="29"/>
 <rectangle x1="10.875" y1="16.125" x2="11.375" y2="16.75" layer="31"/>
 <rectangle x1="9.875" y1="16.125" x2="10.375" y2="16.75" layer="31"/>
@@ -656,8 +656,8 @@ DUBEC</text>
 <circle x="0" y="0" radius="0.9398" width="0" layer="30"/>
 </package>
 <package name="H2_0.7_3.5MM">
-<pad name="POS" x="-1.75" y="0" drill="0.7" diameter="1.2"/>
-<pad name="NEG" x="1.75" y="0" drill="0.7" diameter="1.2" shape="square"/>
+<pad name="POS" x="-1.75" y="0" drill="0.7" diameter="1.4"/>
+<pad name="NEG" x="1.75" y="0" drill="0.7" diameter="1.4" shape="square"/>
 </package>
 <package name="JUMPER-PAD-ROUND">
 <smd name="1" x="-0.3" y="0" dx="0.4" dy="0.3" layer="1" roundness="20" rot="R270" stop="no" thermals="no" cream="no"/>
@@ -1361,16 +1361,16 @@ Covered vias can be set in Masks (Limit).
 <attribute name="EURO" value="4.23/25" x="5.75" y="11.75" size="1.778" layer="27" display="off"/>
 <attribute name="MFG_PART_#" value="MM5Z15VT1G" x="5.75" y="11.75" size="1.778" layer="27" display="off"/>
 </element>
-<element name="CSNUB" library="dubec" package="H2_0.7_3.5MM" value="ECAP100UF_50V" x="31.875" y="11.125" rot="R270">
-<attribute name="ESR" value="615 mOhm" x="31.875" y="11.125" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="RIPPLE" value="0.5A" x="31.875" y="11.125" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="IMPEDANCE" value="540 mOhm" x="31.875" y="11.125" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="DIGIKEY_PART_#" value="495-6007-ND" x="31.875" y="11.125" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="HEIGHT" value="13mm" x="31.875" y="11.125" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MANUFACTURER" value="EPCOS (TDK)" x="31.875" y="11.125" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="DIA" value="8mm" x="31.875" y="11.125" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="LIFE" value="5000 Hrs @ 105°C" x="31.875" y="11.125" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MFG_PART_#" value="B41888C6107M" x="31.875" y="11.125" size="1.778" layer="27" rot="R270" display="off"/>
+<element name="CSNUB" library="dubec" package="H2_0.7_3.5MM" value="ECAP100UF_50V" x="32" y="11.125" rot="R270">
+<attribute name="ESR" value="615 mOhm" x="32" y="11.125" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="RIPPLE" value="0.5A" x="32" y="11.125" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="IMPEDANCE" value="540 mOhm" x="32" y="11.125" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="DIGIKEY_PART_#" value="495-6007-ND" x="32" y="11.125" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="HEIGHT" value="13mm" x="32" y="11.125" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MANUFACTURER" value="EPCOS (TDK)" x="32" y="11.125" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="DIA" value="8mm" x="32" y="11.125" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="LIFE" value="5000 Hrs @ 105°C" x="32" y="11.125" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MFG_PART_#" value="B41888C6107M" x="32" y="11.125" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="R12VPU" library="dubec" package="0402" value="RES10K_16" x="16.125" y="12.875" rot="R180">
 <attribute name="TOLERANCE" value="±1%" x="16.125" y="12.875" size="1.778" layer="27" rot="R180" display="off"/>
@@ -1555,9 +1555,9 @@ Covered vias can be set in Masks (Limit).
 <wire x1="27.8125" y1="8.0625" x2="28.6875" y2="8.0625" width="0.25" layer="1"/>
 <wire x1="28.6875" y1="8.0625" x2="29" y2="8.375" width="0.25" layer="1"/>
 <wire x1="28" y1="12.625" x2="29.5" y2="12.625" width="0.6" layer="16"/>
-<wire x1="29.5" y1="12.625" x2="30.75" y2="12.625" width="0.6" layer="16"/>
-<wire x1="30.75" y1="12.625" x2="31" y2="12.875" width="0.6" layer="16"/>
-<wire x1="31" y1="12.875" x2="31.875" y2="12.875" width="0.6" layer="16"/>
+<wire x1="29.5" y1="12.625" x2="30.625" y2="12.625" width="0.6" layer="16"/>
+<wire x1="30.625" y1="12.625" x2="30.875" y2="12.875" width="0.6" layer="16"/>
+<wire x1="30.875" y1="12.875" x2="32" y2="12.875" width="0.6" layer="16"/>
 <wire x1="29" y1="8.375" x2="29.5" y2="8.375" width="0.3302" layer="16"/>
 <wire x1="29.5" y1="8.375" x2="30.125" y2="9" width="0.3302" layer="16"/>
 <wire x1="30.125" y1="9" x2="30.125" y2="9.875" width="0.3302" layer="16"/>
@@ -1714,14 +1714,14 @@ Covered vias can be set in Masks (Limit).
 <via x="17.625" y="17.5625" extent="1-16" drill="0.5"/>
 <via x="23.75" y="20.25" extent="1-16" drill="0.3"/>
 <contactref element="DAUX" pad="2"/>
-<wire x1="31" y1="9.375" x2="32.75" y2="9.375" width="0.4" layer="1"/>
-<wire x1="31.875" y1="8.5" x2="31.875" y2="10.25" width="0.4" layer="1"/>
+<wire x1="31.125" y1="9.375" x2="32.875" y2="9.375" width="0.4" layer="1"/>
+<wire x1="32" y1="8.5" x2="32" y2="10.25" width="0.4" layer="1"/>
 <contactref element="D3" pad="A"/>
 <contactref element="RPD" pad="1"/>
 <wire x1="22.75" y1="12.375" x2="23.5" y2="13.0625" width="1" layer="16"/>
 <wire x1="37.875" y1="5.25" x2="38.75" y2="4.375" width="0" layer="19" extent="1-1"/>
-<wire x1="31" y1="9.375" x2="31.875" y2="9.375" width="0" layer="19" extent="1-1"/>
-<wire x1="31.875" y1="8.5" x2="31.875" y2="9.375" width="0" layer="19" extent="1-1"/>
+<wire x1="31.125" y1="9.375" x2="32" y2="9.375" width="0" layer="19" extent="1-1"/>
+<wire x1="32" y1="8.5" x2="32" y2="9.375" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="12V">
 <contactref element="12REG" pad="3"/>
