@@ -291,14 +291,13 @@ static void process_voltage(void) {
 		return;
 	}
 
-	// rotate the sample memory and flag processed
+	// rotate the sample memory and flag as processed
 	batt.samples[2] = samples[1];
 	batt.samples[1] = samples[0];
 	batt.samples[0] = 0;
 
 	// calculate the average
-	uint16_t v_avg = (samples[0] + samples[1] + samples[2]) / 3,
-	         v_max = MAX(samples[0], MAX(samples[1], samples[2]));
+	uint16_t v_max = MAX(samples[0], MAX(samples[1], samples[2]));
 
 	if (v_max < (MIN_VOLTAGE >> 1)) {
 		set_aux(AUX_BAD);
@@ -324,6 +323,8 @@ static void process_voltage(void) {
 		// defer any action if voltage is unstable
 		return;
 	}
+
+	uint16_t v_avg = (samples[0] + samples[1] + samples[2]) / 3;
 
 	if (v_avg < MIN_VOLTAGE) {
 		set_aux(AUX_BAD);
