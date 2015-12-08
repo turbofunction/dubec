@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.4.0">
+<eagle version="7.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -133,7 +133,7 @@
 <library name="dubec">
 <description>By Janne Savukoski 2014</description>
 <packages>
-<package name="AVX9258-8P">
+<package name="AVX9258-8C">
 <text x="-5" y="5" size="0.6" layer="25" ratio="10">&gt;NAME</text>
 <text x="-5" y="4" size="0.6" layer="27">&gt;VALUE</text>
 <smd name="4" x="0.5" y="-2.85" dx="0.7" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
@@ -178,17 +178,20 @@
 <rectangle x1="2.15" y1="2.5" x2="2.85" y2="3.2" layer="29"/>
 <rectangle x1="3.25" y1="2.6" x2="3.75" y2="3.1" layer="31"/>
 <rectangle x1="3.15" y1="2.5" x2="3.85" y2="3.2" layer="29"/>
-<wire x1="-5.175" y1="2.75" x2="-4.125" y2="2.75" width="0.2032" layer="21"/>
-<wire x1="4.125" y1="2.75" x2="5.175" y2="2.75" width="0.2032" layer="21"/>
-<wire x1="-5.175" y1="-2.75" x2="-4.125" y2="-2.75" width="0.2032" layer="21"/>
-<wire x1="4.125" y1="-2.75" x2="5.175" y2="-2.75" width="0.2032" layer="21"/>
-<wire x1="5.175" y1="-1.05" x2="5.175" y2="-2.75" width="0.2032" layer="21"/>
-<wire x1="5.175" y1="2.75" x2="5.175" y2="1.05" width="0.2032" layer="21"/>
-<wire x1="-5.175" y1="-2.75" x2="-5.175" y2="-1.05" width="0.2032" layer="21"/>
-<wire x1="-5.175" y1="1.05" x2="-5.175" y2="2.75" width="0.2032" layer="21"/>
+<wire x1="-5.175" y1="2.75" x2="-4.25" y2="2.75" width="0.2032" layer="21"/>
+<wire x1="4.25" y1="2.75" x2="5.175" y2="2.75" width="0.2032" layer="21"/>
+<wire x1="-5.175" y1="-2.75" x2="-4.25" y2="-2.75" width="0.2032" layer="21"/>
+<wire x1="4.25" y1="-2.75" x2="5.175" y2="-2.75" width="0.2032" layer="21"/>
+<wire x1="5.175" y1="-0.7" x2="5.175" y2="-2.75" width="0.2032" layer="21"/>
+<wire x1="5.175" y1="2.75" x2="5.175" y2="0.7" width="0.2032" layer="21"/>
+<wire x1="-5.175" y1="-2.75" x2="-5.175" y2="-0.7" width="0.2032" layer="21"/>
 <text x="0" y="0" size="0.8128" layer="21" font="vector" ratio="15" align="center">00925
 80080
 04063</text>
+<rectangle x1="-3.9" y1="2.45" x2="3.9" y2="3.25" layer="1"/>
+<wire x1="-5.175" y1="0.7" x2="-5.175" y2="2.75" width="0.2032" layer="21"/>
+<wire x1="-5.175" y1="0.7" x2="-5.175" y2="-0.7" width="0.2032" layer="21" curve="110"/>
+<wire x1="5.175" y1="-0.7" x2="5.175" y2="0.7" width="0.2032" layer="21" curve="110"/>
 </package>
 </packages>
 <symbols>
@@ -215,7 +218,7 @@
 <gate name="G$1" symbol="AVX9258" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="AVX9258-8P">
+<device name="" package="AVX9258-8C">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>

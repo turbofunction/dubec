@@ -191,13 +191,12 @@ Rev. 2</text>
 <circle x="15" y="21" radius="1.7" width="0.5" layer="107"/>
 <text x="33.4" y="34" size="1" layer="107" font="vector" ratio="20" rot="SR270" align="center-left">GND</text>
 <text x="7.5" y="1.6" size="0.8128" layer="107" font="vector" ratio="20">201x-xx-xx</text>
-<rectangle x1="15.1" y1="29.45" x2="22.9" y2="30.25" layer="1"/>
 </plain>
 <libraries>
 <library name="dubec">
 <description>By Janne Savukoski 2014</description>
 <packages>
-<package name="AVX9258-8P">
+<package name="AVX9258-8C">
 <text x="-5" y="5" size="0.6" layer="25" ratio="10">&gt;NAME</text>
 <text x="-5" y="4" size="0.6" layer="27">&gt;VALUE</text>
 <smd name="4" x="0.5" y="-2.85" dx="0.7" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
@@ -242,38 +241,41 @@ Rev. 2</text>
 <rectangle x1="2.15" y1="2.5" x2="2.85" y2="3.2" layer="29"/>
 <rectangle x1="3.25" y1="2.6" x2="3.75" y2="3.1" layer="31"/>
 <rectangle x1="3.15" y1="2.5" x2="3.85" y2="3.2" layer="29"/>
-<wire x1="-5.175" y1="2.75" x2="-4.125" y2="2.75" width="0.2032" layer="21"/>
-<wire x1="4.125" y1="2.75" x2="5.175" y2="2.75" width="0.2032" layer="21"/>
-<wire x1="-5.175" y1="-2.75" x2="-4.125" y2="-2.75" width="0.2032" layer="21"/>
-<wire x1="4.125" y1="-2.75" x2="5.175" y2="-2.75" width="0.2032" layer="21"/>
-<wire x1="5.175" y1="-1.05" x2="5.175" y2="-2.75" width="0.2032" layer="21"/>
-<wire x1="5.175" y1="2.75" x2="5.175" y2="1.05" width="0.2032" layer="21"/>
-<wire x1="-5.175" y1="-2.75" x2="-5.175" y2="-1.05" width="0.2032" layer="21"/>
-<wire x1="-5.175" y1="1.05" x2="-5.175" y2="2.75" width="0.2032" layer="21"/>
+<wire x1="-5.175" y1="2.75" x2="-4.25" y2="2.75" width="0.2032" layer="21"/>
+<wire x1="4.25" y1="2.75" x2="5.175" y2="2.75" width="0.2032" layer="21"/>
+<wire x1="-5.175" y1="-2.75" x2="-4.25" y2="-2.75" width="0.2032" layer="21"/>
+<wire x1="4.25" y1="-2.75" x2="5.175" y2="-2.75" width="0.2032" layer="21"/>
+<wire x1="5.175" y1="-0.7" x2="5.175" y2="-2.75" width="0.2032" layer="21"/>
+<wire x1="5.175" y1="2.75" x2="5.175" y2="0.7" width="0.2032" layer="21"/>
+<wire x1="-5.175" y1="-2.75" x2="-5.175" y2="-0.7" width="0.2032" layer="21"/>
 <text x="0" y="0" size="0.8128" layer="21" font="vector" ratio="15" align="center">00925
 80080
 04063</text>
+<rectangle x1="-3.9" y1="2.45" x2="3.9" y2="3.25" layer="1"/>
+<wire x1="-5.175" y1="0.7" x2="-5.175" y2="2.75" width="0.2032" layer="21"/>
+<wire x1="-5.175" y1="0.7" x2="-5.175" y2="-0.7" width="0.2032" layer="21" curve="110"/>
+<wire x1="5.175" y1="-0.7" x2="5.175" y2="0.7" width="0.2032" layer="21" curve="110"/>
 </package>
 <package name="TF-EMBLEM">
 <polygon width="0.381" layer="29">
-<vertex x="-0.425" y="1.025"/>
-<vertex x="0.45" y="1.025" curve="-90"/>
+<vertex x="-0.425" y="1.075"/>
+<vertex x="0.45" y="1.075" curve="-90"/>
 <vertex x="0.825" y="0.65"/>
 <vertex x="0.825" y="-0.725" curve="-90"/>
 <vertex x="0.45" y="-1.1"/>
 <vertex x="-0.425" y="-1.1" curve="-90"/>
-<vertex x="-0.8" y="-0.725"/>
-<vertex x="-0.8" y="0.65" curve="-90"/>
+<vertex x="-0.875" y="-0.725"/>
+<vertex x="-0.875" y="0.65" curve="-90"/>
 </polygon>
 <polygon width="0.381" layer="41">
-<vertex x="-0.55" y="1.15"/>
-<vertex x="0.575" y="1.15" curve="-90"/>
-<vertex x="0.95" y="0.775"/>
-<vertex x="0.95" y="-0.85" curve="-90"/>
-<vertex x="0.575" y="-1.225"/>
-<vertex x="-0.55" y="-1.225" curve="-90"/>
-<vertex x="-0.925" y="-0.85"/>
-<vertex x="-0.925" y="0.775" curve="-90"/>
+<vertex x="-0.55" y="1.175"/>
+<vertex x="0.575" y="1.175" curve="-90"/>
+<vertex x="0.925" y="0.775"/>
+<vertex x="0.925" y="-0.85" curve="-90"/>
+<vertex x="0.575" y="-1.2"/>
+<vertex x="-0.55" y="-1.2" curve="-90"/>
+<vertex x="-0.975" y="-0.85"/>
+<vertex x="-0.975" y="0.775" curve="-90"/>
 </polygon>
 <wire x1="0.325" y1="-0.475" x2="0.575" y2="-0.475" width="0.3302" layer="1"/>
 <wire x1="0.325" y1="-0.475" x2="0.325" y2="-0.85" width="0.3302" layer="1"/>
@@ -546,7 +548,7 @@ design rules under a new name.</description>
 <attribute name="DIGIKEY_PART_#" value="732-5394-ND" x="6" y="19" size="1.778" layer="27" display="off"/>
 </element>
 <element name="JP1" library="SparkFun-Connectors" package="1X02" value="M02PTH" x="41" y="36"/>
-<element name="U$1" library="dubec" package="AVX9258-8P" value="AVX9258" x="19" y="27">
+<element name="U$1" library="dubec" package="AVX9258-8C" value="AVX9258" x="19" y="27">
 <attribute name="MANUFACTURER" value="AVX Corporation" x="19" y="27" size="1.778" layer="27" display="off"/>
 <attribute name="EURO" value="1.30" x="19" y="27" size="1.778" layer="27" display="off"/>
 <attribute name="MFG_PART_#" value="009258008004063" x="19" y="27" size="1.778" layer="27" display="off"/>
