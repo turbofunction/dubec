@@ -647,12 +647,12 @@ DUBEC</text>
 <text x="-1.1575" y="2.0225" size="0.5" layer="25" ratio="10">&gt;NAME</text>
 <text x="-1.175" y="1.3075" size="0.5" layer="27">&gt;VALUE</text>
 <polygon width="0.2032" layer="1">
-<vertex x="-0.225" y="0.6" curve="140"/>
-<vertex x="-0.225" y="-0.6"/>
+<vertex x="-0.2" y="0.65" curve="140"/>
+<vertex x="-0.2" y="-0.65"/>
 </polygon>
 <polygon width="0.2032" layer="1">
-<vertex x="0.225" y="-0.6" curve="140"/>
-<vertex x="0.225" y="0.6"/>
+<vertex x="0.2" y="-0.65" curve="140"/>
+<vertex x="0.2" y="0.65"/>
 </polygon>
 <circle x="0" y="0" radius="0.360553125" width="1" layer="29"/>
 <circle x="0" y="0" radius="1.1" width="0.254" layer="21"/>
@@ -1079,12 +1079,12 @@ Covered vias can be set in Masks (Limit).
 <attribute name="TEMP" value="±100ppm/°C" x="32.875" y="14.375" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="EURO" value="2.01/50" x="32.875" y="14.375" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="UD" library="dubec" package="SOD523+" value="D_SCH40V_0.25MA" x="14.1875" y="19.375">
+<element name="UD" library="dubec" package="SOD523+" value="D_SCH20V_0.5A" x="14.1875" y="19.375">
 <attribute name="MANUFACTURER" value="ON Semiconductor" x="14.1875" y="19.375" size="1.778" layer="27" display="off"/>
-<attribute name="MFG_PART_#" value="NSR0340V2T1G" x="14.1875" y="19.375" size="1.778" layer="27" display="off"/>
-<attribute name="DIGIKEY_PART_#" value="NSR0340V2T1GOSCT-ND" x="14.1875" y="19.375" size="1.778" layer="27" display="off"/>
-<attribute name="EURO" value="3.70/10" x="14.1875" y="19.375" size="1.778" layer="27" display="off"/>
-<attribute name="V_FWD" value="0.5V@0.2A" x="14.1875" y="19.375" size="1.778" layer="27" display="off"/>
+<attribute name="MFG_PART_#" value="NSR0520V2T1G" x="14.1875" y="19.375" size="1.778" layer="27" display="off"/>
+<attribute name="DIGIKEY_PART_#" value="NSR0520V2T1GOSCT-ND" x="14.1875" y="19.375" size="1.778" layer="27" display="off"/>
+<attribute name="EURO" value="3.13/10" x="14.1875" y="19.375" size="1.778" layer="27" display="off"/>
+<attribute name="V_FWD" value="480mV @ 500mA" x="14.1875" y="19.375" size="1.778" layer="27" display="off"/>
 </element>
 <element name="12TVS" library="dubec" package="SOD523+" value="D_ZENER15V" x="31.6875" y="3.6875" rot="R270">
 <attribute name="DIGIKEY_PART_#" value="497-10767-1-ND" x="31.6875" y="3.6875" size="1.778" layer="27" rot="R270" display="off"/>
@@ -2442,9 +2442,9 @@ Covered vias can be set in Masks (Limit).
 <wire x1="9.1875" y1="13.25" x2="6" y2="13.25" width="0.3302" layer="16"/>
 <wire x1="6" y1="13.25" x2="5.375" y2="13.875" width="0.3302" layer="16"/>
 <wire x1="5.375" y1="13.875" x2="4.625" y2="13.875" width="0.3302" layer="16"/>
-<wire x1="4.625" y1="13.875" x2="3.875" y2="13.125" width="0.3302" layer="16"/>
-<wire x1="3.875" y1="13.125" x2="3.875" y2="12" width="0.3302" layer="16"/>
-<wire x1="3.875" y1="12" x2="2.75" y2="10.875" width="0.3302" layer="16"/>
+<wire x1="4.625" y1="13.875" x2="4.125" y2="13.375" width="0.3302" layer="16"/>
+<wire x1="4.125" y1="13.375" x2="4.125" y2="12.25" width="0.3302" layer="16"/>
+<wire x1="4.125" y1="12.25" x2="2.75" y2="10.875" width="0.3302" layer="16"/>
 <wire x1="9.1875" y1="13.25" x2="9.1875" y2="13.875" width="0.3302" layer="15"/>
 <wire x1="9.1875" y1="13.875" x2="11.0625" y2="15.75" width="0.3302" layer="15"/>
 <wire x1="9.9375" y1="15.75" x2="9.375" y2="16.3125" width="0.3302" layer="15"/>
@@ -2937,6 +2937,8 @@ Covered vias can be set in Masks (Limit).
 <approved hash="6,1,121a10880288001a"/>
 <approved hash="6,1,da26dd4cc04cc726"/>
 <approved hash="6,1,3060300718071860"/>
+<approved hash="19,16,6759ac07742a7fa2"/>
+<approved hash="5,16,a88306a8218557aa"/>
 </errors>
 </board>
 </drawing>

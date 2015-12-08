@@ -971,12 +971,12 @@
 <text x="-1.1575" y="2.0225" size="0.5" layer="25" ratio="10">&gt;NAME</text>
 <text x="-1.175" y="1.3075" size="0.5" layer="27">&gt;VALUE</text>
 <polygon width="0.2032" layer="1">
-<vertex x="-0.225" y="0.6" curve="140"/>
-<vertex x="-0.225" y="-0.6"/>
+<vertex x="-0.2" y="0.65" curve="140"/>
+<vertex x="-0.2" y="-0.65"/>
 </polygon>
 <polygon width="0.2032" layer="1">
-<vertex x="0.225" y="-0.6" curve="140"/>
-<vertex x="0.225" y="0.6"/>
+<vertex x="0.2" y="-0.65" curve="140"/>
+<vertex x="0.2" y="0.65"/>
 </polygon>
 <circle x="0" y="0" radius="0.360553125" width="1" layer="29"/>
 <circle x="0" y="0" radius="1.1" width="0.254" layer="21"/>
@@ -1849,7 +1849,7 @@
 </technology>
 </technologies>
 </device>
-<device name="40V_0.25MA" package="SOD523+">
+<device name="40V_0.25A" package="SOD523+">
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="C" pad="C"/>
@@ -1861,6 +1861,21 @@
 <attribute name="MANUFACTURER" value="ON Semiconductor" constant="no"/>
 <attribute name="MFG_PART_#" value="NSR0340V2T1G" constant="no"/>
 <attribute name="V_FWD" value="0.5V@0.2A" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="20V_0.5A" package="SOD523+">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="NSR0520V2T1GOSCT-ND" constant="no"/>
+<attribute name="EURO" value="3.13/10" constant="no"/>
+<attribute name="MANUFACTURER" value="ON Semiconductor" constant="no"/>
+<attribute name="MFG_PART_#" value="NSR0520V2T1G" constant="no"/>
+<attribute name="V_FWD" value="480mV @ 500mA" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -4814,7 +4829,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="RDAUX" library="dubec" deviceset="RES" device="402_16" value="RES402_16"/>
 <part name="12RLED" library="dubec" deviceset="RES" device="620_4" value="RES620_4"/>
 <part name="5RLED" library="dubec" deviceset="RES" device="140_16" value="RES140_16"/>
-<part name="UD" library="dubec" deviceset="D_SCH" device="40V_0.25MA" value="D_SCH40V_0.25MA"/>
+<part name="UD" library="dubec" deviceset="D_SCH" device="20V_0.5A" value="D_SCH20V_0.5A"/>
 <part name="12TVS" library="dubec" deviceset="D_ZENER" device="15V" value="D_ZENER15V"/>
 <part name="RAUXTOP" library="dubec" deviceset="RES" device="17.8K_16" value="RES17.8K_16"/>
 <part name="RAUXBOT" library="dubec" deviceset="RES" device="2.74K_16" value="RES2.74K_16"/>
