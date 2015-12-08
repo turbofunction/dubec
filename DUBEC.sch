@@ -857,8 +857,8 @@
 <rectangle x1="-3.2" y1="-2.1" x2="1" y2="-0.5" layer="31"/>
 </package>
 <package name="DO-201AD">
-<pad name="A" x="-6.5" y="0" drill="1.4" diameter="2.4"/>
-<pad name="C" x="6.5" y="0" drill="1.4" diameter="2.4"/>
+<pad name="A" x="-6.7315" y="0" drill="1.4" diameter="2.4"/>
+<pad name="C" x="6.7315" y="0" drill="1.4" diameter="2.4"/>
 <wire x1="-4.7" y1="2.6" x2="4.7" y2="2.6" width="0.13" layer="51"/>
 <wire x1="4.7" y1="2.6" x2="4.7" y2="-2.6" width="0.13" layer="51"/>
 <wire x1="4.7" y1="-2.6" x2="-4.7" y2="-2.6" width="0.13" layer="51"/>
