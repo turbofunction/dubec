@@ -23,7 +23,7 @@
 #define FALSE 0
 
 // red LED
-#define PIN_AUX_NOT_BAD PORTB0
+#define PIN_AUX_BAD PORTB0
 // RC signal input
 #define PIN_SIG PORTB1
 // 12V regulator on/off
@@ -54,9 +54,9 @@
 #define disable_12V() { DDRB |= _BV(PIN_12V); }
 
 // toggle red LED by enabling/disabling low output
-#define warn_on() { DDRB |= _BV(PIN_AUX_NOT_BAD); }
-#define warn_off() { DDRB &= ~_BV(PIN_AUX_NOT_BAD); }
-#define warn_toggle() { DDRB ^= _BV(PIN_AUX_NOT_BAD); }
+#define warn_on() { PORTB |= _BV(PIN_AUX_BAD); }
+#define warn_off() { PORTB &= ~_BV(PIN_AUX_BAD); }
+#define warn_toggle() { PORTB ^= _BV(PIN_AUX_BAD); }
 
 // evaluates to true if waiting for high RC signal
 #define is_trigger_high() (MCUCR & (_BV(ISC01) | _BV(ISC00)))
@@ -168,7 +168,7 @@ int main(void) {
 	 */
 
 	// configure outputs
-	DDRB = _BV(PIN_BATT_SWITCH);
+	DDRB = _BV(PIN_BATT_SWITCH) | _BV(PIN_AUX_BAD);
 
 	// disable digital inputs except on AUX voltage
 	DIDR0 = 0b111111 ^ _BV(ADC2D);
