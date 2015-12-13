@@ -288,6 +288,22 @@
 <smd name="2" x="0.75" y="0" dx="0.7" dy="1" layer="1" stop="no"/>
 <text x="-1.15" y="0.5" size="0.4" layer="25" align="top-left">&gt;NAME</text>
 <text x="-1.15" y="-0.5" size="0.4" layer="27">&gt;VALUE</text>
+<wire x1="-0.8" y1="0.45" x2="0.8" y2="0.45" width="0.05" layer="51"/>
+<wire x1="0.8" y1="0.45" x2="0.8" y2="-0.45" width="0.05" layer="51"/>
+<wire x1="0.8" y1="-0.45" x2="-0.8" y2="-0.45" width="0.05" layer="51"/>
+<wire x1="-0.8" y1="-0.45" x2="-0.8" y2="0.45" width="0.05" layer="51"/>
+<wire x1="-1.3" y1="0.7" x2="1.3" y2="0.7" width="0.13" layer="21"/>
+<wire x1="1.3" y1="0.7" x2="1.3" y2="-0.7" width="0.13" layer="21"/>
+<wire x1="1.3" y1="-0.7" x2="-1.3" y2="-0.7" width="0.13" layer="21"/>
+<wire x1="-1.3" y1="-0.7" x2="-1.3" y2="0.7" width="0.13" layer="21"/>
+<rectangle x1="-1.15" y1="-0.55" x2="-0.35" y2="0.55" layer="29"/>
+<rectangle x1="0.35" y1="-0.55" x2="1.15" y2="0.55" layer="29"/>
+</package>
+<package name="0603@1">
+<smd name="1" x="-0.75" y="0" dx="0.7" dy="1" layer="1" stop="no"/>
+<smd name="2" x="0.75" y="0" dx="0.7" dy="1" layer="1" stop="no"/>
+<text x="-1.15" y="0.5" size="0.4" layer="25" align="top-left">&gt;NAME</text>
+<text x="-1.15" y="-0.5" size="0.4" layer="27">&gt;VALUE</text>
 <wire x1="-0.85" y1="0.475" x2="0.85" y2="0.475" width="0.05" layer="51"/>
 <wire x1="0.85" y1="0.475" x2="0.85" y2="-0.475" width="0.05" layer="51"/>
 <wire x1="0.85" y1="-0.475" x2="-0.85" y2="-0.475" width="0.05" layer="51"/>
@@ -954,6 +970,22 @@
 <wire x1="1.7" y1="0.9" x2="1.7" y2="-0.9" width="0.127" layer="51"/>
 <wire x1="1.7" y1="-0.9" x2="-1.7" y2="-0.9" width="0.127" layer="51"/>
 <wire x1="-1.7" y1="-0.9" x2="-1.7" y2="0.9" width="0.127" layer="51"/>
+</package>
+<package name="0603-MIN">
+<smd name="1" x="-0.65" y="0" dx="0.5" dy="1" layer="1" stop="no"/>
+<smd name="2" x="0.65" y="0" dx="0.5" dy="1" layer="1" stop="no"/>
+<text x="-1.15" y="0.5" size="0.4" layer="25" align="top-left">&gt;NAME</text>
+<text x="-1.15" y="-0.5" size="0.4" layer="27">&gt;VALUE</text>
+<wire x1="-0.8" y1="0.45" x2="0.8" y2="0.45" width="0.05" layer="51"/>
+<wire x1="0.8" y1="0.45" x2="0.8" y2="-0.45" width="0.05" layer="51"/>
+<wire x1="0.8" y1="-0.45" x2="-0.8" y2="-0.45" width="0.05" layer="51"/>
+<wire x1="-0.8" y1="-0.45" x2="-0.8" y2="0.45" width="0.05" layer="51"/>
+<wire x1="-1.1" y1="0.7" x2="1.1" y2="0.7" width="0.13" layer="21"/>
+<wire x1="1.1" y1="0.7" x2="1.1" y2="-0.7" width="0.13" layer="21"/>
+<wire x1="1.1" y1="-0.7" x2="-1.1" y2="-0.7" width="0.13" layer="21"/>
+<wire x1="-1.1" y1="-0.7" x2="-1.1" y2="0.7" width="0.13" layer="21"/>
+<rectangle x1="0.35" y1="-0.55" x2="0.95" y2="0.55" layer="29"/>
+<rectangle x1="-0.95" y1="-0.55" x2="-0.35" y2="0.55" layer="29"/>
 </package>
 </packages>
 <symbols>
@@ -1661,7 +1693,7 @@
 </technology>
 </technologies>
 </device>
-<device name="4.7UF_35V" package="0603">
+<device name="4.7UF_35V" package="0603@1">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -1929,7 +1961,7 @@
 </technology>
 </technologies>
 </device>
-<device name="1UF_50V" package="0603">
+<device name="1UF_50V" package="0603@1">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -3783,6 +3815,70 @@
 </technology>
 </technologies>
 </device>
+<device name="9.09K_8" package="0603-MIN">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="RNCP0603FTD9K09CT-ND" constant="no"/>
+<attribute name="EURO" value="1.17/100" constant="no"/>
+<attribute name="MANUFACTURER" value="Stackpole Electronics Inc." constant="no"/>
+<attribute name="MFG_PART_#" value="RNCP0603FTD9K09" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="301_8_06" package="0603-MIN">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="RNCP0603FTD301RCT-ND" constant="no"/>
+<attribute name="EURO" value="1.17/100" constant="no"/>
+<attribute name="MANUFACTURER" value="Stackpole Electronics Inc." constant="no"/>
+<attribute name="MFG_PART_#" value="RNCP0603FTD301R" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="10K_8_06" package="0603-MIN">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="RNCP0603FTD10K0CT-ND" constant="no"/>
+<attribute name="EURO" value="1.17/100" constant="no"/>
+<attribute name="MANUFACTURER" value="Stackpole Electronics Inc." constant="no"/>
+<attribute name="MFG_PART_#" value="RNCP0603FTD10K0" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="332_8" package="0603-MIN">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="RNCP0603FTD332RCT-ND" constant="no"/>
+<attribute name="EURO" value="1.17/100" constant="no"/>
+<attribute name="MANUFACTURER" value="Stackpole Electronics Inc." constant="no"/>
+<attribute name="MFG_PART_#" value="RNCP0603FTD332R" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="I" uservalue="yes">
@@ -4586,8 +4682,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="12RLED" library="dubec" deviceset="RES" device="620_4" value="RES620_4"/>
 <part name="5RLED" library="dubec" deviceset="RES" device="140_16" value="RES140_16"/>
 <part name="12TVS" library="dubec" deviceset="D_ZENER" device="15V" value="D_ZENER15V"/>
-<part name="RAUXTOP" library="dubec" deviceset="RES" device="17.8K_16" value="RES17.8K_16"/>
-<part name="RAUXBOT" library="dubec" deviceset="RES" device="2.74K_16" value="RES2.74K_16"/>
+<part name="RAUXTOP" library="dubec" deviceset="RES" device="10K_8_06" value="RES10K_8_06"/>
+<part name="RAUXBOT" library="dubec" deviceset="RES" device="332_8" value="RES332_8"/>
 <part name="CMCU" library="dubec" deviceset="CAP" device="4.7UF_10V"/>
 <part name="5TVS" library="dubec" deviceset="D_ZENER" device="6V" value="D_ZENER6V"/>
 <part name="RS1" library="dubec" deviceset="RES" device="442_16" value="RES442_16"/>

@@ -33,16 +33,8 @@
 // AUX battery voltage divider net
 #define PIN_ADC PORTB4
 
-/**
- * Range with 17.8k/2.74k divider: [6..33.6V] -> [0.8..4.482V]
- * (Ie., 0.8V below corresponds to 6V.)
- * "6V / 33.6V" doesn't quite cut it as the VCC (ie. the ADC
- * reference) is around 5.1V - diode drop (0.2V).
- *
- * TODO measure the VCC and adjust both the divider resistor
- *      ratio and the denominator below.
- */
-#define MIN_VOLTAGE ((uint16_t) (0.8 / 4.9 * 1024))
+// range with 9.09k/301 divider: [6..33.6V] -> [0.193..1.08V]
+#define MIN_VOLTAGE ((uint16_t) (6 / 33.6 * 1024))
 
 // switch between main and AUX battery
 #define batt_main() { PORTB &= ~_BV(PIN_BATT_SWITCH); }
@@ -162,34 +154,24 @@ int main(void) {
 	 *   AUX battery voltage (divider) input, pulled down naturally if no battery
 	 * PB5 (RESET):
 	 *   input with external pull-up, connected only to ISP
-	 *
-	 * Fuses:
-	 *   CKSEL = b01 // 4.8MHz nominal clock
 	 */
 
 	// configure outputs
 	DDRB = _BV(PIN_BATT_SWITCH);
 
-	// disable digital inputs except on AUX voltage
-	DIDR0 = 0b111111 ^ _BV(ADC2D);
+	// disable all digital inputs
+	DIDR0 = 0b111111;
 
-	// configure ADC to read PB4
-	ADMUX = _BV(MUX1);
+	// configure ADC to read PB4, and reference to internal 1.1V
+	ADMUX = _BV(MUX1) | _BV(REFS0);
 
-	// Enable INT0 and pin change interrupts. INT0 is triggered
-	// on low by default, which is the correct mode initially (pin
+	// Enable level interrupt. INT0 is triggered on low
+	// by default, which is the correct mode initially (pin
 	// pulled high externally).
-	GIMSK = _BV(INT0) | _BV(PCIE);
-
-	// enable pin change interrupt on AUX voltage
-	PCMSK = _BV(PCINT4);
+	GIMSK = _BV(INT0);
 
 	// enable timer counter overflow interrupt
 	TIMSK0 = _BV(TOIE0);
-
-	// Switch to 1.2MHz.
-	// Note: simulator ignores this if CKDIV8 fuse is set.
-	clock_prescale_set(clock_div_4);
 
 	// Configure ADC clock to 75kHz (1.2MHz / 16).
 	// (Must be 50..200kHz.)
@@ -202,7 +184,7 @@ int main(void) {
 
 	// Trigger first ADC only after the first watchdog timeout
 	// to allow initializations. (Unsure whether the CPU power down
-	// cancels all that, though.)
+	// cancels all that, though.) Thus, commented out:
 	//start_ADC();
 
 	for (;;) {
@@ -312,6 +294,11 @@ static void process_voltage(void) {
 		 */
 		batt.fallback_voltage = 0;
 		batt.warn_voltage = 0;
+		return;
+
+	} else if (samples[0] < (MIN_VOLTAGE >> 1)) {
+		// possibly battery disconnect
+		start_ADC();
 		return;
 	}
 
@@ -453,18 +440,6 @@ ISR(ADC_vect) {
 
 	// disable ADC interrupt
 	ADCSRA &= ~_BV(ADIE);
-}
-
-
-/** Detect battery dis/connect. */
-ISR(PCINT0_vect) {
-	if (bit_is_clear(PINB, PIN_ADC)) {
-		// Note: I don't know how bad form it is to do this relatively
-		// lengthy procedure here, in interrupt handler.
-		set_aux(AUX_BAD);
-	}
-
-	start_ADC();
 }
 
 
