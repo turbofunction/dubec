@@ -1087,13 +1087,6 @@ Covered vias can be set in Masks (Limit).
 <attribute name="TEMP" value="±100ppm/°C" x="32.875" y="14.375" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="EURO" value="2.01/50" x="32.875" y="14.375" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="UD" library="dubec" package="SOD523+" value="D_SCH20V_0.5A" x="14.1875" y="19.375">
-<attribute name="MANUFACTURER" value="ON Semiconductor" x="14.1875" y="19.375" size="1.778" layer="27" display="off"/>
-<attribute name="MFG_PART_#" value="NSR0520V2T1G" x="14.1875" y="19.375" size="1.778" layer="27" display="off"/>
-<attribute name="DIGIKEY_PART_#" value="NSR0520V2T1GOSCT-ND" x="14.1875" y="19.375" size="1.778" layer="27" display="off"/>
-<attribute name="EURO" value="3.13/10" x="14.1875" y="19.375" size="1.778" layer="27" display="off"/>
-<attribute name="V_FWD" value="480mV @ 500mA" x="14.1875" y="19.375" size="1.778" layer="27" display="off"/>
-</element>
 <element name="12TVS" library="dubec" package="SOD523+" value="D_ZENER15V" x="31.6875" y="3.6875" rot="R270">
 <attribute name="DIGIKEY_PART_#" value="497-10767-1-ND" x="31.6875" y="3.6875" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MANUFACTURER" value="STMicroelectronics" x="31.6875" y="3.6875" size="1.778" layer="27" rot="R270" display="off"/>
@@ -1424,6 +1417,7 @@ Covered vias can be set in Masks (Limit).
 <attribute name="MANUFACTURER" value="TDK Corporation" x="31.5625" y="10.25" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="USD" value="1.09" x="31.5625" y="10.25" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
+<element name="U$9" library="dubec" package="JUMPER-PAD-ROUND" value="JUMPER-PAD" x="14.375" y="19.125" rot="R90"/>
 </elements>
 <signals>
 <signal name="35V" class="2">
@@ -1801,8 +1795,6 @@ Covered vias can be set in Masks (Limit).
 <via x="18.5" y="14.875" extent="1-16" drill="0.3"/>
 <wire x1="19.25" y1="14.975" x2="19.25" y2="14.875" width="0.25" layer="1"/>
 <wire x1="19.25" y1="14.875" x2="18.5" y2="14.875" width="0.25" layer="1"/>
-<wire x1="13.4875" y1="18.7625" x2="14.25" y2="18" width="0.4" layer="1"/>
-<wire x1="14.25" y1="18" x2="15.75" y2="18" width="0.4" layer="1"/>
 <wire x1="18.5" y1="14.875" x2="18.375" y2="14.875" width="0.3302" layer="15"/>
 <wire x1="18.375" y1="14.875" x2="17.25" y2="13.75" width="0.3302" layer="15"/>
 <wire x1="17.25" y1="13.75" x2="16.25" y2="14.75" width="0.3302" layer="15"/>
@@ -1815,8 +1807,6 @@ Covered vias can be set in Masks (Limit).
 <via x="29.625" y="16.375" extent="1-16" drill="0.5"/>
 <wire x1="15.75" y1="18" x2="16.25" y2="17.5" width="0.3302" layer="15"/>
 <contactref element="RSPU" pad="1"/>
-<contactref element="UD" pad="A"/>
-<wire x1="13.4875" y1="19.375" x2="12.5" y2="19.375" width="0.4" layer="1"/>
 <contactref element="R12VPU" pad="1"/>
 <via x="17.25" y="13" extent="1-16" drill="0.3"/>
 <wire x1="17.25" y1="13" x2="17.25" y2="13.75" width="0.3302" layer="15"/>
@@ -1828,7 +1818,6 @@ Covered vias can be set in Masks (Limit).
 <wire x1="37.875" y1="16.125" x2="36.625" y2="15.5" width="0.6" layer="1"/>
 <wire x1="37.875" y1="16.125" x2="38.0625" y2="17.4375" width="0.6" layer="1"/>
 <wire x1="37.875" y1="16.125" x2="36.75" y2="17" width="0.6" layer="1"/>
-<wire x1="13.4875" y1="18.7625" x2="13.4875" y2="19.375" width="0.4" layer="1"/>
 <wire x1="19" y1="18.5625" x2="21.6875" y2="18.5625" width="0.58" layer="15"/>
 <wire x1="23.8125" y1="18.5625" x2="29.3125" y2="18.5625" width="0.58" layer="15"/>
 <wire x1="29.3125" y1="18.5625" x2="29.625" y2="18.25" width="0.58" layer="15"/>
@@ -1852,6 +1841,11 @@ Covered vias can be set in Masks (Limit).
 <wire x1="7.875" y1="18.25" x2="5.75" y2="18.25" width="0.3302" layer="15"/>
 <wire x1="5.75" y1="18.25" x2="4.25" y2="16.75" width="0.3302" layer="15"/>
 <wire x1="4.25" y1="16.75" x2="4.125" y2="16.75" width="0.3302" layer="15"/>
+<contactref element="U$9" pad="1"/>
+<wire x1="15.75" y1="18" x2="14.925" y2="18.825" width="0.4" layer="1"/>
+<wire x1="14.925" y1="18.825" x2="14.375" y2="18.825" width="0.4" layer="1"/>
+<wire x1="14.375" y1="18.825" x2="13.05" y2="18.825" width="0.4" layer="1"/>
+<wire x1="13.05" y1="18.825" x2="12.5" y2="19.375" width="0.4" layer="1"/>
 </signal>
 <signal name="12V_FB">
 <contactref element="12REG" pad="7"/>
@@ -1895,10 +1889,8 @@ Covered vias can be set in Masks (Limit).
 <contactref element="MCU" pad="10"/>
 <contactref element="CMCU" pad="2"/>
 <via x="14.875" y="20.25" extent="1-16" drill="0.3"/>
-<contactref element="UD" pad="C"/>
 <via x="9" y="18.125" extent="1-16" drill="0.3"/>
 <wire x1="14.875" y1="20.25" x2="14.8875" y2="20.2375" width="0.6" layer="1"/>
-<wire x1="14.8875" y1="20.2375" x2="14.8875" y2="19.375" width="0.6" layer="1"/>
 <contactref element="RRSPU" pad="2"/>
 <wire x1="8.25" y1="17.25" x2="8.25" y2="18.125" width="0.4" layer="1"/>
 <wire x1="9" y1="18.125" x2="8.25" y2="18.125" width="0.4" layer="1"/>
@@ -1911,6 +1903,9 @@ Covered vias can be set in Masks (Limit).
 <wire x1="9.625" y1="18.125" x2="9.625" y2="17.975" width="0.25" layer="1"/>
 <wire x1="9" y1="18.125" x2="7.625" y2="19.5" width="0.7" layer="16"/>
 <wire x1="7.625" y1="19.5" x2="7.625" y2="20.1" width="0.7" layer="16"/>
+<contactref element="U$9" pad="2"/>
+<wire x1="14.375" y1="19.425" x2="14.5" y2="19.5" width="0.4" layer="1"/>
+<wire x1="14.5" y1="19.5" x2="14.875" y2="20.25" width="0.4" layer="1"/>
 </signal>
 <signal name="ADC2">
 <contactref element="RAUXTOP" pad="2"/>
@@ -2923,21 +2918,21 @@ Covered vias can be set in Masks (Limit).
 <approved hash="6,1,173dd90f2010ea23"/>
 <approved hash="6,1,382b82a4fcd7d1dc"/>
 <approved hash="6,1,450ee2f77e8ba74b"/>
+<approved hash="6,1,fee7c4df0fbde966"/>
+<approved hash="6,1,8d2de2d7c1a390db"/>
+<approved hash="6,1,6269207cc133094b"/>
 <approved hash="6,1,e6c3ceab5844ab1f"/>
 <approved hash="6,1,7ca8704cbd4952a9"/>
 <approved hash="6,1,6dbf2d8ecd220f8a"/>
-<approved hash="6,1,fee7c4df0fbde966"/>
-<approved hash="6,1,6269207cc133094b"/>
-<approved hash="6,1,8d2de2d7c1a390db"/>
-<approved hash="6,1,f09e7052f3d7b7cf"/>
 <approved hash="6,1,669c84c2a33ed488"/>
+<approved hash="6,1,f09e7052f3d7b7cf"/>
 <approved hash="5,1,35166cdcc700ec66"/>
 <approved hash="5,1,fbbc955d7f266261"/>
 <approved hash="5,1,97412f03eee3af91"/>
 <approved hash="5,1,555f24ae00d0d302"/>
-<approved hash="5,1,739bba105ffe952a"/>
 <approved hash="5,1,ea072fa3e88fd65b"/>
 <approved hash="5,1,007a64fb65ca552d"/>
+<approved hash="5,1,739bba105ffe952a"/>
 <approved hash="5,1,22b285b3472a17e5"/>
 <approved hash="5,1,92ab0b486719acf5"/>
 <approved hash="5,1,a844e125d5453ce8"/>
@@ -2945,8 +2940,15 @@ Covered vias can be set in Masks (Limit).
 <approved hash="5,1,1b166e12067db566"/>
 <approved hash="6,1,c8af25a58a225705"/>
 <approved hash="6,1,fe7a4133c9963668"/>
-<approved hash="6,1,16152c9c58024dcd"/>
+<approved hash="5,1,6c4b92a89891f2a2"/>
+<approved hash="5,1,726bcc7e2d7e4a6b"/>
 <approved hash="6,1,b684b07e5b3771e0"/>
+<approved hash="6,1,16152c9c58024dcd"/>
+<approved hash="5,1,6a2acb158031f9c4"/>
+<approved hash="5,1,42cde0b4acb3af7b"/>
+<approved hash="5,1,b181ecb6b971c3b9"/>
+<approved hash="5,1,c5eece6637ddbe33"/>
+<approved hash="5,1,089f657e2db35879"/>
 <approved hash="5,1,f70ed3a1ad00fbe5"/>
 <approved hash="5,1,0a055c0b73048bc1"/>
 <approved hash="5,1,97a0a1019100d41b"/>
@@ -2957,21 +2959,21 @@ Covered vias can be set in Masks (Limit).
 <approved hash="5,1,6184c2a138a7458c"/>
 <approved hash="5,1,9158418193bfb9af"/>
 <approved hash="5,1,b74030b17d98fc67"/>
-<approved hash="5,1,67875500259d6a45"/>
 <approved hash="5,1,7477d6ee2efe837b"/>
+<approved hash="5,1,67875500259d6a45"/>
 <approved hash="5,1,125dc281b3bf99aa"/>
 <approved hash="5,1,9615f655f80d280c"/>
 <approved hash="6,1,4971f0ae7053c98c"/>
-<approved hash="5,1,a5a6758193bfb951"/>
-<approved hash="5,1,f7faf8842e851dd2"/>
-<approved hash="5,1,08a81d85eece056b"/>
-<approved hash="5,1,0dfff021c9fa01c9"/>
-<approved hash="5,1,22657cbf5b7825e1"/>
 <approved hash="5,1,420f98e0cef08e2a"/>
-<approved hash="5,1,15d47d65a47c744d"/>
-<approved hash="5,1,e337d0712d6b6a58"/>
+<approved hash="5,1,22657cbf5b7825e1"/>
+<approved hash="5,1,0dfff021c9fa01c9"/>
+<approved hash="5,1,f7faf8842e851dd2"/>
+<approved hash="5,1,a5a6758193bfb951"/>
+<approved hash="5,1,08a81d85eece056b"/>
 <approved hash="5,1,e27c2a1fb4c06e57"/>
 <approved hash="5,1,157820127e6b0fb5"/>
+<approved hash="5,1,15d47d65a47c744d"/>
+<approved hash="5,1,e337d0712d6b6a58"/>
 <approved hash="5,1,825c991a4aaf2bca"/>
 <approved hash="5,1,416fdd42bd53857c"/>
 <approved hash="6,1,364fa0d9ba01c515"/>
@@ -2981,8 +2983,8 @@ Covered vias can be set in Masks (Limit).
 <approved hash="6,1,113814f8be1c3da2"/>
 <approved hash="6,1,8e97f27ede33d7f4"/>
 <approved hash="6,1,5d4a25354277d1d6"/>
-<approved hash="6,1,3eacaeeb65fc149b"/>
 <approved hash="6,1,ef2f994fa9d43a94"/>
+<approved hash="6,1,3eacaeeb65fc149b"/>
 <approved hash="6,1,2be022b9dcddd584"/>
 <approved hash="6,1,4b6e1801040f7760"/>
 <approved hash="6,1,70f8c1f8c0e8720a"/>
