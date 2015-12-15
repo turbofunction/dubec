@@ -172,7 +172,6 @@ DUBEC</text>
 <rectangle x1="10.875" y1="16.125" x2="11.375" y2="16.75" layer="31"/>
 <rectangle x1="9.875" y1="16.125" x2="10.375" y2="16.75" layer="31"/>
 <text x="11" y="17.125" size="0.8" layer="22" font="vector" ratio="15" rot="MR0" align="bottom-center">!12V</text>
-<text x="4.625" y="18.375" size="0.8" layer="22" font="vector" ratio="15" rot="MR0" align="top-center">ISP</text>
 <text x="29.75" y="9" size="0.8" layer="22" font="vector" ratio="15" rot="MR0">201x-xx-xx</text>
 <text x="32.375" y="6.375" size="1.25" layer="22" font="vector" ratio="20" rot="MR0">TURBOFUNCTION.com/fpv</text>
 <circle x="2" y="6.375" radius="1.4" width="0.1" layer="42"/>
@@ -183,10 +182,13 @@ DUBEC</text>
 <circle x="37.875" y="2.25" radius="1.25" width="0.2032" layer="41"/>
 <wire x1="2.625" y1="4.875" x2="2.625" y2="4.375" width="0.254" layer="41"/>
 <wire x1="2.625" y1="12.125" x2="2.625" y2="11.625" width="0.254" layer="41"/>
-<wire x1="0.875" y1="20.375" x2="0.875" y2="19" width="0.2" layer="22"/>
-<wire x1="0.875" y1="19" x2="8.375" y2="19" width="0.2" layer="22"/>
-<wire x1="8.375" y1="19" x2="8.375" y2="20.6875" width="0.2" layer="22"/>
-<text x="7.625" y="18.75" size="0.8" layer="22" ratio="15" rot="MR0" align="top-center">+</text>
+<text x="7.625" y="19" size="0.8" layer="22" font="vector" ratio="15" rot="MR90" align="center-right">VCC</text>
+<text x="6.625" y="19" size="0.8" layer="22" font="vector" ratio="15" rot="MR90" align="center-right">SCK</text>
+<text x="5.625" y="19" size="0.8" layer="22" font="vector" ratio="15" rot="MR90" align="center-right">MISO</text>
+<text x="4.625" y="19" size="0.8" layer="22" font="vector" ratio="15" rot="MR90" align="center-right">AUX</text>
+<text x="3.625" y="19" size="0.8" layer="22" font="vector" ratio="15" rot="MR90" align="center-right">MOSI</text>
+<text x="2.625" y="19" size="0.8" layer="22" font="vector" ratio="15" rot="MR90" align="center-right">RESET</text>
+<text x="1.625" y="19" size="0.8" layer="22" font="vector" ratio="15" rot="MR90" align="center-right">GND</text>
 </plain>
 <libraries>
 <library name="dubec">
