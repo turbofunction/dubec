@@ -216,7 +216,7 @@
 <wire x1="2.25" y1="2.35" x2="2.25" y2="2.55" width="0.13" layer="21"/>
 <wire x1="2.25" y1="-2.55" x2="2.25" y2="-2.35" width="0.13" layer="21"/>
 <wire x1="-2.25" y1="-2.55" x2="-2.25" y2="-2.35" width="0.13" layer="21"/>
-<circle x="-1.5" y="1.9" radius="0.1581125" width="0.3" layer="21"/>
+<circle x="-1.3" y="1.9" radius="0.1581125" width="0.3" layer="21"/>
 <rectangle x1="-3.5" y1="1.8" x2="-2.1" y2="2.1" layer="29"/>
 <rectangle x1="-3.5" y1="1.15" x2="-2.1" y2="1.45" layer="29"/>
 <rectangle x1="-3.5" y1="0.5" x2="-2.1" y2="0.8" layer="29"/>
@@ -981,7 +981,7 @@ Keying posts into board</description>
 <text x="-4" y="-6" size="0.7" layer="25">&gt;NAME</text>
 <text x="-4" y="-7" size="0.7" layer="27">&gt;VALUE</text>
 <text x="-4" y="6" size="0.8128" layer="21" font="vector" ratio="15">61200621621</text>
-<circle x="3.3" y="-4.4" radius="0.25" width="0.5" layer="21"/>
+<circle x="3.5" y="-4.8" radius="0.25" width="0.5" layer="21"/>
 </package>
 <package name="1X01_LONGPAD">
 <wire x1="-1.27" y1="0.635" x2="-1.27" y2="-0.635" width="0.2032" layer="21"/>
@@ -1852,16 +1852,24 @@ Through-hole SPDT Switch&lt;br&gt;
 <hole x="1.5" y="0" drill="0.9"/>
 </package>
 <package name="EG1271A">
-<pad name="1" x="-2.5" y="1.6" drill="0.8"/>
-<pad name="2" x="0" y="1.6" drill="0.8"/>
-<pad name="3" x="2.5" y="1.6" drill="0.8"/>
-<pad name="4" x="-2.5" y="-1.6" drill="0.8"/>
-<pad name="5" x="0" y="-1.6" drill="0.8"/>
-<pad name="6" x="2.5" y="-1.6" drill="0.8"/>
-<wire x1="-4.25" y1="1.75" x2="4.25" y2="1.75" width="0.127" layer="21"/>
-<wire x1="4.25" y1="1.75" x2="4.25" y2="-1.75" width="0.127" layer="21"/>
-<wire x1="4.25" y1="-1.75" x2="-4.25" y2="-1.75" width="0.127" layer="21"/>
-<wire x1="-4.25" y1="-1.75" x2="-4.25" y2="1.75" width="0.127" layer="21"/>
+<pad name="1" x="-2.5" y="1.6" drill="0.8" diameter="1.5"/>
+<pad name="2" x="0" y="1.6" drill="0.8" diameter="1.5"/>
+<pad name="3" x="2.5" y="1.6" drill="0.8" diameter="1.5"/>
+<pad name="4" x="-2.5" y="-1.6" drill="0.8" diameter="1.5"/>
+<pad name="5" x="0" y="-1.6" drill="0.8" diameter="1.5"/>
+<pad name="6" x="2.5" y="-1.6" drill="0.8" diameter="1.5"/>
+<wire x1="4.25" y1="1.75" x2="4.25" y2="-1.74" width="0.127" layer="21"/>
+<wire x1="4.25" y1="-1.74" x2="4.25" y2="-1.75" width="0.127" layer="21"/>
+<wire x1="-4.25" y1="-1.75" x2="-4.25" y2="-1.74" width="0.127" layer="21"/>
+<wire x1="-4.25" y1="-1.74" x2="-4.25" y2="1.75" width="0.127" layer="21"/>
+<wire x1="-3.65" y1="1.76" x2="-4.25" y2="1.76" width="0.127" layer="21"/>
+<wire x1="-3.65" y1="-1.74" x2="-4.25" y2="-1.74" width="0.127" layer="21"/>
+<wire x1="-1.1" y1="-1.74" x2="-1.4" y2="-1.74" width="0.127" layer="21"/>
+<wire x1="1.4" y1="-1.74" x2="1.1" y2="-1.74" width="0.127" layer="21"/>
+<wire x1="-1.1" y1="1.76" x2="-1.4" y2="1.76" width="0.127" layer="21"/>
+<wire x1="1.4" y1="1.76" x2="1.1" y2="1.76" width="0.127" layer="21"/>
+<wire x1="4.25" y1="1.76" x2="3.65" y2="1.76" width="0.127" layer="21"/>
+<wire x1="4.25" y1="-1.74" x2="3.65" y2="-1.74" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -2010,7 +2018,7 @@ DPDT SMT slide switch, AYZ0202, SWCH-08179</description>
 <part name="JP2" library="SparkFun-Connectors" deviceset="M01" device="PTH"/>
 <part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="JP3" library="SparkFun-Connectors" deviceset="M01" device="PTH"/>
-<part name="U$3" library="dubec" deviceset="SWITCH_IC_QUAD" device="SN74HC4066PW"/>
+<part name="U1" library="dubec" deviceset="SWITCH_IC_QUAD" device="SN74HC4066PW"/>
 <part name="GND5" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="S1" library="SparkFun-Electromechanical" deviceset="SWITCH-SPDT" device="ESWITCH"/>
 </parts>
@@ -2030,7 +2038,7 @@ as the contact may contact whatever.</text>
 <instance part="JP2" gate="G$1" x="66.04" y="91.44" rot="R270"/>
 <instance part="GND1" gate="1" x="66.04" y="78.74"/>
 <instance part="JP3" gate="G$1" x="45.72" y="91.44" rot="R270"/>
-<instance part="U$3" gate="G$1" x="58.42" y="48.26"/>
+<instance part="U1" gate="G$1" x="58.42" y="48.26"/>
 <instance part="GND5" gate="1" x="43.18" y="35.56"/>
 <instance part="S1" gate="1" x="15.24" y="45.72"/>
 </instances>
@@ -2054,7 +2062,7 @@ as the contact may contact whatever.</text>
 <label x="116.84" y="53.34" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="VCC"/>
+<pinref part="U1" gate="G$1" pin="VCC"/>
 <wire x1="71.12" y1="55.88" x2="73.66" y2="55.88" width="0.1524" layer="91"/>
 <label x="73.66" y="55.88" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -2071,7 +2079,7 @@ as the contact may contact whatever.</text>
 <label x="106.68" y="53.34" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="3B"/>
+<pinref part="U1" gate="G$1" pin="3B"/>
 <wire x1="71.12" y1="43.18" x2="73.66" y2="43.18" width="0.1524" layer="91"/>
 <label x="73.66" y="43.18" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -2102,7 +2110,7 @@ as the contact may contact whatever.</text>
 <label x="111.76" y="53.34" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="1B"/>
+<pinref part="U1" gate="G$1" pin="1B"/>
 <wire x1="45.72" y1="53.34" x2="43.18" y2="53.34" width="0.1524" layer="91"/>
 <label x="43.18" y="53.34" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -2114,7 +2122,7 @@ as the contact may contact whatever.</text>
 <label x="114.3" y="53.34" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="2B"/>
+<pinref part="U1" gate="G$1" pin="2B"/>
 <wire x1="45.72" y1="50.8" x2="43.18" y2="50.8" width="0.1524" layer="91"/>
 <label x="43.18" y="50.8" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -2138,23 +2146,23 @@ as the contact may contact whatever.</text>
 <pinref part="GND1" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="GND"/>
+<pinref part="U1" gate="G$1" pin="GND"/>
 <wire x1="45.72" y1="40.64" x2="43.18" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="40.64" x2="43.18" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="GND5" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="4C"/>
+<pinref part="U1" gate="G$1" pin="4C"/>
 <wire x1="71.12" y1="50.8" x2="73.66" y2="50.8" width="0.1524" layer="91"/>
 <label x="73.66" y="50.8" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="4A"/>
+<pinref part="U1" gate="G$1" pin="4A"/>
 <wire x1="71.12" y1="48.26" x2="73.66" y2="48.26" width="0.1524" layer="91"/>
 <label x="73.66" y="48.26" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="4B"/>
+<pinref part="U1" gate="G$1" pin="4B"/>
 <wire x1="71.12" y1="45.72" x2="73.66" y2="45.72" width="0.1524" layer="91"/>
 <label x="73.66" y="45.72" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -2178,17 +2186,17 @@ as the contact may contact whatever.</text>
 </net>
 <net name="ISP_EN" class="0">
 <segment>
-<pinref part="U$3" gate="G$1" pin="1C"/>
+<pinref part="U1" gate="G$1" pin="1C"/>
 <wire x1="71.12" y1="53.34" x2="73.66" y2="53.34" width="0.1524" layer="91"/>
 <label x="73.66" y="53.34" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="2C"/>
+<pinref part="U1" gate="G$1" pin="2C"/>
 <wire x1="45.72" y1="45.72" x2="43.18" y2="45.72" width="0.1524" layer="91"/>
 <label x="43.18" y="45.72" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="3C"/>
+<pinref part="U1" gate="G$1" pin="3C"/>
 <wire x1="45.72" y1="43.18" x2="43.18" y2="43.18" width="0.1524" layer="91"/>
 <label x="43.18" y="43.18" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -2205,7 +2213,7 @@ as the contact may contact whatever.</text>
 <label x="20.32" y="68.58" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="2A"/>
+<pinref part="U1" gate="G$1" pin="2A"/>
 <wire x1="45.72" y1="48.26" x2="43.18" y2="48.26" width="0.1524" layer="91"/>
 <label x="43.18" y="48.26" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -2217,7 +2225,7 @@ as the contact may contact whatever.</text>
 <label x="20.32" y="66.04" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="1A"/>
+<pinref part="U1" gate="G$1" pin="1A"/>
 <wire x1="45.72" y1="55.88" x2="43.18" y2="55.88" width="0.1524" layer="91"/>
 <label x="43.18" y="55.88" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -2229,7 +2237,7 @@ as the contact may contact whatever.</text>
 <label x="0" y="68.58" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="3A"/>
+<pinref part="U1" gate="G$1" pin="3A"/>
 <wire x1="71.12" y1="40.64" x2="73.66" y2="40.64" width="0.1524" layer="91"/>
 <label x="73.66" y="40.64" size="1.27" layer="95" xref="yes"/>
 </segment>
