@@ -185,7 +185,7 @@
 <wire x1="5.175" y1="-0.7" x2="5.175" y2="-2.75" width="0.2032" layer="21"/>
 <wire x1="5.175" y1="2.75" x2="5.175" y2="0.7" width="0.2032" layer="21"/>
 <wire x1="-5.175" y1="-2.75" x2="-5.175" y2="-0.7" width="0.2032" layer="21"/>
-<text x="0" y="0" size="0.8128" layer="21" font="vector" ratio="15" align="center">00925
+<text x="0" y="0" size="0.8128" layer="21" font="vector" ratio="10" align="center">00925
 80080
 04063</text>
 <rectangle x1="-3.9" y1="2.45" x2="3.9" y2="3.25" layer="1"/>
@@ -232,6 +232,151 @@
 <rectangle x1="2.1" y1="0.5" x2="3.5" y2="0.8" layer="29"/>
 <rectangle x1="2.1" y1="1.8" x2="3.5" y2="2.1" layer="29"/>
 </package>
+<package name="14-VFQFN">
+<text x="-1.2" y="-0.5" size="0.4" layer="27">&gt;VALUE</text>
+<text x="-1.2" y="0.6" size="0.4" layer="25" align="top-left">&gt;NAME</text>
+<smd name="1" x="-1.4" y="0.25" dx="0.25" dy="0.7" layer="1" rot="R90" stop="no" thermals="no" cream="no"/>
+<smd name="14" x="-1.4" y="-0.25" dx="0.25" dy="0.7" layer="1" rot="R90" stop="no" thermals="no" cream="no"/>
+<smd name="3" x="-0.5" y="1.2" dx="0.25" dy="0.7" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
+<smd name="2" x="-1" y="1.2" dx="0.25" dy="0.7" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
+<smd name="4" x="0" y="1.2" dx="0.25" dy="0.7" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
+<smd name="5" x="0.5" y="1.2" dx="0.25" dy="0.7" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
+<smd name="6" x="1" y="1.2" dx="0.25" dy="0.7" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
+<smd name="7" x="1.4" y="0.25" dx="0.25" dy="0.7" layer="1" rot="R90" stop="no" thermals="no" cream="no"/>
+<smd name="8" x="1.4" y="-0.25" dx="0.25" dy="0.7" layer="1" rot="R90" stop="no" thermals="no" cream="no"/>
+<smd name="9" x="1" y="-1.1" dx="0.25" dy="0.7" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
+<smd name="10" x="0.5" y="-1.1" dx="0.25" dy="0.7" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
+<smd name="11" x="0" y="-1.1" dx="0.25" dy="0.7" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
+<smd name="12" x="-0.5" y="-1.1" dx="0.25" dy="0.7" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
+<smd name="13" x="-1" y="-1.1" dx="0.25" dy="0.7" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
+<wire x1="-1.4" y1="-1.25" x2="-1.5" y2="-1.25" width="0.13" layer="21"/>
+<wire x1="-1.5" y1="-1.25" x2="-1.5" y2="-0.65" width="0.13" layer="21"/>
+<wire x1="1.5" y1="-1.25" x2="1.5" y2="-0.65" width="0.13" layer="21"/>
+<wire x1="1.5" y1="0.65" x2="1.5" y2="1.25" width="0.13" layer="21"/>
+<wire x1="1.5" y1="-1.25" x2="1.4" y2="-1.25" width="0.13" layer="21"/>
+<wire x1="1.5" y1="1.25" x2="1.4" y2="1.25" width="0.13" layer="21"/>
+<wire x1="-1.4" y1="1.25" x2="-1.5" y2="1.25" width="0.13" layer="21"/>
+<polygon width="0.13" layer="21">
+<vertex x="-1.5" y="1.25" curve="180"/>
+<vertex x="-1.5" y="0.65"/>
+</polygon>
+<rectangle x1="-1.75" y1="0.125" x2="-1.05" y2="0.375" layer="29"/>
+<rectangle x1="-1.75" y1="-0.375" x2="-1.05" y2="-0.125" layer="29"/>
+<rectangle x1="1.05" y1="0.125" x2="1.75" y2="0.375" layer="29"/>
+<rectangle x1="1.05" y1="-0.375" x2="1.75" y2="-0.125" layer="29"/>
+<rectangle x1="0.65" y1="-1.225" x2="1.35" y2="-0.975" layer="29" rot="R90"/>
+<rectangle x1="0.15" y1="-1.225" x2="0.85" y2="-0.975" layer="29" rot="R90"/>
+<rectangle x1="-0.35" y1="-1.225" x2="0.35" y2="-0.975" layer="29" rot="R90"/>
+<rectangle x1="-0.85" y1="-1.225" x2="-0.15" y2="-0.975" layer="29" rot="R90"/>
+<rectangle x1="-1.35" y1="-1.225" x2="-0.65" y2="-0.975" layer="29" rot="R90"/>
+<rectangle x1="-1.35" y1="1.075" x2="-0.65" y2="1.325" layer="29" rot="R90"/>
+<rectangle x1="-0.85" y1="1.075" x2="-0.15" y2="1.325" layer="29" rot="R90"/>
+<rectangle x1="-0.35" y1="1.075" x2="0.35" y2="1.325" layer="29" rot="R90"/>
+<rectangle x1="0.15" y1="1.075" x2="0.85" y2="1.325" layer="29" rot="R90"/>
+<rectangle x1="0.65" y1="1.075" x2="1.35" y2="1.325" layer="29" rot="R90"/>
+<rectangle x1="-1.1" y1="0.95" x2="-0.9" y2="1.45" layer="31"/>
+<rectangle x1="1.3" y1="0" x2="1.5" y2="0.5" layer="31" rot="R90"/>
+<rectangle x1="-0.6" y1="0.95" x2="-0.4" y2="1.45" layer="31"/>
+<rectangle x1="-0.1" y1="0.95" x2="0.1" y2="1.45" layer="31"/>
+<rectangle x1="0.4" y1="0.95" x2="0.6" y2="1.45" layer="31"/>
+<rectangle x1="0.9" y1="0.95" x2="1.1" y2="1.45" layer="31"/>
+<rectangle x1="0.9" y1="-1.35" x2="1.1" y2="-0.85" layer="31"/>
+<rectangle x1="0.4" y1="-1.35" x2="0.6" y2="-0.85" layer="31"/>
+<rectangle x1="-0.1" y1="-1.35" x2="0.1" y2="-0.85" layer="31"/>
+<rectangle x1="-0.6" y1="-1.35" x2="-0.4" y2="-0.85" layer="31"/>
+<rectangle x1="-1.1" y1="-1.35" x2="-0.9" y2="-0.85" layer="31"/>
+<rectangle x1="-1.5" y1="-0.5" x2="-1.3" y2="0" layer="31" rot="R90"/>
+<rectangle x1="-1.5" y1="0" x2="-1.3" y2="0.5" layer="31" rot="R90"/>
+<rectangle x1="1.3" y1="-0.5" x2="1.5" y2="0" layer="31" rot="R90"/>
+<smd name="PAD" x="0" y="0" dx="0.9" dy="1.4" layer="1" rot="R90" stop="no" thermals="no" cream="no"/>
+<rectangle x1="-0.7" y1="-0.45" x2="0.7" y2="0.45" layer="29"/>
+<rectangle x1="-0.55" y1="-0.35" x2="-0.15" y2="0.35" layer="31"/>
+<rectangle x1="0.15" y1="-0.35" x2="0.55" y2="0.35" layer="31"/>
+</package>
+<package name="0805">
+<description>IPC-SM-782 RES/CAP</description>
+<smd name="1" x="-0.9" y="0" dx="0.8" dy="1.5" layer="1" stop="no" cream="no"/>
+<smd name="2" x="0.9" y="0" dx="0.8" dy="1.5" layer="1" stop="no" cream="no"/>
+<text x="-1.3" y="0.7" size="0.5" layer="25" align="top-left">&gt;NAME</text>
+<text x="-1.3" y="-0.7" size="0.5" layer="27">&gt;VALUE</text>
+<wire x1="-1.075" y1="0.7" x2="1.075" y2="0.7" width="0.05" layer="51"/>
+<wire x1="1.075" y1="0.7" x2="1.075" y2="-0.7" width="0.05" layer="51"/>
+<wire x1="1.075" y1="-0.7" x2="-1.075" y2="-0.7" width="0.05" layer="51"/>
+<wire x1="-1.075" y1="-0.7" x2="-1.075" y2="0.7" width="0.05" layer="51"/>
+<wire x1="-1.5" y1="0.95" x2="1.5" y2="0.95" width="0.13" layer="21"/>
+<wire x1="1.5" y1="0.95" x2="1.5" y2="-0.95" width="0.13" layer="21"/>
+<wire x1="1.5" y1="-0.95" x2="-1.5" y2="-0.95" width="0.13" layer="21"/>
+<wire x1="-1.5" y1="-0.95" x2="-1.5" y2="0.95" width="0.13" layer="21"/>
+<rectangle x1="-1.35" y1="-0.8" x2="-0.45" y2="0.8" layer="29"/>
+<rectangle x1="0.45" y1="-0.8" x2="1.35" y2="0.8" layer="29"/>
+<rectangle x1="-1.175" y1="-0.65" x2="-0.5" y2="0.65" layer="31"/>
+<rectangle x1="0.5" y1="-0.65" x2="1.175" y2="0.65" layer="31"/>
+</package>
+<package name="1210">
+<description>IPC-SM-782 RES/CAP</description>
+<smd name="1" x="-1.4" y="0" dx="1.6" dy="2.7" layer="1"/>
+<smd name="2" x="1.4" y="0" dx="1.6" dy="2.7" layer="1"/>
+<text x="-2.1" y="1.05" size="0.6" layer="25" align="top-left">&gt;NAME</text>
+<text x="-2.1" y="-1.05" size="0.6" layer="27">&gt;VALUE</text>
+<wire x1="-1.7" y1="1.35" x2="1.7" y2="1.35" width="0.127" layer="51"/>
+<wire x1="1.7" y1="1.35" x2="1.7" y2="-1.35" width="0.127" layer="51"/>
+<wire x1="1.7" y1="-1.35" x2="-1.7" y2="-1.35" width="0.127" layer="51"/>
+<wire x1="-1.7" y1="-1.35" x2="-1.7" y2="1.35" width="0.127" layer="51"/>
+<wire x1="-2.4" y1="1.55" x2="-2.4" y2="-1.55" width="0.13" layer="21"/>
+<wire x1="-2.4" y1="-1.55" x2="2.4" y2="-1.55" width="0.13" layer="21"/>
+<wire x1="2.4" y1="-1.55" x2="2.4" y2="1.55" width="0.13" layer="21"/>
+<wire x1="2.4" y1="1.55" x2="-2.4" y2="1.55" width="0.13" layer="21"/>
+</package>
+<package name="0603">
+<smd name="1" x="-0.75" y="0" dx="0.7" dy="1" layer="1" stop="no"/>
+<smd name="2" x="0.75" y="0" dx="0.7" dy="1" layer="1" stop="no"/>
+<text x="-1.15" y="0.5" size="0.4" layer="25" align="top-left">&gt;NAME</text>
+<text x="-1.15" y="-0.5" size="0.4" layer="27">&gt;VALUE</text>
+<wire x1="-0.8" y1="0.45" x2="0.8" y2="0.45" width="0.05" layer="51"/>
+<wire x1="0.8" y1="0.45" x2="0.8" y2="-0.45" width="0.05" layer="51"/>
+<wire x1="0.8" y1="-0.45" x2="-0.8" y2="-0.45" width="0.05" layer="51"/>
+<wire x1="-0.8" y1="-0.45" x2="-0.8" y2="0.45" width="0.05" layer="51"/>
+<wire x1="-1.3" y1="0.7" x2="1.3" y2="0.7" width="0.13" layer="21"/>
+<wire x1="1.3" y1="0.7" x2="1.3" y2="-0.7" width="0.13" layer="21"/>
+<wire x1="1.3" y1="-0.7" x2="-1.3" y2="-0.7" width="0.13" layer="21"/>
+<wire x1="-1.3" y1="-0.7" x2="-1.3" y2="0.7" width="0.13" layer="21"/>
+<rectangle x1="-1.15" y1="-0.55" x2="-0.35" y2="0.55" layer="29"/>
+<rectangle x1="0.35" y1="-0.55" x2="1.15" y2="0.55" layer="29"/>
+</package>
+<package name="0402">
+<description>IPC-SM-782 RES/CAP; narrowed by 2mm</description>
+<smd name="1" x="-0.5" y="0" dx="0.4" dy="0.7" layer="1" stop="no"/>
+<smd name="2" x="0.5" y="0" dx="0.4" dy="0.7" layer="1" stop="no"/>
+<text x="-0.75" y="0.35" size="0.254" layer="25" align="top-left">&gt;NAME</text>
+<text x="-0.75" y="-0.35" size="0.254" layer="27">&gt;VALUE</text>
+<wire x1="-0.55" y1="0.3" x2="0.55" y2="0.3" width="0.05" layer="51"/>
+<wire x1="0.55" y1="0.3" x2="0.55" y2="-0.3" width="0.05" layer="51"/>
+<wire x1="0.55" y1="-0.3" x2="-0.55" y2="-0.3" width="0.05" layer="51"/>
+<wire x1="-0.55" y1="-0.3" x2="-0.55" y2="0.3" width="0.05" layer="51"/>
+<wire x1="-0.9" y1="0.55" x2="0.9" y2="0.55" width="0.13" layer="21"/>
+<wire x1="0.9" y1="0.55" x2="0.9" y2="-0.55" width="0.13" layer="21"/>
+<wire x1="0.9" y1="-0.55" x2="-0.9" y2="-0.55" width="0.13" layer="21"/>
+<wire x1="-0.9" y1="-0.55" x2="-0.9" y2="0.55" width="0.13" layer="21"/>
+<rectangle x1="-0.75" y1="-0.4" x2="-0.25" y2="0.4" layer="29"/>
+<rectangle x1="0.25" y1="-0.4" x2="0.75" y2="0.4" layer="29"/>
+</package>
+<package name="0201P">
+<description>Resistor land pattern from Panasonic product info PDF: http://www.digikey.fi/product-detail/en/ERJ-1GEF2433C/P243KABCT-ND/1467681</description>
+<smd name="1" x="-0.3" y="0" dx="0.3" dy="0.35" layer="1" stop="no"/>
+<text x="-0.5" y="0.2" size="0.2" layer="25" ratio="20" align="top-left">&gt;NAME</text>
+<text x="-0.5" y="-0.2" size="0.15" layer="27" ratio="20">&gt;VALUE</text>
+<wire x1="-0.3" y1="0.15" x2="0.3" y2="0.15" width="0.05" layer="51"/>
+<wire x1="0.3" y1="0.15" x2="0.3" y2="-0.15" width="0.05" layer="51"/>
+<wire x1="0.3" y1="-0.15" x2="-0.3" y2="-0.15" width="0.05" layer="51"/>
+<wire x1="-0.3" y1="-0.15" x2="-0.3" y2="0.15" width="0.05" layer="51"/>
+<smd name="2" x="0.3" y="0" dx="0.3" dy="0.35" layer="1" stop="no"/>
+<wire x1="-0.6" y1="0.32" x2="0.6" y2="0.32" width="0.13" layer="21"/>
+<wire x1="0.6" y1="0.32" x2="0.6" y2="-0.32" width="0.13" layer="21"/>
+<wire x1="0.6" y1="-0.32" x2="-0.6" y2="-0.32" width="0.13" layer="21"/>
+<wire x1="-0.6" y1="-0.32" x2="-0.6" y2="0.32" width="0.13" layer="21"/>
+<rectangle x1="-0.51" y1="-0.23" x2="-0.15" y2="0.23" layer="29"/>
+<rectangle x1="0.15" y1="-0.23" x2="0.51" y2="0.23" layer="29"/>
+</package>
 </packages>
 <symbols>
 <symbol name="AVX9258">
@@ -271,6 +416,16 @@
 <pin name="4C" x="12.7" y="2.54" visible="pin" length="middle" direction="pas" rot="R180"/>
 <pin name="1C" x="12.7" y="5.08" visible="pin" length="middle" direction="pas" rot="R180"/>
 <pin name="VCC" x="12.7" y="7.62" visible="pin" length="middle" direction="pas" rot="R180"/>
+</symbol>
+<symbol name="CAP">
+<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+<pin name="1" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
+<text x="-1.778" y="3.302" size="1.27" layer="95">&gt;NAME</text>
+<text x="-2.032" y="-4.572" size="1.27" layer="96">&gt;VALUE</text>
+<rectangle x1="-1.524" y1="-0.254" x2="2.54" y2="0.254" layer="94" rot="R90"/>
+<rectangle x1="0" y1="-0.254" x2="4.064" y2="0.254" layer="94" rot="R90"/>
+<wire x1="2.032" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.508" y1="0" x2="0" y2="0" width="0.1524" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -330,6 +485,711 @@
 <attribute name="EURO" value="3.65/10" constant="no"/>
 <attribute name="MANUFACTURER" value="Texas Instruments" constant="no"/>
 <attribute name="MFG_PART_#" value="SN74HC4066PWR" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="74LVC4066" package="14-VFQFN">
+<connects>
+<connect gate="G$1" pin="1A" pad="1"/>
+<connect gate="G$1" pin="1B" pad="2"/>
+<connect gate="G$1" pin="1C" pad="13"/>
+<connect gate="G$1" pin="2A" pad="4"/>
+<connect gate="G$1" pin="2B" pad="3"/>
+<connect gate="G$1" pin="2C" pad="5"/>
+<connect gate="G$1" pin="3A" pad="8"/>
+<connect gate="G$1" pin="3B" pad="9"/>
+<connect gate="G$1" pin="3C" pad="6"/>
+<connect gate="G$1" pin="4A" pad="11"/>
+<connect gate="G$1" pin="4B" pad="10"/>
+<connect gate="G$1" pin="4C" pad="12"/>
+<connect gate="G$1" pin="GND" pad="7 PAD"/>
+<connect gate="G$1" pin="VCC" pad="14"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="568-3019-1-ND " constant="no"/>
+<attribute name="EURO" value="5.11/10" constant="no"/>
+<attribute name="MANUFACTURER" value="NXP Semiconductors" constant="no"/>
+<attribute name="MFG_PART_#" value="74LVC4066BQ,115" constant="no"/>
+<attribute name="TEMP" value="-40°C ~ 125°C" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="CAP" uservalue="yes">
+<description>Ceramic capacitor</description>
+<gates>
+<gate name="G$1" symbol="CAP" x="0" y="0"/>
+</gates>
+<devices>
+<device name="22UF_16V" package="0805">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="445-6797-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="TDK Corporation" constant="no"/>
+<attribute name="MFG_PART_#" value="C2012X5R1C226K125AC" constant="no"/>
+<attribute name="TEMP" value="X5R" constant="no"/>
+<attribute name="TOLERANCE" value="±10%" constant="no"/>
+<attribute name="USD" value="0.67" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="22UF_35V" package="0805">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="445-14428-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="TDK Corporation" constant="no"/>
+<attribute name="MFG_PART_#" value="C2012X5R1V226M125AC" constant="no"/>
+<attribute name="TEMP" value="X5R" constant="no"/>
+<attribute name="TOLERANCE" value="±20%" constant="no"/>
+<attribute name="USD" value="1.09" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="47UF_6.3V-12" package="1210">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="490-5311-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Murata Electronics North America" constant="no"/>
+<attribute name="MFG_PART_#" value="GRM32ER70J476KE20L" constant="no"/>
+<attribute name="TEMP" value="X7R" constant="no"/>
+<attribute name="TOLERANCE" value="±10%" constant="no"/>
+<attribute name="USD" value="1.95" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="10UF_35V" package="0805">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="445-11516-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="TDK Corporation" constant="no"/>
+<attribute name="MFG_PART_#" value="C2012JB1V106K085AC" constant="no"/>
+<attribute name="TEMP" value="-25°C ~ 85°C" constant="no"/>
+<attribute name="TOLERANCE" value="±10%" constant="no"/>
+<attribute name="TYPE" value="smt" constant="no"/>
+<attribute name="USD" value="0.61" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="4.7UF_35V" package="0603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="445-11301-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="TDK Corporation" constant="no"/>
+<attribute name="MFG_PART_#" value="C1608JB1V475K080AC" constant="no"/>
+<attribute name="TEMP" value="-25°C ~ 85°C" constant="no"/>
+<attribute name="TOLERANCE" value="±10%" constant="no"/>
+<attribute name="TYPE" value="smt" constant="no"/>
+<attribute name="USD" value="0.41" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="1UF_35V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="445-11014-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="TDK Corporation" constant="no"/>
+<attribute name="MFG_PART_#" value="C1005JB1V105K050BC" constant="no"/>
+<attribute name="TEMP" value="-25°C ~ 85°C" constant="no"/>
+<attribute name="TOLERANCE" value="±10%" constant="no"/>
+<attribute name="TYPE" value="smt" constant="no"/>
+<attribute name="USD" value="0.16" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="4.7PF_25V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="490-8178-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Murata Electronics North America" constant="no"/>
+<attribute name="MFG_PART_#" value="GRM1555C1E4R7BA01D" constant="no"/>
+<attribute name="TEMP" value="-55°C ~ 125°C" constant="no"/>
+<attribute name="TOLERANCE" value="±0.1pF" constant="no"/>
+<attribute name="TYPE" value="smt" constant="no"/>
+<attribute name="USD" value="0.09" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="10UF_6.3V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="1276-1451-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Samsung Electro-Mechanics America, Inc" constant="no"/>
+<attribute name="MFG_PART_#" value="CL05A106MQ5NUNC" constant="no"/>
+<attribute name="TEMP" value="X5R" constant="no"/>
+<attribute name="TOLERANCE" value="±20%" constant="no"/>
+<attribute name="USD" value="0.53" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="10NF_35V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="445-6900-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="TDK Corporation" constant="no"/>
+<attribute name="MFG_PART_#" value="CGA2B3X7R1V103K050BB" constant="no"/>
+<attribute name="TEMP" value="-55°C ~ 125°C" constant="no"/>
+<attribute name="TOLERANCE" value="±10%" constant="no"/>
+<attribute name="TYPE" value="smt" constant="no"/>
+<attribute name="USD" value="0.09" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="0.1UF_35V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="445-6901-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="TDK Corporation" constant="no"/>
+<attribute name="MFG_PART_#" value="CGA2B3X7R1V104K050BB" constant="no"/>
+<attribute name="TEMP" value="-55°C ~ 125°C" constant="no"/>
+<attribute name="TOLERANCE" value="±10%" constant="no"/>
+<attribute name="TYPE" value="smt" constant="no"/>
+<attribute name="USD" value="0.13" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="1UF_4V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="445-8013-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="TDK Corporation" constant="no"/>
+<attribute name="MFG_PART_#" value="C1005X7S0G105K050BC" constant="no"/>
+<attribute name="TEMP" value="-55°C ~ 125°C" constant="no"/>
+<attribute name="TOLERANCE" value="±10%" constant="no"/>
+<attribute name="TYPE" value="smt" constant="no"/>
+<attribute name="USD" value="0.12" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="4.7UF_6.3V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="445-10890-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="TDK Corporation" constant="no"/>
+<attribute name="MFG_PART_#" value="C1005JB0J475K050BC" constant="no"/>
+<attribute name="TEMP" value="JB" constant="no"/>
+<attribute name="TOLERANCE" value="±10%" constant="no"/>
+<attribute name="USD" value="0.36" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="820PF_50V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="720-1209-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Vitramon" constant="no"/>
+<attribute name="MFG_PART_#" value="VJ0402Y821KNAAJ" constant="no"/>
+<attribute name="TEMP" value="X7R" constant="no"/>
+<attribute name="TOLERANCE" value="±10%" constant="no"/>
+<attribute name="USD" value="0.43" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="33PF_50V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="399-11121-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Kemet" constant="no"/>
+<attribute name="MFG_PART_#" value="C0402C330F5GACTU" constant="no"/>
+<attribute name="TEMP" value="-55°C ~ 125°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+<attribute name="TYPE" value="smt" constant="no"/>
+<attribute name="USD" value="1.22" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="1UF_6.3V_02" package="0201P">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="1276-1323-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Samsung Electro-Mechanics America, Inc" constant="no"/>
+<attribute name="MFG_PART_#" value="CL03A105KQ3CSNC" constant="no"/>
+<attribute name="TEMP" value="-55°C ~ 85°C" constant="no"/>
+<attribute name="TOLERANCE" value="±10%" constant="no"/>
+<attribute name="TYPE" value="smt" constant="no"/>
+<attribute name="USD" value="0.31" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="0.1UF_10V_02" package="0201P">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="445-9051-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="TDK Corporation" constant="no"/>
+<attribute name="MFG_PART_#" value="C0603X7S1A104K030BC" constant="no"/>
+<attribute name="TEMP" value="-55°C ~ 125°C" constant="no"/>
+<attribute name="TOLERANCE" value="±10%" constant="no"/>
+<attribute name="TYPE" value="smt" constant="no"/>
+<attribute name="USD" value="0.13" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="4.7PF_50V_02" package="0201P">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="587-3191-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Taiyo Yuden" constant="no"/>
+<attribute name="MFG_PART_#" value="UMK063CG4R7CT-F" constant="no"/>
+<attribute name="TEMP" value="C0G, NP0" constant="no"/>
+<attribute name="TOLERANCE" value="±5%" constant="no"/>
+<attribute name="USD" value="1.10/10" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="10NF_10V_02" package="0201P">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="490-3194-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Murata Electronics North America" constant="no"/>
+<attribute name="MFG_PART_#" value="GRM033R71A103KA01D" constant="no"/>
+<attribute name="TEMP" value="-55°C ~ 125°C" constant="no"/>
+<attribute name="TOLERANCE" value="±10%" constant="no"/>
+<attribute name="TYPE" value="smt" constant="no"/>
+<attribute name="USD" value="0.09" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="33PF_25V_02" package="0201P">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="478-7391-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="AVX Corporation" constant="no"/>
+<attribute name="MFG_PART_#" value="02013A330GAT2A" constant="no"/>
+<attribute name="TEMP" value="-55°C ~ 125°C" constant="no"/>
+<attribute name="TOLERANCE" value="±2%" constant="no"/>
+<attribute name="TYPE" value="smt" constant="no"/>
+<attribute name="USD" value="0.34" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="820PF_16V" package="0201P">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="478-1038-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="AVX Corporation" constant="no"/>
+<attribute name="MFG_PART_#" value="0201YC821KAT2A" constant="no"/>
+<attribute name="TEMP" value="-55°C ~ 125°C" constant="no"/>
+<attribute name="TOLERANCE" value="±10%" constant="no"/>
+<attribute name="TYPE" value="smt" constant="no"/>
+<attribute name="USD" value="0.33" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="1UF_50V" package="0603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="587-3247-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Taiyo Yuden" constant="no"/>
+<attribute name="MFG_PART_#" value="UMK107AB7105KA-T" constant="no"/>
+<attribute name="TEMP" value="X7R" constant="no"/>
+<attribute name="TOLERANCE" value="±10%" constant="no"/>
+<attribute name="USD" value="1.71/10" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="0.1UF_25V" package="0201P">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="1276-1318-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Samsung Electro-Mechanics America, Inc" constant="no"/>
+<attribute name="MFG_PART_#" value="CL03A104KA3NNNC" constant="no"/>
+<attribute name="TEMP" value="-55°C ~ 85°C" constant="no"/>
+<attribute name="TOLERANCE" value="±10%" constant="no"/>
+<attribute name="TYPE" value="smt" constant="no"/>
+<attribute name="USD" value="0.30" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="0.1UF_50V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="587-3498-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Taiyo Yuden" constant="no"/>
+<attribute name="MFG_PART_#" value="UMK105B7104KV-FR" constant="no"/>
+<attribute name="TEMP" value="X7R" constant="no"/>
+<attribute name="TOLERANCE" value="±10%" constant="no"/>
+<attribute name="USD" value="2.29/10" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="47UF_6.3V-08" package="0805">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="587-1779-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Taiyo Yuden" constant="no"/>
+<attribute name="MFG_PART_#" value="JMK212BJ476MG-T" constant="no"/>
+<attribute name="TEMP" value="X5R" constant="no"/>
+<attribute name="TOLERANCE" value="±20%" constant="no"/>
+<attribute name="USD" value="1.17" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="10NF_10V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="478-7890-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="AVX Corporation" constant="no"/>
+<attribute name="MFG_PART_#" value="0402ZC103KAT2A" constant="no"/>
+<attribute name="TEMP" value="X7R" constant="no"/>
+<attribute name="TOLERANCE" value="±10%" constant="no"/>
+<attribute name="USD" value="0.58/100" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="1UF_6.3V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="1276-1513-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Samsung Electro-Mechanics America, Inc" constant="no"/>
+<attribute name="MFG_PART_#" value="CL05B105KQ5NQNC" constant="no"/>
+<attribute name="TEMP" value="X7R" constant="no"/>
+<attribute name="TOLERANCE" value="±10%" constant="no"/>
+<attribute name="USD" value="0.21" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="0.1UF_10V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="587-3769-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Taiyo Yuden" constant="no"/>
+<attribute name="MFG_PART_#" value="LMK105B7104KVHF" constant="no"/>
+<attribute name="TEMP" value="X7R" constant="no"/>
+<attribute name="TOLERANCE" value="±10%" constant="no"/>
+<attribute name="USD" value="1.90/50" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="33PF_25V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="399-11122-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Kemet" constant="no"/>
+<attribute name="MFG_PART_#" value="C0402C330J3GACTU" constant="no"/>
+<attribute name="TEMP" value="C0G, NP0" constant="no"/>
+<attribute name="TOLERANCE" value="±5%" constant="no"/>
+<attribute name="USD" value="0.30" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="4.7PF_50V_AVX" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="478-1066-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="AVX Corporation" constant="no"/>
+<attribute name="MFG_PART_#" value="04025A4R7CAT2A" constant="no"/>
+<attribute name="TEMP" value="C0G, NP0" constant="no"/>
+<attribute name="TOLERANCE" value="±5%" constant="no"/>
+<attribute name="USD" value="0.26" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="10NF_50V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="399-7758-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Kemet" constant="no"/>
+<attribute name="MFG_PART_#" value="C0402C103J5RACTU" constant="no"/>
+<attribute name="TEMP" value="X7R" constant="no"/>
+<attribute name="TOLERANCE" value="±5%" constant="no"/>
+<attribute name="USD" value="0.34" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="2.2UF_35V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="445-9028-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="TDK Corporation" constant="no"/>
+<attribute name="MFG_PART_#" value="C1005X5R1V225K050BC" constant="no"/>
+<attribute name="TEMP" value="X5R" constant="no"/>
+<attribute name="TOLERANCE" value="±10%" constant="no"/>
+<attribute name="USD" value="0.28" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="47UF_10V" package="0805">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="445-8239-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="TDK Corporation" constant="no"/>
+<attribute name="MFG_PART_#" value="C2012X5R1A476M125AC" constant="no"/>
+<attribute name="TEMP" value="X5R" constant="no"/>
+<attribute name="TOLERANCE" value="±20%" constant="no"/>
+<attribute name="USD" value="0.93" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="4.7UF_10V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="445-13820-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="TDK Corporation" constant="no"/>
+<attribute name="MFG_PART_#" value="C1005X5R1A475K050BC" constant="no"/>
+<attribute name="TEMP" value="X5R" constant="no"/>
+<attribute name="TOLERANCE" value="±10%" constant="no"/>
+<attribute name="USD" value="0.43" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="0.1UF_100V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="490-10458-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Murata Electronics North America" constant="no"/>
+<attribute name="MFG_PART_#" value="GRM155R62A104KE14D" constant="no"/>
+<attribute name="TEMP" value="X5R" constant="no"/>
+<attribute name="TOLERANCE" value="±10%" constant="no"/>
+<attribute name="USD" value="0.65/10" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="1NF_100V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="445-15935-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="TDK Corporation" constant="no"/>
+<attribute name="MFG_PART_#" value="CGA2B2X8R2A102K050BA" constant="no"/>
+<attribute name="TEMP" value="X8R" constant="no"/>
+<attribute name="TOLERANCE" value="±10%" constant="no"/>
+<attribute name="USD" value="0.26" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="10UF_10V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="1276-1450-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Samsung Electro-Mechanics America, Inc" constant="no"/>
+<attribute name="MFG_PART_#" value="CL05A106MP5NUNC" constant="no"/>
+<attribute name="TEMP" value="X5R" constant="no"/>
+<attribute name="TOLERANCE" value="±20%" constant="no"/>
+<attribute name="USD" value="0.59" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="33PF_100V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="490-7305-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Murata Electronics North America" constant="no"/>
+<attribute name="MFG_PART_#" value="GRM1555C2A330JA01D" constant="no"/>
+<attribute name="TEMP" value="C0G, NP0" constant="no"/>
+<attribute name="TOLERANCE" value="±5%" constant="no"/>
+<attribute name="USD" value="1.50/50" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="820PF_100V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="445-172681-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="TDK Corporation" constant="no"/>
+<attribute name="MFG_PART_#" value="CGA2B1C0G2A821J050BC" constant="no"/>
+<attribute name="TEMP" value="C0G, NP0" constant="no"/>
+<attribute name="TOLERANCE" value="±5%" constant="no"/>
+<attribute name="USD" value="1.27/10" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="1UF_10V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="490-3890-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Murata Electronics North America" constant="no"/>
+<attribute name="MFG_PART_#" value="GRM155R61A105KE15D" constant="no"/>
+<attribute name="TEMP" value="X5R" constant="no"/>
+<attribute name="TOLERANCE" value="±10%" constant="no"/>
+<attribute name="USD" value="1.86/50" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="1.5NF_50V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="490-3245-1-ND" constant="no"/>
+<attribute name="MANUFACTURER" value="Murata Electronics North America" constant="no"/>
+<attribute name="MFG_PART_#" value="GRM155R71H152KA01D" constant="no"/>
+<attribute name="TEMP" value="X7R" constant="no"/>
+<attribute name="TOLERANCE" value="±10%" constant="no"/>
+<attribute name="USD" value="0.97/100" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="4.7PF_50V" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="1276-1702-1-ND" constant="no"/>
+<attribute name="EURO" value="1.35/100" constant="no"/>
+<attribute name="MANUFACTURER" value="Samsung Electro-Mechanics America, Inc." constant="no"/>
+<attribute name="MFG_PART_#" value="CL05C4R7BB5NNNC" constant="no"/>
+<attribute name="TEMP" value="C0G, NP0" constant="no"/>
+<attribute name="TOLERANCE" value="±0.1pF" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -980,7 +1840,7 @@ Keying posts into board</description>
 <wire x1="4.55" y1="-2.25" x2="4.55" y2="-7.64" width="0.2032" layer="21"/>
 <text x="-4" y="-6" size="0.7" layer="25">&gt;NAME</text>
 <text x="-4" y="-7" size="0.7" layer="27">&gt;VALUE</text>
-<text x="-4" y="6" size="0.8128" layer="21" font="vector" ratio="15">61200621621</text>
+<text x="-4" y="6" size="0.8128" layer="21" font="vector" ratio="10">61200621621</text>
 <circle x="3.5" y="-4.8" radius="0.25" width="0.5" layer="21"/>
 </package>
 <package name="1X01_LONGPAD">
@@ -2018,9 +2878,10 @@ DPDT SMT slide switch, AYZ0202, SWCH-08179</description>
 <part name="JP2" library="SparkFun-Connectors" deviceset="M01" device="PTH"/>
 <part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="JP3" library="SparkFun-Connectors" deviceset="M01" device="PTH"/>
-<part name="U1" library="dubec" deviceset="SWITCH_IC_QUAD" device="SN74HC4066PW"/>
-<part name="GND5" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="U1" library="dubec" deviceset="SWITCH_IC_QUAD" device="74LVC4066" value="SWITCH_IC_QUAD74LVC4066"/>
 <part name="S1" library="SparkFun-Electromechanical" deviceset="SWITCH-SPDT" device="ESWITCH"/>
+<part name="GND6" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="C1" library="dubec" deviceset="CAP" device="4.7UF_10V"/>
 </parts>
 <sheets>
 <sheet>
@@ -2039,8 +2900,9 @@ as the contact may contact whatever.</text>
 <instance part="GND1" gate="1" x="66.04" y="78.74"/>
 <instance part="JP3" gate="G$1" x="45.72" y="91.44" rot="R270"/>
 <instance part="U1" gate="G$1" x="58.42" y="48.26"/>
-<instance part="GND5" gate="1" x="43.18" y="35.56"/>
 <instance part="S1" gate="1" x="15.24" y="45.72"/>
+<instance part="GND6" gate="1" x="86.36" y="27.94"/>
+<instance part="C1" gate="G$1" x="78.74" y="60.96"/>
 </instances>
 <busses>
 </busses>
@@ -2064,7 +2926,12 @@ as the contact may contact whatever.</text>
 <segment>
 <pinref part="U1" gate="G$1" pin="VCC"/>
 <wire x1="71.12" y1="55.88" x2="73.66" y2="55.88" width="0.1524" layer="91"/>
-<label x="73.66" y="55.88" size="1.27" layer="95" xref="yes"/>
+<label x="76.2" y="55.88" size="1.27" layer="95" xref="yes"/>
+<pinref part="C1" gate="G$1" pin="1"/>
+<wire x1="73.66" y1="55.88" x2="76.2" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="60.96" x2="73.66" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="60.96" x2="73.66" y2="55.88" width="0.1524" layer="91"/>
+<junction x="73.66" y="55.88"/>
 </segment>
 <segment>
 <pinref part="S1" gate="1" pin="O"/>
@@ -2101,6 +2968,32 @@ as the contact may contact whatever.</text>
 <wire x1="101.6" y1="50.8" x2="99.06" y2="50.8" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="7"/>
 <wire x1="101.6" y1="50.8" x2="101.6" y2="55.88" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="GND"/>
+<wire x1="45.72" y1="40.64" x2="43.18" y2="40.64" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND6" gate="1" pin="GND"/>
+<wire x1="43.18" y1="40.64" x2="43.18" y2="33.02" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="4C"/>
+<wire x1="71.12" y1="50.8" x2="86.36" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="50.8" x2="86.36" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="4A"/>
+<wire x1="86.36" y1="48.26" x2="86.36" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="45.72" x2="86.36" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="33.02" x2="86.36" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="48.26" x2="86.36" y2="48.26" width="0.1524" layer="91"/>
+<junction x="86.36" y="48.26"/>
+<pinref part="U1" gate="G$1" pin="4B"/>
+<wire x1="71.12" y1="45.72" x2="86.36" y2="45.72" width="0.1524" layer="91"/>
+<junction x="86.36" y="45.72"/>
+<wire x1="43.18" y1="33.02" x2="86.36" y2="33.02" width="0.1524" layer="91"/>
+<junction x="86.36" y="33.02"/>
+<pinref part="C1" gate="G$1" pin="2"/>
+<wire x1="83.82" y1="60.96" x2="86.36" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="60.96" x2="86.36" y2="50.8" width="0.1524" layer="91"/>
+<junction x="86.36" y="50.8"/>
 </segment>
 </net>
 <net name="MISO" class="0">
@@ -2144,27 +3037,6 @@ as the contact may contact whatever.</text>
 <pinref part="JP2" gate="G$1" pin="1"/>
 <wire x1="66.04" y1="83.82" x2="66.04" y2="81.28" width="0.1524" layer="91"/>
 <pinref part="GND1" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="U1" gate="G$1" pin="GND"/>
-<wire x1="45.72" y1="40.64" x2="43.18" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="40.64" x2="43.18" y2="38.1" width="0.1524" layer="91"/>
-<pinref part="GND5" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="U1" gate="G$1" pin="4C"/>
-<wire x1="71.12" y1="50.8" x2="73.66" y2="50.8" width="0.1524" layer="91"/>
-<label x="73.66" y="50.8" size="1.27" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="U1" gate="G$1" pin="4A"/>
-<wire x1="71.12" y1="48.26" x2="73.66" y2="48.26" width="0.1524" layer="91"/>
-<label x="73.66" y="48.26" size="1.27" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="U1" gate="G$1" pin="4B"/>
-<wire x1="71.12" y1="45.72" x2="73.66" y2="45.72" width="0.1524" layer="91"/>
-<label x="73.66" y="45.72" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="S1" gate="1" pin="S"/>
