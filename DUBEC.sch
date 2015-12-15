@@ -299,22 +299,6 @@
 <rectangle x1="-1.15" y1="-0.55" x2="-0.35" y2="0.55" layer="29"/>
 <rectangle x1="0.35" y1="-0.55" x2="1.15" y2="0.55" layer="29"/>
 </package>
-<package name="0603@1">
-<smd name="1" x="-0.75" y="0" dx="0.7" dy="1" layer="1" stop="no"/>
-<smd name="2" x="0.75" y="0" dx="0.7" dy="1" layer="1" stop="no"/>
-<text x="-1.15" y="0.5" size="0.4" layer="25" align="top-left">&gt;NAME</text>
-<text x="-1.15" y="-0.5" size="0.4" layer="27">&gt;VALUE</text>
-<wire x1="-0.85" y1="0.475" x2="0.85" y2="0.475" width="0.05" layer="51"/>
-<wire x1="0.85" y1="0.475" x2="0.85" y2="-0.475" width="0.05" layer="51"/>
-<wire x1="0.85" y1="-0.475" x2="-0.85" y2="-0.475" width="0.05" layer="51"/>
-<wire x1="-0.85" y1="-0.475" x2="-0.85" y2="0.475" width="0.05" layer="51"/>
-<wire x1="-1.3" y1="0.7" x2="1.3" y2="0.7" width="0.13" layer="21"/>
-<wire x1="1.3" y1="0.7" x2="1.3" y2="-0.7" width="0.13" layer="21"/>
-<wire x1="1.3" y1="-0.7" x2="-1.3" y2="-0.7" width="0.13" layer="21"/>
-<wire x1="-1.3" y1="-0.7" x2="-1.3" y2="0.7" width="0.13" layer="21"/>
-<rectangle x1="-1.15" y1="-0.55" x2="-0.35" y2="0.55" layer="29"/>
-<rectangle x1="0.35" y1="-0.55" x2="1.15" y2="0.55" layer="29"/>
-</package>
 <package name="0603+">
 <description>IPC-SM-782 RES/CAP</description>
 <smd name="A" x="-0.8" y="0" dx="0.8" dy="1" layer="1" stop="no"/>
@@ -942,23 +926,25 @@
 <wire x1="-1.7" y1="-0.95" x2="-1.7" y2="0.95" width="0.13" layer="21"/>
 <text x="1.53" y="-1.13" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
 </package>
-<package name="AVX9258-7L">
-<text x="-2" y="-1" size="0.5" layer="25" ratio="10" align="top-left">&gt;NAME</text>
-<text x="-2" y="-1.8" size="0.5" layer="27" align="top-left">&gt;VALUE</text>
-<smd name="1" x="-2" y="0" dx="0.7" dy="1.1" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="P1" x="-3" y="0.1" dx="0.7" dy="1.3" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="3" x="0" y="0" dx="0.7" dy="1.1" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="4" x="1" y="0" dx="0.7" dy="1.1" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="5" x="2" y="0" dx="0.7" dy="1.1" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="P2" x="3" y="0.1" dx="0.7" dy="1.3" layer="1" stop="no" thermals="no" cream="no"/>
-<rectangle x1="-3.3" y1="-0.5" x2="-2.7" y2="0.7" layer="29"/>
-<rectangle x1="-0.3" y1="-0.5" x2="0.3" y2="0.5" layer="29"/>
-<rectangle x1="0.7" y1="-0.5" x2="1.3" y2="0.5" layer="29"/>
-<rectangle x1="1.7" y1="-0.5" x2="2.3" y2="0.5" layer="29"/>
-<rectangle x1="2.7" y1="-0.5" x2="3.3" y2="0.7" layer="29"/>
-<rectangle x1="-2.3" y1="-0.5" x2="-1.7" y2="0.5" layer="29"/>
-<smd name="2" x="-1" y="0" dx="0.7" dy="1.1" layer="1" stop="no" thermals="no" cream="no"/>
-<rectangle x1="-1.3" y1="-0.5" x2="-0.7" y2="0.5" layer="29"/>
+<package name="AVX9258-PCB">
+<text x="-1.5" y="-1" size="0.5" layer="25" ratio="10" align="top-left">&gt;NAME</text>
+<text x="-1.5" y="-1.8" size="0.5" layer="27" align="top-left">&gt;VALUE</text>
+<smd name="2" x="-1.5" y="0" dx="0.7" dy="1.1" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="P1" x="-3.5" y="0.1" dx="0.7" dy="1.3" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="4" x="0.5" y="0" dx="0.7" dy="1.1" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="5" x="1.5" y="0" dx="0.7" dy="1.1" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="6" x="2.5" y="0" dx="0.7" dy="1.1" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="P2" x="3.5" y="0.1" dx="0.7" dy="1.3" layer="1" stop="no" thermals="no" cream="no"/>
+<rectangle x1="-3.8" y1="-0.5" x2="-3.2" y2="0.7" layer="29"/>
+<rectangle x1="0.2" y1="-0.5" x2="0.8" y2="0.5" layer="29"/>
+<rectangle x1="1.2" y1="-0.5" x2="1.8" y2="0.5" layer="29"/>
+<rectangle x1="2.2" y1="-0.5" x2="2.8" y2="0.5" layer="29"/>
+<rectangle x1="3.2" y1="-0.5" x2="3.8" y2="0.7" layer="29"/>
+<rectangle x1="-1.8" y1="-0.5" x2="-1.2" y2="0.5" layer="29"/>
+<smd name="3" x="-0.5" y="0" dx="0.7" dy="1.1" layer="1" stop="no" thermals="no" cream="no"/>
+<rectangle x1="-0.8" y1="-0.5" x2="-0.2" y2="0.5" layer="29"/>
+<smd name="1" x="-2.5" y="0" dx="0.7" dy="1.1" layer="1" stop="no" thermals="no" cream="no"/>
+<rectangle x1="-2.8" y1="-0.5" x2="-2.2" y2="0.5" layer="29"/>
 </package>
 <package name="1206">
 <description>IPC-SM-782 RES/CAP</description>
@@ -1330,14 +1316,15 @@
 <pin name="1" x="7.62" y="5.08" visible="pin" length="middle" direction="pas" rot="R180"/>
 <pin name="2" x="7.62" y="2.54" visible="pin" length="middle" direction="pas" rot="R180"/>
 <pin name="4" x="7.62" y="-2.54" visible="pin" length="middle" direction="pas" rot="R180"/>
-<wire x1="-5.08" y1="12.7" x2="5.08" y2="12.7" width="0.508" layer="94"/>
-<wire x1="5.08" y1="12.7" x2="5.08" y2="-12.7" width="0.508" layer="94"/>
+<wire x1="-5.08" y1="10.16" x2="5.08" y2="10.16" width="0.508" layer="94"/>
+<wire x1="5.08" y1="10.16" x2="5.08" y2="-12.7" width="0.508" layer="94"/>
 <wire x1="5.08" y1="-12.7" x2="-5.08" y2="-12.7" width="0.508" layer="94"/>
-<wire x1="-5.08" y1="-12.7" x2="-5.08" y2="12.7" width="0.508" layer="94"/>
-<text x="-5.08" y="15.24" size="2.54" layer="95">&gt;NAME</text>
+<wire x1="-5.08" y1="-12.7" x2="-5.08" y2="10.16" width="0.508" layer="94"/>
+<text x="-5.08" y="12.7" size="2.54" layer="95">&gt;NAME</text>
 <text x="-5.08" y="-15.24" size="2.54" layer="96" align="top-left">&gt;VALUE</text>
 <pin name="3" x="7.62" y="0" visible="pin" length="middle" direction="pas" rot="R180"/>
-<pin name="P2" x="7.62" y="-7.62" visible="pin" length="middle" direction="pas" rot="R180"/>
+<pin name="P2" x="7.62" y="-10.16" visible="pin" length="middle" direction="pas" rot="R180"/>
+<pin name="6" x="7.62" y="-7.62" visible="pin" length="middle" direction="pas" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -1693,7 +1680,7 @@
 </technology>
 </technologies>
 </device>
-<device name="4.7UF_35V" package="0603@1">
+<device name="4.7UF_35V" package="0603">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -1961,7 +1948,7 @@
 </technology>
 </technologies>
 </device>
-<device name="1UF_50V" package="0603@1">
+<device name="1UF_50V" package="0603">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -4504,18 +4491,19 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="AVX9258-7P">
+<deviceset name="AVX9258-PCB">
 <gates>
 <gate name="G$1" symbol="AVX9258-7P" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="AVX9258-7L">
+<device name="" package="AVX9258-PCB">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
 <connect gate="G$1" pin="3" pad="3"/>
 <connect gate="G$1" pin="4" pad="4"/>
 <connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
 <connect gate="G$1" pin="P1" pad="P1"/>
 <connect gate="G$1" pin="P2" pad="P2"/>
 </connects>
@@ -4742,7 +4730,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="U$7" library="SparkFun-Aesthetics" deviceset="AGND" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
-<part name="U$8" library="dubec" deviceset="AVX9258-7P" device=""/>
+<part name="U$8" library="dubec" deviceset="AVX9258-PCB" device=""/>
 <part name="RSNUB" library="dubec" deviceset="RES" device="1.5_4" value="RES1.5_4"/>
 <part name="CSNUB" library="dubec" deviceset="CAP" device="22UF_35V"/>
 <part name="U$9" library="dubec" deviceset="JUMPER-PAD" device=""/>
@@ -4843,7 +4831,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="D3" gate="G$1" x="-53.34" y="-35.56" rot="R180"/>
 <instance part="GND7" gate="1" x="58.42" y="-96.52"/>
 <instance part="R12VPU" gate="G$1" x="-76.2" y="60.96"/>
-<instance part="GND9" gate="1" x="-127" y="63.5"/>
+<instance part="GND9" gate="1" x="-127" y="60.96"/>
 <instance part="SJ1" gate="G$1" x="-58.42" y="60.96"/>
 <instance part="5COUT1" gate="G$1" x="93.98" y="38.1" rot="R180"/>
 <instance part="12COUT1" gate="G$1" x="30.48" y="-78.74" rot="R180"/>
@@ -5059,8 +5047,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <pinref part="GND9" gate="1" pin="GND"/>
 <pinref part="U$8" gate="G$1" pin="P2"/>
+<wire x1="-132.08" y1="66.04" x2="-127" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="-127" y1="63.5" x2="-127" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="U$8" gate="G$1" pin="6"/>
 <wire x1="-132.08" y1="68.58" x2="-127" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="-127" y1="66.04" x2="-127" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="-127" y1="68.58" x2="-127" y2="66.04" width="0.1524" layer="91"/>
+<junction x="-127" y="66.04"/>
 </segment>
 <segment>
 <pinref part="12D" gate="G$1" pin="C"/>
