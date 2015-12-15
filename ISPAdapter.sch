@@ -2886,8 +2886,6 @@ DPDT SMT slide switch, AYZ0202, SWCH-08179</description>
 <sheets>
 <sheet>
 <plain>
-<text x="99.06" y="73.66" size="1.016" layer="97" align="top-left">Pin 8 is unconnected to avoid shorts,
-as the contact may contact whatever.</text>
 </plain>
 <instances>
 <instance part="GND2" gate="1" x="0" y="76.2" rot="R180"/>
@@ -2895,7 +2893,7 @@ as the contact may contact whatever.</text>
 <instance part="JP1" gate="G$1" x="86.36" y="91.44" rot="R270"/>
 <instance part="GND3" gate="1" x="83.82" y="78.74"/>
 <instance part="U$1" gate="G$1" x="109.22" y="63.5" rot="R270"/>
-<instance part="GND4" gate="1" x="99.06" y="50.8"/>
+<instance part="GND4" gate="1" x="99.06" y="48.26"/>
 <instance part="JP2" gate="G$1" x="66.04" y="91.44" rot="R270"/>
 <instance part="GND1" gate="1" x="66.04" y="78.74"/>
 <instance part="JP3" gate="G$1" x="45.72" y="91.44" rot="R270"/>
@@ -2965,8 +2963,13 @@ as the contact may contact whatever.</text>
 </segment>
 <segment>
 <pinref part="GND4" gate="1" pin="GND"/>
-<wire x1="101.6" y1="55.88" x2="99.06" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="7"/>
+<pinref part="U$1" gate="G$1" pin="8"/>
+<wire x1="99.06" y1="55.88" x2="99.06" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="53.34" x2="99.06" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="55.88" x2="101.6" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="53.34" x2="99.06" y2="53.34" width="0.1524" layer="91"/>
+<junction x="99.06" y="53.34"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="GND"/>
