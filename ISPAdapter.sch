@@ -233,32 +233,31 @@
 <rectangle x1="2.1" y1="1.8" x2="3.5" y2="2.1" layer="29"/>
 </package>
 <package name="14-VFQFN">
-<text x="-1.2" y="-0.5" size="0.4" layer="27">&gt;VALUE</text>
-<text x="-1.2" y="0.6" size="0.4" layer="25" align="top-left">&gt;NAME</text>
-<smd name="1" x="-1.4" y="0.25" dx="0.25" dy="0.7" layer="1" rot="R90" stop="no" thermals="no" cream="no"/>
-<smd name="14" x="-1.4" y="-0.25" dx="0.25" dy="0.7" layer="1" rot="R90" stop="no" thermals="no" cream="no"/>
-<smd name="3" x="-0.5" y="1.2" dx="0.25" dy="0.7" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
-<smd name="2" x="-1" y="1.2" dx="0.25" dy="0.7" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
-<smd name="4" x="0" y="1.2" dx="0.25" dy="0.7" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
-<smd name="5" x="0.5" y="1.2" dx="0.25" dy="0.7" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
-<smd name="6" x="1" y="1.2" dx="0.25" dy="0.7" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
-<smd name="7" x="1.4" y="0.25" dx="0.25" dy="0.7" layer="1" rot="R90" stop="no" thermals="no" cream="no"/>
-<smd name="8" x="1.4" y="-0.25" dx="0.25" dy="0.7" layer="1" rot="R90" stop="no" thermals="no" cream="no"/>
-<smd name="9" x="1" y="-1.1" dx="0.25" dy="0.7" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
-<smd name="10" x="0.5" y="-1.1" dx="0.25" dy="0.7" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
-<smd name="11" x="0" y="-1.1" dx="0.25" dy="0.7" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
-<smd name="12" x="-0.5" y="-1.1" dx="0.25" dy="0.7" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
-<smd name="13" x="-1" y="-1.1" dx="0.25" dy="0.7" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
+<text x="-1.4" y="-1.8" size="0.4" layer="27" align="top-left">&gt;VALUE</text>
+<text x="-1.4" y="1.8" size="0.4" layer="25">&gt;NAME</text>
+<smd name="14" x="-1.4" y="0.25" dx="0.25" dy="0.7" layer="1" rot="R90" stop="no" thermals="no" cream="no"/>
+<smd name="1" x="-1.4" y="-0.25" dx="0.25" dy="0.7" layer="1" rot="R90" stop="no" thermals="no" cream="no"/>
+<smd name="12" x="-0.5" y="1.2" dx="0.25" dy="0.7" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
+<smd name="13" x="-1" y="1.2" dx="0.25" dy="0.7" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
+<smd name="11" x="0" y="1.2" dx="0.25" dy="0.7" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
+<smd name="10" x="0.5" y="1.2" dx="0.25" dy="0.7" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
+<smd name="9" x="1" y="1.2" dx="0.25" dy="0.7" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
+<smd name="8" x="1.4" y="0.25" dx="0.25" dy="0.7" layer="1" rot="R90" stop="no" thermals="no" cream="no"/>
+<smd name="7" x="1.4" y="-0.25" dx="0.25" dy="0.7" layer="1" rot="R90" stop="no" thermals="no" cream="no"/>
+<smd name="6" x="1" y="-1.1" dx="0.25" dy="0.7" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
+<smd name="5" x="0.5" y="-1.1" dx="0.25" dy="0.7" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
+<smd name="4" x="0" y="-1.1" dx="0.25" dy="0.7" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
+<smd name="3" x="-0.5" y="-1.1" dx="0.25" dy="0.7" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
+<smd name="2" x="-1" y="-1.1" dx="0.25" dy="0.7" layer="1" rot="R180" stop="no" thermals="no" cream="no"/>
 <wire x1="-1.4" y1="-1.25" x2="-1.5" y2="-1.25" width="0.13" layer="21"/>
-<wire x1="-1.5" y1="-1.25" x2="-1.5" y2="-0.65" width="0.13" layer="21"/>
 <wire x1="1.5" y1="-1.25" x2="1.5" y2="-0.65" width="0.13" layer="21"/>
 <wire x1="1.5" y1="0.65" x2="1.5" y2="1.25" width="0.13" layer="21"/>
 <wire x1="1.5" y1="-1.25" x2="1.4" y2="-1.25" width="0.13" layer="21"/>
 <wire x1="1.5" y1="1.25" x2="1.4" y2="1.25" width="0.13" layer="21"/>
 <wire x1="-1.4" y1="1.25" x2="-1.5" y2="1.25" width="0.13" layer="21"/>
 <polygon width="0.13" layer="21">
-<vertex x="-1.5" y="1.25" curve="180"/>
-<vertex x="-1.5" y="0.65"/>
+<vertex x="-1.5" y="-0.65" curve="180"/>
+<vertex x="-1.5" y="-1.25"/>
 </polygon>
 <rectangle x1="-1.75" y1="0.125" x2="-1.05" y2="0.375" layer="29"/>
 <rectangle x1="-1.75" y1="-0.375" x2="-1.05" y2="-0.125" layer="29"/>
@@ -292,6 +291,7 @@
 <rectangle x1="-0.7" y1="-0.45" x2="0.7" y2="0.45" layer="29"/>
 <rectangle x1="-0.55" y1="-0.35" x2="-0.15" y2="0.35" layer="31"/>
 <rectangle x1="0.15" y1="-0.35" x2="0.55" y2="0.35" layer="31"/>
+<wire x1="-1.5" y1="0.65" x2="-1.5" y2="1.25" width="0.13" layer="21"/>
 </package>
 <package name="0805">
 <description>IPC-SM-782 RES/CAP</description>
@@ -2946,9 +2946,9 @@ as the contact may contact whatever.</text>
 <label x="106.68" y="53.34" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="3B"/>
-<wire x1="71.12" y1="43.18" x2="73.66" y2="43.18" width="0.1524" layer="91"/>
-<label x="73.66" y="43.18" size="1.27" layer="95" xref="yes"/>
+<pinref part="U1" gate="G$1" pin="4B"/>
+<wire x1="71.12" y1="45.72" x2="73.66" y2="45.72" width="0.1524" layer="91"/>
+<label x="73.66" y="45.72" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="DGND" class="0">
@@ -2972,28 +2972,28 @@ as the contact may contact whatever.</text>
 <segment>
 <pinref part="U1" gate="G$1" pin="GND"/>
 <wire x1="45.72" y1="40.64" x2="43.18" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="3C"/>
+<wire x1="45.72" y1="43.18" x2="43.18" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="43.18" x2="43.18" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND6" gate="1" pin="GND"/>
 <wire x1="43.18" y1="40.64" x2="43.18" y2="33.02" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="4C"/>
-<wire x1="71.12" y1="50.8" x2="86.36" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="50.8" x2="86.36" y2="48.26" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="4A"/>
-<wire x1="86.36" y1="48.26" x2="86.36" y2="45.72" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="45.72" x2="86.36" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="33.02" x2="86.36" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="71.12" y1="48.26" x2="86.36" y2="48.26" width="0.1524" layer="91"/>
-<junction x="86.36" y="48.26"/>
-<pinref part="U1" gate="G$1" pin="4B"/>
-<wire x1="71.12" y1="45.72" x2="86.36" y2="45.72" width="0.1524" layer="91"/>
-<junction x="86.36" y="45.72"/>
-<wire x1="43.18" y1="33.02" x2="86.36" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="33.02" x2="73.66" y2="33.02" width="0.1524" layer="91"/>
 <junction x="86.36" y="33.02"/>
 <pinref part="C1" gate="G$1" pin="2"/>
+<wire x1="73.66" y1="33.02" x2="86.36" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="83.82" y1="60.96" x2="86.36" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="60.96" x2="86.36" y2="50.8" width="0.1524" layer="91"/>
-<junction x="86.36" y="50.8"/>
+<wire x1="86.36" y1="60.96" x2="86.36" y2="33.02" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="3B"/>
+<wire x1="71.12" y1="43.18" x2="73.66" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="3A"/>
+<wire x1="71.12" y1="40.64" x2="73.66" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="43.18" x2="73.66" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="40.64" x2="73.66" y2="33.02" width="0.1524" layer="91"/>
+<junction x="73.66" y="40.64"/>
+<junction x="73.66" y="33.02"/>
 </segment>
 </net>
 <net name="MISO" class="0">
@@ -3003,9 +3003,9 @@ as the contact may contact whatever.</text>
 <label x="111.76" y="53.34" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="1B"/>
-<wire x1="45.72" y1="53.34" x2="43.18" y2="53.34" width="0.1524" layer="91"/>
-<label x="43.18" y="53.34" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="U1" gate="G$1" pin="2B"/>
+<wire x1="45.72" y1="50.8" x2="43.18" y2="50.8" width="0.1524" layer="91"/>
+<label x="43.18" y="50.8" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="SCK" class="0">
@@ -3015,9 +3015,9 @@ as the contact may contact whatever.</text>
 <label x="114.3" y="53.34" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="2B"/>
-<wire x1="45.72" y1="50.8" x2="43.18" y2="50.8" width="0.1524" layer="91"/>
-<label x="43.18" y="50.8" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="U1" gate="G$1" pin="1B"/>
+<wire x1="45.72" y1="53.34" x2="43.18" y2="53.34" width="0.1524" layer="91"/>
+<label x="43.18" y="53.34" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="RESET" class="0">
@@ -3068,14 +3068,14 @@ as the contact may contact whatever.</text>
 <label x="43.18" y="45.72" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="3C"/>
-<wire x1="45.72" y1="43.18" x2="43.18" y2="43.18" width="0.1524" layer="91"/>
-<label x="43.18" y="43.18" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
 <pinref part="S1" gate="1" pin="P"/>
 <wire x1="12.7" y1="45.72" x2="10.16" y2="45.72" width="0.1524" layer="91"/>
 <label x="10.16" y="45.72" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="4C"/>
+<wire x1="71.12" y1="50.8" x2="73.66" y2="50.8" width="0.1524" layer="91"/>
+<label x="73.66" y="50.8" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="SCK_A" class="0">
@@ -3085,9 +3085,9 @@ as the contact may contact whatever.</text>
 <label x="20.32" y="68.58" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="2A"/>
-<wire x1="45.72" y1="48.26" x2="43.18" y2="48.26" width="0.1524" layer="91"/>
-<label x="43.18" y="48.26" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="U1" gate="G$1" pin="1A"/>
+<wire x1="45.72" y1="55.88" x2="43.18" y2="55.88" width="0.1524" layer="91"/>
+<label x="43.18" y="55.88" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="MISO_A" class="0">
@@ -3097,9 +3097,9 @@ as the contact may contact whatever.</text>
 <label x="20.32" y="66.04" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="1A"/>
-<wire x1="45.72" y1="55.88" x2="43.18" y2="55.88" width="0.1524" layer="91"/>
-<label x="43.18" y="55.88" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="U1" gate="G$1" pin="2A"/>
+<wire x1="45.72" y1="48.26" x2="43.18" y2="48.26" width="0.1524" layer="91"/>
+<label x="43.18" y="48.26" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="MOSI_A" class="0">
@@ -3109,9 +3109,9 @@ as the contact may contact whatever.</text>
 <label x="0" y="68.58" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="3A"/>
-<wire x1="71.12" y1="40.64" x2="73.66" y2="40.64" width="0.1524" layer="91"/>
-<label x="73.66" y="40.64" size="1.27" layer="95" xref="yes"/>
+<pinref part="U1" gate="G$1" pin="4A"/>
+<wire x1="71.12" y1="48.26" x2="73.66" y2="48.26" width="0.1524" layer="91"/>
+<label x="73.66" y="48.26" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>
