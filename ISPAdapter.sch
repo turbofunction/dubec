@@ -2882,6 +2882,8 @@ DPDT SMT slide switch, AYZ0202, SWCH-08179</description>
 <part name="S1" library="SparkFun-Electromechanical" deviceset="SWITCH-SPDT" device="ESWITCH"/>
 <part name="GND6" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="C1" library="dubec" deviceset="CAP" device="4.7UF_10V"/>
+<part name="C2" library="dubec" deviceset="CAP" device="0.1UF_100V"/>
+<part name="GND5" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -2901,6 +2903,8 @@ DPDT SMT slide switch, AYZ0202, SWCH-08179</description>
 <instance part="S1" gate="1" x="15.24" y="45.72"/>
 <instance part="GND6" gate="1" x="86.36" y="27.94"/>
 <instance part="C1" gate="G$1" x="78.74" y="60.96"/>
+<instance part="C2" gate="G$1" x="10.16" y="40.64" rot="R270"/>
+<instance part="GND5" gate="1" x="10.16" y="30.48"/>
 </instances>
 <busses>
 </busses>
@@ -2997,6 +3001,11 @@ DPDT SMT slide switch, AYZ0202, SWCH-08179</description>
 <junction x="73.66" y="40.64"/>
 <junction x="73.66" y="33.02"/>
 </segment>
+<segment>
+<pinref part="GND5" gate="1" pin="GND"/>
+<wire x1="10.16" y1="35.56" x2="10.16" y2="33.02" width="0.1524" layer="91"/>
+<pinref part="C2" gate="G$1" pin="2"/>
+</segment>
 </net>
 <net name="MISO" class="0">
 <segment>
@@ -3072,7 +3081,11 @@ DPDT SMT slide switch, AYZ0202, SWCH-08179</description>
 <segment>
 <pinref part="S1" gate="1" pin="P"/>
 <wire x1="12.7" y1="45.72" x2="10.16" y2="45.72" width="0.1524" layer="91"/>
-<label x="10.16" y="45.72" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="7.62" y="45.72" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="C2" gate="G$1" pin="1"/>
+<wire x1="10.16" y1="45.72" x2="7.62" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="45.72" x2="10.16" y2="43.18" width="0.1524" layer="91"/>
+<junction x="10.16" y="45.72"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="4C"/>
