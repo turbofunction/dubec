@@ -77,6 +77,14 @@ typedef struct {
 	// see AUX_*
 	uint8_t aux_status;
 	/**
+	 * Watchdog/ADC is set to to higher rate to detect
+	 * battery disconnect faster, but warning blink
+	 * is 1Hz (ie., 0.5s toggle). And I decided to
+	 * sample battery also at that slower rate.
+	 * (So, store only every so manyeth sample.)
+	 */
+	uint8_t until_sample;
+	/**
 	 * Fallback level is set to 75% of measured initial voltage
 	 * level, ie. 4.2V results in 3.15V and 3.8V makes 2.85V.
 	 * Thus, if you rely on the device to not allow battery to
@@ -101,7 +109,7 @@ typedef struct {
 // http://embeddedgurus.com/barr-code/2012/11/how-to-combine-volatile-with-struct/
 // also: initializing to zero, just to avoid thinking
 // that "this variable can't have an unknown value"
-battery_t volatile batt = { 0, 0, 0, { 0 } };
+battery_t volatile batt = { 0, 9, 0, 0, { 0 } };
 
 // sourcing from main battery
 #define SIG_MAIN 1
@@ -180,7 +188,7 @@ int main(void) {
 	// global interrupt enable, SREG |= SREG_I
 	sei();
 
-	watchdog(WDTO_500MS);
+	watchdog(WDTO_60MS);
 
 	// Trigger first ADC only after the first watchdog timeout
 	// to allow initializations. (Unsure whether the CPU power down
@@ -435,11 +443,22 @@ ISR(ADC_vect) {
 	// read the high byte on a separate line to "ensure" proper ordering
 	v |= ADCH << 8;
 
-	// at least 1 to flag the memory as unprocessed
-	batt.samples[0] = MAX(v, 1);
-
 	// disable ADC interrupt
 	ADCSRA &= ~_BV(ADIE);
+
+	// either reached sampling time, or maybe battery disconnect
+	if (!--batt.until_sample || v < (MIN_VOLTAGE >> 1)) {
+		// at least 1 to flag the memory as unprocessed
+		batt.samples[0] = MAX(v, 1);
+
+		if (!batt.until_sample) {
+			if (batt.aux_status == AUX_WARN) {
+				// blink the red LED at 1Hz as warning
+				warn_toggle();
+			}
+			batt.until_sample = 9;
+		}
+	}
 }
 
 
@@ -448,10 +467,5 @@ ISR(ADC_vect) {
  * Handles also bad AUX voltage LED blinking.
  */
 ISR(WDT_vect) {
-	if (batt.aux_status == AUX_WARN) {
-		// blink the red LED at 1Hz as warning
-		warn_toggle();
-	}
-
 	start_ADC();
 }
