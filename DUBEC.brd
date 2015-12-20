@@ -1165,7 +1165,7 @@ Covered vias can be set in Masks (Limit).
 <attribute name="TEMP" value="±100ppm/°C" x="11.375" y="19.375" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="EURO" value="2.10/50" x="11.375" y="19.375" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="5V_OUT" library="dubec" package="1X03_NO_SILK" value="M03" x="37.875" y="16.125" smashed="yes" rot="R270">
+<element name="P_5V_OUT" library="dubec" package="1X03_NO_SILK" value="M03" x="37.875" y="16.125" smashed="yes" rot="R270">
 <attribute name="NAME" x="39.4498" y="19.681" size="0.762" layer="25" ratio="10" rot="R270"/>
 <attribute name="VALUE" x="36.224" y="19.681" size="0.762" layer="27" rot="R270" align="top-left"/>
 </element>
@@ -1185,7 +1185,7 @@ Covered vias can be set in Masks (Limit).
 <attribute name="TOLERANCE" value="±20%" x="24.875" y="11.875" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="TEMP" value="X5R" x="24.875" y="11.875" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="12V_OUT" library="dubec" package="1X02_NO_SILK" value="M02" x="37.875" y="3.75" rot="R270"/>
+<element name="P_12V_OUT" library="dubec" package="1X02_NO_SILK" value="M02" x="37.875" y="3.75" rot="R270"/>
 <element name="RPD" library="dubec" package="0402" value="RES10K_16" x="11.375" y="12.625" rot="R90">
 <attribute name="TOLERANCE" value="±1%" x="11.375" y="12.625" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="TEMP" value="±100ppm/°C" x="11.375" y="12.625" size="1.778" layer="27" rot="R90" display="off"/>
@@ -1345,8 +1345,8 @@ Covered vias can be set in Masks (Limit).
 <attribute name="MFG_PART_#" value="SBR12A45SD1-T" x="8.5" y="11.875" size="1.778" layer="27" rot="R345" display="off"/>
 <attribute name="V_FWD" value="480mV @ 110A" x="8.5" y="11.875" size="1.778" layer="27" rot="R345" display="off"/>
 </element>
-<element name="GND_MAIN" library="dubec" package="1X01_NO_SILK" value="M01" x="2" y="10.125"/>
-<element name="GND_AUX" library="dubec" package="1X01_NO_SILK" value="M01" x="2" y="2.875"/>
+<element name="J_GND_MAIN" library="dubec" package="1X01_NO_SILK" value="M01" x="2" y="10.125"/>
+<element name="J_GND_AUX" library="dubec" package="1X01_NO_SILK" value="M01" x="2" y="2.875"/>
 <element name="RA1" library="dubec" package="0402" value="RES90.9K_16" x="6.625" y="9.875" rot="R270">
 <attribute name="TOLERANCE" value="±1%" x="6.625" y="9.875" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="TEMP" value="±100ppm/°C" x="6.625" y="9.875" size="1.778" layer="27" rot="R270" display="off"/>
@@ -1435,7 +1435,7 @@ Covered vias can be set in Masks (Limit).
 <attribute name="TEMP" value="±100ppm/°C" x="7.125" y="16.75" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="U$1" library="dubec" package="TF-EMBLEM" value="" x="38.125" y="9.125" rot="R90"/>
-<element name="U$8" library="dubec" package="AVX9258-PCB" value="AVX9258-PCB" x="5.125" y="20" rot="MR0"/>
+<element name="J_ISP" library="dubec" package="AVX9258-PCB" value="AVX9258-PCB" x="5.125" y="20" rot="MR0"/>
 <element name="RSNUB" library="dubec" package="0603" value="RES1.5_4" x="30.125" y="12.5" rot="R180">
 <attribute name="EURO" value="2.86/100" x="30.125" y="12.5" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MANUFACTURER" value="Rohm Semiconductor" x="30.125" y="12.5" size="1.778" layer="27" rot="R180" display="off"/>
@@ -1668,7 +1668,7 @@ Covered vias can be set in Masks (Limit).
 <vertex x="41" y="0"/>
 <vertex x="0" y="0"/>
 </polygon>
-<contactref element="12V_OUT" pad="1"/>
+<contactref element="P_12V_OUT" pad="1"/>
 <contactref element="5D" pad="C"/>
 <via x="31.25" y="20.25" extent="1-16" drill="0.3"/>
 <via x="28.75" y="20.25" extent="1-16" drill="0.3"/>
@@ -1697,8 +1697,8 @@ Covered vias can be set in Masks (Limit).
 <wire x1="23.125" y1="14.9375" x2="23.5" y2="13.0625" width="0.8" layer="16"/>
 <contactref element="DTVS" pad="A2"/>
 <contactref element="DTVS" pad="A1"/>
-<contactref element="GND_MAIN" pad="1"/>
-<contactref element="GND_AUX" pad="1"/>
+<contactref element="J_GND_MAIN" pad="1"/>
+<contactref element="J_GND_AUX" pad="1"/>
 <via x="8.5" y="1" extent="1-16" drill="0.3"/>
 <via x="19" y="1" extent="1-16" drill="0.3"/>
 <wire x1="2" y1="10.125" x2="1.0625" y2="9.0625" width="1" layer="1"/>
@@ -1728,7 +1728,7 @@ Covered vias can be set in Masks (Limit).
 <wire x1="2" y1="10.125" x2="3.375" y2="9.125" width="1" layer="1"/>
 <wire x1="2" y1="2.875" x2="1.0625" y2="1.75" width="1" layer="1"/>
 <wire x1="2" y1="2.875" x2="3.375" y2="1.875" width="1" layer="1"/>
-<contactref element="5V_OUT" pad="3"/>
+<contactref element="P_5V_OUT" pad="3"/>
 <contactref element="STVS" pad="A"/>
 <via x="28.75" y="1" extent="1-16" drill="0.3"/>
 <via x="36.5" y="1" extent="1-16" drill="0.3"/>
@@ -1751,9 +1751,9 @@ Covered vias can be set in Masks (Limit).
 <contactref element="RPD" pad="1"/>
 <wire x1="22.75" y1="12.375" x2="23.5" y2="13.0625" width="1" layer="16"/>
 <contactref element="12C" pad="1"/>
-<contactref element="U$8" pad="P2"/>
+<contactref element="J_ISP" pad="P2"/>
 <contactref element="CSNUB" pad="1"/>
-<contactref element="U$8" pad="6"/>
+<contactref element="J_ISP" pad="6"/>
 <via x="10.8125" y="20.375" extent="1-16" drill="0.3"/>
 <wire x1="37.875" y1="5.25" x2="38.75" y2="4.375" width="0" layer="19" extent="1-1"/>
 </signal>
@@ -1775,7 +1775,7 @@ Covered vias can be set in Masks (Limit).
 <contactref element="12CFF" pad="2"/>
 <contactref element="12RLED" pad="2"/>
 <contactref element="12TVS" pad="C"/>
-<contactref element="12V_OUT" pad="2"/>
+<contactref element="P_12V_OUT" pad="2"/>
 <wire x1="25.64" y1="4.75" x2="25.64" y2="3.265" width="0.25" layer="1"/>
 <via x="26" y="3.625" extent="1-16" drill="0.5"/>
 <via x="29.9375" y="2.0625" extent="1-16" drill="0.3"/>
@@ -1814,7 +1814,7 @@ Covered vias can be set in Masks (Limit).
 </polygon>
 <via x="14.5" y="18.5" extent="1-16" drill="0.3"/>
 <contactref element="5TVS" pad="C"/>
-<contactref element="5V_OUT" pad="2"/>
+<contactref element="P_5V_OUT" pad="2"/>
 <polygon width="0.3302" layer="16" isolate="0.3302" rank="2">
 <vertex x="28.625" y="19.375"/>
 <vertex x="37.875" y="19.375"/>
@@ -1920,7 +1920,7 @@ Covered vias can be set in Masks (Limit).
 <contactref element="STVS" pad="C"/>
 <wire x1="35.7" y1="19.25" x2="37.75" y2="19.25" width="0.6" layer="1"/>
 <wire x1="37.75" y1="19.25" x2="37.875" y2="19.125" width="0.6" layer="1"/>
-<contactref element="5V_OUT" pad="1"/>
+<contactref element="P_5V_OUT" pad="1"/>
 <contactref element="RS1" pad="1"/>
 <contactref element="RSPU" pad="2"/>
 <wire x1="11.875" y1="19.375" x2="12.75" y2="19.375" width="0.4" layer="1"/>
@@ -1931,7 +1931,7 @@ Covered vias can be set in Masks (Limit).
 <contactref element="CMCU" pad="2"/>
 <via x="9" y="18.125" extent="1-16" drill="0.3"/>
 <contactref element="RRSPU" pad="2"/>
-<contactref element="U$8" pad="P1"/>
+<contactref element="J_ISP" pad="P1"/>
 <wire x1="9" y1="18.125" x2="9.625" y2="18.125" width="0.25" layer="1"/>
 <wire x1="9.625" y1="18.125" x2="9.625" y2="18.1" width="0.25" layer="1"/>
 <wire x1="9" y1="18.125" x2="9" y2="18.875" width="0.7" layer="16"/>
@@ -2061,7 +2061,7 @@ Covered vias can be set in Masks (Limit).
 <contactref element="RS1" pad="2"/>
 <contactref element="MCU" pad="7"/>
 <via x="6.625" y="19.125" extent="1-16" drill="0.3"/>
-<contactref element="U$8" pad="2"/>
+<contactref element="J_ISP" pad="2"/>
 <wire x1="6.625" y1="20" x2="6.625" y2="19.125" width="0.7" layer="16"/>
 <wire x1="11.125" y1="18.1" x2="11.125" y2="18.625" width="0.25" layer="1"/>
 <wire x1="11.125" y1="18.625" x2="10.875" y2="18.875" width="0.25" layer="1"/>
@@ -2081,7 +2081,7 @@ Covered vias can be set in Masks (Limit).
 <wire x1="12.5" y1="17.8125" x2="12.4375" y2="17.875" width="0.25" layer="1"/>
 <wire x1="12.4375" y1="17.875" x2="11.625" y2="17.875" width="0.25" layer="1"/>
 <wire x1="11.625" y1="17.875" x2="11.625" y2="18.1" width="0.25" layer="1"/>
-<contactref element="U$8" pad="3"/>
+<contactref element="J_ISP" pad="3"/>
 <wire x1="5.625" y1="20" x2="5.625" y2="18.25" width="0.3302" layer="16"/>
 <wire x1="5.625" y1="18.25" x2="6" y2="17.875" width="0.3302" layer="16"/>
 <wire x1="6" y1="17.25" x2="6" y2="17.875" width="0.4" layer="1"/>
@@ -2228,7 +2228,7 @@ Covered vias can be set in Masks (Limit).
 <wire x1="9.625" y1="15.4" x2="9.525" y2="15.375" width="0.25" layer="1"/>
 <wire x1="9.525" y1="15.375" x2="7.75" y2="15.375" width="0.25" layer="1"/>
 <contactref element="RRSPU" pad="1"/>
-<contactref element="U$8" pad="5"/>
+<contactref element="J_ISP" pad="5"/>
 <wire x1="3.625" y1="20" x2="3.625" y2="17.5" width="0.3302" layer="16"/>
 <wire x1="3.625" y1="17.5" x2="3.25" y2="17.125" width="0.3302" layer="16"/>
 <wire x1="3.25" y1="17.125" x2="3.25" y2="16.375" width="0.3302" layer="16"/>
@@ -2412,7 +2412,7 @@ Covered vias can be set in Masks (Limit).
 <wire x1="9.375" y1="15.5" x2="11.125" y2="13.75" width="0.3302" layer="16"/>
 <wire x1="11.375" y1="13.125" x2="11.125" y2="13.375" width="0.4" layer="1"/>
 <wire x1="11.125" y1="13.375" x2="11.125" y2="13.75" width="0.4" layer="1"/>
-<contactref element="U$8" pad="4"/>
+<contactref element="J_ISP" pad="4"/>
 <wire x1="4.625" y1="20" x2="4.625" y2="18" width="0.3302" layer="16"/>
 <wire x1="4.625" y1="18" x2="5.625" y2="17" width="0.3302" layer="16"/>
 <wire x1="5.625" y1="17" x2="7.5" y2="17" width="0.3302" layer="16"/>
@@ -2420,7 +2420,7 @@ Covered vias can be set in Masks (Limit).
 <signal name="SCK">
 <contactref element="SJ1" pad="2"/>
 <contactref element="MCU" pad="9"/>
-<contactref element="U$8" pad="1"/>
+<contactref element="J_ISP" pad="1"/>
 <via x="7.625" y="18.625" extent="1-16" drill="0.3"/>
 <wire x1="7.625" y1="18.625" x2="7.875" y2="18.875" width="0.25" layer="1"/>
 <wire x1="7.875" y1="18.875" x2="9.875" y2="18.875" width="0.25" layer="1"/>

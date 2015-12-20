@@ -420,8 +420,8 @@
 <symbol name="CAP">
 <pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" rot="R180"/>
 <pin name="1" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
-<text x="-1.778" y="3.302" size="1.27" layer="95">&gt;NAME</text>
-<text x="-2.032" y="-4.572" size="1.27" layer="96">&gt;VALUE</text>
+<text x="1.27" y="2.54" size="1.016" layer="95" align="bottom-center">&gt;NAME</text>
+<text x="1.27" y="-2.54" size="1.016" layer="96" align="top-center">&gt;VALUE</text>
 <rectangle x1="-1.524" y1="-0.254" x2="2.54" y2="0.254" layer="94" rot="R90"/>
 <rectangle x1="0" y1="-0.254" x2="4.064" y2="0.254" layer="94" rot="R90"/>
 <wire x1="2.032" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
@@ -2696,12 +2696,12 @@ Through-hole SPDT Switch&lt;br&gt;
 <hole x="1.5" y="0" drill="0.9"/>
 </package>
 <package name="EG1271A">
-<pad name="1" x="-2.5" y="1.6" drill="0.8" diameter="1.5"/>
-<pad name="2" x="0" y="1.6" drill="0.8" diameter="1.5"/>
-<pad name="3" x="2.5" y="1.6" drill="0.8" diameter="1.5"/>
-<pad name="4" x="-2.5" y="-1.6" drill="0.8" diameter="1.5"/>
-<pad name="5" x="0" y="-1.6" drill="0.8" diameter="1.5"/>
-<pad name="6" x="2.5" y="-1.6" drill="0.8" diameter="1.5"/>
+<pad name="1" x="-2.5" y="1.6" drill="0.8" diameter="1.5" shape="offset" rot="R90"/>
+<pad name="2" x="0" y="1.6" drill="0.8" diameter="1.5" shape="offset" rot="R90"/>
+<pad name="3" x="2.5" y="1.6" drill="0.8" diameter="1.5" shape="offset" rot="R90"/>
+<pad name="4" x="-2.5" y="-1.6" drill="0.8" diameter="1.5" shape="offset" rot="R270"/>
+<pad name="5" x="0" y="-1.6" drill="0.8" diameter="1.5" shape="offset" rot="R270"/>
+<pad name="6" x="2.5" y="-1.6" drill="0.8" diameter="1.5" shape="offset" rot="R270"/>
 <wire x1="4.25" y1="1.75" x2="4.25" y2="-1.74" width="0.127" layer="21"/>
 <wire x1="4.25" y1="-1.74" x2="4.25" y2="-1.75" width="0.127" layer="21"/>
 <wire x1="-4.25" y1="-1.75" x2="-4.25" y2="-1.74" width="0.127" layer="21"/>
@@ -2855,13 +2855,13 @@ DPDT SMT slide switch, AYZ0202, SWCH-08179</description>
 <parts>
 <part name="GND2" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="J1" library="SparkFun-Connectors" deviceset="M03X2" device="WR"/>
-<part name="JP1" library="SparkFun-Connectors" deviceset="M02" device="PTH"/>
+<part name="J2" library="SparkFun-Connectors" deviceset="M02" device="PTH"/>
 <part name="GND3" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="U$1" library="dubec" deviceset="AVX9258" device=""/>
+<part name="P1" library="dubec" deviceset="AVX9258" device=""/>
 <part name="GND4" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="JP2" library="SparkFun-Connectors" deviceset="M01" device="PTH"/>
+<part name="J4" library="SparkFun-Connectors" deviceset="M01" device="PTH"/>
 <part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="JP3" library="SparkFun-Connectors" deviceset="M01" device="PTH"/>
+<part name="J3" library="SparkFun-Connectors" deviceset="M01" device="PTH"/>
 <part name="U1" library="dubec" deviceset="74LVC4066" device="PW" value="74LVC4066PW"/>
 <part name="S1" library="SparkFun-Electromechanical" deviceset="SWITCH-SPDT" device="ESWITCH"/>
 <part name="GND6" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
@@ -2876,13 +2876,13 @@ DPDT SMT slide switch, AYZ0202, SWCH-08179</description>
 <instances>
 <instance part="GND2" gate="1" x="0" y="76.2" rot="R180"/>
 <instance part="J1" gate="G$1" x="10.16" y="68.58" rot="R180"/>
-<instance part="JP1" gate="G$1" x="86.36" y="91.44" rot="R270"/>
+<instance part="J2" gate="G$1" x="86.36" y="91.44" rot="R270"/>
 <instance part="GND3" gate="1" x="83.82" y="78.74"/>
-<instance part="U$1" gate="G$1" x="109.22" y="63.5" rot="R270"/>
+<instance part="P1" gate="G$1" x="109.22" y="63.5" rot="R270"/>
 <instance part="GND4" gate="1" x="99.06" y="48.26"/>
-<instance part="JP2" gate="G$1" x="66.04" y="91.44" rot="R270"/>
+<instance part="J4" gate="G$1" x="66.04" y="91.44" rot="R270"/>
 <instance part="GND1" gate="1" x="66.04" y="78.74"/>
-<instance part="JP3" gate="G$1" x="45.72" y="91.44" rot="R270"/>
+<instance part="J3" gate="G$1" x="45.72" y="91.44" rot="R270"/>
 <instance part="U1" gate="G$1" x="58.42" y="48.26"/>
 <instance part="S1" gate="1" x="15.24" y="45.72"/>
 <instance part="GND6" gate="1" x="86.36" y="27.94"/>
@@ -2900,12 +2900,12 @@ DPDT SMT slide switch, AYZ0202, SWCH-08179</description>
 <label x="0" y="66.04" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="G$1" pin="2"/>
+<pinref part="J2" gate="G$1" pin="2"/>
 <wire x1="88.9" y1="83.82" x2="88.9" y2="81.28" width="0.1524" layer="91"/>
 <label x="88.9" y="81.28" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="1"/>
+<pinref part="P1" gate="G$1" pin="1"/>
 <wire x1="116.84" y1="55.88" x2="116.84" y2="53.34" width="0.1524" layer="91"/>
 <label x="116.84" y="53.34" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
@@ -2932,7 +2932,7 @@ DPDT SMT slide switch, AYZ0202, SWCH-08179</description>
 <label x="43.18" y="50.8" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="4"/>
+<pinref part="P1" gate="G$1" pin="4"/>
 <wire x1="109.22" y1="55.88" x2="109.22" y2="53.34" width="0.1524" layer="91"/>
 <label x="109.22" y="53.34" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
@@ -2945,14 +2945,14 @@ DPDT SMT slide switch, AYZ0202, SWCH-08179</description>
 <pinref part="GND2" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="G$1" pin="1"/>
+<pinref part="J2" gate="G$1" pin="1"/>
 <wire x1="86.36" y1="83.82" x2="83.82" y2="81.28" width="0.1524" layer="91"/>
 <pinref part="GND3" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="GND4" gate="1" pin="GND"/>
-<pinref part="U$1" gate="G$1" pin="7"/>
-<pinref part="U$1" gate="G$1" pin="8"/>
+<pinref part="P1" gate="G$1" pin="7"/>
+<pinref part="P1" gate="G$1" pin="8"/>
 <wire x1="99.06" y1="55.88" x2="99.06" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="53.34" x2="99.06" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="55.88" x2="101.6" y2="53.34" width="0.1524" layer="91"/>
@@ -2994,7 +2994,7 @@ DPDT SMT slide switch, AYZ0202, SWCH-08179</description>
 </net>
 <net name="MISO" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="3"/>
+<pinref part="P1" gate="G$1" pin="3"/>
 <wire x1="111.76" y1="55.88" x2="111.76" y2="53.34" width="0.1524" layer="91"/>
 <label x="111.76" y="53.34" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
@@ -3006,7 +3006,7 @@ DPDT SMT slide switch, AYZ0202, SWCH-08179</description>
 </net>
 <net name="SCK" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="2"/>
+<pinref part="P1" gate="G$1" pin="2"/>
 <wire x1="114.3" y1="55.88" x2="114.3" y2="53.34" width="0.1524" layer="91"/>
 <label x="114.3" y="53.34" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
@@ -3023,14 +3023,14 @@ DPDT SMT slide switch, AYZ0202, SWCH-08179</description>
 <label x="20.32" y="71.12" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="6"/>
+<pinref part="P1" gate="G$1" pin="6"/>
 <wire x1="104.14" y1="55.88" x2="104.14" y2="53.34" width="0.1524" layer="91"/>
 <label x="104.14" y="53.34" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
 <net name="GND" class="0">
 <segment>
-<pinref part="JP2" gate="G$1" pin="1"/>
+<pinref part="J4" gate="G$1" pin="1"/>
 <wire x1="66.04" y1="83.82" x2="66.04" y2="81.28" width="0.1524" layer="91"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 </segment>
@@ -3042,12 +3042,12 @@ DPDT SMT slide switch, AYZ0202, SWCH-08179</description>
 </net>
 <net name="AUX" class="0">
 <segment>
-<pinref part="JP3" gate="G$1" pin="1"/>
+<pinref part="J3" gate="G$1" pin="1"/>
 <wire x1="45.72" y1="83.82" x2="45.72" y2="81.28" width="0.1524" layer="91"/>
 <label x="45.72" y="81.28" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="5"/>
+<pinref part="P1" gate="G$1" pin="5"/>
 <wire x1="106.68" y1="55.88" x2="106.68" y2="53.34" width="0.1524" layer="91"/>
 <label x="106.68" y="53.34" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
