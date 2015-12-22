@@ -3939,6 +3939,37 @@
 </technology>
 </technologies>
 </device>
+<device name="93.1_16" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-93.1LCT-ND" constant="no"/>
+<attribute name="EURO" value="2.09/50" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW040293R1FKED" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="162_16" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-162LCT-ND" constant="no"/>
+<attribute name="EURO" value="2.09/50" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="I" uservalue="yes">
@@ -4812,7 +4843,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="12RTOP" library="dubec" deviceset="RES" device="1M_16" value="RES1M_16"/>
 <part name="5D" library="dubec" deviceset="LED" device="GREEN_2.8V_5MA"/>
 <part name="12D" library="dubec" deviceset="LED" device="GREEN_2.8V_5MA"/>
-<part name="RDAUX" library="dubec" deviceset="RES" device="71.5_16" value="RES71.5_16"/>
+<part name="RDAUX" library="dubec" deviceset="RES" device="93.1_16" value="RES93.1_16"/>
 <part name="12RLED" library="dubec" deviceset="RES" device="620_4" value="RES620_4"/>
 <part name="5RLED" library="dubec" deviceset="RES" device="140_16" value="RES140_16"/>
 <part name="12TVS" library="dubec" deviceset="D_ZENER" device="15V" value="D_ZENER15V"/>
@@ -4841,7 +4872,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="5RRT" library="dubec" deviceset="RES" device="40.2K_16" value="RES40.2K_16"/>
 <part name="5V_PG" library="SparkFun-Passives" deviceset="TEST-POINT" device="3X4" value="TEST-POINT3X4"/>
 <part name="DAUX" library="dubec" deviceset="LED_DUAL" device="RB" value="LED_DUALRB"/>
-<part name="RDERR" library="dubec" deviceset="RES" device="130_16" value="RES130_16"/>
+<part name="RDERR" library="dubec" deviceset="RES" device="162_16" value="RES162_16"/>
 <part name="DTVS" library="dubec" deviceset="TVS-SPT" device="36V"/>
 <part name="QR" library="dubec" deviceset="2PMOS" device="40V_8A" value="2PMOS40V_8A"/>
 <part name="D2" library="dubec" deviceset="2ZD" device="18V_0.2W" value="2ZD18V_0.2W"/>

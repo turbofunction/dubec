@@ -1097,10 +1097,10 @@ Covered vias can be set in Masks (Limit).
 <attribute name="USD" value="0.44" x="33.9375" y="8.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="V_FWD" value="3V (15mA)" x="33.9375" y="8.5" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="RDAUX" library="dubec" package="0402" value="RES71.5_16" x="2.625" y="17.375" rot="R180">
-<attribute name="DIGIKEY_PART_#" value="541-71.5LCT-ND" x="2.625" y="17.375" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="RDAUX" library="dubec" package="0402" value="RES93.1_16" x="2.625" y="17.375" rot="R180">
+<attribute name="DIGIKEY_PART_#" value="541-93.1LCT-ND" x="2.625" y="17.375" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MANUFACTURER" value="Vishay Dale" x="2.625" y="17.375" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MFG_PART_#" value="CRCW040271R5FKED" x="2.625" y="17.375" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MFG_PART_#" value="CRCW040293R1FKED" x="2.625" y="17.375" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="TOLERANCE" value="±1%" x="2.625" y="17.375" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="TEMP" value="±100ppm/°C" x="2.625" y="17.375" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="EURO" value="2.09/50" x="2.625" y="17.375" size="1.778" layer="27" rot="R180" display="off"/>
@@ -1282,13 +1282,12 @@ Covered vias can be set in Masks (Limit).
 <attribute name="MFG_PART_#" value="APHB1608QBDSURKC" x="3.125" y="19.375" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="I_FWD" value="30mA (max)" x="3.125" y="19.375" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="RDERR" library="dubec" package="0402" value="RES130_16" x="2.625" y="16.125">
+<element name="RDERR" library="dubec" package="0402" value="RES162_16" x="2.625" y="16.125">
 <attribute name="TOLERANCE" value="±1%" x="2.625" y="16.125" size="1.778" layer="27" display="off"/>
 <attribute name="TEMP" value="±100ppm/°C" x="2.625" y="16.125" size="1.778" layer="27" display="off"/>
-<attribute name="DIGIKEY_PART_#" value="541-130LCT-ND" x="2.625" y="16.125" size="1.778" layer="27" display="off"/>
+<attribute name="DIGIKEY_PART_#" value="541-162LCT-ND" x="2.625" y="16.125" size="1.778" layer="27" display="off"/>
 <attribute name="MANUFACTURER" value="Vishay Dale" x="2.625" y="16.125" size="1.778" layer="27" display="off"/>
 <attribute name="EURO" value="2.09/50" x="2.625" y="16.125" size="1.778" layer="27" display="off"/>
-<attribute name="MFG_PART_#" value="CRCW0402130RFKED" x="2.625" y="16.125" size="1.778" layer="27" display="off"/>
 </element>
 <element name="DTVS" library="dubec" package="2-UQFN" value="TVS-SPT36V" x="6.5625" y="2.125" rot="R180">
 <attribute name="DIGIKEY_PART_#" value="497-13827-1-ND" x="6.5625" y="2.125" size="1.778" layer="27" rot="R180" display="off"/>
