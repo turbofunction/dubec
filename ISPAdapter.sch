@@ -2696,12 +2696,12 @@ Through-hole SPDT Switch&lt;br&gt;
 <hole x="1.5" y="0" drill="0.9"/>
 </package>
 <package name="EG1271A">
-<pad name="1" x="-2.5" y="1.6" drill="0.8" diameter="1.5" shape="offset" rot="R90"/>
-<pad name="2" x="0" y="1.6" drill="0.8" diameter="1.5" shape="offset" rot="R90"/>
-<pad name="3" x="2.5" y="1.6" drill="0.8" diameter="1.5" shape="offset" rot="R90"/>
-<pad name="4" x="-2.5" y="-1.6" drill="0.8" diameter="1.5" shape="offset" rot="R270"/>
-<pad name="5" x="0" y="-1.6" drill="0.8" diameter="1.5" shape="offset" rot="R270"/>
-<pad name="6" x="2.5" y="-1.6" drill="0.8" diameter="1.5" shape="offset" rot="R270"/>
+<pad name="1" x="-2.5" y="1.6" drill="0.9" diameter="1.5" shape="offset" rot="R90"/>
+<pad name="2" x="0" y="1.6" drill="0.9" diameter="1.5" shape="offset" rot="R90"/>
+<pad name="3" x="2.5" y="1.6" drill="0.9" diameter="1.5" shape="offset" rot="R90"/>
+<pad name="4" x="-2.5" y="-1.6" drill="0.9" diameter="1.5" shape="offset" rot="R270"/>
+<pad name="5" x="0" y="-1.6" drill="0.9" diameter="1.5" shape="offset" rot="R270"/>
+<pad name="6" x="2.5" y="-1.6" drill="0.9" diameter="1.5" shape="offset" rot="R270"/>
 <wire x1="4.25" y1="1.75" x2="4.25" y2="-1.74" width="0.127" layer="21"/>
 <wire x1="4.25" y1="-1.74" x2="4.25" y2="-1.75" width="0.127" layer="21"/>
 <wire x1="-4.25" y1="-1.75" x2="-4.25" y2="-1.74" width="0.127" layer="21"/>
