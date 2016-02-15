@@ -165,11 +165,11 @@ DUBEC</text>
 <circle x="15" y="10.125" radius="1.5" width="0.6" layer="41"/>
 <circle x="2" y="2.875" radius="1.5" width="0.3" layer="41"/>
 <circle x="2" y="10.125" radius="1.5" width="0.3" layer="41"/>
-<text x="29.75" y="10.375" size="1.6" layer="22" font="vector" ratio="20" rot="MR0">v1.5</text>
+<text x="29.75" y="10.375" size="1.6" layer="22" font="vector" ratio="20" rot="MR0">v1.6</text>
 <text x="32.375" y="2.25" size="1.25" layer="22" font="vector" ratio="15" rot="MR0">Inputs: 6..34V
 (2..8S LiPo)</text>
 <text x="10.75" y="14.625" size="0.8" layer="22" font="vector" ratio="15" rot="MR90" align="top-center">!12V</text>
-<text x="29.75" y="9" size="0.8" layer="22" font="vector" ratio="20" rot="MR0">2016-02-10</text>
+<text x="29.75" y="9" size="0.8" layer="22" font="vector" ratio="20" rot="MR0">201X-XX-XX</text>
 <text x="32.375" y="6.375" size="1.25" layer="22" font="vector" ratio="20" rot="MR0">TURBOFUNCTION.com/fpv</text>
 <circle x="2" y="6.375" radius="1.4" width="0.1" layer="42"/>
 <circle x="2" y="13.625" radius="1.4" width="0.1" layer="42"/>

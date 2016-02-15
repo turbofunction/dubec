@@ -189,7 +189,7 @@ for Super DUBEC</text>
 <circle x="44.1" y="7.2" radius="1.7" width="0.5" layer="107"/>
 <circle x="23.1" y="21.3" radius="1.7" width="0.5" layer="107"/>
 <text x="32" y="34" size="1" layer="107" font="vector" ratio="15" rot="SR270" align="center-left">GND</text>
-<text x="38" y="23" size="0.8128" layer="107" font="vector" ratio="15" align="top-left">Rev. B (2016-02-10)</text>
+<text x="38" y="23" size="0.8128" layer="107" font="vector" ratio="15" align="top-left">Rev. 1.6 (201X-XX-XX)</text>
 <text x="23" y="34" size="1" layer="107" font="vector" ratio="15" rot="SR270" align="center-left">PB3</text>
 <text x="19.6" y="1.7" size="1.5" layer="107" font="vector" ratio="15">DW</text>
 <text x="19.6" y="10.3" size="1.5" layer="107" font="vector" ratio="15" align="top-left">SPI</text>
