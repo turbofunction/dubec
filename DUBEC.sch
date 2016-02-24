@@ -3972,6 +3972,23 @@
 <attribute name="DIGIKEY_PART_#" value="541-162LCT-ND" constant="no"/>
 <attribute name="EURO" value="2.09/50" constant="no"/>
 <attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW0402162RFKED" constant="no"/>
+<attribute name="TEMP" value="±100ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±1%" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="14_16" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="541-14.0LCT-ND" constant="no"/>
+<attribute name="EURO" value="2.09/50" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="CRCW040214R0FKED" constant="no"/>
 <attribute name="TEMP" value="±100ppm/°C" constant="no"/>
 <attribute name="TOLERANCE" value="±1%" constant="no"/>
 </technology>

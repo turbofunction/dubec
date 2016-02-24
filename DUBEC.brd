@@ -1297,6 +1297,7 @@ Covered vias can be set in Masks (Limit).
 <attribute name="DIGIKEY_PART_#" value="541-162LCT-ND" x="2.625" y="16.125" size="1.778" layer="27" display="off"/>
 <attribute name="MANUFACTURER" value="Vishay Dale" x="2.625" y="16.125" size="1.778" layer="27" display="off"/>
 <attribute name="EURO" value="2.09/50" x="2.625" y="16.125" size="1.778" layer="27" display="off"/>
+<attribute name="MFG_PART_#" value="CRCW0402162RFKED" x="2.625" y="16.125" size="1.778" layer="27" display="off"/>
 </element>
 <element name="DTVS" library="dubec" package="2-UQFN" value="TVS-SPT36V" x="6.5625" y="2.125" rot="R180">
 <attribute name="DIGIKEY_PART_#" value="497-13827-1-ND" x="6.5625" y="2.125" size="1.778" layer="27" rot="R180" display="off"/>
