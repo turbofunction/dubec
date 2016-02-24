@@ -985,6 +985,22 @@
 <rectangle x1="0.35" y1="-0.55" x2="0.95" y2="0.55" layer="29"/>
 <rectangle x1="-0.95" y1="-0.55" x2="-0.35" y2="0.55" layer="29"/>
 </package>
+<package name="XAL5030">
+<smd name="P$1" x="-1.65" y="0" dx="1.2" dy="4.4" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="P$2" x="1.65" y="0" dx="1.2" dy="4.4" layer="1" stop="no" thermals="no" cream="no"/>
+<wire x1="-2.75" y1="2.85" x2="2.75" y2="2.85" width="0.13" layer="21"/>
+<wire x1="2.75" y1="2.85" x2="2.75" y2="-2.85" width="0.13" layer="21"/>
+<wire x1="2.75" y1="-2.85" x2="-2.75" y2="-2.85" width="0.13" layer="21"/>
+<wire x1="-2.75" y1="-2.85" x2="-2.75" y2="2.85" width="0.13" layer="21"/>
+<text x="-2.35" y="-2" size="0.6" layer="27">&gt;VALUE</text>
+<text x="-2.35" y="2" size="0.6" layer="25" align="top-left">&gt;NAME</text>
+<rectangle x1="-2.3" y1="-2.25" x2="-1" y2="2.25" layer="29"/>
+<rectangle x1="1" y1="-2.25" x2="2.3" y2="2.25" layer="29"/>
+<rectangle x1="-2.15" y1="0.3" x2="-1.15" y2="2" layer="31"/>
+<rectangle x1="-2.15" y1="-2" x2="-1.15" y2="-0.3" layer="31"/>
+<rectangle x1="1.15" y1="0.3" x2="2.15" y2="2" layer="31"/>
+<rectangle x1="1.15" y1="-2" x2="2.15" y2="-0.3" layer="31"/>
+</package>
 </packages>
 <symbols>
 <symbol name="Z-DIODE">
@@ -1159,7 +1175,7 @@
 <text x="3.81" y="0" size="1.27" layer="95" rot="R90" align="top-center">&gt;NAME</text>
 <text x="5.715" y="0" size="1.27" layer="96" rot="R90" align="top-center">&gt;VALUE</text>
 </symbol>
-<symbol name="LT8614">
+<symbol name="LT8640-1">
 <pin name="BST" x="12.7" y="0" visible="pin" length="middle" direction="pas" rot="R180"/>
 <pin name="INTVCC" x="-12.7" y="-15.24" visible="pin" length="middle" direction="pas"/>
 <pin name="BIAS" x="12.7" y="-10.16" visible="pin" length="middle" direction="pas" rot="R180"/>
@@ -4035,20 +4051,20 @@
 </technology>
 </technologies>
 </device>
-<device name="10UH" package="2020Z">
+<device name="10UH_2.5A" package="2020Z">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
 <technology name="">
+<attribute name="DCR" value="158 mOhm" constant="no"/>
 <attribute name="DIGIKEY_PART_#" value="541-1272-1-ND" constant="no"/>
+<attribute name="EURO" value="2.11" constant="no"/>
+<attribute name="I_SAT" value="4A" constant="no"/>
 <attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
 <attribute name="MFG_PART_#" value="IHLP2020CZER100M01" constant="no"/>
-<attribute name="TEMP" value="-55°C ~ 125°C" constant="no"/>
 <attribute name="TOLERANCE" value="±20%" constant="no"/>
-<attribute name="TYPE" value="smt" constant="no"/>
-<attribute name="USD" value="2.08" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -4139,9 +4155,40 @@
 </technology>
 </technologies>
 </device>
+<device name="3.3UH_8.1A" package="XAL5030">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="EURO" value="1.86" constant="no"/>
+<attribute name="MANUFACTURER" value="Coilcraft" constant="no"/>
+<attribute name="MFG_PART_#" value="XAL5030-332MEC" constant="no"/>
+<attribute name="MOUSER_PART_#" value="994-XAL5030-332MEC" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="3.3UH_5A" package="2020Z">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DCR" value="54.7 mOhm" constant="no"/>
+<attribute name="DIGIKEY_PART_#" value="541-1269-1-ND" constant="no"/>
+<attribute name="EURO" value="2.11" constant="no"/>
+<attribute name="I_SAT" value="8.5A" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="IHLP2020CZER3R3M01" constant="no"/>
+<attribute name="TOLERANCE" value="±20%" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
-<deviceset name="LTC3115-1">
+<deviceset name="LT3115-1">
 <description>40V, 2A Synchronous Buck-Boost DC/DC Converter</description>
 <gates>
 <gate name="G$1" symbol="LTC3115-1" x="0" y="0"/>
@@ -4169,6 +4216,7 @@
 <technologies>
 <technology name="">
 <attribute name="DIGIKEY_PART_#" value="LTC3115IDHD-2#PBF-ND" constant="no"/>
+<attribute name="EURO" value="185.41/25" constant="no"/>
 <attribute name="MANUFACTURER" value="Linear Technology" constant="no"/>
 <attribute name="MFG_PART_#" value="LTC3115IDHD-1#PBF" constant="no"/>
 <attribute name="TEMP" value="-40°C ~ 125°C" constant="no"/>
@@ -4233,10 +4281,10 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="LT8614">
-<description>IC REG BUCK SYNC ADJ 4A 18QFN</description>
+<deviceset name="LT8640-1">
+<description>IC REG BUCK ADJ 5A</description>
 <gates>
-<gate name="G$1" symbol="LT8614" x="0" y="0"/>
+<gate name="G$1" symbol="LT8640-1" x="0" y="0"/>
 </gates>
 <devices>
 <device name="IUDC" package="QFN-18">
@@ -4259,9 +4307,10 @@
 </connects>
 <technologies>
 <technology name="">
-<attribute name="DIGIKEY_PART_#" value="LT8614IUDC#PBF-ND" constant="no"/>
+<attribute name="DIGIKEY_PART_#" value="LT8640IUDC-1#PBF-ND" constant="no"/>
+<attribute name="EURO" value="149.52/25" constant="no"/>
 <attribute name="MANUFACTURER" value="Linear Technology" constant="no"/>
-<attribute name="MFG_PART_#" value="LT8614IUDC#PBF" constant="no"/>
+<attribute name="MFG_PART_#" value="LT8640IUDC-1#PBF" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -4852,11 +4901,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </classes>
 <parts>
 <part name="MCU" library="dubec" deviceset="ATTINY13A" device="10M1"/>
-<part name="12U1" library="dubec" deviceset="LTC3115-1" device="IDHD" value="LTC3115-1IDHD"/>
+<part name="12U1" library="dubec" deviceset="LT3115-1" device="IDHD" value="LT3115-1IDHD"/>
 <part name="C1" library="dubec" deviceset="CAP" device="22UF_35V"/>
 <part name="12CB1" library="dubec" deviceset="CAP" device="0.1UF_100V"/>
 <part name="12CB2" library="dubec" deviceset="CAP" device="0.1UF_100V"/>
-<part name="12L" library="dubec" deviceset="I" device="10UH_4.9A" value="10uH"/>
+<part name="12L" library="dubec" deviceset="I" device="10UH_2.5A" value="10uH"/>
 <part name="12CVCC" library="dubec" deviceset="CAP" device="10UF_10V"/>
 <part name="12RT" library="dubec" deviceset="RES" device="40.2K_16" value="RES40.2K_16"/>
 <part name="12RBOT" library="dubec" deviceset="RES" device="90.9K_16" value="RES90.9K_16"/>
@@ -4883,9 +4932,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="P_12V_OUT" library="dubec" deviceset="M02" device=""/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="RPD" library="dubec" deviceset="RES" device="10K_16" value="RES10K_16"/>
-<part name="5L" library="dubec" deviceset="I" device="8.2UH_6.1A"/>
+<part name="5L" library="dubec" deviceset="I" device="3.3UH_5A"/>
 <part name="STVS" library="dubec" deviceset="D_ZENER" device="5.6V" value="D_ZENER5.6V"/>
-<part name="5U1" library="dubec" deviceset="LT8614" device="IUDC"/>
+<part name="5U1" library="dubec" deviceset="LT8640-1" device="IUDC"/>
 <part name="5C1" library="dubec" deviceset="CAP" device="1UF_50V"/>
 <part name="5C2" library="dubec" deviceset="CAP" device="1UF_50V"/>
 <part name="5CBST" library="dubec" deviceset="CAP" device="0.1UF_100V"/>
