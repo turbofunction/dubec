@@ -1203,14 +1203,14 @@ Covered vias can be set in Masks (Limit).
 <attribute name="MFG_PART_#" value="CRCW040210K0FKED" x="11.375" y="12.625" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="EURO" value="2.10/50" x="11.375" y="12.625" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="5L" library="dubec" package="2020Z" value="" x="27.125" y="16.75">
-<attribute name="MANUFACTURER" value="Vishay Dale" x="27.125" y="16.75" size="1.778" layer="27" display="off"/>
-<attribute name="MFG_PART_#" value="IHLP2020CZER3R3M01" x="27.125" y="16.75" size="1.778" layer="27" display="off"/>
-<attribute name="EURO" value="2.11" x="27.125" y="16.75" size="1.778" layer="27" display="off"/>
-<attribute name="DIGIKEY_PART_#" value="541-1269-1-ND" x="27.125" y="16.75" size="1.778" layer="27" display="off"/>
-<attribute name="TOLERANCE" value="±20%" x="27.125" y="16.75" size="1.778" layer="27" display="off"/>
-<attribute name="I_SAT" value="8.5A" x="27.125" y="16.75" size="1.778" layer="27" display="off"/>
-<attribute name="DCR" value="54.7 mOhm" x="27.125" y="16.75" size="1.778" layer="27" display="off"/>
+<element name="5L" library="dubec" package="2020Z" value="" x="27.125" y="16.5">
+<attribute name="MANUFACTURER" value="Vishay Dale" x="27.125" y="16.5" size="1.778" layer="27" display="off"/>
+<attribute name="MFG_PART_#" value="IHLP2020CZER3R3M01" x="27.125" y="16.5" size="1.778" layer="27" display="off"/>
+<attribute name="EURO" value="2.11" x="27.125" y="16.5" size="1.778" layer="27" display="off"/>
+<attribute name="DIGIKEY_PART_#" value="541-1269-1-ND" x="27.125" y="16.5" size="1.778" layer="27" display="off"/>
+<attribute name="TOLERANCE" value="±20%" x="27.125" y="16.5" size="1.778" layer="27" display="off"/>
+<attribute name="I_SAT" value="8.5A" x="27.125" y="16.5" size="1.778" layer="27" display="off"/>
+<attribute name="DCR" value="54.7 mOhm" x="27.125" y="16.5" size="1.778" layer="27" display="off"/>
 </element>
 <element name="STVS" library="dubec" package="SOD523+" value="D_ZENER5.6V" x="35" y="19.25">
 <attribute name="DIGIKEY_PART_#" value="BZT585B5V6T-7DICT-ND" x="35" y="19.25" size="1.778" layer="27" display="off"/>
@@ -1776,7 +1776,7 @@ Covered vias can be set in Masks (Limit).
 <wire x1="2" y1="2.875" x2="3.125" y2="4" width="1" layer="1"/>
 <wire x1="3.125" y1="1.75" x2="2" y2="2.875" width="1" layer="1"/>
 <wire x1="27.25" y1="16.625" x2="27.5" y2="16.625" width="0.75" layer="16"/>
-<wire x1="32.125" y1="17.5" x2="32.125" y2="18" width="0.75" layer="16"/>
+<wire x1="32.125" y1="17.5" x2="32.125" y2="18.125" width="0.75" layer="16"/>
 <wire x1="37.875" y1="5.25" x2="38.75" y2="4.375" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="12V">
@@ -1839,15 +1839,18 @@ Covered vias can be set in Masks (Limit).
 <contactref element="5TVS" pad="C"/>
 <contactref element="P_5V_OUT" pad="2"/>
 <polygon width="0.3302" layer="16" isolate="0.3302" rank="2">
-<vertex x="28.5" y="16.375"/>
-<vertex x="29.5" y="17.375"/>
+<vertex x="28.375" y="14.375"/>
+<vertex x="28.375" y="19"/>
+<vertex x="28.75" y="19.375"/>
+<vertex x="30.875" y="19.375"/>
+<vertex x="31.25" y="19"/>
+<vertex x="31.25" y="17.375"/>
 <vertex x="37.75" y="17.375"/>
 <vertex x="37.875" y="15"/>
 <vertex x="35" y="15"/>
 <vertex x="32.875" y="12.875"/>
 <vertex x="30.625" y="12.875"/>
 <vertex x="29.125" y="14.375"/>
-<vertex x="28.5" y="14.375"/>
 </polygon>
 <contactref element="5L" pad="2"/>
 <contactref element="5RLED" pad="2"/>
@@ -1859,8 +1862,8 @@ Covered vias can be set in Masks (Limit).
 <wire x1="18.5" y1="14.875" x2="18.375" y2="14.875" width="0.3302" layer="15"/>
 <wire x1="18.375" y1="14.875" x2="17.25" y2="13.75" width="0.3302" layer="15"/>
 <wire x1="17.25" y1="13.75" x2="16.25" y2="14.75" width="0.3302" layer="15"/>
-<via x="29.625" y="14.6875" extent="1-16" drill="0.5"/>
-<via x="28.25" y="14.6875" extent="1-16" drill="0.5"/>
+<via x="29.75" y="14.4375" extent="1-16" drill="0.3"/>
+<via x="28.25" y="14.4375" extent="1-16" drill="0.3"/>
 <contactref element="RSPU" pad="1"/>
 <contactref element="R12VPU" pad="1"/>
 <via x="17.25" y="13" extent="1-16" drill="0.3"/>
@@ -1907,11 +1910,15 @@ Covered vias can be set in Masks (Limit).
 <wire x1="2.725" y1="19.975" x2="2.225" y2="19.975" width="0.4" layer="1"/>
 <wire x1="2.225" y1="19.975" x2="1" y2="18.75" width="0.4" layer="1"/>
 <wire x1="3.525" y1="19.975" x2="2.725" y2="19.975" width="0.4" layer="1"/>
-<wire x1="28.25" y1="14.6875" x2="29.625" y2="14.6875" width="1" layer="16"/>
+<wire x1="28.25" y1="14.4375" x2="29.75" y2="14.4375" width="0.75" layer="16"/>
 <wire x1="27.0625" y1="18.5625" x2="28.25" y2="17.375" width="0.58" layer="15"/>
-<wire x1="28.25" y1="17.375" x2="28.25" y2="14.6875" width="0.58" layer="15"/>
-<wire x1="31.0625" y1="16.125" x2="29.625" y2="14.6875" width="1" layer="15"/>
-<wire x1="29.625" y1="14.6875" x2="28.25" y2="14.6875" width="1" layer="15"/>
+<wire x1="28.25" y1="17.375" x2="28.25" y2="14.4375" width="0.58" layer="15"/>
+<wire x1="31.0625" y1="16.125" x2="29.75" y2="14.4375" width="1" layer="15"/>
+<wire x1="29.75" y1="14.4375" x2="28.25" y2="14.4375" width="0.75" layer="15"/>
+<via x="29.875" y="18.5" extent="1-16" drill="0.3"/>
+<via x="29" y="14.4375" extent="1-16" drill="0.3"/>
+<wire x1="28.25" y1="14.4375" x2="29.75" y2="14.4375" width="0.75" layer="2"/>
+<via x="28.625" y="18.5" extent="1-16" drill="0.3"/>
 </signal>
 <signal name="12V_FB">
 <contactref element="12U1" pad="7"/>
@@ -1971,8 +1978,8 @@ Covered vias can be set in Masks (Limit).
 <vertex x="22.375" y="19.375"/>
 <vertex x="26.875" y="19.375"/>
 <vertex x="26.875" y="15.625"/>
-<vertex x="26" y="14.5"/>
-<vertex x="24.375" y="14.5"/>
+<vertex x="26" y="14"/>
+<vertex x="24.25" y="14"/>
 <vertex x="22.375" y="15.875"/>
 </polygon>
 <contactref element="5CBST" pad="1"/>
@@ -2007,8 +2014,8 @@ Covered vias can be set in Masks (Limit).
 <wire x1="18.875" y1="13.375" x2="18.25" y2="13.375" width="0.4" layer="1"/>
 <wire x1="23.4375" y1="16.375" x2="20.5" y2="15" width="0.8" layer="15" curve="36.869898"/>
 <via x="26.625" y="15.75" extent="1-16" drill="0.3"/>
-<via x="25.875" y="14.75" extent="1-16" drill="0.3"/>
-<via x="24.5" y="14.75" extent="1-16" drill="0.3"/>
+<via x="25.875" y="14.5" extent="1-16" drill="0.3"/>
+<via x="24.75" y="14.5" extent="1-16" drill="0.3"/>
 </signal>
 <signal name="N$1">
 <contactref element="12CFB" pad="1"/>
@@ -2461,9 +2468,9 @@ Covered vias can be set in Masks (Limit).
 <wire x1="16.875" y1="12.125" x2="19" y2="12.125" width="0.3302" layer="15"/>
 <wire x1="19" y1="12.125" x2="20.9375" y2="14.0625" width="0.3302" layer="15"/>
 <wire x1="20.9375" y1="14.0625" x2="23.9375" y2="14.0625" width="0.3302" layer="15"/>
-<wire x1="23.9375" y1="14.0625" x2="24.375" y2="13.625" width="0.3302" layer="15"/>
-<wire x1="24.375" y1="13.625" x2="28.75" y2="13.625" width="0.3302" layer="15"/>
-<wire x1="28.75" y1="13.625" x2="30.125" y2="12.25" width="0.3302" layer="15"/>
+<wire x1="23.9375" y1="14.0625" x2="24.5" y2="13.5" width="0.3302" layer="15"/>
+<wire x1="24.5" y1="13.5" x2="28.875" y2="13.5" width="0.3302" layer="15"/>
+<wire x1="28.875" y1="13.5" x2="30.125" y2="12.25" width="0.3302" layer="15"/>
 <wire x1="30.125" y1="12.25" x2="30.125" y2="11.125" width="0.3302" layer="15"/>
 <wire x1="15.5" y1="14.875" x2="15.5" y2="16.125" width="0.3302" layer="15"/>
 <wire x1="15.5" y1="16.125" x2="14.75" y2="16.875" width="0.3302" layer="15"/>
