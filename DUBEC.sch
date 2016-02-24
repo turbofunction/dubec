@@ -397,16 +397,16 @@
 <rectangle x1="1.65" y1="-2.35" x2="1.85" y2="-1.85" layer="31"/>
 </package>
 <package name="2020Z">
-<smd name="1" x="-2.032" y="0" dx="1.9177" dy="2.794" layer="1"/>
-<smd name="2" x="2.032" y="0" dx="1.9177" dy="2.794" layer="1"/>
-<text x="-2.4" y="2.1" size="0.8" layer="25" align="top-left">&gt;NAME</text>
-<text x="-2.4" y="-2.1" size="0.8" layer="27">&gt;VALUE</text>
-<wire x1="-2.75" y1="1.7" x2="-2.75" y2="2.6" width="0.13" layer="21"/>
-<wire x1="-2.75" y1="2.6" x2="2.75" y2="2.6" width="0.13" layer="21"/>
-<wire x1="2.75" y1="2.6" x2="2.75" y2="1.7" width="0.13" layer="21"/>
-<wire x1="-2.75" y1="-1.7" x2="-2.75" y2="-2.6" width="0.13" layer="21"/>
-<wire x1="-2.75" y1="-2.6" x2="2.75" y2="-2.6" width="0.13" layer="21"/>
-<wire x1="2.75" y1="-2.6" x2="2.75" y2="-1.7" width="0.13" layer="21"/>
+<smd name="1" x="-2.03835" y="0" dx="1.9177" dy="2.794" layer="1"/>
+<smd name="2" x="2.03835" y="0" dx="1.9177" dy="2.794" layer="1"/>
+<text x="-2.54" y="2.413" size="0.635" layer="25" align="top-left">&gt;NAME</text>
+<text x="-2.54" y="-2.413" size="0.635" layer="27">&gt;VALUE</text>
+<wire x1="-2.8702" y1="1.7" x2="-2.8702" y2="2.7178" width="0.13" layer="21"/>
+<wire x1="-2.8702" y1="2.7178" x2="2.8702" y2="2.7178" width="0.13" layer="21"/>
+<wire x1="2.8702" y1="2.7178" x2="2.8702" y2="1.7" width="0.13" layer="21"/>
+<wire x1="-2.8702" y1="-1.7" x2="-2.8702" y2="-2.7178" width="0.13" layer="21"/>
+<wire x1="-2.8702" y1="-2.7178" x2="2.8702" y2="-2.7178" width="0.13" layer="21"/>
+<wire x1="2.8702" y1="-2.7178" x2="2.8702" y2="-1.7" width="0.13" layer="21"/>
 </package>
 <package name="1X03_NO_SILK">
 <pad name="1" x="-3" y="0" drill="1.3" diameter="2.2" rot="R90" stop="no"/>
