@@ -5374,7 +5374,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="GND5" gate="1" pin="GND"/>
 <pinref part="5TVS" gate="G$1" pin="A"/>
 <pinref part="5D" gate="G$1" pin="C"/>
-<wire x1="20.32" y1="22.86" x2="20.32" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="22.86" x2="20.32" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="22.86" x2="76.2" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="5C1" gate="G$1" pin="1"/>
 <pinref part="5U1" gate="G$1" pin="GND1"/>
@@ -5387,14 +5387,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="5U1" gate="G$1" pin="GND"/>
 <wire x1="58.42" y1="35.56" x2="58.42" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="27.94" y1="60.96" x2="20.32" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="20.32" y1="60.96" x2="20.32" y2="50.8" width="0.1524" layer="91"/>
 <junction x="27.94" y="60.96"/>
 <wire x1="58.42" y1="58.42" x2="33.02" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="60.96" x2="33.02" y2="58.42" width="0.1524" layer="91"/>
 <junction x="33.02" y="60.96"/>
-<pinref part="5U1" gate="G$1" pin="SYNC/MODE"/>
-<wire x1="33.02" y1="50.8" x2="20.32" y2="50.8" width="0.1524" layer="91"/>
-<junction x="20.32" y="50.8"/>
 <pinref part="5COUT1" gate="G$1" pin="C"/>
 <pinref part="5COUT2" gate="G$1" pin="2"/>
 <wire x1="99.06" y1="38.1" x2="99.06" y2="45.72" width="0.1524" layer="91"/>
@@ -5991,6 +5987,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="RDERR" gate="G$1" pin="1"/>
 <pinref part="DAUX" gate="G$1" pin="C2"/>
 <wire x1="-60.96" y1="20.32" x2="-58.42" y2="22.86" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$12" class="0">
+<segment>
+<pinref part="5U1" gate="G$1" pin="SYNC/MODE"/>
+<wire x1="30.48" y1="50.8" x2="33.02" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
