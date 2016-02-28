@@ -1001,6 +1001,26 @@
 <rectangle x1="1.15" y1="0.3" x2="2.15" y2="2" layer="31"/>
 <rectangle x1="1.15" y1="-2" x2="2.15" y2="-0.3" layer="31"/>
 </package>
+<package name="SRP5030">
+<smd name="1" x="-2.2" y="0" dx="1.6" dy="2" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="2" x="2.2" y="0" dx="1.6" dy="2" layer="1" stop="no" thermals="no" cream="no"/>
+<text x="-2.5" y="2.2" size="0.635" layer="25" align="top-left">&gt;NAME</text>
+<text x="-2.5" y="-2.2" size="0.635" layer="27">&gt;VALUE</text>
+<wire x1="-3" y1="1.7" x2="-3" y2="2.4" width="0.13" layer="21"/>
+<wire x1="-3" y1="2.4" x2="-2.7" y2="2.7" width="0.13" layer="21" curve="-90"/>
+<wire x1="-2.7" y1="2.7" x2="2.7" y2="2.7" width="0.13" layer="21"/>
+<wire x1="2.7" y1="2.7" x2="3" y2="2.4" width="0.13" layer="21" curve="-90"/>
+<wire x1="3" y1="2.4" x2="3" y2="1.7" width="0.13" layer="21"/>
+<wire x1="-3" y1="-1.7" x2="-3" y2="-2.4" width="0.13" layer="21"/>
+<wire x1="-3" y1="-2.4" x2="-2.7" y2="-2.7" width="0.13" layer="21" curve="90"/>
+<wire x1="-2.7" y1="-2.7" x2="2.7" y2="-2.7" width="0.13" layer="21"/>
+<wire x1="2.7" y1="-2.7" x2="3" y2="-2.4" width="0.13" layer="21" curve="90"/>
+<wire x1="3" y1="-2.4" x2="3" y2="-1.7" width="0.13" layer="21"/>
+<rectangle x1="-3" y1="-1" x2="-1.4" y2="1" layer="29"/>
+<rectangle x1="1.4" y1="-1" x2="3" y2="1" layer="29"/>
+<rectangle x1="-2.8" y1="-0.8" x2="-1.6" y2="0.8" layer="31"/>
+<rectangle x1="1.6" y1="-0.8" x2="2.8" y2="0.8" layer="31"/>
+</package>
 </packages>
 <symbols>
 <symbol name="Z-DIODE">
@@ -4169,7 +4189,24 @@
 </technology>
 </technologies>
 </device>
-<device name="3.3UH_5A" package="2020Z">
+<device name="3.3UH_5.5A" package="2020Z">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DCR" value="36.4 mOhm" constant="no"/>
+<attribute name="DIGIKEY_PART_#" value="541-1237-1-ND" constant="no"/>
+<attribute name="EURO" value="2.11" constant="no"/>
+<attribute name="I_SAT" value="7A" constant="no"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
+<attribute name="MFG_PART_#" value="IHLP2020CZER3R3M11" constant="no"/>
+<attribute name="TOLERANCE" value="±20%" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="3.3UH_5A_VISHAY" package="2020Z">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -4182,6 +4219,40 @@
 <attribute name="I_SAT" value="8.5A" constant="no"/>
 <attribute name="MANUFACTURER" value="Vishay Dale" constant="no"/>
 <attribute name="MFG_PART_#" value="IHLP2020CZER3R3M01" constant="no"/>
+<attribute name="TOLERANCE" value="±20%" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="10UH_2.75A" package="SRP5030">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="SRP5030TA-100MCT-ND" constant="no"/>
+<attribute name="DRC" value="128 mOhm" constant="no"/>
+<attribute name="EURO" value="1.27" constant="no"/>
+<attribute name="I_SAT" value="3.5A" constant="no"/>
+<attribute name="MANUFACTURER" value="Bourns Inc." constant="no"/>
+<attribute name="MFG_PART_#" value="SRP5030TA-100M" constant="no"/>
+<attribute name="TOLERANCE" value="±20%" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="3.3UH_5A" package="SRP5030">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DCR" value="38 mOhm" constant="no"/>
+<attribute name="DIGIKEY_PART_#" value="SRP5030TA-3R3MCT-ND" constant="no"/>
+<attribute name="EURO" value="1.27" constant="no"/>
+<attribute name="I_SAT" value="8A" constant="no"/>
+<attribute name="MANUFACTURER" value="Bourns Inc." constant="no"/>
+<attribute name="MFG_PART_#" value="SRP5030TA-3R3M" constant="no"/>
 <attribute name="TOLERANCE" value="±20%" constant="no"/>
 </technology>
 </technologies>
@@ -4905,7 +4976,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="C1" library="dubec" deviceset="CAP" device="22UF_35V"/>
 <part name="12CB1" library="dubec" deviceset="CAP" device="0.1UF_100V"/>
 <part name="12CB2" library="dubec" deviceset="CAP" device="0.1UF_100V"/>
-<part name="12L" library="dubec" deviceset="I" device="10UH_2.5A" value="10uH"/>
+<part name="12L" library="dubec" deviceset="I" device="10UH_2.75A" value="10uH"/>
 <part name="12CVCC" library="dubec" deviceset="CAP" device="10UF_10V"/>
 <part name="12RT" library="dubec" deviceset="RES" device="40.2K_16" value="RES40.2K_16"/>
 <part name="12RBOT" library="dubec" deviceset="RES" device="90.9K_16" value="RES90.9K_16"/>
