@@ -251,13 +251,13 @@
 <wire x1="-1.3" y1="1.5" x2="-0.9" y2="1.5" width="0.4" layer="21" curve="-180" cap="flat"/>
 <wire x1="-1.5" y1="1.5" x2="-1.5" y2="1.3" width="0.13" layer="21"/>
 <rectangle x1="-0.2" y1="-0.35" x2="0.2" y2="0.35" layer="29"/>
-<rectangle x1="-1.7" y1="-1.15" x2="-1" y2="1.15" layer="29"/>
+<rectangle x1="-1.7" y1="-1.125" x2="-1" y2="1.125" layer="29"/>
 <rectangle x1="-1.65" y1="0.9" x2="-1.25" y2="1.1" layer="31"/>
 <rectangle x1="-1.65" y1="0.4" x2="-1.25" y2="0.6" layer="31"/>
 <rectangle x1="-1.65" y1="-0.1" x2="-1.25" y2="0.1" layer="31"/>
 <rectangle x1="-1.65" y1="-0.6" x2="-1.25" y2="-0.4" layer="31"/>
 <rectangle x1="-1.65" y1="-1.1" x2="-1.25" y2="-0.9" layer="31"/>
-<rectangle x1="1" y1="-1.15" x2="1.7" y2="1.15" layer="29"/>
+<rectangle x1="1" y1="-1.125" x2="1.7" y2="1.125" layer="29"/>
 <rectangle x1="1.25" y1="0.9" x2="1.65" y2="1.1" layer="31"/>
 <rectangle x1="1.25" y1="0.4" x2="1.65" y2="0.6" layer="31"/>
 <rectangle x1="1.25" y1="-0.1" x2="1.65" y2="0.1" layer="31"/>
@@ -376,8 +376,8 @@
 <wire x1="0.3" y1="1.05" x2="1.05" y2="0.75" width="0.3" layer="29" curve="235.738897"/>
 <circle x="1.8" y="0" radius="0.14141875" width="0.3" layer="31"/>
 <circle x="1.2" y="0.6" radius="0.14141875" width="0.3" layer="31"/>
-<rectangle x1="-1.9" y1="1.6" x2="1.4" y2="2.4" layer="29"/>
-<rectangle x1="1.4" y1="1.7" x2="1.9" y2="2.4" layer="29"/>
+<rectangle x1="-1.875" y1="1.6" x2="1.4" y2="2.4" layer="29"/>
+<rectangle x1="1.4" y1="1.7" x2="1.875" y2="2.4" layer="29"/>
 <rectangle x1="-1.85" y1="1.85" x2="-1.65" y2="2.35" layer="31"/>
 <rectangle x1="-1.35" y1="1.85" x2="-1.15" y2="2.35" layer="31"/>
 <rectangle x1="-0.85" y1="1.85" x2="-0.65" y2="2.35" layer="31"/>
@@ -386,7 +386,7 @@
 <rectangle x1="0.65" y1="1.85" x2="0.85" y2="2.35" layer="31"/>
 <rectangle x1="1.15" y1="1.85" x2="1.35" y2="2.35" layer="31"/>
 <rectangle x1="1.65" y1="1.95" x2="1.85" y2="2.35" layer="31"/>
-<rectangle x1="-1.9" y1="-2.4" x2="1.9" y2="-1.6" layer="29"/>
+<rectangle x1="-1.875" y1="-2.4" x2="1.875" y2="-1.6" layer="29"/>
 <rectangle x1="-1.85" y1="-2.35" x2="-1.65" y2="-1.85" layer="31"/>
 <rectangle x1="-1.35" y1="-2.35" x2="-1.15" y2="-1.85" layer="31"/>
 <rectangle x1="-0.85" y1="-2.35" x2="-0.65" y2="-1.85" layer="31"/>
@@ -514,7 +514,7 @@
 <smd name="15" x="0.75" y="-1.45" dx="0.25" dy="0.8" layer="1" stop="no" cream="no"/>
 <smd name="16" x="1.25" y="-1.45" dx="0.25" dy="0.8" layer="1" stop="no" cream="no"/>
 <smd name="11" x="-1.25" y="-1.45" dx="0.25" dy="0.8" layer="1" stop="no" cream="no"/>
-<smd name="8-9" x="-2.05" y="0" dx="0.8" dy="0.7" layer="1" stop="no" cream="no"/>
+<smd name="8-9" x="-2.05" y="0" dx="0.8" dy="0.65" layer="1" stop="no" cream="no"/>
 <smd name="7" x="-2.05" y="0.8" dx="0.8" dy="0.25" layer="1" stop="no" cream="no"/>
 <smd name="10" x="-2.05" y="-0.8" dx="0.8" dy="0.25" layer="1" stop="no" cream="no"/>
 <smd name="4" x="-0.25" y="1.45" dx="0.25" dy="0.8" layer="1" stop="no" cream="no"/>
@@ -544,9 +544,9 @@
 <rectangle x1="-1.25" y1="-0.1" x2="-0.9" y2="0.1" layer="31"/>
 <rectangle x1="-0.45" y1="-0.1" x2="-0.15" y2="0.1" layer="31"/>
 <rectangle x1="-1.4" y1="1.05" x2="-1.1" y2="1.85" layer="29"/>
-<rectangle x1="-0.4" y1="1.05" x2="1.4" y2="1.85" layer="29"/>
-<rectangle x1="1.65" y1="-0.9" x2="2.45" y2="0.9" layer="29"/>
-<rectangle x1="-0.4" y1="-1.85" x2="1.4" y2="-1.05" layer="29"/>
+<rectangle x1="-0.375" y1="1.05" x2="1.375" y2="1.85" layer="29"/>
+<rectangle x1="1.65" y1="-0.875" x2="2.45" y2="0.875" layer="29"/>
+<rectangle x1="-0.375" y1="-1.85" x2="1.375" y2="-1.05" layer="29"/>
 <rectangle x1="-1.4" y1="-1.85" x2="-1.1" y2="-1.05" layer="29"/>
 <rectangle x1="-1.35" y1="1.35" x2="-1.15" y2="1.8" layer="31"/>
 <rectangle x1="-0.35" y1="1.35" x2="-0.15" y2="1.8" layer="31"/>
@@ -759,8 +759,8 @@
 <wire x1="0.85" y1="0.6" x2="0.85" y2="-0.6" width="0.13" layer="21"/>
 <text x="-0.4" y="-0.3" size="0.2" layer="27">&gt;VALUE</text>
 <text x="-0.4" y="0.3" size="0.2" layer="25" align="top-left">&gt;NAME</text>
-<rectangle x1="-0.7" y1="0.5" x2="0.7" y2="0.9" layer="29"/>
-<rectangle x1="-0.7" y1="-0.9" x2="0.7" y2="-0.5" layer="29"/>
+<rectangle x1="-0.625" y1="0.5" x2="0.625" y2="0.9" layer="29"/>
+<rectangle x1="-0.625" y1="-0.9" x2="0.625" y2="-0.5" layer="29"/>
 <rectangle x1="-0.6" y1="0.55" x2="-0.4" y2="0.85" layer="31"/>
 <rectangle x1="-0.1" y1="0.55" x2="0.1" y2="0.85" layer="31"/>
 <rectangle x1="0.4" y1="0.55" x2="0.6" y2="0.85" layer="31"/>
