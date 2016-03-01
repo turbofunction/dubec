@@ -530,18 +530,15 @@
 <text x="-1.8" y="-1.1" size="0.6" layer="27">&gt;VALUE</text>
 <wire x1="-2" y1="1.2" x2="-2" y2="1.5" width="0.13" layer="21"/>
 <wire x1="-2" y1="1.5" x2="-1.65" y2="1.5" width="0.13" layer="21"/>
-<wire x1="-0.85" y1="1.5" x2="-0.7" y2="1.5" width="0.13" layer="21"/>
 <wire x1="1.6" y1="1.5" x2="1.9" y2="1.5" width="0.13" layer="21"/>
 <wire x1="1.9" y1="1.5" x2="2" y2="1.5" width="0.13" layer="21"/>
 <wire x1="2" y1="1.5" x2="2" y2="1.4" width="0.13" layer="21"/>
 <wire x1="2" y1="1.4" x2="2" y2="1.1" width="0.13" layer="21"/>
 <wire x1="-1.65" y1="-1.5" x2="-2" y2="-1.5" width="0.13" layer="21"/>
 <wire x1="-2" y1="-1.5" x2="-2" y2="-1.2" width="0.13" layer="21"/>
-<wire x1="-0.85" y1="-1.5" x2="-0.7" y2="-1.5" width="0.13" layer="21"/>
 <wire x1="2" y1="-1.1" x2="2" y2="-1.5" width="0.13" layer="21"/>
 <wire x1="2" y1="-1.5" x2="1.6" y2="-1.5" width="0.13" layer="21"/>
 <smd name="22" x="-0.305" y="0" dx="0.406" dy="0.27" layer="1" stop="no" thermals="no" cream="no"/>
-<wire x1="1.9" y1="1.5" x2="2" y2="1.4" width="0.5" layer="21" curve="-270" cap="flat"/>
 <rectangle x1="-1.35" y1="-0.2" x2="-0.8" y2="0.2" layer="29"/>
 <rectangle x1="-0.55" y1="-0.2" x2="-0.05" y2="0.2" layer="29"/>
 <rectangle x1="-1.25" y1="-0.1" x2="-0.9" y2="0.1" layer="31"/>
@@ -732,12 +729,9 @@
 <wire x1="2.4" y1="2" x2="2.5" y2="2" width="0.13" layer="21"/>
 <wire x1="2.5" y1="2" x2="2.5" y2="-2" width="0.13" layer="21"/>
 <wire x1="2.5" y1="-2" x2="2.4" y2="-2" width="0.13" layer="21"/>
-<polygon width="0.01" layer="21">
-<vertex x="-2.5" y="-1.6" curve="180"/>
-<vertex x="-2.5" y="-0.6"/>
-</polygon>
 <text x="-2.1" y="-1.4" size="0.8" layer="27">&gt;VALUE</text>
 <text x="-2.1" y="1.4" size="0.8" layer="25" align="top-left">&gt;NAME</text>
+<circle x="-1.6" y="-1" radius="0.25495" width="0.5" layer="21"/>
 </package>
 <package name="SOD323+">
 <smd name="C" x="1.35" y="0" dx="1" dy="0.8" layer="1"/>
@@ -765,11 +759,6 @@
 <wire x1="0.85" y1="0.6" x2="0.85" y2="-0.6" width="0.13" layer="21"/>
 <text x="-0.4" y="-0.3" size="0.2" layer="27">&gt;VALUE</text>
 <text x="-0.4" y="0.3" size="0.2" layer="25" align="top-left">&gt;NAME</text>
-<polygon width="0.01" layer="21">
-<vertex x="-0.8" y="-0.25"/>
-<vertex x="-0.4" y="-0.25"/>
-<vertex x="-0.8" y="0.15"/>
-</polygon>
 <rectangle x1="-0.7" y1="0.5" x2="0.7" y2="0.9" layer="29"/>
 <rectangle x1="-0.7" y1="-0.9" x2="0.7" y2="-0.5" layer="29"/>
 <rectangle x1="-0.6" y1="0.55" x2="-0.4" y2="0.85" layer="31"/>
@@ -778,6 +767,8 @@
 <rectangle x1="0.4" y1="-0.85" x2="0.6" y2="-0.55" layer="31"/>
 <rectangle x1="-0.1" y1="-0.85" x2="0.1" y2="-0.55" layer="31"/>
 <rectangle x1="-0.6" y1="-0.85" x2="-0.4" y2="-0.55" layer="31"/>
+<wire x1="-0.75" y1="0.1" x2="-0.7" y2="0" width="0.3" layer="21" curve="-90"/>
+<wire x1="-0.7" y1="0" x2="-0.75" y2="-0.1" width="0.3" layer="21" curve="-90"/>
 </package>
 <package name="DO-201AD">
 <pad name="A" x="-6.7315" y="0" drill="1.4" diameter="2.4"/>
@@ -941,22 +932,15 @@
 <package name="AVX9258-PCB">
 <text x="-1.5" y="-1" size="0.5" layer="25" ratio="10" align="top-left">&gt;NAME</text>
 <text x="-1.5" y="-1.8" size="0.5" layer="27" align="top-left">&gt;VALUE</text>
-<smd name="2" x="-1.5" y="0" dx="0.7" dy="1.1" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="P1" x="-3.5" y="0.1" dx="0.7" dy="1.3" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="4" x="0.5" y="0" dx="0.7" dy="1.1" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="5" x="1.5" y="0" dx="0.7" dy="1.1" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="6" x="2.5" y="0" dx="0.7" dy="1.1" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="P2" x="3.5" y="0.1" dx="0.7" dy="1.3" layer="1" stop="no" thermals="no" cream="no"/>
-<rectangle x1="-3.8" y1="-0.5" x2="-3.2" y2="0.7" layer="29"/>
-<rectangle x1="0.2" y1="-0.5" x2="0.8" y2="0.5" layer="29"/>
-<rectangle x1="1.2" y1="-0.5" x2="1.8" y2="0.5" layer="29"/>
-<rectangle x1="2.2" y1="-0.5" x2="2.8" y2="0.5" layer="29"/>
-<rectangle x1="3.2" y1="-0.5" x2="3.8" y2="0.7" layer="29"/>
-<rectangle x1="-1.8" y1="-0.5" x2="-1.2" y2="0.5" layer="29"/>
-<smd name="3" x="-0.5" y="0" dx="0.7" dy="1.1" layer="1" stop="no" thermals="no" cream="no"/>
-<rectangle x1="-0.8" y1="-0.5" x2="-0.2" y2="0.5" layer="29"/>
-<smd name="1" x="-2.5" y="0" dx="0.7" dy="1.1" layer="1" stop="no" thermals="no" cream="no"/>
-<rectangle x1="-2.8" y1="-0.5" x2="-2.2" y2="0.5" layer="29"/>
+<smd name="2" x="-1.5" y="0" dx="0.6" dy="1.1" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="P1" x="-3.5" y="0.1" dx="0.6" dy="1.3" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="4" x="0.5" y="0" dx="0.6" dy="1.1" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="5" x="1.5" y="0" dx="0.6" dy="1.1" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="6" x="2.5" y="0" dx="0.6" dy="1.1" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="P2" x="3.5" y="0.1" dx="0.6" dy="1.3" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="3" x="-0.5" y="0" dx="0.6" dy="1.1" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="1" x="-2.5" y="0" dx="0.6" dy="1.1" layer="1" stop="no" thermals="no" cream="no"/>
+<rectangle x1="-3.8" y1="-0.55" x2="3.8" y2="0.75" layer="29"/>
 </package>
 <package name="1206">
 <description>IPC-SM-782 RES/CAP</description>
@@ -4338,8 +4322,8 @@
 </connects>
 <technologies>
 <technology name="">
+<attribute name="DCR" value="128 mOhm" constant="no"/>
 <attribute name="DIGIKEY_PART_#" value="SRP5030TA-100MCT-ND" constant="no"/>
-<attribute name="DRC" value="128 mOhm" constant="no"/>
 <attribute name="EURO" value="1.27" constant="no"/>
 <attribute name="I_SAT" value="3.5A" constant="no"/>
 <attribute name="MANUFACTURER" value="Bourns Inc." constant="no"/>
