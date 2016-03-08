@@ -370,6 +370,11 @@
 <smd name="5" x="0.25" y="-2" dx="0.25" dy="0.8" layer="1" stop="no" cream="no"/>
 <rectangle x1="-1.875" y1="1.6" x2="1.875" y2="2.4" layer="29"/>
 <rectangle x1="-0.25" y1="-0.25" x2="0.25" y2="0.25" layer="29"/>
+<wire x1="-2.17" y1="1.22" x2="2.17" y2="1.22" width="0.1" layer="51"/>
+<wire x1="2.17" y1="1.22" x2="2.17" y2="-1.22" width="0.1" layer="51"/>
+<wire x1="2.17" y1="-1.22" x2="-1.97" y2="-1.22" width="0.1" layer="51"/>
+<wire x1="-1.97" y1="-1.22" x2="-2.17" y2="-1.02" width="0.1" layer="51"/>
+<wire x1="-2.17" y1="-1.02" x2="-2.17" y2="1.22" width="0.1" layer="51"/>
 </package>
 <package name="2020Z">
 <smd name="1" x="-2.03835" y="0" dx="1.9177" dy="2.794" layer="1"/>
