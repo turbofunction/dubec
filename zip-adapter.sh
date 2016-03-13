@@ -2,7 +2,7 @@
 
 proj="ISPAdapter"
 
-zip_file="$proj-1_6.zip"
+zip_file="$proj-C.zip"
 
 rm -f $zip_file
 
