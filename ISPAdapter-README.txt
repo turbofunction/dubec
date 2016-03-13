@@ -33,6 +33,7 @@ ISPAdapter.GBS  Solder mask BOTTOM
 ISPAdapter.GTO  Silkscreen TOP
 ISPAdapter.drd  Excellon drill
 ISPAdapter.drl  Drill rack
+ISPAdapter.GTP  Solder stencil (TOP)
 
 
 Thank you!
