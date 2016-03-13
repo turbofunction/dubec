@@ -36,6 +36,7 @@ DUBEC.GTO  Silkscreen TOP
 DUBEC.GBO  Silkscreen BOTTOM
 DUBEC.drd  Excellon drill
 DUBEC.drl  Drill rack
+DUBEC.gpi  Photoplotter Info File
 DUBEC.GTP  Solder stencil (TOP)
 
 
