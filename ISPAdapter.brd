@@ -683,16 +683,14 @@ design rules under a new name.</description>
 <wire x1="17.95" y1="15.35" x2="17.1" y2="14.5" width="0.3" layer="1"/>
 <wire x1="4.73" y1="16.46" x2="4.73" y2="15.37" width="0.3" layer="1"/>
 <wire x1="4.73" y1="15.37" x2="5.6" y2="14.5" width="0.3" layer="1"/>
-<wire x1="27.8" y1="18.4" x2="21.2" y2="18.4" width="0.3" layer="1"/>
-<wire x1="21.2" y1="18.4" x2="20" y2="17.2" width="0.3" layer="1"/>
-<wire x1="20" y1="17.2" x2="19.4" y2="17.2" width="0.3" layer="1"/>
-<wire x1="19.4" y1="17.2" x2="19.2" y2="17" width="0.3" layer="1"/>
-<wire x1="19.2" y1="17" x2="19.2" y2="16.8" width="0.3" layer="1"/>
-<wire x1="19.2" y1="16.8" x2="18.9" y2="16.5" width="0.3" layer="1"/>
-<wire x1="18.9" y1="16.5" x2="17.95" y2="16.5" width="0.3" layer="1"/>
+<wire x1="27.8" y1="18.4" x2="20.9" y2="18.4" width="0.3" layer="1"/>
+<wire x1="20.9" y1="18.4" x2="19.4" y2="16.9" width="0.3" layer="1"/>
+<wire x1="19.4" y1="16.9" x2="19" y2="16.5" width="0.3" layer="1"/>
+<wire x1="19" y1="16.5" x2="17.95" y2="16.5" width="0.3" layer="1"/>
 <wire x1="17.95" y1="16.5" x2="17.95" y2="16.1" width="0.3" layer="1"/>
 <wire x1="15" y1="8.5" x2="15" y2="14.5" width="0.3" layer="1"/>
 <wire x1="32.75" y1="23.35" x2="32.75" y2="24.45" width="0.3" layer="1"/>
+<wire x1="19.4" y1="17.2" x2="19.4" y2="16.9" width="0.3" layer="1"/>
 </signal>
 <signal name="MOSI">
 <wire x1="28.3" y1="23" x2="17.1" y2="23" width="0.3" layer="1"/>
@@ -733,9 +731,9 @@ design rules under a new name.</description>
 <wire x1="17.95" y1="21.375" x2="17.625" y2="21.05" width="0.3" layer="1"/>
 <wire x1="17.3" y1="21.9" x2="17.3" y2="21.375" width="0.3" layer="1"/>
 <wire x1="17.3" y1="21.375" x2="17.625" y2="21.05" width="0.3" layer="1"/>
-<via x="13.2" y="24.5" extent="1-16" drill="0.3"/>
-<wire x1="13.2" y1="21.9" x2="13.2" y2="24.5" width="0.3" layer="16"/>
-<wire x1="13.2" y1="24.5" x2="13.2" y2="24.2" width="0.3" layer="1"/>
+<via x="13.2" y="24.9" extent="1-16" drill="0.3"/>
+<wire x1="13.2" y1="21.9" x2="13.2" y2="24.9" width="0.3" layer="16"/>
+<wire x1="13.2" y1="24.9" x2="13.2" y2="24.2" width="0.3" layer="1"/>
 <via x="17.5" y="17.2" extent="1-16" drill="0.3"/>
 <wire x1="17.3" y1="16.1" x2="17.3" y2="17" width="0.3" layer="1"/>
 <wire x1="17.3" y1="17" x2="17.5" y2="17.2" width="0.3" layer="1"/>
@@ -928,10 +926,11 @@ design rules under a new name.</description>
 <approved hash="19,1,b7f95c363b6d7e4e"/>
 <approved hash="19,1,7ab135cac38b8470"/>
 <approved hash="19,1,25dfbc02bcf10169"/>
+<approved hash="19,1,f5335b0879232777"/>
 <approved hash="5,1,5481c3f82238aac1"/>
 <approved hash="5,1,ca8433fdd23d34c4"/>
 <approved hash="5,1,6ccc3064beb6696e"/>
-<approved hash="19,1,f5335b0879232777"/>
+<approved hash="19,1,f1e75ddc53ff03ab"/>
 <approved hash="19,1,8ee694fb849d68e3"/>
 <approved hash="6,1,4b43bb43bc754c94"/>
 <approved hash="6,1,442cc7c3c66f4480"/>
