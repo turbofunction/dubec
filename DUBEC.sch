@@ -269,25 +269,6 @@
 <wire x1="-0.6" y1="1.25" x2="-0.8" y2="1.05" width="0.05" layer="51"/>
 <wire x1="-0.8" y1="1.05" x2="-0.8" y2="-1.25" width="0.05" layer="51"/>
 </package>
-<package name="0805">
-<description>IPC-SM-782 RES/CAP</description>
-<smd name="1" x="-0.9" y="0" dx="0.8" dy="1.5" layer="1" stop="no" cream="no"/>
-<smd name="2" x="0.9" y="0" dx="0.8" dy="1.5" layer="1" stop="no" cream="no"/>
-<text x="-1.3" y="0.7" size="0.5" layer="25" align="top-left">&gt;NAME</text>
-<text x="-1.3" y="-0.7" size="0.5" layer="27">&gt;VALUE</text>
-<wire x1="-1.075" y1="0.7" x2="1.075" y2="0.7" width="0.05" layer="51"/>
-<wire x1="1.075" y1="0.7" x2="1.075" y2="-0.7" width="0.05" layer="51"/>
-<wire x1="1.075" y1="-0.7" x2="-1.075" y2="-0.7" width="0.05" layer="51"/>
-<wire x1="-1.075" y1="-0.7" x2="-1.075" y2="0.7" width="0.05" layer="51"/>
-<wire x1="-1.5" y1="0.95" x2="1.5" y2="0.95" width="0.13" layer="21"/>
-<wire x1="1.5" y1="0.95" x2="1.5" y2="-0.95" width="0.13" layer="21"/>
-<wire x1="1.5" y1="-0.95" x2="-1.5" y2="-0.95" width="0.13" layer="21"/>
-<wire x1="-1.5" y1="-0.95" x2="-1.5" y2="0.95" width="0.13" layer="21"/>
-<rectangle x1="-1.35" y1="-0.8" x2="-0.45" y2="0.8" layer="29"/>
-<rectangle x1="0.45" y1="-0.8" x2="1.35" y2="0.8" layer="29"/>
-<rectangle x1="-1.175" y1="-0.65" x2="-0.5" y2="0.65" layer="31"/>
-<rectangle x1="0.5" y1="-0.65" x2="1.175" y2="0.65" layer="31"/>
-</package>
 <package name="0603">
 <smd name="1" x="-0.75" y="0" dx="0.7" dy="1" layer="1" stop="no"/>
 <smd name="2" x="0.75" y="0" dx="0.7" dy="1" layer="1" stop="no"/>
@@ -1077,6 +1058,25 @@
 <text x="-3.45" y="2" size="0.8" layer="25" align="top-left">&gt;NAME</text>
 <rectangle x1="-3.2" y1="0.5" x2="1" y2="2.1" layer="31"/>
 <rectangle x1="-3.2" y1="-2.1" x2="1" y2="-0.5" layer="31"/>
+</package>
+<package name="0805">
+<description>IPC-SM-782 RES/CAP</description>
+<smd name="1" x="-0.9" y="0" dx="0.8" dy="1.5" layer="1" stop="no" cream="no"/>
+<smd name="2" x="0.9" y="0" dx="0.8" dy="1.5" layer="1" stop="no" cream="no"/>
+<text x="-1.3" y="0.7" size="0.5" layer="25" align="top-left">&gt;NAME</text>
+<text x="-1.3" y="-0.7" size="0.5" layer="27">&gt;VALUE</text>
+<wire x1="-1.075" y1="0.7" x2="1.075" y2="0.7" width="0.05" layer="51"/>
+<wire x1="1.075" y1="0.7" x2="1.075" y2="-0.7" width="0.05" layer="51"/>
+<wire x1="1.075" y1="-0.7" x2="-1.075" y2="-0.7" width="0.05" layer="51"/>
+<wire x1="-1.075" y1="-0.7" x2="-1.075" y2="0.7" width="0.05" layer="51"/>
+<wire x1="-1.5" y1="0.95" x2="1.5" y2="0.95" width="0.13" layer="21"/>
+<wire x1="1.5" y1="0.95" x2="1.5" y2="-0.95" width="0.13" layer="21"/>
+<wire x1="1.5" y1="-0.95" x2="-1.5" y2="-0.95" width="0.13" layer="21"/>
+<wire x1="-1.5" y1="-0.95" x2="-1.5" y2="0.95" width="0.13" layer="21"/>
+<rectangle x1="-1.225" y1="-0.675" x2="-0.575" y2="0.675" layer="31"/>
+<rectangle x1="0.575" y1="-0.675" x2="1.225" y2="0.675" layer="31"/>
+<rectangle x1="-1.325" y1="-0.775" x2="-0.475" y2="0.775" layer="29"/>
+<rectangle x1="0.475" y1="-0.775" x2="1.325" y2="0.775" layer="29"/>
 </package>
 </packages>
 <symbols>
