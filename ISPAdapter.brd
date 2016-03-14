@@ -184,7 +184,7 @@ for Super DUBEC</text>
 <text x="26.1" y="18.3" size="1" layer="107" font="vector" ratio="15">ISP connector pins:</text>
 <hole x="44.1" y="7.2" drill="1.8"/>
 <text x="32" y="34" size="1" layer="107" font="vector" ratio="15" rot="SR270" align="center-left">GND</text>
-<text x="38" y="23" size="0.8128" layer="107" font="vector" ratio="15" align="top-left">Rev. C (2016-03-14)</text>
+<text x="38" y="23" size="0.8128" layer="107" font="vector" ratio="15" align="top-left">Rev. D (2016-xx-xx)</text>
 <text x="23" y="34" size="1" layer="107" font="vector" ratio="15" rot="SR270" align="center-left">PB3</text>
 <text x="19.6" y="1.7" size="1.5" layer="107" font="vector" ratio="15">DW</text>
 <text x="19.6" y="10.3" size="1.5" layer="107" font="vector" ratio="15" align="top-left">SPI</text>
