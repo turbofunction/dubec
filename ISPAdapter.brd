@@ -503,11 +503,11 @@ design rules under a new name.</description>
 <param name="psFirst" value="-1"/>
 <param name="psElongationLong" value="100"/>
 <param name="psElongationOffset" value="100"/>
-<param name="mvStopFrame" value="0.25"/>
+<param name="mvStopFrame" value="0.1"/>
 <param name="mvCreamFrame" value="0"/>
-<param name="mlMinStopFrame" value="6mil"/>
-<param name="mlMaxStopFrame" value="4mil"/>
-<param name="mlMinCreamFrame" value="1mm"/>
+<param name="mlMinStopFrame" value="0.05mm"/>
+<param name="mlMaxStopFrame" value="99mm"/>
+<param name="mlMinCreamFrame" value="0mil"/>
 <param name="mlMaxCreamFrame" value="99mm"/>
 <param name="mlViaStopLimit" value="1mm"/>
 <param name="srRoundness" value="0"/>
