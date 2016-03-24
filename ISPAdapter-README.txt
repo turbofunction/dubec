@@ -7,7 +7,7 @@ janne@savukoski.name
 
                     Part name: ISPAdapter
                      Revision: C
-                   Board size: 76mm x 40mm
+                   Board size: 76mm x 42mm
               Board thickness: 
                    Board type: Two layer
        Outer copper thickness:
