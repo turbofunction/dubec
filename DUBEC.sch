@@ -901,7 +901,14 @@
 <smd name="P2" x="3.5" y="0.1" dx="0.6" dy="1.3" layer="1" stop="no" thermals="no" cream="no"/>
 <smd name="3" x="-0.5" y="0" dx="0.6" dy="1.1" layer="1" stop="no" thermals="no" cream="no"/>
 <smd name="1" x="-2.5" y="0" dx="0.6" dy="1.1" layer="1" stop="no" thermals="no" cream="no"/>
-<rectangle x1="-3.8" y1="-0.55" x2="3.8" y2="0.75" layer="29"/>
+<rectangle x1="-3.8" y1="-0.55" x2="-3.2" y2="0.75" layer="29"/>
+<rectangle x1="-2.8" y1="-0.55" x2="-2.2" y2="0.55" layer="29"/>
+<rectangle x1="-1.8" y1="-0.55" x2="-1.2" y2="0.55" layer="29"/>
+<rectangle x1="-0.8" y1="-0.55" x2="-0.2" y2="0.55" layer="29"/>
+<rectangle x1="0.2" y1="-0.55" x2="0.8" y2="0.55" layer="29"/>
+<rectangle x1="1.2" y1="-0.55" x2="1.8" y2="0.55" layer="29"/>
+<rectangle x1="2.2" y1="-0.55" x2="2.8" y2="0.55" layer="29"/>
+<rectangle x1="3.2" y1="-0.55" x2="3.8" y2="0.75" layer="29"/>
 </package>
 <package name="1206">
 <description>IPC-SM-782 RES/CAP</description>
