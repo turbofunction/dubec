@@ -136,14 +136,14 @@
 <package name="AVX9258-8C">
 <text x="-5" y="5" size="0.6" layer="25" ratio="10">&gt;NAME</text>
 <text x="-5" y="4" size="0.6" layer="27">&gt;VALUE</text>
-<smd name="4" x="0.5" y="-2.85" dx="0.7" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="5" x="-0.5" y="-2.85" dx="0.7" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="6" x="-1.5" y="-2.85" dx="0.7" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="7" x="-2.5" y="-2.85" dx="0.7" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="8" x="-3.525" y="-2.85" dx="0.75" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="3" x="1.5" y="-2.85" dx="0.7" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="2" x="2.5" y="-2.85" dx="0.7" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="1" x="3.525" y="-2.85" dx="0.75" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="4" x="0.5" y="-2.85" dx="0.6" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="5" x="-0.5" y="-2.85" dx="0.6" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="6" x="-1.5" y="-2.85" dx="0.6" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="7" x="-2.5" y="-2.85" dx="0.6" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="8" x="-3.55" y="-2.85" dx="0.7" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="3" x="1.5" y="-2.85" dx="0.6" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="2" x="2.5" y="-2.85" dx="0.6" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="1" x="3.55" y="-2.85" dx="0.7" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
 <hole x="-4.675" y="0" drill="1.2"/>
 <hole x="4.675" y="0" drill="1.2"/>
 <rectangle x1="-3.75" y1="-3.1" x2="-3.25" y2="-2.6" layer="31"/>
@@ -279,25 +279,6 @@
 <rectangle x1="0.15" y1="-0.35" x2="0.55" y2="0.35" layer="31"/>
 <wire x1="-1.5" y1="0.65" x2="-1.5" y2="1.25" width="0.13" layer="21"/>
 </package>
-<package name="0805">
-<description>IPC-SM-782 RES/CAP</description>
-<smd name="1" x="-0.9" y="0" dx="0.8" dy="1.5" layer="1" stop="no" cream="no"/>
-<smd name="2" x="0.9" y="0" dx="0.8" dy="1.5" layer="1" stop="no" cream="no"/>
-<text x="-1.3" y="0.7" size="0.5" layer="25" align="top-left">&gt;NAME</text>
-<text x="-1.3" y="-0.7" size="0.5" layer="27">&gt;VALUE</text>
-<wire x1="-1.075" y1="0.7" x2="1.075" y2="0.7" width="0.05" layer="51"/>
-<wire x1="1.075" y1="0.7" x2="1.075" y2="-0.7" width="0.05" layer="51"/>
-<wire x1="1.075" y1="-0.7" x2="-1.075" y2="-0.7" width="0.05" layer="51"/>
-<wire x1="-1.075" y1="-0.7" x2="-1.075" y2="0.7" width="0.05" layer="51"/>
-<wire x1="-1.5" y1="0.95" x2="1.5" y2="0.95" width="0.13" layer="21"/>
-<wire x1="1.5" y1="0.95" x2="1.5" y2="-0.95" width="0.13" layer="21"/>
-<wire x1="1.5" y1="-0.95" x2="-1.5" y2="-0.95" width="0.13" layer="21"/>
-<wire x1="-1.5" y1="-0.95" x2="-1.5" y2="0.95" width="0.13" layer="21"/>
-<rectangle x1="-1.35" y1="-0.8" x2="-0.45" y2="0.8" layer="29"/>
-<rectangle x1="0.45" y1="-0.8" x2="1.35" y2="0.8" layer="29"/>
-<rectangle x1="-1.175" y1="-0.65" x2="-0.5" y2="0.65" layer="31"/>
-<rectangle x1="0.5" y1="-0.65" x2="1.175" y2="0.65" layer="31"/>
-</package>
 <package name="1210">
 <description>IPC-SM-782 RES/CAP</description>
 <smd name="1" x="-1.4" y="0" dx="1.6" dy="2.7" layer="1"/>
@@ -362,6 +343,25 @@
 <wire x1="-0.6" y1="-0.32" x2="-0.6" y2="0.32" width="0.13" layer="21"/>
 <rectangle x1="-0.51" y1="-0.23" x2="-0.15" y2="0.23" layer="29"/>
 <rectangle x1="0.15" y1="-0.23" x2="0.51" y2="0.23" layer="29"/>
+</package>
+<package name="0805">
+<description>IPC-SM-782 RES/CAP</description>
+<smd name="1" x="-0.9" y="0" dx="0.8" dy="1.5" layer="1" stop="no" cream="no"/>
+<smd name="2" x="0.9" y="0" dx="0.8" dy="1.5" layer="1" stop="no" cream="no"/>
+<text x="-1.3" y="0.7" size="0.5" layer="25" align="top-left">&gt;NAME</text>
+<text x="-1.3" y="-0.7" size="0.5" layer="27">&gt;VALUE</text>
+<wire x1="-1.075" y1="0.7" x2="1.075" y2="0.7" width="0.05" layer="51"/>
+<wire x1="1.075" y1="0.7" x2="1.075" y2="-0.7" width="0.05" layer="51"/>
+<wire x1="1.075" y1="-0.7" x2="-1.075" y2="-0.7" width="0.05" layer="51"/>
+<wire x1="-1.075" y1="-0.7" x2="-1.075" y2="0.7" width="0.05" layer="51"/>
+<wire x1="-1.5" y1="0.95" x2="1.5" y2="0.95" width="0.13" layer="21"/>
+<wire x1="1.5" y1="0.95" x2="1.5" y2="-0.95" width="0.13" layer="21"/>
+<wire x1="1.5" y1="-0.95" x2="-1.5" y2="-0.95" width="0.13" layer="21"/>
+<wire x1="-1.5" y1="-0.95" x2="-1.5" y2="0.95" width="0.13" layer="21"/>
+<rectangle x1="-1.225" y1="-0.675" x2="-0.575" y2="0.675" layer="31"/>
+<rectangle x1="0.575" y1="-0.675" x2="1.225" y2="0.675" layer="31"/>
+<rectangle x1="-1.325" y1="-0.775" x2="-0.475" y2="0.775" layer="29"/>
+<rectangle x1="0.475" y1="-0.775" x2="1.325" y2="0.775" layer="29"/>
 </package>
 </packages>
 <symbols>
@@ -3009,9 +3009,9 @@ DPDT SMT slide switch, AYZ0202, SWCH-08179</description>
 <label x="20.32" y="71.12" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="P1" gate="G$1" pin="6"/>
-<wire x1="104.14" y1="55.88" x2="104.14" y2="53.34" width="0.1524" layer="91"/>
-<label x="104.14" y="53.34" size="1.27" layer="95" rot="R270" xref="yes"/>
+<pinref part="P1" gate="G$1" pin="5"/>
+<wire x1="106.68" y1="55.88" x2="106.68" y2="53.34" width="0.1524" layer="91"/>
+<label x="106.68" y="53.34" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -3026,16 +3026,16 @@ DPDT SMT slide switch, AYZ0202, SWCH-08179</description>
 <label x="22.86" y="43.18" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="AUX" class="0">
+<net name="PB3" class="0">
 <segment>
 <pinref part="J3" gate="G$1" pin="1"/>
 <wire x1="45.72" y1="83.82" x2="45.72" y2="81.28" width="0.1524" layer="91"/>
 <label x="45.72" y="81.28" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
 <segment>
-<pinref part="P1" gate="G$1" pin="5"/>
-<wire x1="106.68" y1="55.88" x2="106.68" y2="53.34" width="0.1524" layer="91"/>
-<label x="106.68" y="53.34" size="1.27" layer="95" rot="R270" xref="yes"/>
+<pinref part="P1" gate="G$1" pin="6"/>
+<wire x1="104.14" y1="55.88" x2="104.14" y2="53.34" width="0.1524" layer="91"/>
+<label x="104.14" y="53.34" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
 <net name="ISP_EN" class="0">
