@@ -5759,9 +5759,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="RRSPU" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="J_ISP" gate="G$1" pin="5"/>
-<wire x1="-132.08" y1="71.12" x2="-129.54" y2="71.12" width="0.1524" layer="91"/>
-<label x="-129.54" y="71.12" size="1.27" layer="95" xref="yes"/>
+<pinref part="J_ISP" gate="G$1" pin="4"/>
+<wire x1="-132.08" y1="73.66" x2="-129.54" y2="73.66" width="0.1524" layer="91"/>
+<label x="-129.54" y="73.66" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="GATE_MAIN" class="2">
@@ -5895,14 +5895,14 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="-50.8" y="-5.08" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="J_ISP" gate="G$1" pin="4"/>
-<wire x1="-132.08" y1="73.66" x2="-129.54" y2="73.66" width="0.1524" layer="91"/>
-<label x="-129.54" y="73.66" size="1.27" layer="95" xref="yes"/>
-</segment>
-<segment>
 <pinref part="Q1" gate="G$1" pin="G"/>
 <wire x1="-81.28" y1="38.1" x2="-78.74" y2="38.1" width="0.1524" layer="91"/>
 <label x="-78.74" y="38.1" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="J_ISP" gate="G$1" pin="5"/>
+<wire x1="-132.08" y1="71.12" x2="-129.54" y2="71.12" width="0.1524" layer="91"/>
+<label x="-129.54" y="71.12" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="SCK" class="0">
