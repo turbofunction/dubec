@@ -181,8 +181,8 @@
 </package>
 <package name="14-TSSOP">
 <wire x1="-2.25" y1="2.55" x2="2.25" y2="2.55" width="0.13" layer="21"/>
-<text x="-1.7" y="-0.1" size="0.4" layer="27">&gt;VALUE</text>
-<text x="-1.7" y="1" size="0.4" layer="25" align="top-left">&gt;NAME</text>
+<text x="2" y="-2" size="0.4" layer="27" rot="R90">&gt;VALUE</text>
+<text x="-2" y="-2" size="0.4" layer="25" rot="R90" align="top-left">&gt;NAME</text>
 <smd name="4" x="-2.9" y="0" dx="1" dy="0.3" layer="1" stop="no" thermals="no"/>
 <smd name="3" x="-2.9" y="0.65" dx="1" dy="0.3" layer="1" stop="no" thermals="no"/>
 <smd name="2" x="-2.9" y="1.3" dx="1" dy="0.3" layer="1" stop="no" thermals="no"/>
@@ -217,6 +217,8 @@
 <rectangle x1="-3.4" y1="-1.45" x2="-2.4" y2="-1.15" layer="29"/>
 <rectangle x1="-3.4" y1="-0.15" x2="-2.4" y2="0.15" layer="29"/>
 <rectangle x1="-3.4" y1="1.15" x2="-2.4" y2="1.45" layer="29"/>
+<text x="0" y="0" size="0.8128" layer="21" font="vector" rot="R90" align="center">74LVC
+4066PW</text>
 </package>
 <package name="14-VFQFN">
 <text x="-1.4" y="-1.8" size="0.4" layer="27" align="top-left">&gt;VALUE</text>
@@ -2700,6 +2702,7 @@ Through-hole SPDT Switch&lt;br&gt;
 <wire x1="1.4" y1="1.76" x2="1.1" y2="1.76" width="0.127" layer="21"/>
 <wire x1="4.25" y1="1.76" x2="3.65" y2="1.76" width="0.127" layer="21"/>
 <wire x1="4.25" y1="-1.74" x2="3.65" y2="-1.74" width="0.127" layer="21"/>
+<text x="0" y="0" size="0.8128" layer="21" font="vector" align="center">EG1271A</text>
 </package>
 </packages>
 <symbols>
