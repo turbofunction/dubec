@@ -4903,7 +4903,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="J_ISP" library="dubec" deviceset="AVX9258-PCB" device=""/>
 <part name="RSNUB" library="dubec" deviceset="RES" device="1.5_4" value="RES1.5_4"/>
-<part name="CSNUB" library="dubec" deviceset="CAP" device="22UF_35V"/>
+<part name="CSNUB1" library="dubec" deviceset="CAP" device="22UF_35V"/>
 <part name="SUPPLY1" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
 <part name="SUPPLY3" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="SUPPLY2" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
@@ -4924,6 +4924,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="J_POS_AUX" library="dubec" deviceset="M01" device=""/>
 <part name="D1" library="dubec" deviceset="D_ZENER" device="18V"/>
 <part name="D2" library="dubec" deviceset="D_ZENER" device="18V"/>
+<part name="CSNUB2" library="dubec" deviceset="CAP" device="22UF_35V"/>
 </parts>
 <sheets>
 <sheet>
@@ -5028,7 +5029,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="GND4" gate="1" x="50.8" y="-25.4"/>
 <instance part="J_ISP" gate="G$1" x="-139.7" y="76.2"/>
 <instance part="RSNUB" gate="G$1" x="-15.24" y="-60.96" rot="R90"/>
-<instance part="CSNUB" gate="G$1" x="-22.86" y="-68.58"/>
+<instance part="CSNUB1" gate="G$1" x="-22.86" y="-66.04"/>
 <instance part="SUPPLY1" gate="G$1" x="-48.26" y="30.48" rot="MR0"/>
 <instance part="SUPPLY3" gate="G$1" x="-12.7" y="58.42"/>
 <instance part="SUPPLY2" gate="G$1" x="-99.06" y="55.88" rot="R90"/>
@@ -5051,6 +5052,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="J_POS_AUX" gate="G$1" x="-124.46" y="-68.58"/>
 <instance part="D1" gate="G$1" x="-93.98" y="-40.64" rot="R180"/>
 <instance part="D2" gate="G$1" x="-93.98" y="-81.28" rot="R180"/>
+<instance part="CSNUB2" gate="G$1" x="-22.86" y="-71.12"/>
 </instances>
 <busses>
 </busses>
@@ -5350,8 +5352,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-43.18" y1="-68.58" x2="-27.94" y2="-68.58" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="-27.94" y1="-63.5" x2="-27.94" y2="-68.58" width="0.1524" layer="91"/>
-<pinref part="CSNUB" gate="G$1" pin="1"/>
-<wire x1="-25.4" y1="-68.58" x2="-27.94" y2="-68.58" width="0.1524" layer="91"/>
+<pinref part="CSNUB1" gate="G$1" pin="1"/>
 <junction x="-27.94" y="-68.58"/>
 <wire x1="-50.8" y1="-60.96" x2="-43.18" y2="-60.96" width="0.1524" layer="91"/>
 <wire x1="-43.18" y1="-60.96" x2="-35.56" y2="-60.96" width="0.1524" layer="91"/>
@@ -5382,6 +5383,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <junction x="-55.88" y="-81.28"/>
 <wire x1="-43.18" y1="-68.58" x2="-55.88" y2="-68.58" width="0.1524" layer="91"/>
 <junction x="-55.88" y="-68.58"/>
+<pinref part="CSNUB2" gate="G$1" pin="1"/>
+<wire x1="-25.4" y1="-71.12" x2="-25.4" y2="-68.58" width="0.1524" layer="91"/>
+<wire x1="-25.4" y1="-68.58" x2="-25.4" y2="-66.04" width="0.1524" layer="91"/>
+<wire x1="-25.4" y1="-68.58" x2="-27.94" y2="-68.58" width="0.1524" layer="91"/>
+<junction x="-25.4" y="-68.58"/>
 </segment>
 <segment>
 <pinref part="GND4" gate="1" pin="GND"/>
@@ -5862,8 +5868,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <pinref part="RSNUB" gate="G$1" pin="1"/>
 <wire x1="-15.24" y1="-66.04" x2="-15.24" y2="-68.58" width="0.1524" layer="91"/>
-<pinref part="CSNUB" gate="G$1" pin="2"/>
-<wire x1="-15.24" y1="-68.58" x2="-17.78" y2="-68.58" width="0.1524" layer="91"/>
+<pinref part="CSNUB1" gate="G$1" pin="2"/>
+<pinref part="CSNUB2" gate="G$1" pin="2"/>
+<wire x1="-17.78" y1="-71.12" x2="-17.78" y2="-68.58" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="-68.58" x2="-17.78" y2="-66.04" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="-68.58" x2="-15.24" y2="-68.58" width="0.1524" layer="91"/>
+<junction x="-17.78" y="-68.58"/>
 </segment>
 </net>
 <net name="VCC" class="0">
