@@ -4922,8 +4922,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="QR2" library="dubec" deviceset="2PMOS" device="40V_6A" value="2PMOS40V_6A"/>
 <part name="J_POS_MAIN" library="dubec" deviceset="M01" device=""/>
 <part name="J_POS_AUX" library="dubec" deviceset="M01" device=""/>
-<part name="U$6" library="dubec" deviceset="D_ZENER" device="18V"/>
-<part name="U$7" library="dubec" deviceset="D_ZENER" device="18V"/>
+<part name="D1" library="dubec" deviceset="D_ZENER" device="18V"/>
+<part name="D2" library="dubec" deviceset="D_ZENER" device="18V"/>
 </parts>
 <sheets>
 <sheet>
@@ -5049,8 +5049,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="QR2" gate="G$2" x="-101.6" y="-68.58" rot="R90"/>
 <instance part="J_POS_MAIN" gate="G$1" x="-124.46" y="-53.34"/>
 <instance part="J_POS_AUX" gate="G$1" x="-124.46" y="-68.58"/>
-<instance part="U$6" gate="G$1" x="-93.98" y="-40.64" rot="R180"/>
-<instance part="U$7" gate="G$1" x="-93.98" y="-81.28" rot="R180"/>
+<instance part="D1" gate="G$1" x="-93.98" y="-40.64" rot="R180"/>
+<instance part="D2" gate="G$1" x="-93.98" y="-81.28" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -5674,7 +5674,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="QR1" gate="G$1" pin="G"/>
 <wire x1="-88.9" y1="-45.72" x2="-99.06" y2="-45.72" width="0.1524" layer="91"/>
 <junction x="-88.9" y="-45.72"/>
-<pinref part="U$6" gate="G$1" pin="A"/>
+<pinref part="D1" gate="G$1" pin="A"/>
 </segment>
 </net>
 <net name="GATE_AUX" class="2">
@@ -5691,7 +5691,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="QR2" gate="G$2" pin="G"/>
 <wire x1="-88.9" y1="-76.2" x2="-99.06" y2="-76.2" width="0.1524" layer="91"/>
 <junction x="-88.9" y="-76.2"/>
-<pinref part="U$7" gate="G$1" pin="A"/>
+<pinref part="D2" gate="G$1" pin="A"/>
 </segment>
 </net>
 <net name="N$9" class="2">
@@ -5750,7 +5750,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="QR1" gate="G$1" pin="S"/>
 <wire x1="-91.44" y1="-53.34" x2="-93.98" y2="-53.34" width="0.1524" layer="91"/>
 <junction x="-91.44" y="-53.34"/>
-<pinref part="U$6" gate="G$1" pin="C"/>
+<pinref part="D1" gate="G$1" pin="C"/>
 </segment>
 </net>
 <net name="SRC_AUX" class="2">
@@ -5767,7 +5767,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="QR2" gate="G$1" pin="S"/>
 <wire x1="-91.44" y1="-68.58" x2="-88.9" y2="-68.58" width="0.1524" layer="91"/>
 <junction x="-91.44" y="-68.58"/>
-<pinref part="U$7" gate="G$1" pin="C"/>
+<pinref part="D2" gate="G$1" pin="C"/>
 </segment>
 </net>
 <net name="N$10" class="2">
