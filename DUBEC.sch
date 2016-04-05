@@ -736,26 +736,6 @@
 <circle x="0" y="0" radius="0.508" width="0" layer="29"/>
 <circle x="0" y="0" radius="0.9398" width="0" layer="30"/>
 </package>
-<package name="SOT-343">
-<smd name="1" x="0.65" y="-0.75" dx="0.6" dy="0.8" layer="1" stop="no" thermals="no"/>
-<wire x1="1.125" y1="0.625" x2="1.125" y2="-0.625" width="0.13" layer="21"/>
-<text x="-1" y="-0.4" size="0.35" layer="27">&gt;VALUE</text>
-<text x="-1" y="0.4" size="0.35" layer="25" align="top-left">&gt;NAME</text>
-<smd name="4" x="-0.65" y="-0.75" dx="0.6" dy="0.8" layer="1" stop="no" thermals="no"/>
-<smd name="3" x="-0.65" y="0.75" dx="0.6" dy="0.8" layer="1" stop="no" thermals="no"/>
-<smd name="2" x="0.65" y="0.75" dx="0.6" dy="0.8" layer="1" stop="no" thermals="no"/>
-<wire x1="-1.125" y1="-0.625" x2="-1.125" y2="0.625" width="0.13" layer="21"/>
-<wire x1="-0.125" y1="0.625" x2="0.125" y2="0.625" width="0.13" layer="21"/>
-<wire x1="-0.125" y1="-0.625" x2="0.125" y2="-0.625" width="0.13" layer="21"/>
-<polygon width="0.01" layer="21">
-<vertex x="1.125" y="-0.075" curve="-180"/>
-<vertex x="1.125" y="-0.675"/>
-</polygon>
-<rectangle x1="-0.95" y1="-1.15" x2="-0.35" y2="-0.35" layer="29"/>
-<rectangle x1="0.35" y1="-1.15" x2="0.95" y2="-0.35" layer="29"/>
-<rectangle x1="0.35" y1="0.35" x2="0.95" y2="1.15" layer="29"/>
-<rectangle x1="-0.95" y1="0.35" x2="-0.35" y2="1.15" layer="29"/>
-</package>
 <package name="UMD2">
 <smd name="C" x="1.05" y="0" dx="0.9" dy="0.8" layer="1"/>
 <smd name="A" x="-1.05" y="0" dx="0.9" dy="0.8" layer="1" thermals="no"/>
@@ -781,50 +761,6 @@
 <text x="-1.3" y="0.5" size="0.35" layer="25" align="top-left">&gt;NAME</text>
 <text x="-1.3" y="-0.5" size="0.35" layer="27">&gt;VALUE</text>
 <text x="1.58" y="-0.83" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
-</package>
-<package name="SOT-363">
-<smd name="2" x="0" y="-0.9" dx="0.3" dy="0.5" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="3" x="0.65" y="-0.9" dx="0.3" dy="0.5" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="1" x="-0.65" y="-0.9" dx="0.3" dy="0.5" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="5" x="0" y="0.9" dx="0.3" dy="0.5" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="4" x="0.65" y="0.9" dx="0.3" dy="0.5" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="6" x="-0.65" y="0.9" dx="0.3" dy="0.5" layer="1" stop="no" thermals="no" cream="no"/>
-<wire x1="-1.1" y1="0.7" x2="-1.1" y2="-0.7" width="0.13" layer="21"/>
-<wire x1="-1.1" y1="-0.7" x2="-1.2" y2="-0.7" width="0.13" layer="21"/>
-<wire x1="-1.1" y1="0.7" x2="-1.2" y2="0.7" width="0.13" layer="21"/>
-<wire x1="1.1" y1="0.7" x2="1.1" y2="-0.7" width="0.13" layer="21"/>
-<wire x1="1.1" y1="-0.7" x2="1.2" y2="-0.7" width="0.13" layer="21"/>
-<wire x1="1.1" y1="0.7" x2="1.2" y2="0.7" width="0.13" layer="21"/>
-<text x="-0.9" y="-0.4" size="0.3" layer="27">&gt;VALUE</text>
-<text x="-0.9" y="0.4" size="0.3" layer="25" align="top-left">&gt;NAME</text>
-<rectangle x1="-0.75" y1="0.7" x2="-0.55" y2="1.1" layer="31"/>
-<rectangle x1="-0.1" y1="0.7" x2="0.1" y2="1.1" layer="31"/>
-<rectangle x1="0.55" y1="0.7" x2="0.75" y2="1.1" layer="31"/>
-<rectangle x1="0.55" y1="-1.1" x2="0.75" y2="-0.7" layer="31"/>
-<rectangle x1="-0.1" y1="-1.1" x2="0.1" y2="-0.7" layer="31"/>
-<rectangle x1="-0.75" y1="-1.1" x2="-0.55" y2="-0.7" layer="31"/>
-<rectangle x1="-0.8" y1="0.65" x2="-0.5" y2="1.15" layer="29"/>
-<rectangle x1="-0.15" y1="0.65" x2="0.15" y2="1.15" layer="29"/>
-<rectangle x1="0.5" y1="0.65" x2="0.8" y2="1.15" layer="29"/>
-<rectangle x1="0.5" y1="-1.15" x2="0.8" y2="-0.65" layer="29"/>
-<rectangle x1="-0.8" y1="-1.15" x2="-0.5" y2="-0.65" layer="29"/>
-<rectangle x1="-0.15" y1="-1.15" x2="0.15" y2="-0.65" layer="29"/>
-</package>
-<package name="SMINI4-F3-B">
-<wire x1="1.125" y1="0.625" x2="1.125" y2="-0.625" width="0.13" layer="21"/>
-<text x="-1" y="-0.4" size="0.35" layer="27">&gt;VALUE</text>
-<text x="-1" y="0.4" size="0.35" layer="25" align="top-left">&gt;NAME</text>
-<smd name="4" x="-0.65" y="0.95" dx="0.5" dy="0.5" layer="1" thermals="no"/>
-<wire x1="-1.125" y1="-0.625" x2="-1.125" y2="0.625" width="0.13" layer="21"/>
-<wire x1="-0.125" y1="0.625" x2="0.125" y2="0.625" width="0.13" layer="21"/>
-<wire x1="-0.125" y1="-0.625" x2="0.125" y2="-0.625" width="0.13" layer="21"/>
-<polygon width="0.01" layer="21">
-<vertex x="-1.15" y="-0.65" curve="-180"/>
-<vertex x="-1.15" y="-0.05"/>
-</polygon>
-<smd name="3" x="0.65" y="0.95" dx="0.5" dy="0.5" layer="1" thermals="no"/>
-<smd name="1" x="-0.65" y="-0.95" dx="0.5" dy="0.5" layer="1" thermals="no"/>
-<smd name="2" x="0.65" y="-0.95" dx="0.5" dy="0.5" layer="1" thermals="no"/>
 </package>
 <package name="JUMPER-PAD-ROUND">
 <smd name="1" x="-0.3" y="0" dx="0.4" dy="0.3" layer="1" roundness="20" rot="R270" stop="no" thermals="no" cream="no"/>
@@ -4533,64 +4469,6 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="2ZD">
-<description>Dual Zener diode</description>
-<gates>
-<gate name="G$1" symbol="Z-DIODE" x="0" y="2.54"/>
-<gate name="G$2" symbol="Z-DIODE" x="0" y="-2.54"/>
-</gates>
-<devices>
-<device name="18V_0.2W" package="SOT-363">
-<connects>
-<connect gate="G$1" pin="A" pad="1"/>
-<connect gate="G$1" pin="C" pad="6"/>
-<connect gate="G$2" pin="A" pad="4"/>
-<connect gate="G$2" pin="C" pad="3"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="DIGIKEY_PART_#" value="MMBZ5248BS-FDICT-ND" constant="no"/>
-<attribute name="EURO" value="3.42/10" constant="no"/>
-<attribute name="MANUFACTURER" value="Diodes Incorporated" constant="no"/>
-<attribute name="MFG_PART_#" value="MMBZ5248BS-7-F" constant="no"/>
-<attribute name="TOLERANCE" value="±5%" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="12V_0.2W" package="SOT-343">
-<connects>
-<connect gate="G$1" pin="A" pad="3"/>
-<connect gate="G$1" pin="C" pad="4"/>
-<connect gate="G$2" pin="A" pad="2"/>
-<connect gate="G$2" pin="C" pad="1"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="DIGIKEY_PART_#" value="UMZ12KTLCT-ND" constant="no"/>
-<attribute name="EURO" value="3.38/10" constant="no"/>
-<attribute name="MANUFACTURER" value="Rohm Semiconductor" constant="no"/>
-<attribute name="MFG_PART_#" value="UMZ12KTL" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="18V_0.2W_B" package="SMINI4-F3-B">
-<connects>
-<connect gate="G$1" pin="A" pad="1"/>
-<connect gate="G$1" pin="C" pad="4"/>
-<connect gate="G$2" pin="A" pad="2"/>
-<connect gate="G$2" pin="C" pad="3"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="DIGIKEY_PART_#" value="DZ4J180K0RCT-ND" constant="no"/>
-<attribute name="EURO" value="7.08/25" constant="no"/>
-<attribute name="MANUFACTURER" value="Panasonic Electronic Components" constant="no"/>
-<attribute name="MFG_PART_#" value="DZ4J180K0R" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="2NMOS">
 <description>Dual N-channel MOSFET</description>
 <gates>
@@ -5001,7 +4879,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="RDERR" library="dubec" deviceset="RES" device="162_16" value="RES162_16"/>
 <part name="DTVS" library="dubec" deviceset="TVS-SPT" device="36V"/>
 <part name="QR1" library="dubec" deviceset="2PMOS" device="40V_6A" value="2PMOS40V_6A"/>
-<part name="D2" library="dubec" deviceset="2ZD" device="18V_0.2W" value="2ZD18V_0.2W"/>
 <part name="RA2" library="dubec" deviceset="RES" device="3K_16" value="RES3K_16"/>
 <part name="RB2" library="dubec" deviceset="RES" device="3K_16" value="RES3K_16"/>
 <part name="QA" library="dubec" deviceset="2NMOS" device="60V_0.2A"/>
@@ -5045,6 +4922,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="QR2" library="dubec" deviceset="2PMOS" device="40V_6A" value="2PMOS40V_6A"/>
 <part name="J_POS_MAIN" library="dubec" deviceset="M01" device=""/>
 <part name="J_POS_AUX" library="dubec" deviceset="M01" device=""/>
+<part name="U$6" library="dubec" deviceset="D_ZENER" device="18V"/>
+<part name="U$7" library="dubec" deviceset="D_ZENER" device="18V"/>
 </parts>
 <sheets>
 <sheet>
@@ -5123,8 +5002,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="DTVS" gate="G$1" x="-43.18" y="-58.42"/>
 <instance part="QR1" gate="G$1" x="-101.6" y="-53.34" rot="MR270"/>
 <instance part="QR1" gate="G$2" x="-81.28" y="-53.34" rot="R270"/>
-<instance part="D2" gate="G$1" x="-93.98" y="-40.64" rot="R180"/>
-<instance part="D2" gate="G$2" x="-93.98" y="-81.28" rot="R180"/>
 <instance part="RA2" gate="G$1" x="-81.28" y="-40.64"/>
 <instance part="RB2" gate="G$1" x="-81.28" y="-81.28"/>
 <instance part="QA" gate="G$1" x="-66.04" y="-40.64" rot="MR270"/>
@@ -5172,6 +5049,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="QR2" gate="G$2" x="-101.6" y="-68.58" rot="R90"/>
 <instance part="J_POS_MAIN" gate="G$1" x="-124.46" y="-53.34"/>
 <instance part="J_POS_AUX" gate="G$1" x="-124.46" y="-68.58"/>
+<instance part="U$6" gate="G$1" x="-93.98" y="-40.64" rot="R180"/>
+<instance part="U$7" gate="G$1" x="-93.98" y="-81.28" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -5780,7 +5659,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </net>
 <net name="GATE_MAIN" class="2">
 <segment>
-<pinref part="D2" gate="G$1" pin="A"/>
 <wire x1="-91.44" y1="-40.64" x2="-88.9" y2="-40.64" width="0.1524" layer="91"/>
 <pinref part="RA2" gate="G$1" pin="1"/>
 <wire x1="-88.9" y1="-40.64" x2="-86.36" y2="-40.64" width="0.1524" layer="91"/>
@@ -5796,11 +5674,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="QR1" gate="G$1" pin="G"/>
 <wire x1="-88.9" y1="-45.72" x2="-99.06" y2="-45.72" width="0.1524" layer="91"/>
 <junction x="-88.9" y="-45.72"/>
+<pinref part="U$6" gate="G$1" pin="A"/>
 </segment>
 </net>
 <net name="GATE_AUX" class="2">
 <segment>
-<pinref part="D2" gate="G$2" pin="A"/>
 <wire x1="-91.44" y1="-81.28" x2="-88.9" y2="-81.28" width="0.1524" layer="91"/>
 <pinref part="RB2" gate="G$1" pin="1"/>
 <wire x1="-88.9" y1="-81.28" x2="-86.36" y2="-81.28" width="0.1524" layer="91"/>
@@ -5813,6 +5691,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="QR2" gate="G$2" pin="G"/>
 <wire x1="-88.9" y1="-76.2" x2="-99.06" y2="-76.2" width="0.1524" layer="91"/>
 <junction x="-88.9" y="-76.2"/>
+<pinref part="U$7" gate="G$1" pin="A"/>
 </segment>
 </net>
 <net name="N$9" class="2">
@@ -5861,7 +5740,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <pinref part="RA1" gate="G$1" pin="1"/>
 <wire x1="-99.06" y1="-33.02" x2="-99.06" y2="-40.64" width="0.1524" layer="91"/>
-<pinref part="D2" gate="G$1" pin="C"/>
 <wire x1="-99.06" y1="-40.64" x2="-99.06" y2="-43.18" width="0.1524" layer="91"/>
 <wire x1="-99.06" y1="-43.18" x2="-91.44" y2="-43.18" width="0.1524" layer="91"/>
 <wire x1="-91.44" y1="-43.18" x2="-91.44" y2="-53.34" width="0.1524" layer="91"/>
@@ -5872,13 +5750,13 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="QR1" gate="G$1" pin="S"/>
 <wire x1="-91.44" y1="-53.34" x2="-93.98" y2="-53.34" width="0.1524" layer="91"/>
 <junction x="-91.44" y="-53.34"/>
+<pinref part="U$6" gate="G$1" pin="C"/>
 </segment>
 </net>
 <net name="SRC_AUX" class="2">
 <segment>
 <pinref part="RB1" gate="G$1" pin="1"/>
 <wire x1="-99.06" y1="-88.9" x2="-99.06" y2="-81.28" width="0.1524" layer="91"/>
-<pinref part="D2" gate="G$2" pin="C"/>
 <wire x1="-99.06" y1="-81.28" x2="-99.06" y2="-78.74" width="0.1524" layer="91"/>
 <wire x1="-99.06" y1="-78.74" x2="-91.44" y2="-78.74" width="0.1524" layer="91"/>
 <wire x1="-91.44" y1="-78.74" x2="-91.44" y2="-68.58" width="0.1524" layer="91"/>
@@ -5889,6 +5767,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="QR2" gate="G$1" pin="S"/>
 <wire x1="-91.44" y1="-68.58" x2="-88.9" y2="-68.58" width="0.1524" layer="91"/>
 <junction x="-91.44" y="-68.58"/>
+<pinref part="U$7" gate="G$1" pin="C"/>
 </segment>
 </net>
 <net name="N$10" class="2">
