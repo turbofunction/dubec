@@ -174,7 +174,7 @@
 <text x="32.8" y="27.7" size="0.8128" layer="107" font="vector" ratio="15" align="top-center">2</text>
 <text x="31.8" y="27.7" size="0.8128" layer="107" font="vector" ratio="15" align="top-center">3</text>
 <text x="29.8" y="27.7" size="0.8128" layer="107" font="vector" ratio="15" align="top-center">4</text>
-<text x="28.8" y="27.7" size="0.8128" layer="107" font="vector" ratio="15" align="top-center">5</text>
+<text x="27.8" y="27.7" size="0.8128" layer="107" font="vector" ratio="15" align="top-center">5</text>
 <text x="26.3" y="27.7" size="0.8128" layer="107" font="vector" ratio="15" align="top-center">6</text>
 <circle x="37.2" y="34.7" radius="2" width="0.5" layer="107"/>
 <hole x="44.1" y="15.9" drill="1.8"/>
@@ -804,12 +804,12 @@ design rules under a new name.</description>
 </signal>
 <signal name="RESET">
 <contactref element="J1" pad="5"/>
-<wire x1="28" y1="26.9" x2="10.2" y2="26.9" width="0.3" layer="1"/>
+<wire x1="26.7" y1="26.9" x2="10.2" y2="26.9" width="0.3" layer="1"/>
 <wire x1="10.2" y1="26.9" x2="8.84" y2="25.54" width="0.3" layer="1"/>
 <wire x1="8.84" y1="25.54" x2="7.27" y2="25.54" width="0.3" layer="1"/>
-<contactref element="P1" pad="5"/>
-<wire x1="28" y1="26.9" x2="28.725" y2="27.625" width="0.3" layer="1"/>
-<wire x1="28.725" y1="27.625" x2="28.725" y2="28.45" width="0.3" layer="1"/>
+<wire x1="26.7" y1="26.9" x2="27.725" y2="27.925" width="0.3" layer="1"/>
+<contactref element="P1" pad="6"/>
+<wire x1="27.725" y1="27.925" x2="27.725" y2="28.45" width="0.3" layer="1"/>
 </signal>
 <signal name="GND">
 <polygon width="0.3556" layer="1">
@@ -840,11 +840,11 @@ design rules under a new name.</description>
 </signal>
 <signal name="PB3">
 <contactref element="J3" pad="1"/>
-<via x="27.725" y="27.775" extent="1-16" drill="0.3"/>
-<wire x1="27.725" y1="27.775" x2="27.725" y2="35.275" width="0.3" layer="16"/>
-<wire x1="27.725" y1="35.275" x2="23" y2="40" width="0.3" layer="16"/>
-<contactref element="P1" pad="6"/>
-<wire x1="27.725" y1="28.45" x2="27.725" y2="27.775" width="0.6" layer="1"/>
+<via x="28.725" y="27.775" extent="1-16" drill="0.3"/>
+<wire x1="28.725" y1="27.775" x2="28.725" y2="34.275" width="0.3" layer="16"/>
+<wire x1="28.725" y1="34.275" x2="23" y2="40" width="0.3" layer="16"/>
+<contactref element="P1" pad="5"/>
+<wire x1="28.725" y1="28.45" x2="28.725" y2="27.775" width="0.3" layer="1"/>
 </signal>
 <signal name="ISP_EN">
 <contactref element="U1" pad="5"/>
@@ -968,11 +968,6 @@ design rules under a new name.</description>
 <approved hash="6,1,36162b8b4c8b5116"/>
 <approved hash="6,1,6440634303430440"/>
 <approved hash="19,1,e65efa03ec251f1b"/>
-<approved hash="5,1,6039ef7011b09e79"/>
-<approved hash="5,1,fe3c0075feb5007c"/>
-<approved hash="5,1,7f443074bea67ae6"/>
-<approved hash="19,1,877f47bc51ff71a3"/>
-<approved hash="19,1,afc0c8bfe033d641"/>
 <approved hash="6,1,d40500050033d412"/>
 <approved hash="6,1,e92a02c50478ce97"/>
 <approved hash="6,1,8dbbe1853b5037f7"/>
@@ -981,6 +976,19 @@ design rules under a new name.</description>
 <approved hash="6,1,52ec557c397c3eec"/>
 <approved hash="6,1,89da96397d3962da"/>
 <approved hash="6,1,8043800100010043"/>
+<approved hash="5,1,6039ef7011b09e79"/>
+<approved hash="5,1,fe3c0075feb5007c"/>
+<approved hash="5,1,7f443074bea67ae6"/>
+<approved hash="19,1,877f47bc51ff71a3"/>
+<approved hash="19,1,afc0c8bfe033d641"/>
+<approved hash="6,1,1cab1c59ae59aeab"/>
+<approved hash="6,1,a987af5f5f5f5987"/>
+<approved hash="6,1,53443264daaa7a54"/>
+<approved hash="6,1,1501140e020e0301"/>
+<approved hash="6,1,95f08b508b5095f0"/>
+<approved hash="6,1,89728d638d638972"/>
+<approved hash="6,1,96838a8d078d1b83"/>
+<approved hash="6,1,80ae805f805f80ae"/>
 </errors>
 </board>
 </drawing>
