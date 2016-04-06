@@ -971,15 +971,87 @@
 <rectangle x1="0.95" y1="-0.475" x2="1.65" y2="-0.175" layer="31"/>
 </package>
 <package name="SOT23-3">
-<smd name="3" x="0" y="-1" dx="0.8" dy="0.9" layer="1"/>
-<smd name="1" x="0.95" y="1" dx="0.8" dy="0.9" layer="1"/>
-<smd name="2" x="-0.95" y="1" dx="0.8" dy="0.9" layer="1"/>
+<smd name="3" x="0" y="-1" dx="0.8" dy="0.9" layer="1" stop="no"/>
+<smd name="1" x="0.95" y="1" dx="0.8" dy="0.9" layer="1" stop="no"/>
+<smd name="2" x="-0.95" y="1" dx="0.8" dy="0.9" layer="1" stop="no"/>
 <wire x1="-1.45" y1="-0.65" x2="-1.45" y2="0.05" width="0.13" layer="21"/>
 <text x="-1.1" y="-0.3" size="0.2" layer="27">&gt;VALUE</text>
 <text x="-1.1" y="0.2" size="0.2" layer="25" align="top-left">&gt;NAME</text>
 <wire x1="1.45" y1="-0.65" x2="1.45" y2="0.05" width="0.13" layer="21"/>
 <wire x1="1.45" y1="-0.65" x2="0.95" y2="-0.65" width="0.13" layer="21"/>
 <wire x1="-0.95" y1="-0.65" x2="-1.45" y2="-0.65" width="0.13" layer="21"/>
+<rectangle x1="-1.35" y1="0.55" x2="-0.55" y2="1.45" layer="29"/>
+<rectangle x1="0.55" y1="0.55" x2="1.35" y2="1.45" layer="29"/>
+<rectangle x1="-0.4" y1="-1.45" x2="0.4" y2="-0.55" layer="29"/>
+</package>
+<package name="SOD923+">
+<smd name="A" x="-0.45" y="0" dx="0.3" dy="0.4" layer="1" stop="no"/>
+<smd name="C" x="0.45" y="0" dx="0.3" dy="0.4" layer="1" stop="no"/>
+<wire x1="-0.8" y1="0.4" x2="0.8" y2="0.4" width="0.13" layer="21"/>
+<wire x1="0.8" y1="0.4" x2="0.8" y2="-0.4" width="0.13" layer="21"/>
+<wire x1="0.8" y1="-0.4" x2="-0.8" y2="-0.4" width="0.13" layer="21"/>
+<wire x1="-0.8" y1="-0.4" x2="-0.8" y2="0.4" width="0.13" layer="21"/>
+<text x="-0.8" y="0.9" size="0.3" layer="27" align="top-left">&gt;VALUE</text>
+<text x="-0.8" y="1" size="0.3" layer="25">&gt;NAME</text>
+<text x="0.83" y="-0.63" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
+<wire x1="-0.4" y1="0.3" x2="0.4" y2="0.3" width="0.05" layer="51"/>
+<wire x1="0.4" y1="0.3" x2="0.4" y2="0.1" width="0.05" layer="51"/>
+<wire x1="0.4" y1="0.1" x2="0.5" y2="0.1" width="0.05" layer="51"/>
+<wire x1="0.5" y1="0.1" x2="0.5" y2="-0.1" width="0.05" layer="51"/>
+<wire x1="0.5" y1="-0.1" x2="0.4" y2="-0.1" width="0.05" layer="51"/>
+<wire x1="0.4" y1="-0.1" x2="0.4" y2="-0.3" width="0.05" layer="51"/>
+<wire x1="0.4" y1="-0.3" x2="-0.4" y2="-0.3" width="0.05" layer="51"/>
+<wire x1="-0.4" y1="-0.3" x2="-0.4" y2="-0.1" width="0.05" layer="51"/>
+<wire x1="-0.4" y1="-0.1" x2="-0.5" y2="-0.1" width="0.05" layer="51"/>
+<wire x1="-0.5" y1="-0.1" x2="-0.5" y2="0.1" width="0.05" layer="51"/>
+<wire x1="-0.5" y1="0.1" x2="-0.4" y2="0.1" width="0.05" layer="51"/>
+<wire x1="-0.4" y1="0.1" x2="-0.4" y2="0.3" width="0.05" layer="51"/>
+<rectangle x1="-0.6" y1="-0.2" x2="-0.3" y2="0.2" layer="29"/>
+<rectangle x1="0.3" y1="-0.2" x2="0.6" y2="0.2" layer="29"/>
+</package>
+<package name="DFN2020-3">
+<smd name="1" x="-0.65" y="1.05" dx="0.4" dy="0.5" layer="1" stop="no"/>
+<smd name="2" x="0.65" y="1.05" dx="0.4" dy="0.5" layer="1" stop="no"/>
+<wire x1="-1.1" y1="1.5" x2="1.1" y2="1.5" width="0.13" layer="21"/>
+<wire x1="1.1" y1="1.5" x2="1.1" y2="-1" width="0.13" layer="21"/>
+<wire x1="1.1" y1="-1" x2="-1.1" y2="-1" width="0.13" layer="21"/>
+<wire x1="-1.1" y1="-1" x2="-1.1" y2="1.5" width="0.13" layer="21"/>
+<text x="-1" y="-1.2" size="0.3" layer="27" align="top-left">&gt;VALUE</text>
+<text x="-1" y="1.7" size="0.3" layer="25">&gt;NAME</text>
+<smd name="3" x="0" y="0" dx="0.25" dy="0.25" layer="1" stop="no" thermals="no" cream="no"/>
+<polygon width="0.25" layer="1">
+<vertex x="-0.675" y="-0.425"/>
+<vertex x="-0.675" y="0.425"/>
+<vertex x="0.675" y="0.425"/>
+<vertex x="0.675" y="-0.425"/>
+<vertex x="0.075" y="-0.425"/>
+<vertex x="0.075" y="-0.675"/>
+<vertex x="-0.075" y="-0.675"/>
+<vertex x="-0.075" y="-0.425"/>
+</polygon>
+<rectangle x1="-0.85" y1="0.8" x2="-0.45" y2="1.3" layer="29"/>
+<rectangle x1="0.45" y1="0.8" x2="0.85" y2="1.3" layer="29"/>
+<polygon width="0.25" layer="29">
+<vertex x="-0.675" y="-0.425"/>
+<vertex x="-0.675" y="0.425"/>
+<vertex x="0.675" y="0.425"/>
+<vertex x="0.675" y="-0.425"/>
+<vertex x="0.175" y="-0.425"/>
+<vertex x="0.075" y="-0.425"/>
+<vertex x="0.075" y="-0.675"/>
+<vertex x="-0.075" y="-0.675"/>
+<vertex x="-0.075" y="-0.425"/>
+</polygon>
+<polygon width="0.25" layer="31">
+<vertex x="-0.6" y="-0.35"/>
+<vertex x="-0.6" y="0.35"/>
+<vertex x="0.6" y="0.35"/>
+<vertex x="0.6" y="-0.35"/>
+<vertex x="0.025" y="-0.35"/>
+<vertex x="0.025" y="-0.625"/>
+<vertex x="-0.025" y="-0.625"/>
+<vertex x="-0.025" y="-0.35"/>
+</polygon>
 </package>
 </packages>
 <symbols>
@@ -1643,6 +1715,34 @@
 <attribute name="MANUFACTURER" value="Panasonic Electronic Components" constant="no"/>
 <attribute name="MFG_PART_#" value="DZ2S180M0L" constant="no"/>
 <attribute name="TOLERANCE" value="±5%" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="12V_TVS" package="SOD923+">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="ESD12VD9-TPMSCT-ND" constant="no"/>
+<attribute name="EURO" value="5.71/25" constant="no"/>
+<attribute name="MANUFACTURER" value="Micro Commercial Co" constant="no"/>
+<attribute name="MFG_PART_#" value="ESD12VD9-TP" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="12V_TVS_DFN" package="DFN2020-3">
+<connects>
+<connect gate="G$1" pin="A" pad="1 2"/>
+<connect gate="G$1" pin="C" pad="3"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="568-11464-1-ND" constant="no"/>
+<attribute name="EURO" value="20.92/100" constant="no"/>
+<attribute name="MANUFACTURER" value="NXP Semiconductors" constant="no"/>
+<attribute name="MFG_PART_#" value="PTVS12VU1UPAZ" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -4907,7 +5007,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="RDAUX" library="dubec" deviceset="RES" device="93.1_16" value="RES93.1_16"/>
 <part name="12RLED" library="dubec" deviceset="RES" device="620_4" value="RES620_4"/>
 <part name="5RLED" library="dubec" deviceset="RES" device="140_16" value="RES140_16"/>
-<part name="12TVS" library="dubec" deviceset="D_ZENER" device="15V" value="D_ZENER15V"/>
+<part name="12TVS" library="dubec" deviceset="D_ZENER" device="12V_TVS_DFN" value="D_ZENER12V_TVS_DFN"/>
 <part name="RAUXTOP" library="dubec" deviceset="RES" device="10K_8_06" value="RES10K_8_06"/>
 <part name="RAUXBOT" library="dubec" deviceset="RES" device="332_8" value="RES332_8"/>
 <part name="MCC1" library="dubec" deviceset="CAP" device="4.7UF_10V"/>
