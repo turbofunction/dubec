@@ -600,17 +600,15 @@
 <text x="2.23" y="-1.33" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
 </package>
 <package name="SOD523+">
-<smd name="A" x="-0.7" y="0" dx="0.6" dy="0.7" layer="1" stop="no"/>
-<smd name="C" x="0.7" y="0" dx="0.6" dy="0.7" layer="1" stop="no"/>
+<smd name="A" x="-0.7" y="0" dx="0.6" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="C" x="0.7" y="0" dx="0.6" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
 <wire x1="-1.2" y1="0.6" x2="1.2" y2="0.6" width="0.13" layer="21"/>
 <wire x1="1.2" y1="0.6" x2="1.2" y2="-0.6" width="0.13" layer="21"/>
 <wire x1="1.2" y1="-0.6" x2="-1.2" y2="-0.6" width="0.13" layer="21"/>
 <wire x1="-1.2" y1="-0.6" x2="-1.2" y2="0.6" width="0.13" layer="21"/>
 <text x="-1" y="-0.8" size="0.3" layer="27" align="top-left">&gt;VALUE</text>
 <text x="-1" y="0.8" size="0.3" layer="25">&gt;NAME</text>
-<text x="1.23" y="-0.73" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
-<rectangle x1="-1.05" y1="-0.4" x2="-0.35" y2="0.4" layer="29"/>
-<rectangle x1="0.35" y1="-0.4" x2="1.05" y2="0.4" layer="29"/>
+<text x="1.255" y="-0.78" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
 <wire x1="-0.6" y1="0.4" x2="0.6" y2="0.4" width="0.05" layer="51"/>
 <wire x1="0.6" y1="0.4" x2="0.6" y2="0.15" width="0.05" layer="51"/>
 <wire x1="0.6" y1="0.15" x2="0.8" y2="0.15" width="0.05" layer="51"/>
@@ -623,6 +621,10 @@
 <wire x1="-0.8" y1="-0.15" x2="-0.8" y2="0.15" width="0.05" layer="51"/>
 <wire x1="-0.8" y1="0.15" x2="-0.6" y2="0.15" width="0.05" layer="51"/>
 <wire x1="-0.6" y1="0.15" x2="-0.6" y2="0.4" width="0.05" layer="51"/>
+<rectangle x1="-1" y1="-0.35" x2="-0.4" y2="0.35" layer="29"/>
+<rectangle x1="0.4" y1="-0.35" x2="1" y2="0.35" layer="29"/>
+<rectangle x1="-0.95" y1="-0.3" x2="-0.45" y2="0.3" layer="31"/>
+<rectangle x1="0.45" y1="-0.3" x2="0.95" y2="0.3" layer="31"/>
 </package>
 <package name="0603+DUAL">
 <text x="-0.8" y="0.5" size="0.3" layer="25" align="top-left">&gt;NAME</text>

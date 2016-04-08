@@ -406,17 +406,15 @@ DUBEC</text>
 </polygon>
 </package>
 <package name="SOD523+">
-<smd name="A" x="-0.7" y="0" dx="0.6" dy="0.7" layer="1" stop="no"/>
-<smd name="C" x="0.7" y="0" dx="0.6" dy="0.7" layer="1" stop="no"/>
+<smd name="A" x="-0.7" y="0" dx="0.6" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="C" x="0.7" y="0" dx="0.6" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
 <wire x1="-1.2" y1="0.6" x2="1.2" y2="0.6" width="0.13" layer="21"/>
 <wire x1="1.2" y1="0.6" x2="1.2" y2="-0.6" width="0.13" layer="21"/>
 <wire x1="1.2" y1="-0.6" x2="-1.2" y2="-0.6" width="0.13" layer="21"/>
 <wire x1="-1.2" y1="-0.6" x2="-1.2" y2="0.6" width="0.13" layer="21"/>
 <text x="-1" y="-0.8" size="0.3" layer="27" align="top-left">&gt;VALUE</text>
 <text x="-1" y="0.8" size="0.3" layer="25">&gt;NAME</text>
-<text x="1.23" y="-0.73" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
-<rectangle x1="-1.05" y1="-0.4" x2="-0.35" y2="0.4" layer="29"/>
-<rectangle x1="0.35" y1="-0.4" x2="1.05" y2="0.4" layer="29"/>
+<text x="1.255" y="-0.78" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
 <wire x1="-0.6" y1="0.4" x2="0.6" y2="0.4" width="0.05" layer="51"/>
 <wire x1="0.6" y1="0.4" x2="0.6" y2="0.15" width="0.05" layer="51"/>
 <wire x1="0.6" y1="0.15" x2="0.8" y2="0.15" width="0.05" layer="51"/>
@@ -429,6 +427,10 @@ DUBEC</text>
 <wire x1="-0.8" y1="-0.15" x2="-0.8" y2="0.15" width="0.05" layer="51"/>
 <wire x1="-0.8" y1="0.15" x2="-0.6" y2="0.15" width="0.05" layer="51"/>
 <wire x1="-0.6" y1="0.15" x2="-0.6" y2="0.4" width="0.05" layer="51"/>
+<rectangle x1="-1" y1="-0.35" x2="-0.4" y2="0.35" layer="29"/>
+<rectangle x1="0.4" y1="-0.35" x2="1" y2="0.35" layer="29"/>
+<rectangle x1="-0.95" y1="-0.3" x2="-0.45" y2="0.3" layer="31"/>
+<rectangle x1="0.45" y1="-0.3" x2="0.95" y2="0.3" layer="31"/>
 </package>
 <package name="10-MLF">
 <smd name="8" x="1.35" y="0" dx="0.7" dy="0.25" layer="1" stop="no" thermals="no" cream="no"/>
@@ -1625,11 +1627,11 @@ Covered vias can be set in Masks (Limit).
 <attribute name="DIGIKEY_PART_#" value="PACDN042Y3ROSCT-ND" x="35.125" y="18" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MANUFACTURER" value="ON Semiconductor" x="35.125" y="18" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="U$6" library="dubec" package="SOT23-3" value="2D_ZENER36V" x="14" y="10.625" rot="R90">
-<attribute name="DIGIKEY_PART_#" value="F6350CT-ND" x="14" y="10.625" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MFG_PART_#" value="SM36-02HTG" x="14" y="10.625" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MANUFACTURER" value="Littelfuse Inc." x="14" y="10.625" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="EURO" value="4.35/10" x="14" y="10.625" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="U$6" library="dubec" package="SOT23-3" value="2D_ZENER36V" x="13.875" y="10.625" rot="R90">
+<attribute name="DIGIKEY_PART_#" value="F6350CT-ND" x="13.875" y="10.625" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MFG_PART_#" value="SM36-02HTG" x="13.875" y="10.625" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MANUFACTURER" value="Littelfuse Inc." x="13.875" y="10.625" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="EURO" value="4.35/10" x="13.875" y="10.625" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 </elements>
 <signals>
@@ -2472,11 +2474,11 @@ Covered vias can be set in Masks (Limit).
 <wire x1="11" y1="12.375" x2="11" y2="12.725" width="0.5" layer="1"/>
 <wire x1="11" y1="12.725" x2="11.25" y2="12.975" width="0.5" layer="1"/>
 <contactref element="U$6" pad="1"/>
-<wire x1="13" y1="11.575" x2="11.8" y2="11.575" width="0.3" layer="1"/>
-<wire x1="11.8" y1="11.575" x2="11" y2="12.375" width="0.3" layer="1"/>
-<wire x1="11" y1="12.375" x2="8.25" y2="12.375" width="0.3302" layer="15"/>
-<wire x1="8.25" y1="12.375" x2="5.875" y2="10" width="0.3302" layer="15"/>
-<wire x1="5.875" y1="10" x2="2" y2="10" width="0.3302" layer="15"/>
+<wire x1="12.875" y1="11.575" x2="11.8" y2="11.575" width="0.4" layer="1"/>
+<wire x1="11.8" y1="11.575" x2="11" y2="12.375" width="0.4" layer="1"/>
+<wire x1="11" y1="12.375" x2="7.875" y2="12.375" width="0.4" layer="15"/>
+<wire x1="7.875" y1="12.375" x2="5.5" y2="10" width="0.4" layer="15"/>
+<wire x1="5.5" y1="10" x2="2" y2="10" width="0.4" layer="15"/>
 </signal>
 <signal name="GATE_MAIN_B" class="2">
 <contactref element="QA" pad="2"/>
@@ -2719,13 +2721,14 @@ Covered vias can be set in Masks (Limit).
 </polygon>
 <contactref element="U$6" pad="2"/>
 <via x="10.5" y="11.4375" extent="1-16" drill="0.3"/>
-<wire x1="10.5" y1="11.4375" x2="8.3125" y2="11.4375" width="0.3302" layer="15"/>
-<wire x1="10.5" y1="11.4375" x2="10.9375" y2="11.4375" width="0.3302" layer="1"/>
-<wire x1="10.9375" y1="11.4375" x2="12.7" y2="9.675" width="0.3302" layer="1"/>
-<wire x1="12.7" y1="9.675" x2="13" y2="9.675" width="0.3302" layer="1"/>
-<wire x1="8.3125" y1="11.4375" x2="6.125" y2="9.25" width="0.3302" layer="15"/>
-<wire x1="6.125" y1="9.25" x2="4.75" y2="9.25" width="0.3302" layer="15"/>
-<wire x1="4.75" y1="9.25" x2="2" y2="6.5" width="0.3302" layer="15"/>
+<wire x1="10.5" y1="11.4375" x2="10.3125" y2="11.625" width="0.4" layer="15"/>
+<wire x1="10.3125" y1="11.625" x2="8.25" y2="11.625" width="0.4" layer="15"/>
+<wire x1="8.25" y1="11.625" x2="5.875" y2="9.25" width="0.4" layer="15"/>
+<wire x1="5.875" y1="9.25" x2="4.75" y2="9.25" width="0.4" layer="15"/>
+<wire x1="4.75" y1="9.25" x2="2" y2="6.5" width="0.4" layer="15"/>
+<wire x1="10.5" y1="11.4375" x2="11.5625" y2="10.375" width="0.4" layer="1"/>
+<wire x1="11.5625" y1="10.375" x2="12.175" y2="10.375" width="0.4" layer="1"/>
+<wire x1="12.175" y1="10.375" x2="12.875" y2="9.675" width="0.4" layer="1"/>
 </signal>
 </signals>
 <errors>
