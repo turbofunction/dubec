@@ -291,8 +291,8 @@
 </package>
 <package name="0603+">
 <description>IPC-SM-782 RES/CAP</description>
-<smd name="A" x="-0.8" y="0" dx="0.8" dy="1" layer="1" stop="no"/>
-<smd name="C" x="0.8" y="0" dx="0.8" dy="1" layer="1" stop="no"/>
+<smd name="A" x="-0.8" y="0" dx="0.8" dy="1" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="C" x="0.8" y="0" dx="0.8" dy="1" layer="1" stop="no" thermals="no" cream="no"/>
 <text x="-1.2" y="0.5" size="0.4" layer="25" align="top-left">&gt;NAME</text>
 <text x="-1.2" y="-0.5" size="0.4" layer="27">&gt;VALUE</text>
 <text x="1.41" y="-0.85" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
@@ -300,12 +300,14 @@
 <wire x1="0.85" y1="0.475" x2="0.85" y2="-0.475" width="0.05" layer="51"/>
 <wire x1="0.85" y1="-0.475" x2="-0.85" y2="-0.475" width="0.05" layer="51"/>
 <wire x1="-0.85" y1="-0.475" x2="-0.85" y2="0.475" width="0.05" layer="51"/>
-<rectangle x1="-1.25" y1="-0.55" x2="-0.35" y2="0.55" layer="29"/>
-<rectangle x1="0.35" y1="-0.55" x2="1.25" y2="0.55" layer="29"/>
 <wire x1="-1.35" y1="0.65" x2="1.35" y2="0.65" width="0.13" layer="49"/>
 <wire x1="1.35" y1="0.65" x2="1.35" y2="-0.65" width="0.13" layer="49"/>
 <wire x1="1.35" y1="-0.65" x2="-1.35" y2="-0.65" width="0.13" layer="49"/>
 <wire x1="-1.35" y1="-0.65" x2="-1.35" y2="0.65" width="0.13" layer="49"/>
+<rectangle x1="-1.2" y1="-0.5" x2="-0.4" y2="0.5" layer="29"/>
+<rectangle x1="0.4" y1="-0.5" x2="1.2" y2="0.5" layer="29"/>
+<rectangle x1="-1.15" y1="-0.45" x2="-0.45" y2="0.45" layer="31"/>
+<rectangle x1="0.45" y1="-0.45" x2="1.15" y2="0.45" layer="31"/>
 </package>
 <package name="DFN-16">
 <smd name="12" x="0.25" y="2" dx="0.25" dy="0.8" layer="1" stop="no" cream="no"/>
@@ -771,10 +773,10 @@
 <wire x1="1.6" y1="-1.35" x2="-1.6" y2="-1.35" width="0.127" layer="51"/>
 <wire x1="-1.6" y1="-1.35" x2="-1.6" y2="1.35" width="0.127" layer="51"/>
 <text x="1.7" y="-1.6" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
-<rectangle x1="-1.85" y1="-1.4" x2="-0.55" y2="1.4" layer="29"/>
-<rectangle x1="0.55" y1="-1.4" x2="1.85" y2="1.4" layer="29"/>
-<rectangle x1="-1.7" y1="-1.2" x2="-0.7" y2="1.2" layer="31"/>
-<rectangle x1="0.7" y1="-1.2" x2="1.7" y2="1.2" layer="31"/>
+<rectangle x1="-1.8" y1="-1.35" x2="-0.6" y2="1.35" layer="29"/>
+<rectangle x1="0.6" y1="-1.35" x2="1.8" y2="1.35" layer="29"/>
+<rectangle x1="-1.7" y1="-1.25" x2="-0.7" y2="1.25" layer="31"/>
+<rectangle x1="0.7" y1="-1.25" x2="1.7" y2="1.25" layer="31"/>
 </package>
 <package name="0805+">
 <smd name="A" x="-1" y="0" dx="1" dy="1.5" layer="1"/>
@@ -860,8 +862,8 @@
 <wire x1="3" y1="-2.4" x2="3" y2="-1.7" width="0.13" layer="21"/>
 <rectangle x1="-3" y1="-1" x2="-1.4" y2="1" layer="29"/>
 <rectangle x1="1.4" y1="-1" x2="3" y2="1" layer="29"/>
-<rectangle x1="-2.8" y1="-0.8" x2="-1.6" y2="0.8" layer="31"/>
-<rectangle x1="1.6" y1="-0.8" x2="2.8" y2="0.8" layer="31"/>
+<rectangle x1="-2.9" y1="-0.9" x2="-1.5" y2="0.9" layer="31"/>
+<rectangle x1="1.5" y1="-0.9" x2="2.9" y2="0.9" layer="31"/>
 </package>
 <package name="POWERPAK-1212-8-DUAL">
 <smd name="6" x="1.3" y="-0.325" dx="0.8" dy="0.35" layer="1" stop="no" thermals="no" cream="no"/>
