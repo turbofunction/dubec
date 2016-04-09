@@ -196,7 +196,6 @@ for Super DUBEC</text>
 <circle x="23.1" y="25.3" radius="2" width="0.5" layer="107"/>
 <text x="20.3" y="21.8" size="0.8128" layer="107" font="vector" ratio="10" rot="R90" align="top-center">C1</text>
 <text x="11.7" y="24.4" size="0.8128" layer="107" font="vector" ratio="10" rot="R270" align="top-center">C2</text>
-<text x="15" y="8" size="0.8128" layer="107" font="vector" ratio="10" rot="R90" align="center">EG1271A</text>
 <text x="56.1" y="2.7" size="1" layer="107" font="vector" ratio="15" rot="SR0">1 SII</text>
 <text x="49.1" y="2.7" size="1" layer="107" font="vector" ratio="15" rot="SR0">2 VCC</text>
 <text x="56.1" y="4.7" size="1" layer="107" font="vector" ratio="15" rot="SR0">3 SDO</text>
@@ -335,20 +334,22 @@ for Super DUBEC</text>
 </package>
 <package name="0402">
 <description>IPC-SM-782 RES/CAP; narrowed by 2mm</description>
-<smd name="1" x="-0.5" y="0" dx="0.4" dy="0.7" layer="1" stop="no"/>
-<smd name="2" x="0.5" y="0" dx="0.4" dy="0.7" layer="1" stop="no"/>
+<smd name="1" x="-0.5" y="0" dx="0.4" dy="0.6" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="2" x="0.5" y="0" dx="0.4" dy="0.6" layer="1" stop="no" thermals="no" cream="no"/>
 <text x="-0.75" y="0.35" size="0.254" layer="25" align="top-left">&gt;NAME</text>
 <text x="-0.75" y="-0.35" size="0.254" layer="27">&gt;VALUE</text>
-<wire x1="-0.55" y1="0.3" x2="0.55" y2="0.3" width="0.05" layer="51"/>
-<wire x1="0.55" y1="0.3" x2="0.55" y2="-0.3" width="0.05" layer="51"/>
-<wire x1="0.55" y1="-0.3" x2="-0.55" y2="-0.3" width="0.05" layer="51"/>
-<wire x1="-0.55" y1="-0.3" x2="-0.55" y2="0.3" width="0.05" layer="51"/>
-<wire x1="-0.9" y1="0.55" x2="0.9" y2="0.55" width="0.13" layer="21"/>
-<wire x1="0.9" y1="0.55" x2="0.9" y2="-0.55" width="0.13" layer="21"/>
-<wire x1="0.9" y1="-0.55" x2="-0.9" y2="-0.55" width="0.13" layer="21"/>
-<wire x1="-0.9" y1="-0.55" x2="-0.9" y2="0.55" width="0.13" layer="21"/>
-<rectangle x1="-0.75" y1="-0.4" x2="-0.25" y2="0.4" layer="29"/>
-<rectangle x1="0.25" y1="-0.4" x2="0.75" y2="0.4" layer="29"/>
+<wire x1="-0.5" y1="0.25" x2="0.5" y2="0.25" width="0.05" layer="51"/>
+<wire x1="0.5" y1="0.25" x2="0.5" y2="-0.25" width="0.05" layer="51"/>
+<wire x1="0.5" y1="-0.25" x2="-0.5" y2="-0.25" width="0.05" layer="51"/>
+<wire x1="-0.5" y1="-0.25" x2="-0.5" y2="0.25" width="0.05" layer="51"/>
+<wire x1="-0.9" y1="0.5" x2="0.9" y2="0.5" width="0.13" layer="21"/>
+<wire x1="0.9" y1="0.5" x2="0.9" y2="-0.5" width="0.13" layer="21"/>
+<wire x1="0.9" y1="-0.5" x2="-0.9" y2="-0.5" width="0.13" layer="21"/>
+<wire x1="-0.9" y1="-0.5" x2="-0.9" y2="0.5" width="0.13" layer="21"/>
+<rectangle x1="-0.7" y1="-0.3" x2="-0.3" y2="0.3" layer="29"/>
+<rectangle x1="0.3" y1="-0.3" x2="0.7" y2="0.3" layer="29"/>
+<rectangle x1="-0.675" y1="-0.275" x2="-0.325" y2="0.275" layer="31"/>
+<rectangle x1="0.325" y1="-0.275" x2="0.675" y2="0.275" layer="31"/>
 </package>
 </packages>
 </library>
@@ -362,12 +363,12 @@ We've spent an enormous amount of time creating and checking these footprints an
 You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
 <packages>
 <package name="WR-BHD-3X2">
-<pad name="4" x="-1.27" y="0" drill="1.1" shape="offset" rot="R180"/>
-<pad name="3" x="1.27" y="0" drill="1.1" shape="offset"/>
-<pad name="6" x="-1.27" y="2.54" drill="1.1" shape="offset" rot="R180"/>
-<pad name="5" x="1.27" y="2.54" drill="1.1" shape="offset"/>
-<pad name="2" x="-1.27" y="-2.54" drill="1.1" shape="offset" rot="R180"/>
-<pad name="1" x="1.27" y="-2.54" drill="1.1" shape="offset"/>
+<pad name="4" x="-1.27" y="0" drill="1" diameter="1.6" shape="offset" rot="R180"/>
+<pad name="3" x="1.27" y="0" drill="1" diameter="1.6" shape="offset"/>
+<pad name="6" x="-1.27" y="2.54" drill="1" diameter="1.6" shape="offset" rot="R180"/>
+<pad name="5" x="1.27" y="2.54" drill="1" diameter="1.6" shape="offset"/>
+<pad name="2" x="-1.27" y="-2.54" drill="1" diameter="1.6" shape="offset" rot="R180"/>
+<pad name="1" x="1.27" y="-2.54" drill="1" diameter="1.6" shape="offset"/>
 <wire x1="-4.55" y1="7.64" x2="4.55" y2="7.64" width="0.2032" layer="21"/>
 <wire x1="4.55" y1="-7.64" x2="-4.55" y2="-7.64" width="0.2032" layer="21"/>
 <wire x1="-4.55" y1="-7.64" x2="-4.55" y2="7.64" width="0.2032" layer="21"/>
@@ -426,12 +427,12 @@ We've spent an enormous amount of time creating and checking these footprints an
 You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
 <packages>
 <package name="EG1271A">
-<pad name="1" x="-2.5" y="1.6" drill="0.9" diameter="1.5" shape="offset" rot="R90"/>
-<pad name="2" x="0" y="1.6" drill="0.9" diameter="1.5" shape="offset" rot="R90"/>
-<pad name="3" x="2.5" y="1.6" drill="0.9" diameter="1.5" shape="offset" rot="R90"/>
-<pad name="4" x="-2.5" y="-1.6" drill="0.9" diameter="1.5" shape="offset" rot="R270"/>
-<pad name="5" x="0" y="-1.6" drill="0.9" diameter="1.5" shape="offset" rot="R270"/>
-<pad name="6" x="2.5" y="-1.6" drill="0.9" diameter="1.5" shape="offset" rot="R270"/>
+<pad name="1" x="-2.5" y="1.6" drill="1" diameter="1.6" shape="offset" rot="R90"/>
+<pad name="2" x="0" y="1.6" drill="1" diameter="1.6" shape="offset" rot="R90"/>
+<pad name="3" x="2.5" y="1.6" drill="1" diameter="1.6" shape="offset" rot="R90"/>
+<pad name="4" x="-2.5" y="-1.6" drill="1" diameter="1.6" shape="offset" rot="R270"/>
+<pad name="5" x="0" y="-1.6" drill="1" diameter="1.6" shape="offset" rot="R270"/>
+<pad name="6" x="2.5" y="-1.6" drill="1" diameter="1.6" shape="offset" rot="R270"/>
 <wire x1="4.25" y1="1.75" x2="4.25" y2="-1.74" width="0.127" layer="21"/>
 <wire x1="4.25" y1="-1.74" x2="4.25" y2="-1.75" width="0.127" layer="21"/>
 <wire x1="-4.25" y1="-1.75" x2="-4.25" y2="-1.74" width="0.127" layer="21"/>
@@ -695,8 +696,8 @@ design rules under a new name.</description>
 <wire x1="32.6" y1="27.8" x2="26.7" y2="21.9" width="0.3" layer="1"/>
 <contactref element="S1" pad="1"/>
 <contactref element="S1" pad="4"/>
-<wire x1="15.7" y1="11.4" x2="17.05" y2="11.4" width="0.7" layer="1"/>
-<wire x1="17.05" y1="11.4" x2="18.9" y2="11.4" width="0.7" layer="1"/>
+<wire x1="15.7" y1="11.4" x2="17.05" y2="11.4" width="0.3" layer="1"/>
+<wire x1="17.05" y1="11.4" x2="18.9" y2="11.4" width="0.3" layer="1"/>
 <wire x1="5.6" y1="18.5" x2="17.05" y2="18.5" width="0.3" layer="1"/>
 <contactref element="C1" pad="1"/>
 <wire x1="17.95" y1="20.1" x2="17.95" y2="19.4" width="0.3" layer="1"/>
@@ -732,7 +733,7 @@ design rules under a new name.</description>
 <wire x1="27.1" y1="29.5" x2="34.6" y2="29.5" width="0.6" layer="1"/>
 <wire x1="34.6" y1="29.5" x2="41" y2="35.9" width="0.6" layer="1"/>
 <wire x1="41" y1="35.9" x2="41" y2="40" width="0.6" layer="1"/>
-<wire x1="25.225" y1="27.5" x2="13.75" y2="27.5" width="0.3" layer="1"/>
+<wire x1="25.325" y1="27.5" x2="13.75" y2="27.5" width="0.3" layer="1"/>
 <wire x1="13.75" y1="27.5" x2="9.9" y2="27.5" width="0.3" layer="1"/>
 <wire x1="26.725" y1="29.125" x2="26.725" y2="28.45" width="0.6" layer="1"/>
 <contactref element="C1" pad="2"/>
@@ -773,8 +774,8 @@ design rules under a new name.</description>
 <wire x1="16.95" y1="24.35" x2="17.1" y2="24.2" width="0.3" layer="16"/>
 <wire x1="17.625" y1="25.05" x2="16.95" y2="24.375" width="0.3" layer="16"/>
 <wire x1="16.95" y1="24.375" x2="16.95" y2="24.35" width="0.3" layer="16"/>
-<wire x1="25.225" y1="27.5" x2="25.675" y2="27.95" width="0.3" layer="1"/>
-<wire x1="25.675" y1="27.95" x2="25.675" y2="28.45" width="0.3" layer="1"/>
+<wire x1="25.325" y1="27.5" x2="25.675" y2="27.85" width="0.3" layer="1"/>
+<wire x1="25.675" y1="27.85" x2="25.675" y2="28.45" width="0.3" layer="1"/>
 </signal>
 <signal name="MISO">
 <contactref element="P1" pad="3"/>
@@ -804,12 +805,12 @@ design rules under a new name.</description>
 </signal>
 <signal name="RESET">
 <contactref element="J1" pad="5"/>
-<wire x1="26.7" y1="26.9" x2="10.2" y2="26.9" width="0.3" layer="1"/>
+<wire x1="26.8" y1="26.9" x2="10.2" y2="26.9" width="0.3" layer="1"/>
 <wire x1="10.2" y1="26.9" x2="8.84" y2="25.54" width="0.3" layer="1"/>
 <wire x1="8.84" y1="25.54" x2="7.27" y2="25.54" width="0.3" layer="1"/>
-<wire x1="26.7" y1="26.9" x2="27.725" y2="27.925" width="0.3" layer="1"/>
+<wire x1="26.8" y1="26.9" x2="27.725" y2="27.825" width="0.3" layer="1"/>
 <contactref element="P1" pad="6"/>
-<wire x1="27.725" y1="27.925" x2="27.725" y2="28.45" width="0.3" layer="1"/>
+<wire x1="27.725" y1="27.825" x2="27.725" y2="28.45" width="0.3" layer="1"/>
 </signal>
 <signal name="GND">
 <polygon width="0.3556" layer="1">
@@ -844,15 +845,14 @@ design rules under a new name.</description>
 <wire x1="28.725" y1="27.775" x2="28.725" y2="34.275" width="0.3" layer="16"/>
 <wire x1="28.725" y1="34.275" x2="23" y2="40" width="0.3" layer="16"/>
 <contactref element="P1" pad="5"/>
-<wire x1="28.725" y1="28.45" x2="28.725" y2="27.775" width="0.3" layer="1"/>
+<wire x1="28.725" y1="28.45" x2="28.725" y2="27.775" width="0.6" layer="1"/>
 </signal>
 <signal name="ISP_EN">
 <contactref element="U1" pad="5"/>
 <contactref element="S1" pad="2"/>
 <contactref element="S1" pad="5"/>
-<wire x1="18.9" y1="8.9" x2="17.3" y2="8.9" width="0.7" layer="16"/>
-<wire x1="17.3" y1="8.9" x2="15.7" y2="8.9" width="0.7" layer="16"/>
-<wire x1="15.7" y1="8.9" x2="18.9" y2="8.9" width="0.7" layer="1"/>
+<wire x1="18.9" y1="8.9" x2="17.3" y2="8.9" width="0.3" layer="16"/>
+<wire x1="17.3" y1="8.9" x2="15.7" y2="8.9" width="0.3" layer="16"/>
 <contactref element="U1" pad="12"/>
 <contactref element="C2" pad="1"/>
 <contactref element="U1" pad="6"/>

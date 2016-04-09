@@ -296,38 +296,24 @@
 <wire x1="2.4" y1="-1.55" x2="2.4" y2="1.55" width="0.13" layer="21"/>
 <wire x1="2.4" y1="1.55" x2="-2.4" y2="1.55" width="0.13" layer="21"/>
 </package>
-<package name="0603">
-<smd name="1" x="-0.75" y="0" dx="0.7" dy="1" layer="1" stop="no"/>
-<smd name="2" x="0.75" y="0" dx="0.7" dy="1" layer="1" stop="no"/>
-<text x="-1.15" y="0.5" size="0.4" layer="25" align="top-left">&gt;NAME</text>
-<text x="-1.15" y="-0.5" size="0.4" layer="27">&gt;VALUE</text>
-<wire x1="-0.8" y1="0.45" x2="0.8" y2="0.45" width="0.05" layer="51"/>
-<wire x1="0.8" y1="0.45" x2="0.8" y2="-0.45" width="0.05" layer="51"/>
-<wire x1="0.8" y1="-0.45" x2="-0.8" y2="-0.45" width="0.05" layer="51"/>
-<wire x1="-0.8" y1="-0.45" x2="-0.8" y2="0.45" width="0.05" layer="51"/>
-<wire x1="-1.3" y1="0.7" x2="1.3" y2="0.7" width="0.13" layer="21"/>
-<wire x1="1.3" y1="0.7" x2="1.3" y2="-0.7" width="0.13" layer="21"/>
-<wire x1="1.3" y1="-0.7" x2="-1.3" y2="-0.7" width="0.13" layer="21"/>
-<wire x1="-1.3" y1="-0.7" x2="-1.3" y2="0.7" width="0.13" layer="21"/>
-<rectangle x1="-1.15" y1="-0.55" x2="-0.35" y2="0.55" layer="29"/>
-<rectangle x1="0.35" y1="-0.55" x2="1.15" y2="0.55" layer="29"/>
-</package>
 <package name="0402">
 <description>IPC-SM-782 RES/CAP; narrowed by 2mm</description>
-<smd name="1" x="-0.5" y="0" dx="0.4" dy="0.7" layer="1" stop="no"/>
-<smd name="2" x="0.5" y="0" dx="0.4" dy="0.7" layer="1" stop="no"/>
+<smd name="1" x="-0.5" y="0" dx="0.4" dy="0.6" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="2" x="0.5" y="0" dx="0.4" dy="0.6" layer="1" stop="no" thermals="no" cream="no"/>
 <text x="-0.75" y="0.35" size="0.254" layer="25" align="top-left">&gt;NAME</text>
 <text x="-0.75" y="-0.35" size="0.254" layer="27">&gt;VALUE</text>
-<wire x1="-0.55" y1="0.3" x2="0.55" y2="0.3" width="0.05" layer="51"/>
-<wire x1="0.55" y1="0.3" x2="0.55" y2="-0.3" width="0.05" layer="51"/>
-<wire x1="0.55" y1="-0.3" x2="-0.55" y2="-0.3" width="0.05" layer="51"/>
-<wire x1="-0.55" y1="-0.3" x2="-0.55" y2="0.3" width="0.05" layer="51"/>
-<wire x1="-0.9" y1="0.55" x2="0.9" y2="0.55" width="0.13" layer="21"/>
-<wire x1="0.9" y1="0.55" x2="0.9" y2="-0.55" width="0.13" layer="21"/>
-<wire x1="0.9" y1="-0.55" x2="-0.9" y2="-0.55" width="0.13" layer="21"/>
-<wire x1="-0.9" y1="-0.55" x2="-0.9" y2="0.55" width="0.13" layer="21"/>
-<rectangle x1="-0.75" y1="-0.4" x2="-0.25" y2="0.4" layer="29"/>
-<rectangle x1="0.25" y1="-0.4" x2="0.75" y2="0.4" layer="29"/>
+<wire x1="-0.5" y1="0.25" x2="0.5" y2="0.25" width="0.05" layer="51"/>
+<wire x1="0.5" y1="0.25" x2="0.5" y2="-0.25" width="0.05" layer="51"/>
+<wire x1="0.5" y1="-0.25" x2="-0.5" y2="-0.25" width="0.05" layer="51"/>
+<wire x1="-0.5" y1="-0.25" x2="-0.5" y2="0.25" width="0.05" layer="51"/>
+<wire x1="-0.9" y1="0.5" x2="0.9" y2="0.5" width="0.13" layer="21"/>
+<wire x1="0.9" y1="0.5" x2="0.9" y2="-0.5" width="0.13" layer="21"/>
+<wire x1="0.9" y1="-0.5" x2="-0.9" y2="-0.5" width="0.13" layer="21"/>
+<wire x1="-0.9" y1="-0.5" x2="-0.9" y2="0.5" width="0.13" layer="21"/>
+<rectangle x1="-0.7" y1="-0.3" x2="-0.3" y2="0.3" layer="29"/>
+<rectangle x1="0.3" y1="-0.3" x2="0.7" y2="0.3" layer="29"/>
+<rectangle x1="-0.675" y1="-0.275" x2="-0.325" y2="0.275" layer="31"/>
+<rectangle x1="0.325" y1="-0.275" x2="0.675" y2="0.275" layer="31"/>
 </package>
 <package name="0201P">
 <description>Resistor land pattern from Panasonic product info PDF: http://www.digikey.fi/product-detail/en/ERJ-1GEF2433C/P243KABCT-ND/1467681</description>
@@ -348,22 +334,59 @@
 </package>
 <package name="0805">
 <description>IPC-SM-782 RES/CAP</description>
-<smd name="1" x="-0.9" y="0" dx="0.8" dy="1.5" layer="1" stop="no" cream="no"/>
-<smd name="2" x="0.9" y="0" dx="0.8" dy="1.5" layer="1" stop="no" cream="no"/>
-<text x="-1.3" y="0.7" size="0.5" layer="25" align="top-left">&gt;NAME</text>
-<text x="-1.3" y="-0.7" size="0.5" layer="27">&gt;VALUE</text>
-<wire x1="-1.075" y1="0.7" x2="1.075" y2="0.7" width="0.05" layer="51"/>
-<wire x1="1.075" y1="0.7" x2="1.075" y2="-0.7" width="0.05" layer="51"/>
-<wire x1="1.075" y1="-0.7" x2="-1.075" y2="-0.7" width="0.05" layer="51"/>
-<wire x1="-1.075" y1="-0.7" x2="-1.075" y2="0.7" width="0.05" layer="51"/>
-<wire x1="-1.5" y1="0.95" x2="1.5" y2="0.95" width="0.13" layer="21"/>
-<wire x1="1.5" y1="0.95" x2="1.5" y2="-0.95" width="0.13" layer="21"/>
-<wire x1="1.5" y1="-0.95" x2="-1.5" y2="-0.95" width="0.13" layer="21"/>
-<wire x1="-1.5" y1="-0.95" x2="-1.5" y2="0.95" width="0.13" layer="21"/>
-<rectangle x1="-1.225" y1="-0.675" x2="-0.575" y2="0.675" layer="31"/>
-<rectangle x1="0.575" y1="-0.675" x2="1.225" y2="0.675" layer="31"/>
-<rectangle x1="-1.325" y1="-0.775" x2="-0.475" y2="0.775" layer="29"/>
-<rectangle x1="0.475" y1="-0.775" x2="1.325" y2="0.775" layer="29"/>
+<smd name="1" x="-0.9" y="0" dx="0.8" dy="1.4" layer="1" stop="no" cream="no"/>
+<smd name="2" x="0.9" y="0" dx="0.8" dy="1.4" layer="1" stop="no" cream="no"/>
+<text x="-1.3" y="0.2" size="0.5" layer="25">&gt;NAME</text>
+<text x="-1.3" y="-0.2" size="0.5" layer="27" align="top-left">&gt;VALUE</text>
+<wire x1="-1" y1="0.625" x2="1" y2="0.625" width="0.05" layer="51"/>
+<wire x1="1" y1="0.625" x2="1" y2="-0.625" width="0.05" layer="51"/>
+<wire x1="1" y1="-0.625" x2="-1" y2="-0.625" width="0.05" layer="51"/>
+<wire x1="-1" y1="-0.625" x2="-1" y2="0.625" width="0.05" layer="51"/>
+<wire x1="-1.5" y1="0.9" x2="1.5" y2="0.9" width="0.13" layer="21"/>
+<wire x1="1.5" y1="0.9" x2="1.5" y2="-0.9" width="0.13" layer="21"/>
+<wire x1="1.5" y1="-0.9" x2="-1.5" y2="-0.9" width="0.13" layer="21"/>
+<wire x1="-1.5" y1="-0.9" x2="-1.5" y2="0.9" width="0.13" layer="21"/>
+<rectangle x1="-1.3" y1="-0.7" x2="-0.5" y2="0.7" layer="29"/>
+<rectangle x1="0.5" y1="-0.7" x2="1.3" y2="0.7" layer="29"/>
+<rectangle x1="-1.225" y1="-0.625" x2="-0.575" y2="0.625" layer="31"/>
+<rectangle x1="0.575" y1="-0.625" x2="1.225" y2="0.625" layer="31"/>
+</package>
+<package name="0603">
+<smd name="1" x="-0.75" y="0" dx="0.7" dy="0.9" layer="1" stop="no" cream="no"/>
+<smd name="2" x="0.75" y="0" dx="0.7" dy="0.9" layer="1" stop="no" cream="no"/>
+<text x="-1.2" y="0.9" size="0.3" layer="25">&gt;NAME</text>
+<text x="-1.2" y="-0.9" size="0.3" layer="27" align="top-left">&gt;VALUE</text>
+<wire x1="-0.8" y1="0.4" x2="0.8" y2="0.4" width="0.05" layer="51"/>
+<wire x1="0.8" y1="0.4" x2="0.8" y2="-0.4" width="0.05" layer="51"/>
+<wire x1="0.8" y1="-0.4" x2="-0.8" y2="-0.4" width="0.05" layer="51"/>
+<wire x1="-0.8" y1="-0.4" x2="-0.8" y2="0.4" width="0.05" layer="51"/>
+<wire x1="-1.3" y1="0.65" x2="1.3" y2="0.65" width="0.13" layer="21"/>
+<wire x1="1.3" y1="0.65" x2="1.3" y2="-0.65" width="0.13" layer="21"/>
+<wire x1="1.3" y1="-0.65" x2="-1.3" y2="-0.65" width="0.13" layer="21"/>
+<wire x1="-1.3" y1="-0.65" x2="-1.3" y2="0.65" width="0.13" layer="21"/>
+<rectangle x1="-1.05" y1="-0.4" x2="-0.45" y2="0.4" layer="31"/>
+<rectangle x1="0.45" y1="-0.4" x2="1.05" y2="0.4" layer="31"/>
+<rectangle x1="-1.1" y1="-0.45" x2="-0.4" y2="0.45" layer="29"/>
+<rectangle x1="0.4" y1="-0.45" x2="1.1" y2="0.45" layer="29"/>
+</package>
+<package name="1206">
+<description>IPC-SM-782 RES/CAP</description>
+<smd name="1" x="-1.55" y="0" dx="1" dy="1.7" layer="1" stop="no" cream="no"/>
+<smd name="2" x="1.55" y="0" dx="1" dy="1.7" layer="1" stop="no" cream="no"/>
+<text x="-2.1" y="0.3" size="0.6" layer="25">&gt;NAME</text>
+<text x="-2.1" y="-0.3" size="0.6" layer="27" align="top-left">&gt;VALUE</text>
+<wire x1="-1.6" y1="0.8" x2="1.6" y2="0.8" width="0.1" layer="51"/>
+<wire x1="1.6" y1="0.8" x2="1.6" y2="-0.8" width="0.1" layer="51"/>
+<wire x1="1.6" y1="-0.8" x2="-1.6" y2="-0.8" width="0.1" layer="51"/>
+<wire x1="-1.6" y1="-0.8" x2="-1.6" y2="0.8" width="0.1" layer="51"/>
+<wire x1="-2.3" y1="1.1" x2="2.3" y2="1.1" width="0.13" layer="21"/>
+<wire x1="2.3" y1="1.1" x2="2.3" y2="-1.1" width="0.13" layer="21"/>
+<wire x1="2.3" y1="-1.1" x2="-2.3" y2="-1.1" width="0.13" layer="21"/>
+<wire x1="-2.3" y1="-1.1" x2="-2.3" y2="1.1" width="0.13" layer="21"/>
+<rectangle x1="-2.05" y1="-0.85" x2="-1.05" y2="0.85" layer="29"/>
+<rectangle x1="1.05" y1="-0.85" x2="2.05" y2="0.85" layer="29"/>
+<rectangle x1="-1.95" y1="-0.775" x2="-1.15" y2="0.75" layer="31"/>
+<rectangle x1="1.15" y1="-0.775" x2="1.95" y2="0.75" layer="31"/>
 </package>
 </packages>
 <symbols>
@@ -1165,6 +1188,22 @@
 </technology>
 </technologies>
 </device>
+<device name="22UF_35V_12" package="1206">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="445-11739-1-ND" constant="no"/>
+<attribute name="EURO" value="58.11/100" constant="no"/>
+<attribute name="MANUFACTURER" value="TDK Corporation" constant="no"/>
+<attribute name="MFG_PART_#" value="C3216JB1V226M160AC" constant="no"/>
+<attribute name="TEMP" value="JB" constant="no"/>
+<attribute name="TOLERANCE" value="±20%" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 </devicesets>
@@ -1799,12 +1838,12 @@ Keying posts into board</description>
 <text x="-3.502" y="-0.408" size="0.4064" layer="27">&gt;Value</text>
 </package>
 <package name="WR-BHD-3X2">
-<pad name="4" x="-1.27" y="0" drill="1.1" shape="offset" rot="R180"/>
-<pad name="3" x="1.27" y="0" drill="1.1" shape="offset"/>
-<pad name="6" x="-1.27" y="2.54" drill="1.1" shape="offset" rot="R180"/>
-<pad name="5" x="1.27" y="2.54" drill="1.1" shape="offset"/>
-<pad name="2" x="-1.27" y="-2.54" drill="1.1" shape="offset" rot="R180"/>
-<pad name="1" x="1.27" y="-2.54" drill="1.1" shape="offset"/>
+<pad name="4" x="-1.27" y="0" drill="1" diameter="1.6" shape="offset" rot="R180"/>
+<pad name="3" x="1.27" y="0" drill="1" diameter="1.6" shape="offset"/>
+<pad name="6" x="-1.27" y="2.54" drill="1" diameter="1.6" shape="offset" rot="R180"/>
+<pad name="5" x="1.27" y="2.54" drill="1" diameter="1.6" shape="offset"/>
+<pad name="2" x="-1.27" y="-2.54" drill="1" diameter="1.6" shape="offset" rot="R180"/>
+<pad name="1" x="1.27" y="-2.54" drill="1" diameter="1.6" shape="offset"/>
 <wire x1="-4.55" y1="7.64" x2="4.55" y2="7.64" width="0.2032" layer="21"/>
 <wire x1="4.55" y1="-7.64" x2="-4.55" y2="-7.64" width="0.2032" layer="21"/>
 <wire x1="-4.55" y1="-7.64" x2="-4.55" y2="7.64" width="0.2032" layer="21"/>
@@ -2684,12 +2723,12 @@ Through-hole SPDT Switch&lt;br&gt;
 <hole x="1.5" y="0" drill="0.9"/>
 </package>
 <package name="EG1271A">
-<pad name="1" x="-2.5" y="1.6" drill="0.9" diameter="1.5" shape="offset" rot="R90"/>
-<pad name="2" x="0" y="1.6" drill="0.9" diameter="1.5" shape="offset" rot="R90"/>
-<pad name="3" x="2.5" y="1.6" drill="0.9" diameter="1.5" shape="offset" rot="R90"/>
-<pad name="4" x="-2.5" y="-1.6" drill="0.9" diameter="1.5" shape="offset" rot="R270"/>
-<pad name="5" x="0" y="-1.6" drill="0.9" diameter="1.5" shape="offset" rot="R270"/>
-<pad name="6" x="2.5" y="-1.6" drill="0.9" diameter="1.5" shape="offset" rot="R270"/>
+<pad name="1" x="-2.5" y="1.6" drill="1" diameter="1.6" shape="offset" rot="R90"/>
+<pad name="2" x="0" y="1.6" drill="1" diameter="1.6" shape="offset" rot="R90"/>
+<pad name="3" x="2.5" y="1.6" drill="1" diameter="1.6" shape="offset" rot="R90"/>
+<pad name="4" x="-2.5" y="-1.6" drill="1" diameter="1.6" shape="offset" rot="R270"/>
+<pad name="5" x="0" y="-1.6" drill="1" diameter="1.6" shape="offset" rot="R270"/>
+<pad name="6" x="2.5" y="-1.6" drill="1" diameter="1.6" shape="offset" rot="R270"/>
 <wire x1="4.25" y1="1.75" x2="4.25" y2="-1.74" width="0.127" layer="21"/>
 <wire x1="4.25" y1="-1.74" x2="4.25" y2="-1.75" width="0.127" layer="21"/>
 <wire x1="-4.25" y1="-1.75" x2="-4.25" y2="-1.74" width="0.127" layer="21"/>
