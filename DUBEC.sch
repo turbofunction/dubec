@@ -4106,6 +4106,38 @@
 </technology>
 </technologies>
 </device>
+<device name="9.1K_16P" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="YAG1496CT-ND" constant="no"/>
+<attribute name="EURO" value="11.23/100" constant="no"/>
+<attribute name="MANUFACTURER" value="Yageo" constant="no"/>
+<attribute name="MFG_PART_#" value="RT0402BRD079K1L" constant="no"/>
+<attribute name="TEMP" value="±25ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±0.1%" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="51K_16P" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="YAG1449CT-ND" constant="no"/>
+<attribute name="EURO" value="11.23/100" constant="no"/>
+<attribute name="MANUFACTURER" value="Yageo" constant="no"/>
+<attribute name="MFG_PART_#" value="RT0402BRD0751KL" constant="no"/>
+<attribute name="TEMP" value="±25ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±0.1%" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="I" uservalue="yes">
@@ -4987,8 +5019,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="12RLED" library="dubec" deviceset="RES" device="620_4" value="RES620_4"/>
 <part name="5RLED" library="dubec" deviceset="RES" device="140_16" value="RES140_16"/>
 <part name="12DTVS" library="dubec" deviceset="D_ZENER" device="12V_TVS_DFN" value="D_ZENER12V_TVS_DFN"/>
-<part name="RAUXTOP" library="dubec" deviceset="RES" device="10K_8_06" value="RES10K_8_06"/>
-<part name="RAUXBOT" library="dubec" deviceset="RES" device="332_8" value="RES332_8"/>
+<part name="RDIVTOP" library="dubec" deviceset="RES" device="51K_16P" value="RES51K_16P"/>
+<part name="RDIVBOT" library="dubec" deviceset="RES" device="9.1K_16P" value="RES9.1K_16P"/>
 <part name="MCC1" library="dubec" deviceset="CAP" device="4.7UF_10V"/>
 <part name="RS1" library="dubec" deviceset="RES" device="442_16" value="RES442_16"/>
 <part name="P_5V_OUT" library="dubec" deviceset="M03" device=""/>
@@ -5061,6 +5093,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="5DTVS" library="dubec" deviceset="2D_ZENER" device="5.5V"/>
 <part name="DTVS" library="dubec" deviceset="2D_ZENER" device="36V"/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
+<part name="CDIV" library="dubec" deviceset="CAP" device="0.1UF_100V"/>
 </parts>
 <sheets>
 <sheet>
@@ -5110,8 +5143,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="12RLED" gate="G$1" x="25.4" y="-55.88" rot="R90"/>
 <instance part="5RLED" gate="G$1" x="83.82" y="38.1" rot="R90"/>
 <instance part="12DTVS" gate="G$1" x="30.48" y="-73.66" rot="R180"/>
-<instance part="RAUXTOP" gate="G$1" x="-17.78" y="17.78" rot="R90"/>
-<instance part="RAUXBOT" gate="G$1" x="-25.4" y="25.4"/>
+<instance part="RDIVTOP" gate="G$1" x="-17.78" y="17.78" rot="R90"/>
+<instance part="RDIVBOT" gate="G$1" x="-25.4" y="25.4"/>
 <instance part="MCC1" gate="G$1" x="-53.34" y="48.26" rot="R90"/>
 <instance part="RS1" gate="G$1" x="-58.42" y="66.04"/>
 <instance part="P_5V_OUT" gate="G$1" x="114.3" y="50.8" rot="R180"/>
@@ -5189,6 +5222,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="5DTVS" gate="G$1" x="106.68" y="60.96" rot="R270"/>
 <instance part="DTVS" gate="G$1" x="-22.86" y="-33.02" rot="R90"/>
 <instance part="GND3" gate="1" x="-22.86" y="-43.18"/>
+<instance part="CDIV" gate="G$1" x="-27.94" y="30.48"/>
 </instances>
 <busses>
 </busses>
@@ -5530,8 +5564,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <pinref part="GND11" gate="1" pin="GND"/>
 <wire x1="-33.02" y1="22.86" x2="-33.02" y2="25.4" width="0.1524" layer="91"/>
-<pinref part="RAUXBOT" gate="G$1" pin="1"/>
+<pinref part="RDIVBOT" gate="G$1" pin="1"/>
 <wire x1="-33.02" y1="25.4" x2="-30.48" y2="25.4" width="0.1524" layer="91"/>
+<pinref part="CDIV" gate="G$1" pin="1"/>
+<wire x1="-30.48" y1="30.48" x2="-33.02" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="-33.02" y1="30.48" x2="-33.02" y2="25.4" width="0.1524" layer="91"/>
+<junction x="-33.02" y="25.4"/>
 </segment>
 <segment>
 <pinref part="GND12" gate="1" pin="GND"/>
@@ -5583,13 +5621,17 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </net>
 <net name="ADC2" class="0">
 <segment>
-<pinref part="RAUXTOP" gate="G$1" pin="2"/>
-<pinref part="RAUXBOT" gate="G$1" pin="2"/>
-<wire x1="-17.78" y1="25.4" x2="-17.78" y2="33.02" width="0.1524" layer="91"/>
+<pinref part="RDIVTOP" gate="G$1" pin="2"/>
+<pinref part="RDIVBOT" gate="G$1" pin="2"/>
+<wire x1="-17.78" y1="25.4" x2="-17.78" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="30.48" x2="-17.78" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="-17.78" y1="25.4" x2="-17.78" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="-20.32" y1="25.4" x2="-17.78" y2="25.4" width="0.1524" layer="91"/>
 <junction x="-17.78" y="25.4"/>
-<label x="-15.24" y="33.02" size="1.778" layer="95" rot="MR270"/>
+<label x="-15.24" y="35.56" size="1.778" layer="95" rot="MR270"/>
+<pinref part="CDIV" gate="G$1" pin="2"/>
+<wire x1="-22.86" y1="30.48" x2="-17.78" y2="30.48" width="0.1524" layer="91"/>
+<junction x="-17.78" y="30.48"/>
 </segment>
 <segment>
 <pinref part="MCU" gate="G$1" pin="PB4"/>
@@ -5851,7 +5893,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-119.38" y1="-68.58" x2="-109.22" y2="-68.58" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="RAUXTOP" gate="G$1" pin="1"/>
+<pinref part="RDIVTOP" gate="G$1" pin="1"/>
 <wire x1="-20.32" y1="2.54" x2="-17.78" y2="2.54" width="0.1524" layer="91"/>
 <wire x1="-17.78" y1="2.54" x2="-17.78" y2="12.7" width="0.1524" layer="91"/>
 <label x="-20.32" y="2.54" size="1.778" layer="95" rot="R180" xref="yes"/>
