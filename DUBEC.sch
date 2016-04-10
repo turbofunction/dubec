@@ -4138,6 +4138,54 @@
 </technology>
 </technologies>
 </device>
+<device name="698_16P" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="YAG1469CT-ND" constant="no"/>
+<attribute name="EURO" value="11.23/100" constant="no"/>
+<attribute name="MANUFACTURER" value="Yageo" constant="no"/>
+<attribute name="MFG_PART_#" value="RT0402BRD07698RL" constant="no"/>
+<attribute name="TEMP" value="±25ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±0.1%" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="1.3K_16P" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="YAG1378CT-ND" constant="no"/>
+<attribute name="EURO" value="11.23/100" constant="no"/>
+<attribute name="MANUFACTURER" value="Yageo" constant="no"/>
+<attribute name="MFG_PART_#" value="RT0402BRD071K3L" constant="no"/>
+<attribute name="TEMP" value="±25ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±0.1%" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="300_16P" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="YAG1406CT-ND" constant="no"/>
+<attribute name="EURO" value="11.23/100" constant="no"/>
+<attribute name="MANUFACTURER" value="Yageo" constant="no"/>
+<attribute name="MFG_PART_#" value="RT0402BRD07300RL" constant="no"/>
+<attribute name="TEMP" value="±25ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±0.1%" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="I" uservalue="yes">
@@ -5035,8 +5083,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="5C1" library="dubec" deviceset="CAP" device="1UF_50V"/>
 <part name="5C2" library="dubec" deviceset="CAP" device="1UF_50V"/>
 <part name="5CBST" library="dubec" deviceset="CAP" device="0.1UF_100V"/>
-<part name="5RTOP" library="dubec" deviceset="RES" device="3K_16" value="RES3K_16"/>
-<part name="5RBOT" library="dubec" deviceset="RES" device="698_16" value="RES698_16"/>
+<part name="5RTOP" library="dubec" deviceset="RES" device="1.3K_16P" value="RES1.3K_16P"/>
+<part name="5RBOT" library="dubec" deviceset="RES" device="300_16P" value="RES300_16P"/>
 <part name="5CTR" library="dubec" deviceset="CAP" device="1.5NF_50V"/>
 <part name="5CVCC" library="dubec" deviceset="CAP" device="4.7UF_10V"/>
 <part name="5RRT" library="dubec" deviceset="RES" device="40.2K_16" value="RES40.2K_16"/>
