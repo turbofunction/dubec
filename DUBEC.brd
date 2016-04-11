@@ -1277,18 +1277,18 @@ Covered vias can be set in Masks (Limit).
 <attribute name="MFG_PART_#" value="PTVS12VU1UPAZ" x="32.25" y="3.4375" size="1.778" layer="27" display="off"/>
 <attribute name="EURO" value="20.92/100" x="32.25" y="3.4375" size="1.778" layer="27" display="off"/>
 </element>
-<element name="RDIVTOP" library="dubec" package="0402" value="RES51K_16P" x="11" y="13.75" rot="R90">
+<element name="RDIVTOP" library="dubec" package="0402" value="RES61.9K_16P" x="11" y="13.75" rot="R90">
 <attribute name="MANUFACTURER" value="Yageo" x="11" y="13.75" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MFG_PART_#" value="RT0402BRD0751KL" x="11" y="13.75" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MFG_PART_#" value="RT0402BRD0761K9L" x="11" y="13.75" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="TOLERANCE" value="±0.1%" x="11" y="13.75" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="TEMP" value="±25ppm/°C" x="11" y="13.75" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="DIGIKEY_PART_#" value="YAG1449CT-ND" x="11" y="13.75" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DIGIKEY_PART_#" value="YAG1462CT-ND" x="11" y="13.75" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="EURO" value="11.23/100" x="11" y="13.75" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="RDIVBOT" library="dubec" package="0402" value="RES9.1K_16P" x="12" y="13.75" rot="R90">
-<attribute name="DIGIKEY_PART_#" value="YAG1496CT-ND" x="12" y="13.75" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="RDIVBOT" library="dubec" package="0402" value="RES1.96K_16P" x="12" y="13.75" rot="R90">
+<attribute name="DIGIKEY_PART_#" value="YAG1385CT-ND" x="12" y="13.75" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MANUFACTURER" value="Yageo" x="12" y="13.75" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MFG_PART_#" value="RT0402BRD079K1L" x="12" y="13.75" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MFG_PART_#" value="RT0402BRD071K96L" x="12" y="13.75" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="TOLERANCE" value="±0.1%" x="12" y="13.75" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="TEMP" value="±25ppm/°C" x="12" y="13.75" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="EURO" value="11.23/100" x="12" y="13.75" size="1.778" layer="27" rot="R90" display="off"/>
