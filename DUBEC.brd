@@ -427,19 +427,14 @@ TURBOfunction.com/fpv</text>
 <smd name="1" x="-1.35" y="1" dx="0.7" dy="0.25" layer="1" stop="no" thermals="no" cream="no"/>
 <smd name="4" x="-1.35" y="-0.5" dx="0.7" dy="0.25" layer="1" stop="no" thermals="no" cream="no"/>
 <smd name="5" x="-1.35" y="-1" dx="0.7" dy="0.25" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="11" x="0" y="0" dx="0.3" dy="0.6" layer="1" stop="no" thermals="no" cream="no"/>
-<text x="-1.5" y="-1.7" size="0.4" layer="25" align="top-left">&gt;NAME</text>
-<text x="-1.5" y="-2.3" size="0.4" layer="27" align="top-left">&gt;VALUE</text>
-<wire x1="-1.5" y1="1.5" x2="-1.3" y2="1.5" width="0.13" layer="21"/>
-<wire x1="-1.3" y1="1.5" x2="-0.9" y2="1.5" width="0.13" layer="21"/>
-<wire x1="-0.9" y1="1.5" x2="1.5" y2="1.5" width="0.13" layer="21"/>
-<wire x1="1.5" y1="1.5" x2="1.5" y2="1.3" width="0.13" layer="21"/>
-<wire x1="1.5" y1="-1.3" x2="1.5" y2="-1.5" width="0.13" layer="21"/>
+<smd name="11" x="0" y="0" dx="0.5" dy="0.5" layer="1" stop="no" thermals="no" cream="no"/>
+<text x="-1.3" y="-1.7" size="0.4" layer="25" align="top-left">&gt;NAME</text>
+<text x="-1.3" y="-2.3" size="0.4" layer="27" align="top-left">&gt;VALUE</text>
+<wire x1="-1.5" y1="1.5" x2="1.5" y2="1.5" width="0.13" layer="21"/>
+<wire x1="1.5" y1="1.5" x2="1.5" y2="1.7" width="0.13" layer="21"/>
+<wire x1="1.5" y1="-1.7" x2="1.5" y2="-1.5" width="0.13" layer="21"/>
 <wire x1="1.5" y1="-1.5" x2="-1.5" y2="-1.5" width="0.13" layer="21"/>
-<wire x1="-1.5" y1="-1.5" x2="-1.5" y2="-1.3" width="0.13" layer="21"/>
-<wire x1="-1.3" y1="1.5" x2="-0.9" y2="1.5" width="0.4" layer="21" curve="-180" cap="flat"/>
-<wire x1="-1.5" y1="1.5" x2="-1.5" y2="1.3" width="0.13" layer="21"/>
-<rectangle x1="-0.2" y1="-0.35" x2="0.2" y2="0.35" layer="29"/>
+<wire x1="-1.5" y1="-1.5" x2="-1.5" y2="-1.7" width="0.13" layer="21"/>
 <rectangle x1="-1.7" y1="-1.125" x2="-1" y2="1.125" layer="29"/>
 <rectangle x1="-1.65" y1="0.9" x2="-1.25" y2="1.1" layer="31"/>
 <rectangle x1="-1.65" y1="0.4" x2="-1.25" y2="0.6" layer="31"/>
@@ -457,6 +452,12 @@ TURBOfunction.com/fpv</text>
 <wire x1="0.8" y1="1.25" x2="-0.6" y2="1.25" width="0.05" layer="51"/>
 <wire x1="-0.6" y1="1.25" x2="-0.8" y2="1.05" width="0.05" layer="51"/>
 <wire x1="-0.8" y1="1.05" x2="-0.8" y2="-1.25" width="0.05" layer="51"/>
+<polygon width="0.13" layer="21">
+<vertex x="-1.5" y="1.5"/>
+<vertex x="-1.5" y="1.9"/>
+<vertex x="-1.2" y="1.9"/>
+<vertex x="-1.2" y="1.5"/>
+</polygon>
 </package>
 <package name="1206">
 <description>IPC-SM-782 RES/CAP</description>
@@ -511,17 +512,14 @@ TURBOfunction.com/fpv</text>
 <smd name="15" x="-1.25" y="2" dx="0.25" dy="0.8" layer="1" stop="no" cream="no"/>
 <smd name="14" x="-0.75" y="2" dx="0.25" dy="0.8" layer="1" stop="no" cream="no"/>
 <smd name="13" x="-0.25" y="2" dx="0.25" dy="0.8" layer="1" stop="no" cream="no"/>
-<text x="-2" y="1.3" size="0.7" layer="25" align="top-left">&gt;NAME</text>
-<text x="-2" y="-1.3" size="0.7" layer="27">&gt;VALUE</text>
+<text x="-2" y="1" size="0.7" layer="25" align="top-left">&gt;NAME</text>
+<text x="-2" y="-1" size="0.7" layer="27">&gt;VALUE</text>
 <smd name="PAD" x="0" y="0" dx="0.5" dy="0.5" layer="1" stop="no" cream="no"/>
-<wire x1="2.1" y1="2" x2="2.5" y2="2" width="0.13" layer="21"/>
+<wire x1="2.2" y1="2" x2="2.5" y2="2" width="0.13" layer="21"/>
 <wire x1="2.5" y1="2" x2="2.5" y2="-2" width="0.13" layer="21"/>
-<wire x1="2.5" y1="-2" x2="2.1" y2="-2" width="0.13" layer="21"/>
-<wire x1="-2.5" y1="-2" x2="-2.5" y2="-1.8" width="0.13" layer="21"/>
-<wire x1="-2.5" y1="-1.8" x2="-2.5" y2="-1.4" width="0.13" layer="21"/>
-<wire x1="-2.5" y1="-1.4" x2="-2.5" y2="2" width="0.13" layer="21"/>
+<wire x1="2.5" y1="-2" x2="2.2" y2="-2" width="0.13" layer="21"/>
+<wire x1="-2.5" y1="-2" x2="-2.5" y2="2" width="0.13" layer="21"/>
 <wire x1="-2.5" y1="2" x2="-2.2" y2="2" width="0.13" layer="21"/>
-<wire x1="-2.5" y1="-1.8" x2="-2.5" y2="-1.4" width="0.3" layer="21" curve="-180" cap="flat"/>
 <wire x1="-2.5" y1="-2" x2="-2.2" y2="-2" width="0.13" layer="21"/>
 <rectangle x1="-1.85" y1="1.85" x2="-1.65" y2="2.35" layer="31"/>
 <rectangle x1="-1.35" y1="1.85" x2="-1.15" y2="2.35" layer="31"/>
@@ -544,11 +542,17 @@ TURBOfunction.com/fpv</text>
 <smd name="5" x="0.25" y="-2" dx="0.25" dy="0.8" layer="1" stop="no" cream="no"/>
 <rectangle x1="-1.875" y1="1.6" x2="1.875" y2="2.4" layer="29"/>
 <rectangle x1="-0.25" y1="-0.25" x2="0.25" y2="0.25" layer="29"/>
-<wire x1="-2.17" y1="1.22" x2="2.17" y2="1.22" width="0.1" layer="51"/>
-<wire x1="2.17" y1="1.22" x2="2.17" y2="-1.22" width="0.1" layer="51"/>
-<wire x1="2.17" y1="-1.22" x2="-1.97" y2="-1.22" width="0.1" layer="51"/>
-<wire x1="-1.97" y1="-1.22" x2="-2.17" y2="-1.02" width="0.1" layer="51"/>
-<wire x1="-2.17" y1="-1.02" x2="-2.17" y2="1.22" width="0.1" layer="51"/>
+<wire x1="-2.17" y1="1.22" x2="2.17" y2="1.22" width="0.05" layer="51"/>
+<wire x1="2.17" y1="1.22" x2="2.17" y2="-1.22" width="0.05" layer="51"/>
+<wire x1="2.17" y1="-1.22" x2="-1.97" y2="-1.22" width="0.05" layer="51"/>
+<wire x1="-1.97" y1="-1.22" x2="-2.17" y2="-1.02" width="0.05" layer="51"/>
+<wire x1="-2.17" y1="-1.02" x2="-2.17" y2="1.22" width="0.05" layer="51"/>
+<polygon width="0.13" layer="21">
+<vertex x="-2.5" y="-2"/>
+<vertex x="-2.9" y="-2"/>
+<vertex x="-2.9" y="-1.7"/>
+<vertex x="-2.5" y="-1.7"/>
+</polygon>
 </package>
 <package name="SRP5030">
 <smd name="1" x="-2.2" y="0" dx="1.6" dy="2" layer="1" stop="no" thermals="no" cream="no"/>
@@ -635,15 +639,13 @@ TURBOfunction.com/fpv</text>
 <text x="-1.8" y="1.1" size="0.6" layer="25" align="top-left">&gt;NAME</text>
 <text x="-1.8" y="-1.1" size="0.6" layer="27">&gt;VALUE</text>
 <wire x1="-2" y1="1.2" x2="-2" y2="1.5" width="0.13" layer="21"/>
-<wire x1="-2" y1="1.5" x2="-1.65" y2="1.5" width="0.13" layer="21"/>
-<wire x1="1.6" y1="1.5" x2="1.9" y2="1.5" width="0.13" layer="21"/>
-<wire x1="1.9" y1="1.5" x2="2" y2="1.5" width="0.13" layer="21"/>
-<wire x1="2" y1="1.5" x2="2" y2="1.4" width="0.13" layer="21"/>
-<wire x1="2" y1="1.4" x2="2" y2="1.1" width="0.13" layer="21"/>
-<wire x1="-1.65" y1="-1.5" x2="-2" y2="-1.5" width="0.13" layer="21"/>
+<wire x1="-2" y1="1.5" x2="-1.7" y2="1.5" width="0.13" layer="21"/>
+<wire x1="1.7" y1="1.5" x2="2" y2="1.5" width="0.13" layer="21"/>
+<wire x1="2" y1="1.5" x2="2" y2="1.2" width="0.13" layer="21"/>
+<wire x1="-1.7" y1="-1.5" x2="-2" y2="-1.5" width="0.13" layer="21"/>
 <wire x1="-2" y1="-1.5" x2="-2" y2="-1.2" width="0.13" layer="21"/>
-<wire x1="2" y1="-1.1" x2="2" y2="-1.5" width="0.13" layer="21"/>
-<wire x1="2" y1="-1.5" x2="1.6" y2="-1.5" width="0.13" layer="21"/>
+<wire x1="2" y1="-1.2" x2="2" y2="-1.5" width="0.13" layer="21"/>
+<wire x1="2" y1="-1.5" x2="1.7" y2="-1.5" width="0.13" layer="21"/>
 <smd name="22" x="-0.305" y="0" dx="0.406" dy="0.27" layer="1" stop="no" thermals="no" cream="no"/>
 <rectangle x1="-1.35" y1="-0.2" x2="-0.8" y2="0.2" layer="29"/>
 <rectangle x1="-0.55" y1="-0.2" x2="-0.05" y2="0.2" layer="29"/>
@@ -805,8 +807,12 @@ TURBOfunction.com/fpv</text>
 <rectangle x1="0.4" y1="-0.85" x2="0.6" y2="-0.55" layer="31"/>
 <rectangle x1="-0.1" y1="-0.85" x2="0.1" y2="-0.55" layer="31"/>
 <rectangle x1="-0.6" y1="-0.85" x2="-0.4" y2="-0.55" layer="31"/>
-<wire x1="-0.75" y1="0.1" x2="-0.7" y2="0" width="0.3" layer="21" curve="-90"/>
-<wire x1="-0.7" y1="0" x2="-0.75" y2="-0.1" width="0.3" layer="21" curve="-90"/>
+<polygon width="0.13" layer="21">
+<vertex x="-0.8" y="-0.1"/>
+<vertex x="-0.4" y="-0.1"/>
+<vertex x="-0.4" y="0.1"/>
+<vertex x="-0.8" y="0.1"/>
+</polygon>
 </package>
 <package name="1X01_NO_SILK">
 <pad name="1" x="0" y="0" drill="1.4" diameter="2.4" rot="R90"/>
@@ -1924,7 +1930,7 @@ Covered vias can be set in Masks (Limit).
 <via x="38.9375" y="9.25" extent="1-16" drill="0.3"/>
 <wire x1="17.25" y1="10" x2="17.25" y2="10.5" width="0.7" layer="1"/>
 <via x="29.9375" y="10.8125" extent="1-16" drill="0.3"/>
-<via x="32" y="12.5625" extent="1-16" drill="0.3"/>
+<via x="32.375" y="12.5625" extent="1-16" drill="0.3"/>
 <contactref element="CSNUB2" pad="1"/>
 <via x="10.0625" y="6.1875" extent="1-16" drill="0.5"/>
 <via x="14.25" y="14.25" extent="1-16" drill="0.3"/>
@@ -1936,6 +1942,7 @@ Covered vias can be set in Masks (Limit).
 <via x="10.0625" y="5.1875" extent="1-16" drill="0.5"/>
 <contactref element="CDIV" pad="1"/>
 <via x="33.0625" y="5.125" extent="1-16" drill="0.3"/>
+<via x="31.625" y="12.5625" extent="1-16" drill="0.3"/>
 </signal>
 <signal name="12V">
 <contactref element="12U1" pad="3"/>
@@ -2103,9 +2110,9 @@ Covered vias can be set in Masks (Limit).
 <signal name="5V_SW">
 <contactref element="5L" pad="1"/>
 <polygon width="0.3" layer="16" isolate="0.3302" rank="2">
-<vertex x="22.875" y="19.25"/>
-<vertex x="26.125" y="19.25"/>
-<vertex x="26.5" y="18.875"/>
+<vertex x="23.125" y="19"/>
+<vertex x="26.125" y="19"/>
+<vertex x="26.5" y="18.625"/>
 <vertex x="26.5" y="15.75"/>
 <vertex x="25.875" y="15.125"/>
 <vertex x="24.375" y="15.125"/>
@@ -2114,7 +2121,7 @@ Covered vias can be set in Masks (Limit).
 <vertex x="24.375" y="15.875"/>
 <vertex x="24.375" y="16.875"/>
 <vertex x="23.875" y="17.375"/>
-<vertex x="22.875" y="17.375"/>
+<vertex x="23.125" y="17.375"/>
 </polygon>
 <contactref element="5CBST" pad="1"/>
 <contactref element="5U1" pad="21"/>
@@ -3625,15 +3632,22 @@ Covered vias can be set in Masks (Limit).
 <approved hash="5,15,fe3048130d32b86b"/>
 <approved hash="5,15,520cbbec656d89b7"/>
 <approved hash="5,16,11ad3d590f9b4755"/>
-<approved hash="5,16,39e777da171372ad"/>
-<approved hash="5,16,b7dcef8a8c7309ac"/>
 <approved hash="5,16,e8a112c2d4939c38"/>
-<approved hash="5,16,fa4ba61729201567"/>
 <approved hash="5,16,47226cc5568216df"/>
-<approved hash="5,16,0a3b5dddfe602cc9"/>
 <approved hash="5,16,37a2130488a9de88"/>
 <approved hash="5,16,fb10a6baf480d42b"/>
 <approved hash="5,16,c1820ab74e48e214"/>
+<approved hash="5,16,f20fe04c7dd411de"/>
+<approved hash="5,16,39e777da171372ad"/>
+<approved hash="5,16,b7dcef8a8c7309ac"/>
+<approved hash="5,16,9296414cc4d6a557"/>
+<approved hash="5,16,b6a57e3407246203"/>
+<approved hash="5,16,fa4ba61729201567"/>
+<approved hash="5,16,898d0102d6a8b45c"/>
+<approved hash="5,16,e092bda0de7928cb"/>
+<approved hash="5,16,0a3b5dddfe602cc9"/>
+<approved hash="5,16,8b733d192396e87a"/>
+<approved hash="5,16,c6a700186fb0fbb8"/>
 <approved hash="6,1,1a551739abbcb0d0"/>
 <approved hash="6,1,c2643b15c133b678"/>
 <approved hash="6,1,c458cc1cf6795c6d"/>
@@ -3688,30 +3702,30 @@ Covered vias can be set in Masks (Limit).
 <approved hash="5,1,9a87e3aca3efa9ff"/>
 <approved hash="5,1,e275cf31d7c685ac"/>
 <approved hash="5,1,600f4fa0e5282b33"/>
-<approved hash="5,1,5208dfdc1091bf12"/>
-<approved hash="5,1,b581a558d74f051e"/>
-<approved hash="5,1,8da7be7a84cb87e2"/>
-<approved hash="5,1,65bc397e8e632f2c"/>
-<approved hash="5,1,15d94f6bfdcb5c88"/>
 <approved hash="5,1,8f1d5f4451387a2d"/>
-<approved hash="5,1,89c87a177b2f34a0"/>
-<approved hash="5,1,e8a480604205a44e"/>
+<approved hash="5,1,15d94f6bfdcb5c88"/>
+<approved hash="5,1,65bc397e8e632f2c"/>
+<approved hash="5,1,8da7be7a84cb87e2"/>
+<approved hash="5,1,b581a558d74f051e"/>
+<approved hash="5,1,5208dfdc1091bf12"/>
 <approved hash="5,1,fbedb62fa074ac7f"/>
-<approved hash="5,1,8778f431846028b7"/>
-<approved hash="5,1,ada7c07f77c992e2"/>
 <approved hash="5,1,57d94d69eec95188"/>
 <approved hash="5,1,7e18ae43ed3fc628"/>
+<approved hash="5,1,8778f431846028b7"/>
+<approved hash="5,1,ada7c07f77c992e2"/>
+<approved hash="5,1,89c87a177b2f34a0"/>
+<approved hash="5,1,e8a480604205a44e"/>
 <approved hash="5,1,11d6de9265e7f521"/>
 <approved hash="5,1,80294f92e71ad5de"/>
 <approved hash="5,1,332bc092e51f35dc"/>
 <approved hash="19,1,bd2b34b41e9a5a04"/>
 <approved hash="5,1,9249a2a57597daf9"/>
-<approved hash="5,1,10b690d55a1c7e31"/>
-<approved hash="5,1,d3e30343b13f9ad3"/>
-<approved hash="5,1,5dbc39873a9aeb2c"/>
 <approved hash="5,1,1eb29ce4daf03994"/>
 <approved hash="5,1,85a7be84c8324be2"/>
 <approved hash="5,1,6208df225c687b12"/>
+<approved hash="5,1,10b690d55a1c7e31"/>
+<approved hash="5,1,d3e30343b13f9ad3"/>
+<approved hash="5,1,5dbc39873a9aeb2c"/>
 <approved hash="5,1,1c6d749943750eff"/>
 <approved hash="5,1,1aaddcf1550b7b14"/>
 <approved hash="5,1,82e15243953fbed1"/>
@@ -3720,10 +3734,10 @@ Covered vias can be set in Masks (Limit).
 <approved hash="5,1,f1c86aeebfd6f8a0"/>
 <approved hash="6,1,d679ce1f321d2a7b"/>
 <approved hash="6,1,5678579f289c297b"/>
-<approved hash="6,1,b30e0c085f2d0b0b"/>
 <approved hash="6,1,757f20140b9fb2c6"/>
-<approved hash="6,1,84759572d0a1c8ea"/>
+<approved hash="6,1,b30e0c085f2d0b0b"/>
 <approved hash="6,1,d02bc333f20aeaa6"/>
+<approved hash="6,1,84759572d0a1c8ea"/>
 <approved hash="6,1,dfa23348aa9d7ae5"/>
 <approved hash="6,1,7d67aa01c5e6208c"/>
 <approved hash="6,1,c7947c50c6bb9204"/>
