@@ -2,7 +2,7 @@
 
 proj="DUBEC"
 
-zip_file="$proj-2_0.zip"
+zip_file="$proj-2_1.zip"
 
 rm -f $zip_file
 
