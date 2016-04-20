@@ -2099,7 +2099,7 @@ Covered vias can be set in Masks (Limit).
 <wire x1="36.125" y1="18.95" x2="36.3" y2="19.125" width="0.8" layer="1"/>
 <wire x1="36.3" y1="19.125" x2="38.25" y2="19.125" width="0.8" layer="1"/>
 </signal>
-<signal name="ADC2">
+<signal name="ADC">
 <contactref element="RDIVTOP" pad="2"/>
 <contactref element="RDIVBOT" pad="2"/>
 <contactref element="MCU" pad="4"/>

@@ -5308,7 +5308,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="5DTVS" gate="G$1" x="106.68" y="60.96" rot="R270"/>
 <instance part="DTVS" gate="G$1" x="-22.86" y="-33.02" rot="R90"/>
 <instance part="GND3" gate="1" x="-22.86" y="-43.18"/>
-<instance part="CDIV" gate="G$1" x="-27.94" y="30.48"/>
+<instance part="CDIV" gate="G$1" x="-25.4" y="30.48"/>
 </instances>
 <busses>
 </busses>
@@ -5653,7 +5653,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="RDIVBOT" gate="G$1" pin="1"/>
 <wire x1="-33.02" y1="25.4" x2="-30.48" y2="25.4" width="0.1524" layer="91"/>
 <pinref part="CDIV" gate="G$1" pin="1"/>
-<wire x1="-30.48" y1="30.48" x2="-33.02" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="-27.94" y1="30.48" x2="-33.02" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="-33.02" y1="30.48" x2="-33.02" y2="25.4" width="0.1524" layer="91"/>
 <junction x="-33.02" y="25.4"/>
 </segment>
@@ -5705,7 +5705,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <junction x="-71.12" y="71.12"/>
 </segment>
 </net>
-<net name="ADC2" class="0">
+<net name="ADC" class="0">
 <segment>
 <pinref part="RDIVTOP" gate="G$1" pin="2"/>
 <pinref part="RDIVBOT" gate="G$1" pin="2"/>
@@ -5716,7 +5716,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <junction x="-17.78" y="25.4"/>
 <label x="-15.24" y="35.56" size="1.778" layer="95" rot="MR270"/>
 <pinref part="CDIV" gate="G$1" pin="2"/>
-<wire x1="-22.86" y1="30.48" x2="-17.78" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="-20.32" y1="30.48" x2="-17.78" y2="30.48" width="0.1524" layer="91"/>
 <junction x="-17.78" y="30.48"/>
 </segment>
 <segment>
