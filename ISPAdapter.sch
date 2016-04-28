@@ -4955,6 +4955,12 @@ DPDT SMT slide switch, AYZ0202, SWCH-08179</description>
 <junction x="12.7" y="38.1"/>
 </segment>
 </net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="S1" gate="1" pin="S"/>
+<wire x1="15.24" y1="27.94" x2="15.24" y2="25.4" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>

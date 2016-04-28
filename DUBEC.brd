@@ -1778,10 +1778,10 @@ Covered vias can be set in Masks (Limit).
 <signal name="12V_BST1">
 <contactref element="12U1" pad="13"/>
 <contactref element="12CB1" pad="1"/>
-<wire x1="26.125" y1="8.75" x2="26.125" y2="11" width="0.25" layer="1"/>
-<wire x1="26.125" y1="11" x2="26.375" y2="11.25" width="0.25" layer="1"/>
-<wire x1="26.375" y1="11.25" x2="26.625" y2="11.25" width="0.25" layer="1"/>
-<wire x1="26.625" y1="11.25" x2="26.75" y2="11.375" width="0.25" layer="1"/>
+<wire x1="26.125" y1="8.75" x2="26.125" y2="10.875" width="0.25" layer="1"/>
+<wire x1="26.125" y1="10.875" x2="26.375" y2="11.125" width="0.25" layer="1"/>
+<wire x1="26.375" y1="11.125" x2="26.5" y2="11.125" width="0.25" layer="1"/>
+<wire x1="26.5" y1="11.125" x2="26.75" y2="11.375" width="0.25" layer="1"/>
 </signal>
 <signal name="12VCC">
 <via x="29.3125" y="9.375" extent="1-16" drill="0.3"/>
@@ -2035,7 +2035,7 @@ Covered vias can be set in Masks (Limit).
 <contactref element="RSPU" pad="1"/>
 <contactref element="R12VPU" pad="1"/>
 <wire x1="17" y1="18.625" x2="28.125" y2="18.625" width="0.45" layer="15"/>
-<wire x1="10" y1="16.75" x2="9.5" y2="16.25" width="0.3302" layer="15"/>
+<wire x1="10.125" y1="16.875" x2="9.5" y2="16.25" width="0.3302" layer="15"/>
 <wire x1="9.5" y1="16.25" x2="6.125" y2="16.25" width="0.3302" layer="15"/>
 <wire x1="6.125" y1="16.25" x2="3.625" y2="18.75" width="0.3302" layer="15"/>
 <wire x1="3.625" y1="18.75" x2="1.75" y2="18.75" width="0.3302" layer="15"/>
@@ -2045,8 +2045,8 @@ Covered vias can be set in Masks (Limit).
 <wire x1="14.75" y1="18.625" x2="13.8125" y2="18.8125" width="0.4" layer="16"/>
 <wire x1="13.8125" y1="18.8125" x2="13.8" y2="18.875" width="0.4" layer="16"/>
 <wire x1="16.125" y1="16.6875" x2="15.125" y2="16.6875" width="0.4" layer="1"/>
-<wire x1="10" y1="16.75" x2="12.875" y2="16.75" width="0.3302" layer="15"/>
-<wire x1="12.875" y1="16.75" x2="14.75" y2="18.625" width="0.3302" layer="15"/>
+<wire x1="10.125" y1="16.875" x2="13" y2="16.875" width="0.3302" layer="15"/>
+<wire x1="13" y1="16.875" x2="14.75" y2="18.625" width="0.3302" layer="15"/>
 <contactref element="5DTVS" pad="1"/>
 <wire x1="14.75" y1="18.625" x2="13.96875" y2="17.84375" width="0.3" layer="1"/>
 <wire x1="15.125" y1="16.6875" x2="13.96875" y2="17.84375" width="0.3" layer="1"/>
@@ -2248,10 +2248,10 @@ Covered vias can be set in Masks (Limit).
 <contactref element="Q1" pad="5"/>
 <wire x1="5.25" y1="17.5125" x2="5.25" y2="18.375" width="0.25" layer="1"/>
 <wire x1="5.25" y1="18.375" x2="5.625" y2="18.75" width="0.25" layer="1"/>
-<wire x1="9.25" y1="17" x2="9.75" y2="17.5" width="0.3302" layer="15"/>
-<wire x1="9.75" y1="17.5" x2="12.0625" y2="17.5" width="0.3302" layer="15"/>
+<wire x1="9.25" y1="17" x2="9.875" y2="17.625" width="0.3302" layer="15"/>
+<wire x1="9.875" y1="17.625" x2="12.1875" y2="17.625" width="0.3302" layer="15"/>
 <wire x1="11.625" y1="17.8125" x2="11.625" y2="18.1" width="0.25" layer="1"/>
-<wire x1="12.0625" y1="17.5" x2="12.375" y2="17.8125" width="0.3302" layer="15"/>
+<wire x1="12.1875" y1="17.625" x2="12.375" y2="17.8125" width="0.3302" layer="15"/>
 </signal>
 <signal name="12V_SW1">
 <contactref element="12L" pad="2"/>
