@@ -29,7 +29,8 @@
 #define PIN_ADC PORTB4
 
 // range with 61.9k/1.96k divider: [6..33.6V] -> [0.190..1.06V]
-#define MIN_VOLTAGE ((uint16_t) (6 / 33.6 * 1024))
+// -9 is calibration
+#define MIN_VOLTAGE ((uint16_t) (6 / 33.6 * 1024 - 9))
 
 // switch between main and AUX battery
 #define batt_main() { PORTB &= ~_BV(PIN_BATT_SWITCH); }
