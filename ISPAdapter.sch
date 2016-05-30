@@ -183,20 +183,20 @@
 <wire x1="-2.25" y1="2.55" x2="2.25" y2="2.55" width="0.13" layer="21"/>
 <text x="2" y="-2" size="0.4" layer="27" rot="R90">&gt;VALUE</text>
 <text x="-2" y="-2" size="0.4" layer="25" rot="R90" align="top-left">&gt;NAME</text>
-<smd name="4" x="-2.9" y="0" dx="1" dy="0.3" layer="1" stop="no" thermals="no"/>
-<smd name="3" x="-2.9" y="0.65" dx="1" dy="0.3" layer="1" stop="no" thermals="no"/>
-<smd name="2" x="-2.9" y="1.3" dx="1" dy="0.3" layer="1" stop="no" thermals="no"/>
-<smd name="1" x="-2.9" y="1.95" dx="1" dy="0.3" layer="1" stop="no" thermals="no"/>
-<smd name="5" x="-2.9" y="-0.65" dx="1" dy="0.3" layer="1" stop="no" thermals="no"/>
-<smd name="6" x="-2.9" y="-1.3" dx="1" dy="0.3" layer="1" stop="no" thermals="no"/>
-<smd name="7" x="-2.9" y="-1.95" dx="1" dy="0.3" layer="1" stop="no" thermals="no"/>
-<smd name="8" x="2.9" y="-1.95" dx="1" dy="0.3" layer="1" stop="no" thermals="no"/>
-<smd name="9" x="2.9" y="-1.3" dx="1" dy="0.3" layer="1" stop="no" thermals="no"/>
-<smd name="10" x="2.9" y="-0.65" dx="1" dy="0.3" layer="1" stop="no" thermals="no"/>
-<smd name="11" x="2.9" y="0" dx="1" dy="0.3" layer="1" stop="no" thermals="no"/>
-<smd name="12" x="2.9" y="0.65" dx="1" dy="0.3" layer="1" stop="no" thermals="no"/>
-<smd name="13" x="2.9" y="1.3" dx="1" dy="0.3" layer="1" stop="no" thermals="no"/>
-<smd name="14" x="2.9" y="1.95" dx="1" dy="0.3" layer="1" stop="no" thermals="no"/>
+<smd name="4" x="-2.9" y="0" dx="1" dy="0.3" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="3" x="-2.9" y="0.65" dx="1" dy="0.3" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="2" x="-2.9" y="1.3" dx="1" dy="0.3" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="1" x="-2.9" y="1.95" dx="1" dy="0.3" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="5" x="-2.9" y="-0.65" dx="1" dy="0.3" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="6" x="-2.9" y="-1.3" dx="1" dy="0.3" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="7" x="-2.9" y="-1.95" dx="1" dy="0.3" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="8" x="2.9" y="-1.95" dx="1" dy="0.3" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="9" x="2.9" y="-1.3" dx="1" dy="0.3" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="10" x="2.9" y="-0.65" dx="1" dy="0.3" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="11" x="2.9" y="0" dx="1" dy="0.3" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="12" x="2.9" y="0.65" dx="1" dy="0.3" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="13" x="2.9" y="1.3" dx="1" dy="0.3" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="14" x="2.9" y="1.95" dx="1" dy="0.3" layer="1" stop="no" thermals="no" cream="no"/>
 <wire x1="-2.25" y1="-2.55" x2="2.25" y2="-2.55" width="0.13" layer="21"/>
 <wire x1="-2.25" y1="2.35" x2="-2.25" y2="2.55" width="0.13" layer="21"/>
 <wire x1="2.25" y1="2.35" x2="2.25" y2="2.55" width="0.13" layer="21"/>
@@ -219,6 +219,20 @@
 <rectangle x1="-3.4" y1="1.15" x2="-2.4" y2="1.45" layer="29"/>
 <text x="0" y="0" size="0.8128" layer="21" font="vector" rot="R90" align="center">74LVC
 4066PW</text>
+<rectangle x1="-3.4" y1="1.8" x2="-2.7" y2="2.1" layer="31"/>
+<rectangle x1="-3.4" y1="0.5" x2="-2.7" y2="0.8" layer="31"/>
+<rectangle x1="-3.4" y1="-0.8" x2="-2.7" y2="-0.5" layer="31"/>
+<rectangle x1="-3.4" y1="-2.1" x2="-2.7" y2="-1.8" layer="31"/>
+<rectangle x1="2.7" y1="-2.1" x2="3.4" y2="-1.8" layer="31"/>
+<rectangle x1="2.7" y1="-0.8" x2="3.4" y2="-0.5" layer="31"/>
+<rectangle x1="2.7" y1="0.5" x2="3.4" y2="0.8" layer="31"/>
+<rectangle x1="2.7" y1="1.8" x2="3.4" y2="2.1" layer="31"/>
+<rectangle x1="2.7" y1="1.15" x2="3.4" y2="1.45" layer="31"/>
+<rectangle x1="2.7" y1="-0.15" x2="3.4" y2="0.15" layer="31"/>
+<rectangle x1="2.7" y1="-1.45" x2="3.4" y2="-1.15" layer="31"/>
+<rectangle x1="-3.4" y1="-1.45" x2="-2.7" y2="-1.15" layer="31"/>
+<rectangle x1="-3.4" y1="-0.15" x2="-2.7" y2="0.15" layer="31"/>
+<rectangle x1="-3.4" y1="1.15" x2="-2.7" y2="1.45" layer="31"/>
 </package>
 <package name="14-VFQFN">
 <text x="-1.4" y="-1.8" size="0.4" layer="27" align="top-left">&gt;VALUE</text>
