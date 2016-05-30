@@ -33,7 +33,7 @@
 // AUX battery voltage divider net
 #define PIN_ADC PORTB4
 
-// range with 9.09k/301 divider: [6..33.6V] -> [0.193..1.08V]
+// range with 61.9k/1.96k divider: [6..33.6V] -> [0.190..1.06V]
 #define MIN_VOLTAGE ((uint16_t) (6 / 33.6 * 1024))
 
 // switch between main and AUX battery
@@ -45,10 +45,9 @@
 // pull line low by enabling output
 #define disable_12V() { DDRB |= _BV(PIN_12V); }
 
-// toggle red LED by enabling/disabling low output
-#define warn_on() { DDRB |= _BV(PIN_AUX_NOT_BAD); }
-#define warn_off() { DDRB &= ~_BV(PIN_AUX_NOT_BAD); }
-#define warn_toggle() { DDRB ^= _BV(PIN_AUX_NOT_BAD); }
+#define warn_on() { PORTB |= _BV(PIN_AUX_NOT_BAD); }
+#define warn_off() { PORTB &= ~_BV(PIN_AUX_NOT_BAD); }
+#define warn_toggle() { PORTB ^= _BV(PIN_AUX_NOT_BAD); }
 
 // evaluates to true if waiting for high RC signal
 #define is_trigger_high() (MCUCR & (_BV(ISC01) | _BV(ISC00)))
@@ -165,7 +164,7 @@ int main(void) {
 	 */
 
 	// configure outputs
-	DDRB = _BV(PIN_BATT_SWITCH);
+	DDRB = _BV(PIN_BATT_SWITCH) | _BV(PIN_AUX_NOT_BAD);
 
 	// disable all digital inputs
 	DIDR0 = 0b111111;
