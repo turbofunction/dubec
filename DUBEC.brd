@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.5.0">
+<eagle version="7.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -557,18 +557,18 @@ TURBOfunction.com/fpv</text>
 <package name="SRP5030">
 <smd name="1" x="-2.2" y="0" dx="1.6" dy="2" layer="1" stop="no" thermals="no" cream="no"/>
 <smd name="2" x="2.2" y="0" dx="1.6" dy="2" layer="1" stop="no" thermals="no" cream="no"/>
-<text x="-2.5" y="2.2" size="0.635" layer="25" align="top-left">&gt;NAME</text>
-<text x="-2.5" y="-2.2" size="0.635" layer="27">&gt;VALUE</text>
-<wire x1="-3" y1="1.7" x2="-3" y2="2.4" width="0.13" layer="21"/>
-<wire x1="-3" y1="2.4" x2="-2.7" y2="2.7" width="0.13" layer="21" curve="-90"/>
-<wire x1="-2.7" y1="2.7" x2="2.7" y2="2.7" width="0.13" layer="21"/>
-<wire x1="2.7" y1="2.7" x2="3" y2="2.4" width="0.13" layer="21" curve="-90"/>
-<wire x1="3" y1="2.4" x2="3" y2="1.7" width="0.13" layer="21"/>
-<wire x1="-3" y1="-1.7" x2="-3" y2="-2.4" width="0.13" layer="21"/>
-<wire x1="-3" y1="-2.4" x2="-2.7" y2="-2.7" width="0.13" layer="21" curve="90"/>
-<wire x1="-2.7" y1="-2.7" x2="2.7" y2="-2.7" width="0.13" layer="21"/>
-<wire x1="2.7" y1="-2.7" x2="3" y2="-2.4" width="0.13" layer="21" curve="90"/>
-<wire x1="3" y1="-2.4" x2="3" y2="-1.7" width="0.13" layer="21"/>
+<text x="-2.3" y="2.3" size="0.635" layer="25" align="top-left">&gt;NAME</text>
+<text x="-2.3" y="-2.3" size="0.635" layer="27">&gt;VALUE</text>
+<wire x1="-2.7" y1="1.7" x2="-2.7" y2="2.4" width="0.13" layer="21"/>
+<wire x1="-2.7" y1="2.4" x2="-2.4" y2="2.7" width="0.13" layer="21" curve="-90"/>
+<wire x1="-2.4" y1="2.7" x2="2.4" y2="2.7" width="0.13" layer="21"/>
+<wire x1="2.4" y1="2.7" x2="2.7" y2="2.4" width="0.13" layer="21" curve="-90"/>
+<wire x1="2.7" y1="2.4" x2="2.7" y2="1.7" width="0.13" layer="21"/>
+<wire x1="-2.7" y1="-1.7" x2="-2.7" y2="-2.4" width="0.13" layer="21"/>
+<wire x1="-2.7" y1="-2.4" x2="-2.4" y2="-2.7" width="0.13" layer="21" curve="90"/>
+<wire x1="-2.4" y1="-2.7" x2="2.4" y2="-2.7" width="0.13" layer="21"/>
+<wire x1="2.4" y1="-2.7" x2="2.7" y2="-2.4" width="0.13" layer="21" curve="90"/>
+<wire x1="2.7" y1="-2.4" x2="2.7" y2="-1.7" width="0.13" layer="21"/>
 <rectangle x1="-3" y1="-1" x2="-1.4" y2="1" layer="29"/>
 <rectangle x1="1.4" y1="-1" x2="3" y2="1" layer="29"/>
 <rectangle x1="-2.9" y1="-0.9" x2="-1.5" y2="0.9" layer="31"/>
@@ -2682,9 +2682,9 @@ Covered vias can be set in Masks (Limit).
 <contactref element="RDAUX" pad="2"/>
 <contactref element="DAUX" pad="2"/>
 <wire x1="3.525" y1="18.775" x2="3.525" y2="18.3375" width="0.3" layer="1"/>
-<wire x1="3.525" y1="18.3375" x2="3.125" y2="17.9375" width="0.3" layer="1"/>
-<wire x1="3.125" y1="17.9375" x2="3.125" y2="17.5625" width="0.3" layer="1"/>
-<wire x1="3.125" y1="17.5625" x2="3" y2="17.4375" width="0.3" layer="1"/>
+<wire x1="3.525" y1="18.3375" x2="3.0625" y2="17.875" width="0.3" layer="1"/>
+<wire x1="3.0625" y1="17.875" x2="3.0625" y2="17.5" width="0.3" layer="1"/>
+<wire x1="3.0625" y1="17.5" x2="3" y2="17.4375" width="0.3" layer="1"/>
 </signal>
 <signal name="N$11">
 <contactref element="RDERR" pad="1"/>
