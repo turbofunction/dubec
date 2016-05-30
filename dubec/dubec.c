@@ -1,13 +1,8 @@
 /**
  * dubec.c
  *
- * RC battery switch application for DUBEC,
- * a dual channel voltage regulator.
- *
- * Note about code structure: I'm still somewhat undecided
- * whether nested if blocks or surprise return statements
- * are prettier, but I went with the labyrinthine if blocks
- * for now.
+ * RC battery switch firmware for DUBEC, a dual voltage
+ * regulator circuit.
  *
  * Created: 10/3/2014 2:16:55 AM
  * Author: janne@turbofunction.com
@@ -201,7 +196,7 @@ int main(void) {
 		// configure sleep according to state
 
 		if (is_timer_running()) {
-			// only idle when timing high signal to keep IO clock running (for timer)
+			// idle when timing high signal to keep IO clock running (for timer)
 			MCUCR &= ~(_BV(SM0) | _BV(SM1)); // idle
 
 		} else if (bit_is_set(ADCSRA, ADIE)) {
@@ -231,12 +226,11 @@ static void process_signal(void) {
 	// take a local (non-volatile) copy
 	uint8_t pwm = signal.pwm;
 
-	// branching only after copying the memory value,
-	// because concurrency
 	if (!pwm) {
 		return;
 	}
 
+	// flag as read
 	signal.pwm = 0;
 
 	// accepted range [800..2240ms] == [15..42] @ 18.75kHz
@@ -285,15 +279,14 @@ static void process_voltage(void) {
 	batt.samples[1] = samples[0];
 	batt.samples[0] = 0;
 
-	// calculate the average
 	uint16_t v_max = MAX(samples[0], MAX(samples[1], samples[2]));
 
 	if (v_max < (MIN_VOLTAGE >> 1)) {
 		set_aux(AUX_BAD);
 		/**
-		 * Need to be very careful when resetting the
-		 * fallback voltage, so that it won't get reseted
-		 * when there's eg. some sudden voltage ripple/sag
+		 * Need to be careful when reseting the fallback
+		 * voltage, so that it won't get reseted when
+		 * there's eg. some sudden voltage ripple/sag
 		 * due to a transient load.
 		 *
 		 * This is ensured now by checking that all the
@@ -324,9 +317,11 @@ static void process_voltage(void) {
 		set_aux(AUX_BAD);
 
 	} else if (!batt.fallback_voltage) {
-		// fallback at 75%; floor the range, just for kicks
+		// Fallback at 75% of voltage (3.15V for 4.2V);
+		// floor the range, just for kicks.
 		batt.fallback_voltage = MAX(v_avg - (v_avg >> 2), MIN_VOLTAGE);
-		// Warning at 80%. The division takes up serious space, TODO optimize.
+		// Warning at 80% (3.36V for 4.2V). The division takes up
+		// serious space, TODO optimize.
 		batt.warn_voltage = (v_avg << 2) / 5;
 		// wait for at least one more round until considering ok
 
@@ -353,12 +348,6 @@ static void process_voltage(void) {
 static void apply_state(void) {
 	// apply signal status first
 	switch (signal.status) {
-		case SIG_12V_DISABLE:
-			// crashboombang-mode
-			batt_main();
-			disable_12V();
-			break;
-
 		case SIG_AUX:
 			if (batt.aux_status >= AUX_WARN) {
 				batt_aux();
@@ -367,9 +356,16 @@ static void apply_state(void) {
 			}
 			// else fall through
 
-		default: // SIG_MAIN
+		case SIG_MAIN:
+		default:
 			batt_main();
 			enable_12V();
+			break;
+
+		case SIG_12V_DISABLE:
+			// crashboombang-mode
+			batt_main();
+			disable_12V();
 			break;
 	}
 
@@ -380,7 +376,7 @@ static void apply_state(void) {
 			break;
 
 		case AUX_WARN:
-			// let the watchdog loop blink at its own rate
+			// let the ADC interrupt handler blink at its own rate
 			break;
 
 		case AUX_BAD:
@@ -435,24 +431,27 @@ ISR(TIM0_OVF_vect) {
 }
 
 
-/** Process battery voltage. */
+/**
+ * Process battery voltage. Handles also bad AUX warning
+ * LED blinking.
+ */
 ISR(ADC_vect) {
 	// documentation states that the low byte needs to be read first
 	uint16_t v = ADCL;
-	// read the high byte on a separate line to "ensure" proper ordering
+	// thus, read the high byte on a separate line to "ensure" proper ordering
 	v |= ADCH << 8;
 
 	// disable ADC interrupt
 	ADCSRA &= ~_BV(ADIE);
 
 	// either reached sampling time, or maybe battery disconnect
-	if (!--batt.until_sample || v < (MIN_VOLTAGE >> 1)) {
+	if (v < (MIN_VOLTAGE >> 1) || !--batt.until_sample) {
 		// at least 1 to flag the memory as unprocessed
 		batt.samples[0] = MAX(v, 1);
 
 		if (!batt.until_sample) {
 			if (batt.aux_status == AUX_WARN) {
-				// blink the red LED at 1Hz as warning
+				// blink the red LED at 1Hz as a warning
 				warn_toggle();
 			}
 			batt.until_sample = 9;
@@ -463,7 +462,6 @@ ISR(ADC_vect) {
 
 /**
  * Use watchdog to initiate AUX battery voltage check on regular intervals.
- * Handles also bad AUX voltage LED blinking.
  */
 ISR(WDT_vect) {
 	start_ADC();
