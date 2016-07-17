@@ -1,8 +1,7 @@
 
 Contact:
 Janne Savukoski
-janne@savukoski.name
-+358405684246
+<firstname>@savukoski.name
 
 
                     Part name: ISPAdapter
