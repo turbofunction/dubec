@@ -6,7 +6,7 @@ janne@savukoski.name
 
 
                     Part name: ISPAdapter
-                     Revision: E
+                     Revision: F
                    Board size: 76mm x 42mm
               Board thickness: 
                    Board type: Two layer

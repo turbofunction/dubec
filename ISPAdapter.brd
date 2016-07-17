@@ -184,7 +184,7 @@ for Super DUBEC</text>
 <text x="25.2" y="9.4" size="1" layer="107" font="vector" ratio="15">ISP pins:</text>
 <hole x="44.1" y="11.2" drill="1.9"/>
 <text x="32" y="38" size="1" layer="107" font="vector" ratio="15" rot="SR270" align="center-left">GND</text>
-<text x="37" y="27" size="0.8128" layer="107" font="vector" ratio="15" align="top-left">Rev. E (2016-07-17)</text>
+<text x="37" y="27" size="0.8128" layer="107" font="vector" ratio="15" align="top-left">Rev. F (201x-xx-xx)</text>
 <text x="23" y="38" size="1" layer="107" font="vector" ratio="15" rot="SR270" align="center-left">SCI
 (PB3)</text>
 <text x="17.3" y="3.5" size="1.5" layer="107" font="vector" ratio="15" align="top-center">debugWIRE</text>
