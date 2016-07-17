@@ -2271,10 +2271,9 @@ Covered vias can be set in Masks (Limit).
 <signal name="N$7">
 <contactref element="12D" pad="A"/>
 <contactref element="12RLED" pad="1"/>
-<wire x1="32.5" y1="7.25" x2="32.5" y2="9" width="0.3" layer="1"/>
-<wire x1="32.5" y1="9" x2="33.375" y2="9.875" width="0.3" layer="1"/>
-<wire x1="33.375" y1="9.875" x2="34.675" y2="9.875" width="0.3" layer="1"/>
-<wire x1="34.675" y1="9.875" x2="34.75" y2="9.95" width="0.3" layer="1"/>
+<wire x1="32.5" y1="7.25" x2="34.5" y2="9.25" width="0.3" layer="1"/>
+<wire x1="34.5" y1="9.25" x2="34.5" y2="9.7" width="0.3" layer="1"/>
+<wire x1="34.5" y1="9.7" x2="34.75" y2="9.95" width="0.3" layer="1"/>
 </signal>
 <signal name="12V_RUN">
 <contactref element="12U1" pad="1"/>
@@ -2814,9 +2813,11 @@ Covered vias can be set in Masks (Limit).
 <wire x1="32.45" y1="6" x2="32.625" y2="6" width="0.3" layer="1"/>
 <wire x1="32.625" y1="6" x2="33.85" y2="7.225" width="0.3" layer="1"/>
 <wire x1="33.85" y1="7.225" x2="33.85" y2="7.325" width="0.3" layer="1"/>
-<wire x1="33.85" y1="7.325" x2="34.15" y2="7.625" width="0.3" layer="1"/>
-<wire x1="34.15" y1="7.625" x2="36.5" y2="7.625" width="0.3" layer="1"/>
-<wire x1="36.5" y1="7.625" x2="36.75" y2="7.375" width="0.3" layer="1"/>
+<wire x1="35.275" y1="7.625" x2="36" y2="7.625" width="0.3" layer="1"/>
+<wire x1="36" y1="7.625" x2="36.25" y2="7.375" width="0.3" layer="1"/>
+<wire x1="36.25" y1="7.375" x2="36.75" y2="7.375" width="0.3" layer="1"/>
+<wire x1="35.275" y1="7.625" x2="34.975" y2="7.325" width="0.3" layer="1"/>
+<wire x1="34.975" y1="7.325" x2="33.85" y2="7.325" width="0.3" layer="1"/>
 </signal>
 <signal name="12AGND">
 <contactref element="12U1" pad="5"/>
