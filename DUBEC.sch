@@ -5682,7 +5682,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
 <part name="U$2" library="SparkFun-Aesthetics" deviceset="AGND" device="" value="5SGND"/>
 <part name="U$3" library="SparkFun-Aesthetics" deviceset="AGND" device="" value="5SGND"/>
-<part name="U$4" library="SparkFun-Aesthetics" deviceset="AGND" device="" value="12SGND"/>
+<part name="U$4" library="SparkFun-Aesthetics" deviceset="AGND" device="" value="12AGND"/>
 <part name="JP2" library="dubec" deviceset="JUMPER-PAD" device=""/>
 <part name="QR2" library="dubec" deviceset="2PMOS" device="40V_6A" value="2PMOS40V_6A"/>
 <part name="J_POS_MAIN" library="dubec" deviceset="M01" device=""/>
@@ -5699,7 +5699,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="12D2" library="dubec" deviceset="D_ZENER" device="10V"/>
 <part name="12R1" library="dubec" deviceset="RES" device="300_16P" value="RES300_16P"/>
-<part name="U$6" library="SparkFun-Aesthetics" deviceset="AGND" device="" value="12SGND"/>
+<part name="U$6" library="SparkFun-Aesthetics" deviceset="AGND" device="" value="12AGND"/>
 </parts>
 <sheets>
 <sheet>
@@ -6756,17 +6756,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="30.48" y="50.8" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="12SGND" class="0">
-<segment>
-<pinref part="12RBOT" gate="G$1" pin="2"/>
-<pinref part="12RT" gate="G$1" pin="1"/>
-<wire x1="48.26" y1="-78.74" x2="48.26" y2="-76.2" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="-76.2" x2="58.42" y2="-76.2" width="0.1524" layer="91"/>
-<pinref part="U$4" gate="G$1" pin="AGND"/>
-<wire x1="48.26" y1="-73.66" x2="48.26" y2="-76.2" width="0.1524" layer="91"/>
-<junction x="48.26" y="-76.2"/>
-</segment>
-</net>
 <net name="12V_GND" class="0">
 <segment>
 <pinref part="P_12V_OUT" gate="G$1" pin="1"/>
@@ -6791,11 +6780,20 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="12R1" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="AGND" class="0">
+<net name="12AGND" class="0">
 <segment>
 <pinref part="12U1" gate="G$1" pin="GND"/>
 <wire x1="68.58" y1="-58.42" x2="71.12" y2="-58.42" width="0.1524" layer="91"/>
 <pinref part="U$6" gate="G$1" pin="AGND"/>
+</segment>
+<segment>
+<pinref part="12RBOT" gate="G$1" pin="2"/>
+<pinref part="12RT" gate="G$1" pin="1"/>
+<wire x1="48.26" y1="-78.74" x2="48.26" y2="-76.2" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="-76.2" x2="58.42" y2="-76.2" width="0.1524" layer="91"/>
+<pinref part="U$4" gate="G$1" pin="AGND"/>
+<wire x1="48.26" y1="-73.66" x2="48.26" y2="-76.2" width="0.1524" layer="91"/>
+<junction x="48.26" y="-76.2"/>
 </segment>
 </net>
 </nets>
