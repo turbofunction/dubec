@@ -854,18 +854,18 @@
 <package name="SRP5030">
 <smd name="1" x="-2.2" y="0" dx="1.6" dy="2" layer="1" stop="no" thermals="no" cream="no"/>
 <smd name="2" x="2.2" y="0" dx="1.6" dy="2" layer="1" stop="no" thermals="no" cream="no"/>
-<text x="-2.3" y="2.3" size="0.635" layer="25" align="top-left">&gt;NAME</text>
-<text x="-2.3" y="-2.3" size="0.635" layer="27">&gt;VALUE</text>
-<wire x1="-2.7" y1="1.7" x2="-2.7" y2="2.4" width="0.13" layer="21"/>
-<wire x1="-2.7" y1="2.4" x2="-2.4" y2="2.7" width="0.13" layer="21" curve="-90"/>
-<wire x1="-2.4" y1="2.7" x2="2.4" y2="2.7" width="0.13" layer="21"/>
-<wire x1="2.4" y1="2.7" x2="2.7" y2="2.4" width="0.13" layer="21" curve="-90"/>
-<wire x1="2.7" y1="2.4" x2="2.7" y2="1.7" width="0.13" layer="21"/>
-<wire x1="-2.7" y1="-1.7" x2="-2.7" y2="-2.4" width="0.13" layer="21"/>
-<wire x1="-2.7" y1="-2.4" x2="-2.4" y2="-2.7" width="0.13" layer="21" curve="90"/>
-<wire x1="-2.4" y1="-2.7" x2="2.4" y2="-2.7" width="0.13" layer="21"/>
-<wire x1="2.4" y1="-2.7" x2="2.7" y2="-2.4" width="0.13" layer="21" curve="90"/>
-<wire x1="2.7" y1="-2.4" x2="2.7" y2="-1.7" width="0.13" layer="21"/>
+<text x="-2.2" y="2.2" size="0.635" layer="25" align="top-left">&gt;NAME</text>
+<text x="-2.2" y="-2.2" size="0.635" layer="27">&gt;VALUE</text>
+<wire x1="-2.6" y1="1.5" x2="-2.6" y2="2.1" width="0.13" layer="21"/>
+<wire x1="-2.6" y1="2.1" x2="-2.1" y2="2.6" width="0.13" layer="21" curve="-90"/>
+<wire x1="-2.1" y1="2.6" x2="2.1" y2="2.6" width="0.13" layer="21"/>
+<wire x1="2.1" y1="2.6" x2="2.6" y2="2.1" width="0.13" layer="21" curve="-90"/>
+<wire x1="2.6" y1="2.1" x2="2.6" y2="1.5" width="0.13" layer="21"/>
+<wire x1="-2.6" y1="-1.5" x2="-2.6" y2="-2.1" width="0.13" layer="21"/>
+<wire x1="-2.6" y1="-2.1" x2="-2.1" y2="-2.6" width="0.13" layer="21" curve="90"/>
+<wire x1="-2.1" y1="-2.6" x2="2.1" y2="-2.6" width="0.13" layer="21"/>
+<wire x1="2.1" y1="-2.6" x2="2.6" y2="-2.1" width="0.13" layer="21" curve="90"/>
+<wire x1="2.6" y1="-2.1" x2="2.6" y2="-1.5" width="0.13" layer="21"/>
 <rectangle x1="-3" y1="-1" x2="-1.4" y2="1" layer="29"/>
 <rectangle x1="1.4" y1="-1" x2="3" y2="1" layer="29"/>
 <rectangle x1="-2.9" y1="-0.9" x2="-1.5" y2="0.9" layer="31"/>
