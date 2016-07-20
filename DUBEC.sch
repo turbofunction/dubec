@@ -682,19 +682,23 @@
 <circle x="-1.6" y="-1" radius="0.25495" width="0.5" layer="21"/>
 </package>
 <package name="SOD323+">
-<smd name="C" x="1.35" y="0" dx="1" dy="0.8" layer="1"/>
-<smd name="A" x="-1.35" y="0" dx="1" dy="0.8" layer="1"/>
+<smd name="C" x="1.2" y="0" dx="0.9" dy="0.8" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="A" x="-1.2" y="0" dx="0.9" dy="0.8" layer="1" stop="no" thermals="no" cream="no"/>
 <wire x1="-0.85" y1="0.65" x2="-0.85" y2="-0.65" width="0.05" layer="51"/>
 <wire x1="-0.85" y1="-0.65" x2="0.85" y2="-0.65" width="0.05" layer="51"/>
 <wire x1="0.85" y1="-0.65" x2="0.85" y2="0.65" width="0.05" layer="51"/>
 <wire x1="0.85" y1="0.65" x2="-0.85" y2="0.65" width="0.05" layer="51"/>
-<wire x1="-2.05" y1="0.75" x2="-2.05" y2="-0.75" width="0.13" layer="21"/>
-<wire x1="-2.05" y1="-0.75" x2="2.05" y2="-0.75" width="0.13" layer="21"/>
-<wire x1="2.05" y1="-0.75" x2="2.05" y2="0.75" width="0.13" layer="21"/>
-<wire x1="2.05" y1="0.75" x2="-2.05" y2="0.75" width="0.13" layer="21"/>
-<text x="-1.8" y="0.5" size="0.4" layer="21" align="top-left">&gt;NAME</text>
-<text x="-1.8" y="-0.5" size="0.4" layer="27">&gt;VALUE</text>
-<text x="2.08" y="-0.93" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
+<wire x1="-1.9" y1="0.65" x2="-1.9" y2="-0.65" width="0.13" layer="21"/>
+<wire x1="-1.9" y1="-0.65" x2="1.9" y2="-0.65" width="0.13" layer="21"/>
+<wire x1="1.9" y1="-0.65" x2="1.9" y2="0.65" width="0.13" layer="21"/>
+<wire x1="1.9" y1="0.65" x2="-1.9" y2="0.65" width="0.13" layer="21"/>
+<text x="-1.7" y="0.4" size="0.3" layer="21" align="top-left">&gt;NAME</text>
+<text x="-1.7" y="-0.4" size="0.3" layer="27">&gt;VALUE</text>
+<text x="1.9" y="-0.9" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
+<rectangle x1="-1.65" y1="-0.4" x2="-0.75" y2="0.4" layer="29"/>
+<rectangle x1="0.75" y1="-0.4" x2="1.65" y2="0.4" layer="29"/>
+<rectangle x1="-1.65" y1="-0.4" x2="-0.75" y2="0.4" layer="31"/>
+<rectangle x1="0.75" y1="-0.4" x2="1.65" y2="0.4" layer="31"/>
 </package>
 <package name="SOT-666">
 <smd name="2" x="0" y="-0.7" dx="0.25" dy="0.4" layer="1" stop="no" thermals="no" cream="no"/>
@@ -1596,13 +1600,14 @@
 </technology>
 </technologies>
 </device>
-<device name="12V_0402" package="0402+">
+<device name="12V_TVS_25V_0402" package="0402+">
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="C" pad="C"/>
 </connects>
 <technologies>
 <technology name="">
+<attribute name="CLAMP" value="25V" constant="no"/>
 <attribute name="DIGIKEY_PART_#" value="UCLAMP1201PCT-ND" constant="no"/>
 <attribute name="MANUFACTURER" value="Semtech" constant="no"/>
 <attribute name="MFG_PART_#" value="UCLAMP1201P.TCT" constant="no"/>
@@ -1624,13 +1629,14 @@
 </technology>
 </technologies>
 </device>
-<device name="12V_SPHV" package="0402+">
+<device name="12V_TVS_25V" package="0402+">
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="C" pad="C"/>
 </connects>
 <technologies>
 <technology name="">
+<attribute name="CLAMP" value="25V" constant="no"/>
 <attribute name="DIGIKEY_PART_#" value="F6506CT-ND" constant="no"/>
 <attribute name="MANUFACTURER" value="Littelfuse Inc" constant="no"/>
 <attribute name="MFG_PART_#" value="SPHV12-01ETG" constant="no"/>
@@ -1672,6 +1678,7 @@
 </connects>
 <technologies>
 <technology name="">
+<attribute name="CLAMP" value="25V" constant="no"/>
 <attribute name="DIGIKEY_PART_#" value="UCLAMP1201HCT-ND" constant="no"/>
 <attribute name="EURO" value="6.22/25" constant="no"/>
 <attribute name="MANUFACTURER" value="Semtech Corporation" constant="no"/>
@@ -1848,13 +1855,14 @@
 </technology>
 </technologies>
 </device>
-<device name="12V_TVS" package="SOD923+">
+<device name="12V_TVS_18.4V" package="SOD923+">
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="C" pad="C"/>
 </connects>
 <technologies>
 <technology name="">
+<attribute name="CLAMP" value="18.4V" constant="no"/>
 <attribute name="DIGIKEY_PART_#" value="ESD12VD9-TPMSCT-ND" constant="no"/>
 <attribute name="EURO" value="5.71/25" constant="no"/>
 <attribute name="MANUFACTURER" value="Micro Commercial Co" constant="no"/>
@@ -1862,13 +1870,14 @@
 </technology>
 </technologies>
 </device>
-<device name="12V_TVS_DFN" package="DFN2020-3">
+<device name="12V_TVS_19.9V" package="DFN2020-3">
 <connects>
 <connect gate="G$1" pin="A" pad="1 2"/>
 <connect gate="G$1" pin="C" pad="3"/>
 </connects>
 <technologies>
 <technology name="">
+<attribute name="CLAMP" value="19.9V" constant="no"/>
 <attribute name="DIGIKEY_PART_#" value="568-11464-1-ND" constant="no"/>
 <attribute name="EURO" value="20.92/100" constant="no"/>
 <attribute name="MANUFACTURER" value="NXP Semiconductors" constant="no"/>
@@ -1888,6 +1897,51 @@
 <attribute name="MANUFACTURER" value="Panasonic Electronic Components" constant="no"/>
 <attribute name="MFG_PART_#" value="DZ2S100M0L" constant="no"/>
 <attribute name="TOLERANCE" value="±5%" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="12V_TVS_23.7V" package="SOD923+">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="CLAMP" value="23.7V" constant="no"/>
+<attribute name="DIGIKEY_PART_#" value="641-1475-1-ND" constant="no"/>
+<attribute name="EURO" value="5.06/25" constant="no"/>
+<attribute name="MANUFACTURER" value="Comchip Technology" constant="no"/>
+<attribute name="MFG_PART_#" value="CPDQ12V0U-HF" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="12V_TVS_15.5V_BI" package="SOD323+">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="CLAMP" value="15.5V" constant="no"/>
+<attribute name="DIGIKEY_PART_#" value="ESD12VD3B-TPMSCT-ND" constant="no"/>
+<attribute name="EURO" value="6.80/25" constant="no"/>
+<attribute name="MANUFACTURER" value="Micro Commercial Co" constant="no"/>
+<attribute name="MFG_PART_#" value="ESD12VD3B-TP" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="12V_TVS_18.5V" package="SOD323+">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="CLAMP" value="18.5V / 22.5V" constant="no"/>
+<attribute name="DIGIKEY_PART_#" value="F6441CT-ND" constant="no"/>
+<attribute name="EURO" value="8.00 / 25" constant="no"/>
+<attribute name="MANUFACTURER" value="Littelfuse Inc." constant="no"/>
+<attribute name="MFG_PART_#" value="SD12-01FTG" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -5618,7 +5672,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="RDAUX" library="dubec" deviceset="RES" device="93.1_16" value="RES93.1_16"/>
 <part name="12RLED" library="dubec" deviceset="RES" device="620_4" value="RES620_4"/>
 <part name="5RLED" library="dubec" deviceset="RES" device="140_16" value="RES140_16"/>
-<part name="12DTVS" library="dubec" deviceset="D_ZENER" device="12V_TVS_DFN" value="D_ZENER12V_TVS_DFN"/>
+<part name="12DTVS" library="dubec" deviceset="D_ZENER" device="12V_TVS_18.5V" value="D_ZENER12V_TVS_18.5V"/>
 <part name="RDIVTOP" library="dubec" deviceset="RES" device="61.9K_16P" value="RES61.9K_16P"/>
 <part name="RDIVBOT" library="dubec" deviceset="RES" device="1.96K_16P" value="RES1.96K_16P"/>
 <part name="MCC1" library="dubec" deviceset="CAP" device="4.7UF_10V"/>
