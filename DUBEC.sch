@@ -684,21 +684,31 @@
 <package name="SOD323+">
 <smd name="C" x="1.2" y="0" dx="0.9" dy="0.8" layer="1" stop="no" thermals="no" cream="no"/>
 <smd name="A" x="-1.2" y="0" dx="0.9" dy="0.8" layer="1" stop="no" thermals="no" cream="no"/>
-<wire x1="-0.85" y1="0.65" x2="-0.85" y2="-0.65" width="0.05" layer="51"/>
-<wire x1="-0.85" y1="-0.65" x2="0.85" y2="-0.65" width="0.05" layer="51"/>
-<wire x1="0.85" y1="-0.65" x2="0.85" y2="0.65" width="0.05" layer="51"/>
-<wire x1="0.85" y1="0.65" x2="-0.85" y2="0.65" width="0.05" layer="51"/>
 <wire x1="-1.9" y1="0.65" x2="-1.9" y2="-0.65" width="0.13" layer="21"/>
 <wire x1="-1.9" y1="-0.65" x2="1.9" y2="-0.65" width="0.13" layer="21"/>
 <wire x1="1.9" y1="-0.65" x2="1.9" y2="0.65" width="0.13" layer="21"/>
 <wire x1="1.9" y1="0.65" x2="-1.9" y2="0.65" width="0.13" layer="21"/>
-<text x="-1.7" y="0.4" size="0.3" layer="21" align="top-left">&gt;NAME</text>
+<text x="-1.7" y="0.4" size="0.3" layer="25" align="top-left">&gt;NAME</text>
 <text x="-1.7" y="-0.4" size="0.3" layer="27">&gt;VALUE</text>
 <text x="1.9" y="-0.9" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
 <rectangle x1="-1.65" y1="-0.4" x2="-0.75" y2="0.4" layer="29"/>
 <rectangle x1="0.75" y1="-0.4" x2="1.65" y2="0.4" layer="29"/>
 <rectangle x1="-1.65" y1="-0.4" x2="-0.75" y2="0.4" layer="31"/>
 <rectangle x1="0.75" y1="-0.4" x2="1.65" y2="0.4" layer="31"/>
+<wire x1="-0.9" y1="0.15" x2="-1.3" y2="0.15" width="0.05" layer="51"/>
+<wire x1="-1.3" y1="0.15" x2="-1.3" y2="-0.15" width="0.05" layer="51"/>
+<wire x1="-1.3" y1="-0.15" x2="-0.9" y2="-0.15" width="0.05" layer="51"/>
+<wire x1="-0.9" y1="-0.15" x2="-0.9" y2="-0.65" width="0.05" layer="51"/>
+<wire x1="-0.9" y1="0.65" x2="-0.9" y2="0.15" width="0.05" layer="51"/>
+<wire x1="-0.9" y1="0.65" x2="0.9" y2="0.65" width="0.05" layer="51"/>
+<wire x1="-0.9" y1="-0.65" x2="0.9" y2="-0.65" width="0.05" layer="51"/>
+<wire x1="0.9" y1="0.65" x2="0.9" y2="0.15" width="0.05" layer="51"/>
+<wire x1="-0.9" y1="0.15" x2="-1.3" y2="0.15" width="0.05" layer="51"/>
+<wire x1="1.3" y1="0.15" x2="0.9" y2="0.15" width="0.05" layer="51"/>
+<wire x1="1.3" y1="0.15" x2="1.3" y2="-0.15" width="0.05" layer="51"/>
+<wire x1="-1.3" y1="-0.15" x2="-0.9" y2="-0.15" width="0.05" layer="51"/>
+<wire x1="0.9" y1="-0.15" x2="1.3" y2="-0.15" width="0.05" layer="51"/>
+<wire x1="0.9" y1="-0.15" x2="0.9" y2="-0.65" width="0.05" layer="51"/>
 </package>
 <package name="SOT-666">
 <smd name="2" x="0" y="-0.7" dx="0.25" dy="0.4" layer="1" stop="no" thermals="no" cream="no"/>
