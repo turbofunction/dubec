@@ -1401,13 +1401,13 @@ Covered vias can be set in Masks (Limit).
 <attribute name="MANUFACTURER" value="Murata Electronics North America" x="19.375" y="13.375" size="1.778" layer="27" display="off"/>
 <attribute name="MFG_PART_#" value="GRM155R62A104KE14D" x="19.375" y="13.375" size="1.778" layer="27" display="off"/>
 </element>
-<element name="5RTOP" library="dubec" package="0402" value="RES1.3K_16P" x="16.125" y="16.1875" rot="R90">
+<element name="5RTOP" library="dubec" package="0402" value="RES1.33K_16P" x="16.125" y="16.1875" rot="R90">
 <attribute name="TOLERANCE" value="±0.1%" x="16.125" y="16.1875" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="TEMP" value="±25ppm/°C" x="16.125" y="16.1875" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="DIGIKEY_PART_#" value="YAG1378CT-ND" x="16.125" y="16.1875" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DIGIKEY_PART_#" value="YAG1376CT-ND" x="16.125" y="16.1875" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MANUFACTURER" value="Yageo" x="16.125" y="16.1875" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MFG_PART_#" value="RT0402BRD071K3L" x="16.125" y="16.1875" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="EURO" value="11.23/100" x="16.125" y="16.1875" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MFG_PART_#" value="RT0402BRD071K33L" x="16.125" y="16.1875" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="EURO" value="11.49/100" x="16.125" y="16.1875" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="5RBOT" library="dubec" package="0402" value="RES300_16P" x="16.125" y="14.375" rot="R90">
 <attribute name="TOLERANCE" value="±0.1%" x="16.125" y="14.375" size="1.778" layer="27" rot="R90" display="off"/>
@@ -1651,12 +1651,12 @@ Covered vias can be set in Masks (Limit).
 <attribute name="USD" value="0.65/10" x="13" y="13.75" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="TEMP" value="X5R" x="13" y="13.75" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="12D1" library="dubec" package="SOD523+" value="D_SCH20V_0.5A" x="28.3125" y="13">
-<attribute name="DIGIKEY_PART_#" value="NSR0520V2T1GOSCT-ND" x="28.3125" y="13" size="1.778" layer="27" display="off"/>
-<attribute name="V_FWD" value="480mV @ 500mA" x="28.3125" y="13" size="1.778" layer="27" display="off"/>
-<attribute name="EURO" value="3.13/10" x="28.3125" y="13" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER" value="ON Semiconductor" x="28.3125" y="13" size="1.778" layer="27" display="off"/>
-<attribute name="MFG_PART_#" value="NSR0520V2T1G" x="28.3125" y="13" size="1.778" layer="27" display="off"/>
+<element name="12D1" library="dubec" package="SOD523+" value="D_SCH30V_0.2A" x="28.3125" y="13">
+<attribute name="DIGIKEY_PART_#" value="RB531SM-30T2RCT-ND" x="28.3125" y="13" size="1.778" layer="27" display="off"/>
+<attribute name="V_FWD" value="350mV @ 10mA" x="28.3125" y="13" size="1.778" layer="27" display="off"/>
+<attribute name="EURO" value="8.89/100" x="28.3125" y="13" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER" value="Rohm Semiconductor" x="28.3125" y="13" size="1.778" layer="27" display="off"/>
+<attribute name="MFG_PART_#" value="RB531SM-30T2R" x="28.3125" y="13" size="1.778" layer="27" display="off"/>
 </element>
 <element name="12Q1" library="dubec" package="SOT-323T" value="NMOS20V_4.2A" x="34.75" y="6.625" rot="R270">
 <attribute name="DIGIKEY_PART_#" value="SSM3K123TULFCT-ND" x="34.75" y="6.625" size="1.778" layer="27" rot="R270" display="off"/>
@@ -1672,13 +1672,13 @@ Covered vias can be set in Masks (Limit).
 <attribute name="MANUFACTURER" value="Panasonic Electronic Components" x="31.75" y="6" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MFG_PART_#" value="DZ2S100M0L" x="31.75" y="6" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="12R1" library="dubec" package="0402" value="RES300_16P" x="37.25" y="7.375" rot="R180">
-<attribute name="TEMP" value="±25ppm/°C" x="37.25" y="7.375" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="TOLERANCE" value="±0.1%" x="37.25" y="7.375" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="EURO" value="11.23/100" x="37.25" y="7.375" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MFG_PART_#" value="RT0402BRD07300RL" x="37.25" y="7.375" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="DIGIKEY_PART_#" value="YAG1406CT-ND" x="37.25" y="7.375" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MANUFACTURER" value="Yageo" x="37.25" y="7.375" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="12R1" library="dubec" package="0402" value="RES3K_16" x="37.25" y="7.375" rot="R180">
+<attribute name="TEMP" value="±100ppm/°C" x="37.25" y="7.375" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="TOLERANCE" value="±1%" x="37.25" y="7.375" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="EURO" value="2.10/50" x="37.25" y="7.375" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MFG_PART_#" value="CRCW04023K00FKED" x="37.25" y="7.375" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="DIGIKEY_PART_#" value="541-3.00KLCT-ND" x="37.25" y="7.375" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" x="37.25" y="7.375" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 </elements>
 <signals>
@@ -2009,7 +2009,7 @@ Covered vias can be set in Masks (Limit).
 <contactref element="12DTVS" pad="C"/>
 <contactref element="P_12V_OUT" pad="2"/>
 <via x="25.25" y="3.625" extent="1-16" drill="0.5"/>
-<via x="28.875" y="2.125" extent="1-16" drill="0.3"/>
+<via x="29.25" y="2.125" extent="1-16" drill="0.3"/>
 <contactref element="12COUT1" pad="A"/>
 <contactref element="12COUT2" pad="1"/>
 <via x="32.8125" y="2.25" extent="1-16" drill="0.5"/>

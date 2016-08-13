@@ -4474,6 +4474,22 @@
 </technology>
 </technologies>
 </device>
+<device name="1.33K_16P" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="YAG1376CT-ND" constant="no"/>
+<attribute name="EURO" value="11.49/100" constant="no"/>
+<attribute name="MANUFACTURER" value="Yageo" constant="no"/>
+<attribute name="MFG_PART_#" value="RT0402BRD071K33L" constant="no"/>
+<attribute name="TEMP" value="±25ppm/°C" constant="no"/>
+<attribute name="TOLERANCE" value="±0.1%" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="I" uservalue="yes">
@@ -5175,7 +5191,7 @@
 <gate name="G$1" symbol="SCH_DIODE" x="0" y="0"/>
 </gates>
 <devices>
-<device name="30V_0.2A" package="0402+">
+<device name="30V_0.2A_0402" package="0402+">
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="C" pad="C"/>
@@ -5366,6 +5382,21 @@
 <attribute name="MANUFACTURER" value="ON Semiconductor" constant="no"/>
 <attribute name="MFG_PART_#" value="NSR0520V2T1G" constant="no"/>
 <attribute name="V_FWD" value="480mV @ 500mA" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="30V_0.2A" package="SOD523+">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="RB531SM-30T2RCT-ND" constant="no"/>
+<attribute name="EURO" value="8.89/100" constant="no"/>
+<attribute name="MANUFACTURER" value="Rohm Semiconductor" constant="no"/>
+<attribute name="MFG_PART_#" value="RB531SM-30T2R" constant="no"/>
+<attribute name="V_FWD" value="350mV @ 10mA" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -5699,7 +5730,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="5C1" library="dubec" deviceset="CAP" device="1UF_50V"/>
 <part name="5C2" library="dubec" deviceset="CAP" device="1UF_50V"/>
 <part name="5CBST" library="dubec" deviceset="CAP" device="0.1UF_100V"/>
-<part name="5RTOP" library="dubec" deviceset="RES" device="1.3K_16P" value="RES1.3K_16P"/>
+<part name="5RTOP" library="dubec" deviceset="RES" device="1.33K_16P" value="RES1.33K_16P"/>
 <part name="5RBOT" library="dubec" deviceset="RES" device="300_16P" value="RES300_16P"/>
 <part name="5CTR" library="dubec" deviceset="CAP" device="1.5NF_50V"/>
 <part name="5CVCC" library="dubec" deviceset="CAP" device="4.7UF_10V"/>
@@ -5758,11 +5789,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="DTVS" library="dubec" deviceset="2D_ZENER" device="36V"/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
 <part name="CDIV" library="dubec" deviceset="CAP" device="0.1UF_100V"/>
-<part name="12D1" library="dubec" deviceset="D_SCH" device="20V_0.5A"/>
+<part name="12D1" library="dubec" deviceset="D_SCH" device="30V_0.2A" value="D_SCH30V_0.2A"/>
 <part name="12Q1" library="dubec" deviceset="NMOS" device="20V_4.2A" value="NMOS20V_4.2A"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="12D2" library="dubec" deviceset="D_ZENER" device="10V"/>
-<part name="12R1" library="dubec" deviceset="RES" device="300_16P" value="RES300_16P"/>
+<part name="12R1" library="dubec" deviceset="RES" device="3K_16" value="RES3K_16"/>
 <part name="U$6" library="SparkFun-Aesthetics" deviceset="AGND" device="" value="12AGND"/>
 </parts>
 <sheets>
