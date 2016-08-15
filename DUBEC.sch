@@ -1204,6 +1204,21 @@
 <rectangle x1="-1" y1="-1.3" x2="-0.4" y2="-0.5" layer="29"/>
 <rectangle x1="0.4" y1="-1.3" x2="1" y2="-0.5" layer="29"/>
 </package>
+<package name="6-POWERUFDFN">
+<wire x1="0.9" y1="0.8" x2="0.9" y2="-0.8" width="0.13" layer="21"/>
+<text x="-0.7" y="0" size="0.25" layer="27">&gt;VALUE</text>
+<text x="-0.7" y="0.6" size="0.25" layer="25" align="top-left">&gt;NAME</text>
+<smd name="G" x="0.5" y="-0.75" dx="0.3" dy="0.4" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="D" x="-0.3" y="0" dx="0.7" dy="1.9" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="S" x="0.5" y="0.35" dx="0.3" dy="1.2" layer="1" stop="no" thermals="no" cream="no"/>
+<wire x1="-0.9" y1="0.8" x2="-0.9" y2="-0.8" width="0.13" layer="21"/>
+<rectangle x1="-0.65" y1="-0.95" x2="0.05" y2="0.95" layer="29"/>
+<rectangle x1="0.35" y1="-0.95" x2="0.65" y2="-0.55" layer="29"/>
+<rectangle x1="0.35" y1="-0.25" x2="0.65" y2="0.95" layer="29"/>
+<rectangle x1="0.4" y1="-0.2" x2="0.6" y2="0.9" layer="31"/>
+<rectangle x1="0.4" y1="-0.9" x2="0.6" y2="-0.6" layer="31"/>
+<rectangle x1="-0.575" y1="-0.875" x2="-0.2" y2="0.875" layer="31"/>
+</package>
 </packages>
 <symbols>
 <symbol name="Z-DIODE">
@@ -5499,6 +5514,21 @@
 </technology>
 </technologies>
 </device>
+<device name="20V_9A" package="6-POWERUFDFN">
+<connects>
+<connect gate="G$1" pin="D" pad="D"/>
+<connect gate="G$1" pin="G" pad="G"/>
+<connect gate="G$1" pin="S" pad="S"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="FDME820NZTCT-ND" constant="no"/>
+<attribute name="EURO" value="40.25/100" constant="no"/>
+<attribute name="MANUFACTURER" value="Fairchild Semiconductor" constant="no"/>
+<attribute name="MFG_PART_#" value="FDME820NZT" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 </devicesets>
@@ -5790,7 +5820,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
 <part name="CDIV" library="dubec" deviceset="CAP" device="0.1UF_100V"/>
 <part name="12D1" library="dubec" deviceset="D_SCH" device="30V_0.2A" value="D_SCH30V_0.2A"/>
-<part name="12Q1" library="dubec" deviceset="NMOS" device="20V_4.2A" value="NMOS20V_4.2A"/>
+<part name="12Q1" library="dubec" deviceset="NMOS" device="20V_9A" value="NMOS20V_9A"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="12D2" library="dubec" deviceset="D_ZENER" device="10V"/>
 <part name="12R1" library="dubec" deviceset="RES" device="3K_16" value="RES3K_16"/>
