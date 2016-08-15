@@ -1664,12 +1664,13 @@ Covered vias can be set in Masks (Limit).
 <attribute name="MANUFACTURER" value="Fairchild Semiconductor" x="34.375" y="6.625" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MFG_PART_#" value="FDME820NZT" x="34.375" y="6.625" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="12D2" library="dubec" package="SOD523+" value="D_ZENER10V" x="31.75" y="6" rot="R180">
-<attribute name="DIGIKEY_PART_#" value="DZ2S100M0LCT-ND" x="31.75" y="6" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="TOLERANCE" value="±5%" x="31.75" y="6" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="EURO" value="2.50/100" x="31.75" y="6" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MANUFACTURER" value="Panasonic Electronic Components" x="31.75" y="6" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MFG_PART_#" value="DZ2S100M0L" x="31.75" y="6" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="12D2" library="dubec" package="SOD523+" value="D_ZENER9.1V" x="31.75" y="6" rot="R180">
+<attribute name="DIGIKEY_PART_#" value="BZT585B9V1T-7DICT-ND" x="31.75" y="6" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="TOLERANCE" value="±2%" x="31.75" y="6" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="EURO" value="8.61/100" x="31.75" y="6" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MANUFACTURER" value="Diodes Incorporated" x="31.75" y="6" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MFG_PART_#" value="BZT585B9V1T-7" x="31.75" y="6" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="TEMP" value="-65°C ~ 150°C" x="31.75" y="6" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="12R1" library="dubec" package="0402" value="RES3K_16" x="36.5" y="7.375" rot="R180">
 <attribute name="TEMP" value="±100ppm/°C" x="36.5" y="7.375" size="1.778" layer="27" rot="R180" display="off"/>
@@ -1988,7 +1989,8 @@ Covered vias can be set in Masks (Limit).
 <via x="32.8125" y="4" extent="1-16" drill="0.5"/>
 <via x="33.4375" y="14.375" extent="1-16" drill="0.3"/>
 <via x="34.625" y="3.625" extent="1-16" drill="0.3"/>
-<via x="31.625" y="3.5625" extent="1-16" drill="0.3"/>
+<via x="31.625" y="3.625" extent="1-16" drill="0.3"/>
+<via x="33.375" y="5.625" extent="1-16" drill="0.3"/>
 </signal>
 <signal name="12V">
 <contactref element="12U1" pad="3"/>

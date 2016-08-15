@@ -1970,6 +1970,22 @@
 </technology>
 </technologies>
 </device>
+<device name="9.1V" package="SOD523+">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="BZT585B9V1T-7DICT-ND" constant="no"/>
+<attribute name="EURO" value="8.61/100" constant="no"/>
+<attribute name="MANUFACTURER" value="Diodes Incorporated" constant="no"/>
+<attribute name="MFG_PART_#" value="BZT585B9V1T-7" constant="no"/>
+<attribute name="TEMP" value="-65°C ~ 150°C" constant="no"/>
+<attribute name="TOLERANCE" value="±2%" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="CAP" uservalue="yes">
@@ -5822,7 +5838,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="12D1" library="dubec" deviceset="D_SCH" device="30V_0.2A" value="D_SCH30V_0.2A"/>
 <part name="12Q1" library="dubec" deviceset="NMOS" device="20V_9A" value="NMOS20V_9A"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
-<part name="12D2" library="dubec" deviceset="D_ZENER" device="10V"/>
+<part name="12D2" library="dubec" deviceset="D_ZENER" device="9.1V" value="D_ZENER9.1V"/>
 <part name="12R1" library="dubec" deviceset="RES" device="3K_16" value="RES3K_16"/>
 <part name="U$6" library="SparkFun-Aesthetics" deviceset="AGND" device="" value="12AGND"/>
 </parts>
