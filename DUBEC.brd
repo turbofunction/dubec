@@ -1658,11 +1658,11 @@ Covered vias can be set in Masks (Limit).
 <attribute name="MANUFACTURER" value="Rohm Semiconductor" x="28.3125" y="13" size="1.778" layer="27" display="off"/>
 <attribute name="MFG_PART_#" value="RB531SM-30T2R" x="28.3125" y="13" size="1.778" layer="27" display="off"/>
 </element>
-<element name="12Q1" library="dubec" package="6-POWERUFDFN" value="NMOS20V_9A" x="34.375" y="6.625" rot="R180">
-<attribute name="DIGIKEY_PART_#" value="FDME820NZTCT-ND" x="34.375" y="6.625" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="EURO" value="40.25/100" x="34.375" y="6.625" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MANUFACTURER" value="Fairchild Semiconductor" x="34.375" y="6.625" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MFG_PART_#" value="FDME820NZT" x="34.375" y="6.625" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="12Q1" library="dubec" package="6-POWERUFDFN" value="NMOS20V_9A" x="35.25" y="6.5" rot="R180">
+<attribute name="DIGIKEY_PART_#" value="FDME820NZTCT-ND" x="35.25" y="6.5" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="EURO" value="40.25/100" x="35.25" y="6.5" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MANUFACTURER" value="Fairchild Semiconductor" x="35.25" y="6.5" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MFG_PART_#" value="FDME820NZT" x="35.25" y="6.5" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="12D2" library="dubec" package="SOD523+" value="D_ZENER9.1V" x="31.75" y="6" rot="R180">
 <attribute name="DIGIKEY_PART_#" value="BZT585B9V1T-7DICT-ND" x="31.75" y="6" size="1.778" layer="27" rot="R180" display="off"/>
@@ -1672,13 +1672,13 @@ Covered vias can be set in Masks (Limit).
 <attribute name="MFG_PART_#" value="BZT585B9V1T-7" x="31.75" y="6" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="TEMP" value="-65°C ~ 150°C" x="31.75" y="6" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="12R1" library="dubec" package="0402" value="RES3K_16" x="36.5" y="7.375" rot="R180">
-<attribute name="TEMP" value="±100ppm/°C" x="36.5" y="7.375" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="TOLERANCE" value="±1%" x="36.5" y="7.375" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="EURO" value="2.10/50" x="36.5" y="7.375" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MFG_PART_#" value="CRCW04023K00FKED" x="36.5" y="7.375" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="DIGIKEY_PART_#" value="541-3.00KLCT-ND" x="36.5" y="7.375" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MANUFACTURER" value="Vishay Dale" x="36.5" y="7.375" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="12R1" library="dubec" package="0402" value="RES3K_16" x="33.5625" y="7" rot="R270">
+<attribute name="TEMP" value="±100ppm/°C" x="33.5625" y="7" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="TOLERANCE" value="±1%" x="33.5625" y="7" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="EURO" value="2.10/50" x="33.5625" y="7" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MFG_PART_#" value="CRCW04023K00FKED" x="33.5625" y="7" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="DIGIKEY_PART_#" value="541-3.00KLCT-ND" x="33.5625" y="7" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MANUFACTURER" value="Vishay Dale" x="33.5625" y="7" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 </elements>
 <signals>
@@ -1990,7 +1990,7 @@ Covered vias can be set in Masks (Limit).
 <via x="33.4375" y="14.375" extent="1-16" drill="0.3"/>
 <via x="34.625" y="3.625" extent="1-16" drill="0.3"/>
 <via x="31.625" y="3.625" extent="1-16" drill="0.3"/>
-<via x="33.375" y="5.625" extent="1-16" drill="0.3"/>
+<via x="34.1875" y="5.6875" extent="1-16" drill="0.3"/>
 </signal>
 <signal name="12V">
 <contactref element="12U1" pad="3"/>
@@ -2256,10 +2256,11 @@ Covered vias can be set in Masks (Limit).
 <signal name="N$7">
 <contactref element="12D" pad="A"/>
 <contactref element="12RLED" pad="1"/>
-<wire x1="32.5" y1="7.25" x2="32.5" y2="7.375" width="0.3" layer="1"/>
-<wire x1="32.5" y1="7.375" x2="34.5" y2="9.375" width="0.3" layer="1"/>
-<wire x1="34.5" y1="9.375" x2="34.5" y2="9.7" width="0.3" layer="1"/>
-<wire x1="34.5" y1="9.7" x2="34.75" y2="9.95" width="0.3" layer="1"/>
+<wire x1="32.5" y1="7.25" x2="32.6875" y2="7.4375" width="0.3" layer="1"/>
+<wire x1="32.6875" y1="7.4375" x2="32.6875" y2="7.75" width="0.3" layer="1"/>
+<wire x1="32.6875" y1="7.75" x2="34.375" y2="9.4375" width="0.3" layer="1"/>
+<wire x1="34.375" y1="9.4375" x2="34.375" y2="9.575" width="0.3" layer="1"/>
+<wire x1="34.375" y1="9.575" x2="34.75" y2="9.95" width="0.3" layer="1"/>
 </signal>
 <signal name="12V_RUN">
 <contactref element="12U1" pad="1"/>
@@ -2785,24 +2786,21 @@ Covered vias can be set in Masks (Limit).
 <signal name="12V_GND">
 <contactref element="P_12V_OUT" pad="1"/>
 <contactref element="12Q1" pad="D"/>
-<wire x1="38.25" y1="5.25" x2="37.25" y2="6.0625" width="0.7" layer="1"/>
-<wire x1="37.25" y1="6.0625" x2="34.9375" y2="6.0625" width="0.7" layer="1"/>
-<wire x1="34.9375" y1="6.0625" x2="34.675" y2="6.325" width="0.7" layer="1"/>
-<wire x1="34.675" y1="6.325" x2="34.675" y2="6.625" width="0.7" layer="1"/>
+<wire x1="38.25" y1="5.25" x2="37.5625" y2="5.9375" width="0.7" layer="1"/>
+<wire x1="37.5625" y1="5.9375" x2="35.8125" y2="5.9375" width="0.7" layer="1"/>
+<wire x1="35.8125" y1="5.9375" x2="35.55" y2="6.2" width="0.7" layer="1"/>
+<wire x1="35.55" y1="6.2" x2="35.55" y2="6.5" width="0.7" layer="1"/>
 </signal>
 <signal name="N$13">
 <contactref element="12D2" pad="A"/>
 <contactref element="12Q1" pad="G"/>
 <contactref element="12R1" pad="2"/>
-<wire x1="32.45" y1="6" x2="32.625" y2="6" width="0.3" layer="1"/>
-<wire x1="32.625" y1="6" x2="33.25" y2="6.625" width="0.3" layer="1"/>
-<wire x1="33.25" y1="6.625" x2="33.25" y2="7.125" width="0.3" layer="1"/>
-<wire x1="33.25" y1="7.125" x2="33.5" y2="7.375" width="0.3" layer="1"/>
-<wire x1="33.5" y1="7.375" x2="33.875" y2="7.375" width="0.3" layer="1"/>
-<wire x1="33.875" y1="7.375" x2="33.875" y2="7.75" width="0.3" layer="1"/>
-<wire x1="33.875" y1="7.75" x2="34.125" y2="8" width="0.3" layer="1"/>
-<wire x1="34.125" y1="8" x2="35.375" y2="8" width="0.3" layer="1"/>
-<wire x1="35.375" y1="8" x2="36" y2="7.375" width="0.3" layer="1"/>
+<wire x1="32.45" y1="6" x2="32.6375" y2="6.1875" width="0.3" layer="1"/>
+<wire x1="32.6375" y1="6.1875" x2="33.4375" y2="6.1875" width="0.3" layer="1"/>
+<wire x1="33.4375" y1="6.1875" x2="33.5625" y2="6.3125" width="0.3" layer="1"/>
+<wire x1="33.5625" y1="6.3125" x2="34.5" y2="7.25" width="0.3" layer="1"/>
+<wire x1="34.5" y1="7.25" x2="34.75" y2="7.25" width="0.3" layer="1"/>
+<wire x1="33.5625" y1="6.5" x2="33.5625" y2="6.3125" width="0.3" layer="1"/>
 </signal>
 <signal name="12AGND">
 <contactref element="12U1" pad="5"/>
@@ -2880,37 +2878,37 @@ Covered vias can be set in Masks (Limit).
 <approved hash="6,1,9a045d51a999c11b"/>
 <approved hash="6,1,55136dd6e44ff6f3"/>
 <approved hash="6,1,f535ebd06c3853dc"/>
-<approved hash="6,1,5d916380e0bbf945"/>
 <approved hash="6,1,fd0fe74661aa5384"/>
+<approved hash="6,1,5d916380e0bbf945"/>
 <approved hash="6,1,3bf0b936bc0c25dd"/>
 <approved hash="6,1,7d1dd16233ba89f4"/>
-<approved hash="5,1,54a3d27821ca846a"/>
 <approved hash="5,1,6be926781b95d5df"/>
-<approved hash="5,1,ddc619a022201274"/>
+<approved hash="5,1,54a3d27821ca846a"/>
 <approved hash="5,1,ef1366d0898705f4"/>
-<approved hash="5,1,54a3d387038fe46a"/>
+<approved hash="5,1,ddc619a022201274"/>
 <approved hash="5,1,27d089a9f88fe469"/>
+<approved hash="5,1,54a3d387038fe46a"/>
 <approved hash="5,1,69e9e9b8039d84dc"/>
 <approved hash="5,1,fdb819a02260322e"/>
 <approved hash="5,1,cebd843a8c2019a6"/>
-<approved hash="5,1,b45b0c1ae13f5e6e"/>
-<approved hash="5,1,a83f4c201c600c29"/>
-<approved hash="5,1,97b7442014603ba1"/>
+<approved hash="5,1,377386006c57d894"/>
 <approved hash="5,1,88414c201c202c73"/>
 <approved hash="5,1,9cc94420142030fb"/>
-<approved hash="5,1,377386006c57d894"/>
+<approved hash="5,1,a83f4c201c600c29"/>
+<approved hash="5,1,b45b0c1ae13f5e6e"/>
+<approved hash="5,1,97b7442014603ba1"/>
 <approved hash="5,1,fcb7840e1c7f4bc6"/>
+<approved hash="5,1,948270a01c600c14"/>
+<approved hash="5,1,30d380826aa7dde6"/>
 <approved hash="5,1,3ac170572da896b1"/>
 <approved hash="5,1,b4fc70a01c202c4e"/>
 <approved hash="5,1,b6290feae0bd5cce"/>
-<approved hash="5,1,30d380826aa7dde6"/>
-<approved hash="5,1,948270a01c600c14"/>
 <approved hash="5,1,a504049ec1db9efc"/>
 <approved hash="5,1,f170708c81098139"/>
-<approved hash="5,1,7049c131945a7848"/>
-<approved hash="5,1,90aba0b4b875e957"/>
 <approved hash="5,1,9d5e66a6c43d0113"/>
 <approved hash="5,1,31b8732e42ab419a"/>
+<approved hash="5,1,7049c131945a7848"/>
+<approved hash="5,1,90aba0b4b875e957"/>
 <approved hash="5,1,1ddef9bf09329662"/>
 <approved hash="5,1,a032d463972090a0"/>
 <approved hash="5,1,11d2f39d0fb49ac2"/>
@@ -2921,42 +2919,42 @@ Covered vias can be set in Masks (Limit).
 <approved hash="19,1,4b1b243025814b79"/>
 <approved hash="5,1,f689d3a3ad00fbe7"/>
 <approved hash="5,1,8b47ddd0f0048a02"/>
-<approved hash="5,1,9a87e3aca3efa9ff"/>
 <approved hash="5,1,97a0a1019100d49e"/>
+<approved hash="5,1,9a87e3aca3efa9ff"/>
 <approved hash="5,1,b0759d3208455a2c"/>
-<approved hash="5,1,54d95c6fcf4f7f08"/>
 <approved hash="5,1,249ef4c3903fbb2e"/>
+<approved hash="5,1,54d95c6fcf4f7f08"/>
 <approved hash="5,1,76bc787aade71dac"/>
-<approved hash="5,1,e70585dcc6cb419a"/>
 <approved hash="5,1,a1a7fd795b4fa462"/>
+<approved hash="5,1,e70585dcc6cb419a"/>
 <approved hash="5,1,400898dfcf158d92"/>
 <approved hash="5,1,6e0f41a440ac8eb3"/>
-<approved hash="5,1,6dfc2cb54fe4b033"/>
-<approved hash="5,1,8da7bd7bd24d2f62"/>
-<approved hash="5,1,026918abcaf4387b"/>
-<approved hash="5,1,14d97c6d244df408"/>
 <approved hash="5,1,d79c07c3a23f892c"/>
-<approved hash="5,1,f4c84813b1ab9120"/>
+<approved hash="5,1,14d97c6d244df408"/>
+<approved hash="5,1,8da7bd7bd24d2f62"/>
+<approved hash="5,1,6dfc2cb54fe4b033"/>
+<approved hash="5,1,026918abcaf4387b"/>
 <approved hash="5,1,95a4a064ff8101ce"/>
+<approved hash="5,1,f4c84813b1ab9120"/>
 <approved hash="5,1,ae533512e31f3524"/>
 <approved hash="5,1,d955a612e51b5522"/>
 <approved hash="5,1,48a8171267e77520"/>
 <approved hash="19,1,302a0fb55262aefb"/>
 <approved hash="5,1,cacc7523c497da03"/>
-<approved hash="5,1,c83536608573c593"/>
-<approved hash="5,1,b1a47d80afb65862"/>
-<approved hash="5,1,500b10263bec6992"/>
 <approved hash="5,1,ae323a51e49fb336"/>
-<approved hash="5,1,986748c3a03f8bd7"/>
 <approved hash="5,1,7ebff883591ef9ac"/>
+<approved hash="5,1,986748c3a03f8bd7"/>
+<approved hash="5,1,500b10263bec6992"/>
+<approved hash="5,1,b1a47d80afb65862"/>
+<approved hash="5,1,c83536608573c593"/>
 <approved hash="5,1,a5e92d1d437288fb"/>
+<approved hash="5,1,95a4989a237fd5ce"/>
+<approved hash="5,1,f4c878ed15554520"/>
 <approved hash="5,1,c42e327d0f8b7817"/>
 <approved hash="5,1,1b62cbc3a23f89d2"/>
 <approved hash="5,1,14d9749380b32008"/>
-<approved hash="5,1,95a4989a237fd5ce"/>
-<approved hash="5,1,f4c878ed15554520"/>
-<approved hash="6,1,b30e0c085f2d0b0b"/>
 <approved hash="6,1,757f20140b9fb2c6"/>
+<approved hash="6,1,b30e0c085f2d0b0b"/>
 <approved hash="6,1,84759572d0a1c8ea"/>
 <approved hash="6,1,d02bc333f20aeaa6"/>
 <approved hash="5,16,007db5cdcbc17c70"/>
