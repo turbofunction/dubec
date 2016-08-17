@@ -2019,11 +2019,11 @@ Covered vias can be set in Masks (Limit).
 <wire x1="25.25" y1="3.625" x2="26.625" y2="2.25" width="0.9" layer="15"/>
 <wire x1="26.625" y1="2.25" x2="38.25" y2="2.25" width="0.9" layer="15"/>
 <contactref element="12D2" pad="C"/>
-<wire x1="31.05" y1="6" x2="31.05" y2="7.2" width="0.6" layer="1"/>
 <wire x1="31.05" y1="6" x2="30.5" y2="5.45" width="0.3" layer="1"/>
 <wire x1="30.5" y1="5.45" x2="30.5" y2="2.5" width="0.3" layer="1"/>
 <contactref element="12RLED" pad="2"/>
-<wire x1="31.05" y1="7.2" x2="31" y2="7.25" width="0" layer="19" extent="1-1"/>
+<wire x1="31.05" y1="6" x2="31.05" y2="7.2" width="0.6" layer="1"/>
+<wire x1="31.05" y1="7.2" x2="31" y2="7.25" width="0.6" layer="1"/>
 </signal>
 <signal name="5V">
 <polygon width="0.2032" layer="1" thermals="no" rank="4">
