@@ -938,12 +938,12 @@
 <rectangle x1="-1.7" y1="-1.15" x2="-0.9" y2="-0.8" layer="29"/>
 <rectangle x1="-1.675" y1="0.825" x2="-0.925" y2="1.125" layer="31"/>
 <rectangle x1="-1.675" y1="-0.475" x2="-0.925" y2="-0.175" layer="31"/>
-<rectangle x1="0.925" y1="-0.475" x2="1.675" y2="-0.175" layer="31"/>
-<rectangle x1="0.925" y1="0.825" x2="1.675" y2="1.125" layer="31"/>
 <rectangle x1="-1.675" y1="0.175" x2="-0.925" y2="0.475" layer="31"/>
-<rectangle x1="0.925" y1="0.175" x2="1.675" y2="0.475" layer="31"/>
-<rectangle x1="0.925" y1="-1.125" x2="1.675" y2="-0.825" layer="31"/>
 <rectangle x1="-1.675" y1="-1.125" x2="-0.925" y2="-0.825" layer="31"/>
+<rectangle x1="0.95" y1="-0.45" x2="1.65" y2="-0.2" layer="31"/>
+<rectangle x1="0.95" y1="0.85" x2="1.65" y2="1.1" layer="31"/>
+<rectangle x1="0.95" y1="0.2" x2="1.65" y2="0.45" layer="31"/>
+<rectangle x1="0.95" y1="-1.1" x2="1.65" y2="-0.85" layer="31"/>
 </package>
 <package name="SOT23-3">
 <smd name="3" x="0" y="-1" dx="0.8" dy="0.9" layer="1" stop="no"/>
