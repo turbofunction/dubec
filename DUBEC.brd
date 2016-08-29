@@ -2083,7 +2083,6 @@ Covered vias can be set in Masks (Limit).
 <wire x1="16.9375" y1="12.75" x2="17.875" y2="12.75" width="0.9" layer="16"/>
 <wire x1="27.125" y1="16.4375" x2="31.25" y2="16.4375" width="0.3" layer="16"/>
 <wire x1="19" y1="6.375" x2="19" y2="1.375" width="0.3" layer="16"/>
-<contactref element="P_12V_OUT" pad="1"/>
 <contactref element="12U2" pad="6"/>
 <contactref element="12U2" pad="4"/>
 <contactref element="12R1" pad="1"/>
@@ -2092,6 +2091,7 @@ Covered vias can be set in Masks (Limit).
 <contactref element="12DTVS" pad="A"/>
 <via x="28.4375" y="1" extent="1-16" drill="0.3"/>
 <via x="22.6875" y="1.3125" extent="1-16" drill="0.5"/>
+<contactref element="P_12V_OUT" pad="1"/>
 </signal>
 <signal name="12V">
 <contactref element="12U1" pad="3"/>
