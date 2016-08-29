@@ -5746,7 +5746,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="U$6" library="SparkFun-Aesthetics" deviceset="AGND" device="" value="12AGND"/>
 <part name="C2" library="dubec" deviceset="CAP" device="0.1UF_100V"/>
 <part name="12U2" library="dubec" deviceset="NCP45524" device=""/>
-<part name="12RBLEED" library="dubec" deviceset="RES" device="10K_16" value="RES10K_16"/>
+<part name="12RBLEED" library="dubec" deviceset="RES" device="3K_16" value="RES3K_16"/>
 </parts>
 <sheets>
 <sheet>
