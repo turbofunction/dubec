@@ -296,15 +296,12 @@
 <smd name="C" x="0.8" y="0" dx="0.8" dy="1" layer="1" stop="no" thermals="no" cream="no"/>
 <text x="-1.2" y="0.5" size="0.4" layer="25" align="top-left">&gt;NAME</text>
 <text x="-1.2" y="-0.5" size="0.4" layer="27">&gt;VALUE</text>
-<text x="1.41" y="-0.85" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
+<text x="1.2" y="-0.6" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
 <wire x1="-0.85" y1="0.475" x2="0.85" y2="0.475" width="0.05" layer="51"/>
 <wire x1="0.85" y1="0.475" x2="0.85" y2="-0.475" width="0.05" layer="51"/>
 <wire x1="0.85" y1="-0.475" x2="-0.85" y2="-0.475" width="0.05" layer="51"/>
 <wire x1="-0.85" y1="-0.475" x2="-0.85" y2="0.475" width="0.05" layer="51"/>
-<wire x1="-1.35" y1="0.65" x2="1.35" y2="0.65" width="0.13" layer="49"/>
-<wire x1="1.35" y1="0.65" x2="1.35" y2="-0.65" width="0.13" layer="49"/>
-<wire x1="1.35" y1="-0.65" x2="-1.35" y2="-0.65" width="0.13" layer="49"/>
-<wire x1="-1.35" y1="-0.65" x2="-1.35" y2="0.65" width="0.13" layer="49"/>
+<wire x1="0.2" y1="0.3" x2="0.2" y2="-0.3" width="0.13" layer="21"/>
 <rectangle x1="-1.2" y1="-0.5" x2="-0.4" y2="0.5" layer="29"/>
 <rectangle x1="0.4" y1="-0.5" x2="1.2" y2="0.5" layer="29"/>
 <rectangle x1="-1.15" y1="-0.45" x2="-0.45" y2="0.45" layer="31"/>
@@ -606,10 +603,9 @@
 <package name="SOD523+">
 <smd name="A" x="-0.7" y="0" dx="0.6" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
 <smd name="C" x="0.7" y="0" dx="0.6" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
-<wire x1="-1.2" y1="0.6" x2="1.2" y2="0.6" width="0.13" layer="21"/>
-<wire x1="1.2" y1="0.6" x2="1.2" y2="-0.6" width="0.13" layer="21"/>
-<wire x1="1.2" y1="-0.6" x2="-1.2" y2="-0.6" width="0.13" layer="21"/>
-<wire x1="-1.2" y1="-0.6" x2="-1.2" y2="0.6" width="0.13" layer="21"/>
+<wire x1="-0.8" y1="0.6" x2="1.25" y2="0.6" width="0.13" layer="21"/>
+<wire x1="1.25" y1="0.6" x2="1.25" y2="-0.6" width="0.13" layer="21"/>
+<wire x1="1.25" y1="-0.6" x2="-0.8" y2="-0.6" width="0.13" layer="21"/>
 <text x="-1" y="0" size="0.3" layer="27" align="top-left">&gt;VALUE</text>
 <text x="-1" y="0.4" size="0.3" layer="25" align="top-left">&gt;NAME</text>
 <text x="1.255" y="-0.78" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
@@ -684,10 +680,9 @@
 <package name="SOD323+">
 <smd name="C" x="1.2" y="0" dx="0.9" dy="0.8" layer="1" stop="no" thermals="no" cream="no"/>
 <smd name="A" x="-1.2" y="0" dx="0.9" dy="0.8" layer="1" stop="no" thermals="no" cream="no"/>
-<wire x1="-1.9" y1="0.65" x2="-1.9" y2="-0.65" width="0.13" layer="21"/>
-<wire x1="-1.9" y1="-0.65" x2="1.9" y2="-0.65" width="0.13" layer="21"/>
+<wire x1="-1.3" y1="-0.65" x2="1.9" y2="-0.65" width="0.13" layer="21"/>
 <wire x1="1.9" y1="-0.65" x2="1.9" y2="0.65" width="0.13" layer="21"/>
-<wire x1="1.9" y1="0.65" x2="-1.9" y2="0.65" width="0.13" layer="21"/>
+<wire x1="1.9" y1="0.65" x2="-1.3" y2="0.65" width="0.13" layer="21"/>
 <text x="-1.7" y="0.4" size="0.3" layer="25" align="top-left">&gt;NAME</text>
 <text x="-1.7" y="-0.4" size="0.3" layer="27">&gt;VALUE</text>
 <text x="1.9" y="-0.9" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
@@ -695,9 +690,7 @@
 <rectangle x1="0.75" y1="-0.4" x2="1.65" y2="0.4" layer="29"/>
 <rectangle x1="-1.65" y1="-0.4" x2="-0.75" y2="0.4" layer="31"/>
 <rectangle x1="0.75" y1="-0.4" x2="1.65" y2="0.4" layer="31"/>
-<wire x1="-0.9" y1="0.15" x2="-1.3" y2="0.15" width="0.05" layer="51"/>
 <wire x1="-1.3" y1="0.15" x2="-1.3" y2="-0.15" width="0.05" layer="51"/>
-<wire x1="-1.3" y1="-0.15" x2="-0.9" y2="-0.15" width="0.05" layer="51"/>
 <wire x1="-0.9" y1="-0.15" x2="-0.9" y2="-0.65" width="0.05" layer="51"/>
 <wire x1="-0.9" y1="0.65" x2="-0.9" y2="0.15" width="0.05" layer="51"/>
 <wire x1="-0.9" y1="0.65" x2="0.9" y2="0.65" width="0.05" layer="51"/>
@@ -737,7 +730,7 @@
 <rectangle x1="-0.625" y1="-0.9" x2="-0.375" y2="-0.5" layer="31"/>
 </package>
 <package name="1X01_NO_SILK">
-<pad name="1" x="0" y="0" drill="1.4" diameter="2.4" rot="R90"/>
+<pad name="1" x="0" y="0" drill="1.3" diameter="2.4" rot="R90"/>
 <circle x="0" y="0" radius="0.508" width="0" layer="29"/>
 <circle x="0" y="0" radius="0.9398" width="0" layer="30"/>
 </package>
@@ -797,6 +790,7 @@
 <rectangle x1="0.6" y1="-1.35" x2="1.8" y2="1.35" layer="29"/>
 <rectangle x1="-1.8" y1="-1.35" x2="-0.6" y2="1.35" layer="31"/>
 <rectangle x1="0.6" y1="-1.35" x2="1.8" y2="1.35" layer="31"/>
+<wire x1="0.4" y1="0.5" x2="0.4" y2="-0.5" width="0.127" layer="21"/>
 </package>
 <package name="0805+">
 <smd name="A" x="-1" y="0" dx="1" dy="1.5" layer="1"/>
@@ -5746,7 +5740,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="U$6" library="SparkFun-Aesthetics" deviceset="AGND" device="" value="12AGND"/>
 <part name="C2" library="dubec" deviceset="CAP" device="0.1UF_100V"/>
 <part name="12U2" library="dubec" deviceset="NCP45524" device=""/>
-<part name="12RBLEED" library="dubec" deviceset="RES" device="3K_16" value="RES3K_16"/>
 </parts>
 <sheets>
 <sheet>
@@ -5795,9 +5788,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="12CFB" gate="G$1" x="43.18" y="-63.5" rot="R180"/>
 <instance part="12RTOP" gate="G$1" x="35.56" y="-58.42" rot="R90"/>
 <instance part="5D" gate="G$1" x="81.28" y="27.94" rot="R270"/>
-<instance part="12D" gate="G$1" x="116.84" y="-76.2" rot="R180"/>
+<instance part="12D" gate="G$1" x="116.84" y="-73.66" rot="R180"/>
 <instance part="RDAUX" gate="G$1" x="-66.04" y="30.48" rot="MR180"/>
-<instance part="12RLED" gate="G$1" x="124.46" y="-76.2"/>
+<instance part="12RLED" gate="G$1" x="124.46" y="-71.12"/>
 <instance part="5RLED" gate="G$1" x="81.28" y="38.1" rot="R90"/>
 <instance part="12DTVS" gate="G$1" x="124.46" y="-81.28"/>
 <instance part="RDIVTOP" gate="G$1" x="-17.78" y="17.78" rot="R90"/>
@@ -5886,7 +5879,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="U$6" gate="G$1" x="58.42" y="-63.5"/>
 <instance part="C2" gate="G$1" x="-50.8" y="-60.96" rot="R90"/>
 <instance part="12U2" gate="G$1" x="124.46" y="-50.8" rot="R270"/>
-<instance part="12RBLEED" gate="G$1" x="124.46" y="-71.12"/>
 </instances>
 <busses>
 </busses>
@@ -6252,11 +6244,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="12R1" gate="G$1" pin="1"/>
 <wire x1="111.76" y1="-30.48" x2="114.3" y2="-30.48" width="0.1524" layer="91"/>
 <pinref part="12D" gate="G$1" pin="C"/>
-<wire x1="111.76" y1="-66.04" x2="111.76" y2="-76.2" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="-66.04" x2="111.76" y2="-73.66" width="0.1524" layer="91"/>
 <junction x="111.76" y="-66.04"/>
 <pinref part="12DTVS" gate="G$1" pin="A"/>
-<wire x1="111.76" y1="-76.2" x2="111.76" y2="-83.82" width="0.1524" layer="91"/>
-<junction x="111.76" y="-76.2"/>
+<wire x1="111.76" y1="-73.66" x2="111.76" y2="-83.82" width="0.1524" layer="91"/>
+<junction x="111.76" y="-73.66"/>
 <wire x1="111.76" y1="-30.48" x2="111.76" y2="-38.1" width="0.1524" layer="91"/>
 <wire x1="111.76" y1="-38.1" x2="121.92" y2="-38.1" width="0.1524" layer="91"/>
 <wire x1="111.76" y1="-38.1" x2="111.76" y2="-66.04" width="0.1524" layer="91"/>
@@ -6375,6 +6367,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <pinref part="12D" gate="G$1" pin="A"/>
 <pinref part="12RLED" gate="G$1" pin="1"/>
+<wire x1="119.38" y1="-71.12" x2="119.38" y2="-73.66" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="-71.12" x2="119.38" y2="-68.58" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="-68.58" x2="121.92" y2="-68.58" width="0.1524" layer="91"/>
+<junction x="119.38" y="-71.12"/>
+<pinref part="12U2" gate="G$1" pin="BLEED"/>
+<wire x1="121.92" y1="-68.58" x2="121.92" y2="-63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="12V_RUN" class="0">
@@ -6848,26 +6846,14 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="139.7" y="-81.28" size="1.778" layer="95" rot="MR90" xref="yes"/>
 <pinref part="12RLED" gate="G$1" pin="2"/>
 <wire x1="129.54" y1="-63.5" x2="129.54" y2="-71.12" width="0.1524" layer="91"/>
-<wire x1="129.54" y1="-71.12" x2="129.54" y2="-76.2" width="0.1524" layer="91"/>
-<junction x="129.54" y="-76.2"/>
+<junction x="129.54" y="-71.12"/>
 <pinref part="12DTVS" gate="G$1" pin="C"/>
-<junction x="129.54" y="-76.2"/>
-<pinref part="12RBLEED" gate="G$1" pin="2"/>
 <junction x="129.54" y="-71.12"/>
 <pinref part="P_12V_OUT" gate="G$1" pin="2"/>
-<wire x1="129.54" y1="-76.2" x2="129.54" y2="-81.28" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="-71.12" x2="129.54" y2="-81.28" width="0.1524" layer="91"/>
 <wire x1="129.54" y1="-81.28" x2="139.7" y2="-81.28" width="0.1524" layer="91"/>
 <junction x="129.54" y="-81.28"/>
 <wire x1="129.54" y1="-81.28" x2="127" y2="-81.28" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$14" class="0">
-<segment>
-<pinref part="12RBLEED" gate="G$1" pin="1"/>
-<pinref part="12U2" gate="G$1" pin="BLEED"/>
-<wire x1="119.38" y1="-71.12" x2="116.84" y2="-71.12" width="0.1524" layer="91"/>
-<wire x1="116.84" y1="-71.12" x2="116.84" y2="-63.5" width="0.1524" layer="91"/>
-<wire x1="116.84" y1="-63.5" x2="121.92" y2="-63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

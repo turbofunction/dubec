@@ -20,23 +20,23 @@ No special instructions.
 
 Layer order:
 
-TOP:    DUBEC.GTL
-        DUBEC.GL2
-        DUBEC.GL5
-BOTTOM: DUBEC.GBL
+TOP:    DUBEC.toplayer.ger
+        DUBEC.internalplane1.ger
+        DUBEC.internalplane2.ger
+BOTTOM: DUBEC.bottomlayer.ger
 
 
 Other files:
 
-DUBEC.GML  Outline
-DUBEC.GTS  Solder mask TOP
-DUBEC.GBS  Solder mask BOTTOM
-DUBEC.GTO  Silkscreen TOP
-DUBEC.GBO  Silkscreen BOTTOM
-DUBEC.drd  Excellon drill
-DUBEC.drl  Drill rack
-DUBEC.gpi  Photoplotter Info File
-DUBEC.GTP  Solder stencil (TOP)
+DUBEC.boardoutline.ger     Outline
+DUBEC.topsoldermask.ger    Solder mask TOP
+DUBEC.bottomsoldermask.ger Solder mask BOTTOM
+DUBEC.topsilkscreen.ger    Silkscreen TOP
+DUBEC.bottomsilkscreen.ger Silkscreen BOTTOM
+DUBEC.drills.xln           Excellon drill
+DUBEC.tcream.ger           Solder stencil (TOP)
+DUBEC.drl                  Drill rack
+DUBEC.gpi                  Photoplotter Info File
 
 
 Thank you!
