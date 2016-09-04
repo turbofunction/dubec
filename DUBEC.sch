@@ -285,10 +285,10 @@
 <wire x1="1.3" y1="0.65" x2="1.3" y2="-0.65" width="0.13" layer="21"/>
 <wire x1="1.3" y1="-0.65" x2="-1.3" y2="-0.65" width="0.13" layer="21"/>
 <wire x1="-1.3" y1="-0.65" x2="-1.3" y2="0.65" width="0.13" layer="21"/>
-<rectangle x1="-1.05" y1="-0.4" x2="-0.45" y2="0.4" layer="31"/>
-<rectangle x1="0.45" y1="-0.4" x2="1.05" y2="0.4" layer="31"/>
 <rectangle x1="-1.1" y1="-0.45" x2="-0.4" y2="0.45" layer="29"/>
 <rectangle x1="0.4" y1="-0.45" x2="1.1" y2="0.45" layer="29"/>
+<rectangle x1="-1.1" y1="-0.45" x2="-0.4" y2="0.45" layer="31"/>
+<rectangle x1="0.4" y1="-0.45" x2="1.1" y2="0.45" layer="31"/>
 </package>
 <package name="0603+">
 <description>IPC-SM-782 RES/CAP</description>
@@ -479,13 +479,13 @@
 <rectangle x1="1.15" y1="-2" x2="2.15" y2="-0.3" layer="31"/>
 </package>
 <package name="QFN-18">
-<smd name="21" x="-1.075" y="0" dx="0.45" dy="0.27" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="21" x="-1.075" y="0" dx="0.45" dy="0.3" layer="1" stop="no" thermals="no" cream="no"/>
 <smd name="13" x="-0.25" y="-1.45" dx="0.25" dy="0.8" layer="1" stop="no" cream="no"/>
 <smd name="14" x="0.25" y="-1.45" dx="0.25" dy="0.8" layer="1" stop="no" cream="no"/>
 <smd name="15" x="0.75" y="-1.45" dx="0.25" dy="0.8" layer="1" stop="no" cream="no"/>
 <smd name="16" x="1.25" y="-1.45" dx="0.25" dy="0.8" layer="1" stop="no" cream="no"/>
 <smd name="11" x="-1.25" y="-1.45" dx="0.25" dy="0.8" layer="1" stop="no" cream="no"/>
-<smd name="8-9" x="-2.05" y="0" dx="0.8" dy="0.65" layer="1" stop="no" cream="no"/>
+<smd name="8-9" x="-2.05" y="0" dx="0.8" dy="0.6" layer="1" stop="no" cream="no"/>
 <smd name="7" x="-2.05" y="0.8" dx="0.8" dy="0.25" layer="1" stop="no" cream="no"/>
 <smd name="10" x="-2.05" y="-0.8" dx="0.8" dy="0.25" layer="1" stop="no" cream="no"/>
 <smd name="4" x="-0.25" y="1.45" dx="0.25" dy="0.8" layer="1" stop="no" cream="no"/>
@@ -507,11 +507,7 @@
 <wire x1="-2" y1="-1.5" x2="-2" y2="-1.2" width="0.13" layer="21"/>
 <wire x1="2" y1="-1.2" x2="2" y2="-1.5" width="0.13" layer="21"/>
 <wire x1="2" y1="-1.5" x2="1.7" y2="-1.5" width="0.13" layer="21"/>
-<smd name="22" x="-0.305" y="0" dx="0.406" dy="0.27" layer="1" stop="no" thermals="no" cream="no"/>
-<rectangle x1="-1.35" y1="-0.2" x2="-0.8" y2="0.2" layer="29"/>
-<rectangle x1="-0.55" y1="-0.2" x2="-0.05" y2="0.2" layer="29"/>
-<rectangle x1="-1.25" y1="-0.1" x2="-0.9" y2="0.1" layer="31"/>
-<rectangle x1="-0.45" y1="-0.1" x2="-0.15" y2="0.1" layer="31"/>
+<smd name="22" x="-0.3" y="0" dx="0.4" dy="0.3" layer="1" stop="no" thermals="no" cream="no"/>
 <rectangle x1="-1.4" y1="1.05" x2="-1.1" y2="1.85" layer="29"/>
 <rectangle x1="-0.375" y1="1.05" x2="1.375" y2="1.85" layer="29"/>
 <rectangle x1="1.65" y1="-0.875" x2="2.45" y2="0.875" layer="29"/>
@@ -519,7 +515,6 @@
 <rectangle x1="-1.4" y1="-1.85" x2="-1.1" y2="-1.05" layer="29"/>
 <rectangle x1="-2.45" y1="0.675" x2="-1.65" y2="0.975" layer="29"/>
 <rectangle x1="-2.45" y1="-0.975" x2="-1.65" y2="-0.675" layer="29"/>
-<rectangle x1="-2.45" y1="-0.325" x2="-1.65" y2="0.325" layer="29"/>
 <rectangle x1="-0.375" y1="1.3" x2="-0.125" y2="1.85" layer="31"/>
 <rectangle x1="0.125" y1="1.3" x2="0.375" y2="1.85" layer="31"/>
 <rectangle x1="0.625" y1="1.3" x2="0.875" y2="1.85" layer="31"/>
@@ -534,10 +529,15 @@
 <rectangle x1="2.05" y1="-0.025" x2="2.3" y2="0.525" layer="31" rot="R90"/>
 <rectangle x1="2.05" y1="0.475" x2="2.3" y2="1.025" layer="31" rot="R90"/>
 <rectangle x1="-2.3" y1="0.525" x2="-2.05" y2="1.075" layer="31" rot="R90"/>
-<rectangle x1="-2.3" y1="-0.075" x2="-2.05" y2="0.475" layer="31" rot="R90"/>
-<rectangle x1="-2.3" y1="-0.475" x2="-2.05" y2="0.075" layer="31" rot="R90"/>
 <rectangle x1="-2.3" y1="-1.075" x2="-2.05" y2="-0.525" layer="31" rot="R90"/>
 <rectangle x1="-1.375" y1="1.3" x2="-1.125" y2="1.85" layer="31"/>
+<rectangle x1="-0.525" y1="-0.175" x2="-0.075" y2="0.175" layer="29"/>
+<rectangle x1="-1.325" y1="-0.175" x2="-0.825" y2="0.175" layer="29"/>
+<rectangle x1="-2.45" y1="-0.3" x2="-1.65" y2="0.3" layer="29"/>
+<rectangle x1="-2.45" y1="0.075" x2="-1.9" y2="0.275" layer="31"/>
+<rectangle x1="-2.45" y1="-0.275" x2="-1.9" y2="-0.075" layer="31"/>
+<rectangle x1="-1.3" y1="-0.15" x2="-0.85" y2="0.15" layer="31"/>
+<rectangle x1="-0.5" y1="-0.15" x2="-0.1" y2="0.15" layer="31"/>
 </package>
 <package name="XAL6060">
 <smd name="P$1" x="-2.02" y="0" dx="1.43" dy="5.33" layer="1" stop="no" thermals="no" cream="no"/>
@@ -795,8 +795,8 @@
 <text x="1.7" y="-1.6" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
 <rectangle x1="-1.8" y1="-1.35" x2="-0.6" y2="1.35" layer="29"/>
 <rectangle x1="0.6" y1="-1.35" x2="1.8" y2="1.35" layer="29"/>
-<rectangle x1="-1.7" y1="-1.25" x2="-0.7" y2="1.25" layer="31"/>
-<rectangle x1="0.7" y1="-1.25" x2="1.7" y2="1.25" layer="31"/>
+<rectangle x1="-1.8" y1="-1.35" x2="-0.6" y2="1.35" layer="31"/>
+<rectangle x1="0.6" y1="-1.35" x2="1.8" y2="1.35" layer="31"/>
 </package>
 <package name="0805+">
 <smd name="A" x="-1" y="0" dx="1" dy="1.5" layer="1"/>
@@ -882,8 +882,8 @@
 <wire x1="2.6" y1="-2.1" x2="2.6" y2="-1.5" width="0.13" layer="21"/>
 <rectangle x1="-3" y1="-1" x2="-1.4" y2="1" layer="29"/>
 <rectangle x1="1.4" y1="-1" x2="3" y2="1" layer="29"/>
-<rectangle x1="-2.9" y1="-0.9" x2="-1.5" y2="0.9" layer="31"/>
-<rectangle x1="1.5" y1="-0.9" x2="2.9" y2="0.9" layer="31"/>
+<rectangle x1="-3" y1="-1" x2="-1.4" y2="1" layer="31"/>
+<rectangle x1="1.4" y1="-1" x2="3" y2="1" layer="31"/>
 </package>
 <package name="POWERPAK-1212-8-DUAL">
 <smd name="6" x="1.3" y="-0.325" dx="0.8" dy="0.35" layer="1" stop="no" thermals="no" cream="no"/>
@@ -1044,27 +1044,8 @@
 <wire x1="-2.3" y1="-1.1" x2="-2.3" y2="1.1" width="0.13" layer="21"/>
 <rectangle x1="-2.05" y1="-0.85" x2="-1.05" y2="0.85" layer="29"/>
 <rectangle x1="1.05" y1="-0.85" x2="2.05" y2="0.85" layer="29"/>
-<rectangle x1="-1.95" y1="-0.775" x2="-1.15" y2="0.75" layer="31"/>
-<rectangle x1="1.15" y1="-0.775" x2="1.95" y2="0.75" layer="31"/>
-</package>
-<package name="0805">
-<description>IPC-SM-782 RES/CAP</description>
-<smd name="1" x="-0.9" y="0" dx="0.8" dy="1.4" layer="1" stop="no" cream="no"/>
-<smd name="2" x="0.9" y="0" dx="0.8" dy="1.4" layer="1" stop="no" cream="no"/>
-<text x="-1.3" y="0.2" size="0.5" layer="25">&gt;NAME</text>
-<text x="-1.3" y="-0.2" size="0.5" layer="27" align="top-left">&gt;VALUE</text>
-<wire x1="-1" y1="0.625" x2="1" y2="0.625" width="0.05" layer="51"/>
-<wire x1="1" y1="0.625" x2="1" y2="-0.625" width="0.05" layer="51"/>
-<wire x1="1" y1="-0.625" x2="-1" y2="-0.625" width="0.05" layer="51"/>
-<wire x1="-1" y1="-0.625" x2="-1" y2="0.625" width="0.05" layer="51"/>
-<wire x1="-1.5" y1="0.9" x2="1.5" y2="0.9" width="0.13" layer="21"/>
-<wire x1="1.5" y1="0.9" x2="1.5" y2="-0.9" width="0.13" layer="21"/>
-<wire x1="1.5" y1="-0.9" x2="-1.5" y2="-0.9" width="0.13" layer="21"/>
-<wire x1="-1.5" y1="-0.9" x2="-1.5" y2="0.9" width="0.13" layer="21"/>
-<rectangle x1="-1.3" y1="-0.7" x2="-0.5" y2="0.7" layer="29"/>
-<rectangle x1="0.5" y1="-0.7" x2="1.3" y2="0.7" layer="29"/>
-<rectangle x1="-1.225" y1="-0.625" x2="-0.575" y2="0.625" layer="31"/>
-<rectangle x1="0.575" y1="-0.625" x2="1.225" y2="0.625" layer="31"/>
+<rectangle x1="-2.05" y1="-0.85" x2="-1.05" y2="0.85" layer="31"/>
+<rectangle x1="1.05" y1="-0.85" x2="2.05" y2="0.85" layer="31"/>
 </package>
 <package name="DSN2-1006">
 <smd name="C" x="-0.45" y="0" dx="0.5" dy="0.6" layer="1" stop="no"/>
@@ -1195,6 +1176,25 @@
 <rectangle x1="0.15" y1="0.75" x2="0.35" y2="1.05" layer="31"/>
 <rectangle x1="0.65" y1="-1.05" x2="0.85" y2="-0.75" layer="31"/>
 <rectangle x1="0.65" y1="0.75" x2="0.85" y2="1.05" layer="31"/>
+</package>
+<package name="0805">
+<description>IPC-SM-782 RES/CAP</description>
+<smd name="1" x="-0.9" y="0" dx="0.8" dy="1.4" layer="1" stop="no" cream="no"/>
+<smd name="2" x="0.9" y="0" dx="0.8" dy="1.4" layer="1" stop="no" cream="no"/>
+<text x="-1.3" y="0.2" size="0.5" layer="25">&gt;NAME</text>
+<text x="-1.3" y="-0.2" size="0.5" layer="27" align="top-left">&gt;VALUE</text>
+<wire x1="-1" y1="0.625" x2="1" y2="0.625" width="0.05" layer="51"/>
+<wire x1="1" y1="0.625" x2="1" y2="-0.625" width="0.05" layer="51"/>
+<wire x1="1" y1="-0.625" x2="-1" y2="-0.625" width="0.05" layer="51"/>
+<wire x1="-1" y1="-0.625" x2="-1" y2="0.625" width="0.05" layer="51"/>
+<wire x1="-1.5" y1="0.9" x2="1.5" y2="0.9" width="0.13" layer="21"/>
+<wire x1="1.5" y1="0.9" x2="1.5" y2="-0.9" width="0.13" layer="21"/>
+<wire x1="1.5" y1="-0.9" x2="-1.5" y2="-0.9" width="0.13" layer="21"/>
+<wire x1="-1.5" y1="-0.9" x2="-1.5" y2="0.9" width="0.13" layer="21"/>
+<rectangle x1="-1.3" y1="-0.7" x2="-0.5" y2="0.7" layer="29"/>
+<rectangle x1="0.5" y1="-0.7" x2="1.3" y2="0.7" layer="29"/>
+<rectangle x1="-1.3" y1="-0.7" x2="-0.5" y2="0.7" layer="31"/>
+<rectangle x1="0.5" y1="-0.7" x2="1.3" y2="0.7" layer="31"/>
 </package>
 </packages>
 <symbols>
@@ -6039,7 +6039,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="20.32" y1="-55.88" x2="20.32" y2="-53.34" width="0.1524" layer="91"/>
 <junction x="20.32" y="-53.34"/>
 <wire x1="35.56" y1="-53.34" x2="60.96" y2="-53.34" width="0.1524" layer="91"/>
-<label x="25.4" y="-50.8" size="2.032" layer="95" font="vector" ratio="20"/>
 <wire x1="20.32" y1="-53.34" x2="35.56" y2="-53.34" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="-76.2" x2="15.24" y2="-76.2" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="-76.2" x2="15.24" y2="-53.34" width="0.1524" layer="91"/>
@@ -6048,11 +6047,14 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="15.24" y1="-76.2" x2="15.24" y2="-83.82" width="0.1524" layer="91"/>
 <junction x="15.24" y="-76.2"/>
 <wire x1="15.24" y1="-83.82" x2="17.78" y2="-83.82" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="-53.34" x2="15.24" y2="-48.26" width="0.1524" layer="91"/>
+<junction x="15.24" y="-53.34"/>
+<label x="15.24" y="-48.26" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="12U2" gate="G$1" pin="V_IN"/>
 <wire x1="129.54" y1="-38.1" x2="129.54" y2="-20.32" width="0.1524" layer="91"/>
-<label x="116.84" y="-20.32" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="116.84" y="-20.32" size="1.778" layer="95" rot="R180" xref="yes"/>
 <pinref part="12D2" gate="G$1" pin="C"/>
 <wire x1="129.54" y1="-20.32" x2="127" y2="-20.32" width="0.1524" layer="91"/>
 <wire x1="127" y1="-20.32" x2="127" y2="-22.86" width="0.1524" layer="91"/>
@@ -6261,7 +6263,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <junction x="111.76" y="-38.1"/>
 <pinref part="P_12V_OUT" gate="G$1" pin="1"/>
 <wire x1="139.7" y1="-83.82" x2="119.38" y2="-83.82" width="0.1524" layer="91"/>
-<label x="139.7" y="-83.82" size="1.27" layer="95" rot="R270" xref="yes"/>
+<label x="139.7" y="-83.82" size="1.778" layer="95" rot="R270" xref="yes"/>
 <wire x1="119.38" y1="-83.82" x2="111.76" y2="-83.82" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="-81.28" x2="119.38" y2="-81.28" width="0.1524" layer="91"/>
 <wire x1="119.38" y1="-81.28" x2="119.38" y2="-83.82" width="0.1524" layer="91"/>
@@ -6843,7 +6845,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <net name="12V_OUT" class="0">
 <segment>
 <pinref part="12U2" gate="G$1" pin="V_OUT"/>
-<label x="139.7" y="-81.28" size="1.27" layer="95" rot="MR90" xref="yes"/>
+<label x="139.7" y="-81.28" size="1.778" layer="95" rot="MR90" xref="yes"/>
 <pinref part="12RLED" gate="G$1" pin="2"/>
 <wire x1="129.54" y1="-63.5" x2="129.54" y2="-71.12" width="0.1524" layer="91"/>
 <wire x1="129.54" y1="-71.12" x2="129.54" y2="-76.2" width="0.1524" layer="91"/>
