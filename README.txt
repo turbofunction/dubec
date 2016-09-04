@@ -5,7 +5,7 @@ Janne Savukoski
 
 
                     Part name: DUBEC
-                     Revision: 2.2
+                     Revision: 2.3
                    Board size: 40mm x 21.375mm
               Board thickness: 
                    Board type: Four layer
