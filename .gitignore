@@ -1,8 +1,8 @@
 eagle.epf
-.DS_Store
 *.b#*
-*.dr*
-*.G*
-*.lck
+*.dri
+*.ger
+*.gpi
 *.s#*
+*.xln
 *.zip
