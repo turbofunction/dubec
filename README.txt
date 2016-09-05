@@ -34,9 +34,8 @@ DUBEC.bottomsoldermask.ger Solder mask BOTTOM
 DUBEC.topsilkscreen.ger    Silkscreen TOP
 DUBEC.bottomsilkscreen.ger Silkscreen BOTTOM
 DUBEC.drills.xln           Excellon drill
-DUBEC.tcream.ger           Solder stencil (TOP)
 DUBEC.drl                  Drill rack
-DUBEC.gpi                  Photoplotter Info File
+DUBEC.tcream.ger           Solder stencil (TOP)
 
 
 Thank you!
