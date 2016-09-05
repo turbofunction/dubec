@@ -1162,14 +1162,14 @@
 <rectangle x1="0.125" y1="-1.15" x2="0.375" y2="-0.65" layer="29"/>
 <rectangle x1="-0.375" y1="-1.15" x2="-0.125" y2="-0.65" layer="29"/>
 <rectangle x1="-0.875" y1="-1.15" x2="-0.625" y2="-0.65" layer="29"/>
-<rectangle x1="-0.875" y1="0.85" x2="-0.625" y2="1.15" layer="31"/>
-<rectangle x1="-0.375" y1="0.85" x2="-0.125" y2="1.15" layer="31"/>
-<rectangle x1="0.125" y1="0.85" x2="0.375" y2="1.15" layer="31"/>
-<rectangle x1="0.625" y1="0.85" x2="0.875" y2="1.15" layer="31"/>
-<rectangle x1="0.625" y1="-1.15" x2="0.875" y2="-0.85" layer="31"/>
-<rectangle x1="0.125" y1="-1.15" x2="0.375" y2="-0.85" layer="31"/>
-<rectangle x1="-0.375" y1="-1.15" x2="-0.125" y2="-0.85" layer="31"/>
-<rectangle x1="-0.875" y1="-1.15" x2="-0.625" y2="-0.85" layer="31"/>
+<rectangle x1="-0.375" y1="-1.15" x2="-0.125" y2="-0.75" layer="31"/>
+<rectangle x1="-0.875" y1="-1.15" x2="-0.625" y2="-0.75" layer="31"/>
+<rectangle x1="0.125" y1="-1.15" x2="0.375" y2="-0.75" layer="31"/>
+<rectangle x1="0.625" y1="-1.15" x2="0.875" y2="-0.75" layer="31"/>
+<rectangle x1="0.125" y1="0.75" x2="0.375" y2="1.15" layer="31"/>
+<rectangle x1="0.625" y1="0.75" x2="0.875" y2="1.15" layer="31"/>
+<rectangle x1="-0.375" y1="0.75" x2="-0.125" y2="1.15" layer="31"/>
+<rectangle x1="-0.875" y1="0.75" x2="-0.625" y2="1.15" layer="31"/>
 </package>
 <package name="0805">
 <description>IPC-SM-782 RES/CAP</description>
