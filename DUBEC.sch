@@ -377,17 +377,17 @@
 <wire x1="2.8702" y1="-2.7178" x2="2.8702" y2="-1.7" width="0.13" layer="21"/>
 </package>
 <package name="1X03_NO_SILK">
-<pad name="1" x="-3" y="0" drill="1.3" diameter="2.2" rot="R90" stop="no"/>
-<pad name="2" x="0" y="0" drill="1.3" diameter="2.2" rot="R90" stop="no"/>
-<pad name="3" x="3" y="0" drill="1.3" diameter="2.2" rot="R90" stop="no"/>
-<text x="-3.556" y="1.8288" size="0.762" layer="25" ratio="10">&gt;NAME</text>
-<text x="-3.556" y="-1.905" size="0.762" layer="27" align="top-left">&gt;VALUE</text>
-<circle x="-3" y="0" radius="0.54083125" width="1.3" layer="30"/>
-<circle x="0" y="0" radius="0.54083125" width="1.3" layer="30"/>
-<circle x="3" y="0" radius="0.54083125" width="1.3" layer="30"/>
-<circle x="-3" y="0" radius="0.54083125" width="1.3" layer="29"/>
-<circle x="0" y="0" radius="0.54083125" width="1.3" layer="29"/>
-<circle x="3" y="0" radius="0.54083125" width="1.3" layer="29"/>
+<pad name="1" x="-3" y="0" drill="1.3" diameter="2.4" rot="R90" stop="no"/>
+<pad name="2" x="0" y="0" drill="1.3" diameter="2.4" rot="R90" stop="no"/>
+<pad name="3" x="3" y="0" drill="1.3" diameter="2.4" rot="R90" stop="no"/>
+<text x="-3" y="-1.5" size="0.4" layer="25" ratio="10" align="top-left">&gt;NAME</text>
+<text x="-3" y="-2.1" size="0.4" layer="27" align="top-left">&gt;VALUE</text>
+<circle x="-3" y="0" radius="0.6" width="1.3" layer="30"/>
+<circle x="0" y="0" radius="0.6" width="1.3" layer="30"/>
+<circle x="3" y="0" radius="0.6" width="1.3" layer="30"/>
+<circle x="-3" y="0" radius="0.6" width="1.3" layer="29"/>
+<circle x="0" y="0" radius="0.6" width="1.3" layer="29"/>
+<circle x="3" y="0" radius="0.6" width="1.3" layer="29"/>
 </package>
 <package name="WE-TPC_10MM">
 <smd name="2" x="4.5" y="0" dx="1.8" dy="4.6" layer="1"/>
@@ -416,14 +416,14 @@
 <wire x1="-3.5" y1="3.5" x2="-3.5" y2="1.5" width="0.13" layer="21"/>
 </package>
 <package name="1X02_NO_SILK">
-<pad name="1" x="-1.5" y="0" drill="1.3" diameter="2.2" rot="R90" stop="no"/>
-<pad name="2" x="1.5" y="0" drill="1.3" diameter="2.2" rot="R90" stop="no"/>
-<text x="0" y="1.8" size="0.5" layer="25" ratio="10" align="top-center">&gt;NAME</text>
-<text x="0" y="-1.3" size="0.5" layer="27" align="top-center">&gt;VALUE</text>
-<circle x="-1.5" y="0" radius="0.54083125" width="1.3" layer="30"/>
-<circle x="1.5" y="0" radius="0.54083125" width="1.3" layer="30"/>
-<circle x="1.5" y="0" radius="0.54083125" width="1.3" layer="29"/>
-<circle x="-1.5" y="0" radius="0.54083125" width="1.3" layer="29"/>
+<pad name="1" x="-1.5" y="0" drill="1.3" diameter="2.4" rot="R90" stop="no"/>
+<pad name="2" x="1.5" y="0" drill="1.3" diameter="2.4" rot="R90" stop="no"/>
+<text x="-1.5" y="-1.5" size="0.4" layer="25" ratio="10" align="top-left">&gt;NAME</text>
+<text x="-1.5" y="-2.1" size="0.4" layer="27" align="top-left">&gt;VALUE</text>
+<circle x="-1.5" y="0" radius="0.6" width="1.3" layer="29"/>
+<circle x="1.5" y="0" radius="0.6" width="1.3" layer="29"/>
+<circle x="1.5" y="0" radius="0.6" width="1.3" layer="30"/>
+<circle x="-1.5" y="0" radius="0.6" width="1.3" layer="30"/>
 </package>
 <package name="0201P">
 <description>Resistor land pattern from Panasonic product info PDF: http://www.digikey.fi/product-detail/en/ERJ-1GEF2433C/P243KABCT-ND/1467681</description>
