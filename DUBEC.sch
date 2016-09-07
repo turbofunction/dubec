@@ -880,10 +880,10 @@
 <rectangle x1="1.4" y1="-1" x2="3" y2="1" layer="31"/>
 </package>
 <package name="POWERPAK-1212-8-DUAL">
-<smd name="6" x="1.3" y="-0.325" dx="0.8" dy="0.35" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="6" x="1.3" y="-0.35" dx="0.8" dy="0.3" layer="1" stop="no" thermals="no" cream="no"/>
 <smd name="5" x="1.3" y="-0.975" dx="0.8" dy="0.35" layer="1" stop="no" thermals="no" cream="no"/>
 <smd name="8" x="1.3" y="0.975" dx="0.8" dy="0.35" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="7" x="1.3" y="0.325" dx="0.8" dy="0.35" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="7" x="1.3" y="0.35" dx="0.8" dy="0.3" layer="1" stop="no" thermals="no" cream="no"/>
 <smd name="3" x="-1.3" y="-0.325" dx="0.8" dy="0.35" layer="1" stop="no" thermals="no" cream="no"/>
 <smd name="4" x="-1.3" y="-0.975" dx="0.8" dy="0.35" layer="1" stop="no" thermals="no" cream="no"/>
 <smd name="1" x="-1.3" y="0.975" dx="0.8" dy="0.35" layer="1" stop="no" thermals="no" cream="no"/>
@@ -924,19 +924,19 @@
 <wire x1="-0.3" y1="-1.65" x2="-0.3" y2="-0.125" width="0.05" layer="51"/>
 <rectangle x1="-1.7" y1="0.8" x2="-0.9" y2="1.15" layer="29"/>
 <rectangle x1="-1.7" y1="-0.5" x2="-0.9" y2="-0.15" layer="29"/>
-<rectangle x1="0.9" y1="-0.5" x2="1.7" y2="-0.15" layer="29"/>
+<rectangle x1="0.9" y1="-0.5" x2="1.7" y2="-0.2" layer="29"/>
 <rectangle x1="0.9" y1="0.8" x2="1.7" y2="1.15" layer="29"/>
 <rectangle x1="-1.7" y1="0.15" x2="-0.9" y2="0.5" layer="29"/>
-<rectangle x1="0.9" y1="0.15" x2="1.7" y2="0.5" layer="29"/>
+<rectangle x1="0.9" y1="0.2" x2="1.7" y2="0.5" layer="29"/>
 <rectangle x1="0.9" y1="-1.15" x2="1.7" y2="-0.8" layer="29"/>
 <rectangle x1="-1.7" y1="-1.15" x2="-0.9" y2="-0.8" layer="29"/>
 <rectangle x1="-1.675" y1="0.825" x2="-0.925" y2="1.125" layer="31"/>
 <rectangle x1="-1.675" y1="-0.475" x2="-0.925" y2="-0.175" layer="31"/>
 <rectangle x1="-1.675" y1="0.175" x2="-0.925" y2="0.475" layer="31"/>
 <rectangle x1="-1.675" y1="-1.125" x2="-0.925" y2="-0.825" layer="31"/>
-<rectangle x1="0.95" y1="-0.45" x2="1.65" y2="-0.2" layer="31"/>
+<rectangle x1="0.95" y1="-0.45" x2="1.65" y2="-0.25" layer="31"/>
 <rectangle x1="0.95" y1="0.85" x2="1.65" y2="1.1" layer="31"/>
-<rectangle x1="0.95" y1="0.2" x2="1.65" y2="0.45" layer="31"/>
+<rectangle x1="0.95" y1="0.25" x2="1.65" y2="0.45" layer="31"/>
 <rectangle x1="0.95" y1="-1.1" x2="1.65" y2="-0.85" layer="31"/>
 </package>
 <package name="SOT23-3">
