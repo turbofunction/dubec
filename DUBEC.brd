@@ -1893,8 +1893,8 @@ Covered vias can be set in Masks (Limit).
 <vertex x="9.625" y="6"/>
 <vertex x="9.0625" y="5.4375"/>
 <vertex x="8.4375" y="5.4375"/>
-<vertex x="7.9375" y="5.9375"/>
-<vertex x="7.375" y="5.9375"/>
+<vertex x="8.0625" y="5.8125"/>
+<vertex x="7.5" y="5.8125"/>
 <vertex x="7" y="6.3125"/>
 <vertex x="6.3125" y="6.3125"/>
 <vertex x="6.3125" y="10.1875"/>
@@ -2000,7 +2000,7 @@ Covered vias can be set in Masks (Limit).
 <via x="22.875" y="20.3125" extent="1-16" drill="0.5"/>
 <via x="25.25" y="13.5" extent="1-16" drill="0.5"/>
 <wire x1="22.25" y1="17.6875" x2="23" y2="17.6875" width="0.75" layer="16"/>
-<via x="36.4375" y="20.1875" extent="1-16" drill="0.3"/>
+<via x="36.6875" y="20.4375" extent="1-16" drill="0.3"/>
 <contactref element="J_GND_MAIN" pad="1"/>
 <contactref element="J_GND_AUX" pad="1"/>
 <via x="18.1875" y="0.9375" extent="1-16" drill="0.3"/>
@@ -2094,7 +2094,7 @@ Covered vias can be set in Masks (Limit).
 <contactref element="P_12V_OUT" pad="1"/>
 <via x="33" y="12.8125" extent="1-16" drill="0.5"/>
 <via x="33.9375" y="12.8125" extent="1-16" drill="0.5"/>
-<via x="27.375" y="20.1875" extent="1-16" drill="0.3"/>
+<via x="27.375" y="20.4375" extent="1-16" drill="0.3"/>
 <via x="12.0625" y="12.6875" extent="1-16" drill="0.3"/>
 <via x="13.6875" y="8.6875" extent="1-16" drill="0.3"/>
 </signal>
@@ -2287,10 +2287,10 @@ Covered vias can be set in Masks (Limit).
 <contactref element="RDIVBOT" pad="2"/>
 <contactref element="MCU" pad="4"/>
 <wire x1="11.125" y1="15.4" x2="11.125" y2="14.275" width="0.25" layer="1"/>
-<wire x1="11.125" y1="14.275" x2="11" y2="14.25" width="0.25" layer="1"/>
 <wire x1="11" y1="14.25" x2="12" y2="14.25" width="0.4" layer="1"/>
 <contactref element="CDIV" pad="2"/>
 <wire x1="12" y1="14.25" x2="13" y2="14.25" width="0.4" layer="1"/>
+<wire x1="11.125" y1="14.275" x2="11" y2="14.25" width="0.25" layer="1"/>
 </signal>
 <signal name="5V_SW">
 <contactref element="5L" pad="1"/>
