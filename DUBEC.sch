@@ -603,12 +603,12 @@
 <package name="SOD523+">
 <smd name="A" x="-0.7" y="0" dx="0.6" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
 <smd name="C" x="0.7" y="0" dx="0.6" dy="0.7" layer="1" stop="no" thermals="no" cream="no"/>
-<wire x1="-0.8" y1="0.6" x2="1.25" y2="0.6" width="0.13" layer="21"/>
-<wire x1="1.25" y1="0.6" x2="1.25" y2="-0.6" width="0.13" layer="21"/>
-<wire x1="1.25" y1="-0.6" x2="-0.8" y2="-0.6" width="0.13" layer="21"/>
+<wire x1="-0.8" y1="0.55" x2="1.2" y2="0.55" width="0.13" layer="21"/>
+<wire x1="1.2" y1="0.55" x2="1.2" y2="-0.55" width="0.13" layer="21"/>
+<wire x1="1.2" y1="-0.55" x2="-0.8" y2="-0.55" width="0.13" layer="21"/>
 <text x="-1" y="0" size="0.3" layer="27" align="top-left">&gt;VALUE</text>
 <text x="-1" y="0.4" size="0.3" layer="25" align="top-left">&gt;NAME</text>
-<text x="1.255" y="-0.78" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
+<text x="1.25" y="-0.725" size="0.52" layer="49" font="vector" ratio="20" rot="SR270" align="top-left">C</text>
 <wire x1="-0.6" y1="0.4" x2="0.6" y2="0.4" width="0.05" layer="51"/>
 <wire x1="0.6" y1="0.4" x2="0.6" y2="0.15" width="0.05" layer="51"/>
 <wire x1="0.6" y1="0.15" x2="0.8" y2="0.15" width="0.05" layer="51"/>
