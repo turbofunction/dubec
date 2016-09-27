@@ -248,8 +248,6 @@
 <wire x1="1.5" y1="-1.7" x2="1.5" y2="-1.5" width="0.13" layer="21"/>
 <wire x1="1.5" y1="-1.5" x2="-1.5" y2="-1.5" width="0.13" layer="21"/>
 <wire x1="-1.5" y1="-1.5" x2="-1.5" y2="-1.7" width="0.13" layer="21"/>
-<rectangle x1="-1.7" y1="-1.125" x2="-1" y2="1.125" layer="29"/>
-<rectangle x1="1" y1="-1.125" x2="1.7" y2="1.125" layer="29"/>
 <wire x1="-0.8" y1="-1.25" x2="0.8" y2="-1.25" width="0.05" layer="51"/>
 <wire x1="0.8" y1="-1.25" x2="0.8" y2="1.25" width="0.05" layer="51"/>
 <wire x1="0.8" y1="1.25" x2="-0.6" y2="1.25" width="0.05" layer="51"/>
@@ -271,6 +269,8 @@
 <rectangle x1="1.3" y1="0.375" x2="1.7" y2="0.625" layer="31"/>
 <rectangle x1="1.3" y1="0.875" x2="1.7" y2="1.125" layer="31"/>
 <rectangle x1="-1.7" y1="-1.125" x2="-1.3" y2="-0.875" layer="31"/>
+<rectangle x1="1" y1="-1.2" x2="1.7" y2="1.2" layer="29"/>
+<rectangle x1="-1.7" y1="-1.2" x2="-1" y2="1.2" layer="29"/>
 </package>
 <package name="0603">
 <smd name="1" x="-0.75" y="0" dx="0.7" dy="0.9" layer="1" stop="no" cream="no"/>
@@ -325,16 +325,14 @@
 <text x="-2" y="1" size="0.7" layer="25" align="top-left">&gt;NAME</text>
 <text x="-2" y="-1" size="0.7" layer="27">&gt;VALUE</text>
 <smd name="PAD" x="0" y="0" dx="0.5" dy="0.5" layer="1" stop="no" cream="no"/>
-<wire x1="2.2" y1="2" x2="2.5" y2="2" width="0.13" layer="21"/>
+<wire x1="2.25" y1="2" x2="2.5" y2="2" width="0.13" layer="21"/>
 <wire x1="2.5" y1="2" x2="2.5" y2="-2" width="0.13" layer="21"/>
-<wire x1="2.5" y1="-2" x2="2.2" y2="-2" width="0.13" layer="21"/>
+<wire x1="2.5" y1="-2" x2="2.25" y2="-2" width="0.13" layer="21"/>
 <wire x1="-2.5" y1="-2" x2="-2.5" y2="2" width="0.13" layer="21"/>
-<wire x1="-2.5" y1="2" x2="-2.2" y2="2" width="0.13" layer="21"/>
-<wire x1="-2.5" y1="-2" x2="-2.2" y2="-2" width="0.13" layer="21"/>
-<rectangle x1="-1.875" y1="-2.4" x2="1.875" y2="-1.6" layer="29"/>
+<wire x1="-2.5" y1="2" x2="-2.25" y2="2" width="0.13" layer="21"/>
+<wire x1="-2.5" y1="-2" x2="-2.25" y2="-2" width="0.13" layer="21"/>
 <smd name="4" x="-0.25" y="-2" dx="0.25" dy="0.8" layer="1" stop="no" cream="no"/>
 <smd name="5" x="0.25" y="-2" dx="0.25" dy="0.8" layer="1" stop="no" cream="no"/>
-<rectangle x1="-1.875" y1="1.6" x2="1.875" y2="2.4" layer="29"/>
 <rectangle x1="-0.25" y1="-0.25" x2="0.25" y2="0.25" layer="29"/>
 <wire x1="-2.17" y1="1.22" x2="2.17" y2="1.22" width="0.05" layer="51"/>
 <wire x1="2.17" y1="1.22" x2="2.17" y2="-1.22" width="0.05" layer="51"/>
@@ -363,6 +361,26 @@
 <rectangle x1="-0.875" y1="-2.4" x2="-0.625" y2="-1.875" layer="31"/>
 <rectangle x1="-1.375" y1="-2.4" x2="-1.125" y2="-1.875" layer="31"/>
 <rectangle x1="-1.875" y1="-2.4" x2="-1.625" y2="-1.875" layer="31"/>
+<polygon width="0.1" layer="29">
+<vertex x="-1.925" y="1.7"/>
+<vertex x="-1.925" y="2.3"/>
+<vertex x="-1.875" y="2.35"/>
+<vertex x="1.875" y="2.35"/>
+<vertex x="1.925" y="2.3"/>
+<vertex x="1.925" y="1.7"/>
+<vertex x="1.875" y="1.65"/>
+<vertex x="-1.875" y="1.65"/>
+</polygon>
+<polygon width="0.1" layer="29">
+<vertex x="-1.925" y="-2.3"/>
+<vertex x="-1.925" y="-1.7"/>
+<vertex x="-1.875" y="-1.65"/>
+<vertex x="1.875" y="-1.65"/>
+<vertex x="1.925" y="-1.7"/>
+<vertex x="1.925" y="-2.3"/>
+<vertex x="1.875" y="-2.35"/>
+<vertex x="-1.875" y="-2.35"/>
+</polygon>
 </package>
 <package name="2020Z">
 <smd name="1" x="-2.03835" y="0" dx="1.9177" dy="2.794" layer="1"/>
@@ -505,13 +523,6 @@
 <wire x1="2" y1="-1.2" x2="2" y2="-1.5" width="0.13" layer="21"/>
 <wire x1="2" y1="-1.5" x2="1.7" y2="-1.5" width="0.13" layer="21"/>
 <smd name="22" x="-0.3" y="0" dx="0.4" dy="0.3" layer="1" stop="no" thermals="no" cream="no"/>
-<rectangle x1="-1.4" y1="1.05" x2="-1.1" y2="1.85" layer="29"/>
-<rectangle x1="-0.375" y1="1.05" x2="1.375" y2="1.85" layer="29"/>
-<rectangle x1="1.65" y1="-0.875" x2="2.45" y2="0.875" layer="29"/>
-<rectangle x1="-0.375" y1="-1.85" x2="1.375" y2="-1.05" layer="29"/>
-<rectangle x1="-1.4" y1="-1.85" x2="-1.1" y2="-1.05" layer="29"/>
-<rectangle x1="-2.45" y1="0.675" x2="-1.65" y2="0.975" layer="29"/>
-<rectangle x1="-2.45" y1="-0.975" x2="-1.65" y2="-0.675" layer="29"/>
 <rectangle x1="-0.375" y1="1.3" x2="-0.125" y2="1.85" layer="31"/>
 <rectangle x1="0.125" y1="1.3" x2="0.375" y2="1.85" layer="31"/>
 <rectangle x1="0.625" y1="1.3" x2="0.875" y2="1.85" layer="31"/>
@@ -530,11 +541,18 @@
 <rectangle x1="-1.375" y1="1.3" x2="-1.125" y2="1.85" layer="31"/>
 <rectangle x1="-0.525" y1="-0.175" x2="-0.075" y2="0.175" layer="29"/>
 <rectangle x1="-1.325" y1="-0.175" x2="-0.825" y2="0.175" layer="29"/>
-<rectangle x1="-2.45" y1="-0.3" x2="-1.65" y2="0.3" layer="29"/>
 <rectangle x1="-2.45" y1="0.075" x2="-1.9" y2="0.275" layer="31"/>
 <rectangle x1="-2.45" y1="-0.275" x2="-1.9" y2="-0.075" layer="31"/>
 <rectangle x1="-1.3" y1="-0.15" x2="-0.85" y2="0.15" layer="31"/>
 <rectangle x1="-0.5" y1="-0.15" x2="-0.1" y2="0.15" layer="31"/>
+<rectangle x1="-2.45" y1="0.625" x2="-1.65" y2="0.975" layer="29"/>
+<rectangle x1="-2.45" y1="-0.975" x2="-1.65" y2="-0.625" layer="29"/>
+<rectangle x1="-1.65" y1="1.275" x2="-0.85" y2="1.625" layer="29" rot="R90"/>
+<rectangle x1="-1.65" y1="-1.625" x2="-0.85" y2="-1.275" layer="29" rot="R90"/>
+<rectangle x1="-0.45" y1="-1.85" x2="1.45" y2="-1.05" layer="29"/>
+<rectangle x1="-0.45" y1="1.05" x2="1.45" y2="1.85" layer="29"/>
+<rectangle x1="1.1" y1="-0.4" x2="3" y2="0.4" layer="29" rot="R90"/>
+<rectangle x1="-2.45" y1="-0.325" x2="-1.65" y2="0.325" layer="29"/>
 </package>
 <package name="XAL6060">
 <smd name="P$1" x="-2.02" y="0" dx="1.43" dy="5.33" layer="1" stop="no" thermals="no" cream="no"/>
@@ -629,25 +647,15 @@
 <package name="0603+DUAL">
 <text x="-0.8" y="0.5" size="0.3" layer="25" align="top-left">&gt;NAME</text>
 <text x="-0.8" y="-0.5" size="0.3" layer="27">&gt;VALUE</text>
-<text x="-1.06" y="0.95" size="0.52" layer="49" font="vector" ratio="20" rot="SR90" align="top-left">C</text>
-<wire x1="-0.8" y1="0.4" x2="-0.2" y2="0.4" width="0.05" layer="51"/>
-<wire x1="-0.2" y1="0.4" x2="0.8" y2="0.4" width="0.05" layer="51"/>
+<text x="-0.86" y="0.75" size="0.52" layer="49" font="vector" ratio="20" rot="SR90" align="top-left">C</text>
+<wire x1="-0.8" y1="0.4" x2="0.8" y2="0.4" width="0.05" layer="51"/>
 <wire x1="0.8" y1="0.4" x2="0.8" y2="-0.4" width="0.05" layer="51"/>
-<wire x1="0.8" y1="-0.4" x2="-0.2" y2="-0.4" width="0.05" layer="51"/>
-<wire x1="-0.2" y1="-0.4" x2="-0.8" y2="-0.4" width="0.05" layer="51"/>
+<wire x1="0.8" y1="-0.4" x2="-0.8" y2="-0.4" width="0.05" layer="51"/>
 <wire x1="-0.8" y1="-0.4" x2="-0.8" y2="0.4" width="0.05" layer="51"/>
 <smd name="3" x="0.6" y="0.4" dx="0.5" dy="0.4" layer="1" stop="no" cream="no"/>
 <smd name="1" x="0.6" y="-0.4" dx="0.5" dy="0.4" layer="1" stop="no" cream="no"/>
 <smd name="2" x="-0.6" y="-0.4" dx="0.5" dy="0.4" layer="1" stop="no" cream="no"/>
 <smd name="4" x="-0.6" y="0.4" dx="0.5" dy="0.4" layer="1" stop="no" cream="no"/>
-<wire x1="-1" y1="0.75" x2="1" y2="0.75" width="0.13" layer="49"/>
-<wire x1="1" y1="0.75" x2="1" y2="-0.75" width="0.13" layer="49"/>
-<wire x1="1" y1="-0.75" x2="-1" y2="-0.75" width="0.13" layer="49"/>
-<wire x1="-1" y1="-0.75" x2="-1" y2="0.75" width="0.13" layer="49"/>
-<rectangle x1="-0.85" y1="0.2" x2="-0.35" y2="0.6" layer="29"/>
-<rectangle x1="0.35" y1="0.2" x2="0.85" y2="0.6" layer="29"/>
-<rectangle x1="0.35" y1="-0.6" x2="0.85" y2="-0.2" layer="29"/>
-<rectangle x1="-0.85" y1="-0.6" x2="-0.35" y2="-0.2" layer="29"/>
 <rectangle x1="-0.8" y1="0.25" x2="-0.4" y2="0.55" layer="31"/>
 <rectangle x1="0.4" y1="0.25" x2="0.8" y2="0.55" layer="31"/>
 <rectangle x1="0.4" y1="-0.55" x2="0.8" y2="-0.25" layer="31"/>
@@ -657,6 +665,10 @@
 <wire x1="-0.4" y1="0.1" x2="-0.4" y2="-0.1" width="0.05" layer="49"/>
 <wire x1="-0.4" y1="-0.1" x2="-0.2" y2="-0.1" width="0.05" layer="49"/>
 <wire x1="-0.2" y1="-0.1" x2="-0.2" y2="-0.4" width="0.05" layer="49"/>
+<rectangle x1="-0.9" y1="0.15" x2="-0.3" y2="0.65" layer="29"/>
+<rectangle x1="0.3" y1="0.15" x2="0.9" y2="0.65" layer="29"/>
+<rectangle x1="0.3" y1="-0.65" x2="0.9" y2="-0.15" layer="29"/>
+<rectangle x1="-0.9" y1="-0.65" x2="-0.3" y2="-0.15" layer="29"/>
 </package>
 <package name="SO-8">
 <smd name="6" x="0.635" y="2.7" dx="0.6" dy="1.55" layer="1" thermals="no"/>
@@ -710,17 +722,15 @@
 <smd name="5" x="0" y="0.7" dx="0.25" dy="0.4" layer="1" stop="no" thermals="no" cream="no"/>
 <smd name="4" x="0.5" y="0.7" dx="0.25" dy="0.4" layer="1" stop="no" thermals="no" cream="no"/>
 <smd name="6" x="-0.5" y="0.7" dx="0.25" dy="0.4" layer="1" stop="no" thermals="no" cream="no"/>
-<wire x1="-0.85" y1="0.6" x2="-0.85" y2="-0.6" width="0.13" layer="21"/>
-<wire x1="0.85" y1="0.6" x2="0.85" y2="-0.6" width="0.13" layer="21"/>
+<wire x1="-0.9" y1="0.6" x2="-0.9" y2="-0.6" width="0.13" layer="21"/>
+<wire x1="0.9" y1="0.6" x2="0.9" y2="-0.6" width="0.13" layer="21"/>
 <text x="-0.7" y="-0.5" size="0.2" layer="27">&gt;VALUE</text>
 <text x="-0.7" y="0.5" size="0.2" layer="25" align="top-left">&gt;NAME</text>
-<rectangle x1="-0.625" y1="0.5" x2="0.625" y2="0.9" layer="29"/>
-<rectangle x1="-0.625" y1="-0.9" x2="0.625" y2="-0.5" layer="29"/>
 <polygon width="0.13" layer="21">
-<vertex x="-0.8" y="-0.1"/>
-<vertex x="-0.4" y="-0.1"/>
-<vertex x="-0.4" y="0.1"/>
-<vertex x="-0.8" y="0.1"/>
+<vertex x="-0.9" y="-0.1"/>
+<vertex x="-0.6" y="-0.1"/>
+<vertex x="-0.6" y="0.1"/>
+<vertex x="-0.9" y="0.1"/>
 </polygon>
 <rectangle x1="-0.625" y1="0.5" x2="-0.375" y2="0.9" layer="31"/>
 <rectangle x1="-0.125" y1="0.5" x2="0.125" y2="0.9" layer="31"/>
@@ -728,6 +738,8 @@
 <rectangle x1="0.375" y1="-0.9" x2="0.625" y2="-0.5" layer="31"/>
 <rectangle x1="-0.125" y1="-0.9" x2="0.125" y2="-0.5" layer="31"/>
 <rectangle x1="-0.625" y1="-0.9" x2="-0.375" y2="-0.5" layer="31"/>
+<rectangle x1="-0.675" y1="0.5" x2="0.675" y2="0.9" layer="29"/>
+<rectangle x1="-0.675" y1="-0.9" x2="0.675" y2="-0.5" layer="29"/>
 </package>
 <package name="1X01_NO_SILK">
 <pad name="1" x="0" y="0" drill="1.3" diameter="2.4" rot="R90"/>
@@ -773,7 +785,7 @@
 <vertex x="0.2" y="-0.65" curve="140"/>
 <vertex x="0.2" y="0.65"/>
 </polygon>
-<circle x="0" y="0" radius="0.360553125" width="1" layer="29"/>
+<circle x="0" y="0" radius="0.32" width="1" layer="29"/>
 <circle x="0" y="0" radius="1.1" width="0.254" layer="21"/>
 </package>
 <package name="1210+">
@@ -1154,14 +1166,6 @@
 <vertex x="-1.2" y="-0.1"/>
 <vertex x="-1" y="-0.1"/>
 </polygon>
-<rectangle x1="-0.875" y1="0.65" x2="-0.625" y2="1.15" layer="29"/>
-<rectangle x1="-0.375" y1="0.65" x2="-0.125" y2="1.15" layer="29"/>
-<rectangle x1="0.125" y1="0.65" x2="0.375" y2="1.15" layer="29"/>
-<rectangle x1="0.625" y1="0.65" x2="0.875" y2="1.15" layer="29"/>
-<rectangle x1="0.625" y1="-1.15" x2="0.875" y2="-0.65" layer="29"/>
-<rectangle x1="0.125" y1="-1.15" x2="0.375" y2="-0.65" layer="29"/>
-<rectangle x1="-0.375" y1="-1.15" x2="-0.125" y2="-0.65" layer="29"/>
-<rectangle x1="-0.875" y1="-1.15" x2="-0.625" y2="-0.65" layer="29"/>
 <rectangle x1="-0.375" y1="-1.15" x2="-0.125" y2="-0.75" layer="31"/>
 <rectangle x1="-0.875" y1="-1.15" x2="-0.625" y2="-0.75" layer="31"/>
 <rectangle x1="0.125" y1="-1.15" x2="0.375" y2="-0.75" layer="31"/>
@@ -1170,6 +1174,9 @@
 <rectangle x1="0.625" y1="0.75" x2="0.875" y2="1.15" layer="31"/>
 <rectangle x1="-0.375" y1="0.75" x2="-0.125" y2="1.15" layer="31"/>
 <rectangle x1="-0.875" y1="0.75" x2="-0.625" y2="1.15" layer="31"/>
+<rectangle x1="-0.95" y1="0.65" x2="0.95" y2="1.15" layer="29"/>
+<rectangle x1="-0.95" y1="-1.15" x2="0.95" y2="-0.65" layer="29"/>
+<rectangle x1="-0.125" y1="-0.125" x2="0.125" y2="0.125" layer="29"/>
 </package>
 <package name="0805">
 <description>IPC-SM-782 RES/CAP</description>
@@ -5467,7 +5474,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <smd name="P$1" x="0" y="0" dx="1.27" dy="1.27" layer="1" roundness="100" cream="no"/>
 </package>
 <package name="PAD.03X.04">
-<smd name="P$1" x="0" y="0" dx="1.016" dy="1.016" layer="1" roundness="100" cream="no"/>
+<smd name="P$1" x="0" y="0" dx="1.016" dy="1.016" layer="1" roundness="100" stop="no" cream="no"/>
+<circle x="0" y="0" radius="0.25" width="0.6" layer="29"/>
 </package>
 <package name="TP_15TH">
 <pad name="P$1" x="0" y="0" drill="0.381" diameter="0.6096" stop="no"/>
