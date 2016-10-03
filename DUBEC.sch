@@ -549,10 +549,29 @@
 <rectangle x1="-2.45" y1="-0.975" x2="-1.65" y2="-0.625" layer="29"/>
 <rectangle x1="-1.65" y1="1.275" x2="-0.85" y2="1.625" layer="29" rot="R90"/>
 <rectangle x1="-1.65" y1="-1.625" x2="-0.85" y2="-1.275" layer="29" rot="R90"/>
-<rectangle x1="-0.45" y1="-1.85" x2="1.45" y2="-1.05" layer="29"/>
-<rectangle x1="-0.45" y1="1.05" x2="1.45" y2="1.85" layer="29"/>
-<rectangle x1="1.1" y1="-0.4" x2="3" y2="0.4" layer="29" rot="R90"/>
 <rectangle x1="-2.45" y1="-0.325" x2="-1.65" y2="0.325" layer="29"/>
+<polygon width="0.1" layer="29">
+<vertex x="-0.4" y="1.1"/>
+<vertex x="-0.4" y="1.8"/>
+<vertex x="1.4" y="1.8"/>
+<vertex x="1.4" y="1.175"/>
+<vertex x="1.325" y="1.1"/>
+</polygon>
+<polygon width="0.1" layer="29">
+<vertex x="-0.4" y="-1.1"/>
+<vertex x="-0.4" y="-1.8"/>
+<vertex x="1.4" y="-1.8"/>
+<vertex x="1.4" y="-1.175"/>
+<vertex x="1.325" y="-1.1"/>
+</polygon>
+<polygon width="0.1" layer="29">
+<vertex x="1.7" y="0.825"/>
+<vertex x="1.775" y="0.9"/>
+<vertex x="2.4" y="0.9"/>
+<vertex x="2.4" y="-0.9"/>
+<vertex x="1.775" y="-0.9"/>
+<vertex x="1.7" y="-0.825"/>
+</polygon>
 </package>
 <package name="XAL6060">
 <smd name="P$1" x="-2.02" y="0" dx="1.43" dy="5.33" layer="1" stop="no" thermals="no" cream="no"/>
@@ -738,8 +757,8 @@
 <rectangle x1="0.375" y1="-0.9" x2="0.625" y2="-0.5" layer="31"/>
 <rectangle x1="-0.125" y1="-0.9" x2="0.125" y2="-0.5" layer="31"/>
 <rectangle x1="-0.625" y1="-0.9" x2="-0.375" y2="-0.5" layer="31"/>
-<rectangle x1="-0.675" y1="0.5" x2="0.675" y2="0.9" layer="29"/>
-<rectangle x1="-0.675" y1="-0.9" x2="0.675" y2="-0.5" layer="29"/>
+<rectangle x1="-0.7" y1="0.5" x2="0.7" y2="0.9" layer="29"/>
+<rectangle x1="-0.7" y1="-0.9" x2="0.7" y2="-0.5" layer="29"/>
 </package>
 <package name="1X01_NO_SILK">
 <pad name="1" x="0" y="0" drill="1.3" diameter="2.4" rot="R90"/>
