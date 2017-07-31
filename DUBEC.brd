@@ -1715,7 +1715,7 @@ Covered vias can be set in Masks (Limit).
 <attribute name="TOLERANCE" value="±1%" x="7.625" y="16.875" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="TEMP" value="±100ppm/°C" x="7.625" y="16.875" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="U$1" library="dubec" package="TF-EMBLEM" value="" x="32.8125" y="10.75" rot="MR270"/>
+<element name="U$1" library="dubec" package="TF-EMBLEM" value="" x="32.8125" y="10.75" rot="MR0"/>
 <element name="J_ISP" library="dubec" package="AVX9258-PCB" value="AVX9258-PCB" x="5.125" y="20" rot="MR0"/>
 <element name="RSNUB" library="dubec" package="0603" value="RES1.5_4" x="10.5625" y="7.875" rot="R90">
 <attribute name="EURO" value="2.86/100" x="10.5625" y="7.875" size="1.778" layer="27" rot="R90" display="off"/>
@@ -2268,7 +2268,6 @@ Covered vias can be set in Masks (Limit).
 <wire x1="2.675" y1="19.925" x2="2.775" y2="20.025" width="0.4" layer="1"/>
 <wire x1="13.8" y1="18.875" x2="13.8" y2="18.7625" width="0.4" layer="16"/>
 <wire x1="13.8" y1="18.7625" x2="14.625" y2="18.375" width="0.4" layer="16"/>
-<wire x1="14.625" y1="18.375" x2="14.625" y2="18.375" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="12V_FB">
 <contactref element="12U1" pad="7"/>
@@ -3154,6 +3153,14 @@ Covered vias can be set in Masks (Limit).
 <approved hash="5,16,f2fe7eaa55ccb952"/>
 <approved hash="5,16,015b44a404ff8606"/>
 <approved hash="5,16,4617efb13061745c"/>
+<approved hash="6,16,3752a924a8817949"/>
+<approved hash="6,16,63ee51f453a8be53"/>
+<approved hash="6,16,b106c17111fb6dfa"/>
+<approved hash="6,16,e7e10d5ab10ee243"/>
+<approved hash="6,16,80f9aace319848d2"/>
+<approved hash="6,16,efc2f7318ba6bcd7"/>
+<approved hash="6,16,a8f46f0b949c4b5d"/>
+<approved hash="6,16,837783c78c478cf7"/>
 <approved hash="8,2,1562ea401fe60265"/>
 <approved hash="8,2,8009f767bd02c23a"/>
 <approved hash="8,2,615411255eb96158"/>
@@ -3273,14 +3280,14 @@ Covered vias can be set in Masks (Limit).
 <approved hash="5,16,4b2bc629c34a768f"/>
 <approved hash="5,16,1bac0726528014bc"/>
 <approved hash="5,16,e50f17b71be63719"/>
-<approved hash="6,16,3752a924a8817949"/>
-<approved hash="6,16,63ee51f453a8be53"/>
-<approved hash="6,16,b106c17111fb6dfa"/>
-<approved hash="6,16,e7e10d5ab10ee243"/>
-<approved hash="6,16,80f9aace319848d2"/>
-<approved hash="6,16,efc2f7318ba6bcd7"/>
-<approved hash="6,16,a8f46f0b949c4b5d"/>
-<approved hash="6,16,837783c78c478cf7"/>
+<approved hash="6,16,9251dcafc4ebf45d"/>
+<approved hash="6,16,be5b6172620cac95"/>
+<approved hash="6,16,c79cec7abeaa2d78"/>
+<approved hash="6,16,fe4b988773303b49"/>
+<approved hash="6,16,b55633bf3254893a"/>
+<approved hash="6,16,20277413b54d9a58"/>
+<approved hash="6,16,a08c6b1913a9271d"/>
+<approved hash="6,16,7e427d8efa0ef9c2"/>
 </errors>
 </board>
 </drawing>
