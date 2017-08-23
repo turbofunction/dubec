@@ -7919,7 +7919,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <pinref part="5R1" gate="G$1" pin="1"/>
 <wire x1="-15.24" y1="68.58" x2="-15.24" y2="71.12" width="0.1524" layer="91"/>
-<label x="-15.24" y="71.12" size="1.27" layer="95" rot="R90" xref="yes"/>
+<wire x1="-15.24" y1="71.12" x2="-5.08" y2="71.12" width="0.1524" layer="91"/>
+<label x="-5.08" y="71.12" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
 <net name="GATE_MAIN_B" class="2">
@@ -8087,8 +8088,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </segment>
 <segment>
 <pinref part="D5" gate="G$1" pin="A"/>
-<wire x1="-15.24" y1="53.34" x2="-15.24" y2="50.8" width="0.1524" layer="91"/>
-<label x="-15.24" y="50.8" size="1.27" layer="95" rot="R270" xref="yes"/>
+<wire x1="-15.24" y1="53.34" x2="-15.24" y2="45.72" width="0.1524" layer="91"/>
+<label x="-15.24" y="45.72" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
 <net name="LED_BLUE" class="0">
