@@ -273,12 +273,12 @@ TURBOfunction.com/fpv</text>
 <rectangle x1="24.9" y1="8.8" x2="25.7" y2="10" layer="31"/>
 <circle x="37" y="2.225" radius="1.5" width="0.3" layer="41"/>
 <polygon width="0.2" layer="31">
-<vertex x="10.7" y="16.3"/>
-<vertex x="10.7" y="17.2"/>
-<vertex x="11.6" y="17.2"/>
-<vertex x="11.6" y="17"/>
-<vertex x="10.9" y="17"/>
-<vertex x="10.9" y="16.3"/>
+<vertex x="10.8" y="16.3"/>
+<vertex x="10.8" y="17.1"/>
+<vertex x="11.6" y="17.1"/>
+<vertex x="11.6" y="16.9"/>
+<vertex x="11" y="16.9"/>
+<vertex x="11" y="16.3"/>
 </polygon>
 <wire x1="5.675" y1="11.9" x2="5.675" y2="12.075" width="0.35" layer="29"/>
 <wire x1="5.675" y1="12.075" x2="6" y2="12.4" width="0.35" layer="29"/>
