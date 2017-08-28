@@ -1731,10 +1731,42 @@ design rules under a new name.</description>
 <attribute name="MFG_PART_#" value="C2012X5R1V226M125AC" x="19" y="12" size="1.778" layer="27" display="off"/>
 <attribute name="USD" value="1.09" x="19" y="12" size="1.778" layer="27" display="off"/>
 </element>
-<element name="QR1B" library="dubec" package="POWERDI3333-8" value="NMOS40V_10A" x="9.9" y="6.5" rot="R180"/>
-<element name="QR1A" library="dubec" package="POWERDI3333-8" value="NMOS40V_10A" x="5.9" y="6.5"/>
-<element name="QR2A" library="dubec" package="POWERDI3333-8" value="NMOS40V_10A" x="5.9" y="10"/>
-<element name="QR2B" library="dubec" package="POWERDI3333-8" value="NMOS40V_10A" x="9.9" y="10" rot="R180"/>
+<element name="QR1B" library="dubec" package="POWERDI3333-8" value="NMOS40V_10A" x="9.9" y="6.5" rot="R180">
+<attribute name="P" value="1 W" x="9.9" y="6.5" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MOUSER_PART_#" value="621-DMP4013LFG-7" x="9.9" y="6.5" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MANUFACTURER" value="Diodes Incorporated" x="9.9" y="6.5" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MFG_PART_#" value="DMP4013LFG-7" x="9.9" y="6.5" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="RDS_ON" value="9.4 mOhms" x="9.9" y="6.5" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="EURO" value="39.1/100" x="9.9" y="6.5" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="QG" value="68.6 nC" x="9.9" y="6.5" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="QR1A" library="dubec" package="POWERDI3333-8" value="NMOS40V_10A" x="5.9" y="6.5">
+<attribute name="P" value="1 W" x="5.9" y="6.5" size="1.778" layer="27" display="off"/>
+<attribute name="MOUSER_PART_#" value="621-DMP4013LFG-7" x="5.9" y="6.5" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER" value="Diodes Incorporated" x="5.9" y="6.5" size="1.778" layer="27" display="off"/>
+<attribute name="MFG_PART_#" value="DMP4013LFG-7" x="5.9" y="6.5" size="1.778" layer="27" display="off"/>
+<attribute name="RDS_ON" value="9.4 mOhms" x="5.9" y="6.5" size="1.778" layer="27" display="off"/>
+<attribute name="EURO" value="39.1/100" x="5.9" y="6.5" size="1.778" layer="27" display="off"/>
+<attribute name="QG" value="68.6 nC" x="5.9" y="6.5" size="1.778" layer="27" display="off"/>
+</element>
+<element name="QR2A" library="dubec" package="POWERDI3333-8" value="NMOS40V_10A" x="5.9" y="10">
+<attribute name="P" value="1 W" x="5.9" y="10" size="1.778" layer="27" display="off"/>
+<attribute name="MOUSER_PART_#" value="621-DMP4013LFG-7" x="5.9" y="10" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER" value="Diodes Incorporated" x="5.9" y="10" size="1.778" layer="27" display="off"/>
+<attribute name="MFG_PART_#" value="DMP4013LFG-7" x="5.9" y="10" size="1.778" layer="27" display="off"/>
+<attribute name="RDS_ON" value="9.4 mOhms" x="5.9" y="10" size="1.778" layer="27" display="off"/>
+<attribute name="EURO" value="39.1/100" x="5.9" y="10" size="1.778" layer="27" display="off"/>
+<attribute name="QG" value="68.6 nC" x="5.9" y="10" size="1.778" layer="27" display="off"/>
+</element>
+<element name="QR2B" library="dubec" package="POWERDI3333-8" value="NMOS40V_10A" x="9.9" y="10" rot="R180">
+<attribute name="P" value="1 W" x="9.9" y="10" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MOUSER_PART_#" value="621-DMP4013LFG-7" x="9.9" y="10" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MANUFACTURER" value="Diodes Incorporated" x="9.9" y="10" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MFG_PART_#" value="DMP4013LFG-7" x="9.9" y="10" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="RDS_ON" value="9.4 mOhms" x="9.9" y="10" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="EURO" value="39.1/100" x="9.9" y="10" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="QG" value="68.6 nC" x="9.9" y="10" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
 </elements>
 <signals>
 <signal name="VIN" class="2">
@@ -2514,9 +2546,6 @@ design rules under a new name.</description>
 <wire x1="2.6" y1="16.1" x2="3.1" y2="16.1" width="0.4" layer="1"/>
 <wire x1="2.2" y1="17.7" x2="2.75" y2="18.25" width="0.4" layer="1"/>
 <wire x1="2.75" y1="18.25" x2="2.75" y2="18.55" width="0.4" layer="1"/>
-</signal>
-<signal name="N$12">
-<contactref element="5U1" pad="17"/>
 </signal>
 <signal name="BATT_MAIN" class="2">
 <contactref element="J_POS_MAIN" pad="1"/>
