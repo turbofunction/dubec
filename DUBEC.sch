@@ -1593,9 +1593,9 @@
 <package name="POWERDI3333-8">
 <text x="0" y="-0.2" size="0.4" layer="27" align="top-center">&gt;VALUE</text>
 <text x="0" y="0.2" size="0.4" layer="25" align="bottom-center">&gt;NAME</text>
-<smd name="G" x="1.5" y="0.975" dx="0.7" dy="0.4" layer="1" roundness="20" stop="no" thermals="no" cream="no"/>
+<smd name="G" x="1.5" y="1" dx="0.7" dy="0.35" layer="1" roundness="20" stop="no" thermals="no" cream="no"/>
 <smd name="D" x="-0.8" y="0" dx="0.4" dy="0.4" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="S" x="1.5" y="-0.325" dx="0.7" dy="1.7" layer="1" roundness="15" stop="no" thermals="no" cream="no"/>
+<smd name="S" x="1.5" y="-0.35" dx="0.7" dy="1.65" layer="1" roundness="15" stop="no" thermals="no" cream="no"/>
 <wire x1="-1.65" y1="1.65" x2="1.65" y2="1.65" width="0.05" layer="51"/>
 <wire x1="1.65" y1="1.65" x2="1.65" y2="-1.65" width="0.05" layer="51"/>
 <wire x1="1.65" y1="-1.65" x2="-1.65" y2="-1.65" width="0.05" layer="51"/>
@@ -1636,8 +1636,6 @@
 <vertex x="-1.325" y="0.8"/>
 <vertex x="-1.825" y="0.8"/>
 </polygon>
-<rectangle x1="1.125" y1="0.75" x2="1.875" y2="1.2" layer="29"/>
-<rectangle x1="1.125" y1="-1.2" x2="1.875" y2="0.55" layer="29"/>
 <polygon width="0.1" layer="31">
 <vertex x="-1.725" y="1.05"/>
 <vertex x="0.1" y="1.05"/>
@@ -1656,8 +1654,12 @@
 <vertex x="-1.225" y="0.9"/>
 <vertex x="-1.725" y="0.9"/>
 </polygon>
-<rectangle x1="1.35" y1="-1.075" x2="1.75" y2="0.35" layer="31"/>
-<rectangle x1="1.35" y1="0.825" x2="1.75" y2="1.125" layer="31"/>
+<rectangle x1="1.125" y1="0.8" x2="1.875" y2="1.2" layer="29"/>
+<rectangle x1="1.125" y1="-1.2" x2="1.875" y2="0.5" layer="29"/>
+<rectangle x1="1.25" y1="0.9" x2="1.8" y2="1.125" layer="31"/>
+<rectangle x1="1.275" y1="-1.1" x2="1.8" y2="-0.85" layer="31"/>
+<rectangle x1="1.25" y1="0.15" x2="1.8" y2="0.375" layer="31"/>
+<rectangle x1="1.275" y1="-0.45" x2="1.8" y2="-0.2" layer="31"/>
 </package>
 </packages>
 <symbols>
