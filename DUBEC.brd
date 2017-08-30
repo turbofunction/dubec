@@ -1731,41 +1731,37 @@ design rules under a new name.</description>
 <attribute name="MFG_PART_#" value="C2012X5R1V226M125AC" x="19" y="12" size="1.778" layer="27" display="off"/>
 <attribute name="USD" value="1.09" x="19" y="12" size="1.778" layer="27" display="off"/>
 </element>
-<element name="QR1B" library="dubec" package="POWERDI3333-8" value="NMOS40V_10A" x="9.9" y="6.5" rot="R180">
+<element name="QR1B" library="dubec" package="POWERDI3333-8" value="PMOS40V_10A" x="9.9" y="6.5" rot="R180">
 <attribute name="P" value="1 W" x="9.9" y="6.5" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MOUSER_PART_#" value="621-DMP4013LFG-7" x="9.9" y="6.5" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MANUFACTURER" value="Diodes Incorporated" x="9.9" y="6.5" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MFG_PART_#" value="DMP4013LFG-7" x="9.9" y="6.5" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="RDS_ON" value="9.4 mOhms" x="9.9" y="6.5" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="EURO" value="39.1/100" x="9.9" y="6.5" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="QG" value="68.6 nC" x="9.9" y="6.5" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="EURO" value="39.10/100" x="9.9" y="6.5" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="RDS" value="9.4 mOhms" x="9.9" y="6.5" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="QR1A" library="dubec" package="POWERDI3333-8" value="NMOS40V_10A" x="5.9" y="6.5">
+<element name="QR1A" library="dubec" package="POWERDI3333-8" value="PMOS40V_10A" x="5.9" y="6.5">
 <attribute name="P" value="1 W" x="5.9" y="6.5" size="1.778" layer="27" display="off"/>
 <attribute name="MOUSER_PART_#" value="621-DMP4013LFG-7" x="5.9" y="6.5" size="1.778" layer="27" display="off"/>
 <attribute name="MANUFACTURER" value="Diodes Incorporated" x="5.9" y="6.5" size="1.778" layer="27" display="off"/>
 <attribute name="MFG_PART_#" value="DMP4013LFG-7" x="5.9" y="6.5" size="1.778" layer="27" display="off"/>
-<attribute name="RDS_ON" value="9.4 mOhms" x="5.9" y="6.5" size="1.778" layer="27" display="off"/>
-<attribute name="EURO" value="39.1/100" x="5.9" y="6.5" size="1.778" layer="27" display="off"/>
-<attribute name="QG" value="68.6 nC" x="5.9" y="6.5" size="1.778" layer="27" display="off"/>
+<attribute name="EURO" value="39.10/100" x="5.9" y="6.5" size="1.778" layer="27" display="off"/>
+<attribute name="RDS" value="9.4 mOhms" x="5.9" y="6.5" size="1.778" layer="27" display="off"/>
 </element>
-<element name="QR2A" library="dubec" package="POWERDI3333-8" value="NMOS40V_10A" x="5.9" y="10">
+<element name="QR2A" library="dubec" package="POWERDI3333-8" value="PMOS40V_10A" x="5.9" y="10">
 <attribute name="P" value="1 W" x="5.9" y="10" size="1.778" layer="27" display="off"/>
 <attribute name="MOUSER_PART_#" value="621-DMP4013LFG-7" x="5.9" y="10" size="1.778" layer="27" display="off"/>
 <attribute name="MANUFACTURER" value="Diodes Incorporated" x="5.9" y="10" size="1.778" layer="27" display="off"/>
 <attribute name="MFG_PART_#" value="DMP4013LFG-7" x="5.9" y="10" size="1.778" layer="27" display="off"/>
-<attribute name="RDS_ON" value="9.4 mOhms" x="5.9" y="10" size="1.778" layer="27" display="off"/>
-<attribute name="EURO" value="39.1/100" x="5.9" y="10" size="1.778" layer="27" display="off"/>
-<attribute name="QG" value="68.6 nC" x="5.9" y="10" size="1.778" layer="27" display="off"/>
+<attribute name="EURO" value="39.10/100" x="5.9" y="10" size="1.778" layer="27" display="off"/>
+<attribute name="RDS" value="9.4 mOhms" x="5.9" y="10" size="1.778" layer="27" display="off"/>
 </element>
-<element name="QR2B" library="dubec" package="POWERDI3333-8" value="NMOS40V_10A" x="9.9" y="10" rot="R180">
+<element name="QR2B" library="dubec" package="POWERDI3333-8" value="PMOS40V_10A" x="9.9" y="10" rot="R180">
 <attribute name="P" value="1 W" x="9.9" y="10" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MOUSER_PART_#" value="621-DMP4013LFG-7" x="9.9" y="10" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MANUFACTURER" value="Diodes Incorporated" x="9.9" y="10" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MFG_PART_#" value="DMP4013LFG-7" x="9.9" y="10" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="RDS_ON" value="9.4 mOhms" x="9.9" y="10" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="EURO" value="39.1/100" x="9.9" y="10" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="QG" value="68.6 nC" x="9.9" y="10" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="EURO" value="39.10/100" x="9.9" y="10" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="RDS" value="9.4 mOhms" x="9.9" y="10" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 </elements>
 <signals>
@@ -3213,30 +3209,31 @@ design rules under a new name.</description>
 <approved hash="6,1,1a551739abbcb0d0"/>
 <approved hash="6,1,296b8cd1276682dc"/>
 <approved hash="6,1,f535ebd06c3853dc"/>
+<approved hash="6,1,1807b6dc7324c6f6"/>
 <approved hash="6,1,5d916380e0bbf945"/>
 <approved hash="6,1,fd0fe74661aa5384"/>
 <approved hash="6,1,7d1dd16233ba89f4"/>
 <approved hash="5,1,4a7bfe49e650c3a0"/>
 <approved hash="5,1,b5bcea8b5a5af325"/>
 <approved hash="5,1,12adf17464e9af34"/>
-<approved hash="5,1,5bc94e90322dde31"/>
 <approved hash="5,1,8c26a22bdfe5a9ef"/>
-<approved hash="5,1,f54017ee2e1efb5e"/>
-<approved hash="5,1,163ae5664b6a4647"/>
-<approved hash="5,1,156e22907166dcfd"/>
-<approved hash="5,1,f842c33a15ea099a"/>
+<approved hash="5,1,5bc94e90322dde31"/>
 <approved hash="5,1,28c5906d1bbcb6f4"/>
-<approved hash="5,1,0f40fa9a4b265f6d"/>
 <approved hash="5,1,f58417da2deafb42"/>
+<approved hash="5,1,0f40fa9a4b265f6d"/>
+<approved hash="5,1,163ae5664b6a4647"/>
+<approved hash="5,1,f54017ee2e1efb5e"/>
+<approved hash="5,1,f842c33a15ea099a"/>
+<approved hash="5,1,156e22907166dcfd"/>
 <approved hash="6,1,05111c559c568512"/>
 <approved hash="6,1,18cd0233023018ce"/>
 <approved hash="6,1,60107f1a7f1b6011"/>
 <approved hash="6,1,6c1e6b146b156c1f"/>
 <approved hash="6,1,7bdc66c666c77bdd"/>
 <approved hash="6,1,80504eca4eca8050"/>
-<approved hash="6,1,5cc74639463e5cc0"/>
 <approved hash="6,1,5f2f5a215a265f28"/>
 <approved hash="6,1,5d33443544325d34"/>
+<approved hash="6,1,5cc74639463e5cc0"/>
 <approved hash="6,1,411b585fd858c11c"/>
 <approved hash="6,1,da8ac1cd41ca5a8d"/>
 <approved hash="5,1,f0c8d0eaf22cedfc"/>

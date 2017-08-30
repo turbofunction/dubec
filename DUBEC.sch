@@ -1761,6 +1761,29 @@
 <pin name="2" x="5.08" y="0" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="1" x="5.08" y="2.54" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
 </symbol>
+<symbol name="P-MOSFET">
+<pin name="S" x="0" y="-5.08" visible="off" length="middle" direction="pas" rot="R90"/>
+<pin name="D" x="0" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
+<pin name="G" x="-5.08" y="-2.54" visible="off" length="point" direction="pas"/>
+<wire x1="-3.81" y1="2.54" x2="-3.81" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-0.762" x2="-2.54" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="-2.54" y2="1.778" width="0.1524" layer="94"/>
+<polygon width="0.1524" layer="94">
+<vertex x="0" y="0"/>
+<vertex x="-1.27" y="-0.635"/>
+<vertex x="-1.27" y="0.635"/>
+</polygon>
+<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="-1.778" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="0" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="0" x2="-2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="-5.08" y1="-2.54" x2="-3.81" y2="-2.54" width="0.1524" layer="94"/>
+<text x="1.27" y="0" size="1.27" layer="95" rot="R90" align="top-center">&gt;NAME</text>
+<text x="3.175" y="0" size="1.27" layer="96" rot="R90" align="top-center">&gt;VALUE</text>
+<wire x1="-2.54" y1="3.302" x2="-2.54" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-3.302" x2="-2.54" y2="-2.54" width="0.1524" layer="94"/>
+<text x="-0.508" y="-3.81" size="1.27" layer="94" rot="R90" align="bottom-center">S</text>
+</symbol>
 <symbol name="N-MOSFET">
 <pin name="S" x="0" y="-5.08" visible="off" length="middle" direction="pas" rot="R90"/>
 <pin name="D" x="0" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
@@ -6188,6 +6211,48 @@
 </device>
 </devices>
 </deviceset>
+<deviceset name="PMOS">
+<description>Single P-Channel MOSFET</description>
+<gates>
+<gate name="G$1" symbol="P-MOSFET" x="0" y="0"/>
+</gates>
+<devices>
+<device name="30V_11A" package="6-POWERWDFN">
+<connects>
+<connect gate="G$1" pin="D" pad="D"/>
+<connect gate="G$1" pin="G" pad="G"/>
+<connect gate="G$1" pin="S" pad="S"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART_#" value="FDMA6676PZCT-ND" constant="no"/>
+<attribute name="EPK" value="316.51" constant="no"/>
+<attribute name="MANUFACTURER" value="Fairchild Semiconductor" constant="no"/>
+<attribute name="MFG_PART_#" value="FDMA6676PZ" constant="no"/>
+<attribute name="POWER" value="0.9W" constant="no"/>
+<attribute name="RDS" value="13.5 mOhm @ 11A, 10V" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="40V_10A" package="POWERDI3333-8">
+<connects>
+<connect gate="G$1" pin="D" pad="D"/>
+<connect gate="G$1" pin="G" pad="G"/>
+<connect gate="G$1" pin="S" pad="S"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="EURO" value="39.10/100" constant="no"/>
+<attribute name="MANUFACTURER" value="Diodes Incorporated" constant="no"/>
+<attribute name="MFG_PART_#" value="DMP4013LFG-7" constant="no"/>
+<attribute name="MOUSER_PART_#" value="621-DMP4013LFG-7" constant="no"/>
+<attribute name="P" value="1 W" constant="no"/>
+<attribute name="RDS" value="9.4 mOhms" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
 <deviceset name="NMOS">
 <description>N-channel MOSFET</description>
 <gates>
@@ -6999,10 +7064,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="5R1" library="dubec" deviceset="RES" device="40.2K_16" value="RES40.2K_16"/>
 <part name="TP1" library="SparkFun-Passives" deviceset="TEST-POINT" device="3X4" value="TEST-POINT3X4"/>
 <part name="5C1" library="dubec" deviceset="CAP" device="22UF_35V"/>
-<part name="QR1B" library="dubec" deviceset="NMOS" device="40V_10A"/>
-<part name="QR1A" library="dubec" deviceset="NMOS" device="40V_10A"/>
-<part name="QR2A" library="dubec" deviceset="NMOS" device="40V_10A"/>
-<part name="QR2B" library="dubec" deviceset="NMOS" device="40V_10A"/>
+<part name="QR1B" library="dubec" deviceset="PMOS" device="40V_10A"/>
+<part name="QR1A" library="dubec" deviceset="PMOS" device="40V_10A"/>
+<part name="QR2A" library="dubec" deviceset="PMOS" device="40V_10A"/>
+<part name="QR2B" library="dubec" deviceset="PMOS" device="40V_10A"/>
 </parts>
 <sheets>
 <sheet>
