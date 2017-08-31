@@ -7868,47 +7868,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="GND"/>
-<wire x1="-40.64" y1="43.18" x2="-40.64" y2="38.1" width="0.1524" layer="91"/>
 <label x="-40.64" y="38.1" size="1.27" layer="95" xref="yes"/>
-<pinref part="U1" gate="G$1" pin="PB1"/>
-<wire x1="-40.64" y1="43.18" x2="-38.1" y2="43.18" width="0.1524" layer="91"/>
-<junction x="-40.64" y="43.18"/>
-<pinref part="U1" gate="G$1" pin="PB2"/>
-<wire x1="-38.1" y1="43.18" x2="-35.56" y2="43.18" width="0.1524" layer="91"/>
-<junction x="-38.1" y="43.18"/>
-<pinref part="U1" gate="G$1" pin="PB0"/>
-<wire x1="-40.64" y1="43.18" x2="-43.18" y2="43.18" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="PA7"/>
-<wire x1="-43.18" y1="43.18" x2="-45.72" y2="43.18" width="0.1524" layer="91"/>
-<junction x="-43.18" y="43.18"/>
-<wire x1="-35.56" y1="43.18" x2="-25.4" y2="43.18" width="0.1524" layer="91"/>
-<junction x="-35.56" y="43.18"/>
-<pinref part="U1" gate="G$1" pin="PB3"/>
-<wire x1="-25.4" y1="43.18" x2="-25.4" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="-25.4" y1="53.34" x2="-22.86" y2="53.34" width="0.1524" layer="91"/>
-<junction x="-25.4" y="53.34"/>
-<wire x1="-22.86" y1="53.34" x2="-22.86" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="PB5"/>
-<wire x1="-22.86" y1="58.42" x2="-25.4" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="PC0"/>
-<wire x1="-25.4" y1="58.42" x2="-25.4" y2="60.96" width="0.1524" layer="91"/>
-<junction x="-25.4" y="58.42"/>
-<pinref part="U1" gate="G$1" pin="PC1"/>
-<wire x1="-25.4" y1="60.96" x2="-25.4" y2="63.5" width="0.1524" layer="91"/>
-<junction x="-25.4" y="60.96"/>
-<junction x="-45.72" y="43.18"/>
-<wire x1="-45.72" y1="43.18" x2="-58.42" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="-58.42" y1="43.18" x2="-58.42" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="PA4"/>
-<wire x1="-58.42" y1="58.42" x2="-55.88" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="PA3"/>
-<wire x1="-55.88" y1="58.42" x2="-55.88" y2="60.96" width="0.1524" layer="91"/>
-<junction x="-55.88" y="58.42"/>
-<pinref part="U1" gate="G$1" pin="PC3"/>
-<wire x1="-38.1" y1="73.66" x2="-38.1" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="-38.1" y1="76.2" x2="-25.4" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="-25.4" y1="76.2" x2="-25.4" y2="63.5" width="0.1524" layer="91"/>
-<junction x="-25.4" y="63.5"/>
+<wire x1="-40.64" y1="43.18" x2="-40.64" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="RAPD" gate="G$1" pin="1"/>
