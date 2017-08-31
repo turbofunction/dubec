@@ -184,7 +184,6 @@ TURBOfunction.com/fpv</text>
 <vertex x="20.4" y="19"/>
 <vertex x="19.7" y="19"/>
 </polygon>
-<wire x1="12.8" y1="9.6" x2="12.8" y2="7.9" width="1.6" layer="29"/>
 <wire x1="19.7" y1="20.4" x2="21.5" y2="20.4" width="0.8" layer="29"/>
 <wire x1="20" y1="19.4" x2="18.1" y2="17.5" width="1.2" layer="30"/>
 <wire x1="18.1" y1="17.5" x2="18.1" y2="16.2" width="1.2" layer="30"/>
@@ -243,17 +242,17 @@ TURBOfunction.com/fpv</text>
 <vertex x="4.5" y="10.2"/>
 </polygon>
 <wire x1="4.8" y1="10.1" x2="5.1" y2="9.8" width="0.25" layer="31"/>
-<wire x1="12.8" y1="7.9" x2="12.8" y2="9.6" width="1.6" layer="30"/>
 <wire x1="15.9" y1="10.3" x2="18.1" y2="10.3" width="0.7" layer="30"/>
 <wire x1="18.1" y1="10.3" x2="18.4" y2="10.6" width="0.7" layer="30"/>
-<wire x1="18.4" y1="10.6" x2="19.4" y2="10.6" width="1.2" layer="30"/>
-<wire x1="19.4" y1="10.6" x2="21.2" y2="12.4" width="1.2" layer="30"/>
+<wire x1="18.4" y1="10.6" x2="19.8" y2="10.6" width="1.2" layer="30"/>
+<wire x1="19.8" y1="10.6" x2="21.4" y2="12.2" width="1.2" layer="30"/>
 <wire x1="15.9" y1="12.7" x2="15.9" y2="10.3" width="0.7" layer="30"/>
-<wire x1="21.2" y1="12.4" x2="20.9" y2="12.7" width="1.2" layer="30"/>
+<wire x1="21.4" y1="12.2" x2="20.9" y2="12.7" width="1.2" layer="30"/>
 <wire x1="20.9" y1="12.7" x2="20.9" y2="19.9" width="1.2" layer="30"/>
-<wire x1="12.8" y1="9.6" x2="14.7" y2="9.6" width="1.2" layer="30"/>
-<wire x1="14.7" y1="9.6" x2="15.1" y2="10" width="1.2" layer="30"/>
+<wire x1="14.1" y1="9" x2="15.1" y2="10" width="1.2" layer="30"/>
 <wire x1="15.9" y1="10.3" x2="15.1" y2="10.3" width="0.7" layer="30"/>
+<circle x="21.4" y="12.2" radius="0.360553125" width="0.9" layer="29"/>
+<circle x="21.4" y="12.2" radius="0.360553125" width="0.9" layer="30"/>
 </plain>
 <libraries>
 <library name="dubec">
@@ -1117,10 +1116,10 @@ design rules under a new name.</description>
 <param name="mlMaxStopFrame" value="0.05mm"/>
 <param name="mlMinCreamFrame" value="0mil"/>
 <param name="mlMaxCreamFrame" value="0mil"/>
-<param name="mlViaStopLimit" value="0.5mm"/>
-<param name="srRoundness" value="0"/>
+<param name="mlViaStopLimit" value="1.1mm"/>
+<param name="srRoundness" value="0.1"/>
 <param name="srMinRoundness" value="0.05mm"/>
-<param name="srMaxRoundness" value="0.05mm"/>
+<param name="srMaxRoundness" value="0.2mm"/>
 <param name="slThermalIsolate" value="0.2mm"/>
 <param name="slThermalsForVias" value="0"/>
 <param name="dpMaxLengthDifference" value="10mm"/>
@@ -1794,8 +1793,10 @@ design rules under a new name.</description>
 <polygon width="0.3" layer="16" isolate="0.3302" thermals="no">
 <vertex x="19.3" y="21.4"/>
 <vertex x="21.9" y="21.4"/>
-<vertex x="21.9" y="12"/>
-<vertex x="19.8" y="9.9"/>
+<vertex x="21.9" y="12.8"/>
+<vertex x="22.2" y="12.5"/>
+<vertex x="22.2" y="11.9"/>
+<vertex x="20.2" y="9.9"/>
 <vertex x="15.85" y="9.9"/>
 <vertex x="13.2" y="7.25"/>
 <vertex x="12.8" y="7.25"/>
@@ -1806,7 +1807,7 @@ design rules under a new name.</description>
 <vertex x="17.4" y="17.8"/>
 <vertex x="19.3" y="19.7"/>
 </polygon>
-<via x="21.2" y="12.4" extent="1-16" drill="1"/>
+<via x="21.4" y="12.2" extent="1-16" drill="1"/>
 <contactref element="C1" pad="2"/>
 <contactref element="5C3" pad="2"/>
 <contactref element="5U1" pad="4"/>
@@ -3168,38 +3169,6 @@ design rules under a new name.</description>
 <approved hash="8,15,611a750f53081d31"/>
 <approved hash="8,2,611a750f53081d31"/>
 <approved hash="5,16,babb7cf56a2b2185"/>
-<approved hash="3,1,fadf06270603fafb"/>
-<approved hash="3,1,12ff2607260a12f2"/>
-<approved hash="3,1,121d26e5269a1262"/>
-<approved hash="3,1,fb1d07e5078bfb73"/>
-<approved hash="3,1,573f06c7069f5767"/>
-<approved hash="8,1,011774233e174e92"/>
-<approved hash="8,15,95d38aa77209ce81"/>
-<approved hash="8,15,04a6e21573de2cb0"/>
-<approved hash="8,2,c8ee23856a50be18"/>
-<approved hash="8,15,c8ee23856a50be18"/>
-<approved hash="3,1,43d9822182e14319"/>
-<approved hash="6,1,1df3205aba5b91f2"/>
-<approved hash="6,1,143d9319200ea72a"/>
-<approved hash="6,1,1a551739abbcb0d0"/>
-<approved hash="6,1,296b8cd1276682dc"/>
-<approved hash="6,1,f535ebd06c3853dc"/>
-<approved hash="6,1,1807b6dc7324c6f6"/>
-<approved hash="6,1,5d916380e0bbf945"/>
-<approved hash="6,1,fd0fe74661aa5384"/>
-<approved hash="6,1,7d1dd16233ba89f4"/>
-<approved hash="5,1,4a7bfe49e650c3a0"/>
-<approved hash="5,1,b5bcea8b5a5af325"/>
-<approved hash="5,1,12adf17464e9af34"/>
-<approved hash="5,1,8c26a22bdfe5a9ef"/>
-<approved hash="5,1,5bc94e90322dde31"/>
-<approved hash="5,1,28c5906d1bbcb6f4"/>
-<approved hash="5,1,f58417da2deafb42"/>
-<approved hash="5,1,0f40fa9a4b265f6d"/>
-<approved hash="5,1,163ae5664b6a4647"/>
-<approved hash="5,1,f54017ee2e1efb5e"/>
-<approved hash="5,1,f842c33a15ea099a"/>
-<approved hash="5,1,156e22907166dcfd"/>
 <approved hash="6,1,05111c559c568512"/>
 <approved hash="6,1,18cd0233023018ce"/>
 <approved hash="6,1,60107f1a7f1b6011"/>
@@ -3211,13 +3180,54 @@ design rules under a new name.</description>
 <approved hash="6,1,5cc74639463e5cc0"/>
 <approved hash="6,1,411b585fd858c11c"/>
 <approved hash="6,1,da8ac1cd41ca5a8d"/>
+<approved hash="18,29,264428dcc7284a34"/>
+<approved hash="18,29,fecad1663e13cc78"/>
+<approved hash="18,29,3af5478f489a94de"/>
+<approved hash="18,29,2a91df8c28deb6f7"/>
+<approved hash="18,29,2f9cbbc90dfdd0d8"/>
+<approved hash="18,29,34b80b229ad263e5"/>
+<approved hash="18,29,8b18fd23d1ea3c1f"/>
+<approved hash="3,1,fadf06270603fafb"/>
+<approved hash="3,1,12ff2607260a12f2"/>
+<approved hash="3,1,121d26e5269a1262"/>
+<approved hash="3,1,fb1d07e5078bfb73"/>
+<approved hash="3,1,573f06c7069f5767"/>
+<approved hash="8,1,011774233e174e92"/>
+<approved hash="8,15,95d38aa77209ce81"/>
+<approved hash="8,15,04a6e21573de2cb0"/>
+<approved hash="8,2,c8ee23856a50be18"/>
+<approved hash="8,15,c8ee23856a50be18"/>
+<approved hash="3,1,43d9822182e14319"/>
+<approved hash="18,29,36fc791a1e326d03"/>
+<approved hash="18,29,ef333911d1b4fdb5"/>
+<approved hash="6,1,1a551739abbcb0d0"/>
+<approved hash="6,1,296b8cd1276682dc"/>
+<approved hash="6,1,1df3205aba5b91f2"/>
+<approved hash="6,1,143d9319200ea72a"/>
+<approved hash="6,1,fd0fe74661aa5384"/>
+<approved hash="6,1,5d916380e0bbf945"/>
+<approved hash="6,1,f535ebd06c3853dc"/>
+<approved hash="6,1,1807b6dc7324c6f6"/>
+<approved hash="6,1,7d1dd16233ba89f4"/>
+<approved hash="5,1,4a7bfe49e650c3a0"/>
+<approved hash="5,1,b5bcea8b5a5af325"/>
+<approved hash="5,1,12adf17464e9af34"/>
+<approved hash="5,1,8c26a22bdfe5a9ef"/>
+<approved hash="5,1,5bc94e90322dde31"/>
+<approved hash="5,1,156e22907166dcfd"/>
+<approved hash="5,1,f842c33a15ea099a"/>
+<approved hash="5,1,28c5906d1bbcb6f4"/>
+<approved hash="5,1,f58417da2deafb42"/>
+<approved hash="5,1,0f40fa9a4b265f6d"/>
+<approved hash="5,1,f54017ee2e1efb5e"/>
+<approved hash="5,1,163ae5664b6a4647"/>
 <approved hash="5,1,f0c8d0eaf22cedfc"/>
 <approved hash="5,1,742ac9a1d9a3f82b"/>
 <approved hash="5,1,f0c8d0eaf22cedfc"/>
 <approved hash="5,1,ae23f3aa93a88e23"/>
 <approved hash="5,1,1530827da7807d7a"/>
-<approved hash="5,1,f03439a3c9a07434"/>
 <approved hash="5,1,44002614621e841e"/>
+<approved hash="5,1,f03439a3c9a07434"/>
 <approved hash="5,1,d0113b9591a71d64"/>
 <approved hash="5,1,936ba244002b9dec"/>
 <approved hash="19,1,ff3da4939a133dab"/>
@@ -3230,9 +3240,9 @@ design rules under a new name.</description>
 <approved hash="5,1,2c4d75169d1c8445"/>
 <approved hash="5,1,936ba244002b9dec"/>
 <approved hash="5,1,9119f43cbb396065"/>
+<approved hash="5,1,d2cf60f1bb396077"/>
 <approved hash="5,1,b1e015045e7186e0"/>
 <approved hash="5,1,701b2ac5bfbf8b45"/>
-<approved hash="5,1,d2cf60f1bb396077"/>
 <approved hash="5,1,390f60f1bfb8aff1"/>
 <approved hash="5,1,a40f8371e62caaaa"/>
 <approved hash="6,1,6da5598e20191432"/>
