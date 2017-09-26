@@ -7062,7 +7062,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="5D1" library="dubec" deviceset="D_SCH" device="20V_0.5A"/>
 <part name="D5" library="dubec" deviceset="D_ZENER" device="2.4V"/>
 <part name="5R1" library="dubec" deviceset="RES" device="40.2K_16" value="RES40.2K_16"/>
-<part name="TP1" library="SparkFun-Passives" deviceset="TEST-POINT" device="3X4" value="TEST-POINT3X4"/>
+<part name="TP1" library="SparkFun-Passives" deviceset="TEST-POINT" device="3X5" value="TEST-POINT3X5"/>
 <part name="5C1" library="dubec" deviceset="CAP" device="22UF_35V"/>
 <part name="QR1B" library="dubec" deviceset="PMOS" device="40V_10A"/>
 <part name="QR1A" library="dubec" deviceset="PMOS" device="40V_10A"/>
